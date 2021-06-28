@@ -24,8 +24,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public SharedParam SizeDepth { get; internal set; } = new SharedParam() { Name = "Speech_Размер_Глубина", SharedParamType = StorageType.Double };
 
         public SharedParam BulkheadExists { get; internal set; } = new SharedParam() { Name = "Наличие Перемычки", SharedParamType = StorageType.Integer};
-        public SharedParam BulkheadLength { get; internal set; } = new SharedParam() { Name = "Перемычка Длина", SharedParamType = StorageType.Double };
-        public SharedParam BulkheadDepth { get; internal set; } = new SharedParam() { Name = "Перемычка Глубина", SharedParamType = StorageType.Double };
+        public SharedParam BulkheadLength { get; internal set; } = new SharedParam() { Name = "Перемычка Длина", SharedParamType = StorageType.String };
+        public SharedParam BulkheadDepth { get; internal set; } = new SharedParam() { Name = "Перемычка Глубина", SharedParamType = StorageType.String };
         public SharedParam BulkheadClass { get; internal set; } = new SharedParam() { Name = "Перемычка Класс", SharedParamType = StorageType.String };
 
         /// <summary>
