@@ -10,6 +10,13 @@ using dosymep.Bim4Everyone.SharedParams;
 
 namespace dosymep.Revit {
     public static class ElementExtensions {
+        /// <summary>
+        /// Возвращает значение параметра либо значение по умолчанию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="sharedParam">Общий параметр.</param>
+        /// <param name="default">Значение по умолчанию.</param>
+        /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
         public static object GetParamValueOrDefault(this Element element, SharedParam sharedParam, object @default = default) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -26,6 +33,12 @@ namespace dosymep.Revit {
             }
         }
 
+        /// <summary>
+        /// Возвращает значение параметра элемента.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="sharedParam">Общий параметр.</param>
+        /// <returns>Возвращает значение параметра элемента.</returns>
         public static object GetParamValue(this Element element, SharedParam sharedParam) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -55,6 +68,12 @@ namespace dosymep.Revit {
             return null;
         }
 
+        /// <summary>
+        /// Устанавливает значение параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="sharedParam">Общий параметр.</param>
+        /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetParamValue(this Element element, SharedParam sharedParam, double paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -67,6 +86,12 @@ namespace dosymep.Revit {
             element.GetParam(sharedParam).Set(paramValue);
         }
 
+        /// <summary>
+        /// Устанавливает значение параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="sharedParam">Общий параметр.</param>
+        /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetParamValue(this Element element, SharedParam sharedParam, int paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -79,6 +104,12 @@ namespace dosymep.Revit {
             element.GetParam(sharedParam).Set(paramValue);
         }
 
+        /// <summary>
+        /// Устанавливает значение параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="sharedParam">Общий параметр.</param>
+        /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetParamValue(this Element element, SharedParam sharedParam, string paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -91,6 +122,12 @@ namespace dosymep.Revit {
             element.GetParam(sharedParam).Set(paramValue);
         }
 
+        /// <summary>
+        /// Устанавливает значение параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="sharedParam">Общий параметр.</param>
+        /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetParamValue(this Element element, SharedParam sharedParam, ElementId paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
