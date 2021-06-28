@@ -29,6 +29,14 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public SharedParam BulkheadClass { get; internal set; } = new SharedParam() { Name = "Перемычка Класс", SharedParamType = StorageType.String };
 
         /// <summary>
+        /// Возвращает весь список настроек общих параметров.
+        /// </summary>
+        /// <returns>Возвращает весь список настроек общих параметров.</returns>
+        public IEnumerable<SharedParam> GetSharedParams() {
+            return GetType().GetProperties().Select(item => item.GetValue(this)).OfType<SharedParam>();
+        }
+
+        /// <summary>
         /// Загрузка текущей конфигурации.
         /// </summary>
         /// <param name="configPath">Путь до конфигурации.</param>
