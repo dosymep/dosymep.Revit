@@ -143,15 +143,19 @@ namespace dosymep.Revit {
         private static Parameter GetParam(this Element element, SharedParam sharedParam) {
             var param = element.LookupParameter(sharedParam.Name);
             if(param is null) {
-                throw new ArgumentException("Не был найден параметр.");
+                throw new ArgumentException($"Общего параметра с заданным именем \"{sharedParam.Name}\" не существует.", nameof(sharedParam));
             }
 
             if(!param.HasValue) {
-                throw new ArgumentException("Не был найден параметр.");
+                throw new ArgumentException($"Общего параметра с заданным именем \"{sharedParam.Name}\" не существует.", nameof(sharedParam));
+            }
+
+            if(!param.IsShared) {
+                throw new ArgumentException($"Параметр с заданным именем \"{sharedParam.Name}\" не является общим.", nameof(sharedParam));
             }
 
             if(param.StorageType != sharedParam.SharedParamType) {
-                throw new ArgumentException("Не соответствует тип.");
+                throw new ArgumentException($"Переданный общий параметр \"{sharedParam.Name}\" не соответствует типу параметра у элемента.", nameof(sharedParam));
             }
 
             return param;
