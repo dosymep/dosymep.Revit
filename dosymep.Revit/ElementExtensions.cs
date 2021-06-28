@@ -11,6 +11,14 @@ using dosymep.Bim4Everyone.SharedParams;
 namespace dosymep.Revit {
     public static class ElementExtensions {
         public static object GetParamValueOrDefault(this Element element, SharedParam sharedParam, object @default = default) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(sharedParam is null) {
+                throw new ArgumentNullException(nameof(sharedParam));
+            }
+
             try {
                 return element.GetParamValue(sharedParam);
             } catch(ArgumentException) {
@@ -48,18 +56,50 @@ namespace dosymep.Revit {
         }
 
         public static void SetParamValue(this Element element, SharedParam sharedParam, double paramValue) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(sharedParam is null) {
+                throw new ArgumentNullException(nameof(sharedParam));
+            }
+
             element.GetParam(sharedParam).Set(paramValue);
         }
 
         public static void SetParamValue(this Element element, SharedParam sharedParam, int paramValue) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(sharedParam is null) {
+                throw new ArgumentNullException(nameof(sharedParam));
+            }
+
             element.GetParam(sharedParam).Set(paramValue);
         }
 
         public static void SetParamValue(this Element element, SharedParam sharedParam, string paramValue) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(sharedParam is null) {
+                throw new ArgumentNullException(nameof(sharedParam));
+            }
+
             element.GetParam(sharedParam).Set(paramValue);
         }
 
         public static void SetParamValue(this Element element, SharedParam sharedParam, ElementId paramValue) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(sharedParam is null) {
+                throw new ArgumentNullException(nameof(sharedParam));
+            }
+
             element.GetParam(sharedParam).Set(paramValue);
         }
 
