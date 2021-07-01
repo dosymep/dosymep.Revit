@@ -42,7 +42,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         /// <returns>Возвращает весь список настроек общих параметров.</returns>
         public IEnumerable<SharedParam> GetSharedParams() {
-            return GetType().GetProperties().Select(item => item.GetValue(this)).OfType<SharedParam>();
+            return GetType().GetProperties().Select(item => item.GetValue(this)).OfType<SharedParam>().OrderBy(item => item.PropertyName);
         }
 
         /// <summary>
