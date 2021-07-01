@@ -20,13 +20,13 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <remarks>Перед использованием нужно вызвать <see cref="Load(string)"/></remarks>
         public static SharedParamsConfig Instance { get; internal set; }
 
-        public SharedParam SizeWidth { get; internal set; } = new SharedParam() { Name = "Speech_Размер_Ширина", SharedParamType = StorageType.Double };
-        public SharedParam SizeDepth { get; internal set; } = new SharedParam() { Name = "Speech_Размер_Глубина", SharedParamType = StorageType.Double };
+        public SharedParam SizeWidth { get; internal set; } = new SharedParam() { PropertyName = nameof(SizeWidth), Name = "Speech_Размер_Ширина" };
+        public SharedParam SizeDepth { get; internal set; } = new SharedParam() { PropertyName = nameof(SizeDepth), Name = "Speech_Размер_Глубина" };
 
-        public SharedParam BulkheadExists { get; internal set; } = new SharedParam() { Name = "Наличие Перемычки", SharedParamType = StorageType.Integer};
-        public SharedParam BulkheadLength { get; internal set; } = new SharedParam() { Name = "Перемычка Длина", SharedParamType = StorageType.String };
-        public SharedParam BulkheadDepth { get; internal set; } = new SharedParam() { Name = "Перемычка Глубина", SharedParamType = StorageType.String };
-        public SharedParam BulkheadClass { get; internal set; } = new SharedParam() { Name = "Перемычка Класс", SharedParamType = StorageType.String };
+        public SharedParam BulkheadExists { get; internal set; } = new SharedParam() { PropertyName = nameof(BulkheadExists), Name = "Наличие Перемычки" };
+        public SharedParam BulkheadLength { get; internal set; } = new SharedParam() { PropertyName = nameof(BulkheadLength), Name = "Перемычка Длина" };
+        public SharedParam BulkheadDepth { get; internal set; } = new SharedParam() { PropertyName = nameof(BulkheadDepth), Name = "Перемычка Глубина" };
+        public SharedParam BulkheadClass { get; internal set; } = new SharedParam() { PropertyName = nameof(BulkheadClass), Name = "Перемычка Класс" };
 
         /// <summary>
         /// Сохранение текущей конфигурации.
