@@ -33,7 +33,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         /// <param name="configPath">Путь до конфигурации.</param>
         public void Save(string configPath) {
-            string json = JsonConvert.SerializeObject(this);
+            string json = JsonConvert.SerializeObject(this, Formatting.Indented);
             File.WriteAllText(configPath, json);
         }
 
@@ -60,7 +60,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <param name="configPath">Путь до конфигурации.</param>
         /// <remarks>Возвращает конфигурацию по умолчанию если был найден переданный файл.</remarks>
         public static SharedParamsConfig Load(string configPath) {
-            return File.Exists(configPath) ? JsonConvert.DeserializeObject<SharedParamsConfig>(configPath) : GetDefaultConfg();
+            return File.Exists(configPath) ? JsonConvert.DeserializeObject<SharedParamsConfig>(File.ReadAllText(configPath)) : GetDefaultConfg();
         }
 
         /// <summary>
