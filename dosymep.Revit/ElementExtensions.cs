@@ -6,28 +6,26 @@ using System.Threading.Tasks;
 
 using Autodesk.Revit.DB;
 
-using dosymep.Bim4Everyone.SharedParams;
-
 namespace dosymep.Revit {
     public static class ElementExtensions {
         /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="sharedParam">Общий параметр.</param>
+        /// <param name="paramName">Наименование параметра.</param>
         /// <param name="default">Значение по умолчанию.</param>
         /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
-        public static object GetParamValueOrDefault(this Element element, SharedParam sharedParam, object @default = default) {
+        public static object GetParamValueOrDefault(this Element element, string paramName, object @default = default) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
             try {
-                return element.GetParamValue(sharedParam);
+                return element.GetParamValue(paramName);
             } catch(ArgumentException) {
                 return @default;
             }
@@ -37,18 +35,18 @@ namespace dosymep.Revit {
         /// Возвращает значение параметра элемента.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="sharedParam">Общий параметр.</param>
+        /// <param name="paramName">Наименование параметра.</param>
         /// <returns>Возвращает значение параметра элемента.</returns>
-        public static object GetParamValue(this Element element, SharedParam sharedParam) {
+        public static object GetParamValue(this Element element, string paramName) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            Parameter param = element.GetParam(sharedParam);
+            Parameter param = element.GetParam(paramName);
             if(param.StorageType == StorageType.Double) {
                 return param.AsDouble();
             }
@@ -72,90 +70,96 @@ namespace dosymep.Revit {
         /// Устанавливает значение параметра.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="sharedParam">Общий параметр.</param>
+        /// <param name="paramName">Наименование параметра.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
-        public static void SetParamValue(this Element element, SharedParam sharedParam, double paramValue) {
+        public static void SetParamValue(this Element element, string paramName, double paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            element.GetParam(sharedParam).Set(paramValue);
+            element.GetParam(paramName).Set(paramValue);
         }
 
         /// <summary>
         /// Устанавливает значение параметра.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="sharedParam">Общий параметр.</param>
+        /// <param name="paramName">Наименование параметра.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
-        public static void SetParamValue(this Element element, SharedParam sharedParam, int paramValue) {
+        public static void SetParamValue(this Element element, string paramName, int paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            element.GetParam(sharedParam).Set(paramValue);
+            element.GetParam(paramName).Set(paramValue);
         }
 
         /// <summary>
         /// Устанавливает значение параметра.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="sharedParam">Общий параметр.</param>
+        /// <param name="paramName">Наименование параметра.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
-        public static void SetParamValue(this Element element, SharedParam sharedParam, string paramValue) {
+        public static void SetParamValue(this Element element, string paramName, string paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            element.GetParam(sharedParam).Set(paramValue);
+            element.GetParam(paramName).Set(paramValue);
         }
 
         /// <summary>
         /// Устанавливает значение параметра.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="sharedParam">Общий параметр.</param>
+        /// <param name="paramName">Наименование параметра.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
-        public static void SetParamValue(this Element element, SharedParam sharedParam, ElementId paramValue) {
+        public static void SetParamValue(this Element element, string paramName, ElementId paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            element.GetParam(sharedParam).Set(paramValue);
+            element.GetParam(paramName).Set(paramValue);
         }
 
-        private static Parameter GetParam(this Element element, SharedParam sharedParam) {
-            var param = element.LookupParameter(sharedParam.Name);
+        /// <summary>
+        /// Возвращает параметр.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает параметр.</returns>
+        public static Parameter GetParam(this Element element, string paramName) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
+            }
+
+            var param = element.LookupParameter(paramName);
             if(param is null) {
-                throw new ArgumentException($"Общего параметра с заданным именем \"{sharedParam.Name}\" не существует.", nameof(sharedParam));
+                throw new ArgumentException($"Общего параметра с заданным именем \"{paramName}\" не существует.", nameof(paramName));
             }
 
             if(!param.HasValue) {
-                throw new ArgumentException($"Общего параметра с заданным именем \"{sharedParam.Name}\" не существует.", nameof(sharedParam));
-            }
-
-            if(!param.IsShared) {
-                throw new ArgumentException($"Параметр с заданным именем \"{sharedParam.Name}\" не является общим.", nameof(sharedParam));
-            }
-
-            if(param.StorageType != sharedParam.SharedParamType) {
-                throw new ArgumentException($"Переданный общий параметр \"{sharedParam.Name}\" не соответствует типу параметра у элемента.", nameof(sharedParam));
+                throw new ArgumentException($"Общего параметра с заданным именем \"{paramName}\" не существует.", nameof(paramName));
             }
 
             return param;
