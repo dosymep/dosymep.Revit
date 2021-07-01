@@ -29,6 +29,15 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public SharedParam BulkheadClass { get; internal set; } = new SharedParam() { Name = "Перемычка Класс", SharedParamType = StorageType.String };
 
         /// <summary>
+        /// Сохранение текущей конфигурации.
+        /// </summary>
+        /// <param name="configPath">Путь до конфигурации.</param>
+        public void Save(string configPath) {
+            string json = JsonConvert.SerializeObject(this);
+            File.WriteAllText(configPath, json);
+        }
+
+        /// <summary>
         /// Возвращает весь список настроек общих параметров.
         /// </summary>
         /// <returns>Возвращает весь список настроек общих параметров.</returns>
@@ -52,16 +61,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <remarks>Возвращает конфигурацию по умолчанию если был найден переданный файл.</remarks>
         public static SharedParamsConfig Load(string configPath) {
             return File.Exists(configPath) ? JsonConvert.DeserializeObject<SharedParamsConfig>(configPath) : GetDefaultConfg();
-        }
-
-        /// <summary>
-        /// Сохранение текущей конфигурации.
-        /// </summary>
-        /// <param name="instance">Объект конфигурации, который требуется сохранить.</param>
-        /// <param name="configPath">Путь до конфигурации.</param>
-        public static void Save(SharedParamsConfig instance, string configPath) {
-            string json = JsonConvert.SerializeObject(instance);
-            File.WriteAllText(configPath, json);
         }
 
         /// <summary>
