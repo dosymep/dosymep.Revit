@@ -7,7 +7,7 @@ namespace dosymep.Revit.ServerClient {
     /// <summary>
     /// Клиент доступа к Revit сервер.
     /// </summary>
-    public class RevitServerClient : IRevitServerClient {
+    internal class RevitServerClient : IRevitServerClient {
         private readonly ISerializer _serializer;
         private readonly IRevitHttpClient _revitHttpClient;
 
