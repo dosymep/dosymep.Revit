@@ -20,8 +20,8 @@ namespace dosymep.Revit.ServerClient {
             return this;
         }
 
-        public RevitServerClientBuilder UseJsonNetSerializer() {
-            _serializer = new JsonNetSerializer();
+        public RevitServerClientBuilder UsePyRevitJsonSerializer() {
+            _serializer = new PyRevitJsonSerializer();
             return this;
         }
 

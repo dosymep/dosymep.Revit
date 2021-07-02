@@ -23,7 +23,7 @@ namespace dosymep.Revit.ServerClient {
     /// <summary>
     /// Класс десерализации JSON строки
     /// </summary>
-    internal class JsonNetSerializer : ISerializer {
+    internal class PyRevitJsonSerializer : ISerializer {
         /// <inheritdoc/>
         public T Deserialize<T>(string text) {
             return JsonConvert.DeserializeObject<T>(text);
