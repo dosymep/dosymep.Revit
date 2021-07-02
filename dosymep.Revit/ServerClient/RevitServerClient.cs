@@ -16,6 +16,7 @@ namespace dosymep.Revit.ServerClient {
         /// </summary>
         /// <param name="serverName">Наименование Revit сервера.</param>
         /// <param name="serverVersion">Версия Revit сервера.</param>
+        /// <param name="serializer">Сериализатор.</param>
         public RevitServerClient(string serverName, string serverVersion, ISerializer serializer) {
             _serializer = serializer ?? throw new ArgumentNullException(nameof(serializer));
             _revitHttpClient = new RevitHttpClient(serverName, serverVersion);
