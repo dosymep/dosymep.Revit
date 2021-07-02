@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using pyRevitLabs.Json;
-
 namespace dosymep.Revit.ServerClient {
     /// <summary>
     /// Интерфейс сериализатора
@@ -18,15 +16,5 @@ namespace dosymep.Revit.ServerClient {
         /// <param name="text">Строка десериализуемого объекта.</param>
         /// <returns></returns>
         T Deserialize<T>(string text);
-    }
-
-    /// <summary>
-    /// Класс десерализации JSON строки
-    /// </summary>
-    internal class PyRevitJsonSerializer : ISerializer {
-        /// <inheritdoc/>
-        public T Deserialize<T>(string text) {
-            return JsonConvert.DeserializeObject<T>(text);
-        }
     }
 }
