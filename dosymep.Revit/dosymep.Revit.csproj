@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenMcdf, Version=2.2.1.9, Culture=neutral, PublicKeyToken=fdbb1629d7c00800, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenMcdf.2.2.1.9\lib\net40\OpenMcdf.dll</HintPath>
+    </Reference>
     <Reference Include="RevitAPI">
       <HintPath>C:\Program Files\Autodesk\Revit 2020\RevitAPI.dll</HintPath>
       <Private>False</Private>
@@ -66,7 +69,13 @@
     <Compile Include="ServerClient\RevitServerClientBuilder.cs" />
     <Compile Include="ServerClient\ServerInformations.cs" />
     <Compile Include="Transmissions\ExternalFileReference.cs" />
+    <Compile Include="Transmissions\ExternalFileReferenceType.cs" />
+    <Compile Include="Transmissions\LoadState.cs" />
+    <Compile Include="Transmissions\PathType.cs" />
     <Compile Include="Transmissions\TransmissionData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

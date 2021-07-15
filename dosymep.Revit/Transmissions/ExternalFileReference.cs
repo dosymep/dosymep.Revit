@@ -3,50 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Serialization;
 
 namespace dosymep.Revit.Transmissions {
-    public enum LoadState {
-        Loaded,
-        Unloaded,
-
-        [XmlEnum(Name = "Not Found")]
-        NotFound
-    }
-
-    public enum PathType {
-        Absolute,
-        Relative,
-
-        [XmlEnum(Name = "Server Location")]
-        ServerLocation,
-
-        [XmlEnum(Name = "Relative to Central Model")]
-        RelativeCentralModel,
-
-        [XmlEnum(Name = "Relative to Library Locations")]
-        RelativeLibraryLocations
-    }
-
-    public enum ExternalFileReferenceType {
-        Decal,
-
-        [XmlEnum(Name = "CAD Link")]
-        CADLink,
-
-        [XmlEnum(Name = "Revit Link")]
-        RevitLink,
-
-        [XmlEnum(Name = "Keynote Table")]
-        KeynoteTable,
-
-        [XmlEnum(Name = "Assembly Code Table")]
-        AssemblyCodeTable,
-
-        [XmlEnum(Name = "DWF Markup")]
-        DWFMarkup
-    }
-
     [Serializable]
     public class ExternalFileReference {
         public int ElementId { get; set; }
