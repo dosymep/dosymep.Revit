@@ -21,10 +21,10 @@ namespace dosymep.Revit.Transmissions {
         public string UserData { get; set; }
 
         [XmlAttribute("version")]
-        public int Version { get; internal set; }
+        public int Version { get; set; }
 
         [XmlElement("ExternalFileReference")]
-        public List<ExternalFileReference> ExternalFileReferences { get; internal set; }
+        public List<ExternalFileReference> ExternalFileReferences { get; set; }
 
         public static TransmissionData ReadTransmissionData(string revitFileName) {
             using(CompoundFile cf = new CompoundFile(revitFileName)) {
@@ -38,7 +38,7 @@ namespace dosymep.Revit.Transmissions {
         }
 
         public static void WriteTransmissionData(string revitFileName, TransmissionData transmissionData) {
-            using(CompoundFile cf = new CompoundFile(revitFileName)) {
+            using(CompoundFile cf = new CompoundFile(revitFileName, CFSUpdateMode.Update, CFSConfiguration.Default)) {
                 if(cf.RootStorage.TryGetStream(TransmissionDataFileName, out CFStream rawBasicInfoData)) {
                     string xmlData = Serialize(transmissionData);
 
