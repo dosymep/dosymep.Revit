@@ -65,6 +65,8 @@
     <Compile Include="ServerClient\RevitServerClient.cs" />
     <Compile Include="ServerClient\RevitServerClientBuilder.cs" />
     <Compile Include="ServerClient\ServerInformations.cs" />
+    <Compile Include="Transmissions\ExternalFileReference.cs" />
+    <Compile Include="Transmissions\TransmissionData.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
