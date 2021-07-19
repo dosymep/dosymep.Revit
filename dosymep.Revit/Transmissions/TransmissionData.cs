@@ -61,12 +61,14 @@ namespace dosymep.Revit.Transmissions {
         }
 
         private static TransmissionData GetXmlTransmissionData(byte[] bytes) {
-            using(var reader = new BinaryReader(new MemoryStream(bytes), Encoding.GetEncoding("UTF-16"))) {
-                int length = reader.ReadInt32();
-                string xmlData = new string(reader.ReadChars(length));
+            using(var stream = new MemoryStream(bytes)) {
+                using(var reader = new BinaryReader(stream, Encoding.GetEncoding("UTF-16"))) {
+                    int length = reader.ReadInt32();
+                    string xmlData = new string(reader.ReadChars(length));
 
-                using(var textReader = new StringReader(xmlData)) {
-                    return Deserialize<TransmissionData>(textReader);
+                    using(var textReader = new StringReader(xmlData)) {
+                        return Deserialize<TransmissionData>(textReader);
+                    }
                 }
             }
         }
@@ -76,9 +78,9 @@ namespace dosymep.Revit.Transmissions {
                 using(var writer = new BinaryWriter(stream, Encoding.GetEncoding("UTF-16"))) {
                     writer.Write(textTransmissionData.Length);
                     writer.Write(textTransmissionData.ToArray());
-
-                    return stream.ToArray();
                 }
+
+                return stream.ToArray();
             }
         }
 
