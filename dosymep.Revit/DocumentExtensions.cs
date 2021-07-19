@@ -31,36 +31,57 @@ namespace dosymep.Revit {
             TransmissionData transData = TransmissionData.ReadTransmissionData(rvtFileName);
             transData.IsTransmitted = true;
 
-            foreach(ExternalFileReference externalReference in transData.ExternalFileReferences) {
+            foreach(ExternalFileReference externalReference in transData.ExternalFileReferences
+                .Where(item => item.ExternalFileReferenceType == ExternalFileReferenceType.CADLink || item.ExternalFileReferenceType == ExternalFileReferenceType.RevitLink)) {
                 externalReference.DesiredLoadState = LoadState.Unloaded;
+                externalReference.LastSavedLoadState = LoadState.Unloaded;
+
+                externalReference.DesiredPathType = PathType.Relative;
+                externalReference.LastSavedPathType = PathType.Relative;
+
+                externalReference.DesiredPath = Path.GetFileName(externalReference.DesiredPath);
+                externalReference.LastSavedPath = Path.GetFileName(externalReference.LastSavedPath);
+                externalReference.LastSavedCentralServerLocation = null;
+
+                externalReference.LastSavedAbsolutePath = Path.Combine(Path.GetDirectoryName(rvtFileName), Path.GetFileName(externalReference.LastSavedAbsolutePath));
             }
 
             TransmissionData.WriteTransmissionData(rvtFileName, transData);
         }
 
-        //public static void UnloadRevitLinks(string rvtFileName) {
-        //    if(string.IsNullOrEmpty(rvtFileName)) {
-        //        throw new ArgumentException($"'{nameof(rvtFileName)}' cannot be null or empty.", nameof(rvtFileName));
-        //    }
+        public static void UnloadAllLinksApi(params string[] rvtFileNames) {
+            UnloadAllLinksApi((IEnumerable<string>) rvtFileNames);
+        }
 
-        //    if(!File.Exists(rvtFileName)) {
-        //        throw new FileNotFoundException("Не был найден файл.", rvtFileName);
-        //    }
+        public static void UnloadAllLinksApi(IEnumerable<string> rvtFileNames) {
+            foreach(string rvtFileName in rvtFileNames) {
+                UnloadAllLinksApi(rvtFileName);
+            }
+        }
 
-        //    ModelPath rvtModelPath = ModelPathUtils.ConvertUserVisiblePathToModelPath(rvtFileName);
+        public static void UnloadAllLinksApi(string rvtFileName) {
+            if(string.IsNullOrEmpty(rvtFileName)) {
+                throw new ArgumentException($"'{nameof(rvtFileName)}' cannot be null or empty.", nameof(rvtFileName));
+            }
 
-        //    TransmissionData transData = TransmissionData.ReadTransmissionData(rvtModelPath);
-        //    transData.IsTransmitted = true;
+            if(!File.Exists(rvtFileName)) {
+                throw new FileNotFoundException("Не был найден файл.", rvtFileName);
+            }
 
-        //    IEnumerable<ExternalFileReference> externalReferences = transData.GetAllExternalFileReferenceIds()
-        //        .Select(item => transData.GetLastSavedReferenceData(item))
-        //        .Where(item => item.ExternalFileReferenceType == ExternalFileReferenceType.RevitLink);
+            Autodesk.Revit.DB.ModelPath rvtModelPath = Autodesk.Revit.DB.ModelPathUtils.ConvertUserVisiblePathToModelPath(rvtFileName);
 
-        //    foreach(ExternalFileReference externalReference in externalReferences) {
-        //        transData.SetDesiredReferenceData(externalReference.GetReferencingId(), externalReference.GetPath(), externalReference.PathType, false);
-        //    }
+            Autodesk.Revit.DB.TransmissionData transData = Autodesk.Revit.DB.TransmissionData.ReadTransmissionData(rvtModelPath);
+            transData.IsTransmitted = true;
 
-        //    TransmissionData.WriteTransmissionData(rvtModelPath, transData);
-        //}
+            IEnumerable<Autodesk.Revit.DB.ExternalFileReference> externalReferences = transData.GetAllExternalFileReferenceIds()
+                .Select(item => transData.GetLastSavedReferenceData(item))
+                .Where(item => item.ExternalFileReferenceType == Autodesk.Revit.DB.ExternalFileReferenceType.CADLink || item.ExternalFileReferenceType == Autodesk.Revit.DB.ExternalFileReferenceType.RevitLink);
+
+            foreach(Autodesk.Revit.DB.ExternalFileReference externalReference in externalReferences) {
+                transData.SetDesiredReferenceData(externalReference.GetReferencingId(), externalReference.GetPath(), externalReference.PathType, false);
+            }
+
+            Autodesk.Revit.DB.TransmissionData.WriteTransmissionData(rvtModelPath, transData);
+        }
     }
 }
