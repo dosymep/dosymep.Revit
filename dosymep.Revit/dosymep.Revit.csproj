@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="DocumentExtensions.cs" />
     <Compile Include="ElementExtensions.cs" />
+    <Compile Include="ParamExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerClient\DirectoryInfo.cs" />
     <Compile Include="ServerClient\IRevitHttpClient.cs" />
