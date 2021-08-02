@@ -9,6 +9,9 @@ using Autodesk.Revit.DB;
 using dosymep.Bim4Everyone.SharedParams;
 
 namespace dosymep.Bim4Everyone {
+    /// <summary>
+    /// Класс расширения элемента
+    /// </summary>
     public static class ElementExtensions {
         /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.

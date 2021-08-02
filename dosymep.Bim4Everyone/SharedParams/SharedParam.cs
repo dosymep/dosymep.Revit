@@ -5,7 +5,13 @@ using Autodesk.Revit.DB;
 using pyRevitLabs.Json;
 
 namespace dosymep.Bim4Everyone.SharedParams {
+    /// <summary>
+    /// Класс общего параметра
+    /// </summary>
     public class SharedParam {
+        /// <summary>
+        /// Содержит все описания общих параметров
+        /// </summary>
         private readonly static Dictionary<string, string> _description = new Dictionary<string, string>() {
             { nameof(SharedParamsConfig.SizeDepth), "Описание SizeDepth" },
             { nameof(SharedParamsConfig.SizeWidth), "Описание SizeWidth" },
@@ -15,6 +21,9 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.BulkheadLength), "Описание BulkheadLength" },
         };
 
+        /// <summary>
+        /// Содержит все типы общих параметров
+        /// </summary>
         private readonly static Dictionary<string, StorageType> _sharedParamTypes = new Dictionary<string, StorageType>() {
             { nameof(SharedParamsConfig.SizeDepth), StorageType.Double },
             { nameof(SharedParamsConfig.SizeWidth), StorageType.Double },
@@ -24,18 +33,33 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.BulkheadLength), StorageType.String },
         };
 
+        /// <summary>
+        /// Конструктор класса общего параметра
+        /// </summary>
         internal SharedParam() { }
 
+        /// <summary>
+        /// Наименование
+        /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// Описание
+        /// </summary>
         [JsonIgnore]
         public string Description {
             get { return _description.TryGetValue(PropertyName, out string value) ? value : null; }
         }
 
+        /// <summary>
+        /// Наименование свойства общего параметра <see cref="SharedParamsConfig"/>
+        /// </summary>
         [JsonIgnore]
         public string PropertyName { get; internal set; }
 
+        /// <summary>
+        /// Тип общего параметра
+        /// </summary>
         [JsonIgnore]
         public StorageType SharedParamType {
             get { return _sharedParamTypes.TryGetValue(PropertyName, out StorageType value) ? value : StorageType.None; }
