@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Autodesk.Revit.DB;
 
 using dosymep.Bim4Everyone.SharedParams;
+using dosymep.Revit;
 
 namespace dosymep.Bim4Everyone {
     /// <summary>
@@ -29,11 +30,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            try {
-                return element.GetParamValue(sharedParam);
-            } catch(ArgumentException) {
-                return @default;
-            }
+            return element.GetParamValueOrDefault(sharedParam.Name, @default);
         }
 
         /// <summary>
@@ -51,24 +48,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            Parameter param = element.GetParam(sharedParam);
-            if(param.StorageType == StorageType.Double) {
-                return param.AsDouble();
-            }
-
-            if(param.StorageType == StorageType.Integer) {
-                return param.AsInteger();
-            }
-
-            if(param.StorageType == StorageType.String) {
-                return param.AsString();
-            }
-
-            if(param.StorageType == StorageType.ElementId) {
-                return param.AsElementId();
-            }
-
-            return null;
+            return element.GetParamValue(sharedParam.Name);
         }
 
         /// <summary>
@@ -86,7 +66,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            element.GetParam(sharedParam).Set(paramValue);
+            element.SetParamValue(sharedParam.Name, paramValue);
         }
 
         /// <summary>
@@ -104,7 +84,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            element.GetParam(sharedParam).Set(paramValue);
+            element.SetParamValue(sharedParam.Name, paramValue);
         }
 
         /// <summary>
@@ -122,7 +102,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            element.GetParam(sharedParam).Set(paramValue);
+            element.SetParamValue(sharedParam.Name, paramValue);
         }
 
         /// <summary>
@@ -140,7 +120,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            element.GetParam(sharedParam).Set(paramValue);
+            element.SetParamValue(sharedParam.Name, paramValue);
         }
 
         /// <summary>
@@ -150,15 +130,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="sharedParam">Общий параметр.</param>
         /// <returns>Возвращает параметр.</returns>
         public static Parameter GetParam(this Element element, SharedParam sharedParam) {
-            var param = element.LookupParameter(sharedParam.Name);
-            if(param is null) {
-                throw new ArgumentException($"Общего параметра с заданным именем \"{sharedParam.Name}\" не существует.", nameof(sharedParam));
-            }
-
-            if(!param.HasValue) {
-                throw new ArgumentException($"Общего параметра с заданным именем \"{sharedParam.Name}\" не существует.", nameof(sharedParam));
-            }
-
+            var param = element.GetParam(sharedParam.Name);
             if(!param.IsShared) {
                 throw new ArgumentException($"Параметр с заданным именем \"{sharedParam.Name}\" не является общим.", nameof(sharedParam));
             }
