@@ -233,7 +233,7 @@ namespace dosymep.Revit {
 
             var param = element.LookupParameter(paramName);
             if(param is null) {
-                throw new ArgumentException($"Общего параметра с заданным именем \"{paramName}\" не существует.", nameof(paramName));
+                throw new ArgumentException($"Параметра с заданным именем \"{paramName}\" не существует.", nameof(paramName));
             }
 
             return param;
@@ -252,7 +252,7 @@ namespace dosymep.Revit {
 
             var param = element.get_Parameter(builtInParameter);
             if(param is null) {
-                throw new ArgumentException($"Общего параметра с заданным именем \"{builtInParameter}\" не существует.", nameof(builtInParameter));
+                throw new ArgumentException($"Параметра с заданным именем \"{builtInParameter}\" не существует.", nameof(builtInParameter));
             }
 
             return param;
