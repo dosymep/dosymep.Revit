@@ -28,7 +28,7 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <summary>
         /// Конструктор класса.
         /// </summary>
-        private EmptyProject() { }
+        internal EmptyProject() { }
 
         /// <summary>
         /// Приложение Revit.
@@ -46,7 +46,7 @@ namespace dosymep.Bim4Everyone.Templates {
             }
 
             if(Application == null) {
-                throw new InvalidOperationException($"Перед созданием проекта нужно инициализировать свойство {nameof(Application)}");
+                throw new InvalidOperationException($"Перед созданием проекта нужно инициализировать свойство \"{nameof(Application)}\".");
             }
 
             return CreateEmptyProject(documentPath, new SaveAsOptions() { OverwriteExistingFile = true });
@@ -68,7 +68,7 @@ namespace dosymep.Bim4Everyone.Templates {
             }
 
             if(Application == null) {
-                throw new InvalidOperationException($"Перед созданием проекта нужно инициализировать свойство {nameof(Application)}");
+                throw new InvalidOperationException($"Перед созданием проекта нужно инициализировать свойство \"{nameof(Application)}\".");
             }
 
             var document = Application.NewProjectDocument(ModuleEnvironment.EmptyTemplatePath);
