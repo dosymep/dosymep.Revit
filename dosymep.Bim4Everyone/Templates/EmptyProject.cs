@@ -72,10 +72,12 @@ namespace dosymep.Bim4Everyone.Templates {
             }
 
             var document = Application.NewProjectDocument(ModuleEnvironment.EmptyTemplatePath);
-            document.SaveAs(documentPath, saveAsOptions);
-            document.Close(false);
-
-            return Application.OpenDocumentFile(documentPath);
+            try {
+                document.SaveAs(documentPath, saveAsOptions);
+                return Application.OpenDocumentFile(documentPath);
+            } finally {
+                document.Close(false);
+            }
         }
     }
 }

@@ -46,16 +46,19 @@ namespace dosymep.Bim4Everyone.Templates {
             }
 
             int viewId = 304320;
-            using(var transaction = new Transaction(target)) {
-                transaction.Start($"Настройка диспетчера видов");
+            
+            Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
+            try {
+                using(var transaction = new Transaction(target)) {
+                    transaction.Start($"Настройка диспетчера видов");
 
-                Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
-               
-                CopyView(target, source, viewId);
-                CopyBrowserOrganization(target, source);
+                    CopyView(target, source, viewId);
+                    CopyBrowserOrganization(target, source);
 
+                    transaction.Commit();
+                }
+            } finally {
                 source.Close(false);
-                transaction.Commit();
             }
         }
 
