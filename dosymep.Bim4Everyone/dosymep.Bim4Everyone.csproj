@@ -82,6 +82,7 @@
     <Compile Include="SharedParams\SharedParam.cs" />
     <Compile Include="SharedParams\SharedParamsConfig.cs" />
     <Compile Include="Templates\EmptyProject.cs" />
+    <Compile Include="Templates\ProjectParameters.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
