@@ -83,5 +83,35 @@ namespace dosymep.Revit {
 
             Autodesk.Revit.DB.TransmissionData.WriteTransmissionData(rvtModelPath, transData);
         }
+
+        public static bool IsExistsParam(this Autodesk.Revit.DB.Document document, string paramName) {
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
+            }
+
+            return document.IsExistsProjectParam(paramName) || document.IsExistsSharedParam(paramName);
+        }
+
+        public static bool IsExistsProjectParam(this Autodesk.Revit.DB.Document document, string paramName) {
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
+            }
+
+            return new Autodesk.Revit.DB.FilteredElementCollector(document)
+                .OfClass(typeof(Autodesk.Revit.DB.ParameterElement))
+                .Select(item => item.Name)
+                .Contains(paramName);
+        }
+
+        public static bool IsExistsSharedParam(this Autodesk.Revit.DB.Document document, string paramName) {
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
+            }
+
+            return new Autodesk.Revit.DB.FilteredElementCollector(document)
+                .OfClass(typeof(Autodesk.Revit.DB.SharedParameterElement))
+                .Select(item => item.Name)
+                .Contains(paramName);
+        }
     }
 }
