@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
 
+using dosymep.Revit;
+
 namespace dosymep.Bim4Everyone.Templates {
     /// <summary>
     /// Класс по копирование параметров проекта.
@@ -43,6 +45,13 @@ namespace dosymep.Bim4Everyone.Templates {
         public void SetupBrowserOrganization(Document target) {
             if(Application == null) {
                 throw new InvalidOperationException($"Перед настройкой диспетчера видов нужно инициализировать свойство \"{nameof(Application)}\".");
+            }
+
+            if(target.IsExistsParam("_Группа Видов")
+                && target.IsExistsParam("_Стадия Проекта")
+                && target.IsExistsParam("_Номер Вида на Листе")) {
+
+                return;
             }
 
             int viewId = 304320;
