@@ -10,7 +10,7 @@ namespace dosymep.Revit.Comparators {
     /// <summary>
     /// Компаратор для элемента.
     /// </summary>
-    /// <remarks>Используется умное сравнение <see cref="LogicalStringComparer"/></remarks>
+    /// <remarks>Используется умное сравнение <see cref="LogicalStringComparer"/>. Сравнивает по свойству <see cref="Autodesk.Revit.DB.Element.Name"/>.</remarks>
     public class ElementComparer : IComparer<Element> {
         private readonly LogicalStringComparer _logicalStringComparer = new LogicalStringComparer();
 
