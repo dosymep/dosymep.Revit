@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 
-namespace dosymep.Revit.Properties {
+namespace dosymep.Revit {
     /// <summary>
     /// Класс расширения UIDocument
     /// </summary>
