@@ -37,6 +37,40 @@ namespace dosymep.Bim4Everyone.Templates {
         /// </summary>
         public Application Application { get; private set; }
 
+
+        /// <summary>
+        /// Настраивает атрибуты нумерации видов на листе.
+        /// </summary>
+        /// <param name="target">Документ, в котором требуется настроить диспетчер видов.</param>
+        /// <remarks>Метод открывает транзакцию при настройки нумерации видов на листе.</remarks>
+        public void SetupNumerateViewsOnSheet(Document target) {
+            if(Application == null) {
+                throw new InvalidOperationException($"Перед настройкой диспетчера видов нужно инициализировать свойство \"{nameof(Application)}\".");
+            }
+
+            if(target.IsExistsParam("_Номер Вида на Листе")
+                && target.IsExistsParam("_Полный Номер Листа")
+                && target.IsExistsParam("_Без Номера Листа")) {
+
+                return;
+            }
+
+            int viewId = 305687;
+
+            Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
+            try {
+                using(var transaction = new Transaction(target)) {
+                    transaction.Start($"Настройка нумерации видов на листе");
+
+                    CopyView(target, source, viewId);
+
+                    transaction.Commit();
+                }
+            } finally {
+                source.Close(false);
+            }
+        }
+
         /// <summary>
         /// Настраивает диспетчер видов.
         /// </summary>
