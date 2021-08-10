@@ -41,11 +41,11 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <summary>
         /// Настраивает атрибуты нумерации видов на листе.
         /// </summary>
-        /// <param name="target">Документ, в котором требуется настроить диспетчер видов.</param>
+        /// <param name="target">Документ, в котором требуется настроить атрибуты нумерации видов на листах.</param>
         /// <remarks>Метод открывает транзакцию при настройки нумерации видов на листе.</remarks>
         public void SetupNumerateViewsOnSheet(Document target) {
             if(Application == null) {
-                throw new InvalidOperationException($"Перед настройкой диспетчера видов нужно инициализировать свойство \"{nameof(Application)}\".");
+                throw new InvalidOperationException($"Перед настройкой атрибутов нумерации видов на листе нужно инициализировать свойство \"{nameof(Application)}\".");
             }
 
             if(target.IsExistsParam("_Номер Вида на Листе")
