@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocumentExtensions.cs" />
     <Compile Include="ElementExtensions.cs" />
     <Compile Include="ModuleEnvironment.cs" />
     <Compile Include="ProjectParams\ProjectParam.cs" />
