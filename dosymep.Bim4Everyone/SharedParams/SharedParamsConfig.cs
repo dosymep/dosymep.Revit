@@ -13,12 +13,14 @@ namespace dosymep.Bim4Everyone.SharedParams {
     /// <summary>
     /// Конфигурация общих параметров.
     /// </summary>
-    public class SharedParamsConfig {
+    public class SharedParamsConfig : RevitParamsConfig {
         /// <summary>
         /// Текущее состояние конфигурации.
         /// </summary>
         /// <remarks>Перед использованием нужно вызвать <see cref="Load(string)"/></remarks>
         public static SharedParamsConfig Instance { get; internal set; }
+
+        #region Размер
 
         /// <summary>
         /// Размер-ширина
@@ -29,6 +31,10 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// Размер-глубина
         /// </summary>
         public SharedParam SizeDepth { get; internal set; } = new SharedParam() { PropertyName = nameof(SizeDepth), Name = "Speech_Размер_Глубина" };
+
+        #endregion
+
+        #region Перемычка
 
         /// <summary>
         /// Перемычка-существование
@@ -50,22 +56,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         public SharedParam BulkheadClass { get; internal set; } = new SharedParam() { PropertyName = nameof(BulkheadClass), Name = "Перемычка Класс" };
 
-        /// <summary>
-        /// Сохранение текущей конфигурации.
-        /// </summary>
-        /// <param name="configPath">Путь до конфигурации.</param>
-        public void Save(string configPath) {
-            string json = JsonConvert.SerializeObject(this, Formatting.Indented);
-            File.WriteAllText(configPath, json);
-        }
-
-        /// <summary>
-        /// Возвращает весь список настроек общих параметров.
-        /// </summary>
-        /// <returns>Возвращает весь список настроек общих параметров.</returns>
-        public IEnumerable<SharedParam> GetSharedParams() {
-            return GetType().GetProperties().Select(item => item.GetValue(this)).OfType<SharedParam>().OrderBy(item => item.PropertyName);
-        }
+        #endregion
 
         /// <summary>
         /// Загрузка текущей конфигурации.

@@ -8,7 +8,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
     /// <summary>
     /// Класс общего параметра
     /// </summary>
-    public class SharedParam {
+    public class SharedParam : RevitParam {
         /// <summary>
         /// Содержит все описания общих параметров
         /// </summary>
@@ -38,30 +38,15 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         internal SharedParam() { }
 
-        /// <summary>
-        /// Наименование
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Описание
-        /// </summary>
+        /// <inheritdoc/>
         [JsonIgnore]
-        public string Description {
+        public override string Description {
             get { return _description.TryGetValue(PropertyName, out string value) ? value : null; }
         }
 
-        /// <summary>
-        /// Наименование свойства общего параметра <see cref="SharedParamsConfig"/>
-        /// </summary>
+        /// <inheritdoc/>
         [JsonIgnore]
-        public string PropertyName { get; internal set; }
-
-        /// <summary>
-        /// Тип общего параметра
-        /// </summary>
-        [JsonIgnore]
-        public StorageType SharedParamType {
+        public override StorageType SharedParamType {
             get { return _sharedParamTypes.TryGetValue(PropertyName, out StorageType value) ? value : StorageType.None; }
         }
     }

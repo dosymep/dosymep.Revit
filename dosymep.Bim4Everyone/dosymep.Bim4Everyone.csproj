@@ -79,6 +79,8 @@
     <Compile Include="ElementExtensions.cs" />
     <Compile Include="ModuleEnvironment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RevitParam.cs" />
+    <Compile Include="RevitParamsConfig.cs" />
     <Compile Include="SharedParams\SharedParam.cs" />
     <Compile Include="SharedParams\SharedParamsConfig.cs" />
     <Compile Include="Templates\EmptyProject.cs" />
