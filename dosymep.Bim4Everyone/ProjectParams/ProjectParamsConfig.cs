@@ -18,6 +18,39 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// <remarks>Перед использованием нужно вызвать <see cref="Load(string)"/></remarks>
         public static ProjectParamsConfig Instance { get; internal set; }
 
+        #region Нумерация видов на листе
+
+        /// <summary>
+        /// _Номер Вида на Листе
+        /// </summary>
+        public ProjectParam ViewNumberOnSheet { get; internal set; } = new ProjectParam() { PropertyName = nameof(ViewNumberOnSheet), Name = "_Номер Вида на Листе" };
+
+        /// <summary>
+        /// _Полный Номер Листа
+        /// </summary>
+        public ProjectParam WithFullSheetNumber { get; internal set; } = new ProjectParam() { PropertyName = nameof(WithFullSheetNumber), Name = "_Полный Номер Листа" };
+
+        /// <summary>
+        /// _Номера Листа Наличие
+        /// </summary>
+        public ProjectParam WithSheetNumber { get; internal set; } = new ProjectParam() { PropertyName = nameof(WithSheetNumber), Name = "_Номера Листа Наличие" };
+
+        #endregion
+
+        #region Параметры организации браузера
+
+        /// <summary>
+        /// _Группа Видов
+        /// </summary>
+        public ProjectParam ViewGroup { get; internal set; } = new ProjectParam() { PropertyName = nameof(ViewGroup), Name = "_Группа Видов" };
+
+        /// <summary>
+        /// _Стадия Проекта
+        /// </summary>
+        public ProjectParam ProjectStage { get; internal set; } = new ProjectParam() { PropertyName = nameof(ProjectStage), Name = "_Стадия Проекта" };
+
+        #endregion
+
         /// <summary>
         /// Загрузка текущей конфигурации.
         /// </summary>

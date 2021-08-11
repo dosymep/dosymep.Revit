@@ -17,14 +17,22 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// Содержит все описания параметров проекта.
         /// </summary>
         private readonly static Dictionary<string, string> _description = new Dictionary<string, string>() {
-
+            { nameof(ProjectParamsConfig.ViewNumberOnSheet), "Описание ViewNumberOnSheet" },
+            { nameof(ProjectParamsConfig.WithFullSheetNumber), "Описание WithFullSheetNumber" },
+            { nameof(ProjectParamsConfig.WithSheetNumber), "Описание WithSheetNumber" },
+            { nameof(ProjectParamsConfig.ViewGroup), "Описание ViewGroup" },
+            { nameof(ProjectParamsConfig.ProjectStage), "Описание ProjectStage" },
         };
 
         /// <summary>
         /// Содержит все типы параметров проекта.
         /// </summary>
         private readonly static Dictionary<string, StorageType> _projectParamTypes = new Dictionary<string, StorageType>() {
-
+            { nameof(ProjectParamsConfig.ViewNumberOnSheet), StorageType.String },
+            { nameof(ProjectParamsConfig.WithFullSheetNumber), StorageType.Integer },
+            { nameof(ProjectParamsConfig.WithSheetNumber), StorageType.Integer },
+            { nameof(ProjectParamsConfig.ViewGroup), StorageType.String },
+            { nameof(ProjectParamsConfig.ProjectStage), StorageType.String },
         };
 
         /// <summary>
