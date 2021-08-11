@@ -83,5 +83,18 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public static SharedParamsConfig GetDefaultConfg() {
             return new SharedParamsConfig();
         }
+
+        /// <inheritdoc/>
+        public override void Save(string configPath) {
+            base.Save(configPath);
+        }
+
+        /// <summary>
+        /// Возвращает весь список настроек параметров.
+        /// </summary>
+        /// <returns>Возвращает весь список настроек параметров.</returns>
+        public new IEnumerable<SharedParam> GetSharedParams() {
+            return base.GetSharedParams().Cast<SharedParam>();
+        }
     }
 }
