@@ -58,6 +58,24 @@ namespace dosymep.Bim4Everyone.SharedParams {
 
         #endregion
 
+        #region
+
+        /// <summary>
+        /// ADSK_Комплект чертежей
+        /// </summary>
+        public SharedParam AlbumBlueprints { get; internal set; } = new SharedParam() { PropertyName = nameof(AlbumBlueprints), Name = "ADSK_Комплект чертежей" };
+
+        #endregion
+
+        #region Штамп
+
+        /// <summary>
+        /// Ш.НомерЛиста
+        /// </summary>
+        public SharedParam StampSheetNumber { get; internal set; } = new SharedParam() { PropertyName = nameof(StampSheetNumber), Name = "Ш.НомерЛиста" };
+
+        #endregion
+
         /// <summary>
         /// Загрузка текущей конфигурации.
         /// </summary>

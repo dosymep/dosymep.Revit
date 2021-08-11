@@ -19,6 +19,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.BulkheadDepth), "Описание BulkheadDepth" },
             { nameof(SharedParamsConfig.BulkheadExists), "Описание BulkheadExists" },
             { nameof(SharedParamsConfig.BulkheadLength), "Описание BulkheadLength" },
+            { nameof(SharedParamsConfig.AlbumBlueprints), "Описание AlbumBlueprints" },
+            { nameof(SharedParamsConfig.StampSheetNumber), "Описание StampSheetNumber" },
         };
 
         /// <summary>
@@ -31,6 +33,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.BulkheadDepth), StorageType.String },
             { nameof(SharedParamsConfig.BulkheadExists), StorageType.String },
             { nameof(SharedParamsConfig.BulkheadLength), StorageType.String },
+            { nameof(SharedParamsConfig.AlbumBlueprints), StorageType.String },
+            { nameof(SharedParamsConfig.StampSheetNumber), StorageType.String },
         };
 
         /// <summary>
