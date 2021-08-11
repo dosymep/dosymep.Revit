@@ -39,6 +39,39 @@ namespace dosymep.Bim4Everyone.Templates {
 
 
         /// <summary>
+        /// Настраивает атрибуты нумерации листов.
+        /// </summary>
+        /// <param name="target">Документ, в котором требуется настроить атрибуты нумерации листов.</param>
+        /// <remarks>Метод открывает транзакцию при настройке атрибутов нумерации листов.</remarks>
+        public void SetupNumerateSheets(Document target) {
+            if(Application == null) {
+                throw new InvalidOperationException($"Перед настройкой атрибутов нумерации листов нужно инициализировать свойство \"{nameof(Application)}\".");
+            }
+
+            if(target.IsExistsParam("Ш.НомерЛиста")
+                && target.IsExistsParam("ADSK_Комплект чертежей")) {
+
+                return;
+            }
+
+            int viewId = 305989;
+
+            Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
+            try {
+                using(var transaction = new Transaction(target)) {
+                    transaction.Start($"Настройка атрибутов нумерации листов");
+
+                    CopyView(target, source, viewId);
+
+                    transaction.Commit();
+                }
+            } finally {
+                source.Close(false);
+            }
+        }
+
+
+        /// <summary>
         /// Настраивает атрибуты нумерации видов на листе.
         /// </summary>
         /// <param name="target">Документ, в котором требуется настроить атрибуты нумерации видов на листах.</param>
