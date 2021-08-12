@@ -97,10 +97,16 @@ namespace dosymep.Revit {
                 throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            return new Autodesk.Revit.DB.FilteredElementCollector(document)
-                .OfClass(typeof(Autodesk.Revit.DB.ParameterElement))
-                .Select(item => item.Name)
-                .Contains(paramName);
+            var iterator = document.ParameterBindings.ForwardIterator();
+            while(iterator.MoveNext()) {
+                if(iterator.Key is Autodesk.Revit.DB.InternalDefinition) {
+                    if(iterator.Key.Equals(paramName)) {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
 
         public static bool IsExistsSharedParam(this Autodesk.Revit.DB.Document document, string paramName) {
@@ -108,10 +114,16 @@ namespace dosymep.Revit {
                 throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            return new Autodesk.Revit.DB.FilteredElementCollector(document)
-                .OfClass(typeof(Autodesk.Revit.DB.SharedParameterElement))
-                .Select(item => item.Name)
-                .Contains(paramName);
+            var iterator = document.ParameterBindings.ForwardIterator();
+            while(iterator.MoveNext()) {
+                if(iterator.Key is Autodesk.Revit.DB.ExternalDefinition) {
+                    if(iterator.Key.Equals(paramName)) {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
     }
 }
