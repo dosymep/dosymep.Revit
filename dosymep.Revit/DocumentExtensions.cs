@@ -97,10 +97,9 @@ namespace dosymep.Revit {
                 throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            var iterator = document.ParameterBindings.ForwardIterator();
-            while(iterator.MoveNext()) {
-                if(iterator.Key is Autodesk.Revit.DB.InternalDefinition) {
-                    if(iterator.Key.Equals(paramName)) {
+            foreach(var item in document.GetParameterBindings()) {
+                if(item.Definition is Autodesk.Revit.DB.InternalDefinition) {
+                    if(item.Definition.Name.Equals(paramName)) {
                         return true;
                     }
                 }
@@ -114,16 +113,22 @@ namespace dosymep.Revit {
                 throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            var iterator = document.ParameterBindings.ForwardIterator();
-            while(iterator.MoveNext()) {
-                if(iterator.Key is Autodesk.Revit.DB.ExternalDefinition) {
-                    if(iterator.Key.Equals(paramName)) {
+            foreach(var item in document.GetParameterBindings()) {
+                if(item.Definition is Autodesk.Revit.DB.ExternalDefinition) {
+                    if(item.Definition.Name.Equals(paramName)) {
                         return true;
                     }
                 }
             }
 
             return false;
+        }
+
+        public static IEnumerable<(Autodesk.Revit.DB.Definition Definition, Autodesk.Revit.DB.Binding Binding)> GetParameterBindings(this Autodesk.Revit.DB.Document document) {
+            var iterator = document.ParameterBindings.ForwardIterator();
+            while(iterator.MoveNext()) {
+                yield return (iterator.Key, (Autodesk.Revit.DB.Binding) iterator.Current);
+            }
         }
     }
 }
