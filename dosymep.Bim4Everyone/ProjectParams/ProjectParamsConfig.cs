@@ -11,7 +11,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
     /// <summary>
     /// Конфигурация параметров проекта.
     /// </summary>
-    public class ProjectParamsConfig {
+    public class ProjectParamsConfig : RevitParamsConfig {
         /// <summary>
         /// Текущее состояние конфигурации.
         /// </summary>
