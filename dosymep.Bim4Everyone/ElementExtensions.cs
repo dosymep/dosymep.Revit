@@ -55,7 +55,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            return element.GetParam(sharedParam.Name).AsObject();
+            return element.GetParam(sharedParam).AsObject();
         }
 
         /// <summary>
@@ -191,7 +191,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(projectParam));
             }
 
-            return element.GetParam(projectParam);
+            return element.GetParam(projectParam).AsObject();
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(projectParam));
             }
 
-            element.GetParam(projectParam.Name).Set(paramValue);
+            element.GetParam(projectParam).Set(paramValue);
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(projectParam));
             }
 
-            element.GetParam(projectParam.Name).Set(paramValue);
+            element.GetParam(projectParam).Set(paramValue);
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(projectParam));
             }
 
-            element.GetParam(projectParam.Name).Set(paramValue);
+            element.GetParam(projectParam).Set(paramValue);
         }
 
         /// <summary>
