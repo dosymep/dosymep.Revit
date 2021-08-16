@@ -33,7 +33,11 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            return element.GetParamValueOrDefault(sharedParam.Name, @default);
+            try {
+                return element.GetParamValue(sharedParam) ?? @default;
+            } catch(ArgumentException) {
+                return @default;
+            }
         }
 
         /// <summary>
@@ -51,7 +55,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            return element.GetParamValue(sharedParam.Name);
+            return element.GetParam(sharedParam.Name).AsObject();
         }
 
         /// <summary>
@@ -69,7 +73,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            element.SetParamValue(sharedParam.Name, paramValue);
+            element.GetParam(sharedParam).Set(paramValue);
         }
 
         /// <summary>
@@ -87,7 +91,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            element.SetParamValue(sharedParam.Name, paramValue);
+            element.GetParam(sharedParam).Set(paramValue);
         }
 
         /// <summary>
@@ -105,7 +109,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            element.SetParamValue(sharedParam.Name, paramValue);
+            element.GetParam(sharedParam).Set(paramValue);
         }
 
         /// <summary>
@@ -123,7 +127,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(sharedParam));
             }
 
-            element.SetParamValue(sharedParam.Name, paramValue);
+            element.GetParam(sharedParam).Set(paramValue);
         }
 
         /// <summary>
@@ -165,7 +169,11 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(projectParam));
             }
 
-            return element.GetParamValueOrDefault(projectParam.Name, @default);
+            try {
+                return element.GetParamValue(projectParam) ?? @default;
+            } catch(ArgumentException) {
+                return @default;
+            }
         }
 
         /// <summary>
@@ -183,7 +191,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(projectParam));
             }
 
-            return element.GetParamValue(projectParam.Name);
+            return element.GetParam(projectParam);
         }
 
         /// <summary>
@@ -201,7 +209,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(projectParam));
             }
 
-            element.SetParamValue(projectParam.Name, paramValue);
+            element.GetParam(projectParam.Name).Set(paramValue);
         }
 
         /// <summary>
@@ -219,7 +227,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(projectParam));
             }
 
-            element.SetParamValue(projectParam.Name, paramValue);
+            element.GetParam(projectParam.Name).Set(paramValue);
         }
 
         /// <summary>
@@ -237,7 +245,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(projectParam));
             }
 
-            element.SetParamValue(projectParam.Name, paramValue);
+            element.GetParam(projectParam.Name).Set(paramValue);
         }
 
         /// <summary>
@@ -255,7 +263,7 @@ namespace dosymep.Bim4Everyone {
                 throw new ArgumentNullException(nameof(projectParam));
             }
 
-            element.SetParamValue(projectParam.Name, paramValue);
+            element.GetParam(projectParam.Name).Set(paramValue);
         }
 
         /// <summary>
