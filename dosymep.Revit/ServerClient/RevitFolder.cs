@@ -18,6 +18,7 @@
         /// </summary>
         public bool HasContents { get; set; }
 
+        /// <inheritdoc/>
         public override string ToString() {
             return Name;
         }

@@ -23,6 +23,7 @@
         /// </summary>
         public int ProductVersion { get; set; }
 
+        /// <inheritdoc/>
         public override string ToString() {
             return Name;
         }

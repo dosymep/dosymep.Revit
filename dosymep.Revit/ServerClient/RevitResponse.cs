@@ -1,5 +1,7 @@
 ﻿namespace dosymep.Revit.ServerClient {
-
+    /// <summary>
+    /// Типы блокировки объектов Revit сервера.
+    /// </summary>
     public enum LockState {
         /// <summary>
         /// Не блокирован.

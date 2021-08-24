@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace dosymep.Revit.ServerClient {
+    /// <summary>
+    /// Типы серверных ролей.
+    /// </summary>
     public enum ServerRoles {
         /// <summary>
         /// Host.

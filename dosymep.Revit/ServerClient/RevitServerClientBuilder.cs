@@ -44,6 +44,10 @@ namespace dosymep.Revit.ServerClient {
             return this;
         }
 
+        /// <summary>
+        /// Создает соединение с Revit сервером.
+        /// </summary>
+        /// <returns>Возвращает соединение с Revit сервером.</returns>
         public IRevitServerClient Build() {
             return new RevitServerClient(_serverName, _serverVersion, _serializer);
         }

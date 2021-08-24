@@ -3,6 +3,9 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace dosymep.Revit.ServerClient {
+    /// <summary>
+    /// Интерфейс взаимодействия с Revit сервером.
+    /// </summary>
     public interface IRevitServerClient {
         /// <summary>
         /// Наименование Revit сервера
