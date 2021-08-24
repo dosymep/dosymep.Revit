@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using Autodesk.Revit.DB;
 
 namespace dosymep.Revit {
+    /// <summary>
+    /// Расширения для элемента Revit.
+    /// </summary>
     public static class ElementExtensions {
         #region Получение параметра по его имени
 
