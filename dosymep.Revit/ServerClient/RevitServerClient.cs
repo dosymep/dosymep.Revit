@@ -22,17 +22,17 @@ namespace dosymep.Revit.ServerClient {
             _revitHttpClient = new RevitHttpClient(serverName, serverVersion);
         }
 
-        /// <inheritdoc>/>
+        /// <inheritdoc/>
         public string ServerName {
             get { return _revitHttpClient.ServerName; } 
         }
 
-        /// <inheritdoc>/>
+        /// <inheritdoc/>
         public string ServerVersion {
             get { return _revitHttpClient.ServerVersion; }
         }
 
-        /// <inheritdoc>/>
+        /// <inheritdoc/>
         public async Task<ServerInformations> GetServerPropertiesAsync(CancellationToken cancellationToken = default) {
             var response = await _revitHttpClient.Get("serverProperties", cancellationToken);
             var result = await response.Content.ReadAsStringAsync();
@@ -40,7 +40,7 @@ namespace dosymep.Revit.ServerClient {
             return _serializer.Deserialize<ServerInformations>(result);
         }
 
-        /// <inheritdoc>/>
+        /// <inheritdoc/>
         public Task<RevitContents> GetRootContentsAsync(CancellationToken cancellationToken = default) {
             return GetContentsAsync("|", cancellationToken);
         }

@@ -35,10 +35,10 @@ namespace dosymep.Revit.ServerClient {
             ServerVersion = serverVersion;
         }
 
-        /// <inheritdoc>/>
+        /// <inheritdoc/>
         public string ServerName { get; }
 
-        /// <inheritdoc>/>
+        /// <inheritdoc/>
         public string ServerVersion { get; }
 
         /// <inheritdoc/>
