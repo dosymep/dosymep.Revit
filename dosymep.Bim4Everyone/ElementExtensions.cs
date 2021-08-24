@@ -137,9 +137,17 @@ namespace dosymep.Bim4Everyone {
         /// <param name="sharedParam">Общий параметр.</param>
         /// <returns>Возвращает параметр.</returns>
         public static Parameter GetParam(this Element element, SharedParam sharedParam) {
-            var param = element.GetParam(sharedParam.Name);
-            if(!param.IsShared) {
-                throw new ArgumentException($"Параметр с заданным именем \"{sharedParam.Name}\" не является общим.", nameof(sharedParam));
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(sharedParam is null) {
+                throw new ArgumentNullException(nameof(sharedParam));
+            }
+
+            var param = element.GetParameters(sharedParam.Name).FirstOrDefault(item => item.IsShared);
+            if(param is null) {
+                throw new ArgumentException($"Общий параметр с заданным именем \"{sharedParam.Name}\" не был найден.", nameof(sharedParam));
             }
 
             if(param.StorageType != sharedParam.SharedParamType) {
@@ -273,9 +281,17 @@ namespace dosymep.Bim4Everyone {
         /// <param name="projectParam">Параметр проекта.</param>
         /// <returns>Возвращает параметр.</returns>
         public static Parameter GetParam(this Element element, ProjectParam projectParam) {
-            var param = element.GetParam(projectParam.Name);
-            if(param.IsShared) {
-                throw new ArgumentException($"Параметр с заданным именем \"{projectParam.Name}\" не является параметром проекта.", nameof(projectParam));
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(projectParam is null) {
+                throw new ArgumentNullException(nameof(projectParam));
+            }
+
+            var param = element.GetParameters(projectParam.Name).FirstOrDefault(item => !item.IsShared);
+            if(param is null) {
+                throw new ArgumentException($"Параметр проекта с заданным именем \"{projectParam.Name}\" не был найден.", nameof(projectParam));
             }
 
             if(param.StorageType != projectParam.SharedParamType) {
