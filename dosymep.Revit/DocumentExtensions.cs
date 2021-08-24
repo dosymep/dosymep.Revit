@@ -89,7 +89,7 @@ namespace dosymep.Revit {
                 throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            return document.IsExistsProjectParam(paramName) || document.IsExistsSharedParam(paramName);
+            return document.GetProjectParamElements().Any(item => item.Name.Equals(paramName));
         }
 
         public static bool IsExistsProjectParam(this Autodesk.Revit.DB.Document document, string paramName) {
@@ -97,15 +97,7 @@ namespace dosymep.Revit {
                 throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            foreach(var item in document.GetParameterBindings()) {
-                if(item.Definition is Autodesk.Revit.DB.InternalDefinition) {
-                    if(item.Definition.Name.Equals(paramName)) {
-                        return true;
-                    }
-                }
-            }
-
-            return false;
+            return document.GetProjectParams().Any(item => item.Name.Equals(paramName));
         }
 
         public static bool IsExistsSharedParam(this Autodesk.Revit.DB.Document document, string paramName) {
@@ -113,15 +105,19 @@ namespace dosymep.Revit {
                 throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            foreach(var item in document.GetParameterBindings()) {
-                if(item.Definition is Autodesk.Revit.DB.ExternalDefinition) {
-                    if(item.Definition.Name.Equals(paramName)) {
-                        return true;
-                    }
-                }
-            }
+            return document.GetSharedParams().Any(item=> item.Name.Equals(paramName));
+        }
 
-            return false;
+        public static IEnumerable<Autodesk.Revit.DB.ParameterElement> GetProjectParams(this Autodesk.Revit.DB.Document document) {
+            return document.GetProjectParamElements().Where(item => !(item is Autodesk.Revit.DB.SharedParameterElement));
+        }
+
+        public static IEnumerable<Autodesk.Revit.DB.SharedParameterElement> GetSharedParams(this Autodesk.Revit.DB.Document document) {
+            return document.GetProjectParamElements().OfType<Autodesk.Revit.DB.SharedParameterElement>();
+        }
+
+        public static IEnumerable<Autodesk.Revit.DB.ParameterElement> GetProjectParamElements(this Autodesk.Revit.DB.Document document) {
+            return document.GetParameterBindings().Select(item => document.GetElement(((dynamic) item.Definition).Id)).OfType<Autodesk.Revit.DB.ParameterElement>();
         }
 
         public static IEnumerable<(Autodesk.Revit.DB.Definition Definition, Autodesk.Revit.DB.Binding Binding)> GetParameterBindings(this Autodesk.Revit.DB.Document document) {
