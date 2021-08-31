@@ -169,7 +169,7 @@ namespace dosymep.Revit {
                 throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
 
-            return document.GetSharedParams().Any(item=> item.Name.Equals(paramName));
+            return document.GetSharedParams().Any(item => item.Name.Equals(paramName));
         }
 
         #endregion

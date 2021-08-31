@@ -17,6 +17,10 @@ namespace dosymep.Revit {
         /// <param name="parameter">Параметр.</param>
         /// <returns>Возвращает значение параметра.</returns>
         public static object AsObject(this Parameter parameter) {
+            if(parameter is null) {
+                throw new ArgumentNullException(nameof(parameter));
+            }
+
             if(parameter.HasValue) {
                 var storageType = parameter.StorageType;
                 if(storageType == StorageType.Integer)
