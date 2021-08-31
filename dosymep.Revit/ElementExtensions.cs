@@ -30,7 +30,7 @@ namespace dosymep.Revit {
             }
 
             try {
-                return element.GetParamValue(paramName);
+                return element.GetParamValue(paramName) ?? @default;
             } catch(ArgumentException) {
                 return @default;
             }
@@ -143,7 +143,7 @@ namespace dosymep.Revit {
             }
 
             try {
-                return element.GetParamValue(builtInParameter);
+                return element.GetParamValue(builtInParameter) ?? @default;
             } catch(ArgumentException) {
                 return @default;
             }
