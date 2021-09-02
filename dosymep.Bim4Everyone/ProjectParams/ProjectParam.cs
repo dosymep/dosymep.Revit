@@ -22,6 +22,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             { nameof(ProjectParamsConfig.WithSheetNumber), "Описание WithSheetNumber" },
             { nameof(ProjectParamsConfig.ViewGroup), "Описание ViewGroup" },
             { nameof(ProjectParamsConfig.ProjectStage), "Описание ProjectStage" },
+            { nameof(ProjectParamsConfig.CheckIsNormalGrid), "Описание CheckIsNormalGrid" },
+            { nameof(ProjectParamsConfig.CheckCorrectDistanceGrid ), "Описание CheckCorrectDistanceGrid " },
         };
 
         /// <summary>
@@ -33,6 +35,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             { nameof(ProjectParamsConfig.WithSheetNumber), StorageType.Integer },
             { nameof(ProjectParamsConfig.ViewGroup), StorageType.String },
             { nameof(ProjectParamsConfig.ProjectStage), StorageType.String },
+            { nameof(ProjectParamsConfig.CheckIsNormalGrid), StorageType.Integer },
+            { nameof(ProjectParamsConfig.CheckCorrectDistanceGrid), StorageType.Integer },
         };
 
         /// <summary>

@@ -51,6 +51,20 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
         #endregion
 
+        #region Проверки
+
+        /// <summary>
+        /// Пров_Ортогональность Осям
+        /// </summary>
+        public ProjectParam CheckIsNormalGrid { get; internal set; } = new ProjectParam() { PropertyName = nameof(CheckIsNormalGrid), Name = "Пров_Ортогональность Осям" };
+
+        /// <summary>
+        /// Пров_Ровно от Оси
+        /// </summary>
+        public ProjectParam CheckCorrectDistanceGrid { get; internal set; } = new ProjectParam() { PropertyName = nameof(CheckCorrectDistanceGrid), Name = "Пров_Ровно от Оси" };
+
+        #endregion
+
         /// <summary>
         /// Загрузка текущей конфигурации.
         /// </summary>
