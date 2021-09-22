@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <Platforms>x64</Platforms>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+</Project>
