@@ -65,6 +65,12 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         public SharedParam AlbumBlueprints { get; internal set; } = new SharedParam() { PropertyName = nameof(AlbumBlueprints), Name = "ADSK_Комплект чертежей" };
 
+        /// <summary>
+        /// ADSK_Имя системы
+        /// </summary>
+        public SharedParam MechanicalSystemName { get; internal set; } = new SharedParam() { PropertyName = nameof(MechanicalSystemName), Name = "ADSK_Имя системы" };
+
+
         #endregion
 
         #region Штамп

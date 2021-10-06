@@ -21,6 +21,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.BulkheadLength), "Описание BulkheadLength" },
             { nameof(SharedParamsConfig.AlbumBlueprints), "Описание AlbumBlueprints" },
             { nameof(SharedParamsConfig.StampSheetNumber), "Описание StampSheetNumber" },
+            { nameof(SharedParamsConfig.MechanicalSystemName), "Описание MechanicalSystemName" },
         };
 
         /// <summary>
@@ -35,6 +36,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.BulkheadLength), StorageType.String },
             { nameof(SharedParamsConfig.AlbumBlueprints), StorageType.String },
             { nameof(SharedParamsConfig.StampSheetNumber), StorageType.String },
+            { nameof(SharedParamsConfig.MechanicalSystemName), StorageType.String },
         };
 
         /// <summary>
