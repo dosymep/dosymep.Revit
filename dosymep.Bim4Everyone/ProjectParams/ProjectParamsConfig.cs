@@ -65,6 +65,105 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
         #endregion
 
+        #region Квартирография
+
+        /// <summary>
+        /// КВГ_Коэффициент площади
+        /// </summary>
+        public ProjectParam RoomAreaRatio { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomAreaRatio), Name = "КВГ_Коэффициент площади" };
+
+        /// <summary>
+        /// КВГ_Доп. сортировка групп
+        /// </summary>
+        public ProjectParam ApartmentGroupName { get; internal set; } = new ProjectParam() { PropertyName = nameof(ApartmentGroupName), Name = "КВГ_Доп. сортировка групп" };
+
+        /// <summary>
+        /// КВГ_Группа
+        /// </summary>
+        public ProjectParam RoomGroupName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomGroupName), Name = "КВГ_Группа" };
+
+        /// <summary>
+        /// КВГ_ПМЩ_Группа короткое
+        /// </summary>
+        public ProjectParam RoomGroupShortName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomGroupShortName), Name = "ККВГ_ПМЩ_Группа короткое" };
+
+        /// <summary>
+        /// КВГ_Пожарный отсек
+        /// </summary>
+        public ProjectParam FireCompartmentName { get; internal set; } = new ProjectParam() { PropertyName = nameof(FireCompartmentName), Name = "КВГ_Пожарный отсек" };
+
+        /// <summary>
+        /// КВГ_Пожарный отсек короткое
+        /// </summary>
+        public ProjectParam FireCompartmentShortName { get; internal set; } = new ProjectParam() { PropertyName = nameof(FireCompartmentShortName), Name = "КВГ_Пожарный отсек короткое" };
+
+        /// <summary>
+        /// КВГ_Секция
+        /// </summary>
+        public ProjectParam RoomSectionName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomSectionName), Name = "КВГ_Секция" };
+
+        /// <summary>
+        /// КВГ_Секция короткое
+        /// </summary>
+        public ProjectParam RoomSectionShortName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomSectionShortName), Name = "КВГ_Секция короткое" };
+
+        /// <summary>
+        /// КВГ_Тип группы помещений
+        /// </summary>
+        public ProjectParam RoomTypeGroupName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomTypeGroupName), Name = "КВГ_Тип группы помещений" };
+
+        /// <summary>
+        /// КВГ_Тип группы помещений короткий
+        /// </summary>
+        public ProjectParam RoomTypeGroupShortName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomTypeGroupShortName), Name = "КВГ_Тип группы помещений короткий" };
+
+        /// <summary>
+        /// КВГ_КВР_Площадь по ТЗ
+        /// </summary>
+        public ProjectParam ApartmentAreaSpec { get; internal set; } = new ProjectParam() { PropertyName = nameof(ApartmentAreaSpec), Name = "КВГ_КВР_Площадь по ТЗ" };
+
+        /// <summary>
+        /// КВГ_КВР_Площадь по ТЗ мин
+        /// </summary>
+        public ProjectParam ApartmentAreaMinSpec { get; internal set; } = new ProjectParam() { PropertyName = nameof(ApartmentAreaMinSpec), Name = "КВГ_КВР_Площадь по ТЗ мин" };
+
+        /// <summary>
+        /// КВГ_КВР_Площадь по ТЗ макс
+        /// </summary>
+        public ProjectParam ApartmentAreaMaxSpec { get; internal set; } = new ProjectParam() { PropertyName = nameof(ApartmentAreaMaxSpec), Name = "КВГ_КВР_Площадь по ТЗ макс" };
+
+        /// <summary>
+        /// КВГ_Тип нумерации групп
+        /// </summary>
+        public ProjectParam RoomTypeCountGroup { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomTypeCountGroup), Name = "КВГ_Тип нумерации групп" };
+
+        /// <summary>
+        /// КВГ_Наименование
+        /// </summary>
+        public ProjectParam RoomName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomName), Name = "КВГ_Наименование" };
+
+        /// <summary>
+        /// КВГ_Тип нумерации квартир в секции
+        /// </summary>
+        public ProjectParam ApartmentTypeNumsInSection { get; internal set; } = new ProjectParam() { PropertyName = nameof(ApartmentTypeNumsInSection), Name = "КВГ_Тип нумерации квартир в секции" };
+
+        /// <summary>
+        /// КВГ_Летнее
+        /// </summary>
+        public ProjectParam IsRoomBalcony { get; internal set; } = new ProjectParam() { PropertyName = nameof(IsRoomBalcony), Name = "КВГ_Летнее" };
+
+        /// <summary>
+        /// КВГ_Жилое
+        /// </summary>
+        public ProjectParam IsRoomLiving { get; internal set; } = new ProjectParam() { PropertyName = nameof(IsRoomLiving), Name = "КВГ_Жилое" };
+
+        /// <summary>
+        /// КВГ_ПМЩ_Фиксация номера
+        /// </summary>
+        public ProjectParam IsRoomNumberFix { get; internal set; } = new ProjectParam() { PropertyName = nameof(IsRoomNumberFix), Name = "КВГ_ПМЩ_Фиксация номера" };
+
+        #endregion
+
         /// <summary>
         /// Загрузка текущей конфигурации.
         /// </summary>
