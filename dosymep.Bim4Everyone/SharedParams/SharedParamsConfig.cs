@@ -127,7 +127,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <summary>
         /// ФОП_ПМЩ_Группа
         /// </summary>
-        public SharedParam RoomGroupName { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomGroupName), Name = "ФОП_ПМЩ_Группа" };
+        public SharedParam RoomGroupShortName { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomGroupShortName), Name = "ФОП_ПМЩ_Группа" };
 
         /// <summary>
         /// ФОП_Доп. сортировка групп
@@ -137,17 +137,17 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <summary>
         /// ФОП_Пожарный отсек
         /// </summary>
-        public SharedParam FireCompartmentName { get; internal set; } = new SharedParam() { PropertyName = nameof(FireCompartmentName), Name = "ФОП_Пожарный отсек" };
+        public SharedParam FireCompartmentShortName { get; internal set; } = new SharedParam() { PropertyName = nameof(FireCompartmentShortName), Name = "ФОП_Пожарный отсек" };
 
         /// <summary>
         /// ФОП_ПМЩ_Секция
         /// </summary>
-        public SharedParam RoomSectionName { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomSectionName), Name = "ФОП_ПМЩ_Секция" };
+        public SharedParam RoomSectionShortName { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomSectionShortName), Name = "ФОП_ПМЩ_Секция" };
 
         /// <summary>
         /// ФОП_Тип группы помещений
         /// </summary>
-        public SharedParam RoomTypeGroupName { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomTypeGroupName), Name = "ФОП_Тип группы помещений" };
+        public SharedParam RoomTypeGroupShortName { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomTypeGroupShortName), Name = "ФОП_Тип группы помещений" };
 
         /// <summary>
         /// ФОП_КВР_Площадь по ТЗ
