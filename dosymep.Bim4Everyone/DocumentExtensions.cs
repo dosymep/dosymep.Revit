@@ -21,6 +21,22 @@ namespace dosymep.Bim4Everyone {
         /// <param name="document">Документ.</param>
         /// <param name="revitParam">Параметр проекта.</param>
         /// <returns></returns>
+        public static bool IsExistsParam(this Document document, RevitParam revitParam) {
+            if(revitParam is ProjectParam projectParam) {
+                return document.IsExistsParam(projectParam);
+            } else if(revitParam is SharedParam sharedParam) {
+                return document.IsExistsParam(sharedParam);
+            }
+
+            throw new NotSupportedException($"Переданный тип параметра \"{revitParam.GetType()}\" не поддерживается. Имя параметра \"{revitParam.Name}\".");
+        }
+
+        /// <summary>
+        /// Проверяет на существование параметра проекта.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="revitParam">Параметр проекта.</param>
+        /// <returns></returns>
         public static bool IsExistsParam(this Document document, ProjectParam revitParam) {
             return document.IsExistsProjectParam(revitParam.Name);
         }
