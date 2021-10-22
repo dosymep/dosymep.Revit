@@ -17,6 +17,11 @@ namespace dosymep.Bim4Everyone.KeySchedules {
     /// </summary>
     public class KeyScheduleRule {
         /// <summary>
+        /// Создает экземпляр настроек проверки ключевых спецификаций.
+        /// </summary>
+        internal KeyScheduleRule() { }
+
+        /// <summary>
         /// Наименование спецификации.
         /// </summary>
         public string ScheduleName { get; set; }
@@ -29,22 +34,32 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// <summary>
         /// Общие параметры, которые должны быть обязательно заполнены в спецификации.
         /// </summary>
-        public List<string> FilledSharedParamNames { get; set; }
+        public List<string> FilledSharedParamNames { get; set; } = new List<string>();
 
         /// <summary>
         /// Параметры проекта, которые должны быть обязательно заполнены в спецификации.
         /// </summary>
-        public List<string> FilledProjectParamNames { get; set; }
+        public List<string> FilledProjectParamNames { get; set; } = new List<string>();
 
         /// <summary>
         /// Обязательные общие параметры в спецификации.
         /// </summary>
-        public List<string> RequiredSharedParams { get; set; }
+        public List<string> RequiredSharedParams { get; set; } = new List<string>();
 
         /// <summary>
         /// Обязательные параметры проекта в спецификации.
         /// </summary>
-        public List<string> RequiredProjectParams { get; set; }
+        public List<string> RequiredProjectParams { get; set; } = new List<string>();
+
+        /// <summary>
+        /// Обязательные системные параметры проекта в спецификации.
+        /// </summary>
+        public List<BuiltInParameter> RequiredSystemParams { get; set; } = new List<BuiltInParameter>();
+
+        /// <summary>
+        /// Системные параметры проекта, которые должны быть обязательно заполнены в спецификации.
+        /// </summary>
+        public List<BuiltInParameter> FilledSystemParams { get; set; } = new List<BuiltInParameter>();
 
         /// <summary>
         /// Создает объект класса проверок для спецификации.
@@ -86,6 +101,9 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
             return new KeyScheduleRuleInternal() {
                 KeyRevitParam = keyRevitParam,
+
+                FilledSystemParams = FilledSystemParams.ToList(),
+                RequiredSystemParams = RequiredSystemParams.ToList(),
                 FilledParams = new List<RevitParam>(filledSharedParams.Union(filledProjectParams)),
                 RequiredParams = new List<RevitParam>(requiredSharedParams.Union(requiredProjectParams)),
             };

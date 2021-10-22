@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 
+using Autodesk.Revit.DB;
+
 namespace dosymep.Bim4Everyone.KeySchedules {
     /// <summary>
     /// Внутренние настройки проверки ключевых спецификаций.
@@ -19,5 +21,15 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// Обязательные параметры в спецификации.
         /// </summary>
         public List<RevitParam> RequiredParams { get; set; }
+
+        /// <summary>
+        /// Обязательные системные параметры проекта в спецификации.
+        /// </summary>
+        public List<BuiltInParameter> RequiredSystemParams { get; set; }
+
+        /// <summary>
+        /// Системные параметры, которые должны быть обязательно заполнены в спецификации.
+        /// </summary>
+        public List<BuiltInParameter> FilledSystemParams { get; internal set; }
     }
 }
