@@ -16,7 +16,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
     public class SystemParam : RevitParam {        
         private readonly LanguageType? _languageType;
 
-#if D2020 || R2020 || D2021 || R20201
+#if D2020 || R2020 || D2021 || R2021
         /// <summary>
         /// Создает экземпляр класса системного параметра.
         /// </summary>
@@ -51,7 +51,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// <inheritdoc/>
         public override string Name {
             get {
-#if D2020 || R2020 || D2021 || R20201
+#if D2020 || R2020 || D2021 || R2021
                 if(_languageType.HasValue) {
                     return LabelUtils.GetLabelFor(SystemParamId, _languageType.Value);
                 }

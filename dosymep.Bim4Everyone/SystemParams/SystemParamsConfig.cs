@@ -37,7 +37,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
         public static SystemParamsConfig Instance { get; internal set; }
 #pragma warning restore CS1574 // XML comment has cref attribute that could not be resolved
 
-#if D2020 || R2020 || D2021 || R20201
+#if D2020 || R2020 || D2021 || R2021
         /// <summary>
         /// Возвращает экземпляр класса системного параметра.
         /// </summary>

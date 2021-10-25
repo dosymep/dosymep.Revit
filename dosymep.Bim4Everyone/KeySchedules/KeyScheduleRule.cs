@@ -52,7 +52,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// </summary>
         public List<string> RequiredProjectParams { get; set; } = new List<string>();
 
-#if D2020 || R2020 || D2021 || R20201
+#if D2020 || R2020 || D2021 || R2021
         /// <summary>
         /// Обязательные системные параметры проекта в спецификации.
         /// </summary>
