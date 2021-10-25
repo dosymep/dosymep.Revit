@@ -132,7 +132,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// <summary>
         /// КВГ_ПМЩ_Группа короткое
         /// </summary>
-        public ProjectParam RoomGroupShortName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomGroupShortName), Name = "ККВГ_ПМЩ_Группа короткое" };
+        public ProjectParam RoomGroupShortName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomGroupShortName), Name = "КВГ_ПМЩ_Группа короткое" };
 
         /// <summary>
         /// КВГ_Пожарный отсек короткое
