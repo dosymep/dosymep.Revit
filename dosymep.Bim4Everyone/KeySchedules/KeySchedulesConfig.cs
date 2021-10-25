@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Autodesk.Revit.DB;
 
 using dosymep.Bim4Everyone.ProjectParams;
+using dosymep.Bim4Everyone.SharedParams;
 
 using pyRevitLabs.Json;
 
@@ -23,6 +24,8 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         public static KeySchedulesConfig Instance { get; internal set; }
 
         #region Квартирография
+
+#if D2020 || R2020 || D2021 || R2021
 
         /// <summary>
         /// КВГ_(Ключ.) - Группа помещений
@@ -55,27 +58,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 ScheduleName = "КВГ_(Ключ.) - Наименование пом.",
                 KeyRevitParamName = nameof(ProjectParamsConfig.RoomName),
 
-
-#if D2020 || R2020 || D2021 || R20201
-                RequiredSystemParams = new List<BuiltInParameter>() { 
-                    BuiltInParameter.ROOM_NAME, 
-                    BuiltInParameter.ROOM_DEPARTMENT
-                },
-
-                FilledSystemParams = new List<BuiltInParameter>() {
-                    BuiltInParameter.ROOM_NAME
-                },
-#else
-                RequiredSystemParams = new List<ForgeTypeId>() {
-                    ParameterTypeId.RoomName,
-                    ParameterTypeId.RoomDepartment
-                },
-
-                FilledSystemParams = new List<ForgeTypeId>() {
-                    ParameterTypeId.RoomName
-                },
-#endif
-
                 RequiredSharedParams = new List<string>() { },
                 RequiredProjectParams = new List<string>() {
                     nameof(ProjectParamsConfig.RoomName),
@@ -83,10 +65,17 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                     nameof(ProjectParamsConfig.IsRoomBalcony), 
                     nameof(ProjectParamsConfig.IsRoomLiving)
                 },
+                RequiredSystemParams = new List<BuiltInParameter>() {
+                    BuiltInParameter.ROOM_NAME,
+                    BuiltInParameter.ROOM_DEPARTMENT
+                },
 
                 FilledSharedParamNames = new List<string>() { },
                 FilledProjectParamNames = new List<string>() {
                     nameof(ProjectParamsConfig.RoomName)
+                },
+                FilledSystemParams = new List<BuiltInParameter>() {
+                    BuiltInParameter.ROOM_NAME
                 },
 
 
@@ -155,8 +144,132 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                     nameof(ProjectParamsConfig.RoomTypeGroupShortName),
                 }
             };
+#else
+        /// <summary>
+        /// КВГ_(Ключ.) - Группа помещений
+        /// </summary>
+        public KeyScheduleRule RoomsGroups { get; internal set; }
+            = new KeyScheduleRule() {
+                ScheduleName = "КВГ_(Ключ.) - Группа помещений",
+                KeyRevitParamName = nameof(ProjectParamsConfig.RoomGroupName),
 
-#endregion
+                RequiredSharedParams = new List<string>() {
+                    nameof(SharedParamsConfig.ApartmentGroupName),
+                    nameof(SharedParamsConfig.RoomGroupShortName)
+                },
+                RequiredProjectParams = new List<string>() {
+                    nameof(ProjectParamsConfig.RoomGroupName),
+                    nameof(ProjectParamsConfig.RoomTypeCountGroup)
+                },
+
+                FilledSharedParamNames = new List<string>() {
+                    nameof(SharedParamsConfig.RoomGroupShortName)
+                },
+                FilledProjectParamNames = new List<string>() {
+                    nameof(ProjectParamsConfig.RoomGroupName),
+                }
+            };
+
+        /// <summary>
+        /// КВГ_(Ключ.) - Наименование пом.
+        /// </summary>
+        public KeyScheduleRule RoomsNames { get; internal set; }
+            = new KeyScheduleRule() {
+                ScheduleName = "КВГ_(Ключ.) - Наименование пом.",
+                KeyRevitParamName = nameof(ProjectParamsConfig.RoomName),
+
+                RequiredSharedParams = new List<string>() { },
+                RequiredProjectParams = new List<string>() {
+                    nameof(ProjectParamsConfig.RoomName),
+                    nameof(ProjectParamsConfig.RoomAreaRatio),
+                    nameof(ProjectParamsConfig.IsRoomBalcony),
+                    nameof(ProjectParamsConfig.IsRoomLiving)
+                },
+                RequiredSystemParams = new List<ForgeTypeId>() {
+                    ParameterTypeId.RoomName,
+                    ParameterTypeId.RoomDepartment
+                },
+
+                FilledSharedParamNames = new List<string>() { },
+                FilledProjectParamNames = new List<string>() {
+                    nameof(ProjectParamsConfig.RoomName)
+                },
+                FilledSystemParams = new List<ForgeTypeId>() {
+                    ParameterTypeId.RoomName
+                },
+            };
+
+        /// <summary>
+        /// КВГ_(Ключ.) - Пожарный отсек
+        /// </summary>
+        public KeyScheduleRule FireCompartment { get; internal set; }
+            = new KeyScheduleRule() {
+                ScheduleName = "КВГ_(Ключ.) - Пожарный отсек",
+                KeyRevitParamName = nameof(ProjectParamsConfig.FireCompartmentName),
+
+                RequiredSharedParams = new List<string>() {
+                    nameof(SharedParamsConfig.FireCompartmentShortName)
+                },
+                RequiredProjectParams = new List<string>() {
+                    nameof(ProjectParamsConfig.FireCompartmentName),
+                },
+
+                FilledSharedParamNames = new List<string>() { },
+                FilledProjectParamNames = new List<string>() { }
+            };
+
+        /// <summary>
+        /// КВГ_(Ключ.) - Секция
+        /// </summary>
+        public KeyScheduleRule RoomsSections { get; internal set; }
+            = new KeyScheduleRule() {
+                ScheduleName = "КВГ_(Ключ.) - Секция",
+                KeyRevitParamName = nameof(ProjectParamsConfig.RoomSectionName),
+
+                RequiredSharedParams = new List<string>() {
+                    nameof(SharedParamsConfig.RoomSectionShortName)
+                },
+                RequiredProjectParams = new List<string>() {
+                    nameof(ProjectParamsConfig.RoomSectionName),
+                    nameof(ProjectParamsConfig.ApartmentTypeNumsInSection)
+                },
+
+                FilledSharedParamNames = new List<string>() {
+                    nameof(SharedParamsConfig.RoomSectionShortName),
+                },
+                FilledProjectParamNames = new List<string>() {
+                    nameof(ProjectParamsConfig.RoomSectionName),
+                }
+            };
+
+        /// <summary>
+        /// КВГ_(Ключ.) - Тип группы
+        /// </summary>
+        public KeyScheduleRule RoomsTypeGroup { get; internal set; }
+            = new KeyScheduleRule() {
+                ScheduleName = "КВГ_(Ключ.) - Тип группы",
+                KeyRevitParamName = nameof(ProjectParamsConfig.RoomTypeGroupName),
+
+                RequiredSharedParams = new List<string>() {
+                    nameof(SharedParamsConfig.RoomTypeGroupShortName),
+                    nameof(SharedParamsConfig.ApartmentAreaSpec),
+                    nameof(SharedParamsConfig.ApartmentAreaMinSpec),
+                    nameof(SharedParamsConfig.ApartmentAreaMaxSpec)
+                },
+                RequiredProjectParams = new List<string>() {
+                    nameof(ProjectParamsConfig.RoomTypeGroupName)
+                },
+
+                FilledSharedParamNames = new List<string>() {
+                    nameof(SharedParamsConfig.RoomTypeGroupShortName)
+                },
+                FilledProjectParamNames = new List<string>() {
+                    nameof(ProjectParamsConfig.RoomTypeGroupName),
+                }
+            };
+#endif
+
+        #endregion
 
         /// <summary>
         /// Загрузка текущей конфигурации.

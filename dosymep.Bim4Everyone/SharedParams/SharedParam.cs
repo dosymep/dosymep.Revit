@@ -36,14 +36,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.ApartmentLivingArea), "Описание ApartmentLivingArea" },
             { nameof(SharedParamsConfig.ApartmentArea), "Описание ApartmentArea" },
             { nameof(SharedParamsConfig.ApartmentFullArea), "Описание ApartmentFullArea" },
-            { nameof(SharedParamsConfig.RoomGroupShortName), "Описание RoomGroupName" },
-            { nameof(SharedParamsConfig.ApartmentGroupName), "Описание ApartmentGroupName" },
-            { nameof(SharedParamsConfig.FireCompartmentShortName), "Описание FireCompartmentName" },
-            { nameof(SharedParamsConfig.RoomSectionShortName), "Описание RoomSectionName" },
-            { nameof(SharedParamsConfig.RoomTypeGroupShortName), "Описание RoomTypeGroupName" },
-            { nameof(SharedParamsConfig.ApartmentAreaSpec), "Описание ApartmentAreaSpec" },
-            { nameof(SharedParamsConfig.ApartmentAreaMinSpec), "Описание ApartmentAreaMinSpec" },
-            { nameof(SharedParamsConfig.ApartmentAreaMaxSpec), "Описание ApartmentAreaMaxSpec" },
             { nameof(SharedParamsConfig.ApartmentNumber), "Описание ApartmentNumber" },
             { nameof(SharedParamsConfig.ApartmentNumberExtra), "Описание ApartmentNumberExtra" },
             { nameof(SharedParamsConfig.ApartmentAreaRatioFix), "Описание ApartmentAreaRatioFix" },
@@ -54,6 +46,17 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.RoomAreaWithRatioFix), "Описание RoomAreaWithRatioFix" },
             { nameof(SharedParamsConfig.ApartmentFullAreaFix), "Описание ApartmentFullAreaFix" },
             { nameof(SharedParamsConfig.Level), "Описание Level" },
+
+#if D2022 || R2022
+            { nameof(SharedParamsConfig.RoomGroupShortName), "Описание RoomGroupName" },
+            { nameof(SharedParamsConfig.ApartmentGroupName), "Описание ApartmentGroupName" },
+            { nameof(SharedParamsConfig.FireCompartmentShortName), "Описание FireCompartmentName" },
+            { nameof(SharedParamsConfig.RoomSectionShortName), "Описание RoomSectionName" },
+            { nameof(SharedParamsConfig.RoomTypeGroupShortName), "Описание RoomTypeGroupName" },
+            { nameof(SharedParamsConfig.ApartmentAreaSpec), "Описание ApartmentAreaSpec" },
+            { nameof(SharedParamsConfig.ApartmentAreaMinSpec), "Описание ApartmentAreaMinSpec" },
+            { nameof(SharedParamsConfig.ApartmentAreaMaxSpec), "Описание ApartmentAreaMaxSpec" },
+#endif
         };
 
         /// <summary>
@@ -78,14 +81,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.ApartmentLivingArea), StorageType.Double },
             { nameof(SharedParamsConfig.ApartmentArea), StorageType.Double },
             { nameof(SharedParamsConfig.ApartmentFullArea), StorageType.Double },
-            { nameof(SharedParamsConfig.RoomGroupShortName), StorageType.String },
-            { nameof(SharedParamsConfig.ApartmentGroupName), StorageType.String },
-            { nameof(SharedParamsConfig.FireCompartmentShortName), StorageType.String },
-            { nameof(SharedParamsConfig.RoomSectionShortName), StorageType.String },
-            { nameof(SharedParamsConfig.RoomTypeGroupShortName), StorageType.String },
-            { nameof(SharedParamsConfig.ApartmentAreaSpec), StorageType.String },
-            { nameof(SharedParamsConfig.ApartmentAreaMinSpec), StorageType.Double },
-            { nameof(SharedParamsConfig.ApartmentAreaMaxSpec), StorageType.Double },
             { nameof(SharedParamsConfig.ApartmentNumber), StorageType.String },
             { nameof(SharedParamsConfig.ApartmentNumberExtra), StorageType.String },
             { nameof(SharedParamsConfig.ApartmentAreaRatioFix), StorageType.Double },
@@ -96,6 +91,17 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.RoomAreaWithRatioFix), StorageType.Double },
             { nameof(SharedParamsConfig.ApartmentFullAreaFix), StorageType.Double },
             { nameof(SharedParamsConfig.Level), StorageType.String },
+
+#if D2022 || R2022
+            { nameof(SharedParamsConfig.RoomGroupShortName), StorageType.String },
+            { nameof(SharedParamsConfig.ApartmentGroupName), StorageType.String },
+            { nameof(SharedParamsConfig.FireCompartmentShortName), StorageType.String },
+            { nameof(SharedParamsConfig.RoomSectionShortName), StorageType.String },
+            { nameof(SharedParamsConfig.RoomTypeGroupShortName), StorageType.String },
+            { nameof(SharedParamsConfig.ApartmentAreaSpec), StorageType.String },
+            { nameof(SharedParamsConfig.ApartmentAreaMinSpec), StorageType.Double },
+            { nameof(SharedParamsConfig.ApartmentAreaMaxSpec), StorageType.Double },
+#endif
         };
 
         /// <summary>

@@ -29,24 +29,27 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
 
             { nameof(ProjectParamsConfig.RoomAreaRatio ), "Описание RoomAreaRatio" },
-            { nameof(ProjectParamsConfig.ApartmentGroupName ), "Описание ApartmentGroupName" },
             { nameof(ProjectParamsConfig.RoomGroupName ), "Описание RoomGroupName" },
-            { nameof(ProjectParamsConfig.RoomGroupShortName ), "Описание RoomGroupShortName" },
             { nameof(ProjectParamsConfig.FireCompartmentName ), "Описание FireCompartmentName" },
-            { nameof(ProjectParamsConfig.FireCompartmentShortName ), "Описание FireCompartmentShortName" },
             { nameof(ProjectParamsConfig.RoomSectionName ), "Описание RoomSectionName" },
-            { nameof(ProjectParamsConfig.RoomSectionShortName ), "Описание RoomSectionShortName" },
             { nameof(ProjectParamsConfig.RoomTypeGroupName ), "Описание RoomTypeGroupName" },
-            { nameof(ProjectParamsConfig.RoomTypeGroupShortName ), "Описание RoomTypeGroupShortName" },
-            { nameof(ProjectParamsConfig.ApartmentAreaSpec ), "Описание ApartmentAreaSpec" },
-            { nameof(ProjectParamsConfig.ApartmentAreaMinSpec ), "Описание ApartmentAreaMinSpec" },
-            { nameof(ProjectParamsConfig.ApartmentAreaMaxSpec ), "Описание ApartmentAreaMaxSpec" },
             { nameof(ProjectParamsConfig.RoomTypeCountGroup ), "Описание RoomTypeCountGroup" },
             { nameof(ProjectParamsConfig.RoomName ), "Описание RoomName" },
             { nameof(ProjectParamsConfig.IsRoomBalcony ), "Описание IsRoomBalcony" },
             { nameof(ProjectParamsConfig.IsRoomLiving ), "Описание IsRoomLiving" },
             { nameof(ProjectParamsConfig.ApartmentTypeNumsInSection ), "Описание ApartmentTypeNumsInSection" },
             { nameof(ProjectParamsConfig.IsRoomNumberFix ), "Описание IsRoomNumberFix" },
+
+#if D2020 || R2020 || D2021 || R2021
+            { nameof(ProjectParamsConfig.ApartmentGroupName ), "Описание ApartmentGroupName" },
+            { nameof(ProjectParamsConfig.RoomGroupShortName ), "Описание RoomGroupShortName" },
+            { nameof(ProjectParamsConfig.FireCompartmentShortName ), "Описание FireCompartmentShortName" },
+            { nameof(ProjectParamsConfig.RoomSectionShortName ), "Описание RoomSectionShortName" },
+            { nameof(ProjectParamsConfig.RoomTypeGroupShortName ), "Описание RoomTypeGroupShortName" },
+            { nameof(ProjectParamsConfig.ApartmentAreaMinSpec ), "Описание ApartmentAreaMinSpec" },
+            { nameof(ProjectParamsConfig.ApartmentAreaMaxSpec ), "Описание ApartmentAreaMaxSpec" },
+            { nameof(ProjectParamsConfig.ApartmentAreaSpec ), "Описание ApartmentAreaSpec" },
+#endif
         };
 
         /// <summary>
@@ -62,24 +65,27 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             { nameof(ProjectParamsConfig.CheckCorrectDistanceGrid), StorageType.Integer },
 
             { nameof(ProjectParamsConfig.RoomAreaRatio ), StorageType.Double },
-            { nameof(ProjectParamsConfig.ApartmentGroupName ), StorageType.String },
             { nameof(ProjectParamsConfig.RoomGroupName ), StorageType.String },
-            { nameof(ProjectParamsConfig.RoomGroupShortName ), StorageType.String },
             { nameof(ProjectParamsConfig.FireCompartmentName ), StorageType.String },
-            { nameof(ProjectParamsConfig.FireCompartmentShortName ), StorageType.String },
             { nameof(ProjectParamsConfig.RoomSectionName ), StorageType.String },
-            { nameof(ProjectParamsConfig.RoomSectionShortName ), StorageType.String },
             { nameof(ProjectParamsConfig.RoomTypeGroupName ), StorageType.String },
-            { nameof(ProjectParamsConfig.RoomTypeGroupShortName ), StorageType.String },
-            { nameof(ProjectParamsConfig.ApartmentAreaSpec ), StorageType.String },
-            { nameof(ProjectParamsConfig.ApartmentAreaMinSpec ), StorageType.Double },
-            { nameof(ProjectParamsConfig.ApartmentAreaMaxSpec ), StorageType.Double },
             { nameof(ProjectParamsConfig.RoomTypeCountGroup ), StorageType.Integer },
             { nameof(ProjectParamsConfig.RoomName ), StorageType.String },
             { nameof(ProjectParamsConfig.ApartmentTypeNumsInSection ), StorageType.Integer },
             { nameof(ProjectParamsConfig.IsRoomBalcony ),StorageType.Integer },
             { nameof(ProjectParamsConfig.IsRoomLiving ),StorageType.Integer },
             { nameof(ProjectParamsConfig.IsRoomNumberFix ), StorageType.Integer },
+
+#if D2020 || R2020 || D2021 || R2021
+            { nameof(ProjectParamsConfig.ApartmentGroupName ), StorageType.String },
+            { nameof(ProjectParamsConfig.RoomGroupShortName ), StorageType.String },
+            { nameof(ProjectParamsConfig.FireCompartmentShortName ), StorageType.String },
+            { nameof(ProjectParamsConfig.RoomSectionShortName ), StorageType.String },
+            { nameof(ProjectParamsConfig.RoomTypeGroupShortName ), StorageType.String },
+            { nameof(ProjectParamsConfig.ApartmentAreaSpec ), StorageType.String },
+            { nameof(ProjectParamsConfig.ApartmentAreaMinSpec ), StorageType.Double },
+            { nameof(ProjectParamsConfig.ApartmentAreaMaxSpec ), StorageType.Double },
+#endif
         };
 
         /// <summary>

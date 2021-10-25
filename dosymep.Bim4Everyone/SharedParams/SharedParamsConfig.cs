@@ -125,46 +125,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public SharedParam ApartmentFullArea { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentFullArea), Name = "ФОП_КВР_Площадь по пятну" };
 
         /// <summary>
-        /// ФОП_ПМЩ_Группа
-        /// </summary>
-        public SharedParam RoomGroupShortName { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomGroupShortName), Name = "ФОП_ПМЩ_Группа" };
-
-        /// <summary>
-        /// ФОП_Доп. сортировка групп
-        /// </summary>
-        public SharedParam ApartmentGroupName { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentGroupName), Name = "ФОП_Доп. сортировка групп" };
-
-        /// <summary>
-        /// ФОП_Пожарный отсек
-        /// </summary>
-        public SharedParam FireCompartmentShortName { get; internal set; } = new SharedParam() { PropertyName = nameof(FireCompartmentShortName), Name = "ФОП_Пожарный отсек" };
-
-        /// <summary>
-        /// ФОП_ПМЩ_Секция
-        /// </summary>
-        public SharedParam RoomSectionShortName { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomSectionShortName), Name = "ФОП_ПМЩ_Секция" };
-
-        /// <summary>
-        /// ФОП_Тип группы помещений
-        /// </summary>
-        public SharedParam RoomTypeGroupShortName { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomTypeGroupShortName), Name = "ФОП_Тип группы помещений" };
-
-        /// <summary>
-        /// ФОП_КВР_Площадь по ТЗ
-        /// </summary>
-        public SharedParam ApartmentAreaSpec { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentAreaSpec), Name = "ФОП_КВР_Площадь по ТЗ" };
-
-        /// <summary>
-        /// ФОП_КВР_Площадь по ТЗ мин
-        /// </summary>
-        public SharedParam ApartmentAreaMinSpec { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentAreaMinSpec), Name = "ФОП_КВР_Площадь по ТЗ мин" };
-
-        /// <summary>
-        /// ФОП_КВР_Площадь по ТЗ макс
-        /// </summary>
-        public SharedParam ApartmentAreaMaxSpec { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentAreaMaxSpec), Name = "ФОП_КВР_Площадь по ТЗ макс" };
-
-        /// <summary>
         /// ФОП_Номер квартиры
         /// </summary>
         public SharedParam ApartmentNumber { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentNumber), Name = "ФОП_Номер квартиры" };
@@ -208,6 +168,50 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// ФОП_ФИКС_КВР_Площадь по пятну
         /// </summary>
         public SharedParam ApartmentFullAreaFix { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentFullAreaFix), Name = "ФОП_ФИКС_КВР_Площадь по пятну" };
+
+#if D2022 || R2022
+
+        /// <summary>
+        /// ФОП_Доп. сортировка групп
+        /// </summary>
+        public SharedParam ApartmentGroupName { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentGroupName), Name = "ФОП_Доп. сортировка групп" };
+
+        /// <summary>
+        /// ФОП_ПМЩ_Группа
+        /// </summary>
+        public SharedParam RoomGroupShortName { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomGroupShortName), Name = "ФОП_ПМЩ_Группа" };
+
+        /// <summary>
+        /// ФОП_Пожарный отсек
+        /// </summary>
+        public SharedParam FireCompartmentShortName { get; internal set; } = new SharedParam() { PropertyName = nameof(FireCompartmentShortName), Name = "ФОП_Пожарный отсек" };
+
+        /// <summary>
+        /// ФОП_ПМЩ_Секция
+        /// </summary>
+        public SharedParam RoomSectionShortName { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomSectionShortName), Name = "ФОП_ПМЩ_Секция" };
+
+        /// <summary>
+        /// ФОП_Тип группы помещений
+        /// </summary>
+        public SharedParam RoomTypeGroupShortName { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomTypeGroupShortName), Name = "ФОП_Тип группы помещений" };
+
+        /// <summary>
+        /// ФОП_КВР_Площадь по ТЗ
+        /// </summary>
+        public SharedParam ApartmentAreaSpec { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentAreaSpec), Name = "ФОП_КВР_Площадь по ТЗ" };
+
+        /// <summary>
+        /// ФОП_КВР_Площадь по ТЗ мин
+        /// </summary>
+        public SharedParam ApartmentAreaMinSpec { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentAreaMinSpec), Name = "ФОП_КВР_Площадь по ТЗ мин" };
+
+        /// <summary>
+        /// ФОП_КВР_Площадь по ТЗ макс
+        /// </summary>
+        public SharedParam ApartmentAreaMaxSpec { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentAreaMaxSpec), Name = "ФОП_КВР_Площадь по ТЗ макс" };
+
+#endif
 
         #endregion
 
