@@ -32,6 +32,13 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         }
 
         /// <summary>
+        /// Проверяемая спецификация.
+        /// </summary>
+        public ViewSchedule TestingSchedule {
+            get { return _testingSchedule; }
+        }
+
+        /// <summary>
         /// Проверяет, является ли спецификация ключевой.
         /// </summary>
         /// <returns>Возвращает true - если спецификация является ключевой, иначе false.</returns>
