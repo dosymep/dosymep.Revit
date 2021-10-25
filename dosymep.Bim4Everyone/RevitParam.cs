@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Autodesk.Revit.DB;
 
+using dosymep.Revit;
+
 using pyRevitLabs.Json;
 
 namespace dosymep.Bim4Everyone {
@@ -37,7 +39,7 @@ namespace dosymep.Bim4Everyone {
         public virtual StorageType SharedParamType { get; }
 
         /// <summary>
-        /// Проверяет на существование параметра.
+        /// Проверяет на существование параметра в документе.
         /// </summary>
         /// <param name="document">Документ.</param>
         /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
@@ -49,6 +51,15 @@ namespace dosymep.Bim4Everyone {
         /// <param name="element">Элемент.</param>
         /// <returns>Возвращает параметр элемента.</returns>
         public abstract Parameter GetParam(Element element);
+
+        /// <summary>
+        /// Проверяет на существование параметра в элементе.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
+        public virtual bool IsExistsParam(Element element) {
+            return element.IsExistsParam(this);
+        }
 
         /// <summary>
         /// Возвращает параметр Revit.
