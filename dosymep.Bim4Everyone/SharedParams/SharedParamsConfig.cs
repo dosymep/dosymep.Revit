@@ -17,7 +17,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <summary>
         /// Текущее состояние конфигурации.
         /// </summary>
-        /// <remarks>Перед использованием нужно вызвать <see cref="Load(string)"/></remarks>
+        /// <remarks>Перед использованием нужно вызвать <see cref="LoadInstance(string)"/></remarks>
         public static SharedParamsConfig Instance { get; internal set; }
 
         #region Размер
