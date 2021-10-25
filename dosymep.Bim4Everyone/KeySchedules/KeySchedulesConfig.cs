@@ -44,7 +44,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
                 FilledSharedParamNames = new List<string>() { },
                 FilledProjectParamNames = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomGroupName),
                     nameof(ProjectParamsConfig.RoomGroupShortName)
                 }
             };
@@ -69,9 +68,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 },
 
                 FilledSharedParamNames = new List<string>() { },
-                FilledProjectParamNames = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomName)
-                },
+                FilledProjectParamNames = new List<string>() { },
                 FilledSystemParams = new List<BuiltInParameter>() {
                     BuiltInParameter.ROOM_NAME
                 },
@@ -88,9 +85,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 KeyRevitParamName = nameof(ProjectParamsConfig.FireCompartmentName),
 
                 RequiredSharedParams = new List<string>(),
-                RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.FireCompartmentShortName) 
-                },
+                RequiredProjectParams = new List<string>() { },
 
                 FilledSharedParamNames = new List<string>() { },
                 FilledProjectParamNames = new List<string>() { }
@@ -112,7 +107,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
                 FilledSharedParamNames = new List<string>() { },
                 FilledProjectParamNames = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomSectionName),
                     nameof(ProjectParamsConfig.RoomSectionShortName),
                 }
             };
@@ -135,7 +129,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
                 FilledSharedParamNames = new List<string>() { },
                 FilledProjectParamNames = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomTypeGroupName),
                     nameof(ProjectParamsConfig.RoomTypeGroupShortName),
                 }
             };
@@ -159,9 +152,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 FilledSharedParamNames = new List<string>() {
                     nameof(SharedParamsConfig.RoomGroupShortName)
                 },
-                FilledProjectParamNames = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomGroupName),
-                }
+                FilledProjectParamNames = new List<string>() { }
             };
 
         /// <summary>
@@ -184,9 +175,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 },
 
                 FilledSharedParamNames = new List<string>() { },
-                FilledProjectParamNames = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomName)
-                },
+                FilledProjectParamNames = new List<string>() { },
                 FilledSystemParams = new List<ForgeTypeId>() {
                     ParameterTypeId.RoomName
                 },
@@ -227,9 +216,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 FilledSharedParamNames = new List<string>() {
                     nameof(SharedParamsConfig.RoomSectionShortName),
                 },
-                FilledProjectParamNames = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomSectionName),
-                }
+                FilledProjectParamNames = new List<string>() { }
             };
 
         /// <summary>

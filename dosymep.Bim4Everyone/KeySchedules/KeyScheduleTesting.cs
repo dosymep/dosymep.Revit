@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Autodesk.Revit.DB;
 
+using dosymep.Revit;
+
 namespace dosymep.Bim4Everyone.KeySchedules {
     /// <summary>
     /// Класс для проверок ключевой спецификации.
@@ -97,8 +99,20 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// </summary>
         /// <returns>Возвращает перечисление не заполнены параметров, которые не были заполнены в ключевой спецификации.</returns>
         public IEnumerable<RevitParam> GetNotFilledParamsInSchedule() {
+            Element[] scheduleElements = GetScheduleElements().ToArray();
+            foreach(Element element in scheduleElements) {
+#if D2020 || R2020 || D2021 || R2021
+                if(!element.IsExistsParam(BuiltInParameter.REF_TABLE_ELEM_NAME)) {
+#else
+                if(!element.IsExistsParam(ParameterTypeId.RefTableElemName)) {
+#endif
+                    yield return _keyScheduleRule.KeyRevitParam;
+                    break;
+                }
+            }
+
             foreach(RevitParam requiredParam in _keyScheduleRule.FilledParams) {
-                foreach(Element element in GetScheduleElements()) {
+                foreach(Element element in scheduleElements) {
                     if(!element.IsExistsParam(requiredParam)) {
                         yield return requiredParam;
                         break;
