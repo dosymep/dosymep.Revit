@@ -272,6 +272,17 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         #endregion
 
         /// <summary>
+        /// Возвращает весь список правил ключевых спецификаций.
+        /// </summary>
+        /// <returns>Возвращает список правил ключевых спецификаций.</returns>
+        public IEnumerable<KeyScheduleRule> GetKeyScheduleRules() {
+            return GetType().GetProperties()
+                .Select(item => item.GetValue(this))
+                .OfType<KeyScheduleRule>()
+                .OrderBy(item => item.ScheduleName);
+        }
+
+        /// <summary>
         /// Загрузка текущей конфигурации.
         /// </summary>
         /// <param name="configPath">Путь до конфигурации.</param>
