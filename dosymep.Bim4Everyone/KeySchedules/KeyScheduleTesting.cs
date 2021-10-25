@@ -83,9 +83,24 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// </summary>
         /// <returns>Возвращает перечисление обязательных параметров, которые не были созданы в ключевой спецификации.</returns>
         public IEnumerable<RevitParam> GetNotExistsRequiredParamsInSchedule() {
+            Element element = GetScheduleElements().FirstOrDefault();
             foreach(RevitParam requiredParam in _keyScheduleRule.RequiredParams) {
-                if(!_testingSchedule.Document.IsExistsParam(requiredParam)) {
+                if(!element.IsExistsParam(requiredParam)) {
                     yield return requiredParam;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Возвращает перечисление не заполнены параметров, которые не были заполнены в ключевой спецификации.
+        /// </summary>
+        /// <returns>Возвращает перечисление не заполнены параметров, которые не были заполнены в ключевой спецификации.</returns>
+        public IEnumerable<RevitParam> GetNotFilledParamsInSchedule() {
+            foreach(Element element in GetScheduleElements()) {
+                foreach(RevitParam requiredParam in _keyScheduleRule.RequiredParams) {
+                    if(!element.IsExistsParam(requiredParam)) {
+                        yield return requiredParam;
+                    }
                 }
             }
         }
