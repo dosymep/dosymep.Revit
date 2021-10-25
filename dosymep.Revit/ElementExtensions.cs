@@ -126,6 +126,25 @@ namespace dosymep.Revit {
             element.GetParam(paramName).Set(paramValue);
         }
 
+        /// <summary>
+        /// Возвращает параметр.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает параметр.</returns>
+        public static Parameter GetParam(this Element element, string paramName) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            var param = element.LookupParameter(paramName);
+            if(param is null) {
+                throw new ArgumentException($"Параметра с заданным именем \"{paramName}\" не существует.", nameof(paramName));
+            }
+
+            return param;
+        }
+
         #endregion
 
         #region Получение параметра по BuiltInParameter
@@ -219,29 +238,6 @@ namespace dosymep.Revit {
             element.GetParam(builtInParameter).Set(paramValue);
         }
 
-        #endregion
-
-        #region Получение параметра
-
-        /// <summary>
-        /// Возвращает параметр.
-        /// </summary>
-        /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <returns>Возвращает параметр.</returns>
-        public static Parameter GetParam(this Element element, string paramName) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            var param = element.LookupParameter(paramName);
-            if(param is null) {
-                throw new ArgumentException($"Параметра с заданным именем \"{paramName}\" не существует.", nameof(paramName));
-            }
-
-            return param;
-        }
-
         /// <summary>
         /// Возвращает параметр.
         /// </summary>
@@ -260,7 +256,123 @@ namespace dosymep.Revit {
 
             return param;
         }
-        
+
         #endregion
+
+#if D2022 || R2022
+
+        #region Получение параметра по ForgeTypeId
+
+        /// <summary>
+        /// Возвращает значение параметра либо значение по умолчанию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <param name="default">Значение по умолчанию.</param>
+        /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
+        public static object GetParamValueOrDefault(this Element element, ForgeTypeId forgeTypeId, object @default = default) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            try {
+                return element.GetParamValue(forgeTypeId) ?? @default;
+            } catch(ArgumentException) {
+                return @default;
+            }
+        }
+
+        /// <summary>
+        /// Возвращает значение параметра элемента.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <returns>Возвращает значение параметра элемента.</returns>
+        public static object GetParamValue(this Element element, ForgeTypeId forgeTypeId) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            return element.GetParam(forgeTypeId).AsObject();
+        }
+
+        /// <summary>
+        /// Устанавливает значение параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <param name="paramValue">Значение общего параметра.</param>
+        public static void SetParamValue(this Element element, ForgeTypeId forgeTypeId, double paramValue) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            element.GetParam(forgeTypeId).Set(paramValue);
+        }
+
+        /// <summary>
+        /// Устанавливает значение параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <param name="paramValue">Значение общего параметра.</param>
+        public static void SetParamValue(this Element element, ForgeTypeId forgeTypeId, int paramValue) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            element.GetParam(forgeTypeId).Set(paramValue);
+        }
+
+        /// <summary>
+        /// Устанавливает значение параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <param name="paramValue">Значение общего параметра.</param>
+        public static void SetParamValue(this Element element, ForgeTypeId forgeTypeId, string paramValue) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            element.GetParam(forgeTypeId).Set(paramValue);
+        }
+
+        /// <summary>
+        /// Устанавливает значение параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <param name="paramValue">Значение общего параметра.</param>
+        public static void SetParamValue(this Element element, ForgeTypeId forgeTypeId, ElementId paramValue) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            element.GetParam(forgeTypeId).Set(paramValue);
+        }
+
+        /// <summary>
+        /// Возвращает параметр.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <returns>Возвращает параметр.</returns>
+        public static Parameter GetParam(this Element element, ForgeTypeId forgeTypeId) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            var param = element.GetParameter(forgeTypeId);
+            if(param is null) {
+                throw new ArgumentException($"Параметра с заданным именем \"{forgeTypeId}\" не существует.", nameof(forgeTypeId));
+            }
+
+            return param;
+        }
+
+        #endregion
+
+#endif
     }
 }

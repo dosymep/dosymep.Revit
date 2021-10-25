@@ -55,10 +55,26 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 ScheduleName = "КВГ_(Ключ.) - Наименование пом.",
                 KeyRevitParamName = nameof(ProjectParamsConfig.RoomName),
 
+
+#if D2020 || R2020 || D2021 || R20201
                 RequiredSystemParams = new List<BuiltInParameter>() { 
                     BuiltInParameter.ROOM_NAME, 
                     BuiltInParameter.ROOM_DEPARTMENT
                 },
+
+                FilledSystemParams = new List<BuiltInParameter>() {
+                    BuiltInParameter.ROOM_NAME
+                },
+#else
+                RequiredSystemParams = new List<ForgeTypeId>() {
+                    ParameterTypeId.RoomName,
+                    ParameterTypeId.RoomDepartment
+                },
+
+                FilledSystemParams = new List<ForgeTypeId>() {
+                    ParameterTypeId.RoomName
+                },
+#endif
 
                 RequiredSharedParams = new List<string>() { },
                 RequiredProjectParams = new List<string>() {
@@ -73,9 +89,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                     nameof(ProjectParamsConfig.RoomName)
                 },
 
-                FilledSystemParams = new List<BuiltInParameter>() {
-                    BuiltInParameter.ROOM_NAME
-                },
+
             };
 
         /// <summary>
@@ -142,7 +156,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 }
             };
 
-        #endregion
+#endregion
 
         /// <summary>
         /// Загрузка текущей конфигурации.
