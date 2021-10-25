@@ -21,17 +21,9 @@ namespace dosymep.Bim4Everyone {
         /// </summary>
         /// <param name="document">Документ.</param>
         /// <param name="revitParam">Параметр проекта.</param>
-        /// <returns></returns>
+        /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
         public static bool IsExistsParam(this Document document, RevitParam revitParam) {
-            if(revitParam is ProjectParam projectParam) {
-                return document.IsExistsParam(projectParam);
-            } else if(revitParam is SharedParam sharedParam) {
-                return document.IsExistsParam(sharedParam);
-            } else if(revitParam is SystemParam) {
-                return true;
-            }
-
-            throw new NotSupportedException($"Переданный тип параметра \"{revitParam.GetType()}\" не поддерживается. Имя параметра \"{revitParam.Name}\".");
+            return revitParam.IsExistsParam(document);
         }
 
         /// <summary>
@@ -39,9 +31,9 @@ namespace dosymep.Bim4Everyone {
         /// </summary>
         /// <param name="document">Документ.</param>
         /// <param name="revitParam">Параметр проекта.</param>
-        /// <returns></returns>
+        /// <returns>Возвращает true - если параметр проекта существует, иначе false.</returns>
         public static bool IsExistsParam(this Document document, ProjectParam revitParam) {
-            return document.IsExistsProjectParam(revitParam.Name);
+            return revitParam.IsExistsParam(document);
         }
 
         /// <summary>
@@ -49,9 +41,9 @@ namespace dosymep.Bim4Everyone {
         /// </summary>
         /// <param name="document">Документ.</param>
         /// <param name="revitParam">Параметр проекта.</param>
-        /// <returns></returns>
+        /// <returns>Возвращает true - если общий параметр существует, иначе false.</returns>
         public static bool IsExistsParam(this Document document, SharedParam revitParam) {
-            return document.IsExistsSharedParam(revitParam.Name);
+            return revitParam.IsExistsParam(document);
         }
     }
 }

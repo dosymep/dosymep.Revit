@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Autodesk.Revit.DB;
 
+using dosymep.Revit;
+
 using pyRevitLabs.Json;
 
 namespace dosymep.Bim4Everyone.ProjectParams {
@@ -95,6 +97,33 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         [JsonIgnore]
         public override StorageType SharedParamType {
             get { return _projectParamTypes.TryGetValue(PropertyName, out StorageType value) ? value : StorageType.None; }
+        }
+
+        /// <inheritdoc/>
+        public override bool IsExistsParam(Document document) {
+            if(document is null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            return document.IsExistsProjectParam(Name);
+        }
+
+        /// <inheritdoc/>
+        public override Parameter GetParam(Element element) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            var param = element.GetParameters(Name).FirstOrDefault(item => !item.IsShared);
+            if(param is null) {
+                throw new ArgumentException($"Параметр проекта с заданным именем \"{Name}\" не был найден.");
+            }
+
+            if(param.StorageType != SharedParamType) {
+                throw new ArgumentException($"Переданный Параметр проекта \"{Name}\" не соответствует типу параметра у элемента.");
+            }
+
+            return param;
         }
     }
 }

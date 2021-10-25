@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
 
+using dosymep.Revit;
+
 namespace dosymep.Bim4Everyone.SystemParams {
     /// <summary>
     /// Класс системного параметра.
@@ -41,5 +43,15 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// Системное наименование параметра.
         /// </summary>
         public BuiltInParameter BuiltInParameter { get; }
+
+        /// <inheritdoc/>
+        public override bool IsExistsParam(Document document) {
+            return true;
+        }
+
+        /// <inheritdoc/>
+        public override Parameter GetParam(Element element) {
+            return element.GetParam(BuiltInParameter);
+        }
     }
 }

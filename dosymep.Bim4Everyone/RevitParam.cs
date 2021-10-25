@@ -35,5 +35,27 @@ namespace dosymep.Bim4Everyone {
         /// </summary>
         [JsonIgnore]
         public virtual StorageType SharedParamType { get; }
+
+        /// <summary>
+        /// Проверяет на существование параметра.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
+        public abstract bool IsExistsParam(Document document);
+
+        /// <summary>
+        /// Возвращает параметр элемента.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <returns>Возвращает параметр элемента.</returns>
+        public abstract Parameter GetParam(Element element);
+
+        /// <summary>
+        /// Возвращает параметр Revit.
+        /// </summary>
+        /// <returns>Возвращает параметр Revit.</returns>
+        public RevitParam AsRevitParam() {
+            return this;
+        }
     }
 }

@@ -15,6 +15,133 @@ namespace dosymep.Bim4Everyone {
     /// Класс расширения элемента
     /// </summary>
     public static class ElementExtensions {
+        #region RevitParam
+
+        /// <summary>
+        /// Возвращает значение параметра либо значение по умолчанию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <param name="default">Значение по умолчанию.</param>
+        /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
+        public static object GetParamValueOrDefault(this Element element, RevitParam revitParam, object @default = default) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam is null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
+            try {
+                return element.GetParamValue(revitParam) ?? @default;
+            } catch(ArgumentException) {
+                return @default;
+            }
+        }
+
+        /// <summary>
+        /// Возвращает значение параметра элемента.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <returns>Возвращает значение параметра элемента.</returns>
+        public static object GetParamValue(this Element element, RevitParam revitParam) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam is null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
+            return element.GetParam(revitParam).AsObject();
+        }
+
+        /// <summary>
+        /// Устанавливает значение параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <param name="paramValue">Значение общего параметра.</param>
+        public static void SetParamValue(this Element element, RevitParam revitParam, double paramValue) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam is null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
+            element.GetParam(revitParam).Set(paramValue);
+        }
+
+        /// <summary>
+        /// Устанавливает значение параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <param name="paramValue">Значение общего параметра.</param>
+        public static void SetParamValue(this Element element, RevitParam revitParam, int paramValue) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam is null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
+            element.GetParam(revitParam).Set(paramValue);
+        }
+
+        /// <summary>
+        /// Устанавливает значение параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <param name="paramValue">Значение общего параметра.</param>
+        public static void SetParamValue(this Element element, RevitParam revitParam, string paramValue) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam is null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
+            element.GetParam(revitParam).Set(paramValue);
+        }
+
+        /// <summary>
+        /// Устанавливает значение параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <param name="paramValue">Значение общего параметра.</param>
+        public static void SetParamValue(this Element element, RevitParam revitParam, ElementId paramValue) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam is null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
+            element.GetParam(revitParam).Set(paramValue);
+        }
+
+        /// <summary>
+        /// Возвращает параметр.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <returns>Возвращает параметр.</returns>
+        public static Parameter GetParam(this Element element, RevitParam revitParam) {
+            return revitParam.GetParam(element);
+        }
+
+        #endregion
+
         #region SharedParam
 
         /// <summary>
@@ -25,19 +152,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="default">Значение по умолчанию.</param>
         /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
         public static object GetParamValueOrDefault(this Element element, SharedParam sharedParam, object @default = default) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
-            }
-
-            try {
-                return element.GetParamValue(sharedParam) ?? @default;
-            } catch(ArgumentException) {
-                return @default;
-            }
+            return element.GetParamValueOrDefault(sharedParam.AsRevitParam(), @default);
         }
 
         /// <summary>
@@ -47,15 +162,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="sharedParam">Общий параметр.</param>
         /// <returns>Возвращает значение параметра элемента.</returns>
         public static object GetParamValue(this Element element, SharedParam sharedParam) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
-            }
-
-            return element.GetParam(sharedParam).AsObject();
+            return element.GetParamValue(sharedParam.AsRevitParam());
         }
 
         /// <summary>
@@ -65,15 +172,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="sharedParam">Общий параметр.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetParamValue(this Element element, SharedParam sharedParam, double paramValue) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
-            }
-
-            element.GetParam(sharedParam).Set(paramValue);
+            element.SetParamValue(sharedParam.AsRevitParam(), paramValue);
         }
 
         /// <summary>
@@ -83,15 +182,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="sharedParam">Общий параметр.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetParamValue(this Element element, SharedParam sharedParam, int paramValue) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
-            }
-
-            element.GetParam(sharedParam).Set(paramValue);
+            element.SetParamValue(sharedParam.AsRevitParam(), paramValue);
         }
 
         /// <summary>
@@ -101,15 +192,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="sharedParam">Общий параметр.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetParamValue(this Element element, SharedParam sharedParam, string paramValue) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
-            }
-
-            element.GetParam(sharedParam).Set(paramValue);
+            element.SetParamValue(sharedParam.AsRevitParam(), paramValue);
         }
 
         /// <summary>
@@ -119,15 +202,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="sharedParam">Общий параметр.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetParamValue(this Element element, SharedParam sharedParam, ElementId paramValue) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
-            }
-
-            element.GetParam(sharedParam).Set(paramValue);
+            element.SetParamValue(sharedParam.AsRevitParam(), paramValue);
         }
 
         /// <summary>
@@ -137,24 +212,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="sharedParam">Общий параметр.</param>
         /// <returns>Возвращает параметр.</returns>
         public static Parameter GetParam(this Element element, SharedParam sharedParam) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(sharedParam is null) {
-                throw new ArgumentNullException(nameof(sharedParam));
-            }
-
-            var param = element.GetParameters(sharedParam.Name).FirstOrDefault(item => item.IsShared);
-            if(param is null) {
-                throw new ArgumentException($"Общий параметр с заданным именем \"{sharedParam.Name}\" не был найден.", nameof(sharedParam));
-            }
-
-            if(param.StorageType != sharedParam.SharedParamType) {
-                throw new ArgumentException($"Переданный Параметр проекта \"{sharedParam.Name}\" не соответствует типу параметра у элемента.", nameof(sharedParam));
-            }
-
-            return param;
+            return sharedParam.GetParam(element);
         }
 
         #endregion
@@ -169,19 +227,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="default">Значение по умолчанию.</param>
         /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
         public static object GetParamValueOrDefault(this Element element, ProjectParam projectParam, object @default = default) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(projectParam is null) {
-                throw new ArgumentNullException(nameof(projectParam));
-            }
-
-            try {
-                return element.GetParamValue(projectParam) ?? @default;
-            } catch(ArgumentException) {
-                return @default;
-            }
+            return element.GetParamValueOrDefault(projectParam.AsRevitParam(), @default);
         }
 
         /// <summary>
@@ -191,15 +237,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="projectParam">Параметр проекта.</param>
         /// <returns>Возвращает значение параметра элемента.</returns>
         public static object GetParamValue(this Element element, ProjectParam projectParam) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(projectParam is null) {
-                throw new ArgumentNullException(nameof(projectParam));
-            }
-
-            return element.GetParam(projectParam).AsObject();
+            return element.GetParamValue(projectParam.AsRevitParam());
         }
 
         /// <summary>
@@ -209,15 +247,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="projectParam">Параметр проекта.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetParamValue(this Element element, ProjectParam projectParam, double paramValue) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(projectParam is null) {
-                throw new ArgumentNullException(nameof(projectParam));
-            }
-
-            element.GetParam(projectParam).Set(paramValue);
+            element.SetParamValue(projectParam.AsRevitParam(), paramValue);
         }
 
         /// <summary>
@@ -227,15 +257,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="projectParam">Параметр проекта.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetParamValue(this Element element, ProjectParam projectParam, int paramValue) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(projectParam is null) {
-                throw new ArgumentNullException(nameof(projectParam));
-            }
-
-            element.GetParam(projectParam).Set(paramValue);
+            element.SetParamValue(projectParam.AsRevitParam(), paramValue);
         }
 
         /// <summary>
@@ -245,15 +267,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="projectParam">Параметр проекта.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetParamValue(this Element element, ProjectParam projectParam, string paramValue) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(projectParam is null) {
-                throw new ArgumentNullException(nameof(projectParam));
-            }
-
-            element.GetParam(projectParam).Set(paramValue);
+            element.SetParamValue(projectParam.AsRevitParam(), paramValue);
         }
 
         /// <summary>
@@ -263,15 +277,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="projectParam">Параметр проекта.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetParamValue(this Element element, ProjectParam projectParam, ElementId paramValue) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(projectParam is null) {
-                throw new ArgumentNullException(nameof(projectParam));
-            }
-
-            element.GetParam(projectParam.Name).Set(paramValue);
+            element.SetParamValue(projectParam.AsRevitParam(), paramValue);
         }
 
         /// <summary>
@@ -281,24 +287,7 @@ namespace dosymep.Bim4Everyone {
         /// <param name="projectParam">Параметр проекта.</param>
         /// <returns>Возвращает параметр.</returns>
         public static Parameter GetParam(this Element element, ProjectParam projectParam) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            if(projectParam is null) {
-                throw new ArgumentNullException(nameof(projectParam));
-            }
-
-            var param = element.GetParameters(projectParam.Name).FirstOrDefault(item => !item.IsShared);
-            if(param is null) {
-                throw new ArgumentException($"Параметр проекта с заданным именем \"{projectParam.Name}\" не был найден.", nameof(projectParam));
-            }
-
-            if(param.StorageType != projectParam.SharedParamType) {
-                throw new ArgumentException($"Переданный Параметр проекта \"{projectParam.Name}\" не соответствует типу параметра у элемента.", nameof(projectParam));
-            }
-
-            return param;
+            return projectParam.GetParam(element);
         }
 
         #endregion
