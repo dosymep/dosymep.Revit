@@ -8,6 +8,7 @@ using Autodesk.Revit.DB;
 
 using dosymep.Bim4Everyone.ProjectParams;
 using dosymep.Bim4Everyone.SharedParams;
+using dosymep.Bim4Everyone.SystemParams;
 using dosymep.Revit;
 
 namespace dosymep.Bim4Everyone {
@@ -26,6 +27,8 @@ namespace dosymep.Bim4Everyone {
                 return document.IsExistsParam(projectParam);
             } else if(revitParam is SharedParam sharedParam) {
                 return document.IsExistsParam(sharedParam);
+            } else if(revitParam is SystemParam) {
+                return true;
             }
 
             throw new NotSupportedException($"Переданный тип параметра \"{revitParam.GetType()}\" не поддерживается. Имя параметра \"{revitParam.Name}\".");
