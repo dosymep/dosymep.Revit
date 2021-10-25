@@ -23,14 +23,19 @@ namespace dosymep.Revit {
 
             if(parameter.HasValue) {
                 var storageType = parameter.StorageType;
-                if(storageType == StorageType.Integer)
+                switch(storageType) {
+                    case StorageType.Integer:
                     return parameter.AsInteger();
-                else if(storageType == StorageType.Double)
+                    case StorageType.Double:
                     return parameter.AsDouble();
-                else if(storageType == StorageType.String)
-                    return parameter.AsString();
-                else if(storageType == StorageType.ElementId)
+                    case StorageType.String: {
+                        var value = parameter.AsString();
+                        return string.IsNullOrWhiteSpace(value) ? null : value;
+                    }
+
+                    case StorageType.ElementId:
                     return parameter.AsElementId();
+                }
             }
 
             return null;
