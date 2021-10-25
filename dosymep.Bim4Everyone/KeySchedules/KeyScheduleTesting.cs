@@ -96,10 +96,11 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// </summary>
         /// <returns>Возвращает перечисление не заполнены параметров, которые не были заполнены в ключевой спецификации.</returns>
         public IEnumerable<RevitParam> GetNotFilledParamsInSchedule() {
-            foreach(Element element in GetScheduleElements()) {
-                foreach(RevitParam requiredParam in _keyScheduleRule.RequiredParams) {
+            foreach(RevitParam requiredParam in _keyScheduleRule.FilledParams) {
+                foreach(Element element in GetScheduleElements()) {
                     if(!element.IsExistsParam(requiredParam)) {
                         yield return requiredParam;
+                        break;
                     }
                 }
             }
