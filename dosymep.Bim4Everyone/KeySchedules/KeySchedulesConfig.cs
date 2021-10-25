@@ -37,7 +37,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
                 RequiredSharedParams = new List<string>(),
                 RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomGroupName),
                     nameof(ProjectParamsConfig.ApartmentGroupName),
                     nameof(ProjectParamsConfig.RoomGroupShortName),
                     nameof(ProjectParamsConfig.RoomTypeCountGroup)
@@ -60,7 +59,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
                 RequiredSharedParams = new List<string>() { },
                 RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomName),
                     nameof(ProjectParamsConfig.RoomAreaRatio), 
                     nameof(ProjectParamsConfig.IsRoomBalcony), 
                     nameof(ProjectParamsConfig.IsRoomLiving)
@@ -91,7 +89,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
                 RequiredSharedParams = new List<string>(),
                 RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.FireCompartmentName),
                     nameof(ProjectParamsConfig.FireCompartmentShortName) 
                 },
 
@@ -109,7 +106,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
                 RequiredSharedParams = new List<string>(),
                 RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomSectionName),
                     nameof(ProjectParamsConfig.RoomSectionShortName),
                     nameof(ProjectParamsConfig.ApartmentTypeNumsInSection)
                 },
@@ -131,7 +127,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
                 RequiredSharedParams = new List<string>(),
                 RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomTypeGroupName),
                     nameof(ProjectParamsConfig.RoomTypeGroupShortName),
                     nameof(ProjectParamsConfig.ApartmentAreaSpec),
                     nameof(ProjectParamsConfig.ApartmentAreaMinSpec),
@@ -158,7 +153,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                     nameof(SharedParamsConfig.RoomGroupShortName)
                 },
                 RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomGroupName),
                     nameof(ProjectParamsConfig.RoomTypeCountGroup)
                 },
 
@@ -180,7 +174,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
                 RequiredSharedParams = new List<string>() { },
                 RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomName),
                     nameof(ProjectParamsConfig.RoomAreaRatio),
                     nameof(ProjectParamsConfig.IsRoomBalcony),
                     nameof(ProjectParamsConfig.IsRoomLiving)
@@ -210,9 +203,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 RequiredSharedParams = new List<string>() {
                     nameof(SharedParamsConfig.FireCompartmentShortName)
                 },
-                RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.FireCompartmentName),
-                },
+                RequiredProjectParams = new List<string>() { },
 
                 FilledSharedParamNames = new List<string>() { },
                 FilledProjectParamNames = new List<string>() { }
@@ -230,7 +221,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                     nameof(SharedParamsConfig.RoomSectionShortName)
                 },
                 RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomSectionName),
                     nameof(ProjectParamsConfig.ApartmentTypeNumsInSection)
                 },
 
@@ -256,9 +246,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                     nameof(SharedParamsConfig.ApartmentAreaMinSpec),
                     nameof(SharedParamsConfig.ApartmentAreaMaxSpec)
                 },
-                RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomTypeGroupName)
-                },
+                RequiredProjectParams = new List<string>() { },
 
                 FilledSharedParamNames = new List<string>() {
                     nameof(SharedParamsConfig.RoomTypeGroupShortName)
