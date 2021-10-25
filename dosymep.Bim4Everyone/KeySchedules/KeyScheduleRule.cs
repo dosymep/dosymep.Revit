@@ -8,6 +8,7 @@ using Autodesk.Revit.DB;
 
 using dosymep.Bim4Everyone.ProjectParams;
 using dosymep.Bim4Everyone.SharedParams;
+using dosymep.Bim4Everyone.SystemParams;
 
 using pyRevitLabs.Json;
 
@@ -95,17 +96,17 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
             var filledSharedParams = FilledSharedParamNames.Select(item => propertySharedParams[item]);
             var filledProjectParams = FilledProjectParamNames.Select(item => propertyProjectParams[item]);
+            var filledSystemParams = FilledSystemParams.Select(item => SystemParamsConfig.Instance.GetSystemParam(item));
 
             var requiredSharedParams = RequiredSharedParams.Select(item => propertySharedParams[item]);
             var requiredProjectParams = RequiredProjectParams.Select(item => propertyProjectParams[item]);
+            var requiredSystemParams = RequiredSystemParams.Select(item => SystemParamsConfig.Instance.GetSystemParam(item));
 
             return new KeyScheduleRuleInternal() {
                 KeyRevitParam = keyRevitParam,
 
-                FilledSystemParams = FilledSystemParams.ToList(),
-                RequiredSystemParams = RequiredSystemParams.ToList(),
-                FilledParams = new List<RevitParam>(filledSharedParams.Union(filledProjectParams)),
-                RequiredParams = new List<RevitParam>(requiredSharedParams.Union(requiredProjectParams)),
+                FilledParams = new List<RevitParam>(filledSharedParams.Union(filledProjectParams).Union(filledSystemParams)),
+                RequiredParams = new List<RevitParam>(requiredSharedParams.Union(requiredProjectParams).Union(requiredSystemParams)),
             };
         }
     }
