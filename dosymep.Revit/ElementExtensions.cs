@@ -14,6 +14,16 @@ namespace dosymep.Revit {
         #region Получение параметра по его имени
 
         /// <summary>
+        /// Проверяет на существование параметра в элементе.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
+        public static bool IsExistsParam(this Element element, string paramName) {
+            return element.GetParamValueOrDefault(paramName) != default;
+        }
+
+        /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.
         /// </summary>
         /// <param name="element">Элемент.</param>
@@ -150,6 +160,16 @@ namespace dosymep.Revit {
         #region Получение параметра по BuiltInParameter
 
         /// <summary>
+        /// Проверяет на существование параметра в элементе.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="builtInParameter">Встроенный тип параметра.</param>
+        /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
+        public static bool IsExistsParam(this Element element, BuiltInParameter builtInParameter) {
+            return element.GetParamValueOrDefault(builtInParameter) != default;
+        }
+
+        /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.
         /// </summary>
         /// <param name="element">Элемент.</param>
@@ -262,6 +282,16 @@ namespace dosymep.Revit {
 #if D2022 || R2022
 
         #region Получение параметра по ForgeTypeId
+
+        /// <summary>
+        /// Проверяет на существование параметра в элементе.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
+        public static bool IsExistsParam(this Element element, ForgeTypeId forgeTypeId) {
+            return element.GetParamValueOrDefault(forgeTypeId) != default;
+        }
 
         /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.
