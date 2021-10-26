@@ -65,7 +65,11 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// </summary>
         /// <returns>Возвращает true - если наименования ключевого параметра совпадают с конфигурацией, иначе false.</returns>
         public bool IsCorrectKeyRevitParam() {
-            return _testingSchedule.KeyScheduleParameterName.Equals(_keyScheduleRule.KeyRevitParam.Name);
+            if(IsKeySchedule()) {
+                return _testingSchedule.KeyScheduleParameterName.Equals(_keyScheduleRule.KeyRevitParam.Name);
+            }
+
+            return false;
         }
 
         /// <summary>
@@ -73,6 +77,8 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// </summary>
         /// <returns>Возвращает перечисление параметров, которые не были созданы в проекте.</returns>
         public IEnumerable<RevitParam> GetNotExistsRequiredParamsInProject() {
+            CheckKeySchedule();
+
             foreach(RevitParam requiredParam in _keyScheduleRule.RequiredParams) {
                 if(!_testingSchedule.Document.IsExistsParam(requiredParam)) {
                     yield return requiredParam;
@@ -85,6 +91,8 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// </summary>
         /// <returns>Возвращает перечисление обязательных параметров, которые не были созданы в ключевой спецификации.</returns>
         public IEnumerable<RevitParam> GetNotExistsRequiredParamsInSchedule() {
+            CheckKeySchedule();
+
             var definition = _testingSchedule.Definition;
             string[] paramNames = Enumerable.Range(0, definition.GetFieldCount())
                 .Select(item => definition.GetField(item))
@@ -99,6 +107,8 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// </summary>
         /// <returns>Возвращает перечисление не заполнены параметров, которые не были заполнены в ключевой спецификации.</returns>
         public IEnumerable<RevitParam> GetNotFilledParamsInSchedule() {
+            CheckKeySchedule();
+
             Element[] scheduleElements = GetScheduleElements().ToArray();
             foreach(Element element in scheduleElements) {
 #if D2020 || R2020 || D2021 || R2021
@@ -111,13 +121,26 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 }
             }
 
-            foreach(RevitParam requiredParam in _keyScheduleRule.FilledParams) {
+            foreach(RevitParam filledParam in _keyScheduleRule.FilledParams) {
                 foreach(Element element in scheduleElements) {
-                    if(!element.IsExistsParam(requiredParam)) {
-                        yield return requiredParam;
+                    if(!element.IsExistsParam(filledParam)) {
+                        yield return filledParam;
                         break;
                     }
                 }
+            }
+        }
+
+        /// <summary>
+        /// Проверяет спецификацию на корректность.
+        /// </summary>
+        private void CheckKeySchedule() {
+            if(!IsKeySchedule()) {
+                throw new InvalidOperationException($"Спецификация \"{_testingSchedule.Name}\" не является ключевой.");
+            }
+
+            if(IsEmptySchedule()) {
+                throw new InvalidOperationException($"Спецификация \"{_testingSchedule.Name}\" не содержит элементов.");
             }
         }
 
