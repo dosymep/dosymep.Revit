@@ -8,6 +8,7 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
 
 using dosymep.Bim4Everyone;
+using dosymep.Bim4Everyone.KeySchedules;
 using dosymep.Bim4Everyone.ProjectParams;
 using dosymep.Bim4Everyone.SharedParams;
 using dosymep.Revit;
@@ -48,7 +49,7 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="target">Документ, в котором требуется настроить параметр.</param>
         /// <param name="revitParam">Параметр, который требуется настроить.</param>
         /// <remarks>Метод открывает транзакцию при настройке параметра.</remarks>
-        private void SetupRevitParam(Document target, RevitParam revitParam) {
+        public void SetupRevitParam(Document target, RevitParam revitParam) {
             if(target is null) {
                 throw new ArgumentNullException(nameof(target));
             }
@@ -57,13 +58,17 @@ namespace dosymep.Bim4Everyone.Templates {
                 throw new ArgumentNullException(nameof(revitParam));
             }
 
+            if(revitParam.IsExistsParam(target)) {
+                return;
+            }
+
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
                 using(var transaction = new Transaction(target)) {
                     transaction.Start("Настройка параметра");
 
                     ViewSchedule viewSchedule = GetViewSchedule(source, revitParam);
-                    CopyViewSchedule(source, target, viewSchedule);
+                    CopyViewSchedule(source, target, true, viewSchedule);
 
                     transaction.Commit();
                 }
@@ -78,14 +83,45 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="target">Документ, в котором требуется настроить параметры.</param>
         /// <param name="revitParams">Параметры, которые требуется настроить.</param>
         /// <remarks>Метод открывает транзакцию при настройке параметров.</remarks>
-        private void SetupRevitParams(Document target, IEnumerable<RevitParam> revitParams) {
+        public void SetupRevitParams(Document target, params RevitParam[] revitParams) {
+            if(revitParams is null) {
+                throw new ArgumentNullException(nameof(revitParams));
+            }
+
+            SetupRevitParams(target, revitParams.AsEnumerable());
+        }
+
+        /// <summary>
+        /// Настройка параметров.
+        /// </summary>
+        /// <param name="target">Документ, в котором требуется настроить параметры.</param>
+        /// <param name="revitParams">Параметры, которые требуется настроить.</param>
+        /// <remarks>Метод открывает транзакцию при настройке параметров.</remarks>
+        public void SetupRevitParams(Document target, IEnumerable<RevitParam> revitParams) {
+            if(target is null) {
+                throw new ArgumentNullException(nameof(target));
+            }
+
+            if(revitParams is null) {
+                throw new ArgumentNullException(nameof(revitParams));
+            }
+
+            // Получаем параметры, которых нет в проекте
+            revitParams = revitParams.Where(item => !target.IsExistsParam(item));
+
+            // Если не были найдены параметры, которых нет проекте
+            // то выходим
+            if(!revitParams.Any()) {
+                return;
+            }
+
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
                 using(var transaction = new Transaction(target)) {
                     transaction.Start("Настройка параметров");
 
                     IEnumerable<ViewSchedule> viewSchedules = GetViewSchedules(source, revitParams);
-                    CopyViewSchedules(source, target, viewSchedules);
+                    CopyViewSchedules(source, target, true, viewSchedules);
 
                     transaction.Commit();
                 }
@@ -105,18 +141,6 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="revitParam">Параметр проекта, который требуется настроить.</param>
         /// <remarks>Метод открывает транзакцию при настройке параметра проекта.</remarks>
         public void SetupRevitParam(Document target, ProjectParam revitParam) {
-            if(target is null) {
-                throw new ArgumentNullException(nameof(target));
-            }
-
-            if(revitParam is null) {
-                throw new ArgumentNullException(nameof(revitParam));
-            }
-
-            if(target.IsExistsParam(revitParam)) {
-                return;
-            }
-
             SetupRevitParam(target, (RevitParam) revitParam);
         }
 
@@ -137,10 +161,6 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="revitParams">Параметры проекта, которые требуется настроить.</param>
         /// <remarks>Метод открывает транзакцию при настройке параметров проекта.</remarks>
         public void SetupRevitParams(Document target, IEnumerable<ProjectParam> revitParams) {
-            if(revitParams.All(item => target.IsExistsParam(item))) {
-                return;
-            }
-
             SetupRevitParams(target, revitParams.Cast<RevitParam>());
         }
 
@@ -155,18 +175,6 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="revitParam">Общий параметр, который требуется настроить.</param>
         /// <remarks>Метод открывает транзакцию при настройке общего параметра.</remarks>
         public void SetupRevitParam(Document target, SharedParam revitParam) {
-            if(target is null) {
-                throw new ArgumentNullException(nameof(target));
-            }
-
-            if(revitParam is null) {
-                throw new ArgumentNullException(nameof(revitParam));
-            }
-
-            if(target.IsExistsParam(revitParam)) {
-                return;
-            }
-
             SetupRevitParam(target, (RevitParam) revitParam);
         }
 
@@ -177,14 +185,6 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="revitParams">Общие параметры, которые требуется настроить.</param>
         /// <remarks>Метод открывает транзакцию при настройке общих параметров.</remarks>
         public void SetupRevitParams(Document target, params SharedParam[] revitParams) {
-            if(target is null) {
-                throw new ArgumentNullException(nameof(target));
-            }
-
-            if(revitParams is null) {
-                throw new ArgumentNullException(nameof(revitParams));
-            }
-
             SetupRevitParams(target, revitParams.AsEnumerable());
         }
 
@@ -195,19 +195,99 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="revitParams">Общие параметры, которые требуется настроить.</param>
         /// <remarks>Метод открывает транзакцию при настройке общих параметров.</remarks>
         public void SetupRevitParams(Document target, IEnumerable<SharedParam> revitParams) {
+            SetupRevitParams(target, revitParams.Cast<RevitParam>());
+        }
+
+        #endregion
+
+        #region KeySchedules
+
+        /// <summary>
+        /// Настройка ключевой спецификации.
+        /// </summary>
+        /// <param name="target">Документ, в котором требуется настроить ключевую спецификацию.</param>
+        /// <param name="replaceSchedule">true - если требуется заменить спецификацию, иначе false.</param>
+        /// <param name="keyScheduleRule">Правила ключевой спецификации.</param>
+        public void SetupKeySchedule(Document target, bool replaceSchedule, KeyScheduleRule keyScheduleRule) {
             if(target is null) {
                 throw new ArgumentNullException(nameof(target));
             }
 
-            if(revitParams is null) {
-                throw new ArgumentNullException(nameof(revitParams));
+            if(keyScheduleRule is null) {
+                throw new ArgumentNullException(nameof(keyScheduleRule));
             }
 
-            if(revitParams.All(item => target.IsExistsParam(item))) {
-                return;
+            Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
+            try {
+                using(var transaction = new Transaction(target)) {
+                    transaction.Start("Настройка ключевой спецификации");
+
+                    if(replaceSchedule) {
+                        ViewSchedule removedViewSchedule = GetViewSchedule(target, keyScheduleRule);
+                        RemoveViewSchedule(target, removedViewSchedule);
+                    }
+                    
+                    ViewSchedule viewSchedule = GetViewSchedule(source, keyScheduleRule);
+                    CopyViewSchedule(source, target, false, viewSchedule);
+
+                    transaction.Commit();
+                }
+            } finally {
+                source.Close(false);
+            }
+        }
+
+        /// <summary>
+        /// Настройка ключевой спецификации.
+        /// </summary>
+        /// <param name="target">Документ, в котором требуется настроить ключевую спецификацию.</param>
+        /// <param name="replaceSchedule">true - если требуется заменить спецификацию, иначе false.</param>
+        /// <param name="keyScheduleRules">Правила ключевой спецификации.</param>
+        public void SetupKeySchedules(Document target, bool replaceSchedule, params KeyScheduleRule[] keyScheduleRules) {
+            if(target is null) {
+                throw new ArgumentNullException(nameof(target));
             }
 
-            SetupRevitParams(target, revitParams.Cast<RevitParam>());
+            if(keyScheduleRules is null) {
+                throw new ArgumentNullException(nameof(keyScheduleRules));
+            }
+
+            SetupKeySchedules(target, replaceSchedule, keyScheduleRules.AsEnumerable());
+        }
+
+        /// <summary>
+        /// Настройка ключевых спецификаций.
+        /// </summary>
+        /// <param name="target">Документ, в котором требуется настроить ключевую спецификацию.</param>
+        /// <param name="replaceSchedule">true - если требуется заменить спецификацию, иначе false.</param>
+        /// <param name="keyScheduleRules">Правила ключевой спецификации.</param>
+        public void SetupKeySchedules(Document target, bool replaceSchedule, IEnumerable<KeyScheduleRule> keyScheduleRules) {
+            if(target is null) {
+                throw new ArgumentNullException(nameof(target));
+            }
+
+            if(keyScheduleRules is null) {
+                throw new ArgumentNullException(nameof(keyScheduleRules));
+            }
+
+            Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
+            try {
+                using(var transaction = new Transaction(target)) {
+                    transaction.Start("Настройка ключевых спецификаций");
+                    
+                    if(replaceSchedule) {
+                        IEnumerable<ViewSchedule> removedViewSchedules = GetViewSchedules(target, keyScheduleRules);
+                        RemoveViewSchedules(target, removedViewSchedules);
+                    }
+                    
+                    IEnumerable<ViewSchedule> viewSchedules = GetViewSchedules(source, keyScheduleRules);
+                    CopyViewSchedules(source, target, false, viewSchedules);
+
+                    transaction.Commit();
+                }
+            } finally {
+                source.Close(false);
+            }
         }
 
         #endregion
@@ -268,38 +348,68 @@ namespace dosymep.Bim4Everyone.Templates {
         #region ViewSchedules
 
         private static ViewSchedule GetViewSchedule(Document document, RevitParam revitParam) {
+            return GetViewSchedule(document, revitParam.Name);
+        }
+
+        private static ViewSchedule GetViewSchedule(Document document, KeyScheduleRule keyScheduleRule) {
+            return GetViewSchedule(document, keyScheduleRule.ScheduleName);
+        }
+
+        private static ViewSchedule GetViewSchedule(Document document, string viewScheduleName) {
             return new FilteredElementCollector(document)
                 .OfClass(typeof(ViewSchedule))
                 .OfType<ViewSchedule>()
-                .FirstOrDefault(item => IsViewScheduleParam(item, revitParam));
+                .FirstOrDefault(item => IsFindViewSchedule(item, viewScheduleName));
         }
 
         private static IEnumerable<ViewSchedule> GetViewSchedules(Document document, IEnumerable<RevitParam> revitParams) {
+            return GetViewSchedules(document, revitParams.Select(item => item.Name));
+        }
+
+        private static IEnumerable<ViewSchedule> GetViewSchedules(Document document, IEnumerable<KeyScheduleRule> keyScheduleRules) {
+            return GetViewSchedules(document, keyScheduleRules.Select(item => item.ScheduleName));
+        }
+
+        private static IEnumerable<ViewSchedule> GetViewSchedules(Document document, IEnumerable<string> scheduleNames) {
             return new FilteredElementCollector(document)
                 .OfClass(typeof(ViewSchedule))
                 .OfType<ViewSchedule>()
-                .Where(item => revitParams.Any(param => IsViewScheduleParam(item, param)));
+                .Where(item => scheduleNames.Any(param => IsFindViewSchedule(item, param)));
         }
 
-        private static bool IsViewScheduleParam(ViewSchedule viewSchedule, RevitParam revitParam) {
-            return viewSchedule.Name.Equals(revitParam.Name);
+        private static bool IsFindViewSchedule(ViewSchedule viewSchedule, string viewScheduleName) {
+            return viewSchedule.Name.Equals(viewScheduleName);
         }
 
-        private static void CopyViewSchedule(Document source, Document target, ViewSchedule viewSchedule) {
+        private static void CopyViewSchedule(Document source, Document target, bool removeSchedule, ViewSchedule viewSchedule) {
             ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(source, new[] { viewSchedule.Id }, target, Transform.Identity, new CopyPasteOptions());
 
-            // Удаляем скопированный вид,
-            // так как он нужен был для переноса параметра
-            target.Delete(copiedElements);
+            if(removeSchedule) {
+                // Удаляем скопированный вид,
+                // так как он нужен был для переноса параметра
+                target.Delete(copiedElements);
+            }
         }
 
 
-        private static void CopyViewSchedules(Document source, Document target, IEnumerable<ViewSchedule> viewSchedules) {
+        private static void CopyViewSchedules(Document source, Document target, bool removeSchedule, IEnumerable<ViewSchedule> viewSchedules) {
             ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(source, viewSchedules.Select(item => item.Id).ToArray(), target, Transform.Identity, new CopyPasteOptions());
 
-            // Удаляем скопированные виды,
-            // так как они нужны были для переноса параметра
-            target.Delete(copiedElements);
+            if(removeSchedule) {
+                // Удаляем скопированные виды,
+                // так как они нужны были для переноса параметра
+                target.Delete(copiedElements);
+            }
+        }
+
+        private static void RemoveViewSchedule(Document target, ViewSchedule viewSchedule) {
+            if(viewSchedule != null) {
+                target.Delete(viewSchedule.Id);
+            }
+        }
+
+        private static void RemoveViewSchedules(Document target, IEnumerable<ViewSchedule> viewSchedules) {
+            target.Delete(viewSchedules.Select(item => item.Id).ToArray());
         }
 
         #endregion
