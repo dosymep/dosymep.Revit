@@ -41,6 +41,13 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         }
 
         /// <summary>
+        /// Настройки проверки ключевых спецификаций.
+        /// </summary>
+        public KeyScheduleRule KeyScheduleRule {
+            get { return _keyScheduleRule.KeyScheduleRule; }
+        }
+
+        /// <summary>
         /// Проверяет, является ли спецификация ключевой.
         /// </summary>
         /// <returns>Возвращает true - если спецификация является ключевой, иначе false.</returns>

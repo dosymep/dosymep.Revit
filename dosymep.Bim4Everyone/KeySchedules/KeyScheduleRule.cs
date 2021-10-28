@@ -115,8 +115,9 @@ namespace dosymep.Bim4Everyone.KeySchedules {
             var requiredSystemParams = RequiredSystemParams.Select(item => SystemParamsConfig.Instance.GetSystemParam(item));
 
             return new KeyScheduleRuleInternal() {
+                KeyScheduleRule = this,
+                
                 KeyRevitParam = keyRevitParam,
-
                 FilledParams = new List<RevitParam>(filledSharedParams.Union(filledProjectParams).Union(filledSystemParams)),
                 RequiredParams = new List<RevitParam>(requiredSharedParams.Union(requiredProjectParams).Union(requiredSystemParams)),
             };
