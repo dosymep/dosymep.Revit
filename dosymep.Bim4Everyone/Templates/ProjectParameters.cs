@@ -217,13 +217,17 @@ namespace dosymep.Bim4Everyone.Templates {
                 throw new ArgumentNullException(nameof(keyScheduleRule));
             }
 
+            ViewSchedule removedViewSchedule = GetViewSchedule(target, keyScheduleRule);
+            if(!replaceSchedule && removedViewSchedule != null) {
+                return;
+            }
+
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
                 using(var transaction = new Transaction(target)) {
                     transaction.Start("Настройка ключевой спецификации");
 
-                    if(replaceSchedule) {
-                        ViewSchedule removedViewSchedule = GetViewSchedule(target, keyScheduleRule);
+                    if(replaceSchedule) {                        
                         RemoveViewSchedule(target, removedViewSchedule);
                     }
                     
@@ -270,13 +274,17 @@ namespace dosymep.Bim4Everyone.Templates {
                 throw new ArgumentNullException(nameof(keyScheduleRules));
             }
 
+            IEnumerable<ViewSchedule> removedViewSchedules = GetViewSchedules(target, keyScheduleRules);
+            if(!replaceSchedule && removedViewSchedules.Any()) {
+                return;
+            }
+
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
                 using(var transaction = new Transaction(target)) {
                     transaction.Start("Настройка ключевых спецификаций");
                     
                     if(replaceSchedule) {
-                        IEnumerable<ViewSchedule> removedViewSchedules = GetViewSchedules(target, keyScheduleRules);
                         RemoveViewSchedules(target, removedViewSchedules);
                     }
                     
@@ -382,8 +390,11 @@ namespace dosymep.Bim4Everyone.Templates {
         }
 
         private static void CopyViewSchedule(Document source, Document target, bool removeSchedule, ViewSchedule viewSchedule) {
-            ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(source, new[] { viewSchedule.Id }, target, Transform.Identity, new CopyPasteOptions());
+            if(viewSchedule == null) {
+                return;
+            }
 
+            ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(source, new[] { viewSchedule.Id }, target, Transform.Identity, new CopyPasteOptions());
             if(removeSchedule) {
                 // Удаляем скопированный вид,
                 // так как он нужен был для переноса параметра
@@ -391,10 +402,12 @@ namespace dosymep.Bim4Everyone.Templates {
             }
         }
 
-
         private static void CopyViewSchedules(Document source, Document target, bool removeSchedule, IEnumerable<ViewSchedule> viewSchedules) {
-            ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(source, viewSchedules.Select(item => item.Id).ToArray(), target, Transform.Identity, new CopyPasteOptions());
+            if(!viewSchedules.Any()) {
+                return;
+            }
 
+            ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(source, viewSchedules.Select(item => item.Id).ToArray(), target, Transform.Identity, new CopyPasteOptions());
             if(removeSchedule) {
                 // Удаляем скопированные виды,
                 // так как они нужны были для переноса параметра
