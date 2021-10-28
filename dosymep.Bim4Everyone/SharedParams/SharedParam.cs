@@ -46,7 +46,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.ApartmentFullAreaFix), "Описание ApartmentFullAreaFix" },
             { nameof(SharedParamsConfig.Level), "Описание Level" },
 
-#if D2022 || R2022
             { nameof(SharedParamsConfig.RoomAreaRatio), "Описание RoomAreaRatio" },
             { nameof(SharedParamsConfig.RoomGroupShortName), "Описание RoomGroupName" },
             { nameof(SharedParamsConfig.ApartmentGroupName), "Описание ApartmentGroupName" },
@@ -56,7 +55,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.ApartmentAreaSpec), "Описание ApartmentAreaSpec" },
             { nameof(SharedParamsConfig.ApartmentAreaMinSpec), "Описание ApartmentAreaMinSpec" },
             { nameof(SharedParamsConfig.ApartmentAreaMaxSpec), "Описание ApartmentAreaMaxSpec" },
-#endif
         };
 
         /// <summary>
@@ -91,7 +89,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.ApartmentFullAreaFix), StorageType.Double },
             { nameof(SharedParamsConfig.Level), StorageType.String },
 
-#if D2022 || R2022
             { nameof(SharedParamsConfig.RoomAreaRatio), StorageType.Double },
             { nameof(SharedParamsConfig.RoomGroupShortName), StorageType.String },
             { nameof(SharedParamsConfig.ApartmentGroupName), StorageType.String },
@@ -101,7 +98,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.ApartmentAreaSpec), StorageType.String },
             { nameof(SharedParamsConfig.ApartmentAreaMinSpec), StorageType.Double },
             { nameof(SharedParamsConfig.ApartmentAreaMaxSpec), StorageType.Double },
-#endif
         };
 
         /// <summary>

@@ -169,8 +169,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         public SharedParam ApartmentFullAreaFix { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentFullAreaFix), Name = "ФОП_ФИКС_КВР_Площадь по пятну" };
 
-#if D2022 || R2022
-
         /// <summary>
         /// ФОП_Коэффициент площади
         /// </summary>
@@ -215,8 +213,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// ФОП_КВР_Площадь по ТЗ макс
         /// </summary>
         public SharedParam ApartmentAreaMaxSpec { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentAreaMaxSpec), Name = "ФОП_КВР_Площадь по ТЗ макс" };
-
-#endif
 
         #endregion
 
