@@ -135,6 +135,11 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public SharedParam ApartmentNumberExtra { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentNumberExtra), Name = "ФОП_Доп. номер помещения" };
 
         /// <summary>
+        /// ФОП_Количество комнат
+        /// </summary>
+        public SharedParam RoomsCount { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomsCount), Name = "ФОП_Количество комнат" };
+
+        /// <summary>
         /// ФОП_ФИКС_КВР_Площадь с коэф.
         /// </summary>
         public SharedParam ApartmentAreaRatioFix { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentAreaRatioFix), Name = "ФОП_ФИКС_КВР_Площадь с коэф." };
