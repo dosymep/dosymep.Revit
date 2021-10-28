@@ -40,5 +40,43 @@ namespace dosymep.Revit {
 
             return null;
         }
+
+        /// <summary>
+        /// Присваивает значение параметра по значению другого параметра.
+        /// </summary>
+        /// <param name="leftParameter">Параметр в который присваивается значение.</param>
+        /// <param name="rightarameter">Параметр значение которого присваивается.</param>
+        public static void Set(this Parameter leftParameter, Parameter rightarameter) {
+            if(leftParameter is null) {
+                throw new ArgumentNullException(nameof(leftParameter));
+            }
+
+            if(rightarameter is null) {
+                throw new ArgumentNullException(nameof(rightarameter));
+            }
+
+            if(leftParameter.StorageType != StorageType.String && leftParameter.StorageType != rightarameter.StorageType) {
+                throw new ArgumentException("У переданного параметра не соответствует тип данных.", nameof(rightarameter));
+            }
+
+            var storageType = rightarameter.StorageType;
+            switch(storageType) {
+                case StorageType.Integer:
+                leftParameter.Set(rightarameter.AsInteger());
+                break;
+                case StorageType.Double:
+                leftParameter.Set(rightarameter.AsDouble());
+                break;
+                case StorageType.String:
+                leftParameter.Set(rightarameter.AsObject()?.ToString());
+                break;
+                case StorageType.ElementId:
+                leftParameter.Set(rightarameter.AsElementId());
+                break;
+                default:
+                leftParameter.Set((string) null);
+                break;
+            }
+        }
     }
 }

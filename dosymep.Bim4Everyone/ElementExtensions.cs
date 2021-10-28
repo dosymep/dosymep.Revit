@@ -141,6 +141,28 @@ namespace dosymep.Bim4Everyone {
         }
 
         /// <summary>
+        /// Устанавливает значение параметра по значению другого параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="leftRevitParam">Параметр в который присваивается значение.</param>
+        /// <param name="rightRevitParam">Параметр значение которого присваивается.</param>
+        public static void SetParamValue(this Element element, RevitParam leftRevitParam, RevitParam rightRevitParam) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(leftRevitParam is null) {
+                throw new ArgumentException($"'{nameof(leftRevitParam)}' cannot be null or empty.", nameof(leftRevitParam));
+            }
+
+            if(rightRevitParam is null) {
+                throw new ArgumentException($"'{nameof(rightRevitParam)}' cannot be null or empty.", nameof(rightRevitParam));
+            }
+
+            element.GetParam(leftRevitParam).Set(element.GetParam(rightRevitParam));
+        }
+
+        /// <summary>
         /// Возвращает параметр.
         /// </summary>
         /// <param name="element">Элемент.</param>
