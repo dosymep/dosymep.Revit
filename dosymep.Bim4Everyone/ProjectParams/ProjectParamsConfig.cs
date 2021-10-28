@@ -68,11 +68,6 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         #region Квартирография
 
         /// <summary>
-        /// КВГ_Коэффициент площади
-        /// </summary>
-        public ProjectParam RoomAreaRatio { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomAreaRatio), Name = "КВГ_Коэффициент площади" };
-
-        /// <summary>
         /// КВГ_Группа
         /// </summary>
         public ProjectParam RoomGroupName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomGroupName), Name = "КВГ_Группа" };
@@ -123,6 +118,11 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         public ProjectParam IsRoomNumberFix { get; internal set; } = new ProjectParam() { PropertyName = nameof(IsRoomNumberFix), Name = "КВГ_ПМЩ_Фиксация номера" };
 
 #if D2020 || R2020 || D2021 || R2021
+
+        /// <summary>
+        /// КВГ_Коэффициент площади
+        /// </summary>
+        public ProjectParam RoomAreaRatio { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomAreaRatio), Name = "КВГ_Коэффициент площади" };
 
         /// <summary>
         /// КВГ_Доп. сортировка групп
