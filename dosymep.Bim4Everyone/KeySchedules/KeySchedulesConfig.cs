@@ -163,9 +163,10 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 ScheduleName = "КВГ_(Ключ.) - Наименование пом.",
                 KeyRevitParamName = nameof(ProjectParamsConfig.RoomName),
 
-                RequiredSharedParams = new List<string>() { },
+                RequiredSharedParams = new List<string>() {
+                    nameof(SharedParamsConfig.RoomAreaRatio),
+                },
                 RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomAreaRatio),
                     nameof(ProjectParamsConfig.IsRoomBalcony),
                     nameof(ProjectParamsConfig.IsRoomLiving)
                 },
