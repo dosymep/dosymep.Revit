@@ -68,7 +68,9 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 },
 
                 FilledSharedParamNames = new List<string>() { },
-                FilledProjectParamNames = new List<string>() { },
+                FilledProjectParamNames = new List<string>() {
+                    nameof(ProjectParamsConfig.RoomAreaRatio), 
+                },
                 FilledSystemParams = new List<BuiltInParameter>() {
                     BuiltInParameter.ROOM_NAME
                 },
@@ -175,7 +177,9 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                     ParameterTypeId.RoomDepartment
                 },
 
-                FilledSharedParamNames = new List<string>() { },
+                FilledSharedParamNames = new List<string>() {
+                 nameof(SharedParamsConfig.RoomAreaRatio),
+                },
                 FilledProjectParamNames = new List<string>() { },
                 FilledSystemParams = new List<ForgeTypeId>() {
                     ParameterTypeId.RoomName
