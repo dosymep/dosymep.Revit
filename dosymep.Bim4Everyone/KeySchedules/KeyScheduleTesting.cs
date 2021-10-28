@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Autodesk.Revit.DB;
 
+using dosymep.Bim4Everyone.SystemParams;
 using dosymep.Revit;
 
 namespace dosymep.Bim4Everyone.KeySchedules {
@@ -70,13 +71,13 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// <summary>
         /// Проверяет совпадает ли наименование ключевого параметра спецификации.
         /// </summary>
-        /// <returns>Возвращает true - если наименования ключевого параметра совпадают с конфигурацией, иначе false.</returns>
-        public bool IsCorrectKeyRevitParam() {
+        /// <returns>Возвращает true - если наименования ключевого параметра не совпадает с конфигурацией, иначе false.</returns>
+        public bool IsNotCorrectKeyRevitParam() {
             if(IsKeySchedule()) {
-                return _testingSchedule.KeyScheduleParameterName.Equals(_keyScheduleRule.KeyRevitParam.Name);
+                return !_testingSchedule.KeyScheduleParameterName.Equals(_keyScheduleRule.KeyRevitParam.Name);
             }
 
-            return false;
+            return true;
         }
 
         /// <summary>
@@ -106,7 +107,13 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 .Select(item => item.GetName())
                 .ToArray();
 
-            return _keyScheduleRule.RequiredParams.Where(item => !paramNames.Contains(item.Name));
+#if D2020 || R2020 || D2021 || R2021
+            var keyParams = new[] { SystemParamsConfig.Instance.GetSystemParam(BuiltInParameter.REF_TABLE_ELEM_NAME) };
+#else
+            var keyParams = new[] { SystemParamsConfig.Instance.GetSystemParam(ParameterTypeId.RefTableElemName) };
+#endif
+
+            return keyParams.Union(_keyScheduleRule.RequiredParams).Where(item => !paramNames.Contains(item.Name));
         }
 
         /// <summary>
@@ -116,19 +123,14 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         public IEnumerable<RevitParam> GetNotFilledParamsInSchedule() {
             CheckKeySchedule();
 
-            Element[] scheduleElements = GetScheduleElements().ToArray();
-            foreach(Element element in scheduleElements) {
 #if D2020 || R2020 || D2021 || R2021
-                if(!element.IsExistsParam(BuiltInParameter.REF_TABLE_ELEM_NAME)) {
+            var keyParams = new[] { SystemParamsConfig.Instance.GetSystemParam(BuiltInParameter.REF_TABLE_ELEM_NAME) };
 #else
-                if(!element.IsExistsParam(ParameterTypeId.RefTableElemName)) {
+            var keyParams = new[] { SystemParamsConfig.Instance.GetSystemParam(ParameterTypeId.RefTableElemName) };
 #endif
-                    yield return _keyScheduleRule.KeyRevitParam;
-                    break;
-                }
-            }
 
-            foreach(RevitParam filledParam in _keyScheduleRule.FilledParams) {
+            Element[] scheduleElements = GetScheduleElements().ToArray();
+            foreach(RevitParam filledParam in keyParams.Union(_keyScheduleRule.FilledParams)) {
                 foreach(Element element in scheduleElements) {
                     if(!element.IsExistsParam(filledParam)) {
                         yield return filledParam;
