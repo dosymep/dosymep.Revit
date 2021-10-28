@@ -30,7 +30,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
 
             { nameof(SharedParamsConfig.RoomArea), "Описание RoomArea" },
             { nameof(SharedParamsConfig.RoomAreaWithRatio), "Описание RoomAreaWithRatio" },
-            { nameof(SharedParamsConfig.RoomAreaRatio), "Описание RoomAreaRatio" },
             { nameof(SharedParamsConfig.ApartmentAreaRatio), "Описание ApartmentAreaRatio" },
             { nameof(SharedParamsConfig.ApartmentAreaNoBalcony), "Описание ApartmentAreaNoBalcony" },
             { nameof(SharedParamsConfig.ApartmentLivingArea), "Описание ApartmentLivingArea" },
@@ -48,6 +47,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.Level), "Описание Level" },
 
 #if D2022 || R2022
+            { nameof(SharedParamsConfig.RoomAreaRatio), "Описание RoomAreaRatio" },
             { nameof(SharedParamsConfig.RoomGroupShortName), "Описание RoomGroupName" },
             { nameof(SharedParamsConfig.ApartmentGroupName), "Описание ApartmentGroupName" },
             { nameof(SharedParamsConfig.FireCompartmentShortName), "Описание FireCompartmentName" },
@@ -75,7 +75,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
 
             { nameof(SharedParamsConfig.RoomArea), StorageType.Double },
             { nameof(SharedParamsConfig.RoomAreaWithRatio), StorageType.Double },
-            { nameof(SharedParamsConfig.RoomAreaRatio), StorageType.Double },
             { nameof(SharedParamsConfig.ApartmentAreaRatio), StorageType.Double },
             { nameof(SharedParamsConfig.ApartmentAreaNoBalcony), StorageType.Double },
             { nameof(SharedParamsConfig.ApartmentLivingArea), StorageType.Double },
@@ -93,6 +92,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.Level), StorageType.String },
 
 #if D2022 || R2022
+            { nameof(SharedParamsConfig.RoomAreaRatio), StorageType.Double },
             { nameof(SharedParamsConfig.RoomGroupShortName), StorageType.String },
             { nameof(SharedParamsConfig.ApartmentGroupName), StorageType.String },
             { nameof(SharedParamsConfig.FireCompartmentShortName), StorageType.String },

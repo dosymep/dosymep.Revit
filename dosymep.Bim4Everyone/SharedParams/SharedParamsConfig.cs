@@ -95,11 +95,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public SharedParam RoomAreaWithRatio { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomAreaWithRatio), Name = "ФОП_ПМЩ_Площадь с коэф." };
 
         /// <summary>
-        /// ФОП_Коэффициент площади
-        /// </summary>
-        public SharedParam RoomAreaRatio { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomAreaRatio), Name = "ФОП_Коэффициент площади" };
-
-        /// <summary>
         /// ФОП_КВР_Площадь с коэф.
         /// </summary>
         public SharedParam ApartmentAreaRatio { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentAreaRatio), Name = "ФОП_КВР_Площадь с коэф." };
@@ -175,6 +170,11 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public SharedParam ApartmentFullAreaFix { get; internal set; } = new SharedParam() { PropertyName = nameof(ApartmentFullAreaFix), Name = "ФОП_ФИКС_КВР_Площадь по пятну" };
 
 #if D2022 || R2022
+
+        /// <summary>
+        /// ФОП_Коэффициент площади
+        /// </summary>
+        public SharedParam RoomAreaRatio { get; internal set; } = new SharedParam() { PropertyName = nameof(RoomAreaRatio), Name = "ФОП_Коэффициент площади" };
 
         /// <summary>
         /// ФОП_Доп. сортировка групп
