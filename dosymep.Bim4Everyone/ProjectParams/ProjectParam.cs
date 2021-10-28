@@ -28,7 +28,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             { nameof(ProjectParamsConfig.CheckCorrectDistanceGrid ), "Описание CheckCorrectDistanceGrid" },
 
 
-            { nameof(ProjectParamsConfig.RoomAreaRatio ), "Описание RoomAreaRatio" },
+            
             { nameof(ProjectParamsConfig.RoomGroupName ), "Описание RoomGroupName" },
             { nameof(ProjectParamsConfig.FireCompartmentName ), "Описание FireCompartmentName" },
             { nameof(ProjectParamsConfig.RoomSectionName ), "Описание RoomSectionName" },
@@ -41,6 +41,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             { nameof(ProjectParamsConfig.IsRoomNumberFix ), "Описание IsRoomNumberFix" },
 
 #if D2020 || R2020 || D2021 || R2021
+            { nameof(ProjectParamsConfig.RoomAreaRatio ), "Описание RoomAreaRatio" },
             { nameof(ProjectParamsConfig.ApartmentGroupName ), "Описание ApartmentGroupName" },
             { nameof(ProjectParamsConfig.RoomGroupShortName ), "Описание RoomGroupShortName" },
             { nameof(ProjectParamsConfig.FireCompartmentShortName ), "Описание FireCompartmentShortName" },
@@ -64,7 +65,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             { nameof(ProjectParamsConfig.CheckIsNormalGrid), StorageType.Integer },
             { nameof(ProjectParamsConfig.CheckCorrectDistanceGrid), StorageType.Integer },
 
-            { nameof(ProjectParamsConfig.RoomAreaRatio ), StorageType.Double },
+            
             { nameof(ProjectParamsConfig.RoomGroupName ), StorageType.String },
             { nameof(ProjectParamsConfig.FireCompartmentName ), StorageType.String },
             { nameof(ProjectParamsConfig.RoomSectionName ), StorageType.String },
@@ -77,6 +78,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             { nameof(ProjectParamsConfig.IsRoomNumberFix ), StorageType.Integer },
 
 #if D2020 || R2020 || D2021 || R2021
+            { nameof(ProjectParamsConfig.RoomAreaRatio ), StorageType.Double },
             { nameof(ProjectParamsConfig.ApartmentGroupName ), StorageType.String },
             { nameof(ProjectParamsConfig.RoomGroupShortName ), StorageType.String },
             { nameof(ProjectParamsConfig.FireCompartmentShortName ), StorageType.String },
