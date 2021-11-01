@@ -45,33 +45,33 @@ namespace dosymep.Revit {
         /// Присваивает значение параметра по значению другого параметра.
         /// </summary>
         /// <param name="leftParameter">Параметр в который присваивается значение.</param>
-        /// <param name="rightarameter">Параметр значение которого присваивается.</param>
-        public static void Set(this Parameter leftParameter, Parameter rightarameter) {
+        /// <param name="rightParameter">Параметр значение которого присваивается.</param>
+        public static void Set(this Parameter leftParameter, Parameter rightParameter) {
             if(leftParameter is null) {
                 throw new ArgumentNullException(nameof(leftParameter));
             }
 
-            if(rightarameter is null) {
-                throw new ArgumentNullException(nameof(rightarameter));
+            if(rightParameter is null) {
+                throw new ArgumentNullException(nameof(rightParameter));
             }
 
-            if(leftParameter.StorageType != StorageType.String && leftParameter.StorageType != rightarameter.StorageType) {
-                throw new ArgumentException("У переданного параметра не соответствует тип данных.", nameof(rightarameter));
+            if(leftParameter.StorageType != StorageType.String && leftParameter.StorageType != rightParameter.StorageType) {
+                throw new ArgumentException("У переданного параметра не соответствует тип данных.", nameof(rightParameter));
             }
 
-            var storageType = rightarameter.StorageType;
+            var storageType = rightParameter.StorageType;
             switch(storageType) {
                 case StorageType.Integer:
-                leftParameter.Set(rightarameter.AsInteger());
+                leftParameter.Set(rightParameter.AsInteger());
                 break;
                 case StorageType.Double:
-                leftParameter.Set(rightarameter.AsDouble());
+                leftParameter.Set(rightParameter.AsDouble());
                 break;
                 case StorageType.String:
-                leftParameter.Set(rightarameter.AsObject()?.ToString());
+                leftParameter.Set(rightParameter.AsObject()?.ToString());
                 break;
                 case StorageType.ElementId:
-                leftParameter.Set(rightarameter.AsElementId());
+                leftParameter.Set(rightParameter.AsElementId());
                 break;
                 default:
                 leftParameter.Set((string) null);
