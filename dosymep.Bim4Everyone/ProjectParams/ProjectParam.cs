@@ -66,12 +66,12 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             { nameof(ProjectParamsConfig.CheckCorrectDistanceGrid), StorageType.Integer },
 
             
-            { nameof(ProjectParamsConfig.RoomGroupName ), StorageType.String },
-            { nameof(ProjectParamsConfig.FireCompartmentName ), StorageType.String },
-            { nameof(ProjectParamsConfig.RoomSectionName ), StorageType.String },
-            { nameof(ProjectParamsConfig.RoomTypeGroupName ), StorageType.String },
+            { nameof(ProjectParamsConfig.RoomGroupName ), StorageType.ElementId },
+            { nameof(ProjectParamsConfig.FireCompartmentName ), StorageType.ElementId },
+            { nameof(ProjectParamsConfig.RoomSectionName ), StorageType.ElementId },
+            { nameof(ProjectParamsConfig.RoomTypeGroupName ), StorageType.ElementId },
+            { nameof(ProjectParamsConfig.RoomName ), StorageType.ElementId },
             { nameof(ProjectParamsConfig.RoomTypeCountGroup ), StorageType.Integer },
-            { nameof(ProjectParamsConfig.RoomName ), StorageType.String },
             { nameof(ProjectParamsConfig.ApartmentTypeNumsInSection ), StorageType.Integer },
             { nameof(ProjectParamsConfig.IsRoomBalcony ),StorageType.Integer },
             { nameof(ProjectParamsConfig.IsRoomLiving ),StorageType.Integer },
