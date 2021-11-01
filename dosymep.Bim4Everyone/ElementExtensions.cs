@@ -51,6 +51,29 @@ namespace dosymep.Bim4Everyone {
         }
 
         /// <summary>
+        /// Возвращает значение параметра с единицой измерения либо значение по умолчанию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <param name="default">Значение по умолчанию.</param>
+        /// <returns>Возвращает значение параметра с единицой измерения либо значение по умолчанию.</returns>
+        public static string GetParamValueStringOrDefault(this Element element, RevitParam revitParam, string @default = default) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam is null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
+            try {
+                return element.GetParamValueString(revitParam) ?? @default;
+            } catch(ArgumentException) {
+                return @default;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение параметра элемента.
         /// </summary>
         /// <param name="element">Элемент.</param>
@@ -66,6 +89,24 @@ namespace dosymep.Bim4Everyone {
             }
 
             return element.GetParam(revitParam).AsObject();
+        }
+
+        /// <summary>
+        /// Возвращает значение параметра элемента c единицами измерения.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <returns>Возвращает значение параметра элемента c единицами измерения.</returns>
+        public static string GetParamValueString(this Element element, RevitParam revitParam) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam is null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
+            return element.GetParam(revitParam).AsValueString();
         }
 
         /// <summary>
