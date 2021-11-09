@@ -29,6 +29,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
 
 
             { nameof(SharedParamsConfig.RoomArea), "Описание RoomArea" },
+            { nameof(SharedParamsConfig.RoomsCount), "Описание RoomsCount" },
             { nameof(SharedParamsConfig.RoomAreaWithRatio), "Описание RoomAreaWithRatio" },
             { nameof(SharedParamsConfig.ApartmentAreaRatio), "Описание ApartmentAreaRatio" },
             { nameof(SharedParamsConfig.ApartmentAreaNoBalcony), "Описание ApartmentAreaNoBalcony" },
@@ -72,6 +73,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.MechanicalSystemName), StorageType.String },
 
             { nameof(SharedParamsConfig.RoomArea), StorageType.Double },
+            { nameof(SharedParamsConfig.RoomsCount), StorageType.Integer },
             { nameof(SharedParamsConfig.RoomAreaWithRatio), StorageType.Double },
             { nameof(SharedParamsConfig.ApartmentAreaRatio), StorageType.Double },
             { nameof(SharedParamsConfig.ApartmentAreaNoBalcony), StorageType.Double },
