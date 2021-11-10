@@ -243,9 +243,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 FilledSharedParamNames = new List<string>() {
                     nameof(SharedParamsConfig.RoomTypeGroupShortName)
                 },
-                FilledProjectParamNames = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomTypeGroupName),
-                }
+                FilledProjectParamNames = new List<string>() { }
             };
 #endif
 
