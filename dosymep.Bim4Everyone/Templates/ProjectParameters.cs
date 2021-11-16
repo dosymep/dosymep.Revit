@@ -65,7 +65,7 @@ namespace dosymep.Bim4Everyone.Templates {
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
                 using(var transaction = new Transaction(target)) {
-                    transaction.Start("Настройка параметра");
+                    transaction.BIMStart("Настройка параметра");
 
                     ViewSchedule viewSchedule = GetViewSchedule(source, revitParam);
                     CopyViewSchedule(source, target, true, viewSchedule);
@@ -118,7 +118,7 @@ namespace dosymep.Bim4Everyone.Templates {
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
                 using(var transaction = new Transaction(target)) {
-                    transaction.Start("Настройка параметров");
+                    transaction.BIMStart("Настройка параметров");
 
                     IEnumerable<ViewSchedule> viewSchedules = GetViewSchedules(source, revitParams);
                     CopyViewSchedules(source, target, true, viewSchedules);
@@ -220,7 +220,7 @@ namespace dosymep.Bim4Everyone.Templates {
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
                 using(var transaction = new Transaction(target)) {
-                    transaction.Start("Настройка ключевой спецификации");
+                    transaction.BIMStart("Настройка ключевой спецификации");
 
                     if(replaceSchedule) {
                         ViewSchedule removedViewSchedule = GetViewSchedule(target, keyScheduleRule);
@@ -274,7 +274,7 @@ namespace dosymep.Bim4Everyone.Templates {
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
                 using(var transaction = new Transaction(target)) {
-                    transaction.Start("Настройка ключевых спецификаций");
+                    transaction.BIMStart("Настройка ключевых спецификаций");
                     
                     if(replaceSchedule) {
                         IEnumerable<ViewSchedule> removedViewSchedules = GetViewSchedules(target, keyScheduleRules);
@@ -333,7 +333,7 @@ namespace dosymep.Bim4Everyone.Templates {
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
                 using(var transaction = new Transaction(target)) {
-                    transaction.Start($"Настройка диспетчера видов");
+                    transaction.BIMStart($"Настройка диспетчера видов");
 
                     CopyBrowserOrganization(target, source);
 
