@@ -88,19 +88,9 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         public ProjectParam RoomTypeGroupName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomTypeGroupName), Name = "КВГ_Тип группы помещений" };
 
         /// <summary>
-        /// КВГ_Тип нумерации групп
-        /// </summary>
-        public ProjectParam RoomTypeCountGroup { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomTypeCountGroup), Name = "КВГ_Тип нумерации групп" };
-
-        /// <summary>
         /// КВГ_Наименование
         /// </summary>
         public ProjectParam RoomName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomName), Name = "КВГ_Наименование" };
-
-        /// <summary>
-        /// КВГ_Тип нумерации квартир в секции
-        /// </summary>
-        public ProjectParam ApartmentTypeNumsInSection { get; internal set; } = new ProjectParam() { PropertyName = nameof(ApartmentTypeNumsInSection), Name = "КВГ_Тип нумерации квартир в секции" };
 
         /// <summary>
         /// КВГ_Летнее
@@ -116,6 +106,11 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// КВГ_ПМЩ_Фиксация номера
         /// </summary>
         public ProjectParam IsRoomNumberFix { get; internal set; } = new ProjectParam() { PropertyName = nameof(IsRoomNumberFix), Name = "КВГ_ПМЩ_Фиксация номера" };
+
+        /// <summary>
+        /// КВГ_Приоритет нумерации
+        /// </summary>
+        public ProjectParam NumberingOrder { get; internal set; } = new ProjectParam() { PropertyName = nameof(NumberingOrder), Name = "КВГ_Приоритет нумерации" };
 
 #if D2020 || R2020 || D2021 || R2021
 

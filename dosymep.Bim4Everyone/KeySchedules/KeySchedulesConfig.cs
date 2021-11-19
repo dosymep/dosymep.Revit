@@ -38,8 +38,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 RequiredSharedParams = new List<string>(),
                 RequiredProjectParams = new List<string>() {
                     nameof(ProjectParamsConfig.ApartmentGroupName),
-                    nameof(ProjectParamsConfig.RoomGroupShortName),
-                    nameof(ProjectParamsConfig.RoomTypeCountGroup)
+                    nameof(ProjectParamsConfig.RoomGroupShortName)
                 },
 
                 FilledSharedParamNames = new List<string>() { },
@@ -103,8 +102,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
                 RequiredSharedParams = new List<string>(),
                 RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomSectionShortName),
-                    nameof(ProjectParamsConfig.ApartmentTypeNumsInSection)
+                    nameof(ProjectParamsConfig.RoomSectionShortName)
                 },
 
                 FilledSharedParamNames = new List<string>() { },

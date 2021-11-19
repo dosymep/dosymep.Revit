@@ -33,12 +33,11 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             { nameof(ProjectParamsConfig.FireCompartmentName ), "Описание FireCompartmentName" },
             { nameof(ProjectParamsConfig.RoomSectionName ), "Описание RoomSectionName" },
             { nameof(ProjectParamsConfig.RoomTypeGroupName ), "Описание RoomTypeGroupName" },
-            { nameof(ProjectParamsConfig.RoomTypeCountGroup ), "Описание RoomTypeCountGroup" },
             { nameof(ProjectParamsConfig.RoomName ), "Описание RoomName" },
             { nameof(ProjectParamsConfig.IsRoomBalcony ), "Описание IsRoomBalcony" },
             { nameof(ProjectParamsConfig.IsRoomLiving ), "Описание IsRoomLiving" },
-            { nameof(ProjectParamsConfig.ApartmentTypeNumsInSection ), "Описание ApartmentTypeNumsInSection" },
             { nameof(ProjectParamsConfig.IsRoomNumberFix ), "Описание IsRoomNumberFix" },
+            { nameof(ProjectParamsConfig.NumberingOrder ), "Описание NumberingOrder" },
 
 #if D2020 || R2020 || D2021 || R2021
             { nameof(ProjectParamsConfig.RoomAreaRatio ), "Описание RoomAreaRatio" },
@@ -71,11 +70,10 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             { nameof(ProjectParamsConfig.RoomSectionName ), StorageType.ElementId },
             { nameof(ProjectParamsConfig.RoomTypeGroupName ), StorageType.ElementId },
             { nameof(ProjectParamsConfig.RoomName ), StorageType.ElementId },
-            { nameof(ProjectParamsConfig.RoomTypeCountGroup ), StorageType.Integer },
-            { nameof(ProjectParamsConfig.ApartmentTypeNumsInSection ), StorageType.Integer },
             { nameof(ProjectParamsConfig.IsRoomBalcony ),StorageType.Integer },
             { nameof(ProjectParamsConfig.IsRoomLiving ),StorageType.Integer },
             { nameof(ProjectParamsConfig.IsRoomNumberFix ), StorageType.Integer },
+            { nameof(ProjectParamsConfig.NumberingOrder ), StorageType.Integer },
 
 #if D2020 || R2020 || D2021 || R2021
             { nameof(ProjectParamsConfig.RoomAreaRatio ), StorageType.Double },
