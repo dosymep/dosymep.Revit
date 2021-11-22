@@ -204,6 +204,21 @@ namespace dosymep.Bim4Everyone {
         }
 
         /// <summary>
+        /// Удаляет параметр.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <returns>Возвращает признак удаления параметра true - если был удален, иначе false.</returns>
+        public static bool RemoveParamValue(this Element element, RevitParam revitParam) {
+            try {
+                element.GetParam(revitParam).RemoveValue();
+                return true;
+            } catch {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Возвращает параметр.
         /// </summary>
         /// <param name="element">Элемент.</param>
