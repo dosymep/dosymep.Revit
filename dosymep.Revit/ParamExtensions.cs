@@ -42,6 +42,34 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
+        /// Удаляет значение параметра (устанавливает значение по умолчанию)
+        /// </summary>
+        /// <param name="parameter">Параметр.</param>
+        public static void RemoveValue(this Parameter parameter) {
+            if(parameter is null) {
+                throw new ArgumentNullException(nameof(parameter));
+            }
+
+            if(parameter.HasValue) {
+                var storageType = parameter.StorageType;
+                switch(storageType) {
+                    case StorageType.Integer:
+                    parameter.Set((int) default);
+                    break;
+                    case StorageType.Double:
+                    parameter.Set((double) default);
+                    break;
+                    case StorageType.String:
+                    parameter.Set((string) default);
+                    break;
+                    case StorageType.ElementId:
+                    parameter.Set((ElementId) default);
+                    break;
+                }
+            }
+        }
+
+        /// <summary>
         /// Присваивает значение параметра по значению другого параметра.
         /// </summary>
         /// <param name="leftParameter">Параметр в который присваивается значение.</param>
