@@ -274,7 +274,7 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Удаляет параметр по его имени.
+        /// Удаляет параметр по его встроенному типу.
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="builtInParameter">Встроенный тип параметра.</param>
@@ -432,7 +432,7 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Удаляет параметр по его имени.
+        /// Удаляет параметр по его встроенному типу.
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="forgeTypeId">Встроенный тип параметра.</param>
