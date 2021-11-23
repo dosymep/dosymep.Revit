@@ -200,34 +200,34 @@ namespace dosymep.Bim4Everyone.Templates {
 
         #endregion
 
-        #region KeySchedules
+        #region Schedules
 
         /// <summary>
-        /// Настройка ключевой спецификации.
+        /// Настройка спецификации.
         /// </summary>
-        /// <param name="target">Документ, в котором требуется настроить ключевую спецификацию.</param>
+        /// <param name="target">Документ, в котором требуется настроить спецификацию.</param>
         /// <param name="replaceSchedule">true - если требуется заменить спецификацию, иначе false.</param>
-        /// <param name="keyScheduleRule">Правила ключевой спецификации.</param>
-        public void SetupKeySchedule(Document target, bool replaceSchedule, KeyScheduleRule keyScheduleRule) {
+        /// <param name="revitScheduleRule">Правило спецификации.</param>
+        public void SetupSchedule(Document target, bool replaceSchedule, RevitScheduleRule revitScheduleRule) {
             if(target is null) {
                 throw new ArgumentNullException(nameof(target));
             }
 
-            if(keyScheduleRule is null) {
-                throw new ArgumentNullException(nameof(keyScheduleRule));
+            if(revitScheduleRule == null) {
+                throw new ArgumentNullException(nameof(revitScheduleRule));
             }
 
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
                 using(var transaction = new Transaction(target)) {
-                    transaction.BIMStart("Настройка ключевой спецификации");
+                    transaction.BIMStart("Настройка спецификации");
 
                     if(replaceSchedule) {
-                        ViewSchedule removedViewSchedule = GetViewSchedule(target, keyScheduleRule);
+                        ViewSchedule removedViewSchedule = GetViewSchedule(target, revitScheduleRule.ScheduleName);
                         RemoveViewSchedule(target, removedViewSchedule);
                     }
-                    
-                    ViewSchedule viewSchedule = GetViewSchedule(source, keyScheduleRule);
+
+                    ViewSchedule viewSchedule = GetViewSchedule(source, revitScheduleRule.ScheduleName);
                     CopyViewSchedule(source, target, false, viewSchedule);
 
                     transaction.Commit();
@@ -238,50 +238,50 @@ namespace dosymep.Bim4Everyone.Templates {
         }
 
         /// <summary>
-        /// Настройка ключевой спецификации.
+        /// Настройка спецификации.
         /// </summary>
-        /// <param name="target">Документ, в котором требуется настроить ключевую спецификацию.</param>
+        /// <param name="target">Документ, в котором требуется настроить спецификацию.</param>
         /// <param name="replaceSchedule">true - если требуется заменить спецификацию, иначе false.</param>
-        /// <param name="keyScheduleRules">Правила ключевой спецификации.</param>
-        public void SetupKeySchedules(Document target, bool replaceSchedule, params KeyScheduleRule[] keyScheduleRules) {
+        /// <param name="revitScheduleRule">Правила спецификации.</param>
+        public void SetupSchedules(Document target, bool replaceSchedule, params RevitScheduleRule[] revitScheduleRule) {
             if(target is null) {
                 throw new ArgumentNullException(nameof(target));
             }
 
-            if(keyScheduleRules is null) {
-                throw new ArgumentNullException(nameof(keyScheduleRules));
+            if(revitScheduleRule is null) {
+                throw new ArgumentNullException(nameof(revitScheduleRule));
             }
 
-            SetupKeySchedules(target, replaceSchedule, keyScheduleRules.AsEnumerable());
+            SetupSchedules(target, replaceSchedule, revitScheduleRule.AsEnumerable());
         }
 
         /// <summary>
-        /// Настройка ключевых спецификаций.
+        /// Настройка спецификаций.
         /// </summary>
-        /// <param name="target">Документ, в котором требуется настроить ключевую спецификацию.</param>
+        /// <param name="target">Документ, в котором требуется настроить спецификацию.</param>
         /// <param name="replaceSchedule">true - если требуется заменить спецификацию, иначе false.</param>
-        /// <param name="keyScheduleRules">Правила ключевой спецификации.</param>
-        public void SetupKeySchedules(Document target, bool replaceSchedule, IEnumerable<KeyScheduleRule> keyScheduleRules) {
+        /// <param name="revitScheduleRule">Правила спецификации.</param>
+        public void SetupSchedules(Document target, bool replaceSchedule, IEnumerable<RevitScheduleRule> revitScheduleRule) {
             if(target is null) {
                 throw new ArgumentNullException(nameof(target));
             }
 
-            if(keyScheduleRules is null) {
-                throw new ArgumentNullException(nameof(keyScheduleRules));
+            if(revitScheduleRule is null) {
+                throw new ArgumentNullException(nameof(revitScheduleRule));
             }
 
-            
+
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
                 using(var transaction = new Transaction(target)) {
-                    transaction.BIMStart("Настройка ключевых спецификаций");
-                    
+                    transaction.BIMStart("Настройка спецификаций");
+
                     if(replaceSchedule) {
-                        IEnumerable<ViewSchedule> removedViewSchedules = GetViewSchedules(target, keyScheduleRules);
+                        IEnumerable<ViewSchedule> removedViewSchedules = GetViewSchedules(target, revitScheduleRule.Select(item => item.ScheduleName));
                         RemoveViewSchedules(target, removedViewSchedules);
                     }
-                    
-                    IEnumerable<ViewSchedule> viewSchedules = GetViewSchedules(source, keyScheduleRules);
+
+                    IEnumerable<ViewSchedule> viewSchedules = GetViewSchedules(source, revitScheduleRule.Select(item => item.ScheduleName));
                     CopyViewSchedules(source, target, false, viewSchedules);
 
                     transaction.Commit();
