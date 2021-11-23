@@ -16,16 +16,11 @@ namespace dosymep.Bim4Everyone.KeySchedules {
     /// <summary>
     /// Настройки проверки ключевых спецификаций.
     /// </summary>
-    public class KeyScheduleRule {
+    public class KeyScheduleRule : RevitScheduleRule {
         /// <summary>
         /// Создает экземпляр настроек проверки ключевых спецификаций.
         /// </summary>
         internal KeyScheduleRule() { }
-
-        /// <summary>
-        /// Наименование спецификации.
-        /// </summary>
-        public string ScheduleName { get; set; }
 
         /// <summary>
         /// Ключевой параметр спецификации.
