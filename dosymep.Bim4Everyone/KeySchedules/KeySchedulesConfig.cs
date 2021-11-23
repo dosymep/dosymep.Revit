@@ -59,7 +59,8 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 RequiredProjectParams = new List<string>() {
                     nameof(ProjectParamsConfig.RoomAreaRatio), 
                     nameof(ProjectParamsConfig.IsRoomBalcony), 
-                    nameof(ProjectParamsConfig.IsRoomLiving)
+                    nameof(ProjectParamsConfig.IsRoomLiving),
+                    nameof(ProjectParamsConfig.NumberingOrder),
                 },
                 RequiredSystemParams = new List<BuiltInParameter>() {
                     BuiltInParameter.ROOM_NAME,
