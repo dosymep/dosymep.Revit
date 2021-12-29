@@ -218,7 +218,7 @@ namespace dosymep.Revit {
         #endregion
 
         #region ParamDefinition
-        
+
         /// <summary>
         /// Проверяет является ли определение параметра внутренним.
         /// </summary>
@@ -283,5 +283,18 @@ namespace dosymep.Revit {
         }
 
         #endregion
+
+        /// <summary>
+        /// Запускает транзакцию на изменение документа.
+        /// </summary>
+        /// <param name="document">Документ Revit.</param>
+        /// <param name="transactionName">Название транзакции.</param>
+        /// <returns>Возвращает запущенную транзакцию на изменение документа.</returns>
+        public static Autodesk.Revit.DB.Transaction StartTransaction(this Autodesk.Revit.DB.Document document, string transactionName) {
+            var transaction = new Autodesk.Revit.DB.Transaction(document);
+            transaction.BIMStart(transactionName);
+
+            return transaction;
+        }
     }
 }
