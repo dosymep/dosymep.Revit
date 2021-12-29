@@ -128,6 +128,20 @@ namespace dosymep.Bim4Everyone.SharedParams {
             return document.IsExistsSharedParam(Name);
         }
 
+        /// <summary>
+        /// Проверяет является ли определение параметра общим параметром.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="definition">Определение параметра.</param>
+        /// <returns>Возвращает true - если определение параметра является общим параметром, иначе false.</returns>
+        public override bool IsRevitParam(Document document, Definition definition) {
+            if(document is null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            return base.IsRevitParam(document, definition) && document.IsSystemParamDefinition(definition);
+        }
+
         /// <inheritdoc/>
         public override Parameter GetParam(Element element) {
             if(element is null) {
