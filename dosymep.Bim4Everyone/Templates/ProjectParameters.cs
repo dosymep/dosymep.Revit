@@ -208,7 +208,7 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="target">Документ, в котором требуется настроить спецификацию.</param>
         /// <param name="replaceSchedule">true - если требуется заменить спецификацию, иначе false.</param>
         /// <param name="revitScheduleRule">Правило спецификации.</param>
-        public void SetupSchedule(Document target, bool replaceSchedule, RevitScheduleRule revitScheduleRule) {
+        public bool SetupSchedule(Document target, bool replaceSchedule, RevitScheduleRule revitScheduleRule) {
             if(target is null) {
                 throw new ArgumentNullException(nameof(target));
             }
@@ -228,9 +228,11 @@ namespace dosymep.Bim4Everyone.Templates {
                     }
 
                     ViewSchedule viewSchedule = GetViewSchedule(source, revitScheduleRule.ScheduleName);
-                    CopyViewSchedule(source, target, false, viewSchedule);
+                    bool result = CopyViewSchedule(source, target, false, viewSchedule);
 
                     transaction.Commit();
+
+                    return result;
                 }
             } finally {
                 source.Close(false);
@@ -243,7 +245,7 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="target">Документ, в котором требуется настроить спецификацию.</param>
         /// <param name="replaceSchedule">true - если требуется заменить спецификацию, иначе false.</param>
         /// <param name="revitScheduleRule">Правила спецификации.</param>
-        public void SetupSchedules(Document target, bool replaceSchedule, params RevitScheduleRule[] revitScheduleRule) {
+        public bool SetupSchedules(Document target, bool replaceSchedule, params RevitScheduleRule[] revitScheduleRule) {
             if(target is null) {
                 throw new ArgumentNullException(nameof(target));
             }
@@ -252,7 +254,7 @@ namespace dosymep.Bim4Everyone.Templates {
                 throw new ArgumentNullException(nameof(revitScheduleRule));
             }
 
-            SetupSchedules(target, replaceSchedule, revitScheduleRule.AsEnumerable());
+            return SetupSchedules(target, replaceSchedule, revitScheduleRule.AsEnumerable());
         }
 
         /// <summary>
@@ -261,7 +263,7 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="target">Документ, в котором требуется настроить спецификацию.</param>
         /// <param name="replaceSchedule">true - если требуется заменить спецификацию, иначе false.</param>
         /// <param name="revitScheduleRule">Правила спецификации.</param>
-        public void SetupSchedules(Document target, bool replaceSchedule, IEnumerable<RevitScheduleRule> revitScheduleRule) {
+        public bool SetupSchedules(Document target, bool replaceSchedule, IEnumerable<RevitScheduleRule> revitScheduleRule) {
             if(target is null) {
                 throw new ArgumentNullException(nameof(target));
             }
@@ -282,9 +284,11 @@ namespace dosymep.Bim4Everyone.Templates {
                     }
 
                     IEnumerable<ViewSchedule> viewSchedules = GetViewSchedules(source, revitScheduleRule.Select(item => item.ScheduleName));
-                    CopyViewSchedules(source, target, false, viewSchedules);
+                    bool result = CopyViewSchedules(source, target, false, viewSchedules);
 
                     transaction.Commit();
+
+                    return result;
                 }
             } finally {
                 source.Close(false);
@@ -382,9 +386,9 @@ namespace dosymep.Bim4Everyone.Templates {
             return viewSchedule.Name.Equals(viewScheduleName);
         }
 
-        private static void CopyViewSchedule(Document source, Document target, bool removeSchedule, ViewSchedule viewSchedule) {
+        private static bool CopyViewSchedule(Document source, Document target, bool removeSchedule, ViewSchedule viewSchedule) {
             if(viewSchedule == null) {
-                return;
+                return false;
             }
 
             var targetViewSchedules = new FilteredElementCollector(target)
@@ -396,7 +400,7 @@ namespace dosymep.Bim4Everyone.Templates {
 
             // Пропускаем спецификацию, если она есть
             if(targetViewSchedules.Any(item => viewSchedule.Name.Equals(item))) {
-                return;
+                return false;
             }
 
             ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(source, new[] { viewSchedule.Id }, target, Transform.Identity, new CopyPasteOptions());
@@ -405,11 +409,13 @@ namespace dosymep.Bim4Everyone.Templates {
                 // так как он нужен был для переноса параметра
                 target.Delete(copiedElements);
             }
+
+            return true;
         }
 
-        private static void CopyViewSchedules(Document source, Document target, bool removeSchedule, IEnumerable<ViewSchedule> viewSchedules) {
+        private static bool CopyViewSchedules(Document source, Document target, bool removeSchedule, IEnumerable<ViewSchedule> viewSchedules) {
             if(!viewSchedules.Any()) {
-                return;
+                return false;
             }
 
             // Пропускаем спецификации, если они есть
@@ -422,7 +428,7 @@ namespace dosymep.Bim4Everyone.Templates {
 
             viewSchedules = viewSchedules.Where(item => !targetViewSchedules.Contains(item.Name));
             if(!viewSchedules.Any()) {
-                return;
+                return false;
             }
 
             ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(source, viewSchedules.Select(item => item.Id).ToArray(), target, Transform.Identity, new CopyPasteOptions());
@@ -431,6 +437,8 @@ namespace dosymep.Bim4Everyone.Templates {
                 // так как они нужны были для переноса параметра
                 target.Delete(copiedElements);
             }
+
+            return true;
         }
 
         private static void RemoveViewSchedule(Document target, ViewSchedule viewSchedule) {

@@ -106,5 +106,32 @@ namespace dosymep.Revit {
                 break;
             }
         }
+
+        /// <summary>
+        /// Проверяет является ли привязка параметра для типа элемента.
+        /// </summary>
+        /// <param name="binding">Привязка параметра.</param>
+        /// <returns>Возвращает true - если привязка параметра является типом элемента.</returns>
+        public static bool IsTypeBinding(this Binding binding) {
+            return binding is TypeBinding;
+        }
+
+        /// <summary>
+        /// Проверяет является ли привязка параметра для экземпляром элемента.
+        /// </summary>
+        /// <param name="binding">Привязка параметра.</param>
+        /// <returns>Возвращает true - если привязка параметра является экземпляром элемента.</returns>
+        public static bool IsInstanceBinding(this Binding binding) {
+            return binding is InstanceBinding;
+        }
+
+        /// <summary>
+        /// Возвращает нумератор категорий.
+        /// </summary>
+        /// <param name="binding">Привязка параметра.</param>
+        /// <returns>Возвращает нумератор категорий.</returns>
+        public static IEnumerable<Category> GetCategories(this Binding binding) {
+            return ((ElementBinding) binding).Categories.OfType<Category>();
+        }
     }
 }
