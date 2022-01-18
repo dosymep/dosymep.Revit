@@ -21,6 +21,14 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
         /// Сериализатор.
         /// </summary>
         public abstract IConfigSerializer Serializer { get; set; }
+
+        /// <summary>
+        /// Сохраняет текущую конфигурацию проекта.
+        /// </summary>
+        public void SaveProjectConfig() {
+            Directory.CreateDirectory(Path.GetDirectoryName(ProjectConfigPath));
+            File.WriteAllText(ProjectConfigPath, Serializer.Serialize(this));
+        }
     }
 
     /// <summary>
@@ -84,14 +92,6 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
         public TProjectSettings GetSettings(string documentName) {
             documentName = GetProjectName(documentName);
             return Settings.FirstOrDefault(item => documentName.Equals(item.ProjectName));
-        }
-
-        /// <summary>
-        /// Сохраняет текущую конфигурацию проекта.
-        /// </summary>
-        public void SaveProjectConfig() {
-            Directory.CreateDirectory(Path.GetDirectoryName(ProjectConfigPath));
-            File.WriteAllText(ProjectConfigPath, Serializer.Serialize(this));
         }
 
         /// <summary>
