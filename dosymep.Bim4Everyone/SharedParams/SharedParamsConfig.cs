@@ -216,12 +216,29 @@ namespace dosymep.Bim4Everyone.SharedParams {
 
         #endregion
 
+        #region Секции
+
         /// <summary>
         /// ФОП_Этаж
         /// </summary>
         public SharedParam Level { get; internal set; } = new SharedParam() { PropertyName = nameof(Level), Name = "ФОП_Этаж" };
 
+        /// <summary>
+        /// ФОП_Номер секции
+        /// </summary>
+        public SharedParam SectionNumber { get; internal set; } = new SharedParam() { PropertyName = nameof(SectionNumber), Name = "ФОП_Номер секции" };
 
+        /// <summary>
+        /// ФОП_Блок СМР
+        /// </summary>
+        public SharedParam BuildingWorksBlock { get; internal set; } = new SharedParam() { PropertyName = nameof(BuildingWorksBlock), Name = "ФОП_Блок СМР" };
+
+        /// <summary>
+        /// ФОП_Экономическая функция
+        /// </summary>
+        public SharedParam EconomicFunction { get; internal set; } = new SharedParam() { PropertyName = nameof(EconomicFunction), Name = "ФОП_Экономическая функция" };
+
+        #endregion
 
         /// <summary>
         /// Загрузка текущей конфигурации.
