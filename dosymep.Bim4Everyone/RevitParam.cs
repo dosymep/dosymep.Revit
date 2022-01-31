@@ -62,6 +62,16 @@ namespace dosymep.Bim4Everyone {
         }
 
         /// <summary>
+        /// Проверяет является ли определение параметра параметром Revit.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="definition">Определение параметра.</param>
+        /// <returns>Возвращает true - если определение параметра является параметром Revit, иначе false.</returns>
+        public virtual bool IsRevitParam(Document document, Definition definition) {
+            return Name.Equals(definition?.Name);
+        }
+
+        /// <summary>
         /// Возвращает параметр Revit.
         /// </summary>
         /// <returns>Возвращает параметр Revit.</returns>

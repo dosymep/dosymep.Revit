@@ -216,5 +216,85 @@ namespace dosymep.Revit {
         }
 
         #endregion
+
+        #region ParamDefinition
+
+        /// <summary>
+        /// Проверяет является ли определение параметра внутренним.
+        /// </summary>
+        /// <param name="document">Документ Revit.</param>
+        /// <param name="definition">Определение параметра.</param>
+        /// <returns>Возвращает true - если определение параметра является внутренним, иначе false.</returns>
+        public static bool IsSystemParamDefinition(this Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.Definition definition) {
+            if(document is null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(definition is null) {
+                throw new ArgumentNullException(nameof(definition));
+            }
+
+            var builtinParam = GetInternalDefinition(definition)?.BuiltInParameter;
+            return builtinParam != null && builtinParam != Autodesk.Revit.DB.BuiltInParameter.INVALID;
+        }
+
+        /// <summary>
+        /// Проверяет является ли определение параметра общим.
+        /// </summary>
+        /// <param name="document">Документ Revit.</param>
+        /// <param name="definition">Определение параметра.</param>
+        /// <returns>Возвращает true - если определение параметра является общим, иначе false.</returns>
+        public static bool IsSharedParamDefinition(this Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.Definition definition) {
+            if(document is null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(definition is null) {
+                throw new ArgumentNullException(nameof(definition));
+            }
+
+            var elementId = GetInternalDefinition(definition)?.Id ?? Autodesk.Revit.DB.ElementId.InvalidElementId;
+            return document.GetElement(elementId) is Autodesk.Revit.DB.SharedParameterElement;
+        }
+
+        /// <summary>
+        /// Проверяет является ли определение параметра проекта.
+        /// </summary>
+        /// <param name="document">Документ Revit.</param>
+        /// <param name="definition">Определение параметра.</param>
+        /// <returns>Возвращает true - если определение параметра является проекта, иначе false.</returns>
+        public static bool IsProjectParamDefinition(this Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.Definition definition) {
+            if(document is null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(definition is null) {
+                throw new ArgumentNullException(nameof(definition));
+            }
+
+            var elementId = GetInternalDefinition(definition)?.Id ?? Autodesk.Revit.DB.ElementId.InvalidElementId;
+            return document.GetElement(elementId) is Autodesk.Revit.DB.ParameterElement
+                && !document.IsSystemParamDefinition(definition)
+                && !document.IsSharedParamDefinition(definition);
+        }
+
+        private static Autodesk.Revit.DB.InternalDefinition GetInternalDefinition(Autodesk.Revit.DB.Definition definition) {
+            return definition as Autodesk.Revit.DB.InternalDefinition;
+        }
+
+        #endregion
+
+        /// <summary>
+        /// Запускает транзакцию на изменение документа.
+        /// </summary>
+        /// <param name="document">Документ Revit.</param>
+        /// <param name="transactionName">Название транзакции.</param>
+        /// <returns>Возвращает запущенную транзакцию на изменение документа.</returns>
+        public static Autodesk.Revit.DB.Transaction StartTransaction(this Autodesk.Revit.DB.Document document, string transactionName) {
+            var transaction = new Autodesk.Revit.DB.Transaction(document);
+            transaction.BIMStart(transactionName);
+
+            return transaction;
+        }
     }
 }

@@ -45,7 +45,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.RoomAreaFix), "Описание RoomAreaFix" },
             { nameof(SharedParamsConfig.RoomAreaWithRatioFix), "Описание RoomAreaWithRatioFix" },
             { nameof(SharedParamsConfig.ApartmentFullAreaFix), "Описание ApartmentFullAreaFix" },
-            { nameof(SharedParamsConfig.Level), "Описание Level" },
 
             { nameof(SharedParamsConfig.RoomAreaRatio), "Описание RoomAreaRatio" },
             { nameof(SharedParamsConfig.RoomGroupShortName), "Описание RoomGroupName" },
@@ -55,7 +54,11 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.RoomTypeGroupShortName), "Описание RoomTypeGroupName" },
             { nameof(SharedParamsConfig.ApartmentAreaSpec), "Описание ApartmentAreaSpec" },
             { nameof(SharedParamsConfig.ApartmentAreaMinSpec), "Описание ApartmentAreaMinSpec" },
-            { nameof(SharedParamsConfig.ApartmentAreaMaxSpec), "Описание ApartmentAreaMaxSpec" },
+
+            { nameof(SharedParamsConfig.Level), "Описание Level" },
+            { nameof(SharedParamsConfig.SectionNumber), "Описание SectionNumber" },
+            { nameof(SharedParamsConfig.BuildingWorksBlock), "Описание BuildingWorksBlock" },
+            { nameof(SharedParamsConfig.EconomicFunction), "Описание EconomicFunction" },
         };
 
         /// <summary>
@@ -89,7 +92,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.RoomAreaFix), StorageType.Double },
             { nameof(SharedParamsConfig.RoomAreaWithRatioFix), StorageType.Double },
             { nameof(SharedParamsConfig.ApartmentFullAreaFix), StorageType.Double },
-            { nameof(SharedParamsConfig.Level), StorageType.String },
 
             { nameof(SharedParamsConfig.RoomAreaRatio), StorageType.Double },
             { nameof(SharedParamsConfig.RoomGroupShortName), StorageType.String },
@@ -100,6 +102,11 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.ApartmentAreaSpec), StorageType.String },
             { nameof(SharedParamsConfig.ApartmentAreaMinSpec), StorageType.Double },
             { nameof(SharedParamsConfig.ApartmentAreaMaxSpec), StorageType.Double },
+
+            { nameof(SharedParamsConfig.Level), StorageType.String },
+            { nameof(SharedParamsConfig.SectionNumber), StorageType.String },
+            { nameof(SharedParamsConfig.BuildingWorksBlock), StorageType.String },
+            { nameof(SharedParamsConfig.EconomicFunction), StorageType.String },
         };
 
         /// <summary>
@@ -126,6 +133,20 @@ namespace dosymep.Bim4Everyone.SharedParams {
             }
 
             return document.IsExistsSharedParam(Name);
+        }
+
+        /// <summary>
+        /// Проверяет является ли определение параметра общим параметром.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="definition">Определение параметра.</param>
+        /// <returns>Возвращает true - если определение параметра является общим параметром, иначе false.</returns>
+        public override bool IsRevitParam(Document document, Definition definition) {
+            if(document is null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            return base.IsRevitParam(document, definition) && document.IsSharedParamDefinition(definition);
         }
 
         /// <inheritdoc/>

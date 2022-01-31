@@ -137,6 +137,21 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
+        /// Удаляет параметр по его имени.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает признак удаления параметра true - если был удален, иначе false.</returns>
+        public static bool RemoveParamValue(this Element element, string paramName) {
+            try {
+                element.GetParam(paramName).RemoveValue();
+                return true;
+            } catch {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Возвращает параметр.
         /// </summary>
         /// <param name="element">Элемент.</param>
@@ -256,6 +271,21 @@ namespace dosymep.Revit {
             }
 
             element.GetParam(builtInParameter).Set(paramValue);
+        }
+
+        /// <summary>
+        /// Удаляет параметр по его встроенному типу.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="builtInParameter">Встроенный тип параметра.</param>
+        /// <returns>Возвращает признак удаления параметра true - если был удален, иначе false.</returns>
+        public static bool RemoveParamValue(this Element element, BuiltInParameter builtInParameter) {
+            try {
+                element.GetParam(builtInParameter).RemoveValue();
+                return true;
+            } catch {
+                return false;
+            }
         }
 
         /// <summary>
@@ -399,6 +429,21 @@ namespace dosymep.Revit {
             }
 
             return param;
+        }
+
+        /// <summary>
+        /// Удаляет параметр по его встроенному типу.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <returns>Возвращает признак удаления параметра true - если был удален, иначе false.</returns>
+        public static bool RemoveParamValue(this Element element, ForgeTypeId forgeTypeId) {
+            try {
+                element.GetParam(forgeTypeId).RemoveValue();
+                return true;
+            } catch {
+                return false;
+            }
         }
 
         #endregion

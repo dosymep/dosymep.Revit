@@ -114,6 +114,20 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             return document.IsExistsProjectParam(Name);
         }
 
+        /// <summary>
+        /// Проверяет является ли определение параметра параметром проекта.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="definition">Определение параметра.</param>
+        /// <returns>Возвращает true - если определение параметра является параметром проекта, иначе false.</returns>
+        public override bool IsRevitParam(Document document, Definition definition) {
+            if(document is null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            return base.IsRevitParam(document, definition) && document.IsProjectParamDefinition(definition);
+        }
+
         /// <inheritdoc/>
         public override Parameter GetParam(Element element) {
             if(element is null) {
@@ -131,5 +145,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
             return param;
         }
+
+
     }
 }

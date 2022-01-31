@@ -16,7 +16,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
     /// <summary>
     /// Класс конфигурации ключевых спецификаций.
     /// </summary>
-    public class KeySchedulesConfig {
+    public class KeySchedulesConfig : RevitSchedulesConfig {
         /// <summary>
         /// Текущее состояние конфигурации.
         /// </summary>
@@ -59,7 +59,8 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 RequiredProjectParams = new List<string>() {
                     nameof(ProjectParamsConfig.RoomAreaRatio), 
                     nameof(ProjectParamsConfig.IsRoomBalcony), 
-                    nameof(ProjectParamsConfig.IsRoomLiving)
+                    nameof(ProjectParamsConfig.IsRoomLiving),
+                    nameof(ProjectParamsConfig.NumberingOrder),
                 },
                 RequiredSystemParams = new List<BuiltInParameter>() {
                     BuiltInParameter.ROOM_NAME,
@@ -145,10 +146,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                     nameof(SharedParamsConfig.ApartmentGroupName),
                     nameof(SharedParamsConfig.RoomGroupShortName)
                 },
-                RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.RoomTypeCountGroup)
-                },
-
+                RequiredProjectParams = new List<string>(),
                 FilledSharedParamNames = new List<string>() {
                     nameof(SharedParamsConfig.RoomGroupShortName)
                 },
@@ -212,10 +210,8 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 RequiredSharedParams = new List<string>() {
                     nameof(SharedParamsConfig.RoomSectionShortName)
                 },
-                RequiredProjectParams = new List<string>() {
-                    nameof(ProjectParamsConfig.ApartmentTypeNumsInSection)
-                },
 
+                RequiredProjectParams = new List<string>(),
                 FilledSharedParamNames = new List<string>() {
                     nameof(SharedParamsConfig.RoomSectionShortName),
                 },
@@ -246,17 +242,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 #endif
 
         #endregion
-
-        /// <summary>
-        /// Возвращает весь список правил ключевых спецификаций.
-        /// </summary>
-        /// <returns>Возвращает список правил ключевых спецификаций.</returns>
-        public IEnumerable<KeyScheduleRule> GetKeyScheduleRules() {
-            return GetType().GetProperties()
-                .Select(item => item.GetValue(this))
-                .OfType<KeyScheduleRule>()
-                .OrderBy(item => item.ScheduleName);
-        }
 
         /// <summary>
         /// Загрузка текущей конфигурации.

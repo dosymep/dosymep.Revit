@@ -42,6 +42,34 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
+        /// Удаляет значение параметра (устанавливает значение по умолчанию)
+        /// </summary>
+        /// <param name="parameter">Параметр.</param>
+        public static void RemoveValue(this Parameter parameter) {
+            if(parameter is null) {
+                throw new ArgumentNullException(nameof(parameter));
+            }
+
+            if(parameter.HasValue) {
+                var storageType = parameter.StorageType;
+                switch(storageType) {
+                    case StorageType.Integer:
+                    parameter.Set((int) default);
+                    break;
+                    case StorageType.Double:
+                    parameter.Set((double) default);
+                    break;
+                    case StorageType.String:
+                    parameter.Set((string) default);
+                    break;
+                    case StorageType.ElementId:
+                    parameter.Set((ElementId) default);
+                    break;
+                }
+            }
+        }
+
+        /// <summary>
         /// Присваивает значение параметра по значению другого параметра.
         /// </summary>
         /// <param name="leftParameter">Параметр в который присваивается значение.</param>
@@ -77,6 +105,33 @@ namespace dosymep.Revit {
                 leftParameter.Set((string) null);
                 break;
             }
+        }
+
+        /// <summary>
+        /// Проверяет является ли привязка параметра для типа элемента.
+        /// </summary>
+        /// <param name="binding">Привязка параметра.</param>
+        /// <returns>Возвращает true - если привязка параметра является типом элемента.</returns>
+        public static bool IsTypeBinding(this Binding binding) {
+            return binding is TypeBinding;
+        }
+
+        /// <summary>
+        /// Проверяет является ли привязка параметра для экземпляром элемента.
+        /// </summary>
+        /// <param name="binding">Привязка параметра.</param>
+        /// <returns>Возвращает true - если привязка параметра является экземпляром элемента.</returns>
+        public static bool IsInstanceBinding(this Binding binding) {
+            return binding is InstanceBinding;
+        }
+
+        /// <summary>
+        /// Возвращает нумератор категорий.
+        /// </summary>
+        /// <param name="binding">Привязка параметра.</param>
+        /// <returns>Возвращает нумератор категорий.</returns>
+        public static IEnumerable<Category> GetCategories(this Binding binding) {
+            return ((ElementBinding) binding).Categories.OfType<Category>();
         }
     }
 }
