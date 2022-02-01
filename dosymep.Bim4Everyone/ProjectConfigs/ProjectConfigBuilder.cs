@@ -26,6 +26,11 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
         /// Интерфейс сериализатора.
         /// </summary>
         private IConfigSerializer _serializer;
+        
+        /// <summary>
+        /// Версия Revit.
+        /// </summary>
+        private string _revitVersion;
 
         /// <summary>
         /// Устанавливает наименование плагина.
@@ -56,6 +61,16 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
             _serializer = serializer;
             return this;
         }
+        
+        /// <summary>
+        /// Устанавливает версию Revit.
+        /// </summary>
+        /// <param name="revitVersion">Версия Revit.</param>
+        /// <returns>Возвращает текущий билдер.</returns>
+        public ProjectConfigBuilder SetRevitVersion(string revitVersion) {
+            _revitVersion = revitVersion;
+            return this;
+        }
 
         /// <summary>
         /// Конструирует конфигурацию проекта.
@@ -77,7 +92,7 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
                 throw new InvalidOperationException("Перед конструированием объекта, требуется установить наименование файла конфигурации проекта.");
             }
 
-            string projectConfigPath = GetConfigPath(_pluginName, _projectConfigName);
+            string projectConfigPath = GetConfigPath(_pluginName, _projectConfigName, _revitVersion);
             if(File.Exists(projectConfigPath)) {
                 string fileContent = File.ReadAllText(projectConfigPath);
                 
@@ -96,9 +111,12 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
         /// </summary>
         /// <param name="pluginName">Наименование плагина.</param>
         /// <param name="projectConfigName">Наименование файла конфигурации проекта.</param>
+        /// <param name="revitVersion">Версия Revit.</param>
         /// <returns>Возвращает путь до конфигурации проекта.</returns>
-        private static string GetConfigPath(string pluginName, string projectConfigName) {
-            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "dosymep", pluginName, projectConfigName);
+        private static string GetConfigPath(string pluginName, string projectConfigName, string revitVersion) {
+            return string.IsNullOrEmpty(revitVersion) 
+                ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "dosymep", pluginName, projectConfigName) 
+                : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "dosymep", revitVersion, pluginName, projectConfigName);
         }
     }
 }
