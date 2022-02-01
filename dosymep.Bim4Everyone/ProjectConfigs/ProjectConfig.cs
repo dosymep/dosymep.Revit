@@ -40,7 +40,7 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
         /// <summary>
         /// Максимальное количество настроек проекта.
         /// </summary>
-        public int MaxSettingsCount { get; set; } = 10;
+        public int MaxSettingsCount { get; set; } = 100;
 
         /// <summary>
         /// Список настроек проекта
