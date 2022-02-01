@@ -25,7 +25,7 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
         /// <summary>
         /// Сохраняет текущую конфигурацию проекта.
         /// </summary>
-        public void SaveProjectConfig() {
+        public virtual void SaveProjectConfig() {
             Directory.CreateDirectory(Path.GetDirectoryName(ProjectConfigPath));
             File.WriteAllText(ProjectConfigPath, Serializer.Serialize(this));
         }
