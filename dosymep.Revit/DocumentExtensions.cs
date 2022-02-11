@@ -214,6 +214,19 @@ namespace dosymep.Revit {
                 yield return (iterator.Key, (Autodesk.Revit.DB.Binding) iterator.Current);
             }
         }
+        
+        /// <summary>
+        /// Возвращает настройки привязки для системного параметра.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает настройки привязки для системного параметра. Если параметр не был найден возвращает null.</returns>
+        public static (Autodesk.Revit.DB.Definition Definition, Autodesk.Revit.DB.Binding Binding) GetSystemParamBinding(
+            this Autodesk.Revit.DB.Document document, string paramName) {
+            return document.GetParameterBindings()
+                .Where(item => item.Definition.Name.Equals(paramName))
+                .FirstOrDefault(item => document.IsSystemParamDefinition(item.Definition));
+        }
 
         /// <summary>
         /// Возвращает настройки привязки для общего параметра.
