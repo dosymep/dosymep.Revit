@@ -80,6 +80,11 @@ namespace dosymep.Bim4Everyone.SystemParams {
             return document.GetSystemParamBinding(Name);
         }
 
+        /// <inheritdoc/>
+        public override ParameterElement GetRevitParamElement(Document document) {
+            return null;
+        }
+
         /// <summary>
         /// Проверяет является ли определение параметра внутренним параметром.
         /// </summary>

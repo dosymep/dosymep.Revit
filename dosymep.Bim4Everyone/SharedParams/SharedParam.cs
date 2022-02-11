@@ -139,6 +139,11 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public override (Definition Definition, Binding Binding) GetParamBinding(Document document) {
             return document.GetSharedParamBinding(Name);
         }
+        
+        /// <inheritdoc/>
+        public override ParameterElement GetRevitParamElement(Document document) {
+            return document.GetSharedParam(Name);
+        }
 
         /// <summary>
         /// Проверяет является ли определение параметра общим параметром.
