@@ -355,5 +355,18 @@ namespace dosymep.Revit {
 
             return transaction;
         }
+        
+        /// <summary>
+        /// Запускает групповую транзакцию на изменение документа.
+        /// </summary>
+        /// <param name="document">Документ Revit.</param>
+        /// <param name="transactionName">Название транзакции.</param>
+        /// <returns>Возвращает запущенную групповую транзакцию на изменение документа.</returns>
+        public static Autodesk.Revit.DB.TransactionGroup StartTransactionGroup(this Autodesk.Revit.DB.Document document, string transactionName) {
+            var transaction = new Autodesk.Revit.DB.TransactionGroup(document);
+            transaction.BIMStart(transactionName);
+
+            return transaction;
+        }
     }
 }
