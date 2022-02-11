@@ -134,6 +134,11 @@ namespace dosymep.Bim4Everyone.SharedParams {
 
             return document.IsExistsSharedParam(Name);
         }
+        
+        /// <inheritdoc/>
+        public override (Definition Definition, Binding Binding) GetParamBinding(Document document) {
+            return document.GetSharedParamBinding(Name);
+        }
 
         /// <summary>
         /// Проверяет является ли определение параметра общим параметром.

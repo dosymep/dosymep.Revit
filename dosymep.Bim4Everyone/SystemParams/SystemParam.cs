@@ -75,6 +75,11 @@ namespace dosymep.Bim4Everyone.SystemParams {
             return true;
         }
 
+        /// <inheritdoc/>
+        public override (Definition Definition, Binding Binding) GetParamBinding(Document document) {
+            return document.GetSystemParamBinding(Name);
+        }
+
         /// <summary>
         /// Проверяет является ли определение параметра внутренним параметром.
         /// </summary>
