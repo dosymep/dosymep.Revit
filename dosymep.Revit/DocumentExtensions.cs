@@ -177,6 +177,26 @@ namespace dosymep.Revit {
         #region GetProjectParams
 
         /// <summary>
+        /// Возвращает параметр проекта по имени.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает параметр проекта по имени. Если не параметр не был найден, то возвращается null.</returns>
+        public static Autodesk.Revit.DB.ParameterElement GetProjectParam(this Autodesk.Revit.DB.Document document, string paramName) {
+            return document.GetProjectParams().FirstOrDefault(item => item.Name.Equals(paramName));
+        }
+        
+        /// <summary>
+        /// Возвращает общий параметр по имени.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает общий параметр по имени. Если не параметр не был найден, то возвращается null.</returns>
+        public static Autodesk.Revit.DB.SharedParameterElement GetSharedParam(this Autodesk.Revit.DB.Document document, string paramName) {
+            return document.GetSharedParams().FirstOrDefault(item => item.Name.Equals(paramName)); 
+        }
+
+        /// <summary>
         /// Возвращает список параметров проекта.
         /// </summary>
         /// <param name="document">Документ Revit.</param>
