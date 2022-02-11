@@ -59,22 +59,11 @@ namespace dosymep.Bim4Everyone.Templates {
             }
 
             if(revitParam.IsExistsParam(target)) {
+                RevitParamSync(target, revitParam);
                 return;
             }
-
-            Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
-            try {
-                using(var transaction = new Transaction(target)) {
-                    transaction.BIMStart("Настройка параметра");
-
-                    ViewSchedule viewSchedule = GetViewSchedule(source, revitParam);
-                    CopyViewSchedule(source, target, true, viewSchedule);
-
-                    transaction.Commit();
-                }
-            } finally {
-                source.Close(false);
-            }
+            
+            RevitParamCopy(target, revitParam);
         }
 
         /// <summary>
@@ -106,27 +95,12 @@ namespace dosymep.Bim4Everyone.Templates {
                 throw new ArgumentNullException(nameof(revitParams));
             }
 
-            // Получаем параметры, которых нет в проекте
-            revitParams = revitParams.Where(item => !target.IsExistsParam(item));
-
-            // Если не были найдены параметры, которых нет проекте
-            // то выходим
-            if(!revitParams.Any()) {
-                return;
-            }
-
-            Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
-            try {
-                using(var transaction = new Transaction(target)) {
-                    transaction.BIMStart("Настройка параметров");
-
-                    IEnumerable<ViewSchedule> viewSchedules = GetViewSchedules(source, revitParams);
-                    CopyViewSchedules(source, target, true, viewSchedules);
-
-                    transaction.Commit();
+            using(var transactionGroup = target.StartTransactionGroup("Настройка параметров")) {
+                foreach(RevitParam revitParam in revitParams) {
+                    SetupRevitParam(target, revitParam);
                 }
-            } finally {
-                source.Close(false);
+
+                transactionGroup.Assimilate();
             }
         }
 
@@ -452,6 +426,45 @@ namespace dosymep.Bim4Everyone.Templates {
         }
 
         #endregion
+        
+        private void RevitParamSync(Document target, RevitParam revitParam) {
+            Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
+            try {
+                using(var transaction = target.StartTransaction($"Синхронизация параметра: \"{revitParam.Name}\"")) {
+                    RevitParamBindingsSync(source, target, revitParam);
+                    transaction.Commit();
+                }
+            } finally {
+                source.Close(false);
+            }
+        }
+
+        private void RevitParamCopy(Document target, RevitParam revitParam)
+        {
+            Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
+            try
+            {
+                using (var transaction = target.StartTransaction($"Настройка параметра: \"{revitParam.Name}\""))
+                {
+                    ParameterElement sourceParamElement = revitParam.GetRevitParamElement(source);
+                    ElementTransformUtils.CopyElements(source, new[] {sourceParamElement.Id}, target, Transform.Identity,
+                        new CopyPasteOptions());
+
+                    transaction.Commit();
+                }
+            }
+            finally
+            {
+                source.Close(false);
+            }
+        }
+
+        private static void RevitParamBindingsSync(Document source, Document target, RevitParam revitParam) {
+            (Definition Definition, Binding Binding) sourceSettings = revitParam.GetParamBinding(source);
+            (Definition Definition, Binding Binding) targetSettings = revitParam.GetParamBinding(target);
+
+            ((ElementBinding) targetSettings.Binding).Categories = ((ElementBinding) sourceSettings.Binding).Categories;
+        }
 
         private static void CopyBrowserOrganization(Document target, Document document) {
             var elements = new FilteredElementCollector(document).OfClass(typeof(BrowserOrganization)).ToElements();
