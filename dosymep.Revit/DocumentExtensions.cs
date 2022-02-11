@@ -215,6 +215,32 @@ namespace dosymep.Revit {
             }
         }
 
+        /// <summary>
+        /// Возвращает настройки привязки для общего параметра.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает настройки привязки для общего параметра. Если параметр не был найден возвращает null.</returns>
+        public static (Autodesk.Revit.DB.Definition Definition, Autodesk.Revit.DB.Binding Binding) GetSharedParamBinding(
+            this Autodesk.Revit.DB.Document document, string paramName) {
+            return document.GetParameterBindings()
+                .Where(item => item.Definition.Name.Equals(paramName))
+                .FirstOrDefault(item => document.IsSharedParamDefinition(item.Definition));
+        }
+        
+        /// <summary>
+        /// Возвращает настройки привязки для параметра проекта.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает настройки привязки для параметра проекта. Если параметр не был найден возвращает null.</returns>
+        public static (Autodesk.Revit.DB.Definition Definition, Autodesk.Revit.DB.Binding Binding) GetProjectParamBinding(
+            this Autodesk.Revit.DB.Document document,string paramName) {
+            return document.GetParameterBindings()
+                .Where(item => item.Definition.Name.Equals(paramName))
+                .FirstOrDefault(item => document.IsProjectParamDefinition(item.Definition));
+        }
+
         #endregion
 
         #region ParamDefinition
