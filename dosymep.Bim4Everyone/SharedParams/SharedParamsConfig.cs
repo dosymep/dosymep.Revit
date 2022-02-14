@@ -226,7 +226,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <summary>
         /// ФОП_Номер секции
         /// </summary>
-        public SharedParam BuildingWorksSection { get; internal set; } = new SharedParam() { PropertyName = nameof(BuildingWorksSection), Name = "ФОП_Секции СМР" };
+        public SharedParam BuildingWorksSection { get; internal set; } = new SharedParam() { PropertyName = nameof(BuildingWorksSection), Name = "ФОП_Секция СМР" };
 
         /// <summary>
         /// ФОП_Блок СМР
