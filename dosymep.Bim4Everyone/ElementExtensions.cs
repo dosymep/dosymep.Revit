@@ -180,6 +180,28 @@ namespace dosymep.Bim4Everyone {
 
             element.GetParam(revitParam).Set(paramValue);
         }
+        
+        /// <summary>
+        /// Устанавливает значение параметра по значению другого параметра.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр в который присваивается значение.</param>
+        /// <param name="otherParameter">Параметр значение которого присваивается.</param>
+        public static void SetParamValue(this Element element, RevitParam revitParam, Parameter otherParameter) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam is null) {
+                throw new ArgumentException($"'{nameof(revitParam)}' cannot be null or empty.", nameof(revitParam));
+            }
+
+            if(otherParameter is null) {
+                throw new ArgumentException($"'{nameof(otherParameter)}' cannot be null or empty.", nameof(otherParameter));
+            }
+
+            element.GetParam(revitParam).Set(otherParameter);
+        }
 
         /// <summary>
         /// Устанавливает значение параметра по значению другого параметра.
