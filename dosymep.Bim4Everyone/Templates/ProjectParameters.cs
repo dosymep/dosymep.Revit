@@ -460,10 +460,13 @@ namespace dosymep.Bim4Everyone.Templates {
         }
 
         private static void RevitParamBindingsSync(Document source, Document target, RevitParam revitParam) {
-            (Definition Definition, Binding Binding) sourceSettings = revitParam.GetParamBinding(source);
-            (Definition Definition, Binding Binding) targetSettings = revitParam.GetParamBinding(target);
+            if(source.IsExistsParam(revitParam)) {
+                (Definition Definition, Binding Binding) sourceSettings = revitParam.GetParamBinding(source);
+                (Definition Definition, Binding Binding) targetSettings = revitParam.GetParamBinding(target);
 
-            ((ElementBinding) targetSettings.Binding).Categories = ((ElementBinding) sourceSettings.Binding).Categories;
+                ((ElementBinding) targetSettings.Binding).Categories =
+                    ((ElementBinding) sourceSettings.Binding).Categories;
+            }
         }
 
         private static void CopyBrowserOrganization(Document target, Document document) {
