@@ -56,7 +56,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.ApartmentAreaMinSpec), "Описание ApartmentAreaMinSpec" },
 
             { nameof(SharedParamsConfig.Level), "Описание Level" },
-            { nameof(SharedParamsConfig.SectionNumber), "Описание SectionNumber" },
+            { nameof(SharedParamsConfig.BuildingWorksSection), "Описание BuildingWorksSection" },
             { nameof(SharedParamsConfig.BuildingWorksBlock), "Описание BuildingWorksBlock" },
             { nameof(SharedParamsConfig.EconomicFunction), "Описание EconomicFunction" },
         };
@@ -104,7 +104,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.ApartmentAreaMaxSpec), StorageType.Double },
 
             { nameof(SharedParamsConfig.Level), StorageType.String },
-            { nameof(SharedParamsConfig.SectionNumber), StorageType.String },
+            { nameof(SharedParamsConfig.BuildingWorksSection), StorageType.String },
             { nameof(SharedParamsConfig.BuildingWorksBlock), StorageType.String },
             { nameof(SharedParamsConfig.EconomicFunction), StorageType.String },
         };
@@ -133,6 +133,16 @@ namespace dosymep.Bim4Everyone.SharedParams {
             }
 
             return document.IsExistsSharedParam(Name);
+        }
+        
+        /// <inheritdoc/>
+        public override (Definition Definition, Binding Binding) GetParamBinding(Document document) {
+            return document.GetSharedParamBinding(Name);
+        }
+        
+        /// <inheritdoc/>
+        public override ParameterElement GetRevitParamElement(Document document) {
+            return document.GetSharedParam(Name);
         }
 
         /// <summary>

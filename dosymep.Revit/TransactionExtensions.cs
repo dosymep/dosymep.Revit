@@ -20,5 +20,15 @@ namespace dosymep.Revit {
         public static TransactionStatus BIMStart(this Transaction transaction, string transactionName) {
             return transaction.Start("BIM: " + transactionName);
         }
+        
+        /// <summary>
+        /// Добавляет в название транзакции текст BIM.
+        /// </summary>
+        /// <param name="transaction">Транзакция.</param>
+        /// <param name="transactionName">Название транзакции.</param>
+        /// <returns>Возвращает статус запуска транзакции.</returns>
+        public static TransactionStatus BIMStart(this TransactionGroup transaction, string transactionName) {
+            return transaction.Start("BIM: " + transactionName);
+        }
     }
 }

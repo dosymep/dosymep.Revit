@@ -113,6 +113,16 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
             return document.IsExistsProjectParam(Name);
         }
+        
+        /// <inheritdoc/>
+        public override (Definition Definition, Binding Binding) GetParamBinding(Document document) {
+            return document.GetProjectParamBinding(Name);
+        }
+        
+        /// <inheritdoc/>
+        public override ParameterElement GetRevitParamElement(Document document) {
+            return document.GetProjectParam(Name);
+        }
 
         /// <summary>
         /// Проверяет является ли определение параметра параметром проекта.

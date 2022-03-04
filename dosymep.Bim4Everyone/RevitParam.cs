@@ -46,6 +46,20 @@ namespace dosymep.Bim4Everyone {
         public abstract bool IsExistsParam(Document document);
 
         /// <summary>
+        /// Возвращает настройки привязки параметра.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <returns>Возвращает настройки привязки параметра.</returns>
+        public abstract (Definition Definition, Binding Binding) GetParamBinding(Document document);
+
+        /// <summary>
+        /// Возвращает элемент параметра.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <returns>Возвращает элемент параметра.</returns>
+        public abstract ParameterElement GetRevitParamElement(Document document);
+
+        /// <summary>
         /// Возвращает параметр элемента.
         /// </summary>
         /// <param name="element">Элемент.</param>
