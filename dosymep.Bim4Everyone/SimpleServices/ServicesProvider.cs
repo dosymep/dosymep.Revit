@@ -16,7 +16,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <summary>
         /// Загружает сервисы платформы.
         /// </summary>
-       public static void LoadInstance() {
+        public static void LoadInstance() {
             var builder = new ContainerBuilder();
 
             builder.RegisterType<XtraDispatcherService>().As<IDispatcherService>().SingleInstance();
@@ -27,6 +27,15 @@ namespace dosymep.Bim4Everyone.SimpleServices {
             builder.RegisterType<XtraOpenFolderDialogService>().As<IOpenFolderDialogService>().SingleInstance();
 
             Instance = builder.Build();
+        }
+
+        /// <summary>
+        /// Возвращает сервис из контейнера.
+        /// </summary>
+        /// <typeparam name="T">Запрашиваемый сервис.</typeparam>
+        /// <returns>Возвращает сервис из контейнера.</returns>
+        public static T GetPlatformService<T>() {
+            return Instance.Resolve<T>();
         }
     }
 }
