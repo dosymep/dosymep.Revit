@@ -11,7 +11,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <summary>
         /// Контейнер сервисов платформы.
         /// </summary>
-        public static IContainer PlatformContainer { get; private set; }
+        public static IContainer Instance { get; private set; }
 
         /// <summary>
         /// Загружает сервисы платформы.
@@ -26,7 +26,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
             builder.RegisterType<XtraSaveFileDialogService>().As<ISaveFileDialogService>().SingleInstance();
             builder.RegisterType<XtraOpenFolderDialogService>().As<IOpenFolderDialogService>().SingleInstance();
 
-            PlatformContainer = builder.Build();
+            Instance = builder.Build();
         }
     }
 }
