@@ -11,9 +11,12 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <summary>
         /// Контейнер сервисов платформы.
         /// </summary>
-        public static IContainer PlatformContainer { get; }
+        public static IContainer PlatformContainer { get; private set; }
 
-        static ServicesProvider() {
+        /// <summary>
+        /// Загружает сервисы платформы.
+        /// </summary>
+       public static void LoadServices() {
             var builder = new ContainerBuilder();
 
             builder.RegisterType<XtraDispatcherService>().As<IDispatcherService>().SingleInstance();
