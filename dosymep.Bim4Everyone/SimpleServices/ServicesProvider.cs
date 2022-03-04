@@ -16,7 +16,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <summary>
         /// Загружает сервисы платформы.
         /// </summary>
-       public static void LoadServices() {
+       public static void LoadInstance() {
             var builder = new ContainerBuilder();
 
             builder.RegisterType<XtraDispatcherService>().As<IDispatcherService>().SingleInstance();
