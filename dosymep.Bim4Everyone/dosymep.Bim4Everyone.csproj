@@ -51,6 +51,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="dosymep.SimpleServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>$(AppData)\pyRevit\Extensions\BIM4Everyone.lib\dosymep.SimpleServices.dll</HintPath>
+    </Reference>
+    <Reference Include="dosymep.Xpf.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>$(AppData)\pyRevit\Extensions\BIM4Everyone.lib\dosymep.Xpf.Core.dll</HintPath>
+    </Reference>
     <Reference Include="pyRevitLabs.Json">
       <HintPath>$(AppData)\pyRevit-Master\bin\pyRevitLabs.Json.dll</HintPath>
       <Private>False</Private>
@@ -66,6 +72,7 @@
   </ItemGroup>
   
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
