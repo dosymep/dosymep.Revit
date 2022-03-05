@@ -321,5 +321,9 @@ namespace dosymep.Bim4Everyone.SimpleServices
         {
             _logger.Fatal(exception, messageTemplate, propertyValues);
         }
+
+        public ILoggerService ForPluginContext(string pluginContextName) {
+            return new SerilogService(_logger.ForContext("PluginName", pluginContextName));
+        }
     }
 }

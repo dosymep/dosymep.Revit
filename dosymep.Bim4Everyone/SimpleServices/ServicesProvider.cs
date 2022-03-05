@@ -38,7 +38,6 @@ namespace dosymep.Bim4Everyone.SimpleServices {
             Instance.Bind<ISaveFileDialogService>().To<XtraSaveFileDialogService>().InSingletonScope();
             Instance.Bind<IOpenFolderDialogService>().To<XtraOpenFolderDialogService>().InSingletonScope();
 
-
             Instance.Bind<ILoggerService>().To<SerilogService>().InSingletonScope();
             Instance.Bind<ILogger>().ToMethod(context => InitLogger(context, uiApplication)).InSingletonScope();
         }
@@ -48,13 +47,14 @@ namespace dosymep.Bim4Everyone.SimpleServices {
                 "pyRevit", "Logs", uiApplication.Application.VersionNumber, "platform_.log");
 
             var loggerConfiguration = new LoggerConfiguration()
+                .Enrich.WithProperty("PluginName", "Bim4Everyone")
                 .Enrich.WithProperty("MachineName", Environment.MachineName)
                 .Enrich.WithProperty("EnvironmentUserName", Environment.UserName)
                 .Enrich.WithProperty("RevitVersion", uiApplication.Application.VersionBuild)
                 .Enrich.WithProperty("AutodeskUsername", uiApplication.Application.Username)
                 .Enrich.WithProperty("AutodeskLoginUserId", uiApplication.Application.LoginUserId)
                 .WriteTo.File(fileName, rollingInterval: RollingInterval.Day, 
-                    outputTemplate:"[{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {Level:u3}] "
+                    outputTemplate:"[{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {Level:u3}] {PluginName} "
                                    //+ "{{\"MachineName\": \"{MachineName}\", \"UserName\": \"{EnvironmentUserName}\", \"$type\": \"Windows\"}} "
                                    + "{{\"RevitVersion\": \"{RevitVersion}\", \"UserName\": \"{AutodeskUsername}\", \"LoginUserId\": \"{AutodeskLoginUserId}\", \"$type\": \"Autodesk\"}} "
                                    + "{Message}{NewLine}{Exception}")
