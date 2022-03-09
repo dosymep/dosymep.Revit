@@ -53,11 +53,12 @@ namespace dosymep.Bim4Everyone.SimpleServices {
                 .Enrich.WithProperty("RevitVersion", uiApplication.Application.VersionBuild)
                 .Enrich.WithProperty("AutodeskUsername", uiApplication.Application.Username)
                 .Enrich.WithProperty("AutodeskLoginUserId", uiApplication.Application.LoginUserId)
-                .WriteTo.File(fileName, rollingInterval: RollingInterval.Day, 
-                    outputTemplate:"[{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {Level:u3}] {PluginName} "
-                                   //+ "{{\"MachineName\": \"{MachineName}\", \"UserName\": \"{EnvironmentUserName}\", \"$type\": \"Windows\"}} "
-                                   + "{{\"RevitVersion\": \"{RevitVersion}\", \"UserName\": \"{AutodeskUsername}\", \"LoginUserId\": \"{AutodeskLoginUserId}\", \"$type\": \"Autodesk\"}} "
-                                   + "{Message}{NewLine}{Exception}")
+                .WriteTo.File(fileName, 
+                    fileSizeLimitBytes: 50000000, rollOnFileSizeLimit: true, retainedFileCountLimit: 10,
+                    outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {Level:u3}] {PluginName} "
+                                    //+ "{{\"MachineName\": \"{MachineName}\", \"UserName\": \"{EnvironmentUserName}\", \"$type\": \"Windows\"}} "
+                                    + "{{\"RevitVersion\": \"{RevitVersion}\", \"UserName\": \"{AutodeskUsername}\", \"LoginUserId\": \"{AutodeskLoginUserId}\", \"$type\": \"Autodesk\"}} "
+                                    + "{Message}{NewLine}{Exception}")
                 .MinimumLevel.Verbose();
 
             return loggerConfiguration.CreateLogger();
