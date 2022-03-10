@@ -31,15 +31,17 @@ namespace dosymep.Bim4Everyone.SimpleServices {
             Instance?.Dispose();
             Instance = new StandardKernel();
 
+            Instance.Bind<IUIThemeService>().To<XtraWindowsThemeService>().InSingletonScope();
             Instance.Bind<IDispatcherService>().To<XtraDispatcherService>().InSingletonScope();
             Instance.Bind<IMessageBoxService>().To<XtraMessageBoxService>().InSingletonScope();
-            Instance.Bind<INotificationService>().To<XtraNotificationService>().InSingletonScope();
             Instance.Bind<IOpenFileDialogService>().To<XtraOpenFileDialogService>().InSingletonScope();
             Instance.Bind<ISaveFileDialogService>().To<XtraSaveFileDialogService>().InSingletonScope();
             Instance.Bind<IOpenFolderDialogService>().To<XtraOpenFolderDialogService>().InSingletonScope();
 
             Instance.Bind<ILoggerService>().To<SerilogService>().InSingletonScope();
             Instance.Bind<ILogger>().ToMethod(context => InitLogger(context, uiApplication)).InSingletonScope();
+            
+            Instance.Bind<INotificationService>().ToMethod(context => new XtraNotificationService("Bim4Everyone")).InSingletonScope();
         }
 
         private static ILogger InitLogger(IContext context, UIApplication uiApplication) {
