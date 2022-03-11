@@ -26,6 +26,30 @@ namespace dosymep.Bim4Everyone {
         public static bool IsExistsParam(this Element element, RevitParam revitParam) {
             return element.GetParamValueOrDefault(revitParam) != default;
         }
+        
+        /// <summary>
+        /// Возвращает значение параметра либо значение по умолчанию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Встроенный тип параметра.</param>
+        /// <param name="default">Значение по умолчанию.</param>
+        /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
+        public static T GetParamValueOrDefault<T>(this Element element, RevitParam revitParam, T @default = default) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam == null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
+            try {
+                object value = element.GetParamValue(revitParam);
+                return value == null ? @default : (T) value;
+            } catch(ArgumentException) {
+                return @default;
+            }
+        }
 
         /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.
@@ -71,6 +95,25 @@ namespace dosymep.Bim4Everyone {
             } catch(ArgumentException) {
                 return @default;
             }
+        }
+        
+        /// <summary>
+        /// Возвращает значение параметра элемента.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <returns>Возвращает значение параметра элемента.</returns>
+        public static T GetParamValue<T>(this Element element, RevitParam revitParam) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam == null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
+            object value = element.GetParam(revitParam).AsObject();
+            return value == null ? default : (T) value;
         }
 
         /// <summary>

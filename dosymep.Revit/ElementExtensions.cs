@@ -30,6 +30,30 @@ namespace dosymep.Revit {
         /// <param name="paramName">Наименование параметра.</param>
         /// <param name="default">Значение по умолчанию.</param>
         /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
+        public static T GetParamValueOrDefault<T>(this Element element, string paramName, T @default = default) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
+            }
+
+            try {
+                object value = element.GetParamValue(paramName);
+                return value == null ? @default : (T) value;
+            } catch(ArgumentException) {
+                return @default;
+            }
+        }
+
+        /// <summary>
+        /// Возвращает значение параметра либо значение по умолчанию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <param name="default">Значение по умолчанию.</param>
+        /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
         public static object GetParamValueOrDefault(this Element element, string paramName, object @default = default) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -44,6 +68,25 @@ namespace dosymep.Revit {
             } catch(ArgumentException) {
                 return @default;
             }
+        }
+
+        /// <summary>
+        /// Возвращает значение параметра элемента.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает значение параметра элемента.</returns>
+        public static T GetParamValue<T>(this Element element, string paramName) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
+            }
+
+            object value = element.GetParam(paramName).AsObject();
+            return value == null ? default : (T) value;
         }
 
         /// <summary>
@@ -183,6 +226,26 @@ namespace dosymep.Revit {
         public static bool IsExistsParam(this Element element, BuiltInParameter builtInParameter) {
             return element.GetParamValueOrDefault(builtInParameter) != default;
         }
+        
+        /// <summary>
+        /// Возвращает значение параметра либо значение по умолчанию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="builtInParameter">Встроенный тип параметра.</param>
+        /// <param name="default">Значение по умолчанию.</param>
+        /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
+        public static T GetParamValueOrDefault<T>(this Element element, BuiltInParameter builtInParameter, T @default = default) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            try {
+                object value = element.GetParamValue(builtInParameter);
+                return value == null ? @default : (T) value;
+            } catch(ArgumentException) {
+                return @default;
+            }
+        }
 
         /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.
@@ -201,6 +264,21 @@ namespace dosymep.Revit {
             } catch(ArgumentException) {
                 return @default;
             }
+        }
+        
+        /// <summary>
+        /// Возвращает значение параметра элемента.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="builtInParameter">Встроенный тип параметра.</param>
+        /// <returns>Возвращает значение параметра элемента.</returns>
+        public static T GetParamValue<T>(this Element element, BuiltInParameter builtInParameter) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            object value = element.GetParam(builtInParameter).AsObject();
+            return value == null ? default : (T) value;
         }
 
         /// <summary>
@@ -322,7 +400,31 @@ namespace dosymep.Revit {
         public static bool IsExistsParam(this Element element, ForgeTypeId forgeTypeId) {
             return element.GetParamValueOrDefault(forgeTypeId) != default;
         }
+        
+        /// <summary>
+        /// Возвращает значение параметра либо значение по умолчанию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <param name="default">Значение по умолчанию.</param>
+        /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
+        public static T GetParamValueOrDefault<T>(this Element element, ForgeTypeId forgeTypeId, T @default = default) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
 
+            if(forgeTypeId == null) {
+                throw new ArgumentNullException(nameof(forgeTypeId));
+            }
+
+            try {
+                object value = element.GetParamValue(forgeTypeId);
+                return value == null ? @default : (T) value;
+            } catch(ArgumentException) {
+                return @default;
+            }
+        }
+        
         /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.
         /// </summary>
@@ -340,6 +442,25 @@ namespace dosymep.Revit {
             } catch(ArgumentException) {
                 return @default;
             }
+        }
+        
+        /// <summary>
+        /// Возвращает значение параметра элемента.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <returns>Возвращает значение параметра элемента.</returns>
+        public static T GetParamValue<T>(this Element element, ForgeTypeId forgeTypeId) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(forgeTypeId == null) {
+                throw new ArgumentNullException(nameof(forgeTypeId));
+            }
+
+            object value = element.GetParam(forgeTypeId).AsObject();
+            return value == null ? default : (T) value;
         }
 
         /// <summary>
