@@ -5,8 +5,8 @@
     <Platforms>x64</Platforms>
     <Authors>dosymep</Authors>
     <PackageTags>dosymep, revit</PackageTags>
-    <PackageProjectUrl>https://github.com/dosymep/dosymep.git</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/dosymep/dosymep.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/dosymep/dosymep.Revit.git</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dosymep/dosymep.Revit.git</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <Configurations>D2020;D2021;D2022;R2020;R2021;R2022</Configurations>
   </PropertyGroup>
