@@ -45,8 +45,21 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         }
 
         private static ILogger InitLogger(IContext context, UIApplication uiApplication) {
-            var fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            var localFileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
                 "pyRevit", uiApplication.Application.VersionNumber, "platform_.log");
+
+            var platformFileName =
+                Path.Combine(@"T:\Проектный институт\Отдел стандартизации BIM и RD\BIM-Ресурсы\4-Dynamo\Архив\BIM-отдел\LOG",
+                    "Bim4Everyone", uiApplication.Application.VersionNumber, "platform_.log");
+
+            RollingInterval rollingInterval = RollingInterval.Day;
+            int fileSizeLimitBytes = 50000000;
+            bool rollOnFileSizeLimit = true;
+            int retainedFileCountLimit = 10;
+            string outputTemplate = "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {Level:u3}] {PluginName} "
+                                    //+ "{{\"MachineName\": \"{MachineName}\", \"UserName\": \"{EnvironmentUserName}\", \"$type\": \"Windows\"}} "
+                                    + "{{\"RevitVersion\": \"{RevitVersion}\", \"UserName\": \"{AutodeskUsername}\", \"LoginUserId\": \"{AutodeskLoginUserId}\", \"$type\": \"Autodesk\"}} "
+                                    + "{Message}{NewLine}{Exception}";
 
             var loggerConfiguration = new LoggerConfiguration()
                 .Enrich.WithProperty("PluginName", "Bim4Everyone")
@@ -55,12 +68,12 @@ namespace dosymep.Bim4Everyone.SimpleServices {
                 .Enrich.WithProperty("RevitVersion", uiApplication.Application.VersionBuild)
                 .Enrich.WithProperty("AutodeskUsername", uiApplication.Application.Username)
                 .Enrich.WithProperty("AutodeskLoginUserId", uiApplication.Application.LoginUserId)
-                .WriteTo.File(fileName, rollingInterval:RollingInterval.Day,
-                    fileSizeLimitBytes: 50000000, rollOnFileSizeLimit: true, retainedFileCountLimit: 10,
-                    outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {Level:u3}] {PluginName} "
-                                    //+ "{{\"MachineName\": \"{MachineName}\", \"UserName\": \"{EnvironmentUserName}\", \"$type\": \"Windows\"}} "
-                                    + "{{\"RevitVersion\": \"{RevitVersion}\", \"UserName\": \"{AutodeskUsername}\", \"LoginUserId\": \"{AutodeskLoginUserId}\", \"$type\": \"Autodesk\"}} "
-                                    + "{Message}{NewLine}{Exception}")
+                .WriteTo.File(localFileName, rollingInterval: rollingInterval,
+                    fileSizeLimitBytes: fileSizeLimitBytes, rollOnFileSizeLimit: rollOnFileSizeLimit,
+                    retainedFileCountLimit: retainedFileCountLimit, outputTemplate: outputTemplate)
+                .WriteTo.File(platformFileName, rollingInterval: rollingInterval,
+                    fileSizeLimitBytes: fileSizeLimitBytes, rollOnFileSizeLimit: rollOnFileSizeLimit,
+                    retainedFileCountLimit: retainedFileCountLimit, outputTemplate: outputTemplate)
                 .MinimumLevel.Verbose();
 
             return loggerConfiguration.CreateLogger();
