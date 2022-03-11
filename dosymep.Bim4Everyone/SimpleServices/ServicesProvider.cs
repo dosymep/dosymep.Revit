@@ -46,7 +46,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
 
         private static ILogger InitLogger(IContext context, UIApplication uiApplication) {
             var fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                "pyRevit", "Logs", uiApplication.Application.VersionNumber, "platform_.log");
+                "pyRevit", uiApplication.Application.VersionNumber, "platform_.log");
 
             var loggerConfiguration = new LoggerConfiguration()
                 .Enrich.WithProperty("PluginName", "Bim4Everyone")
@@ -55,7 +55,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
                 .Enrich.WithProperty("RevitVersion", uiApplication.Application.VersionBuild)
                 .Enrich.WithProperty("AutodeskUsername", uiApplication.Application.Username)
                 .Enrich.WithProperty("AutodeskLoginUserId", uiApplication.Application.LoginUserId)
-                .WriteTo.File(fileName, 
+                .WriteTo.File(fileName, rollingInterval:RollingInterval.Day,
                     fileSizeLimitBytes: 50000000, rollOnFileSizeLimit: true, retainedFileCountLimit: 10,
                     outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {Level:u3}] {PluginName} "
                                     //+ "{{\"MachineName\": \"{MachineName}\", \"UserName\": \"{EnvironmentUserName}\", \"$type\": \"Windows\"}} "
