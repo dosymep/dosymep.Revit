@@ -49,7 +49,8 @@ namespace dosymep.Bim4Everyone.SimpleServices {
                 "pyRevit", uiApplication.Application.VersionNumber, "platform_.log");
 
             var platformFileName =
-                Path.Combine(@"T:\Проектный институт\Отдел стандартизации BIM и RD\BIM-Ресурсы\4-Dynamo\Архив\BIM-отдел\LOG",
+                Path.Combine(
+                    @"T:\Проектный институт\Отдел стандартизации BIM и RD\BIM-Ресурсы\4-Dynamo\Архив\BIM-отдел\LOG",
                     "Bim4Everyone", uiApplication.Application.VersionNumber, "platform_.log");
 
             RollingInterval rollingInterval = RollingInterval.Day;
@@ -71,7 +72,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
                 .WriteTo.File(localFileName, rollingInterval: rollingInterval,
                     fileSizeLimitBytes: fileSizeLimitBytes, rollOnFileSizeLimit: rollOnFileSizeLimit,
                     retainedFileCountLimit: retainedFileCountLimit, outputTemplate: outputTemplate)
-                .WriteTo.File(platformFileName, rollingInterval: rollingInterval,
+                .WriteTo.File(platformFileName, shared: true, rollingInterval: rollingInterval,
                     fileSizeLimitBytes: fileSizeLimitBytes, rollOnFileSizeLimit: rollOnFileSizeLimit,
                     retainedFileCountLimit: retainedFileCountLimit, outputTemplate: outputTemplate)
                 .MinimumLevel.Verbose();
