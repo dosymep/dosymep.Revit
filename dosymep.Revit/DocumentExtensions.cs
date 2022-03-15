@@ -195,6 +195,16 @@ namespace dosymep.Revit {
         public static Autodesk.Revit.DB.SharedParameterElement GetSharedParam(this Autodesk.Revit.DB.Document document, string paramName) {
             return document.GetSharedParams().FirstOrDefault(item => item.Name.Equals(paramName)); 
         }
+        
+        /// <summary>
+        /// Возвращает глобальный параметр по имени.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает глобальный параметр по имени. Если не параметр не был найден, то возвращается null.</returns>
+        public static Autodesk.Revit.DB.GlobalParameter GetGlobalParam(this Autodesk.Revit.DB.Document document, string paramName) {
+            return document.GetGlobalParams().FirstOrDefault(item => item.Name.Equals(paramName)); 
+        }
 
         /// <summary>
         /// Возвращает список параметров проекта.
@@ -202,7 +212,8 @@ namespace dosymep.Revit {
         /// <param name="document">Документ Revit.</param>
         /// <returns>Возвращает список параметров проекта.</returns>
         public static IEnumerable<Autodesk.Revit.DB.ParameterElement> GetProjectParams(this Autodesk.Revit.DB.Document document) {
-            return document.GetProjectParamElements().Where(item => !(item is Autodesk.Revit.DB.SharedParameterElement));
+            return document.GetProjectParamElements()
+                .Where(item => item.IsProjectParam());
         }
 
         /// <summary>
@@ -211,7 +222,20 @@ namespace dosymep.Revit {
         /// <param name="document">Документ Revit.</param>
         /// <returns>Возвращает список общих параметров.</returns>
         public static IEnumerable<Autodesk.Revit.DB.SharedParameterElement> GetSharedParams(this Autodesk.Revit.DB.Document document) {
-            return document.GetProjectParamElements().OfType<Autodesk.Revit.DB.SharedParameterElement>();
+            return document.GetProjectParamElements()
+                .Where(item => item.IsSharedParam())
+                .OfType<Autodesk.Revit.DB.SharedParameterElement>();
+        }
+        
+        /// <summary>
+        /// Возвращает список глобальных параметров.
+        /// </summary>
+        /// <param name="document">Документ Revit.</param>
+        /// <returns>Возвращает список глобальных параметров.</returns>
+        public static IEnumerable<Autodesk.Revit.DB.GlobalParameter> GetGlobalParams(this Autodesk.Revit.DB.Document document) {
+            return new Autodesk.Revit.DB.FilteredElementCollector(document)
+                .OfClass(typeof(Autodesk.Revit.DB.GlobalParameter))
+                .OfType<Autodesk.Revit.DB.GlobalParameter>();
         }
 
         /// <summary>
