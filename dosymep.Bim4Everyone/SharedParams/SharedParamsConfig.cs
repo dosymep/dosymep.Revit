@@ -240,6 +240,85 @@ namespace dosymep.Bim4Everyone.SharedParams {
 
         #endregion
 
+        #region ВИС
+
+        /// <summary>
+        /// ADSK_Полная мощность
+        /// </summary>
+        public SharedParam FullPower { get; internal set; } = new SharedParam() { PropertyName = nameof(FullPower), Name = "ADSK_Полная мощность" };
+        
+        /// <summary>
+        /// ADSK_Номинальная мощность
+        /// </summary>
+        public SharedParam RatedPower { get; internal set; } = new SharedParam() { PropertyName = nameof(RatedPower), Name = "ADSK_Номинальная мощность" };
+        
+        /// <summary>
+        /// ADSK_Коэффициент мощности
+        /// </summary>
+        public SharedParam PowerFactor { get; internal set; } = new SharedParam() { PropertyName = nameof(PowerFactor), Name = "ADSK_Коэффициент мощности" };
+        
+        /// <summary>
+        /// ADSK_Классификация нагрузок
+        /// </summary>
+        public SharedParam LoadClassification { get; internal set; } = new SharedParam() { PropertyName = nameof(LoadClassification), Name = "ADSK_Классификация нагрузок" };
+
+        /// <summary>
+        /// ADSK_Количество фаз
+        /// </summary>
+        public SharedParam CountPhases { get; internal set; } = new SharedParam() { PropertyName = nameof(CountPhases), Name = "ADSK_Количество фаз" };
+        
+        /// <summary>
+        /// ADSK_Напряжение
+        /// </summary>
+        public SharedParam Voltage { get; internal set; } = new SharedParam() { PropertyName = nameof(Voltage), Name = "ADSK_Напряжение" };
+
+        /// <summary>
+        /// ADSK_Не нагреватель_Не шкаф
+        /// </summary>
+        public SharedParam IsStandardEquipment { get; internal set; } = new SharedParam() { PropertyName = nameof(IsStandardEquipment), Name = "ADSK_Не нагреватель_Не шкаф" };
+
+        /// <summary>
+        /// ADSK_Без частотного регулятора
+        /// </summary>
+        public SharedParam WithoutFrequencyController { get; internal set; } = new SharedParam() { PropertyName = nameof(WithoutFrequencyController), Name = "ADSK_Без частотного регулятора" };
+        
+        /// <summary>
+        /// ФОП_ВИС_Группирование
+        /// </summary>
+        public SharedParam VISGrouping { get; internal set; } = new SharedParam() { PropertyName = nameof(VISGrouping), Name = "ФОП_ВИС_Группирование" };
+        
+        /// <summary>
+        /// ФОП_ВИС_Масса
+        /// </summary>
+        public SharedParam VISMass { get; internal set; } = new SharedParam() { PropertyName = nameof(VISMass), Name = "ФОП_ВИС_Масса" };
+        
+        /// <summary>
+        /// ФОП_ВИС_Единица измерения
+        /// </summary>
+        public SharedParam VISUnit { get; internal set; } = new SharedParam() { PropertyName = nameof(VISUnit), Name = "ФОП_ВИС_Единица измерения" };
+        
+        /// <summary>
+        /// ФОП_ВИС_Минимальная толщина воздуховода
+        /// </summary>
+        public SharedParam VISMinimumDuctThickness { get; internal set; } = new SharedParam() { PropertyName = nameof(VISMinimumDuctThickness), Name = "ФОП_ВИС_Минимальная толщина воздуховода" };
+        
+        /// <summary>
+        /// ФОП_ВИС_Наименование комбинированное
+        /// </summary>
+        public SharedParam VISCombinedName { get; internal set; } = new SharedParam() { PropertyName = nameof(VISCombinedName), Name = "ФОП_ВИС_Наименование комбинированное" };
+        
+        /// <summary>
+        /// ФОП_ВИС_Число
+        /// </summary>
+        public SharedParam VISSpecNumbers { get; internal set; } = new SharedParam() { PropertyName = nameof(VISSpecNumbers), Name = "ФОП_ВИС_Число" };
+        
+        /// <summary>
+        /// ФОП_ВИС_Экономическая функция
+        /// </summary>
+        public SharedParam VISEconomicFunction { get; internal set; } = new SharedParam() { PropertyName = nameof(VISEconomicFunction), Name = "ФОП_ВИС_Экономическая функция" };
+
+        #endregion
+
         /// <summary>
         /// Загрузка текущей конфигурации.
         /// </summary>
