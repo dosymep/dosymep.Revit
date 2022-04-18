@@ -241,46 +241,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
         #endregion
 
         #region ВИС
-
-        /// <summary>
-        /// ADSK_Полная мощность
-        /// </summary>
-        public SharedParam FullPower { get; internal set; } = new SharedParam() { PropertyName = nameof(FullPower), Name = "ADSK_Полная мощность" };
-        
-        /// <summary>
-        /// ADSK_Номинальная мощность
-        /// </summary>
-        public SharedParam RatedPower { get; internal set; } = new SharedParam() { PropertyName = nameof(RatedPower), Name = "ADSK_Номинальная мощность" };
-        
-        /// <summary>
-        /// ADSK_Коэффициент мощности
-        /// </summary>
-        public SharedParam PowerFactor { get; internal set; } = new SharedParam() { PropertyName = nameof(PowerFactor), Name = "ADSK_Коэффициент мощности" };
-        
-        /// <summary>
-        /// ADSK_Классификация нагрузок
-        /// </summary>
-        public SharedParam LoadClassification { get; internal set; } = new SharedParam() { PropertyName = nameof(LoadClassification), Name = "ADSK_Классификация нагрузок" };
-
-        /// <summary>
-        /// ADSK_Количество фаз
-        /// </summary>
-        public SharedParam CountPhases { get; internal set; } = new SharedParam() { PropertyName = nameof(CountPhases), Name = "ADSK_Количество фаз" };
-        
-        /// <summary>
-        /// ADSK_Напряжение
-        /// </summary>
-        public SharedParam Voltage { get; internal set; } = new SharedParam() { PropertyName = nameof(Voltage), Name = "ADSK_Напряжение" };
-
-        /// <summary>
-        /// ADSK_Не нагреватель_Не шкаф
-        /// </summary>
-        public SharedParam IsStandardEquipment { get; internal set; } = new SharedParam() { PropertyName = nameof(IsStandardEquipment), Name = "ADSK_Не нагреватель_Не шкаф" };
-
-        /// <summary>
-        /// ADSK_Без частотного регулятора
-        /// </summary>
-        public SharedParam WithoutFrequencyController { get; internal set; } = new SharedParam() { PropertyName = nameof(WithoutFrequencyController), Name = "ADSK_Без частотного регулятора" };
         
         /// <summary>
         /// ФОП_ВИС_Группирование

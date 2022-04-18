@@ -59,6 +59,14 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.BuildingWorksSection), "Описание BuildingWorksSection" },
             { nameof(SharedParamsConfig.BuildingWorksBlock), "Описание BuildingWorksBlock" },
             { nameof(SharedParamsConfig.EconomicFunction), "Описание EconomicFunction" },
+            
+            { nameof(SharedParamsConfig.VISGrouping), "Описание VISGrouping" },
+            { nameof(SharedParamsConfig.VISMass), "Описание VISMass" },
+            { nameof(SharedParamsConfig.VISUnit), "Описание VISUnit" },
+            { nameof(SharedParamsConfig.VISMinimumDuctThickness), "Описание VISMinimumDuctThickness" },
+            { nameof(SharedParamsConfig.VISCombinedName), "Описание VISCombinedName" },
+            { nameof(SharedParamsConfig.VISSpecNumbers), "Описание VISSpecNumbers" },
+            { nameof(SharedParamsConfig.VISEconomicFunction), "Описание VISEconomicFunction" },
         };
 
         /// <summary>
@@ -107,6 +115,14 @@ namespace dosymep.Bim4Everyone.SharedParams {
             { nameof(SharedParamsConfig.BuildingWorksSection), StorageType.String },
             { nameof(SharedParamsConfig.BuildingWorksBlock), StorageType.String },
             { nameof(SharedParamsConfig.EconomicFunction), StorageType.String },
+
+            { nameof(SharedParamsConfig.VISGrouping), StorageType.String },
+            { nameof(SharedParamsConfig.VISMass), StorageType.Integer },
+            { nameof(SharedParamsConfig.VISUnit), StorageType.String },
+            { nameof(SharedParamsConfig.VISMinimumDuctThickness), StorageType.Integer },
+            { nameof(SharedParamsConfig.VISCombinedName), StorageType.String },
+            { nameof(SharedParamsConfig.VISSpecNumbers), StorageType.Integer },
+            { nameof(SharedParamsConfig.VISEconomicFunction), StorageType.String },
         };
 
         /// <summary>
