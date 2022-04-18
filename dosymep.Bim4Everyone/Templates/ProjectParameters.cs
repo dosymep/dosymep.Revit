@@ -464,8 +464,15 @@ namespace dosymep.Bim4Everyone.Templates {
                 (Definition Definition, Binding Binding) sourceSettings = revitParam.GetParamBinding(source);
                 (Definition Definition, Binding Binding) targetSettings = revitParam.GetParamBinding(target);
 
-                ((ElementBinding) targetSettings.Binding).Categories =
-                    ((ElementBinding) sourceSettings.Binding).Categories;
+                var targetCategories = ((ElementBinding) targetSettings.Binding).Categories;
+                var sourceCategories = ((ElementBinding) sourceSettings.Binding).Categories;
+
+                foreach(Category sourceCategory in sourceCategories) {
+                    var targetCategory = target.Settings.Categories.get_Item(sourceCategory.Name);
+                    if(!targetCategories.Contains(targetCategory)) {
+                        targetCategories.Insert(targetCategory);
+                    }
+                }
             }
         }
 
