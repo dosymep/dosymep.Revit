@@ -439,22 +439,20 @@ namespace dosymep.Bim4Everyone.Templates {
             }
         }
 
-        private void RevitParamCopy(Document target, RevitParam revitParam)
-        {
+        private void RevitParamCopy(Document target, RevitParam revitParam) {
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
-            try
-            {
-                using (var transaction = target.StartTransaction($"Настройка параметра: \"{revitParam.Name}\""))
-                {
+            try {
+                using(var transaction = target.StartTransaction($"Настройка параметра: \"{revitParam.Name}\"")) {
                     ParameterElement sourceParamElement = revitParam.GetRevitParamElement(source);
-                    ElementTransformUtils.CopyElements(source, new[] {sourceParamElement.Id}, target, Transform.Identity,
-                        new CopyPasteOptions());
+                    if(sourceParamElement != null) {
+                        ElementTransformUtils.CopyElements(source, new[] {sourceParamElement.Id}, target,
+                            Transform.Identity,
+                            new CopyPasteOptions());
+                    }
 
                     transaction.Commit();
                 }
-            }
-            finally
-            {
+            } finally {
                 source.Close(false);
             }
         }
