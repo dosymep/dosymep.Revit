@@ -467,10 +467,16 @@ namespace dosymep.Bim4Everyone.Templates {
                 var targetCategories = ((ElementBinding) targetSettings.Binding).Categories;
                 var sourceCategories = ((ElementBinding) sourceSettings.Binding).Categories;
 
+                var targetAllCategories =
+                    target.Settings.Categories
+                        .OfType<Category>()
+                        .ToDictionary(item => item.Name);
+
                 foreach(Category sourceCategory in sourceCategories) {
-                    var targetCategory = target.Settings.Categories.get_Item(sourceCategory.Name);
-                    if(!targetCategories.Contains(targetCategory)) {
-                        targetCategories.Insert(targetCategory);
+                    if(targetAllCategories.TryGetValue(sourceCategory.Name, out var targetCategory)) {
+                        if(!targetCategories.Contains(targetCategory)) {
+                            targetCategories.Insert(targetCategory);
+                        }
                     }
                 }
             }
