@@ -260,7 +260,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <summary>
         /// ФОП_ВИС_Минимальная толщина воздуховода
         /// </summary>
-        public SharedParam VISMinimumDuctThickness { get; internal set; } = new SharedParam() { PropertyName = nameof(VISMinimumDuctThickness), Name = "ФОП_ВИС_Минимальная толщина воздуховода" };
+        public SharedParam VISMinDuctThickness { get; internal set; } = new SharedParam() { PropertyName = nameof(VISMinDuctThickness), Name = "ФОП_ВИС_Минимальная толщина воздуховода" };
         
         /// <summary>
         /// ФОП_ВИС_Наименование комбинированное
