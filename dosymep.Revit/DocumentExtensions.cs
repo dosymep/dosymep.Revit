@@ -66,6 +66,8 @@ namespace dosymep.Revit {
                 externalReference.LastSavedAbsolutePath = Path.Combine(Path.GetDirectoryName(rvtFileName), Path.GetFileName(externalReference.LastSavedAbsolutePath));
             }
 
+            // Удаляем атрибуты, которые мешают выгрузке (Только чтение)
+            File.SetAttributes(rvtFileName, FileAttributes.Normal);
             TransmissionData.WriteTransmissionData(rvtFileName, transData);
         }
 
