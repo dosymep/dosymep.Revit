@@ -1,0 +1,8 @@
+﻿<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Publish D2021" type="DotNetFolderPublish" factoryName="Publish to folder" folderName="Debug">
+    <riderPublish configuration="D2021" platform="x64" runtime="win-x64" target_folder="$USER_HOME$/AppData/Roaming/pyRevit/Extensions/BIM4Everyone.lib/dosymep_libs/2021" target_framework="net48" uuid_high="-4258967383099617293" uuid_low="-5876661468290819721" />
+    <method v="2">
+      <option name="Build" default="false" projectName="dosymep.Bim4Everyone" projectPath="file://$PROJECT_DIR$/dosymep.Bim4Everyone/dosymep.Bim4Everyone.csproj" />
+    </method>
+  </configuration>
+</component>
