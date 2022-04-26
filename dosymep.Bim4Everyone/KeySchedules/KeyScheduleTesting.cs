@@ -108,9 +108,9 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 .ToArray();
 
 #if D2020 || R2020 || D2021 || R2021
-            var keyParams = new[] { SystemParamsConfig.Instance.GetSystemParam(BuiltInParameter.REF_TABLE_ELEM_NAME) };
+            var keyParams = new[] { SystemParamsConfig.Instance.GetRevitParam(BuiltInParameter.REF_TABLE_ELEM_NAME) };
 #else
-            var keyParams = new[] { SystemParamsConfig.Instance.GetSystemParam(ParameterTypeId.RefTableElemName) };
+            var keyParams = new[] { SystemParamsConfig.Instance.GetRevitParam(ParameterTypeId.RefTableElemName) };
 #endif
 
             return keyParams.Union(_keyScheduleRule.RequiredParams).Where(item => !paramNames.Contains(item.Name));
@@ -124,9 +124,9 @@ namespace dosymep.Bim4Everyone.KeySchedules {
             CheckKeySchedule();
 
 #if D2020 || R2020 || D2021 || R2021
-            var keyParams = new[] { SystemParamsConfig.Instance.GetSystemParam(BuiltInParameter.REF_TABLE_ELEM_NAME) };
+            var keyParams = new[] { SystemParamsConfig.Instance.GetRevitParam(BuiltInParameter.REF_TABLE_ELEM_NAME) };
 #else
-            var keyParams = new[] { SystemParamsConfig.Instance.GetSystemParam(ParameterTypeId.RefTableElemName) };
+            var keyParams = new[] { SystemParamsConfig.Instance.GetRevitParam(ParameterTypeId.RefTableElemName) };
 #endif
 
             Element[] scheduleElements = GetScheduleElements().ToArray();

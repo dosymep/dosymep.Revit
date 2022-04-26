@@ -92,22 +92,22 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// <returns>Возвращает внутренние настройки проверки ключевых спецификаций.</returns>
         private KeyScheduleRuleInternal GetKeyScheduleRuleInternal() {
             Dictionary<string, RevitParam> propertySharedParams = SharedParamsConfig.Instance
-                .GetSharedParams()
+                .GetRevitParams()
                 .ToDictionary(item => item.PropertyName);
 
             Dictionary<string, RevitParam> propertyProjectParams = ProjectParamsConfig.Instance
-                .GetSharedParams()
+                .GetRevitParams()
                 .ToDictionary(item => item.PropertyName);
 
             var keyRevitParam = propertyProjectParams[KeyRevitParamName];
 
             var filledSharedParams = FilledSharedParamNames.Select(item => propertySharedParams[item]);
             var filledProjectParams = FilledProjectParamNames.Select(item => propertyProjectParams[item]);
-            var filledSystemParams = FilledSystemParams.Select(item => SystemParamsConfig.Instance.GetSystemParam(item));
+            var filledSystemParams = FilledSystemParams.Select(item => SystemParamsConfig.Instance.GetRevitParam(item));
 
             var requiredSharedParams = RequiredSharedParams.Select(item => propertySharedParams[item]);
             var requiredProjectParams = RequiredProjectParams.Select(item => propertyProjectParams[item]);
-            var requiredSystemParams = RequiredSystemParams.Select(item => SystemParamsConfig.Instance.GetSystemParam(item));
+            var requiredSystemParams = RequiredSystemParams.Select(item => SystemParamsConfig.Instance.GetRevitParam(item));
 
             return new KeyScheduleRuleInternal() {
                 KeyScheduleRule = this,

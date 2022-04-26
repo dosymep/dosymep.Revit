@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
 
+using dosymep.Bim4Everyone.SimpleServices;
+
 namespace dosymep.Bim4Everyone.SystemParams {
     /// <summary>
     /// Конфигурация системных параметров.
     /// </summary>
-    public class SystemParamsConfig : RevitParamsConfig {
+    public class SystemParamsConfig : RevitParamsConfig, ISystemParamsService {
         private readonly LanguageType? _languageType;
 
         /// <summary>
@@ -38,32 +40,55 @@ namespace dosymep.Bim4Everyone.SystemParams {
 #pragma warning restore CS1574 // XML comment has cref attribute that could not be resolved
 
 #if D2020 || R2020 || D2021 || R2021
-        /// <summary>
-        /// Возвращает экземпляр класса системного параметра.
-        /// </summary>
-        /// <param name="builtInParameter">Системный параметр.</param>
-        /// <returns>Возвращает экземпляр класса системного параметра.</returns>
-        public SystemParam GetSystemParam(BuiltInParameter builtInParameter) {
+        /// <inheritdoc/>
+        public SystemParam GetRevitParam(BuiltInParameter builtInParameter) {
             return new SystemParam(_languageType, builtInParameter);
         }
 
         /// <inheritdoc/>
-        public override IEnumerable<RevitParam> GetSharedParams() {
-            return Enum.GetValues(typeof(BuiltInParameter)).Cast<BuiltInParameter>().Select(item => GetSystemParam(item));
-        }
-#else
-        /// <summary>
-        /// Возвращает экземпляр класса системного параметра.
-        /// </summary>
-        /// <param name="forgeTypeId">Системный параметр.</param>
-        /// <returns>Возвращает экземпляр класса системного параметра.</returns>
-        public SystemParam GetSystemParam(ForgeTypeId forgeTypeId) {
-            return new SystemParam(_languageType, forgeTypeId);
+        public SystemParam GetRevitParam(Document document, BuiltInParameter systemParamId) {
+            return new SystemParam(_languageType, systemParamId);
         }
 
         /// <inheritdoc/>
-        public override IEnumerable<RevitParam> GetSharedParams() {            
-            return ParameterUtils.GetAllBuiltInParameters().Select(item => GetSystemParam(item));
+        public SystemParam GetRevitParam(BuiltInParameter systemParamId, LanguageType languageType) {
+            return new SystemParam(languageType, systemParamId);
+        }
+
+        /// <inheritdoc/>
+        public SystemParam GetRevitParam(Document document, BuiltInParameter systemParamId, LanguageType languageType) {
+            return new SystemParam(languageType, systemParamId);
+        }
+
+        /// <inheritdoc/>
+        public new IEnumerable<SystemParam> GetRevitParams() {
+            return Enum.GetValues(typeof(BuiltInParameter)).Cast<BuiltInParameter>()
+                .Select(item => GetRevitParam(item));
+        }
+#else
+        /// <inheritdoc/>
+        public SystemParam GetRevitParam(ForgeTypeId systemParamId) {
+            return new SystemParam(_languageType, systemParamId);
+        }
+
+        /// <inheritdoc/>
+        public SystemParam GetRevitParam(Document document, ForgeTypeId systemParamId) {
+            return new SystemParam(_languageType, systemParamId);
+        }
+
+        /// <inheritdoc/>
+        public SystemParam GetRevitParam(ForgeTypeId systemParamId, LanguageType languageType) {
+            return new SystemParam(languageType, systemParamId);
+        }
+
+        /// <inheritdoc/>
+        public SystemParam GetRevitParam(Document document, ForgeTypeId systemParamId, LanguageType languageType) {
+            return new SystemParam(languageType, systemParamId);
+        }
+
+        /// <inheritdoc/>
+        public new IEnumerable<SystemParam> GetRevitParams() {
+            return ParameterUtils.GetAllBuiltInParameters().Select(item => GetRevitParam(item));
         }
 #endif
 

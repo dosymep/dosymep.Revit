@@ -5,13 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using dosymep.Bim4Everyone.SimpleServices;
+
 using pyRevitLabs.Json;
 
 namespace dosymep.Bim4Everyone {
     /// <summary>
     /// Класс по работе с параметрами Revit.
     /// </summary>
-    public abstract class RevitParamsConfig {
+    public abstract class RevitParamsConfig : IRevitParamsService {
         /// <summary>
         /// Сохранение текущей конфигурации.
         /// </summary>
@@ -25,11 +27,8 @@ namespace dosymep.Bim4Everyone {
             File.WriteAllText(configPath, json);
         }
 
-        /// <summary>
-        /// Возвращает весь список настроек параметров.
-        /// </summary>
-        /// <returns>Возвращает весь список настроек параметров.</returns>
-        public virtual IEnumerable<RevitParam> GetSharedParams() {
+        /// <inheritdoc />
+        public IEnumerable<RevitParam> GetRevitParams() {
             return GetType().GetProperties().Select(item => item.GetValue(this)).OfType<RevitParam>().OrderBy(item => item.PropertyName);
         }
     }
