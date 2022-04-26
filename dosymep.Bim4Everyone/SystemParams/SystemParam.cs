@@ -9,11 +9,13 @@ using Autodesk.Revit.DB;
 
 using dosymep.Revit;
 
+using pyRevitLabs.Json;
+
 namespace dosymep.Bim4Everyone.SystemParams {
     /// <summary>
     /// Класс системного параметра.
     /// </summary>
-    public class SystemParam : RevitParam {        
+    public partial class SystemParam : RevitParam {
         private readonly LanguageType? _languageType;
 
 #if D2020 || R2020 || D2021 || R2021
@@ -31,6 +33,27 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// Системное наименование параметра.
         /// </summary>
         public BuiltInParameter SystemParamId { get; }
+
+        /// <inheritdoc/>
+        public override string Name {
+            get {
+                if(_languageType.HasValue) {
+                    return LabelUtils.GetLabelFor(SystemParamId, _languageType.Value);
+                }
+
+                return LabelUtils.GetLabelFor(SystemParamId);
+            }
+            set => throw new NotSupportedException(
+                $"Для установки имени параметра нужно использовать свойство \"{nameof(BuiltInParameter)}\".");
+        }
+
+        /// <inheritdoc/>
+        [JsonIgnore]
+        public override string PropertyName {
+            get => Enum.GetName(typeof(BuiltInParameter), SystemParamId);
+            internal set =>
+                throw new NotSupportedException("Установка имени свойства для системного параметра запрещено.");
+        }
 #else
         /// <summary>
         /// Создает экземпляр класса системного параметра.
@@ -46,29 +69,34 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// Системное наименование параметра.
         /// </summary>
         public ForgeTypeId SystemParamId { get; }
-#endif
 
         /// <inheritdoc/>
         public override string Name {
             get {
-#if D2020 || R2020 || D2021 || R2021
-                if(_languageType.HasValue) {
-                    return LabelUtils.GetLabelFor(SystemParamId, _languageType.Value);
-                }
-
-                return LabelUtils.GetLabelFor(SystemParamId);
-
-#else
                 if(_languageType.HasValue) {
                     return LabelUtils.GetLabelForBuiltInParameter(SystemParamId, _languageType.Value);
                 }
-                
+
                 return LabelUtils.GetLabelForBuiltInParameter(SystemParamId);
-#endif
             }
-            
-            set => throw new NotSupportedException($"Для установки имени параметра нужно использовать свойство \"{nameof(BuiltInParameter)}\".");
+
+            set => throw new NotSupportedException(
+                $"Для установки имени параметра нужно использовать свойство \"{nameof(BuiltInParameter)}\".");
         }
+
+        /// <inheritdoc/>
+        [JsonIgnore]
+        public override string PropertyName {
+            get => Enum.GetName(typeof(BuiltInParameter), ParameterUtils.GetBuiltInParameter(SystemParamId));
+            internal set =>
+                throw new NotSupportedException("Установка имени свойства для системного параметра запрещено.");
+        }
+#endif
+
+        /// <inheritdoc/>
+        [JsonIgnore]
+        public override StorageType SharedParamType =>
+            _paramTypes.TryGetValue(PropertyName, out StorageType value) ? value : StorageType.None;
 
         /// <inheritdoc/>
         public override bool IsExistsParam(Document document) {

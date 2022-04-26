@@ -78,7 +78,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Reference Include="PresentationCore"/>
+        <Reference Include="PresentationCore" />
         <PackageReference Include="Microsoft.CSharp" Version="4.7.0">
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
@@ -97,6 +97,12 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\dosymep.Revit\dosymep.Revit.csproj"/>
+        <ProjectReference Include="..\dosymep.Revit\dosymep.Revit.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="SystemParams\SystemParam.ParamTypes.cs">
+        <DependentUpon>SystemParam.cs</DependentUpon>
+      </Compile>
     </ItemGroup>
 </Project>
