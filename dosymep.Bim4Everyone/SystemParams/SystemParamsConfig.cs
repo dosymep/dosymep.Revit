@@ -9,6 +9,7 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
 
 using dosymep.Bim4Everyone.SimpleServices;
+using dosymep.Revit;
 
 namespace dosymep.Bim4Everyone.SystemParams {
     /// <summary>
@@ -47,7 +48,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
         /// <inheritdoc/>
         public SystemParam GetRevitParam(Document document, BuiltInParameter systemParamId) {
-            return new SystemParam(_languageType, systemParamId);
+            return new SystemParam(_languageType, document.GetStorageType(systemParamId), systemParamId);
         }
 
         /// <inheritdoc/>
@@ -57,12 +58,13 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
         /// <inheritdoc/>
         public SystemParam GetRevitParam(Document document, BuiltInParameter systemParamId, LanguageType languageType) {
-            return new SystemParam(languageType, systemParamId);
+            return new SystemParam(languageType, document.GetStorageType(systemParamId), systemParamId);
         }
 
         /// <inheritdoc/>
         public new IEnumerable<SystemParam> GetRevitParams() {
-            return Enum.GetValues(typeof(BuiltInParameter)).Cast<BuiltInParameter>()
+            return Enum.GetValues(typeof(BuiltInParameter))
+                .Cast<BuiltInParameter>()
                 .Select(item => GetRevitParam(item));
         }
 #else
@@ -73,7 +75,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
         /// <inheritdoc/>
         public SystemParam GetRevitParam(Document document, ForgeTypeId systemParamId) {
-            return new SystemParam(_languageType, systemParamId);
+            return new SystemParam(_languageType, document.GetStorageType(systemParamId), systemParamId);
         }
 
         /// <inheritdoc/>
@@ -83,7 +85,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
         /// <inheritdoc/>
         public SystemParam GetRevitParam(Document document, ForgeTypeId systemParamId, LanguageType languageType) {
-            return new SystemParam(languageType, systemParamId);
+            return new SystemParam(languageType, document.GetStorageType(systemParamId), systemParamId);
         }
 
         /// <inheritdoc/>

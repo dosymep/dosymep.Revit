@@ -16,17 +16,30 @@ namespace dosymep.Bim4Everyone.SystemParams {
     /// Класс системного параметра.
     /// </summary>
     public partial class SystemParam : RevitParam {
+        private readonly StorageType? _storageType;
         private readonly LanguageType? _languageType;
-
 #if D2020 || R2020 || D2021 || R2021
         /// <summary>
         /// Создает экземпляр класса системного параметра.
         /// </summary>
         /// <param name="languageType">Язык системы.</param>
-        /// <param name="builtInParameter">Системный параметр.</param>
-        internal SystemParam(LanguageType? languageType, BuiltInParameter builtInParameter) {
+        /// <param name="systemParamId">Системный параметр.</param>
+        internal SystemParam(LanguageType? languageType, BuiltInParameter systemParamId) {
             _languageType = languageType;
-            SystemParamId = builtInParameter;
+            SystemParamId = systemParamId;
+        }
+
+        /// <summary>
+        /// Создает экземпляр класса системного параметра.
+        /// </summary>
+        /// <param name="languageType">Язык системы.</param>
+        /// <param name="storageType">Тип параметра.</param>
+        /// <param name="systemParamId">Системный параметр.</param>
+        internal SystemParam(LanguageType? languageType, StorageType storageType, BuiltInParameter systemParamId) {
+            _languageType = languageType;
+            _storageType = storageType;
+
+            SystemParamId = systemParamId;
         }
 
         /// <summary>
@@ -64,6 +77,19 @@ namespace dosymep.Bim4Everyone.SystemParams {
             _languageType = languageType;
             SystemParamId = forgeTypeId;
         }
+        
+        /// <summary>
+        /// Создает экземпляр класса системного параметра.
+        /// </summary>
+        /// <param name="languageType">Язык системы.</param>
+        /// <param name="storageType">Тип параметра.</param>
+        /// <param name="systemParamId">Системный параметр.</param>
+        internal SystemParam(LanguageType? languageType, StorageType storageType, ForgeTypeId systemParamId) {
+            _languageType = languageType;
+            _storageType = storageType;
+            
+            SystemParamId = systemParamId;
+        }
 
         /// <summary>
         /// Системное наименование параметра.
@@ -95,8 +121,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
         /// <inheritdoc/>
         [JsonIgnore]
-        public override StorageType SharedParamType =>
-            _paramTypes.TryGetValue(PropertyName, out StorageType value) ? value : StorageType.None;
+        public override StorageType SharedParamType => GetStorageType();
 
         /// <inheritdoc/>
         public override bool IsExistsParam(Document document) {
@@ -130,6 +155,15 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// <inheritdoc/>
         public override Parameter GetParam(Element element) {
             return element.GetParam(SystemParamId);
+        }
+
+
+        private StorageType GetStorageType() {
+            if(_storageType == null) {
+                return _paramTypes.TryGetValue(PropertyName, out StorageType value) ? value : StorageType.None;
+            }
+
+            return _storageType.Value;
         }
     }
 }
