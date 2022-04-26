@@ -7,13 +7,16 @@ using System.Threading.Tasks;
 
 using Autodesk.Revit.DB;
 
+using dosymep.Bim4Everyone.SimpleServices;
+using dosymep.Revit;
+
 using pyRevitLabs.Json;
 
 namespace dosymep.Bim4Everyone.SharedParams {
     /// <summary>
     /// Конфигурация общих параметров.
     /// </summary>
-    public class SharedParamsConfig : RevitParamsConfig {
+    public class SharedParamsConfig : RevitParamsConfig, ISharedParamsService {
         /// <summary>
         /// Текущее состояние конфигурации.
         /// </summary>
@@ -278,6 +281,63 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public SharedParam VISEconomicFunction { get; internal set; } = new SharedParam() { PropertyName = nameof(VISEconomicFunction), Name = "ФОП_ВИС_Экономическая функция" };
 
         #endregion
+        
+        /// <inheritdoc />
+        public SharedParam GetRevitParam(Document document, string revitParamName) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(string.IsNullOrEmpty(revitParamName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(revitParamName));
+            }
+
+            return GetRevitParam(document, revitParamName, document.GetSharedParam(revitParamName));
+        }
+
+        /// <inheritdoc />
+        public SharedParam GetRevitParam(Document document, ParameterElement revitParamElement) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(revitParamElement == null) {
+                throw new ArgumentNullException(nameof(revitParamElement));
+            }
+            
+            return GetRevitParam(document, revitParamElement.Name, revitParamElement);
+        }
+        
+        /// <inheritdoc />
+        public SharedParam GetRevitParam(Document document, string propertyName, string revitParamName) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(string.IsNullOrEmpty(revitParamName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(revitParamName));
+            }
+
+            return GetRevitParam(document, propertyName, document.GetSharedParam(revitParamName));
+        }
+
+        /// <inheritdoc />
+        public SharedParam GetRevitParam(Document document, string propertyName, ParameterElement revitParamElement) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(revitParamElement == null) {
+                throw new ArgumentNullException(nameof(revitParamElement));
+            }
+            
+            return new SharedParam() {PropertyName = propertyName, Name = revitParamElement.Name};
+        }
+
+        /// <inheritdoc />
+        public new IEnumerable<SharedParam> GetRevitParams() {
+            return base.GetRevitParams().OfType<SharedParam>();
+        }
 
         /// <summary>
         /// Загрузка текущей конфигурации.

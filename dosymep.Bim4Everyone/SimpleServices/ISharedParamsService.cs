@@ -14,7 +14,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// </summary>
         /// <param name="document">Документ общего параметра.</param>
         /// <param name="revitParamName">Наименование общего параметра.</param>
-        /// <returns></returns>
+        /// <returns>Возвращает общий параметр.</returns>
         SharedParam GetRevitParam(Document document, string revitParamName);
         
         /// <summary>
@@ -22,8 +22,26 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// </summary>
         /// <param name="document">Документ общего параметра.</param>
         /// <param name="revitParamElement">Элемент общего параметра.</param>
-        /// <returns></returns>
+        /// <returns>Возвращает общий параметр.</returns>
         SharedParam GetRevitParam(Document document, ParameterElement revitParamElement);
+
+        /// <summary>
+        /// Возвращает общий параметр.
+        /// </summary>
+        /// <param name="document">Документ общего параметра.</param>
+        /// <param name="propertyName">Уникальное название параметра.</param>
+        /// <param name="revitParamName">Наименование общего параметра.</param>
+        /// <returns>Возвращает общий параметр.</returns>
+        SharedParam GetRevitParam(Document document, string propertyName, string revitParamName);
+
+        /// <summary>
+        /// Возвращает общий параметр.
+        /// </summary>
+        /// <param name="document">Документ общего параметра.</param>
+        /// <param name="propertyName">Уникальное название параметра.</param>
+        /// <param name="revitParamElement">Элемент общего параметра.</param>
+        /// <returns>Возвращает общий параметр.</returns>
+        SharedParam GetRevitParam(Document document, string propertyName, ParameterElement revitParamElement);
         
         /// <summary>
         /// Возвращает весь список общих параметров.
