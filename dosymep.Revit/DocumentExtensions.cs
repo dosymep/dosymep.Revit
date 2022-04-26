@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 using dosymep.Revit.Transmissions;
 
+using InvalidOperationException = Autodesk.Revit.Exceptions.InvalidOperationException;
+
 namespace dosymep.Revit {
     /// <summary>
     /// Расширения для документа Revit.
@@ -394,5 +396,47 @@ namespace dosymep.Revit {
 
             return transaction;
         }
+
+        /// <summary>
+        /// Возвращает тип системного параметра.
+        /// </summary>
+        /// <param name="document">Документ Revit.</param>
+        /// <param name="builtInParameter">Системный параметр документа.</param>
+        /// <returns>Возвращает тип системного параметра.</returns>
+        public static Autodesk.Revit.DB.StorageType GetStorageType(this Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.BuiltInParameter builtInParameter) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            try {
+                return document.get_TypeOfStorage(builtInParameter);
+            } catch(InvalidOperationException) {
+                return Autodesk.Revit.DB.StorageType.None;
+            }
+        }
+        
+    #if D2022 || R2022
+        /// <summary>
+        /// Возвращает тип системного параметра.
+        /// </summary>
+        /// <param name="document">Документ Revit.</param>
+        /// <param name="forgeTypeId">Системный параметр документа.</param>
+        /// <returns>Возвращает тип системного параметра.</returns>
+        public static Autodesk.Revit.DB.StorageType GetStorageType(this Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.ForgeTypeId forgeTypeId) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(forgeTypeId == null) {
+                throw new ArgumentNullException(nameof(forgeTypeId));
+            }
+
+            try {
+                return document.GetTypeOfStorage(forgeTypeId);
+            } catch(InvalidOperationException) {
+                return Autodesk.Revit.DB.StorageType.None;
+            }
+        }
+    #endif
     }
 }
