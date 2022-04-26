@@ -15,6 +15,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
     /// Класс параметров проекта Revit.
     /// </summary>
     public class ProjectParam : RevitParam {
+        private readonly StorageType? _storageType;
+
         /// <summary>
         /// Содержит все описания параметров проекта.
         /// </summary>
@@ -52,7 +54,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// <summary>
         /// Содержит все типы параметров проекта.
         /// </summary>
-        private static readonly Dictionary<string, StorageType> _projectParamTypes =
+        private static readonly Dictionary<string, StorageType> _paramTypes =
             new Dictionary<string, StorageType>() {
                 {nameof(ProjectParamsConfig.ViewNumberOnSheet), StorageType.String},
                 {nameof(ProjectParamsConfig.WithFullSheetNumber), StorageType.Integer},
@@ -89,14 +91,21 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         internal ProjectParam() { }
 
+        /// <summary>
+        /// Конструктор класса параметра проекта.
+        /// </summary>
+        /// <param name="storageType">Тип параметра проекта.</param>
+        internal ProjectParam(StorageType storageType) {
+            _storageType = storageType;
+        }
+
         /// <inheritdoc/>
         [JsonIgnore]
         public override string Description => _description.TryGetValue(PropertyName, out string value) ? value : null;
 
         /// <inheritdoc/>
         [JsonIgnore]
-        public override StorageType SharedParamType =>
-            _projectParamTypes.TryGetValue(PropertyName, out StorageType value) ? value : StorageType.None;
+        public override StorageType SharedParamType => GetStorageType();
 
         /// <inheritdoc/>
         public override bool IsExistsParam(Document document) {
@@ -148,6 +157,14 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             }
 
             return param;
+        }
+        
+        private StorageType GetStorageType() {
+            if(_storageType == null) {
+                return _paramTypes.TryGetValue(PropertyName, out StorageType value) ? value : StorageType.None;
+            }
+
+            return _storageType.Value;
         }
     }
 }
