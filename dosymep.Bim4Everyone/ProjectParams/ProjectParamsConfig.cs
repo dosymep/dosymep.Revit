@@ -5,13 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Autodesk.Revit.DB;
+
+using dosymep.Bim4Everyone.SimpleServices;
+using dosymep.Revit;
+
 using pyRevitLabs.Json;
 
 namespace dosymep.Bim4Everyone.ProjectParams {
     /// <summary>
     /// Конфигурация параметров проекта.
     /// </summary>
-    public class ProjectParamsConfig : RevitParamsConfig {
+    public class ProjectParamsConfig : RevitParamsConfig, IProjectParamsService {
         /// <summary>
         /// Текущее состояние конфигурации.
         /// </summary>
@@ -162,6 +167,63 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 #endif
 
         #endregion
+        
+        /// <inheritdoc />
+        public ProjectParam GetRevitParam(Document document, string revitParamName) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(string.IsNullOrEmpty(revitParamName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(revitParamName));
+            }
+
+            return GetRevitParam(document, revitParamName, document.GetProjectParam(revitParamName));
+        }
+
+        /// <inheritdoc />
+        public ProjectParam GetRevitParam(Document document, ParameterElement revitParamElement) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(revitParamElement == null) {
+                throw new ArgumentNullException(nameof(revitParamElement));
+            }
+            
+            return GetRevitParam(document, revitParamElement.Name, revitParamElement);
+        }
+        
+        /// <inheritdoc />
+        public ProjectParam GetRevitParam(Document document, string propertyName, string revitParamName) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(string.IsNullOrEmpty(revitParamName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(revitParamName));
+            }
+
+            return GetRevitParam(document, propertyName, document.GetSharedParam(revitParamName));
+        }
+
+        /// <inheritdoc />
+        public ProjectParam GetRevitParam(Document document, string propertyName, ParameterElement revitParamElement) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(revitParamElement == null) {
+                throw new ArgumentNullException(nameof(revitParamElement));
+            }
+            
+            return new ProjectParam() {PropertyName = propertyName, Name = revitParamElement.Name};
+        }
+
+        /// <inheritdoc />
+        public new IEnumerable<ProjectParam> GetRevitParams() {
+            return base.GetRevitParams().OfType<ProjectParam>();
+        }
 
         /// <summary>
         /// Загрузка текущей конфигурации.
