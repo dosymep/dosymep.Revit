@@ -330,8 +330,32 @@ namespace dosymep.Bim4Everyone.SharedParams {
             if(revitParamElement == null) {
                 throw new ArgumentNullException(nameof(revitParamElement));
             }
+
+            var binding = document.GetParameterBindings()
+                .FirstOrDefault(item => item.Definition.Name.Equals(revitParamElement.Name));
             
-            return new SharedParam() {PropertyName = propertyName, Name = revitParamElement.Name};
+            if(binding.Binding == null) {
+                return new SharedParam(StorageType.None) {PropertyName = propertyName, Name = revitParamElement.Name};
+            }
+            
+            var categories = binding.Binding.GetCategories().Select(item => item.Id).ToArray();
+            var element = new FilteredElementCollector(document)
+                .WherePasses(new ElementMulticategoryFilter(categories))
+                .FirstElement();
+            
+            if(element == null) {
+                return new SharedParam(StorageType.None) {PropertyName = propertyName, Name = revitParamElement.Name};
+            }
+
+            var param = element.GetParameters(revitParamElement.Name)
+                .Where(item => item.IsShared)
+                .FirstOrDefault();
+
+            if(param == null) {
+                return new SharedParam(StorageType.None) {PropertyName = propertyName, Name = revitParamElement.Name};
+            }
+            
+            return new SharedParam(param.StorageType) {PropertyName = propertyName, Name = revitParamElement.Name};
         }
 
         /// <inheritdoc />
