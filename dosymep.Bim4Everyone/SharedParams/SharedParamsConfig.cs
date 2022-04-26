@@ -294,20 +294,15 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <param name="configPath">Путь до конфигурации.</param>
         /// <remarks>Возвращает конфигурацию по умолчанию если был найден переданный файл.</remarks>
         public static SharedParamsConfig Load(string configPath) {
-            return File.Exists(configPath) ? JsonConvert.DeserializeObject<SharedParamsConfig>(File.ReadAllText(configPath)) : GetDefaultConfg();
+            return File.Exists(configPath) ? JsonConvert.DeserializeObject<SharedParamsConfig>(File.ReadAllText(configPath)) : GetDefaultConfig();
         }
 
         /// <summary>
         /// Возвращает конфигурацию по умолчанию.
         /// </summary>
         /// <returns>Возвращает конфигурацию по умолчанию.</returns>
-        public static SharedParamsConfig GetDefaultConfg() {
+        public static SharedParamsConfig GetDefaultConfig() {
             return new SharedParamsConfig();
-        }
-
-        /// <inheritdoc/>
-        public override void Save(string configPath) {
-            base.Save(configPath);
         }
     }
 }

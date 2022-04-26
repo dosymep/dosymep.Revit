@@ -178,14 +178,14 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// <param name="configPath">Путь до конфигурации.</param>
         /// <remarks>Возвращает конфигурацию по умолчанию если был найден переданный файл.</remarks>
         public static ProjectParamsConfig Load(string configPath) {
-            return File.Exists(configPath) ? JsonConvert.DeserializeObject<ProjectParamsConfig>(File.ReadAllText(configPath)) : GetDefaultConfg();
+            return File.Exists(configPath) ? JsonConvert.DeserializeObject<ProjectParamsConfig>(File.ReadAllText(configPath)) : GetDefaultConfig();
         }
 
         /// <summary>
         /// Возвращает конфигурацию по умолчанию.
         /// </summary>
         /// <returns>Возвращает конфигурацию по умолчанию.</returns>
-        public static ProjectParamsConfig GetDefaultConfg() {
+        public static ProjectParamsConfig GetDefaultConfig() {
             return new ProjectParamsConfig();
         }
     }

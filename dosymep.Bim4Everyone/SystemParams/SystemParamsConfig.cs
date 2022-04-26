@@ -33,7 +33,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// <summary>
         /// Текущее состояние конфигурации.
         /// </summary>
-        /// <remarks>Перед использованием нужно вызвать <see cref="LoadInstance(Autodesk.Revit.ApplicationServices.LanguageType)"/></remarks>
+        /// <remarks>Перед использованием нужно вызвать <see cref="LoadInstance(Autodesk.Revit.ApplicationServices.LanguageType?)"/></remarks>
         public static SystemParamsConfig Instance { get; internal set; }
 #pragma warning restore CS1574 // XML comment has cref attribute that could not be resolved
 
@@ -77,7 +77,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// </summary>
         /// <param name="languageType">Язык системы.</param>
         public static void LoadInstance(LanguageType? languageType) {
-            Instance = languageType.HasValue ? Load(languageType) : GetDefaultConfg();
+            Instance = languageType.HasValue ? Load(languageType) : GetDefaultConfig();
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// Возвращает конфигурацию по умолчанию.
         /// </summary>
         /// <returns>Возвращает конфигурацию по умолчанию.</returns>
-        public static SystemParamsConfig GetDefaultConfg() {
+        public static SystemParamsConfig GetDefaultConfig() {
             return new SystemParamsConfig();
         }
     }
