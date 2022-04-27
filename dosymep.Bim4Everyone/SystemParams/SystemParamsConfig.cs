@@ -62,7 +62,14 @@ namespace dosymep.Bim4Everyone.SystemParams {
         }
 
         /// <inheritdoc/>
-        public new IEnumerable<SystemParam> GetRevitParams() {
+        IEnumerable<SystemParam> ISystemParamsService.GetRevitParams() {
+            return Enum.GetValues(typeof(BuiltInParameter))
+                .Cast<BuiltInParameter>()
+                .Select(item => GetRevitParam(item));
+        }
+
+        /// <inheritdoc/>
+        public override IEnumerable<RevitParam> GetRevitParams() {
             return Enum.GetValues(typeof(BuiltInParameter))
                 .Cast<BuiltInParameter>()
                 .Select(item => GetRevitParam(item));

@@ -359,7 +359,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         }
 
         /// <inheritdoc />
-        public new IEnumerable<SharedParam> GetRevitParams() {
+        IEnumerable<SharedParam> ISharedParamsService.GetRevitParams() {
             return base.GetRevitParams().OfType<SharedParam>();
         }
 

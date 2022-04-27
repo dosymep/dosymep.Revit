@@ -245,7 +245,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         }
 
         /// <inheritdoc />
-        public new IEnumerable<ProjectParam> GetRevitParams() {
+        IEnumerable<ProjectParam> IProjectParamsService.GetRevitParams() {
             return base.GetRevitParams().OfType<ProjectParam>();
         }
 
