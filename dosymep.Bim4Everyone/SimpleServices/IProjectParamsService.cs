@@ -8,7 +8,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
     /// <summary>
     /// Сервис предоставляет доступ к параметрам проекта.
     /// </summary>
-    public interface IProjectParamsService {
+    public interface IProjectParamsService : IRevitParamsService {
         /// <summary>
         /// Возвращает параметр проекта.
         /// </summary>
