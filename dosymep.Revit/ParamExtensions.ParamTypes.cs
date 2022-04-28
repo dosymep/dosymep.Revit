@@ -1,161 +1,9 @@
 ﻿using System;
+
 using Autodesk.Revit.DB;
 
 namespace dosymep.Revit {
     public partial class ParamExtensions {
-        /// <summary>
-        /// Возвращает тип параметра.
-        /// </summary>
-        /// <param name="definition">Определение параметра.</param>
-        /// <returns>Возвращает тип параметра.</returns>
-        /// <exception cref="System.ArgumentOutOfRangeException">Выбрасывает исключение если не был сопоставлен тип данных к параметру.</exception>
-        public static StorageType GetStorageType(this Definition definition) {
-            if(definition == null) {
-                throw new ArgumentNullException(nameof(definition));
-            }
-
-            switch(definition.ParameterType) {
-                case ParameterType.Invalid: return StorageType.String;
-                case ParameterType.Text: return StorageType.String;
-                case ParameterType.Integer: return StorageType.Integer;
-                case ParameterType.Number: return StorageType.Double;
-                case ParameterType.Length: return StorageType.Double;
-                case ParameterType.Area: return StorageType.Double;
-                case ParameterType.Volume: return StorageType.Double;
-                case ParameterType.Angle: return StorageType.Double;
-                case ParameterType.URL: return StorageType.String;
-                case ParameterType.Material: return StorageType.ElementId;
-                case ParameterType.YesNo: return StorageType.Integer;
-                case ParameterType.Force: return StorageType.Double;
-                case ParameterType.LinearForce: return StorageType.Double;
-                case ParameterType.AreaForce: return StorageType.Double;
-                case ParameterType.Moment: return StorageType.Double;
-                case ParameterType.NumberOfPoles: return StorageType.Integer;
-                case ParameterType.FixtureUnit: return StorageType.Double;
-                case ParameterType.LoadClassification: return StorageType.ElementId;
-                case ParameterType.Image: return StorageType.ElementId;
-                case ParameterType.MultilineText: return StorageType.String;
-                case ParameterType.HVACDensity: return StorageType.Double;
-                case ParameterType.HVACEnergy: return StorageType.Double;
-                case ParameterType.HVACFriction: return StorageType.Double;
-                case ParameterType.HVACPower: return StorageType.Double;
-                case ParameterType.HVACPowerDensity: return StorageType.Double;
-                case ParameterType.HVACPressure: return StorageType.Double;
-                case ParameterType.HVACTemperature: return StorageType.Double;
-                case ParameterType.HVACVelocity: return StorageType.Double;
-                case ParameterType.HVACAirflow: return StorageType.Double;
-                case ParameterType.HVACDuctSize: return StorageType.Double;
-                case ParameterType.HVACCrossSection: return StorageType.Double;
-                case ParameterType.HVACHeatGain: return StorageType.Double;
-                case ParameterType.ElectricalCurrent: return StorageType.Double;
-                case ParameterType.ElectricalPotential: return StorageType.Double;
-                case ParameterType.ElectricalFrequency: return StorageType.Double;
-                case ParameterType.ElectricalIlluminance: return StorageType.Double;
-                case ParameterType.ElectricalLuminousFlux: return StorageType.Double;
-                case ParameterType.ElectricalPower: return StorageType.Double;
-                case ParameterType.HVACRoughness: return StorageType.Double;
-                case ParameterType.ElectricalApparentPower: return StorageType.Double;
-                case ParameterType.ElectricalPowerDensity: return StorageType.Double;
-                case ParameterType.PipingDensity: return StorageType.Double;
-                case ParameterType.PipingFlow: return StorageType.Double;
-                case ParameterType.PipingFriction: return StorageType.Double;
-                case ParameterType.PipingPressure: return StorageType.Double;
-                case ParameterType.PipingTemperature: return StorageType.Double;
-                case ParameterType.PipingVelocity: return StorageType.Double;
-                case ParameterType.PipingViscosity: return StorageType.Double;
-                case ParameterType.PipeSize: return StorageType.Double;
-                case ParameterType.PipingRoughness: return StorageType.Double;
-                case ParameterType.Stress: return StorageType.Double;
-                case ParameterType.UnitWeight: return StorageType.Double;
-                case ParameterType.ThermalExpansion: return StorageType.Double;
-                case ParameterType.LinearMoment: return StorageType.Double;
-                case ParameterType.ForcePerLength: return StorageType.Double;
-                case ParameterType.ForceLengthPerAngle: return StorageType.Double;
-                case ParameterType.LinearForcePerLength: return StorageType.Double;
-                case ParameterType.LinearForceLengthPerAngle: return StorageType.Double;
-                case ParameterType.AreaForcePerLength: return StorageType.Double;
-                case ParameterType.PipingVolume: return StorageType.Double;
-                case ParameterType.HVACViscosity: return StorageType.Double;
-                case ParameterType.HVACCoefficientOfHeatTransfer: return StorageType.Double;
-                case ParameterType.HVACAirflowDensity: return StorageType.Double;
-                case ParameterType.Slope: return StorageType.Double;
-                case ParameterType.HVACCoolingLoad: return StorageType.Double;
-                case ParameterType.HVACCoolingLoadDividedByArea: return StorageType.Double;
-                case ParameterType.HVACCoolingLoadDividedByVolume: return StorageType.Double;
-                case ParameterType.HVACHeatingLoad: return StorageType.Double;
-                case ParameterType.HVACHeatingLoadDividedByArea: return StorageType.Double;
-                case ParameterType.HVACHeatingLoadDividedByVolume: return StorageType.Double;
-                case ParameterType.HVACAirflowDividedByVolume: return StorageType.Double;
-                case ParameterType.HVACAirflowDividedByCoolingLoad: return StorageType.Double;
-                case ParameterType.HVACAreaDividedByCoolingLoad: return StorageType.Double;
-                case ParameterType.WireSize: return StorageType.Double;
-                case ParameterType.HVACSlope: return StorageType.Double;
-                case ParameterType.PipingSlope: return StorageType.Double;
-                case ParameterType.Currency: return StorageType.Double;
-                case ParameterType.ElectricalEfficacy: return StorageType.Double;
-                case ParameterType.ElectricalWattage: return StorageType.Double;
-                case ParameterType.ColorTemperature: return StorageType.Double;
-                case ParameterType.ElectricalLuminousIntensity: return StorageType.Double;
-                case ParameterType.ElectricalLuminance: return StorageType.Double;
-                case ParameterType.HVACAreaDividedByHeatingLoad: return StorageType.Double;
-                case ParameterType.HVACFactor: return StorageType.Double;
-                case ParameterType.ElectricalTemperature: return StorageType.Double;
-                case ParameterType.ElectricalCableTraySize: return StorageType.Double;
-                case ParameterType.ElectricalConduitSize: return StorageType.Double;
-                case ParameterType.ReinforcementVolume: return StorageType.Double;
-                case ParameterType.ReinforcementLength: return StorageType.Double;
-                case ParameterType.ElectricalDemandFactor: return StorageType.Double;
-                case ParameterType.HVACDuctInsulationThickness: return StorageType.Double;
-                case ParameterType.HVACDuctLiningThickness: return StorageType.Double;
-                case ParameterType.PipeInsulationThickness: return StorageType.Double;
-                case ParameterType.HVACThermalResistance: return StorageType.Double;
-                case ParameterType.HVACThermalMass: return StorageType.Double;
-                case ParameterType.Acceleration: return StorageType.Double;
-                case ParameterType.BarDiameter: return StorageType.Double;
-                case ParameterType.CrackWidth: return StorageType.Double;
-                case ParameterType.DisplacementDeflection: return StorageType.Double;
-                case ParameterType.Energy: return StorageType.Double;
-                case ParameterType.StructuralFrequency: return StorageType.Double;
-                case ParameterType.Mass: return StorageType.Double;
-                case ParameterType.MassPerUnitLength: return StorageType.Double;
-                case ParameterType.MomentOfInertia: return StorageType.Double;
-                case ParameterType.SurfaceArea: return StorageType.Double;
-                case ParameterType.Period: return StorageType.Double;
-                case ParameterType.Pulsation: return StorageType.Double;
-                case ParameterType.ReinforcementArea: return StorageType.Double;
-                case ParameterType.ReinforcementAreaPerUnitLength: return StorageType.Double;
-                case ParameterType.ReinforcementCover: return StorageType.Double;
-                case ParameterType.ReinforcementSpacing: return StorageType.Double;
-                case ParameterType.Rotation: return StorageType.Double;
-                case ParameterType.SectionArea: return StorageType.Double;
-                case ParameterType.SectionDimension: return StorageType.Double;
-                case ParameterType.SectionModulus: return StorageType.Double;
-                case ParameterType.SectionProperty: return StorageType.Double;
-                case ParameterType.StructuralVelocity: return StorageType.Double;
-                case ParameterType.WarpingConstant: return StorageType.Double;
-                case ParameterType.Weight: return StorageType.Double;
-                case ParameterType.WeightPerUnitLength: return StorageType.Double;
-                case ParameterType.HVACThermalConductivity: return StorageType.Double;
-                case ParameterType.HVACSpecificHeat: return StorageType.Double;
-                case ParameterType.HVACSpecificHeatOfVaporization: return StorageType.Double;
-                case ParameterType.HVACPermeability: return StorageType.Double;
-                case ParameterType.ElectricalResistivity: return StorageType.Double;
-                case ParameterType.MassDensity: return StorageType.Double;
-                case ParameterType.MassPerUnitArea: return StorageType.Double;
-                case ParameterType.PipeDimension: return StorageType.Double;
-                case ParameterType.PipeMass: return StorageType.Double;
-                case ParameterType.PipeMassPerUnitLength: return StorageType.Double;
-                case ParameterType.HVACTemperatureDifference: return StorageType.Double;
-                case ParameterType.PipingTemperatureDifference: return StorageType.Double;
-                case ParameterType.ElectricalTemperatureDifference: return StorageType.Double;
-                case ParameterType.TimeInterval: return StorageType.Double;
-                case ParameterType.Speed: return StorageType.Double;
-                case ParameterType.FamilyType: return StorageType.ElementId;
-                default:
-                    throw new System.ArgumentOutOfRangeException();
-            }
-        }
-
         /// <summary>
         /// Возвращает тип параметра.
         /// </summary>
@@ -390,11 +238,11 @@ namespace dosymep.Revit {
                 case BuiltInParameter.ENERGY_ANALYSIS_ADVANCED_OPTIONS: return StorageType.None;
                 case BuiltInParameter.RBS_ENERGY_ANALYSIS_MODE: return StorageType.Integer;
 #if D2020 || R2020 || D2021 || R2021
-                case BuiltInParameter
-                    .RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SURFACE_INDENTIFICATION_RESOLUTION:
-                    return StorageType.Double;
-                case BuiltInParameter.RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SPACE_INDENTIFICATION_RESOLUTION:
-                    return StorageType.Double;
+                        case BuiltInParameter
+                            .RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SURFACE_INDENTIFICATION_RESOLUTION:
+                            return StorageType.Double;
+                        case BuiltInParameter.RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SPACE_INDENTIFICATION_RESOLUTION:
+                            return StorageType.Double;
 #endif
                 case BuiltInParameter.FAMILY_ROUNDCONNECTOR_DIMENSIONTYPE: return StorageType.Integer;
                 case BuiltInParameter.FAM_PROFILE_DEFINITION: return StorageType.Integer;
@@ -3452,7 +3300,161 @@ namespace dosymep.Revit {
             }
         }
 
-#if D2022 || R2022
+#if D2020 || R2020 || D2021 || R2021
+        /// <summary>
+        /// Возвращает тип параметра.
+        /// </summary>
+        /// <param name="definition">Определение параметра.</param>
+        /// <returns>Возвращает тип параметра.</returns>
+        /// <exception cref="System.ArgumentOutOfRangeException">Выбрасывает исключение если не был сопоставлен тип данных к параметру.</exception>
+        public static StorageType GetStorageType(this Definition definition) {
+            if(definition == null) {
+                throw new ArgumentNullException(nameof(definition));
+            }
+
+            switch(definition.ParameterType) {
+                case ParameterType.Invalid: return StorageType.String;
+                case ParameterType.Text: return StorageType.String;
+                case ParameterType.Integer: return StorageType.Integer;
+                case ParameterType.Number: return StorageType.Double;
+                case ParameterType.Length: return StorageType.Double;
+                case ParameterType.Area: return StorageType.Double;
+                case ParameterType.Volume: return StorageType.Double;
+                case ParameterType.Angle: return StorageType.Double;
+                case ParameterType.URL: return StorageType.String;
+                case ParameterType.Material: return StorageType.ElementId;
+                case ParameterType.YesNo: return StorageType.Integer;
+                case ParameterType.Force: return StorageType.Double;
+                case ParameterType.LinearForce: return StorageType.Double;
+                case ParameterType.AreaForce: return StorageType.Double;
+                case ParameterType.Moment: return StorageType.Double;
+                case ParameterType.NumberOfPoles: return StorageType.Integer;
+                case ParameterType.FixtureUnit: return StorageType.Double;
+                case ParameterType.LoadClassification: return StorageType.ElementId;
+                case ParameterType.Image: return StorageType.ElementId;
+                case ParameterType.MultilineText: return StorageType.String;
+                case ParameterType.HVACDensity: return StorageType.Double;
+                case ParameterType.HVACEnergy: return StorageType.Double;
+                case ParameterType.HVACFriction: return StorageType.Double;
+                case ParameterType.HVACPower: return StorageType.Double;
+                case ParameterType.HVACPowerDensity: return StorageType.Double;
+                case ParameterType.HVACPressure: return StorageType.Double;
+                case ParameterType.HVACTemperature: return StorageType.Double;
+                case ParameterType.HVACVelocity: return StorageType.Double;
+                case ParameterType.HVACAirflow: return StorageType.Double;
+                case ParameterType.HVACDuctSize: return StorageType.Double;
+                case ParameterType.HVACCrossSection: return StorageType.Double;
+                case ParameterType.HVACHeatGain: return StorageType.Double;
+                case ParameterType.ElectricalCurrent: return StorageType.Double;
+                case ParameterType.ElectricalPotential: return StorageType.Double;
+                case ParameterType.ElectricalFrequency: return StorageType.Double;
+                case ParameterType.ElectricalIlluminance: return StorageType.Double;
+                case ParameterType.ElectricalLuminousFlux: return StorageType.Double;
+                case ParameterType.ElectricalPower: return StorageType.Double;
+                case ParameterType.HVACRoughness: return StorageType.Double;
+                case ParameterType.ElectricalApparentPower: return StorageType.Double;
+                case ParameterType.ElectricalPowerDensity: return StorageType.Double;
+                case ParameterType.PipingDensity: return StorageType.Double;
+                case ParameterType.PipingFlow: return StorageType.Double;
+                case ParameterType.PipingFriction: return StorageType.Double;
+                case ParameterType.PipingPressure: return StorageType.Double;
+                case ParameterType.PipingTemperature: return StorageType.Double;
+                case ParameterType.PipingVelocity: return StorageType.Double;
+                case ParameterType.PipingViscosity: return StorageType.Double;
+                case ParameterType.PipeSize: return StorageType.Double;
+                case ParameterType.PipingRoughness: return StorageType.Double;
+                case ParameterType.Stress: return StorageType.Double;
+                case ParameterType.UnitWeight: return StorageType.Double;
+                case ParameterType.ThermalExpansion: return StorageType.Double;
+                case ParameterType.LinearMoment: return StorageType.Double;
+                case ParameterType.ForcePerLength: return StorageType.Double;
+                case ParameterType.ForceLengthPerAngle: return StorageType.Double;
+                case ParameterType.LinearForcePerLength: return StorageType.Double;
+                case ParameterType.LinearForceLengthPerAngle: return StorageType.Double;
+                case ParameterType.AreaForcePerLength: return StorageType.Double;
+                case ParameterType.PipingVolume: return StorageType.Double;
+                case ParameterType.HVACViscosity: return StorageType.Double;
+                case ParameterType.HVACCoefficientOfHeatTransfer: return StorageType.Double;
+                case ParameterType.HVACAirflowDensity: return StorageType.Double;
+                case ParameterType.Slope: return StorageType.Double;
+                case ParameterType.HVACCoolingLoad: return StorageType.Double;
+                case ParameterType.HVACCoolingLoadDividedByArea: return StorageType.Double;
+                case ParameterType.HVACCoolingLoadDividedByVolume: return StorageType.Double;
+                case ParameterType.HVACHeatingLoad: return StorageType.Double;
+                case ParameterType.HVACHeatingLoadDividedByArea: return StorageType.Double;
+                case ParameterType.HVACHeatingLoadDividedByVolume: return StorageType.Double;
+                case ParameterType.HVACAirflowDividedByVolume: return StorageType.Double;
+                case ParameterType.HVACAirflowDividedByCoolingLoad: return StorageType.Double;
+                case ParameterType.HVACAreaDividedByCoolingLoad: return StorageType.Double;
+                case ParameterType.WireSize: return StorageType.Double;
+                case ParameterType.HVACSlope: return StorageType.Double;
+                case ParameterType.PipingSlope: return StorageType.Double;
+                case ParameterType.Currency: return StorageType.Double;
+                case ParameterType.ElectricalEfficacy: return StorageType.Double;
+                case ParameterType.ElectricalWattage: return StorageType.Double;
+                case ParameterType.ColorTemperature: return StorageType.Double;
+                case ParameterType.ElectricalLuminousIntensity: return StorageType.Double;
+                case ParameterType.ElectricalLuminance: return StorageType.Double;
+                case ParameterType.HVACAreaDividedByHeatingLoad: return StorageType.Double;
+                case ParameterType.HVACFactor: return StorageType.Double;
+                case ParameterType.ElectricalTemperature: return StorageType.Double;
+                case ParameterType.ElectricalCableTraySize: return StorageType.Double;
+                case ParameterType.ElectricalConduitSize: return StorageType.Double;
+                case ParameterType.ReinforcementVolume: return StorageType.Double;
+                case ParameterType.ReinforcementLength: return StorageType.Double;
+                case ParameterType.ElectricalDemandFactor: return StorageType.Double;
+                case ParameterType.HVACDuctInsulationThickness: return StorageType.Double;
+                case ParameterType.HVACDuctLiningThickness: return StorageType.Double;
+                case ParameterType.PipeInsulationThickness: return StorageType.Double;
+                case ParameterType.HVACThermalResistance: return StorageType.Double;
+                case ParameterType.HVACThermalMass: return StorageType.Double;
+                case ParameterType.Acceleration: return StorageType.Double;
+                case ParameterType.BarDiameter: return StorageType.Double;
+                case ParameterType.CrackWidth: return StorageType.Double;
+                case ParameterType.DisplacementDeflection: return StorageType.Double;
+                case ParameterType.Energy: return StorageType.Double;
+                case ParameterType.StructuralFrequency: return StorageType.Double;
+                case ParameterType.Mass: return StorageType.Double;
+                case ParameterType.MassPerUnitLength: return StorageType.Double;
+                case ParameterType.MomentOfInertia: return StorageType.Double;
+                case ParameterType.SurfaceArea: return StorageType.Double;
+                case ParameterType.Period: return StorageType.Double;
+                case ParameterType.Pulsation: return StorageType.Double;
+                case ParameterType.ReinforcementArea: return StorageType.Double;
+                case ParameterType.ReinforcementAreaPerUnitLength: return StorageType.Double;
+                case ParameterType.ReinforcementCover: return StorageType.Double;
+                case ParameterType.ReinforcementSpacing: return StorageType.Double;
+                case ParameterType.Rotation: return StorageType.Double;
+                case ParameterType.SectionArea: return StorageType.Double;
+                case ParameterType.SectionDimension: return StorageType.Double;
+                case ParameterType.SectionModulus: return StorageType.Double;
+                case ParameterType.SectionProperty: return StorageType.Double;
+                case ParameterType.StructuralVelocity: return StorageType.Double;
+                case ParameterType.WarpingConstant: return StorageType.Double;
+                case ParameterType.Weight: return StorageType.Double;
+                case ParameterType.WeightPerUnitLength: return StorageType.Double;
+                case ParameterType.HVACThermalConductivity: return StorageType.Double;
+                case ParameterType.HVACSpecificHeat: return StorageType.Double;
+                case ParameterType.HVACSpecificHeatOfVaporization: return StorageType.Double;
+                case ParameterType.HVACPermeability: return StorageType.Double;
+                case ParameterType.ElectricalResistivity: return StorageType.Double;
+                case ParameterType.MassDensity: return StorageType.Double;
+                case ParameterType.MassPerUnitArea: return StorageType.Double;
+                case ParameterType.PipeDimension: return StorageType.Double;
+                case ParameterType.PipeMass: return StorageType.Double;
+                case ParameterType.PipeMassPerUnitLength: return StorageType.Double;
+                case ParameterType.HVACTemperatureDifference: return StorageType.Double;
+                case ParameterType.PipingTemperatureDifference: return StorageType.Double;
+                case ParameterType.ElectricalTemperatureDifference: return StorageType.Double;
+                case ParameterType.TimeInterval: return StorageType.Double;
+                case ParameterType.Speed: return StorageType.Double;
+                case ParameterType.FamilyType: return StorageType.ElementId;
+                default:
+                    throw new System.ArgumentOutOfRangeException();
+            }
+        }
+
+#else
         /// <summary>
         /// Возвращает тип параметра.
         /// </summary>
@@ -3463,8 +3465,341 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(forgeTypeId));
             }
 
-            return ParameterUtils.GetBuiltInParameter(forgeTypeId).GetStorageType();
+            return forgeTypeId.GetStorageType();
         }
+
+        /// <summary>
+        /// Возвращает тип параметра.
+        /// </summary>
+        /// <param name="definition">Определение параметра.</param>
+        /// <returns>Возвращает тип параметра.</returns>
+        /// <exception cref="System.ArgumentOutOfRangeException">Выбрасывает исключение если не был сопоставлен тип данных к параметру.</exception>
+        public static StorageType GetStorageType(this Definition definition) {
+            if(definition == null) {
+                throw new ArgumentNullException(nameof(definition));
+            }
+
+
+            ForgeTypeId dataType = definition.GetDataType();
+            if(dataType == SpecTypeId.Acceleration) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.AirFlow) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.AirFlowDensity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.AirFlowDividedByCoolingLoad) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.AirFlowDividedByVolume) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Angle) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.AngularSpeed) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ApparentPower) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Area) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.AreaDividedByCoolingLoad) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.AreaDividedByHeatingLoad) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.AreaForce) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.AreaForceScale) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.AreaSpringCoefficient) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.BarDiameter) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.CableTraySize) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ColorTemperature) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ConduitSize) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.CoolingLoad) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.CoolingLoadDividedByArea) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.CoolingLoadDividedByVolume) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.CostPerArea) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.CostRateEnergy) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.CostRatePower) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.CrackWidth) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.CrossSection) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Currency) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Current) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.DecimalSheetLength) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.DemandFactor) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Diffusivity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Displacement) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Distance) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.DuctInsulationThickness) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.DuctLiningThickness) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.DuctSize) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Efficacy) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ElectricalFrequency) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ElectricalPotential) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ElectricalPower) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ElectricalPowerDensity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ElectricalResistivity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ElectricalTemperature) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ElectricalTemperatureDifference) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Energy) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Factor) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Flow) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.FlowPerPower) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Force) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ForceScale) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HeatCapacityPerArea) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HeatGain) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HeatTransferCoefficient) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HeatingLoad) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HeatingLoadDividedByArea) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HeatingLoadDividedByVolume) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacDensity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacEnergy) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacFriction) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacMassPerTime) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacPower) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacPowerDensity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacPressure) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacRoughness) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacSlope) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacTemperature) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacTemperatureDifference) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacVelocity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.HvacViscosity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Illuminance) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Reference.Image) { return StorageType.ElementId; }
+
+            if(dataType == SpecTypeId.Int.Integer) { return StorageType.Integer; }
+
+            if(dataType == SpecTypeId.IsothermalMoistureCapacity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Length) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.LineSpringCoefficient) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.LinearForce) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.LinearForceScale) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.LinearMoment) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.LinearMomentScale) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Reference.LoadClassification) { return StorageType.ElementId; }
+
+            if(dataType == SpecTypeId.Luminance) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.LuminousFlux) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.LuminousIntensity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Mass) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.MassDensity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.MassPerUnitArea) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.MassPerUnitLength) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Reference.Material) { return StorageType.ElementId; }
+
+            if(dataType == SpecTypeId.Moment) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.MomentOfInertia) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.MomentScale) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.String.MultilineText) { return StorageType.String; }
+
+            if(dataType == SpecTypeId.Number) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Int.NumberOfPoles) { return StorageType.Integer; }
+
+            if(dataType == SpecTypeId.Period) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Permeability) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipeDimension) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipeInsulationThickness) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipeMassPerUnitLength) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipeSize) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipingDensity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipingFriction) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipingMass) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipingMassPerTime) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipingPressure) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipingRoughness) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipingSlope) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipingTemperature) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipingTemperatureDifference) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipingVelocity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipingViscosity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PipingVolume) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PointSpringCoefficient) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PowerPerFlow) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.PowerPerLength) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Pulsation) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ReinforcementArea) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ReinforcementAreaPerUnitLength) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ReinforcementCover) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ReinforcementLength) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ReinforcementSpacing) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ReinforcementVolume) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Rotation) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.RotationAngle) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.RotationalLineSpringCoefficient) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.RotationalPointSpringCoefficient) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.SectionArea) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.SectionDimension) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.SectionModulus) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.SectionProperty) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.SheetLength) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.SiteAngle) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Slope) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.SpecificHeat) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.SpecificHeatOfVaporization) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Speed) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Stationing) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.StationingInterval) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Stress) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.StructuralFrequency) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.StructuralVelocity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.SurfaceAreaPerUnitLength) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.String.Text) { return StorageType.String; }
+
+            if(dataType == SpecTypeId.ThermalConductivity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ThermalExpansionCoefficient) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ThermalGradientCoefficientForMoistureCapacity) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ThermalMass) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.ThermalResistance) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Time) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.UnitWeight) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.String.Url) { return StorageType.String; }
+
+            if(dataType == SpecTypeId.Volume) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.WarpingConstant) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Wattage) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Weight) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.WeightPerUnitLength) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.WireDiameter) { return StorageType.Double; }
+
+            if(dataType == SpecTypeId.Boolean.YesNo) { return StorageType.Integer; }
+
+            throw new System.ArgumentOutOfRangeException();
+        }
+
 #endif
     }
 }
