@@ -155,6 +155,12 @@ namespace dosymep.Revit {
             }
         }
 
+        /// <summary>
+        /// Возвращает тип параметра.
+        /// </summary>
+        /// <param name="builtInParameter">Системный тип параметра.</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentOutOfRangeException">Выбрасывает исключение если не был сопоставлен тип данных к параметру.</exception>
         public static StorageType GetStorageType(this BuiltInParameter builtInParameter) {
             switch(builtInParameter) {
                 case BuiltInParameter.PATH_OF_TRAVEL_FROM_ROOM: return StorageType.String;
@@ -382,11 +388,13 @@ namespace dosymep.Revit {
                 case BuiltInParameter.REFERENCED_VIEW: return StorageType.ElementId;
                 case BuiltInParameter.ENERGY_ANALYSIS_ADVANCED_OPTIONS: return StorageType.None;
                 case BuiltInParameter.RBS_ENERGY_ANALYSIS_MODE: return StorageType.Integer;
+#if D2020 || R2020 || D2021 || R2021
                 case BuiltInParameter
                     .RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SURFACE_INDENTIFICATION_RESOLUTION:
                     return StorageType.Double;
                 case BuiltInParameter.RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SPACE_INDENTIFICATION_RESOLUTION:
                     return StorageType.Double;
+#endif
                 case BuiltInParameter.FAMILY_ROUNDCONNECTOR_DIMENSIONTYPE: return StorageType.Integer;
                 case BuiltInParameter.FAM_PROFILE_DEFINITION: return StorageType.Integer;
                 case BuiltInParameter.END_Z_OFFSET_VALUE: return StorageType.Double;
@@ -3442,5 +3450,20 @@ namespace dosymep.Revit {
                     throw new ArgumentOutOfRangeException();
             }
         }
+
+#if D2022 || R2022
+        /// <summary>
+        /// Возвращает тип параметра.
+        /// </summary>
+        /// <param name="forgeTypeId">Системный тип параметра.</param>
+        /// <returns>Возвращает тип параметра.</returns>
+        public static StorageType GetStorageType(this ForgeTypeId forgeTypeId) {
+            if(forgeTypeId == null) {
+                throw new ArgumentNullException(nameof(forgeTypeId));
+            }
+
+            return ParameterUtils.GetBuiltInParameter(forgeTypeId).GetStorageType();
+        }
+#endif
     }
 }
