@@ -75,12 +75,12 @@ namespace dosymep.Bim4Everyone {
         }
 
         /// <summary>
-        /// Возвращает значение параметра с единицой измерения либо значение по умолчанию.
+        /// Возвращает значение параметра с единицей измерения либо значение по умолчанию.
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="revitParam">Параметр Revit.</param>
         /// <param name="default">Значение по умолчанию.</param>
-        /// <returns>Возвращает значение параметра с единицой измерения либо значение по умолчанию.</returns>
+        /// <returns>Возвращает значение параметра с единицей измерения либо значение по умолчанию.</returns>
         public static string GetParamValueStringOrDefault(this Element element, RevitParam revitParam, string @default = default) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -157,7 +157,7 @@ namespace dosymep.Bim4Everyone {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="revitParam">Параметр Revit.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramValue">Значение параметра Revit.</param>
         public static void SetParamValue(this Element element, RevitParam revitParam, double paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -175,7 +175,7 @@ namespace dosymep.Bim4Everyone {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="revitParam">Параметр Revit.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramValue">Значение параметра Revit.</param>
         public static void SetParamValue(this Element element, RevitParam revitParam, int paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -193,7 +193,7 @@ namespace dosymep.Bim4Everyone {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="revitParam">Параметр Revit.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramValue">Значение параметра Revit.</param>
         public static void SetParamValue(this Element element, RevitParam revitParam, string paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -211,7 +211,7 @@ namespace dosymep.Bim4Everyone {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="revitParam">Параметр Revit.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramValue">Значение параметра Revit.</param>
         public static void SetParamValue(this Element element, RevitParam revitParam, ElementId paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
