@@ -112,7 +112,7 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="paramName">Наименование параметра.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramValue">Значение параметра.</param>
         public static void SetParamValue(this Element element, string paramName, double paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -130,7 +130,7 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="paramName">Наименование параметра.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramValue">Значение параметра.</param>
         public static void SetParamValue(this Element element, string paramName, int paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -148,7 +148,7 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="paramName">Наименование параметра.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramValue">Значение параметра.</param>
         public static void SetParamValue(this Element element, string paramName, string paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -166,7 +166,7 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="paramName">Наименование параметра.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramValue">Значение параметра.</param>
         public static void SetParamValue(this Element element, string paramName, ElementId paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -218,22 +218,22 @@ namespace dosymep.Revit {
         #region Получение общего параметра по его имени
 
         /// <summary>
-        /// Проверяет на существование параметра в элементе.
+        /// Проверяет на существование общего параметра в элементе.
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="paramName">Наименование параметра.</param>
-        /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
+        /// <returns>Возвращает true - если общий параметр существует, иначе false.</returns>
         public static bool IsExistsSharedParam(this Element element, string paramName) {
             return element.GetSharedParamValueOrDefault(paramName) != default;
         }
 
         /// <summary>
-        /// Возвращает значение параметра либо значение по умолчанию.
+        /// Возвращает значение общего параметра либо значение по умолчанию.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
+        /// <param name="paramName">Наименование общего параметра.</param>
         /// <param name="default">Значение по умолчанию.</param>
-        /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
+        /// <returns>Возвращает значение общего параметра либо значение по умолчанию.</returns>
         public static T GetSharedParamValueOrDefault<T>(this Element element, string paramName, T @default = default) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -252,12 +252,12 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Возвращает значение параметра либо значение по умолчанию.
+        /// Возвращает значение общего параметра либо значение по умолчанию.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
+        /// <param name="paramName">Наименование общего параметра.</param>
         /// <param name="default">Значение по умолчанию.</param>
-        /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
+        /// <returns>Возвращает значение общего параметра либо значение по умолчанию.</returns>
         public static object GetSharedParamValueOrDefault(this Element element, string paramName, object @default = default) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -275,11 +275,11 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Возвращает значение параметра элемента.
+        /// Возвращает значение общего параметра элемента.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <returns>Возвращает значение параметра элемента.</returns>
+        /// <param name="paramName">Наименование общего параметра.</param>
+        /// <returns>Возвращает значение общего параметра элемента.</returns>
         public static T GetSharedParamValue<T>(this Element element, string paramName) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -294,11 +294,11 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Возвращает значение параметра элемента.
+        /// Возвращает значение общего параметра элемента.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <returns>Возвращает значение параметра элемента.</returns>
+        /// <param name="paramName">Наименование общего параметра.</param>
+        /// <returns>Возвращает значение общего параметра элемента.</returns>
         public static object GetSharedParamValue(this Element element, string paramName) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -312,10 +312,10 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Устанавливает значение параметра.
+        /// Устанавливает значение общего параметра.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
+        /// <param name="paramName">Наименование общего  параметра.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetSharedParamValue(this Element element, string paramName, double paramValue) {
             if(element is null) {
@@ -330,10 +330,10 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Устанавливает значение параметра.
+        /// Устанавливает значение общего параметра.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
+        /// <param name="paramName">Наименование общего параметра.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetSharedParamValue(this Element element, string paramName, int paramValue) {
             if(element is null) {
@@ -348,10 +348,10 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Устанавливает значение параметра.
+        /// Устанавливает значение общего параметра.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
+        /// <param name="paramName">Наименование общего параметра.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetSharedParamValue(this Element element, string paramName, string paramValue) {
             if(element is null) {
@@ -366,10 +366,10 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Устанавливает значение параметра.
+        /// Устанавливает значение общего параметра.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
+        /// <param name="paramName">Наименование общего параметра.</param>
         /// <param name="paramValue">Значение общего параметра.</param>
         public static void SetSharedParamValue(this Element element, string paramName, ElementId paramValue) {
             if(element is null) {
@@ -384,11 +384,11 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Удаляет параметр по его имени.
+        /// Удаляет общий параметр по его имени.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <returns>Возвращает признак удаления параметра true - если был удален, иначе false.</returns>
+        /// <param name="paramName">Наименование общего параметра.</param>
+        /// <returns>Возвращает признак удаления общего параметра true - если был удален, иначе false.</returns>
         public static bool RemoveSharedParamValue(this Element element, string paramName) {
             try {
                 element.GetSharedParam(paramName).RemoveValue();
@@ -399,11 +399,11 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Возвращает параметр.
+        /// Возвращает общий параметр.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <returns>Возвращает параметр.</returns>
+        /// <param name="paramName">Наименование общего параметра.</param>
+        /// <returns>Возвращает общий параметр.</returns>
         public static Parameter GetSharedParam(this Element element, string paramName) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -422,22 +422,22 @@ namespace dosymep.Revit {
         #region Получение параметра проекта по его имени
 
         /// <summary>
-        /// Проверяет на существование параметра в элементе.
+        /// Проверяет на существование параметра проекта в элементе.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
+        /// <param name="paramName">Наименование параметра проекта.</param>
+        /// <returns>Возвращает true - если параметр проекта существует, иначе false.</returns>
         public static bool IsExistsProjectParam(this Element element, string paramName) {
             return element.GetProjectParamValueOrDefault(paramName) != default;
         }
 
         /// <summary>
-        /// Возвращает значение параметра либо значение по умолчанию.
+        /// Возвращает значение параметра проекта либо значение по умолчанию.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
+        /// <param name="paramName">Наименование параметра проекта.</param>
         /// <param name="default">Значение по умолчанию.</param>
-        /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
+        /// <returns>Возвращает значение параметра проекта либо значение по умолчанию.</returns>
         public static T GetProjectParamValueOrDefault<T>(this Element element, string paramName, T @default = default) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -456,12 +456,12 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Возвращает значение параметра либо значение по умолчанию.
+        /// Возвращает значение параметра проекта либо значение по умолчанию.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
+        /// <param name="paramName">Наименование параметра проекта.</param>
         /// <param name="default">Значение по умолчанию.</param>
-        /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
+        /// <returns>Возвращает значение параметра проекта либо значение по умолчанию.</returns>
         public static object GetProjectParamValueOrDefault(this Element element, string paramName, object @default = default) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -479,11 +479,11 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Возвращает значение параметра элемента.
+        /// Возвращает значение параметра проекта элемента.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <returns>Возвращает значение параметра элемента.</returns>
+        /// <param name="paramName">Наименование параметра проекта.</param>
+        /// <returns>Возвращает значение параметра проекта элемента.</returns>
         public static T GetProjectParamValue<T>(this Element element, string paramName) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -498,11 +498,11 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Возвращает значение параметра элемента.
+        /// Возвращает значение параметра проекта элемента.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <returns>Возвращает значение параметра элемента.</returns>
+        /// <param name="paramName">Наименование параметра проекта.</param>
+        /// <returns>Возвращает значение параметра проекта элемента.</returns>
         public static object GetProjectParamValue(this Element element, string paramName) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -516,11 +516,11 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Устанавливает значение параметра.
+        /// Устанавливает значение параметра проекта.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramName">Наименование параметра проекта.</param>
+        /// <param name="paramValue">Значение параметра проекта.</param>
         public static void SetProjectParamValue(this Element element, string paramName, double paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -534,11 +534,11 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Устанавливает значение параметра.
+        /// Устанавливает значение параметра проекта.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramName">Наименование параметра проекта.</param>
+        /// <param name="paramValue">Значение параметра проекта.</param>
         public static void SetProjectParamValue(this Element element, string paramName, int paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -552,11 +552,11 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Устанавливает значение параметра.
+        /// Устанавливает значение параметра проекта.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramName">Наименование параметра проекта.</param>
+        /// <param name="paramValue">Значение параметра проекта.</param>
         public static void SetProjectParamValue(this Element element, string paramName, string paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -570,11 +570,11 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Устанавливает значение параметра.
+        /// Устанавливает значение параметра проекта.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramName">Наименование параметра. проекта</param>
+        /// <param name="paramValue">Значение параметра проекта.</param>
         public static void SetProjectParamValue(this Element element, string paramName, ElementId paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -588,11 +588,11 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Удаляет параметр по его имени.
+        /// Удаляет параметр проекта по его имени.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <returns>Возвращает признак удаления параметра true - если был удален, иначе false.</returns>
+        /// <param name="paramName">Наименование параметра проекта.</param>
+        /// <returns>Возвращает признак удаления параметра проекта true - если был удален, иначе false.</returns>
         public static bool RemoveProjectParamValue(this Element element, string paramName) {
             try {
                 element.GetProjectParam(paramName).RemoveValue();
@@ -603,11 +603,11 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Возвращает параметр.
+        /// Возвращает параметр проекта.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        /// <param name="paramName">Наименование параметра.</param>
-        /// <returns>Возвращает параметр.</returns>
+        /// <param name="paramName">Наименование параметра проекта.</param>
+        /// <returns>Возвращает параметр проекта.</returns>
         public static Parameter GetProjectParam(this Element element, string paramName) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -708,7 +708,7 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="builtInParameter">Встроенный тип параметра.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramValue">Значение параметра.</param>
         public static void SetParamValue(this Element element, BuiltInParameter builtInParameter, double paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -722,7 +722,7 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="builtInParameter">Встроенный тип параметра.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramValue">Значение параметра.</param>
         public static void SetParamValue(this Element element, BuiltInParameter builtInParameter, int paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -736,7 +736,7 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="builtInParameter">Встроенный тип параметра.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramValue">Значение параметра.</param>
         public static void SetParamValue(this Element element, BuiltInParameter builtInParameter, string paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
@@ -750,7 +750,7 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <param name="builtInParameter">Встроенный тип параметра.</param>
-        /// <param name="paramValue">Значение общего параметра.</param>
+        /// <param name="paramValue">Значение параметра.</param>
         public static void SetParamValue(this Element element, BuiltInParameter builtInParameter, ElementId paramValue) {
             if(element is null) {
                 throw new ArgumentNullException(nameof(element));
