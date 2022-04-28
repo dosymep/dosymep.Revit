@@ -48,7 +48,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
         /// <inheritdoc/>
         public SystemParam GetRevitParam(Document document, BuiltInParameter systemParamId) {
-            return new SystemParam(_languageType, document.GetStorageType(systemParamId), systemParamId);
+            return new SystemParam(_languageType, systemParamId);
         }
 
         /// <inheritdoc/>
@@ -58,7 +58,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
         /// <inheritdoc/>
         public SystemParam GetRevitParam(Document document, BuiltInParameter systemParamId, LanguageType languageType) {
-            return new SystemParam(languageType, document.GetStorageType(systemParamId), systemParamId);
+            return new SystemParam(languageType, systemParamId);
         }
 
         /// <inheritdoc/>
@@ -82,7 +82,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
         /// <inheritdoc/>
         public SystemParam GetRevitParam(Document document, ForgeTypeId systemParamId) {
-            return new SystemParam(_languageType, document.GetStorageType(systemParamId), systemParamId);
+            return new SystemParam(_languageType, systemParamId);
         }
 
         /// <inheritdoc/>
@@ -92,7 +92,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
         /// <inheritdoc/>
         public SystemParam GetRevitParam(Document document, ForgeTypeId systemParamId, LanguageType languageType) {
-            return new SystemParam(languageType, document.GetStorageType(systemParamId), systemParamId);
+            return new SystemParam(languageType, systemParamId);
         }
 
         /// <inheritdoc/>

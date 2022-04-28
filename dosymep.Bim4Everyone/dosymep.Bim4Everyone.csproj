@@ -101,9 +101,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="SystemParams\SystemParam.ParamTypes.cs">
-        <DependentUpon>SystemParam.cs</DependentUpon>
-      </Compile>
       <Compile Update="SimpleServices\ISharedParamsService.cs">
         <DependentUpon>IRevitParamsService.cs</DependentUpon>
       </Compile>

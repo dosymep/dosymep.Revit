@@ -76,4 +76,10 @@
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="ParamExtensions.ParamTypes.cs">
+        <DependentUpon>ParamExtensions.cs</DependentUpon>
+      </Compile>
+    </ItemGroup>
 </Project>
