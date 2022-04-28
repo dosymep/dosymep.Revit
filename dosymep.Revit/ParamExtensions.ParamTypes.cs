@@ -237,7 +237,7 @@ namespace dosymep.Revit {
                 case BuiltInParameter.REFERENCED_VIEW: return StorageType.ElementId;
                 case BuiltInParameter.ENERGY_ANALYSIS_ADVANCED_OPTIONS: return StorageType.None;
                 case BuiltInParameter.RBS_ENERGY_ANALYSIS_MODE: return StorageType.Integer;
-#if D2020 || R2020 || D2021 || R2021
+#if D2020 || R2020
                         case BuiltInParameter
                             .RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SURFACE_INDENTIFICATION_RESOLUTION:
                             return StorageType.Double;
