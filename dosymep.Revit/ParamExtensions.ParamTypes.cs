@@ -8,6 +8,7 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="definition">Определение параметра.</param>
         /// <returns>Возвращает тип параметра.</returns>
+        /// <exception cref="System.ArgumentOutOfRangeException">Выбрасывает исключение если не был сопоставлен тип данных к параметру.</exception>
         public static StorageType GetStorageType(this Definition definition) {
             if(definition == null) {
                 throw new ArgumentNullException(nameof(definition));
@@ -151,7 +152,7 @@ namespace dosymep.Revit {
                 case ParameterType.Speed: return StorageType.Double;
                 case ParameterType.FamilyType: return StorageType.ElementId;
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    throw new System.ArgumentOutOfRangeException();
             }
         }
 
@@ -160,7 +161,7 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="builtInParameter">Системный тип параметра.</param>
         /// <returns></returns>
-        /// <exception cref="ArgumentOutOfRangeException">Выбрасывает исключение если не был сопоставлен тип данных к параметру.</exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">Выбрасывает исключение если не был сопоставлен тип данных к параметру.</exception>
         public static StorageType GetStorageType(this BuiltInParameter builtInParameter) {
             switch(builtInParameter) {
                 case BuiltInParameter.PATH_OF_TRAVEL_FROM_ROOM: return StorageType.String;
@@ -3447,7 +3448,7 @@ namespace dosymep.Revit {
                 case BuiltInParameter.WALL_ATTR_WIDTH_PARAM: return StorageType.Double;
                 case BuiltInParameter.INVALID: return StorageType.None;
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    throw new System.ArgumentOutOfRangeException();
             }
         }
 
