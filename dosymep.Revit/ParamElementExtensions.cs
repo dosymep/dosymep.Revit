@@ -1,4 +1,6 @@
-﻿using Autodesk.Revit.DB;
+﻿using System;
+
+using Autodesk.Revit.DB;
 
 namespace dosymep.Revit {
     /// <summary>
@@ -30,6 +32,19 @@ namespace dosymep.Revit {
         /// <returns>Возвращает true - если параметр является глобальным параметром, иначе false.</returns>
         public static bool IsGlobalParam(this ParameterElement parameterElement) {
             return parameterElement is GlobalParameter;
+        }
+
+        /// <summary>
+        /// Возвращает тип параметра.
+        /// </summary>
+        /// <param name="parameterElement">Элемент параметра.</param>
+        /// <returns>Возвращает тип параметра.</returns>
+        public static StorageType GetStorageType(this ParameterElement parameterElement) {
+            if(parameterElement == null) {
+                throw new ArgumentNullException(nameof(parameterElement));
+            }
+
+            return parameterElement.GetDefinition().GetStorageType();
         }
     }
 }
