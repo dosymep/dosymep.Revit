@@ -237,13 +237,6 @@ namespace dosymep.Revit {
                 case BuiltInParameter.REFERENCED_VIEW: return StorageType.ElementId;
                 case BuiltInParameter.ENERGY_ANALYSIS_ADVANCED_OPTIONS: return StorageType.None;
                 case BuiltInParameter.RBS_ENERGY_ANALYSIS_MODE: return StorageType.Integer;
-#if D2020 || R2020
-                        case BuiltInParameter
-                            .RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SURFACE_INDENTIFICATION_RESOLUTION:
-                            return StorageType.Double;
-                        case BuiltInParameter.RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SPACE_INDENTIFICATION_RESOLUTION:
-                            return StorageType.Double;
-#endif
                 case BuiltInParameter.FAMILY_ROUNDCONNECTOR_DIMENSIONTYPE: return StorageType.Integer;
                 case BuiltInParameter.FAM_PROFILE_DEFINITION: return StorageType.Integer;
                 case BuiltInParameter.END_Z_OFFSET_VALUE: return StorageType.Double;
@@ -1126,7 +1119,6 @@ namespace dosymep.Revit {
                 case BuiltInParameter.RBS_ELEC_WIRE_SHARE_GROUND: return StorageType.Integer;
                 case BuiltInParameter.RBS_ELEC_CIRCUIT_NAME: return StorageType.String;
                 case BuiltInParameter.RBS_FAMILY_CONTENT_SECONDARY_DISTRIBSYS: return StorageType.ElementId;
-                case BuiltInParameter.RBS_ELEC_CIRCUIT_NAMING: return StorageType.Integer;
                 case BuiltInParameter.RBS_ELEC_CIRCUIT_PREFIX_SEPARATOR: return StorageType.String;
                 case BuiltInParameter.RBS_ELEC_CIRCUIT_PREFIX: return StorageType.String;
                 case BuiltInParameter.RBS_ELEC_MODIFICATIONS: return StorageType.String;
@@ -3295,6 +3287,114 @@ namespace dosymep.Revit {
                 case BuiltInParameter.WALL_ATTR_HEIGHT_PARAM: return StorageType.Double;
                 case BuiltInParameter.WALL_ATTR_WIDTH_PARAM: return StorageType.Double;
                 case BuiltInParameter.INVALID: return StorageType.None;
+#if D2020 || R2020
+                case BuiltInParameter.RBS_ELEC_CIRCUIT_NAMING: return StorageType.Integer;
+                case BuiltInParameter
+                    .RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SURFACE_INDENTIFICATION_RESOLUTION:
+                    return StorageType.Double;
+                case BuiltInParameter.RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SPACE_INDENTIFICATION_RESOLUTION:
+                    return StorageType.Double;
+#else
+                case BuiltInParameter.RBS_ELEC_CIRCUIT_NAMING: return StorageType.ElementId;
+                case BuiltInParameter.VOID_CUTS_GEOMETRY: return StorageType.Integer;
+                case BuiltInParameter.REBAR_HOOK_ROTATION_AT_END_SCHEDULES_TAGS_FILTERS: return StorageType.Double;
+                case BuiltInParameter.REBAR_HOOK_ROTATION_AT_START_SCHEDULES_TAGS_FILTERS: return StorageType.Double;
+                case BuiltInParameter.REBAR_HOOK_LENGTH_OVERRIDE: return StorageType.Integer;
+                case BuiltInParameter.INFRASTRUCTURE_ALIGNMENT_NAME: return StorageType.String;
+                case BuiltInParameter.INFRASTRUCTURE_ALIGNMENT_DESCRIPTION: return StorageType.String;
+                case BuiltInParameter.INFRASTRUCTURE_ALIGNMENT_DISPLAYED_START_STATION: return StorageType.Double;
+                case BuiltInParameter.INFRASTRUCTURE_ALIGNMENT_DISPLAYED_END_STATION: return StorageType.Double;
+                case BuiltInParameter.ASSEMBLY_PRECAST_FREEZE: return StorageType.Integer;
+                case BuiltInParameter.REBAR_HOOK_ROTATION_AT_END: return StorageType.Double;
+                case BuiltInParameter.REBAR_HOOK_ROTATION_AT_START: return StorageType.Double;
+                case BuiltInParameter.REBAR_SHAPE_HOOK_ROTATION_AT_END: return StorageType.Double;
+                case BuiltInParameter.REBAR_SHAPE_HOOK_ROTATION_AT_START: return StorageType.Double;
+                case BuiltInParameter.RBS_ELEC_NUMBER_OF_CIRCUITS: return StorageType.Integer;
+                case BuiltInParameter.RBS_ELEC_EDIT_CIRCUIT_NAMING_SETTINGS_PARAM: return StorageType.None;
+                case BuiltInParameter.DIRECTCONTEXT3D_LOADED: return StorageType.Integer;
+                case BuiltInParameter.REBAR_INTERNAL_MULTIPLANAR_ARC_CONNECTOR: return StorageType.Integer;
+                case BuiltInParameter.RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SURFACE_IDENTIFICATION_RESOLUTION
+                    : return StorageType.Double;
+                case BuiltInParameter.RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SPACE_IDENTIFICATION_RESOLUTION:
+                    return StorageType.Double;
+                case BuiltInParameter.RBS_ELEC_CIRCUIT_SLOT_INDEX: return StorageType.String;
+                case BuiltInParameter.CIRCUIT_WAYS_PARAM: return StorageType.Integer;
+                case BuiltInParameter.CIRCUIT_LOAD_CLASSIFICATION_ABBREVIATION_PARAM: return StorageType.String;
+                case BuiltInParameter.CIRCUIT_PHASE_PARAM: return StorageType.String;
+                case BuiltInParameter.RBS_ELEC_CIRCUIT_NAMING_INDEX: return StorageType.Integer;
+                case BuiltInParameter.PEAK_LATENT_COOLING_LOAD: return StorageType.Double;
+                case BuiltInParameter.SPACE_DEHUMIDIFICATION_SET_POINT: return StorageType.Double;
+                case BuiltInParameter.SPACE_HUMIDIFICATION_SET_POINT: return StorageType.Double;
+                case BuiltInParameter.SPACE_COOLING_SET_POINT: return StorageType.Double;
+                case BuiltInParameter.SPACE_HEATING_SET_POINT: return StorageType.Double;
+                case BuiltInParameter.ALIGNMENT_STATION_LABEL_SET_END_STATION: return StorageType.Double;
+                case BuiltInParameter.ALIGNMENT_STATION_LABEL_SET_START_STATION: return StorageType.Double;
+                case BuiltInParameter.ALIGNMENT_STATION_LABEL_SET_INTERVAL: return StorageType.Double;
+                case BuiltInParameter.ALIGNMENT_STATION_LABEL_SET_OFFSET: return StorageType.Double;
+                case BuiltInParameter.WALL_SINGLE_SLANT_ANGLE_FROM_VERTICAL: return StorageType.Double;
+                case BuiltInParameter.WALL_CROSS_SECTION: return StorageType.Integer;
+                case BuiltInParameter.FAMILY_ROTATE_TEXT_WITH_COMPONENT: return StorageType.Integer;
+                case BuiltInParameter.ANALYTICAL_MODEL_END_PROJECTION_ORTHOGONAL: return StorageType.Integer;
+                case BuiltInParameter.ANALYTICAL_MODEL_START_PROJECTION_ORTHOGONAL: return StorageType.Integer;
+                case BuiltInParameter.ALIGNMENT_STATION_LABEL_STATION_VALUE: return StorageType.Double;
+                case BuiltInParameter.ALIGNMENT_STATION_LABEL_IND_STATION: return StorageType.String;
+                case BuiltInParameter.ALIGNMENT_STATION_LABEL_INCLUDE_STATION: return StorageType.Integer;
+                case BuiltInParameter.SPOT_DIM_LEADER_LINE: return StorageType.Integer;
+                case BuiltInParameter.ALIGNMENT_STATION_LABEL_DISTANCE: return StorageType.Double;
+                case BuiltInParameter.ARROW_CENTERED: return StorageType.Integer;
+                case BuiltInParameter.SELECTION_EDITABLE_ONLY: return StorageType.Integer;
+                case BuiltInParameter.INSERT_ORIENTATION: return StorageType.Integer;
+                case BuiltInParameter.WALL_SWEEP_ORIENTATION: return StorageType.Integer;
+#endif
+
+#if D2022 || R2022
+
+                case BuiltInParameter.PREFER_DIM_SIDE_UI_FILTER: return StorageType.Integer;
+                case BuiltInParameter.MULTIPLE_ALIGNMENT_UI_TOGGLE: return StorageType.Integer;
+                case BuiltInParameter.LOCK_ALIGNMENT_UI_TOGGLE: return StorageType.Integer;
+                case BuiltInParameter.REBAR_INSTANCE_BAR_MODEL_DIAMETER: return StorageType.Double;
+                case BuiltInParameter.REBAR_MODEL_BAR_DIAMETER: return StorageType.Double;
+                case BuiltInParameter.VIEW_SHOW_GRIDS: return StorageType.None;
+                case BuiltInParameter.REBAR_MODIFIED_SET: return StorageType.Integer;
+                case BuiltInParameter.MOVES_WITH_GRID_PARAM: return StorageType.Integer;
+                case BuiltInParameter.DPART_LAYER_INDEX: return StorageType.String;
+                case BuiltInParameter.RBS_ELEC_DISTRIBUTION_NODE_SUPPLY_FROM2: return StorageType.ElementId;
+                case BuiltInParameter.RBS_ELEC_DISTRIBUTION_NODE_SUPPLY_FROM: return StorageType.ElementId;
+                case BuiltInParameter.RBS_ELEC_ANALYTICAL_AREA_MEASUREMENT: return StorageType.Integer;
+                case BuiltInParameter.RBS_ELEC_DISTRIBUTION_NODE_SUPPLY_FROM1: return StorageType.ElementId;
+                case BuiltInParameter.RBS_ELEC_DISTRIBUTION_NODE_POWER_SOURCE: return StorageType.String;
+                case BuiltInParameter.RBS_ELEC_ANALYTICAL_LOAD_NAME_PARAM: return StorageType.String;
+                case BuiltInParameter.RBS_ELEC_ANALYTICAL_LOAD_TYPE_PARAM: return StorageType.Integer;
+                case BuiltInParameter.RBS_ELEC_ANALYTICAL_AREA_PARAM: return StorageType.Double;
+                case BuiltInParameter.RBS_ELECTRICAL_LOAD_ZONE_TYPE: return StorageType.ElementId;
+                case BuiltInParameter.RBS_ELEC_ANALYTICAL_LOAD_DENSITY: return StorageType.Double;
+                case BuiltInParameter.MEP_ELEC_ZONE_EQUIPMENT_TYPE: return StorageType.Integer;
+                case BuiltInParameter.STRUCTURAL_CONNECTION_EDIT_RANGES_OF_APPLICABILITY: return StorageType.None;
+                case BuiltInParameter.SYSTEMS_ANALYSIS_REPORT_FOLDER: return StorageType.String;
+                case BuiltInParameter.SYSTEMS_ANALYSIS_REPORT_STYLE: return StorageType.Integer;
+                case BuiltInParameter.ENERGY_ANALYSIS_PROJECT_PHASE: return StorageType.ElementId;
+                case BuiltInParameter.SPACE_VOLUME: return StorageType.Double;
+                case BuiltInParameter.SPACE_AREA: return StorageType.Double;
+                case BuiltInParameter.WALL_TAPERED_WIDTH_AT_BOTTOM: return StorageType.Double;
+                case BuiltInParameter.WALL_TAPERED_WIDTH_AT_TOP: return StorageType.Double;
+                case BuiltInParameter.WALL_TAPERED_USE_INSTANCE_ANGLES: return StorageType.Integer;
+                case BuiltInParameter.WALL_TYPE_WIDTH_MEASURED_AT: return StorageType.Integer;
+                case BuiltInParameter.WALL_TYPE_DEFAULT_TAPERED_INTERIOR_INWARD_ANGLE: return StorageType.Double;
+                case BuiltInParameter.WALL_TYPE_DEFAULT_TAPERED_EXTERIOR_INWARD_ANGLE: return StorageType.Double;
+                case BuiltInParameter.WALL_TAPERED_INTERIOR_INWARD_ANGLE: return StorageType.Double;
+                case BuiltInParameter.WALL_TAPERED_EXTERIOR_INWARD_ANGLE: return StorageType.Double;
+                case BuiltInParameter.GRID_NET_LOCATION_MARK: return StorageType.String;
+                case BuiltInParameter.MULTI_LEADER_TAG_UI: return StorageType.Integer;
+                case BuiltInParameter.TAG_ELEMENT_COUNT: return StorageType.Integer;
+                case BuiltInParameter.TAG_ANGLE_PARAM: return StorageType.Double;
+                case BuiltInParameter.ALIGNMENT_STATION_SUFFIX: return StorageType.String;
+                case BuiltInParameter.ALIGNMENT_STATION_PREFIX: return StorageType.String;
+                case BuiltInParameter.DIM_SUFFIX: return StorageType.String;
+                case BuiltInParameter.DIM_PREFIX: return StorageType.String;
+                case BuiltInParameter.ASSOCIATED_LEVEL_OFFSET: return StorageType.Double;
+                case BuiltInParameter.ASSOCIATED_LEVEL: return StorageType.ElementId;
+
+#endif
                 default:
                     throw new System.ArgumentOutOfRangeException();
             }
