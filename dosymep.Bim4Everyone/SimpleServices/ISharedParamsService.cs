@@ -44,6 +44,12 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         SharedParam GetRevitParam(Document document, string propertyName, ParameterElement revitParamElement);
         
         /// <summary>
+        /// Возвращает общий параметр по его имени (идентификатору).
+        /// </summary>
+        /// <param name="paramId">Идентификатор параметра Revit.</param>
+        new SharedParam this[string paramId] { get; }
+        
+        /// <summary>
         /// Возвращает весь список общих параметров.
         /// </summary>
         /// <returns>Возвращает весь список общих параметров.</returns>

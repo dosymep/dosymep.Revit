@@ -62,6 +62,10 @@ namespace dosymep.Bim4Everyone.SystemParams {
         }
 
         /// <inheritdoc/>
+        SystemParam ISystemParamsService.this[string paramId] =>
+            GetRevitParam((BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), paramId));
+
+        /// <inheritdoc/>
         IEnumerable<SystemParam> ISystemParamsService.GetRevitParams() {
             return Enum.GetValues(typeof(BuiltInParameter))
                 .Cast<BuiltInParameter>()
@@ -94,6 +98,14 @@ namespace dosymep.Bim4Everyone.SystemParams {
         public SystemParam GetRevitParam(Document document, ForgeTypeId systemParamId, LanguageType languageType) {
             return new SystemParam(languageType, systemParamId);
         }
+
+        /// <inheritdoc/>
+        SystemParam ISystemParamsService.this[string paramId] 
+            => (SystemParam) this[paramId];
+        
+        /// <inheritdoc/>
+        public override RevitParam this[string paramId] 
+            => GetRevitParam((ForgeTypeId) typeof(ParameterTypeId).GetProperty(paramId)?.GetValue(this));
 
         /// <inheritdoc/>
         public new IEnumerable<SystemParam> GetRevitParams() {

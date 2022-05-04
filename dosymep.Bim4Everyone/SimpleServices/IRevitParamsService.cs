@@ -10,6 +10,12 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// </summary>
         /// <param name="configPath">Путь до файла конфигурации.</param>
         void Save(string configPath);
+        
+        /// <summary>
+        /// Возвращает параметр Revit по его имени (идентификатору).
+        /// </summary>
+        /// <param name="paramId">Идентификатор параметра Revit.</param>
+        RevitParam this[string paramId] { get; }
 
         /// <summary>
         /// Возвращает весь список настроек параметров.

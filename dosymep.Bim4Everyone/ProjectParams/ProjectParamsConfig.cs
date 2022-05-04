@@ -219,6 +219,10 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
             return new ProjectParam(revitParamElement.GetStorageType()) {PropertyName = propertyName, Name = revitParamElement.Name};
         }
+        
+        /// <inheritdoc/>
+        ProjectParam IProjectParamsService.this[string paramId] 
+            => (ProjectParam) this[paramId];
 
         /// <inheritdoc />
         IEnumerable<ProjectParam> IProjectParamsService.GetRevitParams() {

@@ -26,6 +26,9 @@ namespace dosymep.Bim4Everyone {
             string json = JsonConvert.SerializeObject(this, Formatting.Indented);
             File.WriteAllText(configPath, json);
         }
+        
+        /// <inheritdoc />
+        public virtual RevitParam this[string paramId] => (RevitParam) GetType().GetProperty(paramId)?.GetValue(this);
 
         /// <inheritdoc />
         public virtual IEnumerable<RevitParam> GetRevitParams() {

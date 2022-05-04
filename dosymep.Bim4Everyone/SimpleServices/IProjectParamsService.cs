@@ -44,6 +44,12 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         ProjectParam GetRevitParam(Document document, string propertyName, ParameterElement revitParamElement);
         
         /// <summary>
+        /// Возвращает параметр проекта по его имени (идентификатору).
+        /// </summary>
+        /// <param name="paramId">Идентификатор параметра Revit.</param>
+        new ProjectParam this[string paramId] { get; }
+        
+        /// <summary>
         /// Возвращает весь список параметров проекта.
         /// </summary>
         /// <returns>Возвращает весь список параметров проекта.</returns>

@@ -77,6 +77,12 @@ namespace dosymep.Bim4Everyone.SimpleServices {
 #endif
         
         /// <summary>
+        /// Возвращает системный параметр по его имени (идентификатору).
+        /// </summary>
+        /// <param name="paramId">Идентификатор параметра Revit.</param>
+        new SystemParam this[string paramId] { get; }
+        
+        /// <summary>
         /// Возвращает весь список системных параметров.
         /// </summary>
         /// <returns>Возвращает весь список системных параметров.</returns>

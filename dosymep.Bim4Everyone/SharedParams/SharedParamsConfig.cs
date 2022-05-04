@@ -305,6 +305,10 @@ namespace dosymep.Bim4Everyone.SharedParams {
             return new SharedParam(((SharedParameterElement) revitParamElement).GuidValue,
                 revitParamElement.GetStorageType()) {PropertyName = propertyName, Name = revitParamElement.Name};
         }
+        
+        /// <inheritdoc/>
+        SharedParam ISharedParamsService.this[string paramId] 
+            => (SharedParam) this[paramId];
 
         /// <inheritdoc />
         IEnumerable<SharedParam> ISharedParamsService.GetRevitParams() {
