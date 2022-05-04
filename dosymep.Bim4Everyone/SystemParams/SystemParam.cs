@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -87,7 +88,9 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// <inheritdoc/>
         [JsonIgnore]
         public override string Id {
-            get => Enum.GetName(typeof(BuiltInParameter), ParameterUtils.GetBuiltInParameter(SystemParamId));
+            get => typeof(ParameterTypeId)
+                .GetProperties(BindingFlags.Public | BindingFlags.Static)
+                .FirstOrDefault(item => (ForgeTypeId) item.GetValue(this) == SystemParamId)?.Name;
             internal set =>
                 throw new NotSupportedException("Установка имени свойства для системного параметра запрещено.");
         }
