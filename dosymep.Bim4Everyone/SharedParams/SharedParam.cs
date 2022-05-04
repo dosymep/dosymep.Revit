@@ -149,7 +149,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
 
         /// <inheritdoc/>
         [JsonIgnore]
-        public override StorageType SharedParamType => GetStorageType();
+        public override StorageType StorageType => GetStorageType();
 
         /// <inheritdoc/>
         public override bool IsExistsParam(Document document) {
@@ -201,7 +201,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 throw new ArgumentException($"Общий параметр с заданным именем \"{Name}\" или Guid \"{Guid}\" не был найден.");
             }
 
-            if(param.StorageType != SharedParamType) {
+            if(param.StorageType != StorageType) {
                 throw new ArgumentException(
                     $"Переданный общий параметр \"{Name}\" или Guid \"{Guid}\" не соответствует типу параметра у элемента.");
             }

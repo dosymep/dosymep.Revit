@@ -105,7 +105,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
         /// <inheritdoc/>
         [JsonIgnore]
-        public override StorageType SharedParamType => GetStorageType();
+        public override StorageType StorageType => GetStorageType();
 
         /// <inheritdoc/>
         public override bool IsExistsParam(Document document) {
@@ -151,7 +151,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 throw new ArgumentException($"Параметр проекта с заданным именем \"{Name}\" не был найден.");
             }
 
-            if(param.StorageType != SharedParamType) {
+            if(param.StorageType != StorageType) {
                 throw new ArgumentException(
                     $"Переданный Параметр проекта \"{Name}\" не соответствует типу параметра у элемента.");
             }

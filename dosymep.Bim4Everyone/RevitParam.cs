@@ -36,7 +36,7 @@ namespace dosymep.Bim4Everyone {
         /// Тип параметра.
         /// </summary>
         [JsonIgnore]
-        public virtual StorageType SharedParamType { get; }
+        public virtual StorageType StorageType { get; }
 
         /// <summary>
         /// Проверяет на существование параметра в документе.

@@ -95,7 +95,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
         /// <inheritdoc/>
         [JsonIgnore]
-        public override StorageType SharedParamType => SystemParamId.GetStorageType();
+        public override StorageType StorageType => SystemParamId.GetStorageType();
 
         /// <inheritdoc/>
         public override bool IsExistsParam(Document document) {
