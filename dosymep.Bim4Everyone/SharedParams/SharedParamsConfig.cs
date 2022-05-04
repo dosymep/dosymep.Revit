@@ -23,41 +23,12 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <remarks>Перед использованием нужно вызвать <see cref="LoadInstance(string)"/></remarks>
         public static SharedParamsConfig Instance { get; internal set; }
 
-        #region Размер
-
-        /// <summary>
-        /// Размер-ширина
-        /// </summary>
-        public SharedParam SizeWidth { get; internal set; } = new SharedParam() { PropertyName = nameof(SizeWidth), Name = "Speech_Размер_Ширина" };
-
-        /// <summary>
-        /// Размер-глубина
-        /// </summary>
-        public SharedParam SizeDepth { get; internal set; } = new SharedParam() { PropertyName = nameof(SizeDepth), Name = "Speech_Размер_Глубина" };
-
-        #endregion
-
         #region Перемычка
 
         /// <summary>
         /// Перемычка-существование
         /// </summary>
         public SharedParam BulkheadExists { get; internal set; } = new SharedParam() { PropertyName = nameof(BulkheadExists), Name = "Наличие Перемычки" };
-
-        /// <summary>
-        /// Перемычка-длина
-        /// </summary>
-        public SharedParam BulkheadLength { get; internal set; } = new SharedParam() { PropertyName = nameof(BulkheadLength), Name = "Перемычка Длина" };
-
-        /// <summary>
-        /// Перемычка-глубина
-        /// </summary>
-        public SharedParam BulkheadDepth { get; internal set; } = new SharedParam() { PropertyName = nameof(BulkheadDepth), Name = "Перемычка Глубина" };
-
-        /// <summary>
-        /// Перемычка-класс
-        /// </summary>
-        public SharedParam BulkheadClass { get; internal set; } = new SharedParam() { PropertyName = nameof(BulkheadClass), Name = "Перемычка Класс" };
 
         #endregion
 

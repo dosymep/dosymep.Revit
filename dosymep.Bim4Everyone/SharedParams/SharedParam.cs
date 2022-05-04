@@ -20,51 +20,35 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         private static readonly Dictionary<string, string> _description
             = new Dictionary<string, string>() {
-                {nameof(SharedParamsConfig.SizeDepth), "Описание SizeDepth"},
-                {nameof(SharedParamsConfig.SizeWidth), "Описание SizeWidth"},
-                {nameof(SharedParamsConfig.BulkheadClass), "Описание BulkheadClass"},
-                {nameof(SharedParamsConfig.BulkheadDepth), "Описание BulkheadDepth"},
-                {nameof(SharedParamsConfig.BulkheadExists), "Описание BulkheadExists"},
-                {nameof(SharedParamsConfig.BulkheadLength), "Описание BulkheadLength"},
                 {nameof(SharedParamsConfig.AlbumBlueprints), "Описание AlbumBlueprints"},
-                {nameof(SharedParamsConfig.StampSheetNumber), "Описание StampSheetNumber"},
-                {nameof(SharedParamsConfig.MechanicalSystemName), "Описание MechanicalSystemName"},
-                {nameof(SharedParamsConfig.RoomArea), "Описание RoomArea"},
-                {nameof(SharedParamsConfig.RoomsCount), "Описание RoomsCount"},
-                {nameof(SharedParamsConfig.RoomAreaWithRatio), "Описание RoomAreaWithRatio"},
-                {nameof(SharedParamsConfig.ApartmentAreaRatio), "Описание ApartmentAreaRatio"},
-                {nameof(SharedParamsConfig.ApartmentAreaNoBalcony), "Описание ApartmentAreaNoBalcony"},
-                {nameof(SharedParamsConfig.ApartmentLivingArea), "Описание ApartmentLivingArea"},
                 {nameof(SharedParamsConfig.ApartmentArea), "Описание ApartmentArea"},
+                {nameof(SharedParamsConfig.ApartmentAreaMaxSpec), "Описание ApartmentAreaMaxSpec"},
+                {nameof(SharedParamsConfig.ApartmentAreaMinSpec), "Описание ApartmentAreaMinSpec"},
+                {nameof(SharedParamsConfig.ApartmentAreaNoBalcony), "Описание ApartmentAreaNoBalcony"},
+                {nameof(SharedParamsConfig.ApartmentAreaRatio), "Описание ApartmentAreaRatio"},
+                {nameof(SharedParamsConfig.ApartmentAreaSpec), "Описание ApartmentAreaSpec"},
                 {nameof(SharedParamsConfig.ApartmentFullArea), "Описание ApartmentFullArea"},
+                {nameof(SharedParamsConfig.ApartmentGroupName), "Описание ApartmentGroupName"},
+                {nameof(SharedParamsConfig.ApartmentLivingArea), "Описание ApartmentLivingArea"},
                 {nameof(SharedParamsConfig.ApartmentNumber), "Описание ApartmentNumber"},
                 {nameof(SharedParamsConfig.ApartmentNumberExtra), "Описание ApartmentNumberExtra"},
-                {nameof(SharedParamsConfig.ApartmentAreaRatioFix), "Описание ApartmentAreaRatioFix"},
-                {nameof(SharedParamsConfig.ApartmentAreaNoBalconyFix), "Описание ApartmentAreaNoBalconyFix"},
-                {nameof(SharedParamsConfig.ApartmentLivingAreaFix), "Описание ApartmentLivingAreaFix"},
-                {nameof(SharedParamsConfig.ApartmentAreaFix), "Описание ApartmentAreaFix"},
-                {nameof(SharedParamsConfig.RoomAreaFix), "Описание RoomAreaFix"},
-                {nameof(SharedParamsConfig.RoomAreaWithRatioFix), "Описание RoomAreaWithRatioFix"},
-                {nameof(SharedParamsConfig.ApartmentFullAreaFix), "Описание ApartmentFullAreaFix"},
-                {nameof(SharedParamsConfig.RoomAreaRatio), "Описание RoomAreaRatio"},
-                {nameof(SharedParamsConfig.RoomGroupShortName), "Описание RoomGroupName"},
-                {nameof(SharedParamsConfig.ApartmentGroupName), "Описание ApartmentGroupName"},
-                {nameof(SharedParamsConfig.FireCompartmentShortName), "Описание FireCompartmentName"},
-                {nameof(SharedParamsConfig.RoomSectionShortName), "Описание RoomSectionName"},
-                {nameof(SharedParamsConfig.RoomTypeGroupShortName), "Описание RoomTypeGroupName"},
-                {nameof(SharedParamsConfig.ApartmentAreaSpec), "Описание ApartmentAreaSpec"},
-                {nameof(SharedParamsConfig.ApartmentAreaMinSpec), "Описание ApartmentAreaMinSpec"},
+                {nameof(SharedParamsConfig.FireCompartmentShortName), "Описание FireCompartmentShortName"},
                 {nameof(SharedParamsConfig.Level), "Описание Level"},
-                {nameof(SharedParamsConfig.BuildingWorksSection), "Описание BuildingWorksSection"},
-                {nameof(SharedParamsConfig.BuildingWorksBlock), "Описание BuildingWorksBlock"},
-                {nameof(SharedParamsConfig.EconomicFunction), "Описание EconomicFunction"},
+                {nameof(SharedParamsConfig.MechanicalSystemName), "Описание MechanicalSystemName"},
+                {nameof(SharedParamsConfig.RoomArea), "Описание RoomArea"},
+                {nameof(SharedParamsConfig.RoomAreaRatio), "Описание RoomAreaRatio"},
+                {nameof(SharedParamsConfig.RoomAreaWithRatio), "Описание RoomAreaWithRatio"},
+                {nameof(SharedParamsConfig.RoomGroupShortName), "Описание RoomGroupShortName"},
+                {nameof(SharedParamsConfig.RoomsCount), "Описание RoomsCount"},
+                {nameof(SharedParamsConfig.RoomSectionShortName), "Описание RoomSectionShortName"},
+                {nameof(SharedParamsConfig.RoomTypeGroupShortName), "Описание RoomTypeGroupShortName"},
+                {nameof(SharedParamsConfig.StampSheetNumber), "Описание StampSheetNumber"},
+                {nameof(SharedParamsConfig.VISCombinedName), "Описание VISCombinedName"},
                 {nameof(SharedParamsConfig.VISGrouping), "Описание VISGrouping"},
                 {nameof(SharedParamsConfig.VISMass), "Описание VISMass"},
-                {nameof(SharedParamsConfig.VISUnit), "Описание VISUnit"},
                 {nameof(SharedParamsConfig.VISMinDuctThickness), "Описание VISMinDuctThickness"},
-                {nameof(SharedParamsConfig.VISCombinedName), "Описание VISCombinedName"},
                 {nameof(SharedParamsConfig.VISSpecNumbers), "Описание VISSpecNumbers"},
-                {nameof(SharedParamsConfig.VISEconomicFunction), "Описание VISEconomicFunction"},
+                {nameof(SharedParamsConfig.VISUnit), "Описание VISUnit"},
             };
 
         /// <summary>
@@ -72,54 +56,71 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         private static readonly Dictionary<string, StorageType> _paramTypes =
             new Dictionary<string, StorageType>() {
-                {nameof(SharedParamsConfig.SizeDepth), StorageType.Double},
-                {nameof(SharedParamsConfig.SizeWidth), StorageType.Double},
-                {nameof(SharedParamsConfig.BulkheadClass), StorageType.String},
-                {nameof(SharedParamsConfig.BulkheadDepth), StorageType.String},
-                {nameof(SharedParamsConfig.BulkheadExists), StorageType.String},
-                {nameof(SharedParamsConfig.BulkheadLength), StorageType.String},
                 {nameof(SharedParamsConfig.AlbumBlueprints), StorageType.String},
-                {nameof(SharedParamsConfig.StampSheetNumber), StorageType.String},
-                {nameof(SharedParamsConfig.MechanicalSystemName), StorageType.String},
-                {nameof(SharedParamsConfig.RoomArea), StorageType.Double},
-                {nameof(SharedParamsConfig.RoomsCount), StorageType.Integer},
-                {nameof(SharedParamsConfig.RoomAreaWithRatio), StorageType.Double},
-                {nameof(SharedParamsConfig.ApartmentAreaRatio), StorageType.Double},
-                {nameof(SharedParamsConfig.ApartmentAreaNoBalcony), StorageType.Double},
-                {nameof(SharedParamsConfig.ApartmentLivingArea), StorageType.Double},
                 {nameof(SharedParamsConfig.ApartmentArea), StorageType.Double},
+                {nameof(SharedParamsConfig.ApartmentAreaMaxSpec), StorageType.Double},
+                {nameof(SharedParamsConfig.ApartmentAreaMinSpec), StorageType.Double},
+                {nameof(SharedParamsConfig.ApartmentAreaNoBalcony), StorageType.Double},
+                {nameof(SharedParamsConfig.ApartmentAreaRatio), StorageType.Double},
+                {nameof(SharedParamsConfig.ApartmentAreaSpec), StorageType.String},
                 {nameof(SharedParamsConfig.ApartmentFullArea), StorageType.Double},
+                {nameof(SharedParamsConfig.ApartmentGroupName), StorageType.String},
+                {nameof(SharedParamsConfig.ApartmentLivingArea), StorageType.Double},
                 {nameof(SharedParamsConfig.ApartmentNumber), StorageType.String},
                 {nameof(SharedParamsConfig.ApartmentNumberExtra), StorageType.String},
-                {nameof(SharedParamsConfig.ApartmentAreaRatioFix), StorageType.Double},
-                {nameof(SharedParamsConfig.ApartmentAreaNoBalconyFix), StorageType.Double},
-                {nameof(SharedParamsConfig.ApartmentLivingAreaFix), StorageType.Double},
-                {nameof(SharedParamsConfig.ApartmentAreaFix), StorageType.Double},
-                {nameof(SharedParamsConfig.RoomAreaFix), StorageType.Double},
-                {nameof(SharedParamsConfig.RoomAreaWithRatioFix), StorageType.Double},
-                {nameof(SharedParamsConfig.ApartmentFullAreaFix), StorageType.Double},
-                {nameof(SharedParamsConfig.RoomAreaRatio), StorageType.Double},
-                {nameof(SharedParamsConfig.RoomGroupShortName), StorageType.String},
-                {nameof(SharedParamsConfig.ApartmentGroupName), StorageType.String},
                 {nameof(SharedParamsConfig.FireCompartmentShortName), StorageType.String},
+                {nameof(SharedParamsConfig.Level), StorageType.String},
+                {nameof(SharedParamsConfig.MechanicalSystemName), StorageType.String},
+                {nameof(SharedParamsConfig.RoomArea), StorageType.Double},
+                {nameof(SharedParamsConfig.RoomAreaRatio), StorageType.Double},
+                {nameof(SharedParamsConfig.RoomAreaWithRatio), StorageType.Double},
+                {nameof(SharedParamsConfig.RoomGroupShortName), StorageType.String},
+                {nameof(SharedParamsConfig.RoomsCount), StorageType.Integer},
                 {nameof(SharedParamsConfig.RoomSectionShortName), StorageType.String},
                 {nameof(SharedParamsConfig.RoomTypeGroupShortName), StorageType.String},
-                {nameof(SharedParamsConfig.ApartmentAreaSpec), StorageType.String},
-                {nameof(SharedParamsConfig.ApartmentAreaMinSpec), StorageType.Double},
-                {nameof(SharedParamsConfig.ApartmentAreaMaxSpec), StorageType.Double},
-                {nameof(SharedParamsConfig.Level), StorageType.String},
-                {nameof(SharedParamsConfig.BuildingWorksSection), StorageType.String},
-                {nameof(SharedParamsConfig.BuildingWorksBlock), StorageType.String},
-                {nameof(SharedParamsConfig.EconomicFunction), StorageType.String},
-                {nameof(SharedParamsConfig.VISGrouping), StorageType.String},
-                {nameof(SharedParamsConfig.VISMass), StorageType.Integer},
-                {nameof(SharedParamsConfig.VISUnit), StorageType.String},
-                {nameof(SharedParamsConfig.VISMinDuctThickness), StorageType.Integer},
+                {nameof(SharedParamsConfig.StampSheetNumber), StorageType.String},
                 {nameof(SharedParamsConfig.VISCombinedName), StorageType.String},
-                {nameof(SharedParamsConfig.VISSpecNumbers), StorageType.Integer},
-                {nameof(SharedParamsConfig.VISEconomicFunction), StorageType.String},
+                {nameof(SharedParamsConfig.VISGrouping), StorageType.String},
+                {nameof(SharedParamsConfig.VISMass), StorageType.Double},
+                {nameof(SharedParamsConfig.VISMinDuctThickness), StorageType.Double},
+                {nameof(SharedParamsConfig.VISSpecNumbers), StorageType.Double},
+                {nameof(SharedParamsConfig.VISUnit), StorageType.String},
             };
 
+
+        private readonly Dictionary<string, Guid> _paramGuids =
+            new Dictionary<string, Guid>() {
+                {nameof(SharedParamsConfig.AlbumBlueprints), new Guid("e1b06433-f527-403c-8986-af9a01e6be7f")},
+                {nameof(SharedParamsConfig.ApartmentArea), new Guid("603c712b-657c-4195-b153-30950ae5f4cb")},
+                {nameof(SharedParamsConfig.ApartmentAreaMaxSpec), new Guid("2a6f369d-9065-4b55-a7d3-33db24751a98")},
+                {nameof(SharedParamsConfig.ApartmentAreaMinSpec), new Guid("24508a72-b07c-460a-a580-d5ae2d54ab94")},
+                {nameof(SharedParamsConfig.ApartmentAreaNoBalcony), new Guid("374fc833-240a-4d71-95fc-7d349456ca7e")},
+                {nameof(SharedParamsConfig.ApartmentAreaRatio), new Guid("80be4e2b-0656-45d2-90e6-e372685b03aa")},
+                {nameof(SharedParamsConfig.ApartmentAreaSpec), new Guid("f6616ef6-481c-4133-81f9-c258790822e2")},
+                {nameof(SharedParamsConfig.ApartmentFullArea), new Guid("317ce3f3-b540-4a5d-9cba-15cd273d0e4e")},
+                {nameof(SharedParamsConfig.ApartmentGroupName), new Guid("a3cb8c52-4c45-42ff-abc0-a569cd122763")},
+                {nameof(SharedParamsConfig.ApartmentLivingArea), new Guid("3e43f7d6-6dfe-4b88-a874-7c54272789b7")},
+                {nameof(SharedParamsConfig.ApartmentNumber), new Guid("083c183f-d3d3-4710-9efc-f21ade3680f9")},
+                {nameof(SharedParamsConfig.ApartmentNumberExtra), new Guid("735e1a5f-e5f6-44b6-b94f-bb810db5bafc")},
+                {nameof(SharedParamsConfig.FireCompartmentShortName), new Guid("b750a7c4-e882-4952-a773-07f060946ad7")},
+                {nameof(SharedParamsConfig.Level), new Guid("248ddd42-5597-4eba-bba2-818056f8586c")},
+                {nameof(SharedParamsConfig.MechanicalSystemName), new Guid("4be4ed4d-c509-4ef3-a55d-23d3a406b83c")},
+                {nameof(SharedParamsConfig.RoomArea), new Guid("88698162-c32d-45df-9db6-2ddb07b04d17")},
+                {nameof(SharedParamsConfig.RoomAreaRatio), new Guid("3a8a1879-1802-4bc6-9c1a-c375dc1a9292")},
+                {nameof(SharedParamsConfig.RoomAreaWithRatio), new Guid("aa4729e4-4964-43c1-a706-4b45d0567771")},
+                {nameof(SharedParamsConfig.RoomGroupShortName), new Guid("c7955ded-0589-4d86-93a1-7d205d5852e2")},
+                {nameof(SharedParamsConfig.RoomsCount), new Guid("2498f7c7-de06-42c7-93dc-5e269cadc202")},
+                {nameof(SharedParamsConfig.RoomSectionShortName), new Guid("c39f32dd-a2b7-4853-8dc0-13c63c052eb2")},
+                {nameof(SharedParamsConfig.RoomTypeGroupShortName), new Guid("2e36a08a-94c0-4b35-a082-e5e3d51765cf")},
+                {nameof(SharedParamsConfig.StampSheetNumber), new Guid("b6e73342-b6cd-42c5-86c5-64b04b5b88de")},
+                {nameof(SharedParamsConfig.VISCombinedName), new Guid("3624223b-d55a-4b60-98e7-af64d6242409")},
+                {nameof(SharedParamsConfig.VISGrouping), new Guid("7bf3d944-9973-484d-9195-66472ddd150f")},
+                {nameof(SharedParamsConfig.VISMass), new Guid("4a62a841-b2d0-4c94-aca8-c907f1adcc88")},
+                {nameof(SharedParamsConfig.VISMinDuctThickness), new Guid("7af80795-5115-46e4-867f-f276a2510250")},
+                {nameof(SharedParamsConfig.VISSpecNumbers), new Guid("37e09a6d-093b-432b-9647-33b70424642d")},
+                {nameof(SharedParamsConfig.VISUnit), new Guid("02d3bf80-f03c-4055-ad5c-3dfb2c6ff26a")},
+            };
+        
         /// <summary>
         /// Конструктор класса общего параметра
         /// </summary>
@@ -132,6 +133,12 @@ namespace dosymep.Bim4Everyone.SharedParams {
         internal SharedParam(StorageType storageType) {
             _storageType = storageType;
         }
+        
+        /// <summary>
+        /// Guid общего параметра.
+        /// </summary>
+        [JsonIgnore]
+        public Guid Guid => _paramGuids.TryGetValue(PropertyName, out Guid value) ? value : Guid.Empty;
 
         /// <inheritdoc/>
         [JsonIgnore]
@@ -180,7 +187,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            var param = element.GetParameters(Name).FirstOrDefault(item => item.IsShared);
+            var param = element.GetSharedParam(Name);
             if(param is null) {
                 throw new ArgumentException($"Общий параметр с заданным именем \"{Name}\" не был найден.");
             }
