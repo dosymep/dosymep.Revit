@@ -23,15 +23,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <remarks>Перед использованием нужно вызвать <see cref="LoadInstance(string)"/></remarks>
         public static SharedParamsConfig Instance { get; internal set; }
 
-        #region Перемычка
-
-        /// <summary>
-        /// Перемычка-существование
-        /// </summary>
-        public SharedParam BulkheadExists { get; internal set; } = new SharedParam() { PropertyName = nameof(BulkheadExists), Name = "Наличие Перемычки" };
-
-        #endregion
-
         #region
 
         /// <summary>
