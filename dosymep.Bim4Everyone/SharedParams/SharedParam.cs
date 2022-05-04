@@ -154,7 +154,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 throw new ArgumentNullException(nameof(document));
             }
 
-            return document.IsExistsSharedParam(Name);
+            return document.IsExistsSharedParam(Guid) || document.IsExistsSharedParam(Name);
         }
 
         /// <inheritdoc/>
@@ -164,7 +164,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
 
         /// <inheritdoc/>
         public override ParameterElement GetRevitParamElement(Document document) {
-            return document.GetSharedParam(Name);
+            return document.GetSharedParam(Guid) ?? document.GetSharedParam(Name);
         }
 
         /// <summary>
@@ -187,14 +187,20 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            var param = element.GetSharedParam(Name);
+            Parameter param = null;
+            try {
+                param = element.GetSharedParam(Guid);
+            } catch(System.ArgumentException) {
+                param = element.GetSharedParam(Name);
+            }
+                
             if(param is null) {
-                throw new ArgumentException($"Общий параметр с заданным именем \"{Name}\" не был найден.");
+                throw new ArgumentException($"Общий параметр с заданным именем \"{Name}\" или Guid \"{Guid}\" не был найден.");
             }
 
             if(param.StorageType != SharedParamType) {
                 throw new ArgumentException(
-                    $"Переданный Параметр проекта \"{Name}\" не соответствует типу параметра у элемента.");
+                    $"Переданный общий параметр \"{Name}\" или Guid \"{Guid}\" не соответствует типу параметра у элемента.");
             }
 
             return param;

@@ -175,6 +175,17 @@ namespace dosymep.Revit {
 
             return document.GetSharedParams().Any(item => item.Name.Equals(paramName));
         }
+        
+        /// <summary>
+        /// Проверяет на наличие общего параметра проекта.
+        /// </summary>
+        /// <param name="document">Документ Revit.</param>
+        /// <param name="paramGuid">Guid общего параметра проекта.</param>
+        /// <returns>Возвращает true если общий параметр проекта был добавлен в Revit, иначе false.</returns>
+        /// <exception cref="System.ArgumentException">Наименование общего параметра не может быть null или пустым.</exception>
+        public static bool IsExistsSharedParam(this Autodesk.Revit.DB.Document document, Guid paramGuid) {
+            return document.GetSharedParams().Any(item => item.GuidValue.Equals(paramGuid));
+        }
 
         #endregion
 
@@ -194,10 +205,20 @@ namespace dosymep.Revit {
         /// Возвращает общий параметр по имени.
         /// </summary>
         /// <param name="document">Документ.</param>
-        /// <param name="paramName">Наименование параметра.</param>
+        /// <param name="paramName">Наименование общего параметра.</param>
         /// <returns>Возвращает общий параметр по имени. Если не параметр не был найден, то возвращается null.</returns>
         public static Autodesk.Revit.DB.SharedParameterElement GetSharedParam(this Autodesk.Revit.DB.Document document, string paramName) {
             return document.GetSharedParams().FirstOrDefault(item => item.Name.Equals(paramName)); 
+        }
+        
+        /// <summary>
+        /// Возвращает общий параметр по имени.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="paramGuid">Guid общего параметра.</param>
+        /// <returns>Возвращает общий параметр по имени. Если не параметр не был найден, то возвращается null.</returns>
+        public static Autodesk.Revit.DB.SharedParameterElement GetSharedParam(this Autodesk.Revit.DB.Document document, Guid paramGuid) {
+            return document.GetSharedParams().FirstOrDefault(item => item.GuidValue.Equals(paramGuid)); 
         }
         
         /// <summary>

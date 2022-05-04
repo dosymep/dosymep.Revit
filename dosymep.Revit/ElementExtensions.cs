@@ -416,6 +416,25 @@ namespace dosymep.Revit {
 
             return param;
         }
+        
+        /// <summary>
+        /// Возвращает общий параметр.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramGuid">Guid общего параметра.</param>
+        /// <returns>Возвращает общий параметр.</returns>
+        public static Parameter GetSharedParam(this Element element, Guid paramGuid) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            Parameter param = element.get_Parameter(paramGuid);
+            if(param is null) {
+                throw new ArgumentException($"Общего параметра с заданным Guid \"{paramGuid}\" у элемента не существует.", nameof(paramGuid));
+            }
+
+            return param;
+        }
 
         #endregion
         
