@@ -13,6 +13,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
     /// Класс общего параметра
     /// </summary>
     public class SharedParam : RevitParam {
+        private readonly Guid? _paramGuid;
         private readonly StorageType? _storageType;
 
         /// <summary>
@@ -120,7 +121,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 {nameof(SharedParamsConfig.VISSpecNumbers), new Guid("37e09a6d-093b-432b-9647-33b70424642d")},
                 {nameof(SharedParamsConfig.VISUnit), new Guid("02d3bf80-f03c-4055-ad5c-3dfb2c6ff26a")},
             };
-        
+
         /// <summary>
         /// Конструктор класса общего параметра
         /// </summary>
@@ -129,8 +130,10 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <summary>
         /// Конструктор класса общего параметра проекта.
         /// </summary>
+        /// <param name="paramGuid">Guid общего параметра.</param>
         /// <param name="storageType">Тип параметра проекта.</param>
-        internal SharedParam(StorageType storageType) {
+        internal SharedParam(Guid paramGuid, StorageType storageType) {
+            _paramGuid = paramGuid;
             _storageType = storageType;
         }
         
@@ -138,11 +141,11 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// Guid общего параметра.
         /// </summary>
         [JsonIgnore]
-        public Guid Guid => _paramGuids.TryGetValue(PropertyName, out Guid value) ? value : Guid.Empty;
+        public Guid Guid => GetGuid();
 
         /// <inheritdoc/>
         [JsonIgnore]
-        public override string Description => _description.TryGetValue(PropertyName, out string value) ? value : null;
+        public override string Description => GetDescription();
 
         /// <inheritdoc/>
         [JsonIgnore]
@@ -204,6 +207,18 @@ namespace dosymep.Bim4Everyone.SharedParams {
             }
 
             return param;
+        }
+        
+        private Guid GetGuid() {
+            if(_paramGuid == null) {
+                return _paramGuids.TryGetValue(PropertyName, out Guid value) ? value : Guid.Empty;
+            }
+
+            return _paramGuid.Value;
+        }
+        
+        private string GetDescription() {
+            return _description.TryGetValue(PropertyName, out string value) ? value : null;
         }
 
         private StorageType GetStorageType() {

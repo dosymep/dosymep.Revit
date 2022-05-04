@@ -301,8 +301,9 @@ namespace dosymep.Bim4Everyone.SharedParams {
             if(revitParamElement == null) {
                 throw new ArgumentNullException(nameof(revitParamElement));
             }
-            
-            return new SharedParam(revitParamElement.GetStorageType()) {PropertyName = propertyName, Name = revitParamElement.Name};
+
+            return new SharedParam(((SharedParameterElement) revitParamElement).GuidValue,
+                revitParamElement.GetStorageType()) {PropertyName = propertyName, Name = revitParamElement.Name};
         }
 
         /// <inheritdoc />
