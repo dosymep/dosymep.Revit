@@ -3396,7 +3396,8 @@ namespace dosymep.Revit {
 
 #endif
                 default:
-                    throw new System.ArgumentOutOfRangeException(nameof(builtInParameter), $"Не удалось определить тип параметра для \"{builtInParameter}\".");
+                    throw new System.ArgumentOutOfRangeException(nameof(builtInParameter),
+                        $"Не удалось определить тип параметра для \"{builtInParameter}\".");
             }
         }
 
@@ -3565,7 +3566,13686 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(forgeTypeId));
             }
 
-            return ParameterUtils.GetBuiltInParameter(forgeTypeId).GetStorageType();
+            if(forgeTypeId == ParameterTypeId.ActualMaxRidgeHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelIncludeStation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelIndStation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelSetEndStation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelSetInterval) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelSetOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelSetStartStation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelStationValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllGridRotationForDivisionRule) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelImage) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelInstanceComments) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelManufacturer) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelModel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelTypeComments) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelTypeImage) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelUrl) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllowAutoEmbed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AlternateUnits) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AlternateUnitsPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AlternateUnitsSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AlwaysZeroLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticConstructionGbxmlTypeid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticConstructionLookupTable) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalAbsorptance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalDefineThermalPropertiesBy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalGeometryIsValid) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalHeatTransferCoefficient) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalLinkReleaseRotationX) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalLinkReleaseRotationY) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalLinkReleaseRotationZ) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalLinkReleaseTranslationX) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalLinkReleaseTranslationY) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalLinkReleaseTranslationZ) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndAllNonZero) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndFx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndFy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndFz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndMx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndMy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndMz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartAllNonZero) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartFx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartFy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartFz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartMx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartMy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartMz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelBaseAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelBaseExtensionMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelBaseYProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelBaseZProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelCodeChecking) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelColumnBaseExtension) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelColumnTopExtension) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelEndAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelEndProjectionOrthogonal) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelEndYProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelEndZProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelFloorAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelFloorProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelFoundationsMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelManuallyAdjusted) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelNodesMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelPerimeter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelPhysicalType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelRotation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelSketchAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelSketchProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelStartAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelStartProjectionOrthogonal) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelStartYProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelStartZProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelStickElementsMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelSurfaceElementsMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelTopAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelTopExtensionMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelTopYProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelTopZProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelWallAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelWallBaseProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelWallProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelWallTopProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalRoughness) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalSolarHeatGainCoefficient) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalThermalMass) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalThermalResistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalVisualLightTransmittance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnyPatternIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnyPatternIdParamNoNo) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ArcCenterMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArcLeaderParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArcWallCntrMrkVisible) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AreaSchemeId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AreaSchemeName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AreaType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AreaTypeText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowCentered) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowClosed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowFilled) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowheadEndAtRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowheadType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AssemblyName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AssemblyNamingCategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AssemblyPrecastFreeze) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AssignTemplateOnViewCreation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AssociatedLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AssociatedLevelOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AutoJoinCondition) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AutoJoinConditionWall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder1Grid1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder1Grid2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder1Horiz) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder1Vert) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder2Grid1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder2Grid2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder2Horiz) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder2Vert) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionInteriorGrid1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionInteriorGrid2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionInteriorHoriz) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionInteriorVert) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoPanel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoPanelWall) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.BackgroundDraftPatternIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.BackgroundPatternColorParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BaselineDimOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BasepointAngletonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BasepointEastwestParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BasepointElevationParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BasepointLatitudeParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BasepointLongitudeParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BasepointNorthsouthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BeamHJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BeamSystem3dParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BeamSystemTagInstParamAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BeamSystemTagParamLeft) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BeamSystemTagParamRight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BeamVJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BeamVJustificationOtherValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BentFabricParamBendDirection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BentFabricParamLongitudinalCutLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BentFabricParamStraightWiresLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BlendEndParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BlendStartParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryAreaRestraintX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryAreaRestraintY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryAreaRestraintZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryBearing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryConditionsIsExt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryConditionsType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDirectionRotX) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDirectionRotY) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDirectionRotZ) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDirectionX) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDirectionY) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDirectionZ) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryLinearRestraintRotX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryLinearRestraintX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryLinearRestraintY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryLinearRestraintZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryParamPreset) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryParamPresetArea) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryParamPresetLinear) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRestraintRotX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRestraintRotY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRestraintRotZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRestraintX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRestraintY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRestraintZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryXRotationFixed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryXRotationSpring) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryXTranslationFixed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryXTranslationSpring) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryYRotationFixed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryYRotationSpring) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryYTranslationFixed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryYTranslationSpring) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryZRotationFixed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryZRotationSpring) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryZTranslationFixed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryZTranslationSpring) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BrOrgFilter) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.BrOrgFolders) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingClosingTimeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingCurveGstyle) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingCurveGstylePlusInvisible) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingOpeningTimeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingUnoccupiedCoolingSetPointParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingpadHeightabovelevelParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingpadThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BuilidingPadStructureIdParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.CabletrayMinbendmultiplierParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CalloutAttrHeadTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CalloutCornerSheetRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CalloutSyncronizeBoundOffsetFar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CalloutTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingAttrDefaultHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingAttrPatternParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingAttrSpacing1Param) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingAttrSpacing2Param) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingAttrSystemnameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingHasThicknessParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingHeightabovelevelParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingStructureIdParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingThicknessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CenterMarkSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CircMullionRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CircuitLoadClassificationAbbreviationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CircuitLoadClassificationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CircuitPhaseParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CircuitWaysParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ClearCover) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ClearCoverBottom) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ClearCoverExterior) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ClearCoverInterior) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ClearCoverOther) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ClearCoverTop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ClientName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ClineSubcategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CoarseScaleFillPatternColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CoarseScaleFillPatternIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ColorFillFilteredParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColorFillSwatchHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ColorFillSwatchWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ColorSchemeLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnBaseAttachCutParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnBaseAttachJustificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnBaseAttachedParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnBaseAttachmentOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnLocationMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnTopAttachCutParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnTopAttachJustificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnTopAttachedParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnTopAttachmentOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConceptualConstructionMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ConduitStandardTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorAngleOfDeflection) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorEngagementLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorGenderType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorIndex) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorInsideDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorJointType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorProfileType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorReferenceIndex) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorUtilityParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorVisibleSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConstraintFixedOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingBearingWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingBottomHeel) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingBottomToe) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingBreakAtInsertsDisable) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingDefaultEndExtensionLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingEccentricity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingStructuralUsage) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingTopHeel) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingTopToe) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailBeginningTerminationAttachmentParam) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailBeginningTerminationTypeParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailDefaultJoinTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailEndExtensionLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailEndTerminationAttachmentParam) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailEndTerminationTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailExtensionLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailFilletRadiusParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailJoinTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailMaterialsParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailPlusTreadDepthParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailProfileTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailTransitionTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContourElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContourElevationStep) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContourLabelsElevBaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContourLabelsLinearUnits) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ContourLabelsPrimaryOnly) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContourLabelsRelativeBase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ContourSubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerCoupledBarSize) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerCoupledEndtreatment) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerCoupledEngagement) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerMainBarSize) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerMainEndtreatment) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerMainEngagement) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerQuantity) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CoverTypeLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CoverTypeName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainGridBaseOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainVersionParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainWallPanelHostId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainWallPanelsHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainWallPanelsWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainWallSyspanelOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainWallSyspanelThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAdjustBorderHoriz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAdjustBorderU) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAdjustBorderV) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAdjustBorderVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAdjustBordern1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAdjustBordern2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAngleHoriz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAngleU) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAngleV) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAngleVert) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAnglen1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAnglen2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltHoriz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltRatioU) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltRatioV) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltRation1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltRation2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltU) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltV) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltVert) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridOriginHoriz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridOriginU) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridOriginV) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridOriginVert) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridOriginn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridOriginn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDist) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDistHoriz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDistU) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDistV) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDistVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDistn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDistn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveByPointsProjectionType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveDeterminesOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveEdgeOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemArcEndAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemArcRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemArcRange) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemArcStartAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemDefinesSlope) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemLineAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveHeightOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveIsDetail) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveIsFilled) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveIsReferenceLine) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveIsSlopeDefining) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CurveNumberOfSegments) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveParamConcreteCantilever) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveParamSteelCantilever) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveSupportOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveVisibilityParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveWallOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveWallOffsetRoofs) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CustMullionThick) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CustMullionWidth1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CustMullionWidth2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CutLineAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CutLineDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CutLineExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CutLineType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CutMarkSymbol) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CutMarkSymbolSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CwpAddGridPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CwpAddGridSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CwpAddLevelPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CwpAddLevelSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CwpCopyFloorInserts) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpCopyRoofInserts) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpCopyWallInserts) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpLevelOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CwpLinkedRoomParams) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.CwpLinkedRoomPhases) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.CwpReuseExistingGrids) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpReuseExistingLevels) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpReuseGridsSameName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpReuseLevelsSameName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpSplitColumnsAtLevels) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DatumBubbleEndn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DatumBubbleEndn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DatumBubbleLocationInElev) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DatumPlaneDefinesOrigin) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DatumPlaneDefinesWallClosure) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DatumText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DatumVolumeOfInterest) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DebugtabDataboundcontrolsdemoBoolean) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DebugtabDataboundcontrolsdemoDouble) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DebugtabDataboundcontrolsdemoEnum) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DebugtabDataboundcontrolsdemoInteger) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DecalAttributes) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.DecalHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DecalLockProportions) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DecalSubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DecalWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionExtWallUnderground) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassExteriorWall) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassFloor) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassGlazing) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassInteriorWall) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassOpening) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassRoof) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassShade) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassSkylight) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassSlab) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultViewTemplate) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefinesConstantHeight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DesignOptionId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DesignOptionParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DiameterSymbolLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DiameterSymbolText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DimDisplayEq) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimIsreporting) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimLabel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimLabelGpShow) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimLabelIsInstance) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimLeader) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimLeaderArrowhead) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimLeaderDisplayCondition) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimLeaderShoulderLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimLeaderType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimLineExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimNotModifiable) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DimReferenceCount) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleAngularUnits) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleAngularUnitsAlt) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleCenterlinePattern) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleCenterlineSymbol) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleCenterlineTickMark) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleDimLineSnapDist) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleFlippedDimLineExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleInteriorTickMark) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleLeaderTickMark) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleLinearUnits) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleLinearUnitsAlt) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleReadConvention) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleShowOpeningHt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleSuppressSpaces) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DimTextBackground) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimTextLocationForLeader) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimToInsertType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimToInserts) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimToIntersectingGrids) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimToIntersectingWalls) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimTotalLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimValueAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimValueLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimWitnsLineCntrl) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimWitnsLineExtensionBelow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.Directcontext3dApplicationId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.Directcontext3dLoaded) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.Directcontext3dName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.Directcontext3dServerId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.Directcontext3dSourceId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DisplacedElementDisplacementX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DisplacedElementDisplacementY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DisplacedElementDisplacementZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DisplacementPathDepth) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DisplacementPathStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DistanceToCutMark) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceAllGridRotation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceAllPoints) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceComponentTrimType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceCoverFaceCompletely) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayComponents) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayDiscardeddivisionlines) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayGridlines) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayNodes) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayOriginalSurface) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayPatternFill) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayPatternLines) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplaySurfaceOption) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceEdgeNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceFacetNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceGridOptionParamn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceGridOptionParamn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceGridlinesStyle) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceOffsetFromSurface) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceOriginalSurfaceMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePattern) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternFillMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternFlip) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternIndentn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternIndentn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternLinesStyle) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternMirror) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternRotationAngle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePointNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceRule1Suspension) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceRule2Suspension) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceSurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceTileBorder) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceTotalEdgeLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathBeginningIndent) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathDisplayNodeNumbers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathDisplayNodes) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathDisplayReferenceCurves) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathEndIndent) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathFlipDirection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathLayout) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathLayoutFixedNumPoint) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathMaxDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathMeasurementType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathMergedPointNum) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathMinDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathTotalPathLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DivisionPattern) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DivisionProfileWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DivisionRuleParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DivisionSketchCurveDivisionParamsOverrideParam) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.DivisionSketchCurveExtentdToSilhParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DoorConstructionType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DoorCost) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DoorEvacuationExitType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DoorFinish) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DoorFrameMaterial) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DoorFrameType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DoorNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DoorOperationType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartAreaComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DpartBaseLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DpartBaseLevelByOriginal) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartCanHostRebar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartExcluded) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartHeightComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DpartLayerConstruction) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartLayerFunction) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartLayerIndex) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartLayerWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DpartLengthComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DpartMaterialByOriginal) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartMaterialIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DpartOriginalCategory) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartOriginalCategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DpartOriginalFamily) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartOriginalType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartPhaseCreatedByOriginal) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartPhaseDemolishedByOriginal) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartShapeModified) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartVolumeComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DrawForEachRun) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DuctTerminalEngagementLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EdgeLinework) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.EditedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ElecticalEquipVoltage) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ElecticalEquipWattage) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ElemCategoryParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElemCategoryParamMt) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElemDeletableInFamily) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElemFamilyAndTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElemFamilyParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElemIsReference) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElemPartitionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElemReferenceName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElemReferenceName2dXz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElemRoomId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElemRoomName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ElemRoomNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ElemTypeLabel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElemTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElementIsCutting) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElementLockedParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevArrowAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ElevArrowFilled) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevAssocDatum) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElevReferenceLabelPos) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevShape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevShowViewName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevSymbolId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElevTextPos) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevViewNamePos) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ElevatnTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.EllipseFocusMrkVisible) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EllipseXParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.EllipseYParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.EndExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EndJoinCutback) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EndTreatment) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.EndYJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EndYOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EndZJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EndZOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisAdvancedOptions) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisBuildingOperatingSchedule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisConceptualConstruction) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisCreateAnalyticalModel) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisGlazingIsShaded) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisHorizontalVoidThreshold) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisHvacSystem) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisMassZoning) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisMasszoneCoreoffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisMasszoneDivideperimeter) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisMasszoneUseenergydatasettings) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisOutdoorAirInformationParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisPercentageGlazing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisPercentageSkylights) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisProjectPhase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisShadeDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisSillHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisSkylightWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisSpaceBoundingParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisVerticalVoidThreshold) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EqualityFormula) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.EqualityTextForAngularDim) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.EqualityTextForContinuousLinearDim) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.EqualityWitnessDisplay) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ExtrusionAutoParams) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ExtrusionEndParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ExtrusionLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ExtrusionStartParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricBendDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamCoverOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamCutByHost) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamCutOverallLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamCutOverallWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamCutSheetMass) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamLapsplicePosition) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamLocationGeneric) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamLocationSlab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamLocationWall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamMajorLapspliceLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamMinorLapspliceLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamRounding) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSharedFamilyKey) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSheetType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymDBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymDLeft) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymDRight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymDTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymLeft) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymRight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanTagComponentReference) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamTagView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamTotalSheetMass) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetDefaultMajorLapspliceLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetDefaultMinorLapspliceLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorDirectionWireType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorEndOverhang) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorLayoutPattern) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorNumberOfWires) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorReinforcementArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorStartOverhang) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMass) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMassunit) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorDirectionWireType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorEndOverhang) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorLayoutPattern) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorNumberOfWires) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorReinforcementArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorStartOverhang) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetOverallLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetOverallWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetPhysicalMaterialAsset) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricWireDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricWireDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricWireLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricWireOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricWireType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationBottomElevationIncludeInsulationOfPart) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FabricationBottomElevationOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationBottomOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationBraSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationCenterlineElevationOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationChangeServiceParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationDoublewallMaterialAbbreviation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationEndOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationEndSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationFittingDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationInsulationAbbreviation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationInsulationMaterialFinish) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationInsulationSpec) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationInsulationSpecificationAbbreviation) {
+                return StorageType.String;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FabricationLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationMaterialAbbreviation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartAlias) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartAngleOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartBoughtOut) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartCutType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDepthIn) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDepthInOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDepthOut) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDepthOutOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDiameterIn) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDiameterInOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDiameterOut) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDiameterOutOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDoublewallMaterial) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDoublewallMaterialArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDoublewallMaterialThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartInsulationArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartItemNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartLengthOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartLiningArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartMaterial) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartMaterialThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartNotes) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartPatNo) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartSheetmetalArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartTakeoffDialogParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartWidthIn) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartWidthInOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartWidthOut) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartWidthOutOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPipeInvertElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPriSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataFinishDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataInstallType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataItemDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataLongDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataMaterialDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataOem) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataProduct) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataRange) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataSizeDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataSpecification) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductEntry) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationRelativeFilename) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationRoutingSolutionsUiParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSecSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationServiceAbbreviation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationServiceName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationServiceParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSetUpDownTag) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSetUpDownTagFromBottom) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSlopeParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpecification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpecificationAbbreviation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpotBottomElevationIncludeInsulationOfPart) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpotBottomElevationOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpotTopElevationIncludeInsulationOfPart) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpotTopElevationOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationStartOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationTopElevationIncludeInsulationOfPart) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FabricationTopElevationOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationTopOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationVendor) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationVendorCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FaceroofLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FaceroofOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamProfileDefinition) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamProfileUsage) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyAllowCutWithVoids) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyAlwaysVertical) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyAutojoin) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyBaseLevelOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyBaseLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCanHostRebar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCategoryPseudoParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyContentPartType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCurveAttachmentProportion) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCurveGstyleFor2010Mass) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCurveGstylePlusInvisible) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCurveGstylePlusInvisibleMinusAnalytical) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCurveGstylePlusInvisiblePlusStickSym) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCurveGstylePlusInvisiblePlusStickSymMinusAnalytical) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FamilyElectricalMaintainAnnotationOrientation) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FamilyElemSubcategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyEnableCuttingInViews) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyExportAsGeometry) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyFreeinstDefaultElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyHostingBehavior) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyIsElevationMarkBody) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyIsParametric) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyKeepTextReadable) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyKeyExtParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyKeywordProtected) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyLineLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyNamePseudoParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRenderingType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRfaPathPseudoParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRotateTextWithComponent) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRotateWithComponent) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRoughHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRoughWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRoundconnectorDimensiontype) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyShared) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyStructFootingUseCapTop) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyStructMaterialType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilySymbolicRep) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyThicknessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyTopLevelOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyTopLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyUsagePseudoParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyUsePrecutShape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyWindowInsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyWorkPlaneBased) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyWpbDefaultElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FasciaDepthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FasciaMaterialParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FasciaProfileParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FbxAssetType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightAtADistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightBallastLoss) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightColorFilter) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightDimmingLightColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightEfficacy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightEmitCircleDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightEmitLineLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightEmitRectangleLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightEmitRectangleWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightEmitShapeVisible) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightIlluminance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightInitialColorCtrl) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightInitialColorName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightInitialColorTemperature) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightInitialIntensity) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightInitialIntensityInputMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLampLumenDepr) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLampTiltLoss) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLimunousFlux) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLimunousIntensity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLossFactorCtrl) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLossFactorMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLumenaireDirt) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightPhotometricFile) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightPhotometricFileCache) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightPhotometrics) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightPhotometricsFam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightSourceDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightSourceLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightSpotBeamAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightSpotFieldAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightSpotTiltAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightSurfaceLoss) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightTemperatureLoss) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightTotalLightLoss) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightVoltageLoss) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightWattage) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FillPatternIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FillPatternIdParamNoNo) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FilledRegionMasking) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FireRating) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FixedRotation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FlexibleInstanceFlip) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FloorAttrDefaultHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FloorAttrDefaultThicknessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FloorAttrThicknessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FloorHeightabovelevelParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FloorParamIsStructural) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FloorParamSpanDirection) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FloorStructureIdParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.FollowSurface) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ForegroundAnyPatternIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ForegroundDraftPatternIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ForegroundPatternColorParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FramingLengthRoundoff) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FunctionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GbxmlEditDataParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GenericDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.GenericZoneName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.GeoLocation) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GeomVisibilityParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptions) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsBackground) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsFog) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsLighting) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsModel) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsPhotoExposure) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsShadows) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsSketchyLines) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsSsIntensity) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GridBankColNum) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridBankColWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.GridBankRowHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.GridBankRowNum) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridBubbleEndn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridBubbleEndn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridBubbleLinePen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridCenterSegmentColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridCenterSegmentPattern) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.GridCenterSegmentStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridCenterSegmentWeight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridEndSegmentColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridEndSegmentPattern) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.GridEndSegmentWeight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridEndSegmentsLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.GridHeadTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.GridNetLocationMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.GridlineSpecStatus) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GroupAllowedViewTypes) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.GroupAttachedParentName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.GroupLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.GroupOffsetFromLevel) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.GroupnameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.GuideGridNameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.GuideGridSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.GutterMaterialParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.GutterProfileParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailHandClearanceParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailProjectionParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailSupportsJustificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailSupportsLayoutParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailSupportsNumberParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailSupportsSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailSupportsTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.HeadOnPlacementMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HeavyEndPen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HeavyTickMarkPen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HostAreaComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.HostIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.HostPanelScheduleAsPanelParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HostPerimeterComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.HostSseCurvedEdgeConditionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HostVolumeComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.IconIndexParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.IdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.IfcApplicationName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcApplicationVersion) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcBuildingGuid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcGuid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcOrganization) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcProjectGuid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcSiteGuid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcTypeGuid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtComponentsDesc) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityRoll) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityStructType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityStyle) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportBackground) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ImportBaseLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ImportBaseLevelOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportDisplayUnits) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ImportInstanceScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportSymbolName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.InfrastructureAlignmentDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.InfrastructureAlignmentDisplayedEndStation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InfrastructureAlignmentDisplayedStartStation) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.InfrastructureAlignmentName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.InsertOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceElevationParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceFreeHostOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceFreeHostParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceHeadHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceMoveBaseWithGrids) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceMoveTopWithGrids) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceMovesWithGridParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceOffsetPosParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceReferenceLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceScheduleOnlyLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceSillHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceStructUsageParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.InsulationScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InsulationWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InteriorTickDisplay) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.IsVisibleParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.JoinStrengthOrder) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemClearSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemElemTagNewMembersView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemFixedSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemJustificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemLayoutRuleParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemMaximumSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemNewBeamTypeNoFamNameParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemNewBeamTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemNumBeamsSameType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemNumberOfLinesParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.KeepReadable) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.KeySourceParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.KeyValue) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.KeynoteNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.KeynoteParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.KeynoteText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LayoutnodeCurvetypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LeaderArrowWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LeaderArrowhead) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LeaderLeftAttachment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LeaderLine) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LeaderOffsetSheet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LeaderRightAttachment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LegendComponent) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LegendComponentDetailLevel) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LegendComponentLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LegendComponentView) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LevelAttrRoomComputationAutomatic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LevelAttrRoomComputationHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataFloorArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataFloorPerimeter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataMassFamilyAndTypeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataMassFamilyParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataMassInstanceComments) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataMassTypeComments) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataMassTypeDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataMassTypeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataOwningLevel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataSpaceUsage) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataSurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelElev) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelHeadTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LevelIsBuildingStory) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LevelIsGroundPlane) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LevelIsStructural) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LevelName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LevelRelativeBaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LevelRoomComputationHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelUpToLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LightingFixtureLamp) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LightingFixtureLightEmitter) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LightingFixtureWattage) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LineColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LinePattern) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LinePen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LineShapeAtCorner) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LinearDimType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAllNon0Loads) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFx1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFx2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFx3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFy1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFy2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFy3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFz1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFz2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFz3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaIsProjected) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadArrowSeparation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrAreaForceScaleFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrForceArrowType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrForceScaleFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrLinearForceScaleFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrMomentArrowArc) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrMomentArrowLine) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrMomentScaleFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCaseId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCaseName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCaseNature) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCaseNatureText) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCaseNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCaseSubcategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCombinationFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCombinationName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadComments) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadForceFx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadForceFy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadForceFz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadIsCreatedByApi) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadIsHosted) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadIsProjected) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadIsReaction) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadIsUniform) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearForceFx1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearForceFx2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearForceFy1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearForceFy2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearForceFz1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearForceFz2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMx1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMx2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMy1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMy2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMz1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMz2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadNatureName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadUsageName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadUseLocalCoordinateSystem) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LockAlignmentUiToggle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LockedBaseOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LockedEndOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LockedStartOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LockedTopOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LvMullionLeg1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LvMullionLeg2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsCreated) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsCreator) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsHistory) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsLabel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsModified) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsNotes) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsPrivate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsStatus) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataConceptualConstruction) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataGlazingIsShaded) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataMassExteriorWallArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataMassInteriorWallArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataMassOpeningArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataMassRoofArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataMassSkylightArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataMassWindowArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataPercentageGlazing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataPercentageSkylights) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataShadeDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataSillHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataSkylightWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataSlab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataSubcategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataSurfaceDataSource) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataUnderground) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MassFloorAreaLevels) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.MassGrossArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassGrossSurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassGrossVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassSurfacedataMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MassZoneConditionTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MassZoneFloorArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassZoneMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MassZoneSpaceTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MassZoneVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassingIntegrationLevel) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MatchlineBottomOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MatchlineBottomPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MatchlineTopOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MatchlineTopPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialAspaint) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialAssetParamAssetLibId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialAssetParamCommonSharedAsset) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialAssetParamExternalMaterialId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialAssetParamSource) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialAssetParamSourceUrl) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialParamColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialParamGlow) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialParamShininess) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialParamSmoothness) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialParamTransparency) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MeasureFromStructure) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MechanicalEquipmentSetIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MechanicalEquipmentSetName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MechanicalEquipmentSetOnDuty) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MechanicalEquipmentSetOnStandby) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepAirloopFantype) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepAirloopHeatexchangerType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepAirloopPreheatCoiltype) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepAnalyticalCriticalpathParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepAnalyticalEquipmentName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MepAnalyticalLoopBoundaryParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepAnalyticalLoopName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MepAnalyticalPipeDesignflow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MepChilledWaterLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepCondenserWaterLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepCoolingCoilType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepElecZoneEquipmentType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepEquipmentCalcPipingflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MepEquipmentCalcPipingpressuredropParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MepEquipmentClassification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepHeatingCoilType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepHeatingHotwaterLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepIgnoreFlowAnalysis) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepPreheatHotwaterLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepProfileTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepReheatCoilType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepReheatHotwaterLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepSystemFillGraphicsOverridesParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.MepSystemLineGraphicsOverridesParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.MepVrfLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepWaterloopChillertype) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepWaterloopType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepZoneAirLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepZoneEquipment) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepZoneEquipmentBehavior) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepZoneEquipmentDrawVentilation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepZoneEquipmentType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepZoneHotwaterLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ModelCategoryIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ModelGraphicsStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ModelGraphicsStyleAnonDraft) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ModelOrSymbolic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ModelTextSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MovesWithGridParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MullionAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MullionCornerType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MullionDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MullionDepth1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MullionDepth2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MullionFamType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MullionOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MullionPosition) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MullionProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MultiLeaderTagUi) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationDimensionStyle) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationGroupTagHeads) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationReferenceCategory) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationShowDimensionText) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationTagType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MultipleAlignmentUiToggle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MultistoryStairsActualTreadDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MultistoryStairsRefLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.NodeConnectionStatus) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.NumberPartitionParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemDisplayRule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemJustify) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemJustifyOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemReference) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemReferenceOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemTagType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemTextSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ObjectStyleMaterialIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.OffsetfacesShowShapeHandles) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.OmniclassCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.OmniclassDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.OptionName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.OptionSetId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.OptionSetName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.OrdinateDimSetting) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.OrientByView) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PaddingLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PanelScheduleName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PartMakerDivisionProfileOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PartMakerSplitterProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PartMakerSplitterProfileEdgeMatch) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PartMakerSplitterProfileFlipAcross) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PartMakerSplitterProfileFlipAlong) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PartmakerParamDivisionGap) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathOfTravelFromRoom) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PathOfTravelLevelName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PathOfTravelSpeed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathOfTravelTime) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathOfTravelToRoom) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PathOfTravelViewName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinAddlOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinAltOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinAlternating) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndHookOrient1Slab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndHookOrient1Wall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndHookOrient2Slab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndHookOrient2Wall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndHookTypen1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndHookTypen2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndSpanhookAlt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndSpanhookPrim) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinFaceSlab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinFaceWall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinHookOrient1Slab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinHookOrient1Wall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinHookOrient2Slab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinHookOrient2Wall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinHookTypen1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinHookTypen2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinLengthn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinLengthn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinNumberOfBars) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinShapen1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinShapen2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanhookAlt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanhookPrim) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanlengthAltOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanlengthBarlengthAlt) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanlengthBarlengthPrim) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanlengthBottomAlt) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanlengthBottomPrim) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanlengthTopAlt) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSummary) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinTypen1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinTypen2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PatternIndent1ForDivisionRule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PatternIndent2ForDivisionRule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PatternMirrorForDivisionRule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PeakAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PeakCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PeakHeatingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PeakLatentCoolingLoad) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhaseCreated) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PhaseDemolished) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PhaseName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PhaseSequenceNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamAverageModulus) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamBehavior) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamBending) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamBendingReinforcement) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamClass) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamCompressionParallel) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamCompressionPerpendicular) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamConcreteCompression) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamExpCoeff) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamExpCoeff1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamExpCoeff2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamExpCoeff3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamExpCoeffn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamExpCoeffn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamFivepercentModulusOfElacticity) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamGrade) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamLightWeight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamMinimumTensileStrength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamMinimumYieldStress) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamPoissonMod) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamPoissonMod1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamPoissonMod12) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamPoissonMod2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamPoissonMod23) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamPoissonMod3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamReductionFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamResistanceCalcStrength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearMod) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearMod1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearMod12) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearMod2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearMod3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearParallel) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearPerpendicular) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearReinforcement) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearStrengthReduction) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamSpecies) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamStructuralDensity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamStructuralSpecificHeat) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamStructuralThermalTreated) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamSubclass) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamTensionParallel) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamTensionPerpendicular) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamThermalConductivity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamThermalConductivityX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamThermalConductivityY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamThermalConductivityZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamUnitWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamWoodConstruction) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamYoungMod) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamYoungMod1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamYoungMod2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamYoungMod3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamYoungModn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamYoungModn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialProperties) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PipingConnectionType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PipingGenderType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PlanRegionViewRange) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.PlanViewCutPlaneHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PlanViewLevel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PlanViewNorth) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PlanViewRange) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.PlanViewTopClipHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PlanViewViewDir) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesCwConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesDrain) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesHwConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesSupplyFitting) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesSupplyPipe) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesTrap) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesVentConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesWasteConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PocheMatId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PointAdaptiveConstrained) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointAdaptiveNumParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointAdaptiveOrientationType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointAdaptiveShowNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointAdaptiveTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementChordLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementDriven) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementDriving) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementHostedOnFaceUParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementHostedOnFaceVParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementHostedParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementMeasureFrom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementMeasurementType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementMirrored) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementNonNormalizedCurveParamater) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementNormalizedCurveParamater) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementNormalizedSegmentLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementRotationAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementSegmentLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementShowNormalPlaneOnly) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementShowPlanes) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementZflipped) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointFlexibleConstrained) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointFlexibleNumParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointFlexibleOrientationType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointFlexibleShowNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointNameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PointVisibilityParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointcloudinstanceName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PointcloudtypeScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PreferDimSideUiFilter) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PrimaryOptionId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.Profile1Angle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.Profile1FamType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.Profile1FlippedHor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.Profile1OffsetX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.Profile1OffsetY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.Profile2Angle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.Profile2FamType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.Profile2FlippedHor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.Profile2OffsetX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.Profile2OffsetY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileFamType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileFamTypePlusNone) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileFlippedHor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileOffsetX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileOffsetY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileParamAlongPath) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectAddress) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectAuthor) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectBuildingName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectBuildingType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectIssueDate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectOrganizationDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectOrganizationName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectPostalCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionEnumeration) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionRevisionDate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionRevisionDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionRevisionIssued) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionRevisionIssuedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionRevisionIssuedTo) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionRevisionNum) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionSequenceNum) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectStatus) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectedSurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PropertyArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PropertyAreaOpen) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertyAreaUnits) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.PropertyLengthUnits) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentBearing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentEW) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentLR) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentNS) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentSubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySetDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySetKeywords) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySetMaterialAspect) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySetName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RadialArrayArcRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RadiusSymbolLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RadiusSymbolText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemHandrailsHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemHandrailsLatteralOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemHandrailsPositionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemHandrailsTypesParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemHasTopRail) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemSecondaryHandrailsHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemSecondaryHandrailsLatteralOffset) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemSecondaryHandrailsPositionParam) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemSecondaryHandrailsTypesParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemTopRailHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemTopRailTypesParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrLeftBalusterAttachPt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrMinInvSlope) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrRightBalusterAttachPt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrShape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrTextFont) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrTextSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RampMaxRunLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterEnableSnaps) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RasterHorizontalScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterLockProportions) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSheetheight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSheetwidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolFilename) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolLinkloadStatus) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolPagenumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolPixelheight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolPixelwidth) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolResolution) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolViewname) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterVerticalScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsAdditionalFlow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsAdjustableConnector) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsBuildingConstructionclass) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsBuildingUseloadcredits) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayBendradius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayRungheight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayRungspace) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayRungwidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayShapetype) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayconduitBendorfitting) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayconduitConnectorelemType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayconduitSystemType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayconduitrunLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayrunHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayrunWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCalculatedSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsComponentClassificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitBendradius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitDiameterParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitInnerDiamParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitOuterDiamParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitTradesize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitrunDiameterParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitrunInnerDiamParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitrunOuterDiamParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConnectorDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConnectorIsprimary) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConnectorOffsetObsolete) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConstructionSetParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConstructionTypeShadingfactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCtcBottomElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCtcServiceType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCtcTopElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveDiameterParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveHorOffsetParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveSlope) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveSurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveUtslope) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveVertOffsetParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultBendParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultCapParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultCrossParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultElbowParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultElbowdownParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultElbowupParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultHorizontalBendParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultMechjointParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultTakeoffParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultTeeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultTeedownParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultTeeupParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultTransitionParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultUnionParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeMaxHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeMaxWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeMultishapeTransitionOvalroundParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeMultishapeTransitionParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeMultishapeTransitionRectovalParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypePreferredBranchParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeRoughnessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDistributionsysConfigParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDistributionsysNumwiresParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDistributionsysPhaseParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDistributionsysVlgParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDistributionsysVllParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctBottomElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctCalculatedSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctConnectorSystemClassificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFittingLossMethodParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFittingLossMethodServerParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFittingLossMethodSettings) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFlowConfigurationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFlowDirectionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFlowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctPipeSystemAbbreviationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctPressureDrop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctRoutingPreferenceParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctSizeFormattedParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctSlope) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctStaticPressure) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctSystemCalculationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctSystemTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctTopElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAmbientTemperature) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalAreaMeasurement) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalLoadDensity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalLoadNameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalLoadTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentCurrentParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentCurrentPhaseaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentCurrentPhasebParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentCurrentPhasecParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoad) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoadPhase1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoadPhase2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoadPhase3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoadPhasea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoadPhaseb) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoadPhasec) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecBalancedLoad) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCalcCoefficientUtilization) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitConnectionTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitFrameParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitNaming) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitNamingIndex) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitNotesParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitNumberOfElementsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitNumberingType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitPanelParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitPathModeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitPathOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitPrefixSeparator) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitRatingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitSlotIndex) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitStartSlot) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitWireNumGroundsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitWireNumHotsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitWireNumNeutralsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitWireNumRunsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitWireSizeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitWireTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDemandfactorDemandloadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDemandfactorLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDemandfactorLoadclassificationParam) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDistributionNodePowerSource) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDistributionNodeSupplyFrom) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDistributionNodeSupplyFrom1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDistributionNodeSupplyFrom2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecEditCircuitNamingSettingsParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecEnclosure) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadClassification) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryConnectedCurrentParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryConnectedLoadParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryDemandCurrentParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryDemandFactorParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryDemandFactorRuleParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryDemandLoadParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryLoadclassificationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecMains) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecMaxPoleBreakers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecModifications) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecMounting) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecNumberOfCircuits) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecNumberOfPoles) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBranchCircuitApparentLoadPhasea) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBranchCircuitApparentLoadPhaseb) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBranchCircuitApparentLoadPhasec) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBranchCircuitCurrentPhasea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBranchCircuitCurrentPhaseb) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBranchCircuitCurrentPhasec) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBussingParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelConfigurationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelCurrentPhaseaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelCurrentPhasebParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelCurrentPhasecParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsApparentLoadPhasea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsApparentLoadPhaseb) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsApparentLoadPhasec) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsCurrentPhasea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsCurrentPhaseb) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsCurrentPhasec) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelGroundBusParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelLocationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelMainstypeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelMcbRatingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelNeutralBusParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelNeutralRatingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelNumphasesParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelNumwiresParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelScheduleFooterNotesParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelScheduleHeaderNotesParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelSubfeedLugsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelSupplyFromParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalConnectedCurrentParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalDemandCurrentParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalDemandFactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalestloadHvacParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalestloadLightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalestloadOtherParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalestloadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalestloadPowerParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalloadHvacParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalloadLightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalloadOtherParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalloadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalloadPowerParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPowerFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPowerFactorState) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomAverageIllumination) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomCavityRatio) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomLightingCalcLuminaireplane) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomLightingCalcWorkplane) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomReflectivityCeiling) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomReflectivityFloor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomReflectivityWalls) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecShortCircuitRating) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecSwitchIdParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueCurrentParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueCurrentPhaseaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueCurrentPhasebParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueCurrentPhasecParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoad) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoadPhase1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoadPhase2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoadPhase3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoadPhasea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoadPhaseb) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoadPhasec) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecVoltage) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecVoltageDropParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireCircuits) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireGroundAdjustment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireHotAdjustment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireNeutralAdjustment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireShareGround) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireShareNeutral) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireTickmarkState) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElectricalData) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElectricalLoadZoneType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEndLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEndOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisBuildingEnvelopeAnalyticalGridCellSize) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId ==
+               ParameterTypeId.RbsEnergyAnalysisBuildingEnvelopeAnalyticalSpaceIdentificationResolution) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId ==
+               ParameterTypeId.RbsEnergyAnalysisBuildingEnvelopeAnalyticalSurfaceIdentificationResolution) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisBuildingEnvelopeDeterminationParam) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisExportCategoryParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisExportComplexityParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisExportGbxmlDefaultsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisGroundPlaneParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisIncludeThermalProperties) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisProjectPhaseParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSliverSpaceTolerance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceAdjacentSpaceId1) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceAdjacentSpaceId2) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceAzimuth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceCadobjectid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceOriginX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceOriginY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceOriginZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceTilt) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewBuildingShellMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewCoordAxisMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewInnerShellMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewOuterShellMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewRbeMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewShadingSurfacesMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewSurfacesMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewTransparentMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewUpdateSurfaces) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEqDiameterParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentAnnotationDisplay) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentDistributionSystem) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentOffsetHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentOffsetWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentSecondaryDistribsys) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentTakeoffFixedLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentTakeoffLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentTakeoffProjlength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFlexDuctTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFlexPatternParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFlexPipeTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFlexductRoundtypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFlowFactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFlowObsolete) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerCoverageParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerKFactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerOrificeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerOrificeSizeParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerPressureClassParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerResponseParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerTemperatureRatingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFriction) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsGbxmlOpeningType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsGbxmlSurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsGbxmlSurfaceName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsGbxmlSurfaceType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadDoorAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadDoorCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadFloorAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadPartitionAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadPartitionCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadPlenumCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadRoofAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadRoofCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadSkylightAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadSkylightCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadWallAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadWallCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadWindowAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadWindowCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHydraulicDiameterParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsInsulationLiningVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsInsulationThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsInsulationThicknessForDuct) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsInsulationThicknessForPipe) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsIsCustomFitting) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsLiningThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsLiningThicknessForDuct) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsLoadSubClassificationMotor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsLookupTableName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsLossCoefficient) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsMaxFlow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsMinFlow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPanelScheduleSheetAppearanceInstParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPanelScheduleSheetAppearanceParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelconduitsHorizontalNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelconduitsHorizontalOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelconduitsVerticalNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelconduitsVerticalOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelpipesHorizontalNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelpipesHorizontalOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelpipesVerticalNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelpipesVerticalOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPartType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeAdditionalFlowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeBottomElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeCalculatedSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeClassParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeConnectiontypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeConnectorSystemClassificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeCwfuParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeDiameterParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFittingLossKfactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFittingLossMethodParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFittingLossMethodServerParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFittingLossMethodSettings) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFittingLossTableParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFixtureUnitsParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFlowConfigurationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFlowDirectionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFlowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFlowStateParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFluidDensityParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFluidTemperatureParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFluidTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFluidViscosityParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFrictionFactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFrictionParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeHwfuParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeInnerDiamParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeInsulationThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeInvertElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeJointtypeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeMaterialParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeOuterDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipePressuredropParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeRelativeRoughnessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeReynoldsNumberParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeRoughnessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSegmentParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSizeFormattedParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSizeMaximum) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSizeMinimum) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSlope) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSlopeDefParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSlopeOptionsDefParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeStaticPressure) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSystemCalculationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSystemFixtureUnitParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeTopElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeTypeFittingLossKfactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeTypeFittingLossMethodParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeTypeFittingLossTableParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeTypeValveLossCvfactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeValveLossCvfactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeVelocityParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeVolumeParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeWfuParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipingSystemTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPressureDrop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsProjectConstructionTypeShadingfactorParam) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsProjectLocationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsProjectReporttypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReferenceFreesize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReferenceInsulationThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReferenceInsulationType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReferenceLiningThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReferenceLiningType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReferenceOverallsize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReynoldsnumberParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsRoomCoefficientUtilization) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsRoutingPreferenceParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSegmentDescriptionParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsServiceTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsShowProfileType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSizeLock) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsStartLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsStartOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemAbbreviationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemBaseElementParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemClassificationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemFlowConversionMethodParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemNameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemNumElementsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedrop1linedropsymbolParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedrop1linerisesymbolParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedrop1lineteedownsymbolParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedrop1lineteeupsymbolParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedrop2linedropsymbolParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedrop2linerisesymbolParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedropParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsVelocity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsVelocityPressure) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsVoltagetypeMaxvoltageParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsVoltagetypeMinvoltageParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsVoltagetypeVoltageParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireCircuitDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireCircuitLoadName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireConduitTypeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireInsulationParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireMaterialParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireMaxConductorSizeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireNeutralIncludedInBalancedLoadParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireNeutralModeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireNeutralMultiplierParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireNumConductorsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireTemperatureRatingParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarBarDeformationType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarBarDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarBarHookLengths) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RebarBarMaximumBendRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarBarStirrupBendDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarBarStyle) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarContainerBarType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarDistributionType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemBarSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemEndtreatmentEnd) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemEndtreatmentStart) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemHookEndOrient) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemHookEndType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemHookStartOrient) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemHookStartType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemHookStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemHostMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemLayoutRule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemQuantityOfBars) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemScheduleMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemTotalLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElementRounding) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElementVisibility) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RebarFreeFormHookEndPlaneAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarFreeFormHookStartPlaneAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarGeometryType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookLengthOverride) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookLineLenFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookRotationAtEnd) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookRotationAtEndSchedulesTagsFilters) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookRotationAtStart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookRotationAtStartSchedulesTagsFilters) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHostCategory) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarIncludeFirstBar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarIncludeLastBar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInstanceBarDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInstanceBarModelDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInstanceBendDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInstanceStirrupTieAttachment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInternalMultiplanar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInternalMultiplanarArcConnector) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInternalMultiplanarDuplicate) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInternalMultiplanarEndConnector) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInternalMultiplanarStartConnector) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarMaxLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarMaximSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarMinLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarMinimSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarModelBarDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarModifiedSet) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarNumberSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarQuanityByDistrib) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShape) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeAllowedBarTypes) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeEndHookLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeEndHookOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeEndtreatmentEndType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeEndtreatmentStartType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeHookEndType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeHookRotationAtEnd) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeHookRotationAtStart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeHookStartType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeHookStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeImage) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeOutOfPlaneBendDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeParamEndHookTanLen) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeParamStartHookTanLen) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeSpiralBaseFinishingTurns) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeSpiralHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeSpiralPitch) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeSpiralTopFinishingTurns) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeStartHookLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeStartHookOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeStirrupTieAttachment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarStandardBendDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarStandardHookBendDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveBackDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveBackDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveBottomDir1Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveBottomDir2Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveBottomDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveBottomDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveFrontDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveFrontDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveTopDir1Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveTopDir2Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveTopDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveTopDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemAddlBottomOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemAddlExteriorOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemAddlInteriorOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemAddlTopOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeBackDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeBackDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeBottomDir1Generic) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeBottomDir2Generic) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeBottomDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeBottomDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeFrontDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeFrontDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeTopDir1Generic) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeTopDir2Generic) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeTopDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeTopDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBottomMajorMatchesBottomMinor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemCoverBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemCoverSide) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemCoverTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientBackDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientBackDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientBottomDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientBottomDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientFrontDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientFrontDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientTopDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientTopDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeBackDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeBackDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeBottomDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeBottomDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeFrontDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeFrontDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeTopDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeTopDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryBottomDir1NoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryBottomDir1WithSpacing) {
+                return StorageType.String;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryBottomDir2NoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryBottomDir2WithSpacing) {
+                return StorageType.String;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryDir1NoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryDir1WithSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryDir2NoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryDir2WithSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryNoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryTopDir1NoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryTopDir1WithSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryTopDir2NoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryTopDir2WithSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryWithSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayoutRule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesBackDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesBackDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesBottomDir1Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesBottomDir2Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesBottomDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesBottomDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesFrontDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesFrontDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesTopDir1Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesTopDir2Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesTopDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesTopDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemOverride) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingBackDirn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingBackDirn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingBottomDir1Generic) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingBottomDir2Generic) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingBottomDirn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingBottomDirn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingFrontDirn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingFrontDirn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingTopDir1Generic) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingTopDir2Generic) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingTopDirn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingTopDirn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpanactiveDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpanactiveDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpanhookBottomDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpanhookLeftDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpanhookRightDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpanhookTopDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemTopMajorMatchesBottomMajor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemTopMajorMatchesTopMinor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemTopMinorMatchesBottomMinor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarWorkshopInstructions) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RectMullionThick) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RectMullionWidth1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RectMullionWidth2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RefTableElemName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RefTableParamName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceLineSubcategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceOtherViewUiRefView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceOtherViewUiToggle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceViewerAttrTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceViewerTargetView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceViewerUiTargetFilter) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceViewerUiTargetView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ReferencedView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ReinEstBarLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ReinEstBarVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ReinEstNumberOfBars) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ReinforcementVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RelatedToMass) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RenderPlantHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RenderPlantName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RenderPlantTrimHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RenderRpcFilename) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RenderRpcProperties) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RepeatingDetailElement) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RepeatingDetailInside) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RepeatingDetailLayout) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RepeatingDetailNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RepeatingDetailRotation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RepeatingDetailSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RevealProfileParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RevisionCloudRevision) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RevisionCloudRevisionDate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RevisionCloudRevisionDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RevisionCloudRevisionIssuedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RevisionCloudRevisionIssuedTo) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RevisionCloudRevisionNum) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RevolutionEndAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RevolutionStartAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RgbBParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RgbGParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RgbRParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoofAttrDefaultThicknessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofAttrThicknessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofBaseLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoofConstraintLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoofConstraintOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofCurveHeightAtWall) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofCurveHeightOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofCurveIsSlopeDefining) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoofEaveCutParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoofFacesLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoofLevelOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofRafterOrTrussParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoofSlope) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofStructureIdParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RoofUptoLevelOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofUptoLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualExhaustAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualLightingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualLightingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualPowerLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualPowerLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualReturnAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualSupplyAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomAirChangesPerHourParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomAreaPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomBaseHeatLoadOnParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomBaseLightingLoadOnParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomBasePowerLoadOnParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomBaseReturnAirflowOnParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculatedCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculatedCoolingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculatedHeatingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculatedHeatingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculatedSupplyAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculatedSupplyAirflowPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculationPoint) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomComputationHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomComputationMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomConditionTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomConstructionSetParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDepartment) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignExhaustAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignHeatingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignLightingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignLightingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignMechanicalLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignOtherLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignPowerLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignPowerLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignReturnAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignSupplyAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomEditElectricalLoadsParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RoomEditPeopleLoadsParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RoomFinishBase) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomFinishCeiling) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomFinishFloor) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomFinishWall) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomLevelId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomLightingLoadUnitsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomLowerOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomNumberOfPeopleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOccupancy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOccupancyUnitParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOutdoorAirInfoParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOutdoorAirPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOutdoorAirPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOutdoorAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOutdoorAirflowStandardParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPeopleLatentHeatGainPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPeopleSensibleHeatGainPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPeopleTotalHeatGainPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPerimeter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPhase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPhaseId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPlenumLightingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPowerLoadUnitsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomSpaceTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomTagOrientationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomUpperLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomUpperOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RouteAnalysisSettingsParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RoutingPreferenceParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RvtHostLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RvtLevelOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RvtLinkFileNameWithoutExt) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RvtLinkInstanceName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RvtLinkPhaseMap) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RvtLinkReferenceType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RvtSourceLevel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleBaseLevelOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleBaseLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleCategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleEmbeddedParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleFieldsParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleFilterParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleFormatParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleGroupParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleSheetAppearanceParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleTopLevelOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleTopLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleTypeForBrowser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SectionAttrHeadTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SectionAttrTailLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SectionAttrTailTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SectionAttrTailWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SectionBrokenDisplayStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SectionCoarserScalePulldownImperial) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SectionCoarserScalePulldownMetric) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SectionParentViewName) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SectionShowInOneViewOnly) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SectionTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SeekItemId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SelectionEditableOnly) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SheetApprovedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyAssemblyCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyAssemblyDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyCost) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyKeynote) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyManufacturer) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyModel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyTypeComments) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyTypeMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyUrl) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCheckedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCurrentRevision) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCurrentRevisionDate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCurrentRevisionDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCurrentRevisionIssued) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCurrentRevisionIssuedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCurrentRevisionIssuedTo) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetDate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetDesignedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetDrawnBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetFilePath) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetGuideGrid) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SheetHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SheetIssueDate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetKeyNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SheetName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetRevisionsOnSheet) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SheetScale) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetScheduled) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SheetWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ShowArrowheadToCutMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ShowIconParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ShowTitle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SketchGridSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SketchPlaneParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SlabEdgeMaterialParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SlabEdgeProfileParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnBaseCutStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnBaseExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnGeometryTreatmentBase) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnGeometryTreatmentTop) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnTopCutStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnTopExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SlopeArrowLevelEnd) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SlopeArrowLevelStart) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SlopeEndHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SlopeStartHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceAirChangesPerHour) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceAirflowPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceAreaPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceAssocRoomName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceAssocRoomNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceCarpetingParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceCoolingSetPoint) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceDehumidificationSetPoint) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceElecEquipmentRadiantPercentageParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceHeatingSetPoint) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceHumidificationSetPoint) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceInfiltrationAirflow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceInfiltrationAirflowPerArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceInfiltrationParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceIsOccupiable) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceIsPlenum) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceLightingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceLightingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceLightingScheduleParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceOccupancyScheduleParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceOutdoorAirflow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceOutdoorAirflowPerArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceOutdoorAirflowPerPerson) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePeopleLatentHeatGainPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePeopleLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePeopleSensibleHeatGainPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePowerLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePowerLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePowerScheduleParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceReferenceLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceZoneName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustificationHoriz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustificationU) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustificationV) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustificationVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustificationn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustificationn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayout) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayoutHoriz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayoutU) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayoutV) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayoutVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayoutn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayoutn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLengthHoriz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLengthU) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLengthV) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLengthVert) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLengthn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLengthn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisions) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisionsHoriz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisionsU) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisionsV) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisionsVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisionsn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisionsn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpanDirInstParamAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpanDirSymParamBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpanDirSymParamLeft) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpanDirSymParamRight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpanDirSymParamTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrCurrentName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendHorOriginGap) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendShowConfigName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendShowDescription) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendTextType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendVertOriginGap) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrRange) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrResultsVisibility) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SpecifySlopeOrOffset) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateBase) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateBottomPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateBottomSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateElevationPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateElevationSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateIncludeElevation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateTopPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateTopSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotDimLeader) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotDimLeaderLine) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotDimStyleSlopeUnits) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SpotDimStyleSlopeUnitsAlt) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevBase) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevBendLeader) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevBotValue) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevDisplayElevations) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevFlipTextVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndBottom) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndElevation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndEw) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndNs) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndTop) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndTypeBottom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndTypeElevation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndTypeTop) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevLeaderArrowhead) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevLinePen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevLowerPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevLowerSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevLowerValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevRelativeBase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevRotateWithComponent) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevSingleOrUpperPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevSingleOrUpperSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevSingleOrUpperValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevSymbol) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevTextHorizOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevTextLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevTextOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevTickMarkPen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevTopValue) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotSlopeLeaderLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpotSlopeOffsetFromReference) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpotSlopePrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotSlopeSlopeDirection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotSlopeSlopeRepresentation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotSlopeSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotTextFromLeader) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsActualNumRisers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsActualNumberOfRisers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsActualRiserHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsActualTreadDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrBodyMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrBreakSymInCutline) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrCalcEnabled) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrCalcMax) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrCalcMin) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrEqResult) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrFirstRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrLandingCarriage) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrLandingsOverlapping) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrLastRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrLeftSideStringer) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrMaxRiserHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrMinimumTreadDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrMonolithicStairs) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrNosingLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrNosingPlacement) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrNumMidStringers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRightSideStringer) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRiserAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRiserMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRiserMult) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRiserThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRiserTreadConnect) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRiserType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRisersPresent) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrSideStringerTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStairCalculator) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStairsBottom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStairsCutOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStringerCarriage) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStringerHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStringerMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStringerOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStringerThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTextFont) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTextSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTreadFrontProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTreadMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTreadMult) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTreadThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTreadWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTrimTop) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsBaseLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsBaseLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsBaseOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsCurveType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowAnnotationCutMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowBoundary2d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowBoundary3d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowLandingBoundary) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowLandingFaces) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowLandingPath) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowLeftRunBoundary2d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowLeftRunBoundary3d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowMonolithicSupportCorseGeom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowMonolithicSupportGeom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRightRunBoundary2d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRightRunBoundary3d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunCorseGeom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunGeom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunNosing) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunOutlineForPlan) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunPath2d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunPath3d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowSupportPath) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowTreadFaces) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowTriserCorseGeom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowTriserGeom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDesiredNumRisers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDesiredNumberOfRisers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDownText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsEnableCalculationRuleChecking) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstAlwaysUp) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstDownArrowOn) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstDownLabelOn) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstDownLabelText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstUpArrowOn) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstUpLabelOn) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstUpLabelText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingBaseElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingOverridden) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingStructural) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingtypeHasMonolithicSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingtypeLandingMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingtypeStructure) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingtypeThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingtypeUseSameTriserAsRun) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsMinAutomaticLandingDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsMultistoryTopLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsMultistoryUpToLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsPathFullStepArrow) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsPathStartExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsPathStartFromRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingAngledConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterBottomAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterFamily) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterIsPost) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterPlacement) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterShape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterSlopeAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterSpacingType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterTopAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalustersPerTread) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBaseLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingHeightOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingHeightShiftType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingHeightShiftVal) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingPlacementOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingRailHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingRailName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingRailOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingRailStructure) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingShape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingTangentConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunActualNumberOfRisers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunActualNumberOfTreads) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunActualRiserHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunActualRunWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunActualTreadDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunBeginWithRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunBottomElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunCcw) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunCenterMarkVisible) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunCreateAutoLanding) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunEndWithRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunExtendBelowRiserBase) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunExtendBelowTreadBase) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunLocationpathJustfication) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunOverridden) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunStructural) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunTopElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunWidthMeasurement) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunWinderBeginWithStraight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunWinderEndWithStraight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRuntypeHasMonolithicSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRuntypeRunMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRuntypeStructuralDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRuntypeStructure) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRuntypeTotalDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRuntypeUndersideSurfaceType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsShowDownText) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsShowUpText) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsStairsHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsStringersPresent) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportHorizontalOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportLandingsupportType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportLowerEndCut) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportOverridden) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportTrimSupportUpper) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportUpperEndCut) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportVerticalOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeFlipSectionProfile) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeSectionProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeStructuralDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeStructuralDepthOnLanding) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeStructuralDepthOnRun) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeTopsideSurface) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeTotalDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeUndersideSurface) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTextOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTextType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTopLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTopLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTopOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTotalNumberOfRisers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTotalNumberOfTreads) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTriserIsTypeOverridden) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTriserNumberBaseIndex) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTriserRiserMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTriserRiserNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTriserTreadMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTriserTreadNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeBackNosing) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeFrontNosing) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeLeftNosing) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeNosingLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeNosingPlacement) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeNosingProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRightNosing) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiserIsSlanted) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiserMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiserProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiserStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiserThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiserTreadConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeTread) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeTreadMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeTreadProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeTreadThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsUpText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternFilletInsideCorner) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternMinimumWidthCorner) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternMinimumWidthInsideWalkline) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternNumberOfStraightStepsAtBegin) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternNumberOfStraightStepsAtEnd) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternRadiusInterior) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternStairPathOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternWinderStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCalcRuleMaxResult) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCalcRuleMinResult) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCalcRuleRiserMultiplier) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCalcRuleTargetResult) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCalcRuleTreadMultiplier) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCalculationRules) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeConstructionMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCutmarkType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeGeomunjoinedEndCutStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeHasIntermediateSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeHasLeftSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeHasRightSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeIntermediateSupportType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeIsAssembledStairs) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeLandingType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeLeftSideSupportType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeLeftSupportLateralOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeMaximumRiserHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeMinimumRunWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeMinimumTreadDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeMinimumTreadWidthInsideBoundary) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNotchCustomWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNotchExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNotchHorizontalGap) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNotchThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNotchVerticalGap) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNotchWidth) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNumberOfIntermediateSupports) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeRightSideSupportType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeRightSupportLateralOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeRunType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeShowCutline) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeShowStairPath) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeShowUpdown) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeWinderStepFrontMeasurement) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StartExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StartJoinCutback) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StartSymbolType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StartYJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StartYOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StartZJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StartZOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorAssembly) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorDiameter) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorGrade) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorLength) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorStandard) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorTotalWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltAssembly) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltCoating) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltDiameter) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltFinishCalculationAtGap) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltGrade) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltGripLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltGripLengthIncrease) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltInverted) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltStandard) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltTotalWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCoating) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemContourGapWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemContourSide1dist) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemContourSide2dist) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCopeAroundAxis) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCopeAxisAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCopeDistanceAxis) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCopeWidthx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCopeXAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCopeZAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCutLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCutType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemExactWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleAlpha) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleAngle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleBackTaperThread) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleDefinition) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleDepthOfBoltHead) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleHeadDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleSlotDirection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleSlotLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleTapping) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleTappingHole) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPaintArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemParamBoringout) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemParamRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternEdgeDistanceX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternEdgeDistanceY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternIntermediateDistanceX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternIntermediateDistanceY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternNumberX) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternNumberY) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternTotalLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternTotalWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateExactWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateJustification) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlatePaintArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateShortenAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateShortenCutstraight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateShortenSuction) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemProfileLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemProfileType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemProfileVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShearstudDiameter) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShearstudGrade) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShearstudLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShearstudStandard) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShearstudTotalWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShortenAngley) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShortenAnglez) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShortenReflength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldContinuous) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleEffectivethroat) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoublePrepdepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleRootopening) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleSurfaceshape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleWeldprep) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainEffectivethroat) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainPrepdepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainRootopening) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainSurfaceshape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainWeldprep) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldPitch) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldTextModule) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemXDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemYDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemZclipType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionApplyTo) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionBeamEnd) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionBeamStart) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionColumnBase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionColumnTop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionCutback) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionTypeName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructFramJoinStatus) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalBeamHorizontalProjectionPlane) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalBeamRigidLink) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalColumnHorizontalProjectionPlane) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalColumnRigidLink) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalHardPoints) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalModel) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalProjectFloorPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalProjectMemberPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalProjectMemberPlaneColumnBottom) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalProjectMemberPlaneColumnTop) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalTessDeviation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalTessellate) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyzesAs) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAssetParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentBaseDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentBaseRatio) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentBaseReferencedend) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentBaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentEndLevelReference) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentEndRefelementEnd) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentEndType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentEndValueDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentEndValueElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentEndValueRatio) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentStartLevelReference) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentStartRefelementEnd) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentStartType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentStartValueDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentStartValueElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentStartValueRatio) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentTopDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentTopRatio) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentTopReferencedend) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentTopType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamCutbackForColumn) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamEnd0Elevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamEnd1Elevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamEndAttachmentDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamEndAttachmentRefcolumnEnd) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamEndAttachmentType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamEndSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamStartAttachmentDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamStartAttachmentRefcolumnEnd) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamStartAttachmentType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamStartSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBendDirAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseFx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseFy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseFz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseMx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseMy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseMz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBraceRepresentation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralCamber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionApprovalStatus) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionCodeCheckingStatus) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionEditRangesOfApplicability) {
+                return StorageType.None;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionEditType) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionInputElements) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionModifyConnectionParameters) {
+                return StorageType.None;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionNobleStatus) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionOverrideType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralCopingDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralDisplayInHiddenViews) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralDisplayInHiddenViewsColumn) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralDisplayInHiddenViewsFraming) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralElevationAtBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralElevationAtBottomCore) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralElevationAtBottomSurvey) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralElevationAtTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralElevationAtTopCore) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralElevationAtTopSurvey) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseFx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseFy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseFz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseMx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseMy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseMz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFamilyCodeName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFamilyNameKey) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFloorAnalyzesAs) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFloorCoreThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFoundationLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFoundationThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFoundationWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFrameCutLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralMaterialParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralMaterialType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralMemberForces) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralNumberOfStuds) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralReferenceLevelElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionBottomCutHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionBottomCutWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCantileverHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCantileverLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonAlpha) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonCentroidHoriz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonCentroidVertical) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonElasticModulusStrongAxis) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonElasticModulusWeakAxis) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonMomentOfInertiaStrongAxis) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonMomentOfInertiaWeakAxis) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonNominalWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonPerimeter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonPlasticModulusStrongAxis) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonPlasticModulusWeakAxis) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonShearAreaStrongAxis) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonShearAreaWeakAxis) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonTorsionalModulus) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonTorsionalMomentOfInertia) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonWarpingConstant) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCprofileFoldLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionHssInnerfillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionHssOuterfillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeBoltDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeBoltSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeBoltSpacingBetweenRows) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeBoltSpacingTwoRows) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeBoltSpacingWeb) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeClearWebHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeFlangeToeOfFillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeFlangefillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeFlangethickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeFlangethicknessLocation) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeWebToeOfFillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeWebfillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeWebheight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeWebthickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeWebthicknessLocation) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIweldedBottomflangethickness) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIweldedBottomflangewidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIweldedTopflangethickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIweldedTopflangewidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionLangleBoltDiameterLongerFlange) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionLangleBoltDiameterShorterFlange) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionLangleBoltSpacing1LongerFlange) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionLangleBoltSpacing2LongerFlange) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionLangleBoltSpacingShorterFlange) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionLprofileLipLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionNameKey) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionPipestandardWalldesignthickness) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionPipestandardWallnominalthickness) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionShape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionSigmaProfileBendWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionSigmaProfileMiddleBendWidth) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionSigmaProfileTopBendWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionSlopedFlangeAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionSlopedWebAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionTopCutHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionTopCutWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionTopWebFillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionZprofileBottomFlangeLength) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseFx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseFy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseFz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseMx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseMy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseMz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStickSymbolLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseFx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseFy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseFz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseMx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseMy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseMz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralWallBottomProjectionPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralWallProjectionSurface) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralWallTopProjectionPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SupportHandClearance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SupportHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SurfacePerimeter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SweepBaseFloorSubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SweepBaseOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SweepBaseRoofSubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SweepBaseVertOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SweepMaxSegAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SweepTrajSegmented) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SymbolFamilyAndTypeNamesParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SymbolFamilyNameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SymbolIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SymbolNameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SystemEquipmentSets) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SystemZoneLevelId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SystemsAnalysisReportFolder) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SystemsAnalysisReportStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TagAngleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TagElementCount) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TagLeaderType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TagNoBreakParamStrings) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TagOnPlacementUi) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TagOrientationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TagSampleText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TagTag) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.TemplateName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TerminationExtensionLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TextAlignHorz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextAlignVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextAlignment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextBackground) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextBoxVisibility) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextDistToLine) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TextFont) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TextPosition) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TextStyleBold) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextStyleFont) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TextStyleItalic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextStyleSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TextStyleUnderline) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextTabSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TextText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TextWidthScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamCompressibility) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamElectricalResistivity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamEmissivity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamGasViscosity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamLiquidViscosity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamPermeability) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamPorosity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamReflectivity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamSpecificHeatOfVaporization) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamTransmitsLight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamVaporPressure) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TickMarkPen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TilePatternFamrefComponentExtents) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TilePatternGridCellsX) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TilePatternGridCellsY) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TilePatternGridUnitX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TilePatternGridUnitY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TitleFont) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TitleSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TitleStyleBold) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TitleStyleItalic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TitleStyleUnderline) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TopographyLinkName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TopographyLinkPath) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TrapMullWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussBearingChordTopBottomParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementAngleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementBearingJustParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementClassParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementCreateBottomParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementCreateTopParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementEnd0Elevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementEnd1Elevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementReferenceLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementRotateChordsWithTruss) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementSpanParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementStickJustParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementTagNewMembersView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyBottomChordAngleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyBottomChordEndReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyBottomChordStartReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyBottomChordStructuralTypesParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyBottomChordVerticalProjectionParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyDiagWebAngleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyDiagWebEndReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyDiagWebStartReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyDiagWebStructuralTypesParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyTopChordAngleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyTopChordEndReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyTopChordStartReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyTopChordStructuralTypesParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyTopChordVerticalProjectionParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyTransformationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyVertWebAngleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyVertWebEndReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyVertWebStartReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyVertWebStructuralTypesParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyWebsHaveSymbolicCutbackParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussNonBearingOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TypeWallClosure) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.UniformatCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.UniformatDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewAnalysisDisplayStyle) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewAnalysisResultsVisibility) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewAssociatedAssemblyInstanceId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewBackClipping) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewCameraOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewCameraPosition) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewCleanJoins) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewDependency) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewDepth) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewDesignOptionsConfig) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewDetailLevel) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewDiscipline) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewFamily) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewFamilyAndTypeSchedules) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewFamilySchedules) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewFixedSketchPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedBottomLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedGridAppearance) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedGroupSimilar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedHiddenLevels) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedLevelRelativeBaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedLocationsHigh) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedLocationsLow) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedMaterialTypes) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedNumberColumns) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedOffGrid) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedRowsCount) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedRowsFrom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedTextAppearance) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedTitle) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedTopLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedTotalColumns) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedTotalRows) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedUnitsFormat) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSunPath) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSunPathSize) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewModelDisplayMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewPartsVisibility) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewPhase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewPhaseFilter) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewReferencingDetail) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewReferencingSheet) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewScale) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewScaleCustomname) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewScaleHavename) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewScalePulldownImperial) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewScalePulldownMetric) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewSchemaSettingForBuilding) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewSchemaSettingForSystem) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewSchemaSettingForSystemTemplate) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewSheetViewportInfo) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewShowGrids) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewShowHiddenLines) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewShowMassing) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewSlantedColumnSymbolOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewTemplate) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewTemplateForSchedule) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewTypeSchedules) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewUnderlayBottomId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewUnderlayOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewUnderlayTopId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewVisibleCategories) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.Viewer3dRenderSettings) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerAnnotationCropActive) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundActiveBottom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundActiveFar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundActiveLeft) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundActiveNear) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundActiveRight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundActiveTop) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundFarClipping) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundOffsetBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundOffsetFar) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundOffsetLeft) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundOffsetNear) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundOffsetRight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundOffsetTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerCropRegion) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerCropRegionDisabled) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerCropRegionVisible) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerDetailNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerEyeElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerIsReference) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerModelClipBoxActive) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerOptionVisibility) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerPerspective) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerReferenceLabel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerReferenceLabelText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerSheetNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerShowUncropped) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerTargetElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerVolumeOfInterestCrop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportAttrLabelTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportAttrOrientationOnSheet) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportAttrShowBox) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportAttrShowExtensionLine) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportAttrShowLabel) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportDetailNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportScale) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportSheetName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportSheetNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportViewName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsAnalyticalModel) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsAnnotation) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsCoordinationModel) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsDesignoptions) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsFilters) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsImport) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsModel) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsPointClouds) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsRvtLinks) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsWorksets) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VoidCutsGeometry) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.VolumeCut) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.VolumeFill) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.VolumeNet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.VolumeOfInterestName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.VolumeOfInterestViewsVisible) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.WalkthroughFramesCount) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.WallAlignKeyRefParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallAttrDefheightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallAttrHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallAttrRoomBounding) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallAttrWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallBaseConstraint) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.WallBaseHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallBaseOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallBottomExtensionDistParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallBottomIsAttached) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallCrossSection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallHeightType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.WallKeyRefParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallLocationLineOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallSingleSlantAngleFromVertical) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallStructuralSignificant) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallStructuralUsageParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallStructureIdParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepCutByInsertsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepCutsWallParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepDefaultSetbackParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepProfileParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepWallOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepWallSubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.WallTaperedExteriorInwardAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTaperedInteriorInwardAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTaperedUseInstanceAngles) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallTaperedWidthAtBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTaperedWidthAtTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTopExtensionDistParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTopIsAttached) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallTopOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTypeDefaultTaperedExteriorInwardAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTypeDefaultTaperedInteriorInwardAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTypeWidthMeasuredAt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallUserHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WindowTypeId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.WitnsLineExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WitnsLineGapToElt) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WitnsLineTickMark) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.WrappingAtEndsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WrappingAtInsertsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.YJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.YOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.YzJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneAirVolumeCalculationTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneAreaGross) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedAreaPerCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedAreaPerHeatingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedCoolingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedHeatingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedHeatingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedHydronicCoolingflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedHydronicHeatingflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedSupplyAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedSupplyAirflowPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCoilBypassPercentageParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCoolingAirTemperatureParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCoolingInformationParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCoolingSetPointParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneDehumidificationSetPointParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneHeatingAirTemperatureParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneHeatingInformationParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneHeatingSetPointParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneHumidificationSetPointParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneLevelId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneLevelOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneLevelOffsetTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneOaRatePerAchParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneOutdoorAirInformationParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneOutsideAirPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneOutsideAirPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZonePerimeter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZonePhase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ZonePhaseId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneServiceTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneSpaceOutdoorAirOptionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneUseAirChangesPerHourParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneUseDehumidificationSetpointParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneUseHumidificationSetpointParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneUseOutsideAirPerAreaParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneUseOutsideAirPerPersonParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneVolumeGross) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ActualMaxRidgeHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelIncludeStation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelIndStation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelSetEndStation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelSetInterval) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelSetOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelSetStartStation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationLabelStationValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AlignmentStationSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllGridRotationForDivisionRule) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelImage) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelInstanceComments) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelManufacturer) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelModel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelTypeComments) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelTypeImage) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AllModelUrl) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AllowAutoEmbed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AlternateUnits) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AlternateUnitsPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AlternateUnitsSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AlwaysZeroLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticConstructionGbxmlTypeid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticConstructionLookupTable) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalAbsorptance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalDefineThermalPropertiesBy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalGeometryIsValid) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalHeatTransferCoefficient) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalLinkReleaseRotationX) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalLinkReleaseRotationY) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalLinkReleaseRotationZ) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalLinkReleaseTranslationX) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalLinkReleaseTranslationY) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalLinkReleaseTranslationZ) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndAllNonZero) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndFx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndFy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndFz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndMx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndMy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceEndMz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartAllNonZero) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartFx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartFy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartFz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartMx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartMy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalMemberForceStartMz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelBaseAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelBaseExtensionMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelBaseYProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelBaseZProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelCodeChecking) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelColumnBaseExtension) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelColumnTopExtension) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelEndAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelEndProjectionOrthogonal) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelEndYProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelEndZProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelFloorAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelFloorProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelFoundationsMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelManuallyAdjusted) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelNodesMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelPerimeter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelPhysicalType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelRotation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelSketchAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelSketchProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelStartAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelStartProjectionOrthogonal) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelStartYProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelStartZProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelStickElementsMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelSurfaceElementsMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelTopAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelTopExtensionMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelTopYProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelTopZProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelWallAlignmentMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelWallBaseProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelWallProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalModelWallTopProjection) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalRoughness) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalSolarHeatGainCoefficient) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalThermalMass) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalThermalResistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnalyticalVisualLightTransmittance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AnyPatternIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AnyPatternIdParamNoNo) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ArcCenterMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArcLeaderParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArcWallCntrMrkVisible) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AreaSchemeId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AreaSchemeName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AreaType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AreaTypeText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowCentered) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowClosed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowFilled) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowheadEndAtRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ArrowheadType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AssemblyName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.AssemblyNamingCategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AssemblyPrecastFreeze) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AssignTemplateOnViewCreation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AssociatedLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AssociatedLevelOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.AutoJoinCondition) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AutoJoinConditionWall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder1Grid1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder1Grid2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder1Horiz) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder1Vert) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder2Grid1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder2Grid2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder2Horiz) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionBorder2Vert) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionInteriorGrid1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionInteriorGrid2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionInteriorHoriz) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoMullionInteriorVert) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoPanel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.AutoPanelWall) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.BackgroundDraftPatternIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.BackgroundPatternColorParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BaselineDimOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BasepointAngletonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BasepointEastwestParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BasepointElevationParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BasepointLatitudeParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BasepointLongitudeParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BasepointNorthsouthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BeamHJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BeamSystem3dParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BeamSystemTagInstParamAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BeamSystemTagParamLeft) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BeamSystemTagParamRight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BeamVJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BeamVJustificationOtherValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BentFabricParamBendDirection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BentFabricParamLongitudinalCutLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BentFabricParamStraightWiresLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BlendEndParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BlendStartParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryAreaRestraintX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryAreaRestraintY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryAreaRestraintZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryBearing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryConditionsIsExt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryConditionsType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDirectionRotX) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDirectionRotY) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDirectionRotZ) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDirectionX) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDirectionY) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDirectionZ) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryLinearRestraintRotX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryLinearRestraintX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryLinearRestraintY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryLinearRestraintZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryParamPreset) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryParamPresetArea) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryParamPresetLinear) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRestraintRotX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRestraintRotY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRestraintRotZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRestraintX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRestraintY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryRestraintZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryXRotationFixed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryXRotationSpring) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryXTranslationFixed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryXTranslationSpring) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryYRotationFixed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryYRotationSpring) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryYTranslationFixed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryYTranslationSpring) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryZRotationFixed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryZRotationSpring) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryZTranslationFixed) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BoundaryZTranslationSpring) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.BrOrgFilter) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.BrOrgFolders) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingClosingTimeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingCurveGstyle) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingCurveGstylePlusInvisible) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingOpeningTimeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingUnoccupiedCoolingSetPointParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingpadHeightabovelevelParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BuildingpadThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.BuilidingPadStructureIdParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.CabletrayMinbendmultiplierParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CalloutAttrHeadTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CalloutCornerSheetRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CalloutSyncronizeBoundOffsetFar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CalloutTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingAttrDefaultHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingAttrPatternParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingAttrSpacing1Param) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingAttrSpacing2Param) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingAttrSystemnameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingHasThicknessParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingHeightabovelevelParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingStructureIdParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CeilingThicknessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CenterMarkSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CircMullionRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CircuitLoadClassificationAbbreviationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CircuitLoadClassificationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CircuitPhaseParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CircuitWaysParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ClearCover) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ClearCoverBottom) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ClearCoverExterior) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ClearCoverInterior) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ClearCoverOther) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ClearCoverTop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ClientName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ClineSubcategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CoarseScaleFillPatternColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CoarseScaleFillPatternIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ColorFillFilteredParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColorFillSwatchHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ColorFillSwatchWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ColorSchemeLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnBaseAttachCutParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnBaseAttachJustificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnBaseAttachedParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnBaseAttachmentOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnLocationMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnTopAttachCutParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnTopAttachJustificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnTopAttachedParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ColumnTopAttachmentOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConceptualConstructionMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ConduitStandardTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorAngleOfDeflection) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorEngagementLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorGenderType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorIndex) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorInsideDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorJointType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorProfileType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorReferenceIndex) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorUtilityParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorVisibleSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConnectorWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ConstraintFixedOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingBearingWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingBottomHeel) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingBottomToe) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingBreakAtInsertsDisable) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingDefaultEndExtensionLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingEccentricity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingStructuralUsage) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingTopHeel) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingTopToe) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousFootingWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailBeginningTerminationAttachmentParam) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailBeginningTerminationTypeParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailDefaultJoinTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailEndExtensionLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailEndTerminationAttachmentParam) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailEndTerminationTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailExtensionLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailFilletRadiusParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailJoinTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailMaterialsParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailPlusTreadDepthParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailProfileTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ContinuousrailTransitionTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContourElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContourElevationStep) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ContourLabelsElevBaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContourLabelsLinearUnits) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ContourLabelsPrimaryOnly) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ContourLabelsRelativeBase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ContourSubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerCoupledBarSize) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerCoupledEndtreatment) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerCoupledEngagement) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerMainBarSize) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerMainEndtreatment) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerMainEngagement) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerQuantity) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CouplerWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CoverTypeLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CoverTypeName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainGridBaseOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainVersionParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainWallPanelHostId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainWallPanelsHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainWallPanelsWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainWallSyspanelOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtainWallSyspanelThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAdjustBorderHoriz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAdjustBorderU) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAdjustBorderV) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAdjustBorderVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAdjustBordern1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAdjustBordern2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAngleHoriz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAngleU) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAngleV) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAngleVert) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAnglen1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridAnglen2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltHoriz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltRatioU) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltRatioV) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltRation1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltRation2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltU) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltV) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltVert) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridBeltn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridOriginHoriz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridOriginU) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridOriginV) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridOriginVert) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridOriginn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridOriginn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDist) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDistHoriz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDistU) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDistV) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDistVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDistn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurtaingridUseCurveDistn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveByPointsProjectionType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveDeterminesOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveEdgeOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemArcEndAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemArcRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemArcRange) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemArcStartAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemDefinesSlope) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveElemLineAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveHeightOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveIsDetail) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveIsFilled) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveIsReferenceLine) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveIsSlopeDefining) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.CurveNumberOfSegments) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveParamConcreteCantilever) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveParamSteelCantilever) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveSupportOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveVisibilityParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CurveWallOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CurveWallOffsetRoofs) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CustMullionThick) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CustMullionWidth1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CustMullionWidth2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CutLineAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CutLineDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CutLineExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CutLineType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CutMarkSymbol) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CutMarkSymbolSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CwpAddGridPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CwpAddGridSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CwpAddLevelPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CwpAddLevelSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.CwpCopyFloorInserts) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpCopyRoofInserts) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpCopyWallInserts) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpLevelOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.CwpLinkedRoomParams) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.CwpLinkedRoomPhases) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.CwpReuseExistingGrids) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpReuseExistingLevels) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpReuseGridsSameName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpReuseLevelsSameName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.CwpSplitColumnsAtLevels) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DatumBubbleEndn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DatumBubbleEndn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DatumBubbleLocationInElev) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DatumPlaneDefinesOrigin) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DatumPlaneDefinesWallClosure) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DatumText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DatumVolumeOfInterest) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DebugtabDataboundcontrolsdemoBoolean) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DebugtabDataboundcontrolsdemoDouble) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DebugtabDataboundcontrolsdemoEnum) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DebugtabDataboundcontrolsdemoInteger) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DecalAttributes) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.DecalHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DecalLockProportions) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DecalSubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DecalWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionExtWallUnderground) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassExteriorWall) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassFloor) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassGlazing) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassInteriorWall) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassOpening) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassRoof) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassShade) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassSkylight) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultConstructionMassSlab) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefaultViewTemplate) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DefinesConstantHeight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DesignOptionId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DesignOptionParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DiameterSymbolLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DiameterSymbolText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DimDisplayEq) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimIsreporting) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimLabel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimLabelGpShow) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimLabelIsInstance) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimLeader) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimLeaderArrowhead) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimLeaderDisplayCondition) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimLeaderShoulderLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimLeaderType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimLineExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimNotModifiable) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DimReferenceCount) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleAngularUnits) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleAngularUnitsAlt) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleCenterlinePattern) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleCenterlineSymbol) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleCenterlineTickMark) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleDimLineSnapDist) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleFlippedDimLineExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleInteriorTickMark) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleLeaderTickMark) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleLinearUnits) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleLinearUnitsAlt) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleReadConvention) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleShowOpeningHt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimStyleSuppressSpaces) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DimTextBackground) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimTextLocationForLeader) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimToInsertType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimToInserts) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimToIntersectingGrids) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimToIntersectingWalls) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimTotalLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimValueAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimValueLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DimWitnsLineCntrl) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DimWitnsLineExtensionBelow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.Directcontext3dApplicationId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.Directcontext3dLoaded) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.Directcontext3dName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.Directcontext3dServerId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.Directcontext3dSourceId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DisplacedElementDisplacementX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DisplacedElementDisplacementY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DisplacedElementDisplacementZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DisplacementPathDepth) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DisplacementPathStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DistanceToCutMark) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceAllGridRotation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceAllPoints) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceComponentTrimType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceCoverFaceCompletely) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayComponents) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayDiscardeddivisionlines) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayGridlines) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayNodes) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayOriginalSurface) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayPatternFill) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplayPatternLines) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceDisplaySurfaceOption) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceEdgeNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceFacetNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceGridOptionParamn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceGridOptionParamn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceGridlinesStyle) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceOffsetFromSurface) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceOriginalSurfaceMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePattern) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternFillMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternFlip) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternIndentn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternIndentn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternLinesStyle) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternMirror) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePatternRotationAngle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfacePointNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceRule1Suspension) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceRule2Suspension) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceSurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceTileBorder) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedSurfaceTotalEdgeLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathBeginningIndent) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathDisplayNodeNumbers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathDisplayNodes) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathDisplayReferenceCurves) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathEndIndent) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathFlipDirection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathLayout) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathLayoutFixedNumPoint) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathMaxDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathMeasurementType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathMergedPointNum) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathMinDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DividedpathTotalPathLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DivisionPattern) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DivisionProfileWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DivisionRuleParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DivisionSketchCurveDivisionParamsOverrideParam) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.DivisionSketchCurveExtentdToSilhParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DoorConstructionType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DoorCost) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DoorEvacuationExitType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DoorFinish) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DoorFrameMaterial) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DoorFrameType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DoorNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DoorOperationType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartAreaComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DpartBaseLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DpartBaseLevelByOriginal) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartCanHostRebar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartExcluded) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartHeightComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DpartLayerConstruction) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartLayerFunction) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartLayerIndex) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartLayerWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DpartLengthComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DpartMaterialByOriginal) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartMaterialIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DpartOriginalCategory) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartOriginalCategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.DpartOriginalFamily) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartOriginalType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.DpartPhaseCreatedByOriginal) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartPhaseDemolishedByOriginal) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartShapeModified) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DpartVolumeComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.DrawForEachRun) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.DuctTerminalEngagementLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EdgeLinework) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.EditedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ElecticalEquipVoltage) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ElecticalEquipWattage) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ElemCategoryParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElemCategoryParamMt) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElemDeletableInFamily) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElemFamilyAndTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElemFamilyParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElemIsReference) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElemPartitionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElemReferenceName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElemReferenceName2dXz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElemRoomId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElemRoomName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ElemRoomNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ElemTypeLabel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElemTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElementIsCutting) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElementLockedParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevArrowAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ElevArrowFilled) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevAssocDatum) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElevReferenceLabelPos) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevShape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevShowViewName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevSymbolId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ElevTextPos) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevViewNamePos) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ElevWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ElevatnTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.EllipseFocusMrkVisible) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EllipseXParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.EllipseYParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.EndExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EndJoinCutback) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EndTreatment) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.EndYJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EndYOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EndZJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EndZOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisAdvancedOptions) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisBuildingOperatingSchedule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisConceptualConstruction) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisCreateAnalyticalModel) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisGlazingIsShaded) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisHorizontalVoidThreshold) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisHvacSystem) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisMassZoning) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisMasszoneCoreoffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisMasszoneDivideperimeter) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisMasszoneUseenergydatasettings) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisOutdoorAirInformationParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisPercentageGlazing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisPercentageSkylights) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisProjectPhase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisShadeDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisSillHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisSkylightWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisSpaceBoundingParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.EnergyAnalysisVerticalVoidThreshold) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.EqualityFormula) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.EqualityTextForAngularDim) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.EqualityTextForContinuousLinearDim) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.EqualityWitnessDisplay) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ExtrusionAutoParams) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ExtrusionEndParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ExtrusionLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ExtrusionStartParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricBendDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamCoverOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamCutByHost) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamCutOverallLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamCutOverallWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamCutSheetMass) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamLapsplicePosition) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamLocationGeneric) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamLocationSlab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamLocationWall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamMajorLapspliceLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamMinorLapspliceLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamRounding) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSharedFamilyKey) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSheetType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymDBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymDLeft) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymDRight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymDTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymLeft) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymRight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanSymTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamSpanTagComponentReference) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamTagView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricParamTotalSheetMass) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetDefaultMajorLapspliceLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetDefaultMinorLapspliceLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorDirectionWireType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorEndOverhang) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorLayoutPattern) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorNumberOfWires) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorReinforcementArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMajorStartOverhang) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMass) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMassunit) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorDirectionWireType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorEndOverhang) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorLayoutPattern) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorNumberOfWires) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorReinforcementArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetMinorStartOverhang) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetOverallLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetOverallWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetPhysicalMaterialAsset) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricSheetWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricWireDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricWireDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricWireLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricWireOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricWireType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationBottomElevationIncludeInsulationOfPart) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FabricationBottomElevationOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationBottomOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationBraSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationCenterlineElevationOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationChangeServiceParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationDoublewallMaterialAbbreviation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationEndOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationEndSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationFittingDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationInsulationAbbreviation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationInsulationMaterialFinish) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationInsulationSpec) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationInsulationSpecificationAbbreviation) {
+                return StorageType.String;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FabricationLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationMaterialAbbreviation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartAlias) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartAngleOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartBoughtOut) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartCutType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDepthIn) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDepthInOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDepthOut) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDepthOutOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDiameterIn) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDiameterInOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDiameterOut) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDiameterOutOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDoublewallMaterial) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDoublewallMaterialArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartDoublewallMaterialThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartInsulationArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartItemNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartLengthOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartLiningArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartMaterial) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartMaterialThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartNotes) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartPatNo) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartSheetmetalArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartTakeoffDialogParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartWidthIn) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartWidthInOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartWidthOut) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPartWidthOutOption) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPipeInvertElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationPriSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataFinishDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataInstallType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataItemDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataLongDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataMaterialDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataOem) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataProduct) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataRange) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataSizeDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductDataSpecification) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationProductEntry) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationRelativeFilename) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationRoutingSolutionsUiParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSecSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationServiceAbbreviation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationServiceName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationServiceParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSetUpDownTag) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSetUpDownTagFromBottom) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSlopeParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpecification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpecificationAbbreviation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpotBottomElevationIncludeInsulationOfPart) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpotBottomElevationOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpotTopElevationIncludeInsulationOfPart) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpotTopElevationOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationStartOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationTopElevationIncludeInsulationOfPart) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FabricationTopElevationOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationTopOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationVendor) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationVendorCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FaceroofLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FaceroofOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamProfileDefinition) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamProfileUsage) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyAllowCutWithVoids) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyAlwaysVertical) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyAutojoin) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyBaseLevelOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyBaseLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCanHostRebar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCategoryPseudoParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyContentPartType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCurveAttachmentProportion) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCurveGstyleFor2010Mass) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCurveGstylePlusInvisible) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCurveGstylePlusInvisibleMinusAnalytical) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCurveGstylePlusInvisiblePlusStickSym) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FamilyCurveGstylePlusInvisiblePlusStickSymMinusAnalytical) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FamilyElectricalMaintainAnnotationOrientation) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FamilyElemSubcategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyEnableCuttingInViews) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyExportAsGeometry) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyFreeinstDefaultElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyHostingBehavior) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyIsElevationMarkBody) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyIsParametric) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyKeepTextReadable) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyKeyExtParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyKeywordProtected) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyLineLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyNamePseudoParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRenderingType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRfaPathPseudoParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRotateTextWithComponent) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRotateWithComponent) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRoughHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRoughWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyRoundconnectorDimensiontype) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyShared) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyStructFootingUseCapTop) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyStructMaterialType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilySymbolicRep) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyThicknessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyTopLevelOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyTopLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyUsagePseudoParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyUsePrecutShape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyWindowInsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyWorkPlaneBased) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FamilyWpbDefaultElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FasciaDepthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FasciaMaterialParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FasciaProfileParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FbxAssetType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightAtADistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightBallastLoss) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightColorFilter) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightDimmingLightColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightEfficacy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightEmitCircleDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightEmitLineLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightEmitRectangleLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightEmitRectangleWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightEmitShapeVisible) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightIlluminance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightInitialColorCtrl) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightInitialColorName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightInitialColorTemperature) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightInitialIntensity) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightInitialIntensityInputMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLampLumenDepr) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLampTiltLoss) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLimunousFlux) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLimunousIntensity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLossFactorCtrl) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLossFactorMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightLumenaireDirt) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightPhotometricFile) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightPhotometricFileCache) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightPhotometrics) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightPhotometricsFam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightSourceDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightSourceLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightSpotBeamAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightSpotFieldAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightSpotTiltAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightSurfaceLoss) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightTemperatureLoss) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightTotalLightLoss) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightVoltageLoss) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FbxLightWattage) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FillPatternIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FillPatternIdParamNoNo) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.FilledRegionMasking) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FireRating) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FixedRotation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FlexibleInstanceFlip) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FloorAttrDefaultHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FloorAttrDefaultThicknessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FloorAttrThicknessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FloorHeightabovelevelParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FloorParamIsStructural) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FloorParamSpanDirection) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FloorStructureIdParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.FollowSurface) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ForegroundAnyPatternIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ForegroundDraftPatternIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ForegroundPatternColorParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.FramingLengthRoundoff) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FunctionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GbxmlEditDataParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GenericDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.GenericZoneName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.GeoLocation) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GeomVisibilityParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptions) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsBackground) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsFog) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsLighting) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsModel) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsPhotoExposure) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsShadows) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsSketchyLines) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GraphicDisplayOptionsSsIntensity) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.GridBankColNum) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridBankColWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.GridBankRowHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.GridBankRowNum) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridBubbleEndn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridBubbleEndn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridBubbleLinePen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridCenterSegmentColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridCenterSegmentPattern) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.GridCenterSegmentStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridCenterSegmentWeight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridEndSegmentColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridEndSegmentPattern) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.GridEndSegmentWeight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GridEndSegmentsLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.GridHeadTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.GridNetLocationMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.GridlineSpecStatus) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.GroupAllowedViewTypes) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.GroupAttachedParentName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.GroupLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.GroupOffsetFromLevel) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.GroupnameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.GuideGridNameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.GuideGridSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.GutterMaterialParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.GutterProfileParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailHandClearanceParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailProjectionParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailSupportsJustificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailSupportsLayoutParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailSupportsNumberParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailSupportsSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.HandrailSupportsTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.HeadOnPlacementMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HeavyEndPen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HeavyTickMarkPen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HostAreaComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.HostIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.HostPanelScheduleAsPanelParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HostPerimeterComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.HostSseCurvedEdgeConditionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.HostVolumeComputed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.IconIndexParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.IdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.IfcApplicationName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcApplicationVersion) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcBuildingGuid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcGuid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcOrganization) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcProjectGuid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcSiteGuid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.IfcTypeGuid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtComponentsDesc) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityRoll) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityStructType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityStyle) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ImportAdtEntityWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportBackground) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ImportBaseLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ImportBaseLevelOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportDisplayUnits) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ImportInstanceScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ImportSymbolName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.InfrastructureAlignmentDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.InfrastructureAlignmentDisplayedEndStation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InfrastructureAlignmentDisplayedStartStation) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.InfrastructureAlignmentName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.InsertOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceElevationParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceFreeHostOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceFreeHostParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceHeadHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceMoveBaseWithGrids) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceMoveTopWithGrids) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceMovesWithGridParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceOffsetPosParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceReferenceLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceScheduleOnlyLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceSillHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InstanceStructUsageParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.InsulationScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InsulationWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.InteriorTickDisplay) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.IsVisibleParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.JoinStrengthOrder) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemClearSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemElemTagNewMembersView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemFixedSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemJustificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemLayoutRuleParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemMaximumSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemNewBeamTypeNoFamNameParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemNewBeamTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemNumBeamsSameType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemNumberOfLinesParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.JoistSystemSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.KeepReadable) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.KeySourceParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.KeyValue) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.KeynoteNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.KeynoteParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.KeynoteText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LayoutnodeCurvetypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LeaderArrowWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LeaderArrowhead) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LeaderLeftAttachment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LeaderLine) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LeaderOffsetSheet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LeaderRightAttachment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LegendComponent) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LegendComponentDetailLevel) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LegendComponentLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LegendComponentView) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LevelAttrRoomComputationAutomatic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LevelAttrRoomComputationHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataFloorArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataFloorPerimeter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataMassFamilyAndTypeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataMassFamilyParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataMassInstanceComments) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataMassTypeComments) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataMassTypeDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataMassTypeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataOwningLevel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataSpaceUsage) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataSurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelDataVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelElev) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelHeadTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LevelIsBuildingStory) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LevelIsGroundPlane) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LevelIsStructural) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LevelName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LevelRelativeBaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LevelRoomComputationHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LevelUpToLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LightingFixtureLamp) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LightingFixtureLightEmitter) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LightingFixtureWattage) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LineColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LinePattern) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LinePen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LineShapeAtCorner) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LinearDimType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAllNon0Loads) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFx1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFx2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFx3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFy1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFy2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFy3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFz1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFz2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaForceFz3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAreaIsProjected) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadArrowSeparation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrAreaForceScaleFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrForceArrowType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrForceScaleFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrLinearForceScaleFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrMomentArrowArc) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrMomentArrowLine) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadAttrMomentScaleFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCaseId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCaseName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCaseNature) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCaseNatureText) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCaseNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCaseSubcategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCombinationFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadCombinationName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadComments) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadForceFx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadForceFy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadForceFz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadIsCreatedByApi) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadIsHosted) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadIsProjected) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadIsReaction) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadIsUniform) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearForceFx1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearForceFx2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearForceFy1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearForceFy2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearForceFz1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearForceFz2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadLinearLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMx1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMx2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMy) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMy1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMy2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMz1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadMomentMz2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LoadNatureName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadUsageName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.LoadUseLocalCoordinateSystem) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LockAlignmentUiToggle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.LockedBaseOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LockedEndOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LockedStartOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LockedTopOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LvMullionLeg1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.LvMullionLeg2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsCreated) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsCreator) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsHistory) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsLabel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsModified) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsNotes) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsPrivate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MarkupsStatus) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataConceptualConstruction) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataGlazingIsShaded) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataMassExteriorWallArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataMassInteriorWallArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataMassOpeningArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataMassRoofArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataMassSkylightArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataMassWindowArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataPercentageGlazing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataPercentageSkylights) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataShadeDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataSillHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataSkylightWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataSlab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataSubcategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataSurfaceDataSource) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MassDataUnderground) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MassFloorAreaLevels) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.MassGrossArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassGrossSurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassGrossVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassSurfacedataMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MassZoneConditionTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MassZoneFloorArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassZoneMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MassZoneSpaceTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MassZoneVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MassingIntegrationLevel) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MatchlineBottomOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MatchlineBottomPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MatchlineTopOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MatchlineTopPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialAspaint) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialAssetParamAssetLibId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialAssetParamCommonSharedAsset) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialAssetParamExternalMaterialId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialAssetParamSource) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialAssetParamSourceUrl) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialParamColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialParamGlow) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialParamShininess) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialParamSmoothness) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialParamTransparency) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MaterialVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MeasureFromStructure) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MechanicalEquipmentSetIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MechanicalEquipmentSetName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MechanicalEquipmentSetOnDuty) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MechanicalEquipmentSetOnStandby) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepAirloopFantype) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepAirloopHeatexchangerType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepAirloopPreheatCoiltype) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepAnalyticalCriticalpathParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepAnalyticalEquipmentName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MepAnalyticalLoopBoundaryParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepAnalyticalLoopName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.MepAnalyticalPipeDesignflow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MepChilledWaterLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepCondenserWaterLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepCoolingCoilType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepElecZoneEquipmentType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepEquipmentCalcPipingflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MepEquipmentCalcPipingpressuredropParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MepEquipmentClassification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepHeatingCoilType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepHeatingHotwaterLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepIgnoreFlowAnalysis) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepPreheatHotwaterLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepProfileTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepReheatCoilType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepReheatHotwaterLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepSystemFillGraphicsOverridesParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.MepSystemLineGraphicsOverridesParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.MepVrfLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepWaterloopChillertype) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepWaterloopType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepZoneAirLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepZoneEquipment) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MepZoneEquipmentBehavior) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepZoneEquipmentDrawVentilation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepZoneEquipmentType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MepZoneHotwaterLoop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ModelCategoryIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ModelGraphicsStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ModelGraphicsStyleAnonDraft) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ModelOrSymbolic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ModelTextSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MovesWithGridParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MullionAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MullionCornerType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MullionDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MullionDepth1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MullionDepth2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MullionFamType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MullionOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MullionPosition) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MullionProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MultiLeaderTagUi) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationDimensionStyle) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationGroupTagHeads) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationReferenceCategory) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationShowDimensionText) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationTagType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.MultipleAlignmentUiToggle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.MultistoryStairsActualTreadDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.MultistoryStairsRefLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.NodeConnectionStatus) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.NumberPartitionParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemDisplayRule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemJustify) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemJustifyOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemReference) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemReferenceOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemTagType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.NumberSystemTextSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ObjectStyleMaterialIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.OffsetfacesShowShapeHandles) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.OmniclassCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.OmniclassDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.OptionName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.OptionSetId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.OptionSetName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.OrdinateDimSetting) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.OrientByView) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PaddingLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PanelScheduleName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PartMakerDivisionProfileOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PartMakerSplitterProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PartMakerSplitterProfileEdgeMatch) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PartMakerSplitterProfileFlipAcross) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PartMakerSplitterProfileFlipAlong) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PartmakerParamDivisionGap) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathOfTravelFromRoom) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PathOfTravelLevelName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PathOfTravelSpeed) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathOfTravelTime) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathOfTravelToRoom) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PathOfTravelViewName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinAddlOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinAltOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinAlternating) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndHookOrient1Slab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndHookOrient1Wall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndHookOrient2Slab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndHookOrient2Wall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndHookTypen1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndHookTypen2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndSpanhookAlt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinEndSpanhookPrim) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinFaceSlab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinFaceWall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinHookOrient1Slab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinHookOrient1Wall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinHookOrient2Slab) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinHookOrient2Wall) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinHookTypen1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinHookTypen2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinLengthn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinLengthn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinNumberOfBars) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinShapen1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinShapen2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanhookAlt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanhookPrim) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanlengthAltOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanlengthBarlengthAlt) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanlengthBarlengthPrim) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanlengthBottomAlt) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanlengthBottomPrim) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSpanlengthTopAlt) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinSummary) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinTypen1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PathReinTypen2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PatternIndent1ForDivisionRule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PatternIndent2ForDivisionRule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PatternMirrorForDivisionRule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PeakAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PeakCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PeakHeatingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PeakLatentCoolingLoad) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhaseCreated) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PhaseDemolished) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PhaseName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PhaseSequenceNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamAverageModulus) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamBehavior) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamBending) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamBendingReinforcement) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamClass) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamCompressionParallel) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamCompressionPerpendicular) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamConcreteCompression) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamExpCoeff) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamExpCoeff1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamExpCoeff2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamExpCoeff3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamExpCoeffn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamExpCoeffn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamFivepercentModulusOfElacticity) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamGrade) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamLightWeight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamMinimumTensileStrength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamMinimumYieldStress) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamPoissonMod) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamPoissonMod1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamPoissonMod12) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamPoissonMod2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamPoissonMod23) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamPoissonMod3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamReductionFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamResistanceCalcStrength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearMod) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearMod1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearMod12) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearMod2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearMod3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearParallel) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearPerpendicular) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearReinforcement) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamShearStrengthReduction) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamSpecies) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamStructuralDensity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamStructuralSpecificHeat) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamStructuralThermalTreated) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamSubclass) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamTensionParallel) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamTensionPerpendicular) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamThermalConductivity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamThermalConductivityX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamThermalConductivityY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamThermalConductivityZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamUnitWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamWoodConstruction) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamYoungMod) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamYoungMod1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamYoungMod2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamYoungMod3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamYoungModn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialParamYoungModn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PhyMaterialProperties) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PipingConnectionType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PipingGenderType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PlanRegionViewRange) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.PlanViewCutPlaneHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PlanViewLevel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PlanViewNorth) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PlanViewRange) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.PlanViewTopClipHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PlanViewViewDir) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesCwConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesDrain) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesHwConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesSupplyFitting) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesSupplyPipe) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesTrap) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesVentConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PlumbingFixturesWasteConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PocheMatId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PointAdaptiveConstrained) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointAdaptiveNumParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointAdaptiveOrientationType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointAdaptiveShowNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointAdaptiveTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementChordLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementDriven) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementDriving) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementHostedOnFaceUParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementHostedOnFaceVParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementHostedParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementMeasureFrom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementMeasurementType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementMirrored) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementNonNormalizedCurveParamater) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementNormalizedCurveParamater) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementNormalizedSegmentLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementRotationAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementSegmentLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementShowNormalPlaneOnly) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementShowPlanes) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElementZflipped) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PointFlexibleConstrained) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointFlexibleNumParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointFlexibleOrientationType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointFlexibleShowNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointNameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PointVisibilityParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PointcloudinstanceName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PointcloudtypeScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PreferDimSideUiFilter) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PrimaryOptionId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.Profile1Angle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.Profile1FamType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.Profile1FlippedHor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.Profile1OffsetX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.Profile1OffsetY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.Profile2Angle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.Profile2FamType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.Profile2FlippedHor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.Profile2OffsetX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.Profile2OffsetY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileFamType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileFamTypePlusNone) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileFlippedHor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileOffsetX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileOffsetY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ProfileParamAlongPath) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectAddress) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectAuthor) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectBuildingName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectBuildingType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectIssueDate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectOrganizationDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectOrganizationName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectPostalCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionEnumeration) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionRevisionDate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionRevisionDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionRevisionIssued) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionRevisionIssuedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionRevisionIssuedTo) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionRevisionNum) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectRevisionSequenceNum) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectStatus) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ProjectedSurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PropertyArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PropertyAreaOpen) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertyAreaUnits) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.PropertyLengthUnits) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentBearing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentEW) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentLR) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentNS) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySegmentSubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySetDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySetKeywords) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySetMaterialAspect) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySetName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.PropertySubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RadialArrayArcRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RadiusSymbolLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RadiusSymbolText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemHandrailsHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemHandrailsLatteralOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemHandrailsPositionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemHandrailsTypesParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemHasTopRail) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemSecondaryHandrailsHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemSecondaryHandrailsLatteralOffset) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemSecondaryHandrailsPositionParam) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemSecondaryHandrailsTypesParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemTopRailHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RailingSystemTopRailTypesParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrLeftBalusterAttachPt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrMinInvSlope) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrRightBalusterAttachPt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrShape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrTextFont) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrTextSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RampAttrThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RampMaxRunLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterEnableSnaps) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RasterHorizontalScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterLockProportions) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSheetheight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSheetwidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolFilename) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolLinkloadStatus) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolPagenumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolPixelheight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolPixelwidth) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolResolution) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolViewname) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RasterSymbolWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RasterVerticalScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsAdditionalFlow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsAdjustableConnector) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsBuildingConstructionclass) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsBuildingUseloadcredits) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayBendradius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayRungheight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayRungspace) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayRungwidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayShapetype) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayconduitBendorfitting) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayconduitConnectorelemType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayconduitSystemType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayconduitrunLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayrunHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCabletrayrunWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCalculatedSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsComponentClassificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitBendradius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitDiameterParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitInnerDiamParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitOuterDiamParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitTradesize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitrunDiameterParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitrunInnerDiamParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConduitrunOuterDiamParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConnectorDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConnectorIsprimary) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConnectorOffsetObsolete) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConstructionSetParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsConstructionTypeShadingfactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCtcBottomElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCtcServiceType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCtcTopElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveDiameterParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveHorOffsetParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveSlope) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveSurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveUtslope) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveVertOffsetParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurveWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultBendParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultCapParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultCrossParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultElbowParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultElbowdownParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultElbowupParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultHorizontalBendParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultMechjointParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultTakeoffParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultTeeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultTeedownParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultTeeupParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultTransitionParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeDefaultUnionParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeMaxHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeMaxWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeMultishapeTransitionOvalroundParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeMultishapeTransitionParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeMultishapeTransitionRectovalParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypePreferredBranchParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsCurvetypeRoughnessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDistributionsysConfigParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDistributionsysNumwiresParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDistributionsysPhaseParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDistributionsysVlgParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDistributionsysVllParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctBottomElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctCalculatedSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctConnectorSystemClassificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFittingLossMethodParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFittingLossMethodServerParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFittingLossMethodSettings) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFlowConfigurationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFlowDirectionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFlowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctPipeSystemAbbreviationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctPressureDrop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctRoutingPreferenceParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctSizeFormattedParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctSlope) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctStaticPressure) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctSystemCalculationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctSystemTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctTopElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAmbientTemperature) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalAreaMeasurement) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalLoadDensity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalLoadNameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalLoadTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentCurrentParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentCurrentPhaseaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentCurrentPhasebParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentCurrentPhasecParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoad) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoadPhase1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoadPhase2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoadPhase3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoadPhasea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoadPhaseb) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecApparentLoadPhasec) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecBalancedLoad) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCalcCoefficientUtilization) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitConnectionTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitFrameParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitLengthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitNaming) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitNamingIndex) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitNotesParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitNumberOfElementsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitNumberingType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitPanelParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitPathModeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitPathOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitPrefixSeparator) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitRatingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitSlotIndex) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitStartSlot) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitWireNumGroundsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitWireNumHotsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitWireNumNeutralsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitWireNumRunsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitWireSizeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecCircuitWireTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDemandfactorDemandloadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDemandfactorLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDemandfactorLoadclassificationParam) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDistributionNodePowerSource) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDistributionNodeSupplyFrom) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDistributionNodeSupplyFrom1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDistributionNodeSupplyFrom2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecEditCircuitNamingSettingsParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecEnclosure) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadClassification) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryConnectedCurrentParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryConnectedLoadParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryDemandCurrentParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryDemandFactorParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryDemandFactorRuleParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryDemandLoadParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecLoadsummaryLoadclassificationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecMains) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecMaxPoleBreakers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecModifications) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecMounting) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecNumberOfCircuits) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecNumberOfPoles) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBranchCircuitApparentLoadPhasea) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBranchCircuitApparentLoadPhaseb) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBranchCircuitApparentLoadPhasec) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBranchCircuitCurrentPhasea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBranchCircuitCurrentPhaseb) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBranchCircuitCurrentPhasec) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelBussingParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelConfigurationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelCurrentPhaseaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelCurrentPhasebParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelCurrentPhasecParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsApparentLoadPhasea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsApparentLoadPhaseb) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsApparentLoadPhasec) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsCurrentPhasea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsCurrentPhaseb) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsCurrentPhasec) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelFeedThruLugsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelGroundBusParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelLocationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelMainstypeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelMcbRatingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelNeutralBusParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelNeutralRatingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelNumphasesParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelNumwiresParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelScheduleFooterNotesParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelScheduleHeaderNotesParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelSubfeedLugsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelSupplyFromParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalConnectedCurrentParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalDemandCurrentParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalDemandFactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalestloadHvacParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalestloadLightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalestloadOtherParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalestloadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalestloadPowerParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalloadHvacParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalloadLightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalloadOtherParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalloadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPanelTotalloadPowerParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPowerFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecPowerFactorState) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomAverageIllumination) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomCavityRatio) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomLightingCalcLuminaireplane) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomLightingCalcWorkplane) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomReflectivityCeiling) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomReflectivityFloor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecRoomReflectivityWalls) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecShortCircuitRating) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecSwitchIdParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueCurrentParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueCurrentPhaseaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueCurrentPhasebParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueCurrentPhasecParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoad) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoadPhase1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoadPhase2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoadPhase3) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoadPhasea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoadPhaseb) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecTrueLoadPhasec) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecVoltage) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecVoltageDropParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireCircuits) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireGroundAdjustment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireHotAdjustment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireNeutralAdjustment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireShareGround) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireShareNeutral) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireTickmarkState) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecWireType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElectricalData) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElectricalLoadZoneType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEndLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEndOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisBuildingEnvelopeAnalyticalGridCellSize) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId ==
+               ParameterTypeId.RbsEnergyAnalysisBuildingEnvelopeAnalyticalSpaceIdentificationResolution) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId ==
+               ParameterTypeId.RbsEnergyAnalysisBuildingEnvelopeAnalyticalSurfaceIdentificationResolution) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisBuildingEnvelopeDeterminationParam) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisExportCategoryParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisExportComplexityParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisExportGbxmlDefaultsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisGroundPlaneParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisIncludeThermalProperties) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisProjectPhaseParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSliverSpaceTolerance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceAdjacentSpaceId1) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceAdjacentSpaceId2) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceAzimuth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceCadobjectid) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceOriginX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceOriginY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceOriginZ) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisSurfaceTilt) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewBuildingShellMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewCoordAxisMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewInnerShellMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewOuterShellMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewRbeMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewShadingSurfacesMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewSurfacesMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewTransparentMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEnergyAnalysisViewUpdateSurfaces) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsEqDiameterParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentAnnotationDisplay) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentDistributionSystem) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentOffsetHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentOffsetWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentSecondaryDistribsys) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentTakeoffFixedLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentTakeoffLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFamilyContentTakeoffProjlength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFlexDuctTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFlexPatternParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFlexPipeTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFlexductRoundtypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFlowFactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFlowObsolete) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerCoverageParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerKFactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerOrificeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerOrificeSizeParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerPressureClassParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerResponseParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFpSprinklerTemperatureRatingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsFriction) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsGbxmlOpeningType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsGbxmlSurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsGbxmlSurfaceName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsGbxmlSurfaceType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadDoorAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadDoorCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadFloorAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadPartitionAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadPartitionCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadPlenumCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadRoofAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadRoofCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadSkylightAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadSkylightCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadWallAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadWallCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadWindowAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHvacloadWindowCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsHydraulicDiameterParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsInsulationLiningVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsInsulationThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsInsulationThicknessForDuct) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsInsulationThicknessForPipe) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsIsCustomFitting) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsLiningThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsLiningThicknessForDuct) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsLoadSubClassificationMotor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsLookupTableName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsLossCoefficient) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsMaxFlow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsMinFlow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPanelScheduleSheetAppearanceInstParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPanelScheduleSheetAppearanceParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelconduitsHorizontalNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelconduitsHorizontalOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelconduitsVerticalNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelconduitsVerticalOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelpipesHorizontalNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelpipesHorizontalOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelpipesVerticalNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsParallelpipesVerticalOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPartType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeAdditionalFlowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeBottomElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeCalculatedSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeClassParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeConnectiontypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeConnectorSystemClassificationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeCwfuParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeDiameterParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFittingLossKfactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFittingLossMethodParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFittingLossMethodServerParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFittingLossMethodSettings) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFittingLossTableParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFixtureUnitsParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFlowConfigurationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFlowDirectionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFlowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFlowStateParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFluidDensityParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFluidTemperatureParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFluidTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFluidViscosityParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFrictionFactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeFrictionParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeHwfuParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeInnerDiamParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeInsulationThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeInvertElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeJointtypeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeMaterialParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeOuterDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipePressuredropParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeRelativeRoughnessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeReynoldsNumberParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeRoughnessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSegmentParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSizeFormattedParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSizeMaximum) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSizeMinimum) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSlope) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSlopeDefParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSlopeOptionsDefParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeStaticPressure) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSystemCalculationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeSystemFixtureUnitParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeTopElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeTypeFittingLossKfactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeTypeFittingLossMethodParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeTypeFittingLossTableParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeTypeValveLossCvfactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeValveLossCvfactorParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeVelocityParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeVolumeParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipeWfuParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPipingSystemTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsPressureDrop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsProjectConstructionTypeShadingfactorParam) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RbsProjectLocationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsProjectReporttypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReferenceFreesize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReferenceInsulationThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReferenceInsulationType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReferenceLiningThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReferenceLiningType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReferenceOverallsize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsReynoldsnumberParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsRoomCoefficientUtilization) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsRoutingPreferenceParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSegmentDescriptionParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsServiceTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsShowProfileType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSizeLock) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsStartLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsStartOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemAbbreviationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemBaseElementParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemClassificationParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemFlowConversionMethodParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemNameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemNumElementsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedrop1linedropsymbolParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedrop1linerisesymbolParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedrop1lineteedownsymbolParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedrop1lineteeupsymbolParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedrop2linedropsymbolParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedrop2linerisesymbolParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsSystemRisedropParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsVelocity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsVelocityPressure) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsVoltagetypeMaxvoltageParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsVoltagetypeMinvoltageParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsVoltagetypeVoltageParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireCircuitDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireCircuitLoadName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireConduitTypeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireInsulationParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireMaterialParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireMaxConductorSizeParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireNeutralIncludedInBalancedLoadParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireNeutralModeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireNeutralMultiplierParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireNumConductorsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsWireTemperatureRatingParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarBarDeformationType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarBarDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarBarHookLengths) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RebarBarMaximumBendRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarBarStirrupBendDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarBarStyle) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarContainerBarType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarDistributionType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemBarSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemEndtreatmentEnd) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemEndtreatmentStart) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemHookEndOrient) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemHookEndType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemHookStartOrient) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemHookStartType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemHookStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemHostMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemLayoutRule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemQuantityOfBars) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemScheduleMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElemTotalLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElementRounding) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RebarElementVisibility) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RebarFreeFormHookEndPlaneAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarFreeFormHookStartPlaneAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarGeometryType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookLengthOverride) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookLineLenFactor) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookRotationAtEnd) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookRotationAtEndSchedulesTagsFilters) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookRotationAtStart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookRotationAtStartSchedulesTagsFilters) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RebarHookStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarHostCategory) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarIncludeFirstBar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarIncludeLastBar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInstanceBarDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInstanceBarModelDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInstanceBendDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInstanceStirrupTieAttachment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInternalMultiplanar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInternalMultiplanarArcConnector) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInternalMultiplanarDuplicate) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInternalMultiplanarEndConnector) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarInternalMultiplanarStartConnector) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarMaxLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarMaximSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarMinLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarMinimSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarModelBarDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarModifiedSet) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarNumberSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarQuanityByDistrib) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShape) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeAllowedBarTypes) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeEndHookLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeEndHookOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeEndtreatmentEndType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeEndtreatmentStartType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeHookEndType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeHookRotationAtEnd) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeHookRotationAtStart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeHookStartType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeHookStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeImage) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeOutOfPlaneBendDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeParamEndHookTanLen) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeParamStartHookTanLen) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeSpiralBaseFinishingTurns) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeSpiralHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeSpiralPitch) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeSpiralTopFinishingTurns) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeStartHookLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeStartHookOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarShapeStirrupTieAttachment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarStandardBendDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarStandardHookBendDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveBackDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveBackDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveBottomDir1Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveBottomDir2Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveBottomDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveBottomDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveFrontDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveFrontDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveTopDir1Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveTopDir2Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveTopDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemActiveTopDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemAddlBottomOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemAddlExteriorOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemAddlInteriorOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemAddlTopOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeBackDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeBackDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeBottomDir1Generic) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeBottomDir2Generic) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeBottomDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeBottomDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeFrontDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeFrontDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeTopDir1Generic) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeTopDir2Generic) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeTopDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBarTypeTopDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemBottomMajorMatchesBottomMinor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemCoverBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemCoverSide) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemCoverTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientBackDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientBackDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientBottomDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientBottomDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientFrontDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientFrontDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientTopDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookOrientTopDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeBackDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeBackDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeBottomDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeBottomDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeFrontDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeFrontDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeTopDirn1) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemHookTypeTopDirn2) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryBottomDir1NoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryBottomDir1WithSpacing) {
+                return StorageType.String;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryBottomDir2NoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryBottomDir2WithSpacing) {
+                return StorageType.String;
+            }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryDir1NoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryDir1WithSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryDir2NoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryDir2WithSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryNoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryTopDir1NoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryTopDir1WithSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryTopDir2NoSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryTopDir2WithSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayerSummaryWithSpacing) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemLayoutRule) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesBackDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesBackDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesBottomDir1Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesBottomDir2Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesBottomDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesBottomDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesFrontDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesFrontDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesTopDir1Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesTopDir2Generic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesTopDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemNumberOfLinesTopDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemOverride) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingBackDirn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingBackDirn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingBottomDir1Generic) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingBottomDir2Generic) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingBottomDirn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingBottomDirn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingFrontDirn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingFrontDirn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingTopDir1Generic) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingTopDir2Generic) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingTopDirn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpacingTopDirn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpanactiveDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpanactiveDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpanhookBottomDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpanhookLeftDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpanhookRightDirn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemSpanhookTopDirn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemTopMajorMatchesBottomMajor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemTopMajorMatchesTopMinor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarSystemTopMinorMatchesBottomMinor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RebarWorkshopInstructions) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RectMullionThick) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RectMullionWidth1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RectMullionWidth2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RefTableElemName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RefTableParamName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceLineSubcategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceOtherViewUiRefView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceOtherViewUiToggle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceViewerAttrTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceViewerTargetView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceViewerUiTargetFilter) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ReferenceViewerUiTargetView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ReferencedView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ReinEstBarLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ReinEstBarVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ReinEstNumberOfBars) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ReinforcementVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RelatedToMass) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RenderPlantHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RenderPlantName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RenderPlantTrimHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RenderRpcFilename) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RenderRpcProperties) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RepeatingDetailElement) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RepeatingDetailInside) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RepeatingDetailLayout) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RepeatingDetailNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RepeatingDetailRotation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RepeatingDetailSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RevealProfileParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RevisionCloudRevision) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RevisionCloudRevisionDate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RevisionCloudRevisionDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RevisionCloudRevisionIssuedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RevisionCloudRevisionIssuedTo) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RevisionCloudRevisionNum) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RevolutionEndAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RevolutionStartAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RgbBParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RgbGParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RgbRParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoofAttrDefaultThicknessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofAttrThicknessParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofBaseLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoofConstraintLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoofConstraintOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofCurveHeightAtWall) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofCurveHeightOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofCurveIsSlopeDefining) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoofEaveCutParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoofFacesLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoofLevelOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofRafterOrTrussParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoofSlope) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofStructureIdParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RoofUptoLevelOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoofUptoLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualExhaustAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualLightingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualLightingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualPowerLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualPowerLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualReturnAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomActualSupplyAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomAirChangesPerHourParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomAreaPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomBaseHeatLoadOnParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomBaseLightingLoadOnParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomBasePowerLoadOnParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomBaseReturnAirflowOnParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculatedCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculatedCoolingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculatedHeatingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculatedHeatingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculatedSupplyAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculatedSupplyAirflowPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomCalculationPoint) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomComputationHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomComputationMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomConditionTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomConstructionSetParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDepartment) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignExhaustAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignHeatingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignLightingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignLightingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignMechanicalLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignOtherLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignPowerLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignPowerLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignReturnAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomDesignSupplyAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomEditElectricalLoadsParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RoomEditPeopleLoadsParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RoomFinishBase) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomFinishCeiling) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomFinishFloor) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomFinishWall) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomLevelId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomLightingLoadUnitsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomLowerOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomNumberOfPeopleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOccupancy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOccupancyUnitParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOutdoorAirInfoParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOutdoorAirPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOutdoorAirPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOutdoorAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomOutdoorAirflowStandardParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPeopleLatentHeatGainPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPeopleSensibleHeatGainPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPeopleTotalHeatGainPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPerimeter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPhase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPhaseId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPlenumLightingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomPowerLoadUnitsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomSpaceTypeParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomTagOrientationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RoomUpperLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RoomUpperOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RoomVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RouteAnalysisSettingsParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RoutingPreferenceParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RvtHostLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.RvtLevelOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RvtLinkFileNameWithoutExt) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RvtLinkInstanceName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.RvtLinkPhaseMap) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.RvtLinkReferenceType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RvtSourceLevel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleBaseLevelOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleBaseLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleCategory) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleEmbeddedParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleFieldsParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleFilterParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleFormatParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleGroupParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleSheetAppearanceParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleTopLevelOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleTopLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ScheduleTypeForBrowser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SectionAttrHeadTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SectionAttrTailLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SectionAttrTailTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SectionAttrTailWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SectionBrokenDisplayStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SectionCoarserScalePulldownImperial) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SectionCoarserScalePulldownMetric) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SectionParentViewName) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SectionShowInOneViewOnly) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SectionTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SeekItemId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SelectionEditableOnly) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SheetApprovedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyAssemblyCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyAssemblyDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyCost) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyKeynote) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyManufacturer) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyModel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyTypeComments) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyTypeMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetAssemblyUrl) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCheckedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCurrentRevision) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCurrentRevisionDate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCurrentRevisionDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCurrentRevisionIssued) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCurrentRevisionIssuedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetCurrentRevisionIssuedTo) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetDate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetDesignedBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetDrawnBy) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetFilePath) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetGuideGrid) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SheetHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SheetIssueDate) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetKeyNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SheetName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetRevisionsOnSheet) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SheetScale) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SheetScheduled) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SheetWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ShowArrowheadToCutMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ShowIconParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ShowTitle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SketchGridSpacingParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SketchPlaneParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SlabEdgeMaterialParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SlabEdgeProfileParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnBaseCutStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnBaseExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnGeometryTreatmentBase) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnGeometryTreatmentTop) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnTopCutStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnTopExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SlantedColumnTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SlopeArrowLevelEnd) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SlopeArrowLevelStart) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SlopeEndHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SlopeStartHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceAirChangesPerHour) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceAirflowPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceAreaPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceAssocRoomName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceAssocRoomNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceCarpetingParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceCoolingSetPoint) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceDehumidificationSetPoint) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceElecEquipmentRadiantPercentageParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceHeatingSetPoint) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceHumidificationSetPoint) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceInfiltrationAirflow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceInfiltrationAirflowPerArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceInfiltrationParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceIsOccupiable) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceIsPlenum) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceLightingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceLightingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceLightingScheduleParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceOccupancyScheduleParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceOutdoorAirflow) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceOutdoorAirflowPerArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceOutdoorAirflowPerPerson) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePeopleLatentHeatGainPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePeopleLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePeopleSensibleHeatGainPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePowerLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePowerLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePowerScheduleParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceReferenceLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpaceZoneName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustificationHoriz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustificationU) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustificationV) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustificationVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustificationn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustificationn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayout) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayoutHoriz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayoutU) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayoutV) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayoutVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayoutn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLayoutn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLengthHoriz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLengthU) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLengthV) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLengthVert) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLengthn1) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingLengthn2) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisions) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisionsHoriz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisionsU) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisionsV) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisionsVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisionsn1) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingNumDivisionsn2) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpanDirInstParamAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpanDirSymParamBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpanDirSymParamLeft) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpanDirSymParamRight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpanDirSymParamTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrCurrentName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendHorOriginGap) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendShowConfigName) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendShowDescription) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendTextType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendVertOriginGap) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrLegendWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrRange) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpatialFieldMgrResultsVisibility) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SpecifySlopeOrOffset) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateBase) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateBottomPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateBottomSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateElevationPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateElevationSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateIncludeElevation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateTopPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotCoordinateTopSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotDimLeader) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotDimLeaderLine) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotDimStyleSlopeUnits) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SpotDimStyleSlopeUnitsAlt) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevBase) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevBendLeader) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevBotValue) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevDisplayElevations) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevFlipTextVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndBottom) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndElevation) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndEw) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndNs) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndTop) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndTypeBottom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndTypeElevation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevIndTypeTop) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevLeaderArrowhead) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevLinePen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevLowerPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevLowerSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevLowerValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevRelativeBase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevRotateWithComponent) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevSingleOrUpperPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevSingleOrUpperSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevSingleOrUpperValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevSymbol) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevTextHorizOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevTextLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevTextOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevTickMarkPen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotElevTopValue) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotSlopeLeaderLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpotSlopeOffsetFromReference) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SpotSlopePrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotSlopeSlopeDirection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotSlopeSlopeRepresentation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SpotSlopeSuffix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SpotTextFromLeader) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsActualNumRisers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsActualNumberOfRisers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsActualRiserHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsActualTreadDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrBodyMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrBreakSymInCutline) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrCalcEnabled) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrCalcMax) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrCalcMin) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrEqResult) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrFirstRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrLandingCarriage) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrLandingsOverlapping) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrLastRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrLeftSideStringer) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrMaxRiserHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrMinimumTreadDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrMonolithicStairs) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrNosingLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrNosingPlacement) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrNumMidStringers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRightSideStringer) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRiserAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRiserMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRiserMult) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRiserThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRiserTreadConnect) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRiserType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrRisersPresent) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrSideStringerTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStairCalculator) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStairsBottom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStairsCutOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStringerCarriage) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStringerHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStringerMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStringerOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrStringerThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTextFont) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTextSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTreadFrontProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTreadMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTreadMult) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTreadThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTreadWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsAttrTrimTop) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsBaseLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsBaseLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsBaseOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsCurveType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowAnnotationCutMark) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowBoundary2d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowBoundary3d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowLandingBoundary) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowLandingFaces) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowLandingPath) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowLeftRunBoundary2d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowLeftRunBoundary3d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowMonolithicSupportCorseGeom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowMonolithicSupportGeom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRightRunBoundary2d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRightRunBoundary3d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunCorseGeom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunGeom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunNosing) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunOutlineForPlan) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunPath2d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunPath3d) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowRunRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowSupportPath) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowTreadFaces) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowTriserCorseGeom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDbgShowTriserGeom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDesiredNumRisers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDesiredNumberOfRisers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsDownText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsEnableCalculationRuleChecking) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstAlwaysUp) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstDownArrowOn) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstDownLabelOn) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstDownLabelText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstUpArrowOn) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstUpLabelOn) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsInstUpLabelText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingBaseElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingOverridden) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingStructural) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingtypeHasMonolithicSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingtypeLandingMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingtypeStructure) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingtypeThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingtypeUseSameTriserAsRun) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsMinAutomaticLandingDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsMultistoryTopLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsMultistoryUpToLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsPathFullStepArrow) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsPathStartExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsPathStartFromRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingAngledConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterBottomAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterFamily) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterIsPost) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterPlacement) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterShape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterSlopeAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterSpacingType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterTopAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalusterWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBalustersPerTread) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingBaseLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingHeightOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingHeightShiftType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingHeightShiftVal) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingPlacementOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingRailHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingRailName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingRailOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingRailStructure) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingShape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingTangentConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRailingWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunActualNumberOfRisers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunActualNumberOfTreads) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunActualRiserHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunActualRunWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunActualTreadDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunBeginWithRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunBottomElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunCcw) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunCenterMarkVisible) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunCreateAutoLanding) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunEndWithRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunExtendBelowRiserBase) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunExtendBelowTreadBase) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunLocationpathJustfication) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunOverridden) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunStructural) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunTopElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunWidthMeasurement) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunWinderBeginWithStraight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRunWinderEndWithStraight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRuntypeHasMonolithicSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRuntypeRunMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRuntypeStructuralDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRuntypeStructure) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRuntypeTotalDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsRuntypeUndersideSurfaceType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsShowDownText) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsShowUpText) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsStairsHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsStringersPresent) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportHorizontalOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportLandingsupportType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportLowerEndCut) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportOverridden) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportTrimSupportUpper) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportUpperEndCut) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupportVerticalOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeFlipSectionProfile) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeSectionProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeStructuralDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeStructuralDepthOnLanding) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeStructuralDepthOnRun) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeTopsideSurface) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeTotalDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeUndersideSurface) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsSupporttypeWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTextOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTextType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTopLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTopLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTopOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTotalNumberOfRisers) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTotalNumberOfTreads) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTriserIsTypeOverridden) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTriserNumberBaseIndex) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTriserRiserMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTriserRiserNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTriserTreadMark) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTriserTreadNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeBackNosing) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeFrontNosing) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeLeftNosing) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeNosingLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeNosingPlacement) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeNosingProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRightNosing) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiser) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiserIsSlanted) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiserMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiserProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiserStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiserThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeRiserTreadConnection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeTread) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeTreadMaterial) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeTreadProfile) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairsTrisertypeTreadThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsUpText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternFilletInsideCorner) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternMinimumWidthCorner) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternMinimumWidthInsideWalkline) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternNumberOfStraightStepsAtBegin) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternNumberOfStraightStepsAtEnd) {
+                return StorageType.Integer;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternRadiusInterior) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternStairPathOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairsWinderpatternWinderStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCalcRuleMaxResult) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCalcRuleMinResult) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCalcRuleRiserMultiplier) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCalcRuleTargetResult) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCalcRuleTreadMultiplier) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCalculationRules) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeConstructionMethod) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeCutmarkType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeGeomunjoinedEndCutStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeHasIntermediateSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeHasLeftSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeHasRightSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeIntermediateSupportType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeIsAssembledStairs) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeLandingType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeLeftSideSupportType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeLeftSupportLateralOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeMaximumRiserHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeMinimumRunWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeMinimumTreadDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeMinimumTreadWidthInsideBoundary) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNotchCustomWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNotchExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNotchHorizontalGap) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNotchThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNotchVerticalGap) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNotchWidth) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeNumberOfIntermediateSupports) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeRightSideSupportType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeRightSupportLateralOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeRunType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeShowCutline) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeShowStairPath) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeShowUpdown) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StairstypeWinderStepFrontMeasurement) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StartExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StartJoinCutback) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StartSymbolType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StartYJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StartYOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StartZJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StartZOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorAssembly) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorDiameter) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorGrade) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorLength) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorStandard) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemAnchorTotalWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltAssembly) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltCoating) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltDiameter) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltFinishCalculationAtGap) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltGrade) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltGripLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltGripLengthIncrease) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltInverted) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltStandard) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemBoltTotalWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCoating) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemContourGapWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemContourSide1dist) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemContourSide2dist) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCopeAroundAxis) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCopeAxisAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCopeDistanceAxis) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCopeWidthx) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCopeXAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCopeZAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCutLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemCutType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemExactWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleAlpha) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleAngle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleBackTaperThread) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleDefinition) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleDepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleDepthOfBoltHead) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleHeadDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleSlotDirection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleSlotLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleTapping) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleTappingHole) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemHoleType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPaintArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemParamBoringout) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemParamRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternEdgeDistanceX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternEdgeDistanceY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternIntermediateDistanceX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternIntermediateDistanceY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternNumber) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternNumberX) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternNumberY) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternRadius) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternTotalLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPatternTotalWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateExactWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateJustification) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlatePaintArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateShortenAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateShortenCutstraight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateShortenSuction) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemPlateWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemProfileLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemProfileType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemProfileVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShearstudDiameter) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShearstudGrade) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShearstudLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShearstudStandard) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShearstudTotalWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShortenAngley) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShortenAnglez) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemShortenReflength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldContinuous) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleEffectivethroat) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoublePrepdepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleRootopening) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleSurfaceshape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldDoubleWeldprep) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainEffectivethroat) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainPrepdepth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainRootopening) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainSurfaceshape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldMainWeldprep) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldPitch) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldPrefix) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemWeldTextModule) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemXDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemYDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SteelElemZclipType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionApplyTo) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionBeamEnd) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionBeamStart) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionColumnBase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionColumnTop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionCutback) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructConnectionTypeName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructFramJoinStatus) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalBeamHorizontalProjectionPlane) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalBeamRigidLink) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalColumnHorizontalProjectionPlane) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalColumnRigidLink) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalHardPoints) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalModel) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalProjectFloorPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalProjectMemberPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalProjectMemberPlaneColumnBottom) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalProjectMemberPlaneColumnTop) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalTessDeviation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyticalTessellate) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAnalyzesAs) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAssetParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentBaseDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentBaseRatio) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentBaseReferencedend) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentBaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentEndLevelReference) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentEndRefelementEnd) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentEndType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentEndValueDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentEndValueElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentEndValueRatio) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentStartLevelReference) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentStartRefelementEnd) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentStartType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentStartValueDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentStartValueElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentStartValueRatio) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentTopDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentTopRatio) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentTopReferencedend) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralAttachmentTopType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamCutbackForColumn) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamEnd0Elevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamEnd1Elevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamEndAttachmentDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamEndAttachmentRefcolumnEnd) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamEndAttachmentType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamEndSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamStartAttachmentDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamStartAttachmentRefcolumnEnd) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamStartAttachmentType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBeamStartSupport) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBendDirAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseFx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseFy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseFz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseMx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseMy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseMz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBottomReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralBraceRepresentation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralCamber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionApprovalStatus) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionCodeCheckingStatus) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionEditRangesOfApplicability) {
+                return StorageType.None;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionEditType) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionInputElements) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionModifyConnectionParameters) {
+                return StorageType.None;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionNobleStatus) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionOverrideType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralCopingDistance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralDisplayInHiddenViews) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralDisplayInHiddenViewsColumn) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralDisplayInHiddenViewsFraming) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralElevationAtBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralElevationAtBottomCore) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralElevationAtBottomSurvey) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralElevationAtTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralElevationAtTopCore) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralElevationAtTopSurvey) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseFx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseFy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseFz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseMx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseMy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseMz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralEndReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFamilyCodeName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFamilyNameKey) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFloorAnalyzesAs) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFloorCoreThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFoundationLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFoundationThickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFoundationWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralFrameCutLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralMaterialParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralMaterialType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralMemberForces) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralNumberOfStuds) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralReferenceLevelElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionBottomCutHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionBottomCutWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCantileverHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCantileverLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonAlpha) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonCentroidHoriz) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonCentroidVertical) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonElasticModulusStrongAxis) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonElasticModulusWeakAxis) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonMomentOfInertiaStrongAxis) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonMomentOfInertiaWeakAxis) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonNominalWeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonPerimeter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonPlasticModulusStrongAxis) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonPlasticModulusWeakAxis) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonShearAreaStrongAxis) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonShearAreaWeakAxis) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonTorsionalModulus) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonTorsionalMomentOfInertia) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonWarpingConstant) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCommonWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionCprofileFoldLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionHssInnerfillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionHssOuterfillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeBoltDiameter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeBoltSpacing) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeBoltSpacingBetweenRows) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeBoltSpacingTwoRows) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeBoltSpacingWeb) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeClearWebHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeFlangeToeOfFillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeFlangefillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeFlangethickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeFlangethicknessLocation) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeWebToeOfFillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeWebfillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeWebheight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeWebthickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIshapeWebthicknessLocation) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIweldedBottomflangethickness) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIweldedBottomflangewidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIweldedTopflangethickness) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionIweldedTopflangewidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionLangleBoltDiameterLongerFlange) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionLangleBoltDiameterShorterFlange) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionLangleBoltSpacing1LongerFlange) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionLangleBoltSpacing2LongerFlange) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionLangleBoltSpacingShorterFlange) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionLprofileLipLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionNameKey) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionPipestandardWalldesignthickness) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionPipestandardWallnominalthickness) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionShape) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionSigmaProfileBendWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionSigmaProfileMiddleBendWidth) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionSigmaProfileTopBendWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionSlopedFlangeAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionSlopedWebAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionTopCutHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionTopCutWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionTopWebFillet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralSectionZprofileBottomFlangeLength) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseFx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseFy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseFz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseMx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseMy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseMz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStartReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralStickSymbolLocation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseFx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseFy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseFz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseMx) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseMy) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseMz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralTopReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralWallBottomProjectionPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralWallProjectionSurface) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralWallTopProjectionPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SupportHandClearance) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SupportHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SurfaceArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SurfacePerimeter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SweepBaseFloorSubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SweepBaseOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SweepBaseRoofSubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SweepBaseVertOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SweepMaxSegAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.SweepTrajSegmented) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.SymbolFamilyAndTypeNamesParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SymbolFamilyNameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SymbolIdParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SymbolNameParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SystemEquipmentSets) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SystemZoneLevelId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.SystemsAnalysisReportFolder) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.SystemsAnalysisReportStyle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TagAngleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TagElementCount) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TagLeaderType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TagNoBreakParamStrings) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TagOnPlacementUi) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TagOrientationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TagSampleText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TagTag) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.TemplateName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TerminationExtensionLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TextAlignHorz) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextAlignVert) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextAlignment) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextBackground) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextBoxVisibility) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextColor) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextDistToLine) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TextFont) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TextPosition) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TextStyleBold) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextStyleFont) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TextStyleItalic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextStyleSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TextStyleUnderline) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TextTabSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TextText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TextWidthScale) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamCompressibility) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamElectricalResistivity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamEmissivity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamGasViscosity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamLiquidViscosity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamPermeability) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamPorosity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamReflectivity) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamSpecificHeatOfVaporization) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamTransmitsLight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ThermalMaterialParamVaporPressure) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TickMarkPen) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TilePatternFamrefComponentExtents) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TilePatternGridCellsX) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TilePatternGridCellsY) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TilePatternGridUnitX) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TilePatternGridUnitY) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TitleFont) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TitleSize) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TitleStyleBold) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TitleStyleItalic) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TitleStyleUnderline) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TopographyLinkName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TopographyLinkPath) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TrapMullWidth) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussBearingChordTopBottomParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementAngleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementBearingJustParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementClassParam) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementCreateBottomParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementCreateTopParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementEnd0Elevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementEnd1Elevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementReferenceLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementRotateChordsWithTruss) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementSpanParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementStickJustParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussElementTagNewMembersView) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyBottomChordAngleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyBottomChordEndReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyBottomChordStartReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyBottomChordStructuralTypesParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyBottomChordVerticalProjectionParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyDiagWebAngleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyDiagWebEndReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyDiagWebStartReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyDiagWebStructuralTypesParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyTopChordAngleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyTopChordEndReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyTopChordStartReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyTopChordStructuralTypesParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyTopChordVerticalProjectionParam) {
+                return StorageType.ElementId;
+            }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyTransformationParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyVertWebAngleParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyVertWebEndReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyVertWebStartReleaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyVertWebStructuralTypesParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.TrussFamilyWebsHaveSymbolicCutbackParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.TrussHeight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussLength) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TrussNonBearingOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.TypeWallClosure) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.UniformatCode) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.UniformatDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewAnalysisDisplayStyle) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewAnalysisResultsVisibility) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewAssociatedAssemblyInstanceId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewBackClipping) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewCameraOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewCameraPosition) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewCleanJoins) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewDependency) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewDepth) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewDescription) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewDesignOptionsConfig) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewDetailLevel) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewDiscipline) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewFamily) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewFamilyAndTypeSchedules) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewFamilySchedules) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewFixedSketchPlane) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedBottomLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedGridAppearance) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedGroupSimilar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedHiddenLevels) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedLevelRelativeBaseType) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedLocationsHigh) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedLocationsLow) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedMaterialTypes) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedNumberColumns) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedOffGrid) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedRowsCount) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedRowsFrom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedTextAppearance) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedTitle) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedTopLevel) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedTotalColumns) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedTotalRows) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSchedUnitsFormat) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSunPath) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewGraphSunPathSize) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewModelDisplayMode) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewPartsVisibility) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewPhase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewPhaseFilter) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewReferencingDetail) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewReferencingSheet) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewScale) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewScaleCustomname) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewScaleHavename) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewScalePulldownImperial) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewScalePulldownMetric) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewSchemaSettingForBuilding) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewSchemaSettingForSystem) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewSchemaSettingForSystemTemplate) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewSheetViewportInfo) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewShowGrids) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewShowHiddenLines) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewShowMassing) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewSlantedColumnSymbolOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewTemplate) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewTemplateForSchedule) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewType) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewTypeSchedules) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewUnderlayBottomId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewUnderlayOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewUnderlayTopId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewVisibleCategories) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.Viewer3dRenderSettings) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerAnnotationCropActive) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundActiveBottom) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundActiveFar) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundActiveLeft) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundActiveNear) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundActiveRight) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundActiveTop) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundFarClipping) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundOffsetBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundOffsetFar) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundOffsetLeft) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundOffsetNear) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundOffsetRight) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerBoundOffsetTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerCropRegion) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerCropRegionDisabled) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerCropRegionVisible) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerDetailNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerEyeElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerIsReference) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerModelClipBoxActive) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerOptionVisibility) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerPerspective) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerReferenceLabel) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerReferenceLabelText) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerSheetNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerShowUncropped) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerTargetElevation) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ViewerVolumeOfInterestCrop) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportAttrLabelTag) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportAttrOrientationOnSheet) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportAttrShowBox) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportAttrShowExtensionLine) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportAttrShowLabel) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportDetailNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportScale) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportSheetName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportSheetNumber) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ViewportViewName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsAnalyticalModel) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsAnnotation) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsCoordinationModel) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsDesignoptions) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsFilters) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsImport) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsModel) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsPointClouds) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsRvtLinks) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VisGraphicsWorksets) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.VoidCutsGeometry) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.VolumeCut) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.VolumeFill) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.VolumeNet) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.VolumeOfInterestName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.VolumeOfInterestViewsVisible) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.WalkthroughFramesCount) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.WallAlignKeyRefParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallAttrDefheightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallAttrHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallAttrRoomBounding) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallAttrWidthParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallBaseConstraint) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.WallBaseHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallBaseOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallBottomExtensionDistParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallBottomIsAttached) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallCrossSection) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallHeightType) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.WallKeyRefParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallLocationLineOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallSingleSlantAngleFromVertical) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallStructuralSignificant) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallStructuralUsageParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallStructureIdParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepCutByInsertsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepCutsWallParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepDefaultSetbackParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepLevelParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepOrientation) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepProfileParam) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepWallOffsetParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallSweepWallSubcategoryId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.WallTaperedExteriorInwardAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTaperedInteriorInwardAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTaperedUseInstanceAngles) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallTaperedWidthAtBottom) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTaperedWidthAtTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTopExtensionDistParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTopIsAttached) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallTopOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTypeDefaultTaperedExteriorInwardAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTypeDefaultTaperedInteriorInwardAngle) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WallTypeWidthMeasuredAt) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WallUserHeightParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WindowTypeId) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.WitnsLineExtension) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WitnsLineGapToElt) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.WitnsLineTickMark) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.WrappingAtEndsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.WrappingAtInsertsParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.YJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.YOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.YzJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZJustification) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZOffsetValue) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneAirVolumeCalculationTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneArea) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneAreaGross) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedAreaPerCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedAreaPerHeatingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedCoolingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedCoolingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedHeatingLoadParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedHeatingLoadPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedHydronicCoolingflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedHydronicHeatingflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedSupplyAirflowParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCalculatedSupplyAirflowPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCoilBypassPercentageParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCoolingAirTemperatureParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCoolingInformationParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneCoolingSetPointParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneDehumidificationSetPointParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneHeatingAirTemperatureParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneHeatingInformationParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneHeatingSetPointParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneHumidificationSetPointParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneLevelId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneLevelOffset) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneLevelOffsetTop) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneName) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneOaRatePerAchParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneOutdoorAirInformationParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneOutsideAirPerAreaParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneOutsideAirPerPersonParam) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZonePerimeter) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZonePhase) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ZonePhaseId) { return StorageType.ElementId; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneServiceTypeParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneSpaceOutdoorAirOptionParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneUseAirChangesPerHourParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneUseDehumidificationSetpointParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneUseHumidificationSetpointParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneUseOutsideAirPerAreaParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneUseOutsideAirPerPersonParam) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneVolume) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.ZoneVolumeGross) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.RbsDuctFittingLossTableParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SpacePeopleActivityLevelParam) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingAppend) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SpacingJustification) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StairsLandingtypeTreadriserType) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.StructuralConnectionSymbol) { return StorageType.None; }
+
+            if(forgeTypeId == ParameterTypeId.SurfacePatternIdParam) { return StorageType.None; }
+
+            throw new System.ArgumentOutOfRangeException(nameof(forgeTypeId),
+                $"Не удалось определить тип параметра для \"{forgeTypeId}\".");
         }
 
         /// <summary>
