@@ -3396,7 +3396,7 @@ namespace dosymep.Revit {
 
 #endif
                 default:
-                    throw new System.ArgumentOutOfRangeException();
+                    throw new System.ArgumentOutOfRangeException(nameof(builtInParameter), $"Не удалось определить тип параметра для \"{builtInParameter}\".");
             }
         }
 
@@ -3550,7 +3550,7 @@ namespace dosymep.Revit {
                 case ParameterType.Speed: return StorageType.Double;
                 case ParameterType.FamilyType: return StorageType.ElementId;
                 default:
-                    throw new System.ArgumentOutOfRangeException();
+                    throw new System.ArgumentOutOfRangeException($"Не удалось определить тип параметра для \"{definition.ParameterType}\".");
             }
         }
 
@@ -3897,7 +3897,7 @@ namespace dosymep.Revit {
 
             if(dataType == SpecTypeId.Boolean.YesNo) { return StorageType.Integer; }
 
-            throw new System.ArgumentOutOfRangeException();
+            throw new System.ArgumentOutOfRangeException($"Не удалось определить тип параметра для \"{dataType}\".");
         }
 
 #endif
