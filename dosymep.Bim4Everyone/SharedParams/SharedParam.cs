@@ -211,19 +211,19 @@ namespace dosymep.Bim4Everyone.SharedParams {
         
         private Guid GetGuid() {
             if(_paramGuid == null) {
-                return _paramGuids.TryGetValue(PropertyName, out Guid value) ? value : Guid.Empty;
+                return _paramGuids.TryGetValue(Id, out Guid value) ? value : Guid.Empty;
             }
 
             return _paramGuid.Value;
         }
         
         private string GetDescription() {
-            return _description.TryGetValue(PropertyName, out string value) ? value : null;
+            return _description.TryGetValue(Id, out string value) ? value : null;
         }
 
         private StorageType GetStorageType() {
             if(_storageType == null) {
-                return _paramTypes.TryGetValue(PropertyName, out StorageType value) ? value : StorageType.None;
+                return _paramTypes.TryGetValue(Id, out StorageType value) ? value : StorageType.None;
             }
 
             return _storageType.Value;

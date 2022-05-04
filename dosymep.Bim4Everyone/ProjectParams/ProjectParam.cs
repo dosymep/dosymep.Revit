@@ -101,7 +101,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
         /// <inheritdoc/>
         [JsonIgnore]
-        public override string Description => _description.TryGetValue(PropertyName, out string value) ? value : null;
+        public override string Description => _description.TryGetValue(Id, out string value) ? value : null;
 
         /// <inheritdoc/>
         [JsonIgnore]
@@ -161,7 +161,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         
         private StorageType GetStorageType() {
             if(_storageType == null) {
-                return _paramTypes.TryGetValue(PropertyName, out StorageType value) ? value : StorageType.None;
+                return _paramTypes.TryGetValue(Id, out StorageType value) ? value : StorageType.None;
             }
 
             return _storageType.Value;

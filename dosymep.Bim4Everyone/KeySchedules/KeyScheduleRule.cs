@@ -94,12 +94,12 @@ namespace dosymep.Bim4Everyone.KeySchedules {
             Dictionary<string, RevitParam> propertySharedParams = SharedParamsConfig.Instance
                 .GetRevitParams()
                 .Select(item=>item.AsRevitParam())
-                .ToDictionary(item => item.PropertyName);
+                .ToDictionary(item => item.Id);
 
             Dictionary<string, RevitParam> propertyProjectParams = ProjectParamsConfig.Instance
                 .GetRevitParams()
                 .Select(item=>item.AsRevitParam())
-                .ToDictionary(item => item.PropertyName);
+                .ToDictionary(item => item.Id);
 
             var keyRevitParam = propertyProjectParams[KeyRevitParamName];
 

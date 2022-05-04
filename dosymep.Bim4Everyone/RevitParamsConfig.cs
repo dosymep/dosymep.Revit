@@ -32,7 +32,7 @@ namespace dosymep.Bim4Everyone {
 
         /// <inheritdoc />
         public virtual IEnumerable<RevitParam> GetRevitParams() {
-            return GetType().GetProperties().Select(item => item.GetValue(this)).OfType<RevitParam>().OrderBy(item => item.PropertyName);
+            return GetType().GetProperties().Select(item => item.GetValue(this)).OfType<RevitParam>().OrderBy(item => item.Id);
         }
     }
 }

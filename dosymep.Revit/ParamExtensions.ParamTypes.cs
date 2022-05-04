@@ -3565,7 +3565,7 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(forgeTypeId));
             }
 
-            return forgeTypeId.GetStorageType();
+            return ParameterUtils.GetBuiltInParameter(forgeTypeId).GetStorageType();
         }
 
         /// <summary>

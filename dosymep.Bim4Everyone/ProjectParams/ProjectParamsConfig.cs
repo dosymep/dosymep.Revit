@@ -28,17 +28,17 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// <summary>
         /// _Номер Вида на Листе
         /// </summary>
-        public ProjectParam ViewNumberOnSheet { get; internal set; } = new ProjectParam() { PropertyName = nameof(ViewNumberOnSheet), Name = "_Номер Вида на Листе" };
+        public ProjectParam ViewNumberOnSheet { get; internal set; } = new ProjectParam() { Id = nameof(ViewNumberOnSheet), Name = "_Номер Вида на Листе" };
 
         /// <summary>
         /// _Полный Номер Листа
         /// </summary>
-        public ProjectParam WithFullSheetNumber { get; internal set; } = new ProjectParam() { PropertyName = nameof(WithFullSheetNumber), Name = "_Полный Номер Листа" };
+        public ProjectParam WithFullSheetNumber { get; internal set; } = new ProjectParam() { Id = nameof(WithFullSheetNumber), Name = "_Полный Номер Листа" };
 
         /// <summary>
         /// _Номера Листа Наличие
         /// </summary>
-        public ProjectParam WithSheetNumber { get; internal set; } = new ProjectParam() { PropertyName = nameof(WithSheetNumber), Name = "_Номера Листа Наличие" };
+        public ProjectParam WithSheetNumber { get; internal set; } = new ProjectParam() { Id = nameof(WithSheetNumber), Name = "_Номера Листа Наличие" };
 
         #endregion
 
@@ -47,12 +47,12 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// <summary>
         /// _Группа Видов
         /// </summary>
-        public ProjectParam ViewGroup { get; internal set; } = new ProjectParam() { PropertyName = nameof(ViewGroup), Name = "_Группа Видов" };
+        public ProjectParam ViewGroup { get; internal set; } = new ProjectParam() { Id = nameof(ViewGroup), Name = "_Группа Видов" };
 
         /// <summary>
         /// _Стадия Проекта
         /// </summary>
-        public ProjectParam ProjectStage { get; internal set; } = new ProjectParam() { PropertyName = nameof(ProjectStage), Name = "_Стадия Проекта" };
+        public ProjectParam ProjectStage { get; internal set; } = new ProjectParam() { Id = nameof(ProjectStage), Name = "_Стадия Проекта" };
 
         #endregion
 
@@ -61,12 +61,12 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// <summary>
         /// Пров_Ортогональность Осям
         /// </summary>
-        public ProjectParam CheckIsNormalGrid { get; internal set; } = new ProjectParam() { PropertyName = nameof(CheckIsNormalGrid), Name = "Пров_Ортогональность Осям" };
+        public ProjectParam CheckIsNormalGrid { get; internal set; } = new ProjectParam() { Id = nameof(CheckIsNormalGrid), Name = "Пров_Ортогональность Осям" };
 
         /// <summary>
         /// Пров_Ровно от Оси
         /// </summary>
-        public ProjectParam CheckCorrectDistanceGrid { get; internal set; } = new ProjectParam() { PropertyName = nameof(CheckCorrectDistanceGrid), Name = "Пров_Ровно от Оси" };
+        public ProjectParam CheckCorrectDistanceGrid { get; internal set; } = new ProjectParam() { Id = nameof(CheckCorrectDistanceGrid), Name = "Пров_Ровно от Оси" };
 
         #endregion
 
@@ -75,94 +75,94 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// <summary>
         /// КВГ_Группа
         /// </summary>
-        public ProjectParam RoomGroupName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomGroupName), Name = "КВГ_Группа" };
+        public ProjectParam RoomGroupName { get; internal set; } = new ProjectParam() { Id = nameof(RoomGroupName), Name = "КВГ_Группа" };
 
         /// <summary>
         /// КВГ_Пожарный отсек
         /// </summary>
-        public ProjectParam FireCompartmentName { get; internal set; } = new ProjectParam() { PropertyName = nameof(FireCompartmentName), Name = "КВГ_Пожарный отсек" };
+        public ProjectParam FireCompartmentName { get; internal set; } = new ProjectParam() { Id = nameof(FireCompartmentName), Name = "КВГ_Пожарный отсек" };
 
         /// <summary>
         /// КВГ_Секция
         /// </summary>
-        public ProjectParam RoomSectionName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomSectionName), Name = "КВГ_Секция" };
+        public ProjectParam RoomSectionName { get; internal set; } = new ProjectParam() { Id = nameof(RoomSectionName), Name = "КВГ_Секция" };
 
         /// <summary>
         /// КВГ_Тип группы помещений
         /// </summary>
-        public ProjectParam RoomTypeGroupName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomTypeGroupName), Name = "КВГ_Тип группы помещений" };
+        public ProjectParam RoomTypeGroupName { get; internal set; } = new ProjectParam() { Id = nameof(RoomTypeGroupName), Name = "КВГ_Тип группы помещений" };
 
         /// <summary>
         /// КВГ_Наименование
         /// </summary>
-        public ProjectParam RoomName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomName), Name = "КВГ_Наименование" };
+        public ProjectParam RoomName { get; internal set; } = new ProjectParam() { Id = nameof(RoomName), Name = "КВГ_Наименование" };
 
         /// <summary>
         /// КВГ_Летнее
         /// </summary>
-        public ProjectParam IsRoomBalcony { get; internal set; } = new ProjectParam() { PropertyName = nameof(IsRoomBalcony), Name = "КВГ_Летнее" };
+        public ProjectParam IsRoomBalcony { get; internal set; } = new ProjectParam() { Id = nameof(IsRoomBalcony), Name = "КВГ_Летнее" };
 
         /// <summary>
         /// КВГ_Жилое
         /// </summary>
-        public ProjectParam IsRoomLiving { get; internal set; } = new ProjectParam() { PropertyName = nameof(IsRoomLiving), Name = "КВГ_Жилое" };
+        public ProjectParam IsRoomLiving { get; internal set; } = new ProjectParam() { Id = nameof(IsRoomLiving), Name = "КВГ_Жилое" };
 
         /// <summary>
         /// КВГ_ПМЩ_Фиксация номера
         /// </summary>
-        public ProjectParam IsRoomNumberFix { get; internal set; } = new ProjectParam() { PropertyName = nameof(IsRoomNumberFix), Name = "КВГ_ПМЩ_Фиксация номера" };
+        public ProjectParam IsRoomNumberFix { get; internal set; } = new ProjectParam() { Id = nameof(IsRoomNumberFix), Name = "КВГ_ПМЩ_Фиксация номера" };
 
         /// <summary>
         /// КВГ_Приоритет нумерации
         /// </summary>
-        public ProjectParam NumberingOrder { get; internal set; } = new ProjectParam() { PropertyName = nameof(NumberingOrder), Name = "КВГ_Приоритет нумерации" };
+        public ProjectParam NumberingOrder { get; internal set; } = new ProjectParam() { Id = nameof(NumberingOrder), Name = "КВГ_Приоритет нумерации" };
 
 #if D2020 || R2020 || D2021 || R2021
 
         /// <summary>
         /// КВГ_Коэффициент площади
         /// </summary>
-        public ProjectParam RoomAreaRatio { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomAreaRatio), Name = "КВГ_Коэффициент площади" };
+        public ProjectParam RoomAreaRatio { get; internal set; } = new ProjectParam() { Id = nameof(RoomAreaRatio), Name = "КВГ_Коэффициент площади" };
 
         /// <summary>
         /// КВГ_Доп. сортировка групп
         /// </summary>
-        public ProjectParam ApartmentGroupName { get; internal set; } = new ProjectParam() { PropertyName = nameof(ApartmentGroupName), Name = "КВГ_Доп. сортировка групп" };
+        public ProjectParam ApartmentGroupName { get; internal set; } = new ProjectParam() { Id = nameof(ApartmentGroupName), Name = "КВГ_Доп. сортировка групп" };
 
         /// <summary>
         /// КВГ_ПМЩ_Группа короткое
         /// </summary>
-        public ProjectParam RoomGroupShortName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomGroupShortName), Name = "КВГ_ПМЩ_Группа короткое" };
+        public ProjectParam RoomGroupShortName { get; internal set; } = new ProjectParam() { Id = nameof(RoomGroupShortName), Name = "КВГ_ПМЩ_Группа короткое" };
 
         /// <summary>
         /// КВГ_Пожарный отсек короткое
         /// </summary>
-        public ProjectParam FireCompartmentShortName { get; internal set; } = new ProjectParam() { PropertyName = nameof(FireCompartmentShortName), Name = "КВГ_Пожарный отсек короткое" };
+        public ProjectParam FireCompartmentShortName { get; internal set; } = new ProjectParam() { Id = nameof(FireCompartmentShortName), Name = "КВГ_Пожарный отсек короткое" };
 
         /// <summary>
         /// КВГ_Секция короткое
         /// </summary>
-        public ProjectParam RoomSectionShortName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomSectionShortName), Name = "КВГ_Секция короткое" };
+        public ProjectParam RoomSectionShortName { get; internal set; } = new ProjectParam() { Id = nameof(RoomSectionShortName), Name = "КВГ_Секция короткое" };
 
         /// <summary>
         /// КВГ_Тип группы помещений короткий
         /// </summary>
-        public ProjectParam RoomTypeGroupShortName { get; internal set; } = new ProjectParam() { PropertyName = nameof(RoomTypeGroupShortName), Name = "КВГ_Тип группы помещений короткий" };
+        public ProjectParam RoomTypeGroupShortName { get; internal set; } = new ProjectParam() { Id = nameof(RoomTypeGroupShortName), Name = "КВГ_Тип группы помещений короткий" };
 
         /// <summary>
         /// КВГ_КВР_Площадь по ТЗ
         /// </summary>
-        public ProjectParam ApartmentAreaSpec { get; internal set; } = new ProjectParam() { PropertyName = nameof(ApartmentAreaSpec), Name = "КВГ_КВР_Площадь по ТЗ" };
+        public ProjectParam ApartmentAreaSpec { get; internal set; } = new ProjectParam() { Id = nameof(ApartmentAreaSpec), Name = "КВГ_КВР_Площадь по ТЗ" };
 
         /// <summary>
         /// КВГ_КВР_Площадь по ТЗ мин
         /// </summary>
-        public ProjectParam ApartmentAreaMinSpec { get; internal set; } = new ProjectParam() { PropertyName = nameof(ApartmentAreaMinSpec), Name = "КВГ_КВР_Площадь по ТЗ мин" };
+        public ProjectParam ApartmentAreaMinSpec { get; internal set; } = new ProjectParam() { Id = nameof(ApartmentAreaMinSpec), Name = "КВГ_КВР_Площадь по ТЗ мин" };
 
         /// <summary>
         /// КВГ_КВР_Площадь по ТЗ макс
         /// </summary>
-        public ProjectParam ApartmentAreaMaxSpec { get; internal set; } = new ProjectParam() { PropertyName = nameof(ApartmentAreaMaxSpec), Name = "КВГ_КВР_Площадь по ТЗ макс" };
+        public ProjectParam ApartmentAreaMaxSpec { get; internal set; } = new ProjectParam() { Id = nameof(ApartmentAreaMaxSpec), Name = "КВГ_КВР_Площадь по ТЗ макс" };
 
 #endif
 
@@ -217,7 +217,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 throw new ArgumentNullException(nameof(revitParamElement));
             }
 
-            return new ProjectParam(revitParamElement.GetStorageType()) {PropertyName = propertyName, Name = revitParamElement.Name};
+            return new ProjectParam(revitParamElement.GetStorageType()) {Id = propertyName, Name = revitParamElement.Name};
         }
         
         /// <inheritdoc/>

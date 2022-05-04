@@ -16,15 +16,15 @@ namespace dosymep.Bim4Everyone {
     /// </summary>
     public abstract class RevitParam {
         /// <summary>
+        /// Идентификатор параметра.
+        /// </summary>
+        [JsonIgnore]
+        public virtual string Id { get; internal set; }
+        
+        /// <summary>
         /// Наименование параметра.
         /// </summary>
         public virtual string Name { get; set; }
-
-        /// <summary>
-        /// Наименование свойства параметра.
-        /// </summary>
-        [JsonIgnore]
-        public virtual string PropertyName { get; internal set; }
 
         /// <summary>
         /// Описание параметра.
