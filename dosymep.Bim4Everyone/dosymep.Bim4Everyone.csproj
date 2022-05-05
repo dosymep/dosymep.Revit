@@ -110,5 +110,8 @@
       <Compile Update="SimpleServices\IProjectParamsService.cs">
         <DependentUpon>IRevitParamsService.cs</DependentUpon>
       </Compile>
+      <Compile Update="SimpleServices\IParamElementService.cs">
+        <DependentUpon>IRevitParamsService.cs</DependentUpon>
+      </Compile>
     </ItemGroup>
 </Project>

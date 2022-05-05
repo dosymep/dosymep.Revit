@@ -169,6 +169,27 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         #endregion
         
         /// <inheritdoc />
+        RevitParam IParamElementService.GetRevitParam(Document document, string revitParamName) {
+            return GetRevitParam(document, revitParamName);
+        }
+
+        /// <inheritdoc />
+        RevitParam IParamElementService.GetRevitParam(Document document, ParameterElement revitParamElement) {
+            return GetRevitParam(document, revitParamElement);
+        }
+
+        /// <inheritdoc />
+        RevitParam IParamElementService.GetRevitParam(Document document, string propertyName, string revitParamName) {
+            return GetRevitParam(document, propertyName, revitParamName);
+        }
+
+        /// <inheritdoc />
+        RevitParam IParamElementService.GetRevitParam(Document document, string propertyName,
+            ParameterElement revitParamElement) {
+            return GetRevitParam(document, propertyName, revitParamElement);
+        }
+        
+        /// <inheritdoc />
         public ProjectParam GetRevitParam(Document document, string revitParamName) {
             if(document == null) {
                 throw new ArgumentNullException(nameof(document));
