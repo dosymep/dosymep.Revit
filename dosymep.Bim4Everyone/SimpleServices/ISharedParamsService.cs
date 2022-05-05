@@ -10,38 +10,38 @@ namespace dosymep.Bim4Everyone.SimpleServices {
     /// </summary>
     public interface ISharedParamsService : IParamElementService {
         /// <summary>
-        /// Возвращает общий параметр.
+        /// Создает общий параметр.
         /// </summary>
         /// <param name="document">Документ общего параметра.</param>
         /// <param name="revitParamName">Наименование общего параметра.</param>
-        /// <returns>Возвращает общий параметр.</returns>
-        new SharedParam GetRevitParam(Document document, string revitParamName);
+        /// <returns>Возвращает новый созданный общий параметр.</returns>
+        new SharedParam CreateRevitParam(Document document, string revitParamName);
         
         /// <summary>
-        /// Возвращает общий параметр.
+        /// Создает общий параметр.
         /// </summary>
         /// <param name="document">Документ общего параметра.</param>
         /// <param name="revitParamElement">Элемент общего параметра.</param>
-        /// <returns>Возвращает общий параметр.</returns>
-        new SharedParam GetRevitParam(Document document, ParameterElement revitParamElement);
+        /// <returns>Возвращает новый созданный общий параметр.</returns>
+        new SharedParam CreateRevitParam(Document document, ParameterElement revitParamElement);
 
         /// <summary>
-        /// Возвращает общий параметр.
+        /// Создает общий параметр.
         /// </summary>
         /// <param name="document">Документ общего параметра.</param>
         /// <param name="propertyName">Уникальное название параметра.</param>
         /// <param name="revitParamName">Наименование общего параметра.</param>
-        /// <returns>Возвращает общий параметр.</returns>
-        new SharedParam GetRevitParam(Document document, string propertyName, string revitParamName);
+        /// <returns>Возвращает новый созданный общий параметр.</returns>
+        new SharedParam CreateRevitParam(Document document, string propertyName, string revitParamName);
 
         /// <summary>
-        /// Возвращает общий параметр.
+        /// Создает общий параметр.
         /// </summary>
         /// <param name="document">Документ общего параметра.</param>
         /// <param name="propertyName">Уникальное название параметра.</param>
         /// <param name="revitParamElement">Элемент общего параметра.</param>
-        /// <returns>Возвращает общий параметр.</returns>
-        new SharedParam GetRevitParam(Document document, string propertyName, ParameterElement revitParamElement);
+        /// <returns>Возвращает новый созданный общий параметр.</returns>
+        new SharedParam CreateRevitParam(Document document, string propertyName, ParameterElement revitParamElement);
         
         /// <summary>
         /// Возвращает общий параметр по его имени (идентификатору).

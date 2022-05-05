@@ -6,37 +6,37 @@ namespace dosymep.Bim4Everyone.SimpleServices {
     /// </summary>
     public interface IParamElementService : IRevitParamsService {
         /// <summary>
-        /// Возвращает параметр проекта.
+        /// Создает параметр проекта.
         /// </summary>
         /// <param name="document">Документ параметра проекта.</param>
         /// <param name="revitParamName">Наименование параметра проекта.</param>
-        /// <returns></returns>
-        RevitParam GetRevitParam(Document document, string revitParamName);
+        /// <returns>Возвращает новый созданный параметр проекта.</returns>
+        RevitParam CreateRevitParam(Document document, string revitParamName);
         
         /// <summary>
-        /// Возвращает параметр проекта.
+        /// Создает параметр проекта.
         /// </summary>
         /// <param name="document">Документ параметра проекта.</param>
         /// <param name="revitParamElement">Элемент параметра проекта.</param>
-        /// <returns></returns>
-        RevitParam GetRevitParam(Document document, ParameterElement revitParamElement);
+        /// <returns>Возвращает новый созданный параметр проекта.</returns>
+        RevitParam CreateRevitParam(Document document, ParameterElement revitParamElement);
         
         /// <summary>
-        /// Возвращает параметр проекта.
+        /// Создает параметр проекта.
         /// </summary>
         /// <param name="document">Документ параметра проекта.</param>
         /// <param name="propertyName">Уникальное название параметра.</param>
         /// <param name="revitParamName">Наименование параметра проекта.</param>
-        /// <returns></returns>
-        RevitParam GetRevitParam(Document document, string propertyName, string revitParamName);
+        /// <returns>Возвращает новый созданный параметр проекта.</returns>
+        RevitParam CreateRevitParam(Document document, string propertyName, string revitParamName);
         
         /// <summary>
-        /// Возвращает параметр проекта.
+        /// Создает параметр проекта.
         /// </summary>
         /// <param name="document">Документ параметра проекта.</param>
         /// <param name="propertyName">Уникальное название параметра.</param>
         /// <param name="revitParamElement">Элемент параметра проекта.</param>
-        /// <returns></returns>
-        RevitParam GetRevitParam(Document document, string propertyName, ParameterElement revitParamElement);
+        /// <returns>Возвращает новый созданный параметр проекта.</returns>
+        RevitParam CreateRevitParam(Document document, string propertyName, ParameterElement revitParamElement);
     }
 }

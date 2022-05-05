@@ -42,41 +42,41 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
 #if D2020 || R2020 || D2021 || R2021
         /// <inheritdoc/>
-        public SystemParam GetRevitParam(BuiltInParameter builtInParameter) {
+        public SystemParam CreateRevitParam(BuiltInParameter builtInParameter) {
             return new SystemParam(_languageType, builtInParameter);
         }
 
         /// <inheritdoc/>
-        public SystemParam GetRevitParam(Document document, BuiltInParameter systemParamId) {
+        public SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId) {
             return new SystemParam(_languageType, systemParamId);
         }
 
         /// <inheritdoc/>
-        public SystemParam GetRevitParam(BuiltInParameter systemParamId, LanguageType languageType) {
+        public SystemParam CreateRevitParam(BuiltInParameter systemParamId, LanguageType languageType) {
             return new SystemParam(languageType, systemParamId);
         }
 
         /// <inheritdoc/>
-        public SystemParam GetRevitParam(Document document, BuiltInParameter systemParamId, LanguageType languageType) {
+        public SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId, LanguageType languageType) {
             return new SystemParam(languageType, systemParamId);
         }
 
         /// <inheritdoc/>
         public override RevitParam this[string paramId] 
-            => GetRevitParam((BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), paramId));
+            => CreateRevitParam((BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), paramId));
 
         /// <inheritdoc/>
         IEnumerable<SystemParam> ISystemParamsService.GetRevitParams() {
             return Enum.GetValues(typeof(BuiltInParameter))
                 .Cast<BuiltInParameter>()
-                .Select(item => GetRevitParam(item));
+                .Select(item => CreateRevitParam(item));
         }
 
         /// <inheritdoc/>
         public override IEnumerable<RevitParam> GetRevitParams() {
             return Enum.GetValues(typeof(BuiltInParameter))
                 .Cast<BuiltInParameter>()
-                .Select(item => GetRevitParam(item));
+                .Select(item => CreateRevitParam(item));
         }
 #else
         /// <inheritdoc/>

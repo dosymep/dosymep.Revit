@@ -169,28 +169,28 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         #endregion
         
         /// <inheritdoc />
-        RevitParam IParamElementService.GetRevitParam(Document document, string revitParamName) {
-            return GetRevitParam(document, revitParamName);
+        RevitParam IParamElementService.CreateRevitParam(Document document, string revitParamName) {
+            return CreateRevitParam(document, revitParamName);
         }
 
         /// <inheritdoc />
-        RevitParam IParamElementService.GetRevitParam(Document document, ParameterElement revitParamElement) {
-            return GetRevitParam(document, revitParamElement);
+        RevitParam IParamElementService.CreateRevitParam(Document document, ParameterElement revitParamElement) {
+            return CreateRevitParam(document, revitParamElement);
         }
 
         /// <inheritdoc />
-        RevitParam IParamElementService.GetRevitParam(Document document, string propertyName, string revitParamName) {
-            return GetRevitParam(document, propertyName, revitParamName);
+        RevitParam IParamElementService.CreateRevitParam(Document document, string propertyName, string revitParamName) {
+            return CreateRevitParam(document, propertyName, revitParamName);
         }
 
         /// <inheritdoc />
-        RevitParam IParamElementService.GetRevitParam(Document document, string propertyName,
+        RevitParam IParamElementService.CreateRevitParam(Document document, string propertyName,
             ParameterElement revitParamElement) {
-            return GetRevitParam(document, propertyName, revitParamElement);
+            return CreateRevitParam(document, propertyName, revitParamElement);
         }
         
         /// <inheritdoc />
-        public ProjectParam GetRevitParam(Document document, string revitParamName) {
+        public ProjectParam CreateRevitParam(Document document, string revitParamName) {
             if(document == null) {
                 throw new ArgumentNullException(nameof(document));
             }
@@ -199,11 +199,11 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(revitParamName));
             }
 
-            return GetRevitParam(document, revitParamName, document.GetProjectParam(revitParamName));
+            return CreateRevitParam(document, revitParamName, document.GetProjectParam(revitParamName));
         }
 
         /// <inheritdoc />
-        public ProjectParam GetRevitParam(Document document, ParameterElement revitParamElement) {
+        public ProjectParam CreateRevitParam(Document document, ParameterElement revitParamElement) {
             if(document == null) {
                 throw new ArgumentNullException(nameof(document));
             }
@@ -212,11 +212,11 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 throw new ArgumentNullException(nameof(revitParamElement));
             }
             
-            return GetRevitParam(document, revitParamElement.Name, revitParamElement);
+            return CreateRevitParam(document, revitParamElement.Name, revitParamElement);
         }
         
         /// <inheritdoc />
-        public ProjectParam GetRevitParam(Document document, string propertyName, string revitParamName) {
+        public ProjectParam CreateRevitParam(Document document, string propertyName, string revitParamName) {
             if(document == null) {
                 throw new ArgumentNullException(nameof(document));
             }
@@ -225,11 +225,11 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(revitParamName));
             }
 
-            return GetRevitParam(document, propertyName, document.GetSharedParam(revitParamName));
+            return CreateRevitParam(document, propertyName, document.GetSharedParam(revitParamName));
         }
 
         /// <inheritdoc />
-        public ProjectParam GetRevitParam(Document document, string propertyName, ParameterElement revitParamElement) {
+        public ProjectParam CreateRevitParam(Document document, string propertyName, ParameterElement revitParamElement) {
             if(document == null) {
                 throw new ArgumentNullException(nameof(document));
             }
