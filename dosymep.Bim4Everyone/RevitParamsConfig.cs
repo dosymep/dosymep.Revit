@@ -26,13 +26,17 @@ namespace dosymep.Bim4Everyone {
             string json = JsonConvert.SerializeObject(this, Formatting.Indented);
             File.WriteAllText(configPath, json);
         }
-        
+
         /// <inheritdoc />
         public virtual RevitParam this[string paramId] => (RevitParam) GetType().GetProperty(paramId)?.GetValue(this);
 
         /// <inheritdoc />
         public virtual IEnumerable<RevitParam> GetRevitParams() {
-            return GetType().GetProperties().Select(item => item.GetValue(this)).OfType<RevitParam>().OrderBy(item => item.Id);
+            return GetType().GetProperties()
+                .Where(item => item.GetIndexParameters().Length == 0)
+                .Select(item => item.GetValue(this))
+                .OfType<RevitParam>()
+                .OrderBy(item => item.Id);
         }
     }
 }
