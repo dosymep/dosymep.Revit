@@ -86,6 +86,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 #endif
             };
 
+
         /// <summary>
         /// Конструктор класса параметра проекта.
         /// </summary>
@@ -95,12 +96,13 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// Конструктор класса параметра проекта.
         /// </summary>
         /// <param name="storageType">Тип параметра проекта.</param>
-        internal ProjectParam(StorageType storageType) {
+        [JsonConstructor] 
+        internal ProjectParam(StorageType? storageType) {
             _storageType = storageType;
         }
 
         /// <inheritdoc/>
-        public override string Description => _description.TryGetValue(Id, out string value) ? value : null;
+        public override string Description => GetDescription();
 
         /// <inheritdoc/>
         public override StorageType StorageType => GetStorageType();
@@ -155,6 +157,10 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             }
 
             return param;
+        }
+        
+        private string GetDescription() {
+            return _description.TryGetValue(Id, out string value) ? value : null;
         }
         
         private StorageType GetStorageType() {
