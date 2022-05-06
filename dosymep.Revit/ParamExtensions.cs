@@ -135,5 +135,18 @@ namespace dosymep.Revit {
         public static IEnumerable<Category> GetCategories(this Binding binding) {
             return ((ElementBinding) binding).Categories.OfType<Category>();
         }
+
+        /// <summary>
+        /// Возвращает идентификатор определения параметра.
+        /// </summary>
+        /// <param name="definition">Определение параметра.</param>
+        /// <returns>Возвращает идентификатор определения параметра.</returns>
+        public static ElementId GetElementId(this Definition definition) {
+            if(definition is InternalDefinition internalDefinition) {
+                return internalDefinition.Id;
+            }
+
+            return ElementId.InvalidElementId;
+        }
     }
 }
