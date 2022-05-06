@@ -225,7 +225,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(revitParamName));
             }
 
-            return CreateRevitParam(document, propertyName, document.GetSharedParam(revitParamName));
+            return CreateRevitParam(document, propertyName, document.GetProjectParam(revitParamName));
         }
 
         /// <inheritdoc />
