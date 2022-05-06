@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -42,27 +43,32 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
 #if D2020 || R2020 || D2021 || R2021
         /// <inheritdoc/>
-        public SystemParam CreateRevitParam(BuiltInParameter builtInParameter) {
-            return new SystemParam(_languageType, builtInParameter);
+        public SystemParam CreateRevitParam(BuiltInParameter systemParamId) {
+            string paramId = GetParamId(systemParamId);
+            return new SystemParam(_languageType, paramId);
         }
 
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId) {
-            return new SystemParam(_languageType, systemParamId);
+            string paramId = GetParamId(systemParamId);
+            return new SystemParam(_languageType, paramId);
         }
 
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(BuiltInParameter systemParamId, LanguageType languageType) {
-            return new SystemParam(languageType, systemParamId);
+            string paramId = GetParamId(systemParamId);
+            return new SystemParam(languageType, paramId);
         }
 
         /// <inheritdoc/>
-        public SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId, LanguageType languageType) {
-            return new SystemParam(languageType, systemParamId);
+        public SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId,
+            LanguageType languageType) {
+            string paramId = GetParamId(systemParamId);
+            return new SystemParam(languageType, paramId);
         }
 
         /// <inheritdoc/>
-        public override RevitParam this[string paramId] 
+        public override RevitParam this[string paramId]
             => CreateRevitParam((BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), paramId));
 
         /// <inheritdoc/>
@@ -78,25 +84,33 @@ namespace dosymep.Bim4Everyone.SystemParams {
                 .Cast<BuiltInParameter>()
                 .Select(item => CreateRevitParam(item));
         }
+        
+        private string GetParamId(BuiltInParameter systemParamId) {
+            return Enum.GetName(typeof(BuiltInParameter), systemParamId);
+        }
 #else
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(ForgeTypeId systemParamId) {
-            return new SystemParam(_languageType, systemParamId);
+            string paramId = GetParamId(systemParamId);
+            return new SystemParam(_languageType, paramId);
         }
 
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId) {
-            return new SystemParam(_languageType, systemParamId);
+            string paramId = GetParamId(systemParamId);
+            return new SystemParam(_languageType, paramId);
         }
 
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(ForgeTypeId systemParamId, LanguageType languageType) {
-            return new SystemParam(languageType, systemParamId);
+            string paramId = GetParamId(systemParamId);
+            return new SystemParam(languageType, paramId);
         }
 
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId, LanguageType languageType) {
-            return new SystemParam(languageType, systemParamId);
+            string paramId = GetParamId(systemParamId);
+            return new SystemParam(languageType, paramId);
         }
         
         /// <inheritdoc/>
@@ -107,8 +121,14 @@ namespace dosymep.Bim4Everyone.SystemParams {
         public new IEnumerable<SystemParam> GetRevitParams() {
             return ParameterUtils.GetAllBuiltInParameters().Select(item => CreateRevitParam(item));
         }
-#endif
         
+        private string GetParamId(ForgeTypeId systemParamId) {
+            return typeof(ParameterTypeId)
+                .GetProperties(BindingFlags.Public | BindingFlags.Static)
+                .FirstOrDefault(item => (ForgeTypeId) item.GetValue(this) == systemParamId)?.Name;
+        }
+#endif
+
         /// <inheritdoc/>
         SystemParam ISystemParamsService.this[string paramId]
             => (SystemParam) this[paramId];

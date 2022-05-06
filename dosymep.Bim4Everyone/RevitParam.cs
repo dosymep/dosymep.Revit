@@ -18,7 +18,7 @@ namespace dosymep.Bim4Everyone {
         /// <summary>
         /// Идентификатор параметра.
         /// </summary>
-        public virtual string Id { get; set; }
+        public string Id { get; set; }
         
         /// <summary>
         /// Наименование параметра.

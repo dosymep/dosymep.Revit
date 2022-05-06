@@ -16,30 +16,33 @@ namespace dosymep.Bim4Everyone.SystemParams {
     /// <summary>
     /// Класс системного параметра.
     /// </summary>
-    public partial class SystemParam : RevitParam {
-        private readonly LanguageType? _languageType;
-        
+    public class SystemParam : RevitParam {
 #if D2020 || R2020 || D2021 || R2021
         /// <summary>
         /// Создает экземпляр класса системного параметра.
         /// </summary>
         /// <param name="languageType">Язык системы.</param>
-        /// <param name="systemParamId">Системный параметр.</param>
-        internal SystemParam(LanguageType? languageType, BuiltInParameter systemParamId) {
-            _languageType = languageType;
-            SystemParamId = systemParamId;
-        }
+        /// <param name="id">Наименование свойства системного параметра.</param>
+        [JsonConstructor]
+        internal SystemParam(LanguageType? languageType, string id) {
+            LanguageType = languageType;
 
+            Id = id ?? throw new ArgumentNullException(nameof(id));
+            SystemParamId = (BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), id);
+        }
+        
         /// <summary>
         /// Системное наименование параметра.
         /// </summary>
+        [JsonIgnore]
         public BuiltInParameter SystemParamId { get; }
 
         /// <inheritdoc/>
+        [JsonIgnore]
         public override string Name {
             get {
-                if(_languageType.HasValue) {
-                    return LabelUtils.GetLabelFor(SystemParamId, _languageType.Value);
+                if(LanguageType.HasValue) {
+                    return LabelUtils.GetLabelFor(SystemParamId, LanguageType.Value);
                 }
 
                 return LabelUtils.GetLabelFor(SystemParamId);
@@ -47,34 +50,34 @@ namespace dosymep.Bim4Everyone.SystemParams {
             set => throw new NotSupportedException(
                 $"Для установки имени параметра нужно использовать свойство \"{nameof(SystemParamId)}\".");
         }
-
-        /// <inheritdoc/>
-        public override string Id {
-            get => Enum.GetName(typeof(BuiltInParameter), SystemParamId);
-            set =>
-                throw new NotSupportedException("Установка имени свойства для системного параметра запрещено.");
-        }
 #else
         /// <summary>
         /// Создает экземпляр класса системного параметра.
         /// </summary>
         /// <param name="languageType">Язык системы.</param>
-        /// <param name="forgeTypeId">Системный параметр.</param>
-        internal SystemParam(LanguageType? languageType, ForgeTypeId forgeTypeId) {
-            _languageType = languageType;
-            SystemParamId = forgeTypeId;
+        /// <param name="id">Наименование свойства системного параметра.</param>
+        [JsonConstructor]
+        internal SystemParam(LanguageType? languageType, string id) {
+            LanguageType = languageType;
+
+            Id = id ?? throw new ArgumentNullException(nameof(id));
+            SystemParamId = (ForgeTypeId) typeof(ParameterTypeId)
+                .GetProperty(id, BindingFlags.Public | BindingFlags.Static)
+                ?.GetValue(null);
         }
-        
+
         /// <summary>
         /// Системное наименование параметра.
         /// </summary>
+        [JsonIgnore]
         public ForgeTypeId SystemParamId { get; }
-
+        
         /// <inheritdoc/>
+        [JsonIgnore]
         public override string Name {
             get {
-                if(_languageType.HasValue) {
-                    return LabelUtils.GetLabelForBuiltInParameter(SystemParamId, _languageType.Value);
+                if(LanguageType.HasValue) {
+                    return LabelUtils.GetLabelForBuiltInParameter(SystemParamId, LanguageType.Value);
                 }
 
                 return LabelUtils.GetLabelForBuiltInParameter(SystemParamId);
@@ -83,17 +86,17 @@ namespace dosymep.Bim4Everyone.SystemParams {
             set => throw new NotSupportedException(
                 $"Для установки имени параметра нужно использовать свойство \"{nameof(SystemParamId)}\".");
         }
+#endif
+        
+        /// <summary>
+        /// Язык параметра.
+        /// </summary>
+        public LanguageType? LanguageType { get; }
 
         /// <inheritdoc/>
-        public override string Id {
-            get => typeof(ParameterTypeId)
-                .GetProperties(BindingFlags.Public | BindingFlags.Static)
-                .FirstOrDefault(item => (ForgeTypeId) item.GetValue(this) == SystemParamId)?.Name;
-            set =>
-                throw new NotSupportedException("Установка имени свойства для системного параметра запрещено.");
-        }
-#endif
-
+        [JsonIgnore]
+        public override string Description => null;
+        
         /// <inheritdoc/>
         [JsonIgnore]
         public override StorageType StorageType => SystemParamId.GetStorageType();
