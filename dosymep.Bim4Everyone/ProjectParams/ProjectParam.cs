@@ -100,11 +100,9 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         }
 
         /// <inheritdoc/>
-        [JsonIgnore]
         public override string Description => _description.TryGetValue(Id, out string value) ? value : null;
 
         /// <inheritdoc/>
-        [JsonIgnore]
         public override StorageType StorageType => GetStorageType();
 
         /// <inheritdoc/>

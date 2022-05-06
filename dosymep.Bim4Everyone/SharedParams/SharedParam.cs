@@ -140,15 +140,12 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <summary>
         /// Guid общего параметра.
         /// </summary>
-        [JsonIgnore]
         public Guid Guid => GetGuid();
 
         /// <inheritdoc/>
-        [JsonIgnore]
         public override string Description => GetDescription();
 
         /// <inheritdoc/>
-        [JsonIgnore]
         public override StorageType StorageType => GetStorageType();
 
         /// <inheritdoc/>

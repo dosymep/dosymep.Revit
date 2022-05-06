@@ -18,8 +18,7 @@ namespace dosymep.Bim4Everyone {
         /// <summary>
         /// Идентификатор параметра.
         /// </summary>
-        [JsonIgnore]
-        public virtual string Id { get; internal set; }
+        public virtual string Id { get; set; }
         
         /// <summary>
         /// Наименование параметра.
@@ -29,14 +28,12 @@ namespace dosymep.Bim4Everyone {
         /// <summary>
         /// Описание параметра.
         /// </summary>
-        [JsonIgnore]
-        public virtual string Description { get; }
+        public virtual string Description { get; set; }
 
         /// <summary>
         /// Тип параметра.
         /// </summary>
-        [JsonIgnore]
-        public virtual StorageType StorageType { get; }
+        public virtual StorageType StorageType { get; set; }
 
         /// <summary>
         /// Проверяет на существование параметра в документе.

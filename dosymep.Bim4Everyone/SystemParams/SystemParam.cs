@@ -49,10 +49,9 @@ namespace dosymep.Bim4Everyone.SystemParams {
         }
 
         /// <inheritdoc/>
-        [JsonIgnore]
         public override string Id {
             get => Enum.GetName(typeof(BuiltInParameter), SystemParamId);
-            internal set =>
+            set =>
                 throw new NotSupportedException("Установка имени свойства для системного параметра запрещено.");
         }
 #else
@@ -91,7 +90,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
             get => typeof(ParameterTypeId)
                 .GetProperties(BindingFlags.Public | BindingFlags.Static)
                 .FirstOrDefault(item => (ForgeTypeId) item.GetValue(this) == SystemParamId)?.Name;
-            internal set =>
+            set =>
                 throw new NotSupportedException("Установка имени свойства для системного параметра запрещено.");
         }
 #endif
