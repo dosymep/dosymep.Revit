@@ -45,7 +45,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
                 return LabelUtils.GetLabelFor(SystemParamId);
             }
             set => throw new NotSupportedException(
-                $"Для установки имени параметра нужно использовать свойство \"{nameof(BuiltInParameter)}\".");
+                $"Для установки имени параметра нужно использовать свойство \"{nameof(SystemParamId)}\".");
         }
 
         /// <inheritdoc/>
@@ -81,7 +81,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
             }
 
             set => throw new NotSupportedException(
-                $"Для установки имени параметра нужно использовать свойство \"{nameof(BuiltInParameter)}\".");
+                $"Для установки имени параметра нужно использовать свойство \"{nameof(SystemParamId)}\".");
         }
 
         /// <inheritdoc/>
