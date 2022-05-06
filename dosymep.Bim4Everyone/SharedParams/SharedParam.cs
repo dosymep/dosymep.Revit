@@ -13,7 +13,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
     /// Класс общего параметра
     /// </summary>
     public class SharedParam : RevitParam {
-        private readonly Guid? _paramGuid;
+        private readonly Guid? _guid;
         private readonly StorageType? _storageType;
 
         /// <summary>
@@ -130,10 +130,11 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <summary>
         /// Конструктор класса общего параметра проекта.
         /// </summary>
-        /// <param name="paramGuid">Guid общего параметра.</param>
+        /// <param name="guid">Guid общего параметра.</param>
         /// <param name="storageType">Тип параметра проекта.</param>
-        internal SharedParam(Guid paramGuid, StorageType storageType) {
-            _paramGuid = paramGuid;
+        [JsonConstructor]
+        internal SharedParam(Guid guid, StorageType storageType) {
+            _guid = guid;
             _storageType = storageType;
         }
         
@@ -207,11 +208,11 @@ namespace dosymep.Bim4Everyone.SharedParams {
         }
         
         private Guid GetGuid() {
-            if(_paramGuid == null) {
+            if(_guid == null) {
                 return _paramGuids.TryGetValue(Id, out Guid value) ? value : Guid.Empty;
             }
 
-            return _paramGuid.Value;
+            return _guid.Value;
         }
         
         private string GetDescription() {
