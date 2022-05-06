@@ -48,7 +48,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// </summary>
         /// <param name="systemParamId">Системный параметр.</param>
         /// <returns>Возвращает системный параметр.</returns>
-        SystemParam GetRevitParam(ForgeTypeId systemParamId);
+        SystemParam CreateRevitParam(ForgeTypeId systemParamId);
         
         /// <summary>
         /// Возвращает системный параметр.
@@ -56,7 +56,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <param name="document">Документ системного параметра.</param>
         /// <param name="systemParamId">Системный параметр.</param>
         /// <returns>Возвращает системный параметр.</returns>
-        SystemParam GetRevitParam(Document document, ForgeTypeId systemParamId);
+        SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId);
 
         /// <summary>
         /// Возвращает системный параметр.
@@ -64,7 +64,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <param name="systemParamId">Системный параметр.</param>
         /// <param name="languageType">Язык возвращаемого параметра.</param>
         /// <returns>Возвращает системный параметр.</returns>
-        SystemParam GetRevitParam(ForgeTypeId systemParamId, LanguageType languageType);
+        SystemParam CreateRevitParam(ForgeTypeId systemParamId, LanguageType languageType);
         
         /// <summary>
         /// Возвращает системный параметр.
@@ -73,7 +73,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <param name="systemParamId">Системный параметр.</param>
         /// /// <param name="languageType">Язык возвращаемого параметра.</param>
         /// <returns>Возвращает системный параметр.</returns>
-        SystemParam GetRevitParam(Document document, ForgeTypeId systemParamId, LanguageType languageType);
+        SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId, LanguageType languageType);
 #endif
         
         /// <summary>

@@ -110,7 +110,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 #if D2020 || R2020 || D2021 || R2021
             var keyParams = new[] { SystemParamsConfig.Instance.CreateRevitParam(BuiltInParameter.REF_TABLE_ELEM_NAME) };
 #else
-            var keyParams = new[] { SystemParamsConfig.Instance.GetRevitParam(ParameterTypeId.RefTableElemName) };
+            var keyParams = new[] { SystemParamsConfig.Instance.CreateRevitParam(ParameterTypeId.RefTableElemName) };
 #endif
 
             return keyParams.Union(_keyScheduleRule.RequiredParams).Where(item => !paramNames.Contains(item.Name));
@@ -126,7 +126,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 #if D2020 || R2020 || D2021 || R2021
             var keyParams = new[] { SystemParamsConfig.Instance.CreateRevitParam(BuiltInParameter.REF_TABLE_ELEM_NAME) };
 #else
-            var keyParams = new[] { SystemParamsConfig.Instance.GetRevitParam(ParameterTypeId.RefTableElemName) };
+            var keyParams = new[] { SystemParamsConfig.Instance.CreateRevitParam(ParameterTypeId.RefTableElemName) };
 #endif
 
             Element[] scheduleElements = GetScheduleElements().ToArray();

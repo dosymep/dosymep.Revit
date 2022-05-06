@@ -105,11 +105,11 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
             var filledSharedParams = FilledSharedParamNames.Select(item => propertySharedParams[item]);
             var filledProjectParams = FilledProjectParamNames.Select(item => propertyProjectParams[item]);
-            var filledSystemParams = FilledSystemParams.Select(item => SystemParamsConfig.Instance.GetRevitParam(item));
+            var filledSystemParams = FilledSystemParams.Select(item => SystemParamsConfig.Instance.CreateRevitParam(item));
 
             var requiredSharedParams = RequiredSharedParams.Select(item => propertySharedParams[item]);
             var requiredProjectParams = RequiredProjectParams.Select(item => propertyProjectParams[item]);
-            var requiredSystemParams = RequiredSystemParams.Select(item => SystemParamsConfig.Instance.GetRevitParam(item));
+            var requiredSystemParams = RequiredSystemParams.Select(item => SystemParamsConfig.Instance.CreateRevitParam(item));
 
             return new KeyScheduleRuleInternal() {
                 KeyScheduleRule = this,

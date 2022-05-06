@@ -80,32 +80,32 @@ namespace dosymep.Bim4Everyone.SystemParams {
         }
 #else
         /// <inheritdoc/>
-        public SystemParam GetRevitParam(ForgeTypeId systemParamId) {
+        public SystemParam CreateRevitParam(ForgeTypeId systemParamId) {
             return new SystemParam(_languageType, systemParamId);
         }
 
         /// <inheritdoc/>
-        public SystemParam GetRevitParam(Document document, ForgeTypeId systemParamId) {
+        public SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId) {
             return new SystemParam(_languageType, systemParamId);
         }
 
         /// <inheritdoc/>
-        public SystemParam GetRevitParam(ForgeTypeId systemParamId, LanguageType languageType) {
+        public SystemParam CreateRevitParam(ForgeTypeId systemParamId, LanguageType languageType) {
             return new SystemParam(languageType, systemParamId);
         }
 
         /// <inheritdoc/>
-        public SystemParam GetRevitParam(Document document, ForgeTypeId systemParamId, LanguageType languageType) {
+        public SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId, LanguageType languageType) {
             return new SystemParam(languageType, systemParamId);
         }
         
         /// <inheritdoc/>
         public override RevitParam this[string paramId] 
-            => GetRevitParam((ForgeTypeId) typeof(ParameterTypeId).GetProperty(paramId)?.GetValue(this));
+            => CreateRevitParam((ForgeTypeId) typeof(ParameterTypeId).GetProperty(paramId)?.GetValue(this));
 
         /// <inheritdoc/>
         public new IEnumerable<SystemParam> GetRevitParams() {
-            return ParameterUtils.GetAllBuiltInParameters().Select(item => GetRevitParam(item));
+            return ParameterUtils.GetAllBuiltInParameters().Select(item => CreateRevitParam(item));
         }
 #endif
         
