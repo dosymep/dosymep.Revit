@@ -342,8 +342,7 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(definition));
             }
 
-            var builtinParam = GetInternalDefinition(definition)?.BuiltInParameter;
-            return builtinParam != null && builtinParam != Autodesk.Revit.DB.BuiltInParameter.INVALID;
+            return definition.GetElementId().IsSystemId() == true;
         }
 
         /// <summary>
@@ -360,11 +359,38 @@ namespace dosymep.Revit {
             if(definition is null) {
                 throw new ArgumentNullException(nameof(definition));
             }
+            
+            var elementId = definition.GetElementId();
+            if(elementId.IsNull() || elementId.IsSystemId()) {
+                return false;
+            }
 
-            var elementId = GetInternalDefinition(definition)?.Id ?? Autodesk.Revit.DB.ElementId.InvalidElementId;
             return document.GetElement(elementId) is Autodesk.Revit.DB.SharedParameterElement;
         }
+        
+        /// <summary>
+        /// Проверяет является ли определение глобальным параметром.
+        /// </summary>
+        /// <param name="document">Документ Revit.</param>
+        /// <param name="definition">Определение параметра.</param>
+        /// <returns>Возвращает true - если определение является глобальным параметром, иначе false.</returns>
+        public static bool IsGlobalParamDefinition(this Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.Definition definition) {
+            if(document is null) {
+                throw new ArgumentNullException(nameof(document));
+            }
 
+            if(definition is null) {
+                throw new ArgumentNullException(nameof(definition));
+            }
+
+            var elementId = definition.GetElementId();
+            if(elementId.IsNull() || elementId.IsSystemId()) {
+                return false;
+            }
+            
+            return document.GetElement(elementId) is Autodesk.Revit.DB.GlobalParameter;
+        }
+        
         /// <summary>
         /// Проверяет является ли определение параметра проекта.
         /// </summary>
@@ -380,14 +406,14 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(definition));
             }
 
-            var elementId = GetInternalDefinition(definition)?.Id ?? Autodesk.Revit.DB.ElementId.InvalidElementId;
+            var elementId = definition.GetElementId();
+            if(elementId.IsNull() || elementId.IsSystemId()) {
+                return false;
+            }
+            
             return document.GetElement(elementId) is Autodesk.Revit.DB.ParameterElement
-                && !document.IsSystemParamDefinition(definition)
-                && !document.IsSharedParamDefinition(definition);
-        }
-
-        private static Autodesk.Revit.DB.InternalDefinition GetInternalDefinition(Autodesk.Revit.DB.Definition definition) {
-            return definition as Autodesk.Revit.DB.InternalDefinition;
+                   && !document.IsSharedParamDefinition(definition)
+                   && !document.IsGlobalParamDefinition(definition);
         }
 
         #endregion
