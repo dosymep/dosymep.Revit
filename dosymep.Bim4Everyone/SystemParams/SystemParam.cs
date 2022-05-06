@@ -85,7 +85,6 @@ namespace dosymep.Bim4Everyone.SystemParams {
         }
 
         /// <inheritdoc/>
-        [JsonIgnore]
         public override string Id {
             get => typeof(ParameterTypeId)
                 .GetProperties(BindingFlags.Public | BindingFlags.Static)
