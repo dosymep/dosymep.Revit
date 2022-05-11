@@ -42,7 +42,7 @@ namespace dosymep.Bim4Everyone.Templates {
         public Application Application { get; private set; }
 
         #region RevitParam
-        
+
         /// <summary>
         /// Настройка параметра.
         /// </summary>
@@ -57,13 +57,8 @@ namespace dosymep.Bim4Everyone.Templates {
             if(revitParam is null) {
                 throw new ArgumentNullException(nameof(revitParam));
             }
-
-            if(revitParam.IsExistsParam(target)) {
-                RevitParamSync(target, revitParam);
-                return;
-            }
             
-            RevitParamCopy(target, revitParam);
+            SetupRevitParams(target, new[] {revitParam});
         }
 
         /// <summary>
@@ -95,13 +90,7 @@ namespace dosymep.Bim4Everyone.Templates {
                 throw new ArgumentNullException(nameof(revitParams));
             }
 
-            using(var transactionGroup = target.StartTransactionGroup("Настройка параметров")) {
-                foreach(RevitParam revitParam in revitParams) {
-                    SetupRevitParam(target, revitParam);
-                }
-
-                transactionGroup.Assimilate();
-            }
+            RevitParamsCopy(target, revitParams);
         }
 
         #endregion
@@ -427,11 +416,13 @@ namespace dosymep.Bim4Everyone.Templates {
 
         #endregion
         
-        private void RevitParamSync(Document target, RevitParam revitParam) {
+        private void RevitParamsCopy(Document target, IEnumerable<RevitParam> revitParams) {
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
-                using(var transaction = target.StartTransaction($"Синхронизация параметра: \"{revitParam.Name}\"")) {
-                    RevitParamBindingsSync(source, target, revitParam);
+                using(var transaction = target.StartTransaction("Настройка параметров")) {
+                    RevitParamsSync(source, target, revitParams);
+                    RevitParamsCopy(source, target, revitParams);
+
                     transaction.Commit();
                 }
             } finally {
@@ -439,21 +430,26 @@ namespace dosymep.Bim4Everyone.Templates {
             }
         }
 
-        private void RevitParamCopy(Document target, RevitParam revitParam) {
-            Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
-            try {
-                using(var transaction = target.StartTransaction($"Настройка параметра: \"{revitParam.Name}\"")) {
-                    ParameterElement sourceParamElement = revitParam.GetRevitParamElement(source);
-                    if(sourceParamElement != null) {
-                        ElementTransformUtils.CopyElements(source, new[] {sourceParamElement.Id}, target,
-                            Transform.Identity,
-                            new CopyPasteOptions());
-                    }
+        private void RevitParamsCopy(Document source, Document target, IEnumerable<RevitParam> revitParams) {
+            ElementId[] sourceParamElementIds = revitParams
+                .Where(item => !item.IsExistsParam(target))
+                .Select(item => item.GetRevitParamElement(source))
+                .Where(item => item != null)
+                .Select(item => item.Id)
+                .ToArray();
+                    
+            if(sourceParamElementIds.Length > 0) {
+                ElementTransformUtils.CopyElements(source, sourceParamElementIds, target,
+                    Transform.Identity,
+                    new CopyPasteOptions());
+            }
+        }
 
-                    transaction.Commit();
+        private void RevitParamsSync(Document source, Document target, IEnumerable<RevitParam> revitParams) {
+            foreach(RevitParam revitParam in revitParams) {
+                if(revitParam.IsExistsParam(target)) {
+                    RevitParamBindingsSync(source, target, revitParam);
                 }
-            } finally {
-                source.Close(false);
             }
         }
 
