@@ -10,7 +10,6 @@ namespace dosymep.Bim4Everyone.SimpleServices {
     /// Сервис предоставляет доступ к системным параметрам.
     /// </summary>
     public interface ISystemParamsService : IRevitParamsService {
-#if D2020 || R2020 || D2021 || R2021
         /// <summary>
         /// Возвращает системный параметр.
         /// </summary>
@@ -42,7 +41,8 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// /// <param name="languageType">Язык возвращаемого параметра.</param>
         /// <returns>Возвращает системный параметр.</returns>
         SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId, LanguageType languageType);
-#else
+        
+#if D2022 || R2022
         /// <summary>
         /// Возвращает системный параметр.
         /// </summary>
@@ -74,7 +74,19 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// /// <param name="languageType">Язык возвращаемого параметра.</param>
         /// <returns>Возвращает системный параметр.</returns>
         SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId, LanguageType languageType);
+
+        /// <summary>
+        /// Возвращает системный параметр по его имени (идентификатору).
+        /// </summary>
+        /// <param name="paramId">Идентификатор параметра Revit.</param>
+        SystemParam this[ForgeTypeId paramId] { get; }
 #endif
+        
+        /// <summary>
+        /// Возвращает системный параметр по его имени (идентификатору).
+        /// </summary>
+        /// <param name="paramId">Идентификатор параметра Revit.</param>
+        SystemParam this[BuiltInParameter paramId] { get; }
         
         /// <summary>
         /// Возвращает системный параметр по его имени (идентификатору).
@@ -87,5 +99,6 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// </summary>
         /// <returns>Возвращает весь список системных параметров.</returns>
         new IEnumerable<SystemParam> GetRevitParams();
+        
     }
 }

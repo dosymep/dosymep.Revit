@@ -17,7 +17,6 @@ namespace dosymep.Bim4Everyone.SystemParams {
     /// Класс системного параметра.
     /// </summary>
     public class SystemParam : RevitParam {
-#if D2020 || R2020 || D2021 || R2021
         /// <summary>
         /// Создает экземпляр класса системного параметра.
         /// </summary>
@@ -50,43 +49,6 @@ namespace dosymep.Bim4Everyone.SystemParams {
             set => throw new NotSupportedException(
                 $"Для установки имени параметра нужно использовать свойство \"{nameof(SystemParamId)}\".");
         }
-#else
-        /// <summary>
-        /// Создает экземпляр класса системного параметра.
-        /// </summary>
-        /// <param name="languageType">Язык системы.</param>
-        /// <param name="id">Наименование свойства системного параметра.</param>
-        [JsonConstructor]
-        internal SystemParam(LanguageType? languageType, string id) {
-            LanguageType = languageType;
-
-            Id = id ?? throw new ArgumentNullException(nameof(id));
-            SystemParamId = (ForgeTypeId) typeof(ParameterTypeId)
-                .GetProperty(id, BindingFlags.Public | BindingFlags.Static)
-                ?.GetValue(null);
-        }
-
-        /// <summary>
-        /// Системное наименование параметра.
-        /// </summary>
-        [JsonIgnore]
-        public ForgeTypeId SystemParamId { get; }
-        
-        /// <inheritdoc/>
-        [JsonIgnore]
-        public override string Name {
-            get {
-                if(LanguageType.HasValue) {
-                    return LabelUtils.GetLabelForBuiltInParameter(SystemParamId, LanguageType.Value);
-                }
-
-                return LabelUtils.GetLabelForBuiltInParameter(SystemParamId);
-            }
-
-            set => throw new NotSupportedException(
-                $"Для установки имени параметра нужно использовать свойство \"{nameof(SystemParamId)}\".");
-        }
-#endif
         
         /// <summary>
         /// Язык параметра.
