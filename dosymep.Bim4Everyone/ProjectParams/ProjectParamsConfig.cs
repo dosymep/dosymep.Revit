@@ -170,22 +170,61 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         
         /// <inheritdoc />
         RevitParam IParamElementService.CreateRevitParam(Document document, string revitParamName) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(string.IsNullOrEmpty(revitParamName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(revitParamName));
+            }
+
             return CreateRevitParam(document, revitParamName);
         }
 
         /// <inheritdoc />
         RevitParam IParamElementService.CreateRevitParam(Document document, ParameterElement revitParamElement) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(revitParamElement == null) {
+                throw new ArgumentNullException(nameof(revitParamElement));
+            }
+
             return CreateRevitParam(document, revitParamElement);
         }
 
         /// <inheritdoc />
         RevitParam IParamElementService.CreateRevitParam(Document document, string propertyName, string revitParamName) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(string.IsNullOrEmpty(propertyName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(propertyName));
+            }
+
+            if(string.IsNullOrEmpty(revitParamName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(revitParamName));
+            }
+
             return CreateRevitParam(document, propertyName, revitParamName);
         }
 
         /// <inheritdoc />
-        RevitParam IParamElementService.CreateRevitParam(Document document, string propertyName,
-            ParameterElement revitParamElement) {
+        RevitParam IParamElementService.CreateRevitParam(Document document, string propertyName, ParameterElement revitParamElement) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(revitParamElement == null) {
+                throw new ArgumentNullException(nameof(revitParamElement));
+            }
+
+            if(string.IsNullOrEmpty(propertyName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(propertyName));
+            }
+
             return CreateRevitParam(document, propertyName, revitParamElement);
         }
         
@@ -265,7 +304,9 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// <param name="configPath">Путь до конфигурации.</param>
         /// <remarks>Возвращает конфигурацию по умолчанию если был найден переданный файл.</remarks>
         public static ProjectParamsConfig Load(string configPath) {
-            return File.Exists(configPath) ? JsonConvert.DeserializeObject<ProjectParamsConfig>(File.ReadAllText(configPath)) : GetDefaultConfig();
+            return File.Exists(configPath)
+                ? JsonConvert.DeserializeObject<ProjectParamsConfig>(File.ReadAllText(configPath))
+                : GetDefaultConfig();
         }
 
         /// <summary>

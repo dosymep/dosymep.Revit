@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -50,6 +51,10 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
             string paramId = GetParamId(systemParamId);
             return new SystemParam(_languageType, paramId);
         }
@@ -61,15 +66,25 @@ namespace dosymep.Bim4Everyone.SystemParams {
         }
 
         /// <inheritdoc/>
-        public SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId,
-            LanguageType languageType) {
+        public SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId, LanguageType languageType) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
             string paramId = GetParamId(systemParamId);
             return new SystemParam(languageType, paramId);
         }
 
         /// <inheritdoc/>
-        public override RevitParam this[string paramId]
-            => CreateRevitParam((BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), paramId));
+        public override RevitParam this[string paramId] {
+            get {
+                if(string.IsNullOrEmpty(paramId)) {
+                    throw new ArgumentException("Value cannot be null or empty.", nameof(paramId));
+                }
+
+                return CreateRevitParam((BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), paramId));
+            }
+        }
 
         /// <inheritdoc/>
         IEnumerable<SystemParam> ISystemParamsService.GetRevitParams() {
@@ -91,24 +106,48 @@ namespace dosymep.Bim4Everyone.SystemParams {
 #else
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(ForgeTypeId systemParamId) {
+            if(systemParamId == null) {
+                throw new ArgumentNullException(nameof(systemParamId));
+            }
+
             string paramId = GetParamId(systemParamId);
             return CreateRevitParam(_languageType, paramId);
         }
 
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(systemParamId == null) {
+                throw new ArgumentNullException(nameof(systemParamId));
+            }
+
             string paramId = GetParamId(systemParamId);
             return CreateRevitParam(_languageType, paramId);
         }
 
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(ForgeTypeId systemParamId, LanguageType languageType) {
+            if(systemParamId == null) {
+                throw new ArgumentNullException(nameof(systemParamId));
+            }
+            
             string paramId = GetParamId(systemParamId);
             return CreateRevitParam(languageType, paramId);
         }
 
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId, LanguageType languageType) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(systemParamId == null) {
+                throw new ArgumentNullException(nameof(systemParamId));
+            }
+
             string paramId = GetParamId(systemParamId);
             return CreateRevitParam(languageType, paramId);
         }
@@ -116,6 +155,10 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// <inheritdoc/>
         public override RevitParam this[string paramId] {
             get {
+                if(string.IsNullOrEmpty(paramId)) {
+                    throw new ArgumentException("Value cannot be null or empty.", nameof(paramId));
+                }
+
                 if(HasParamId(paramId)) {
                     return CreateRevitParam(_languageType, paramId);
                 }
@@ -157,6 +200,10 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
         /// <inheritdoc/>
         public override void Save(string configPath) {
+            if(string.IsNullOrEmpty(configPath)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(configPath));
+            }
+
             throw new NotSupportedException("Сохранение конфигурации для системных параметров бесполезно.");
         }
 

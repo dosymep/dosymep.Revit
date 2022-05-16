@@ -246,22 +246,61 @@ namespace dosymep.Bim4Everyone.SharedParams {
 
         /// <inheritdoc />
         RevitParam IParamElementService.CreateRevitParam(Document document, string revitParamName) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(string.IsNullOrEmpty(revitParamName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(revitParamName));
+            }
+
             return CreateRevitParam(document, revitParamName);
         }
 
         /// <inheritdoc />
         RevitParam IParamElementService.CreateRevitParam(Document document, ParameterElement revitParamElement) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(revitParamElement == null) {
+                throw new ArgumentNullException(nameof(revitParamElement));
+            }
+
             return CreateRevitParam(document, revitParamElement);
         }
 
         /// <inheritdoc />
         RevitParam IParamElementService.CreateRevitParam(Document document, string propertyName, string revitParamName) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(string.IsNullOrEmpty(propertyName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(propertyName));
+            }
+
+            if(string.IsNullOrEmpty(revitParamName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(revitParamName));
+            }
+
             return CreateRevitParam(document, propertyName, revitParamName);
         }
 
         /// <inheritdoc />
-        RevitParam IParamElementService.CreateRevitParam(Document document, string propertyName,
-            ParameterElement revitParamElement) {
+        RevitParam IParamElementService.CreateRevitParam(Document document, string propertyName, ParameterElement revitParamElement) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(revitParamElement == null) {
+                throw new ArgumentNullException(nameof(revitParamElement));
+            }
+
+            if(string.IsNullOrEmpty(propertyName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(propertyName));
+            }
+
             return CreateRevitParam(document, propertyName, revitParamElement);
         }
         
@@ -297,6 +336,10 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 throw new ArgumentNullException(nameof(document));
             }
 
+            if(propertyName == null) {
+                throw new ArgumentNullException(nameof(propertyName));
+            }
+
             if(string.IsNullOrEmpty(revitParamName)) {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(revitParamName));
             }
@@ -312,6 +355,10 @@ namespace dosymep.Bim4Everyone.SharedParams {
 
             if(revitParamElement == null) {
                 throw new ArgumentNullException(nameof(revitParamElement));
+            }
+
+            if(string.IsNullOrEmpty(propertyName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(propertyName));
             }
 
             return new SharedParam(((SharedParameterElement) revitParamElement).GuidValue,
