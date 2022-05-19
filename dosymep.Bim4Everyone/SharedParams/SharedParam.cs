@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
 
 using dosymep.Revit;
@@ -206,7 +207,39 @@ namespace dosymep.Bim4Everyone.SharedParams {
 
             return param;
         }
-        
+
+        /// <summary>
+        /// Возвращает описание общего параметра из ФОП.
+        /// </summary>
+        /// <param name="application">Приложение Revit.</param>
+        /// <returns>Возвращает описание общего параметра из ФОП.</returns>
+        public ExternalDefinition GetExternalDefinition(Application application) {
+            DefinitionFile definitionFile = application.OpenSharedParameterFile();
+
+            ExternalDefinition[] definitions = definitionFile.Groups
+                .SelectMany(item => item.Definitions)
+                .OfType<ExternalDefinition>()
+                .ToArray();
+
+            return definitions.FirstOrDefault(item => item.GUID.Equals(Guid))
+                   ?? definitions.FirstOrDefault(item => item.Name.Equals(Name));
+        }
+
+        /// <summary>
+        /// Возвращает описание общего параметра из ФОП.
+        /// </summary>
+        /// <param name="application">Приложение Revit.</param>
+        /// <param name="groupName">Наименование группы параметров.</param>
+        /// <returns>Возвращает описание общего параметра из ФОП.</returns>
+        public ExternalDefinition GetExternalDefinition(Application application, string groupName) {
+            DefinitionFile definitionFile = application.OpenSharedParameterFile();
+         
+            return definitionFile.Groups.get_Item(groupName).Definitions
+                       .OfType<ExternalDefinition>()
+                       .FirstOrDefault(item => item.GUID == _guid)
+                   ?? (ExternalDefinition) definitionFile.Groups.get_Item(groupName)?.Definitions.get_Item(Name);
+        }
+
         private Guid GetGuid() {
             if(_guid == null) {
                 return _paramGuids.TryGetValue(Id, out Guid value) ? value : Guid.Empty;
