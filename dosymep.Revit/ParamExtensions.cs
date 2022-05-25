@@ -166,5 +166,20 @@ namespace dosymep.Revit {
 
             return false;
         }
+
+        /// <summary>
+        /// Возвращает <see cref="BuiltInParameter"/> для определения параметра.
+        /// </summary>
+        /// <param name="definition">Определение параметра.</param>
+        /// <returns>Возвращает <see cref="BuiltInParameter"/> для определения параметра, для не системных параметров возвращает <see cref="BuiltInParameter.INVALID"/>.</returns>
+        public static BuiltInParameter GetBuiltInParameter(this Definition definition) {
+            if(definition is InternalDefinition internalDefinition) {
+                if(internalDefinition.Id.IsSystemId()) {
+                    return (BuiltInParameter) internalDefinition.Id.IntegerValue;
+                }
+            }
+
+            return BuiltInParameter.INVALID;
+        }
     }
 }

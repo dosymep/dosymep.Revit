@@ -60,5 +60,18 @@ namespace dosymep.Revit {
 
             return parameterElement.Id.IntegerValue == (int) builtInParameter;
         }
+        
+        /// <summary>
+        /// Возвращает <see cref="BuiltInParameter"/> для определения параметра.
+        /// </summary>
+        /// <param name="parameterElement">Элемент параметра".</param>
+        /// <returns>Возвращает <see cref="BuiltInParameter"/> для определения параметра, для не системных параметров возвращает <see cref="BuiltInParameter.INVALID"/>.</returns>
+        public static BuiltInParameter GetBuiltInParameter(this ParameterElement parameterElement) {
+            if(parameterElement.Id.IsSystemId()) {
+                return (BuiltInParameter) parameterElement.Id.IntegerValue;
+            }
+
+            return BuiltInParameter.INVALID;
+        }
     }
 }
