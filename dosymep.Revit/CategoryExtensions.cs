@@ -6,7 +6,7 @@ namespace dosymep.Revit {
     /// </summary>
     public static class CategoryExtensions {
         /// <summary>
-        /// Проверяет <see cref="BuiltInCategory"/> ли является она идентификатором категории.
+        /// Проверяет <see cref="BuiltInCategory"/> является ли она идентификатором категории.
         /// </summary>
         /// <param name="self">Категория.</param>
         /// <param name="builtInCategory">Встроенная категория.</param>
