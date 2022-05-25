@@ -148,5 +148,23 @@ namespace dosymep.Revit {
 
             return ElementId.InvalidElementId;
         }
+
+        /// <summary>
+        /// Проверяет <see cref="BuiltInParameter"/> является ли он идентификатором системного параметра.
+        /// </summary>
+        /// <param name="definition">Определение параметра.</param>
+        /// <param name="builtInParameter">Системный параметр.</param>
+        /// <returns>Возвращает true - если <see cref="BuiltInParameter"/> является идентификатором системного параметра, иначе false</returns>
+        public static bool IsId(this Definition definition, BuiltInParameter builtInParameter) {
+            if(definition == null) {
+                throw new ArgumentNullException(nameof(definition));
+            }
+
+            if(definition is InternalDefinition internalDefinition) {
+                return internalDefinition.Id.IntegerValue == (int) builtInParameter;
+            }
+
+            return false;
+        }
     }
 }

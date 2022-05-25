@@ -15,7 +15,7 @@ namespace dosymep.Revit {
         public static bool IsProjectParam(this ParameterElement parameterElement) {
             return !(parameterElement.IsSharedParam() || parameterElement.IsGlobalParam());
         }
-        
+
         /// <summary>
         /// Проверяет, является ли параметр общим параметром.
         /// </summary>
@@ -24,7 +24,7 @@ namespace dosymep.Revit {
         public static bool IsSharedParam(this ParameterElement parameterElement) {
             return parameterElement is SharedParameterElement;
         }
-        
+
         /// <summary>
         /// Проверяет, является ли параметр глобальным параметром.
         /// </summary>
@@ -45,6 +45,20 @@ namespace dosymep.Revit {
             }
 
             return parameterElement.GetDefinition().GetStorageType();
+        }
+
+        /// <summary>
+        /// Проверяет <see cref="BuiltInParameter"/> является ли он идентификатором системного параметра.
+        /// </summary>
+        /// <param name="parameterElement">Элемент параметра.</param>
+        /// <param name="builtInParameter">Системный параметр.</param>
+        /// <returns>Возвращает true - если <see cref="BuiltInParameter"/> является идентификатором системного параметра, иначе false</returns>
+        public static bool IsId(this ParameterElement parameterElement, BuiltInParameter builtInParameter) {
+            if(parameterElement == null) {
+                throw new ArgumentNullException(nameof(parameterElement));
+            }
+
+            return parameterElement.Id.IntegerValue == (int) builtInParameter;
         }
     }
 }
