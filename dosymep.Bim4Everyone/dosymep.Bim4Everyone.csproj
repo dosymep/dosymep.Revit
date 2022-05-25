@@ -99,19 +99,4 @@
     <ItemGroup>
         <ProjectReference Include="..\dosymep.Revit\dosymep.Revit.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="SimpleServices\ISharedParamsService.cs">
-        <DependentUpon>IRevitParamsService.cs</DependentUpon>
-      </Compile>
-      <Compile Update="SimpleServices\ISystemParamsService.cs">
-        <DependentUpon>IRevitParamsService.cs</DependentUpon>
-      </Compile>
-      <Compile Update="SimpleServices\IProjectParamsService.cs">
-        <DependentUpon>IRevitParamsService.cs</DependentUpon>
-      </Compile>
-      <Compile Update="SimpleServices\IParamElementService.cs">
-        <DependentUpon>IRevitParamsService.cs</DependentUpon>
-      </Compile>
-    </ItemGroup>
 </Project>
