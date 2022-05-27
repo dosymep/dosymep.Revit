@@ -7,9 +7,9 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         private readonly JsonSerializerSettings _settings;
 
         public JsonSerializationService(JsonSerializerSettings settings) {
-            _settings = settings;
+            _settings = settings ?? new JsonSerializerSettings();
         }
-        
+
         public string FileExtension => ".json";
 
         public string Serialize<T>(T @object) {
