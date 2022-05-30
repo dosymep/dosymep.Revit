@@ -244,7 +244,7 @@ namespace dosymep.Revit {
             }
 
             try {
-                object value = element.GetSharedParam(paramName);
+                object value = element.GetSharedParamValue(paramName);
                 return value == null ? @default : (T) value;
             } catch(ArgumentException) {
                 return @default;
@@ -268,7 +268,7 @@ namespace dosymep.Revit {
             }
 
             try {
-                return element.GetSharedParam(paramName) ?? @default;
+                return element.GetSharedParamValue(paramName) ?? @default;
             } catch(ArgumentException) {
                 return @default;
             }
