@@ -14,12 +14,12 @@ namespace dosymep.Bim4Everyone {
     /// <summary>
     /// Абстрактный класс параметра Revit.
     /// </summary>
-    public abstract class RevitParam {
+    public abstract class RevitParam : IEquatable<RevitParam> {
         /// <summary>
         /// Идентификатор параметра.
         /// </summary>
         public string Id { get; set; }
-        
+
         /// <summary>
         /// Наименование параметра.
         /// </summary>
@@ -89,5 +89,44 @@ namespace dosymep.Bim4Everyone {
         public RevitParam AsRevitParam() {
             return this;
         }
+
+        #region IEquatable
+
+        /// <inheritdoc />
+        public bool Equals(RevitParam other) {
+            if(ReferenceEquals(null, other)) {
+                return false;
+            }
+
+            if(ReferenceEquals(this, other)) {
+                return true;
+            }
+
+            return string.Equals(Id, other.Id, StringComparison.CurrentCulture);
+        }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) {
+            if(ReferenceEquals(null, obj)) {
+                return false;
+            }
+
+            if(ReferenceEquals(this, obj)) {
+                return true;
+            }
+
+            if(obj.GetType() != this.GetType()) {
+                return false;
+            }
+
+            return Equals((RevitParam) obj);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode() {
+            return StringComparer.CurrentCulture.GetHashCode(Id);
+        }
+
+        #endregion
     }
 }
