@@ -193,9 +193,12 @@ namespace dosymep.Bim4Everyone.SharedParams {
             try {
                 param = element.GetSharedParam(Guid);
             } catch(System.ArgumentException) {
-                param = element.GetSharedParam(Name);
+                try {
+                    param = element.GetSharedParam(Name);
+                } catch(System.ArgumentException) {
+                }
             }
-                
+
             if(param is null) {
                 throw new ArgumentException($"Общий параметр с заданным именем \"{Name}\" или Guid \"{Guid}\" не был найден.");
             }
