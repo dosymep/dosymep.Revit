@@ -40,11 +40,15 @@ namespace dosymep.Bim4Everyone.SystemParams {
         [JsonIgnore]
         public override string Name {
             get {
-                if(LanguageType.HasValue) {
-                    return LabelUtils.GetLabelFor(SystemParamId, LanguageType.Value);
-                }
+                try {
+                    if(LanguageType.HasValue) {
+                        return LabelUtils.GetLabelFor(SystemParamId, LanguageType.Value);
+                    }
 
-                return LabelUtils.GetLabelFor(SystemParamId);
+                    return LabelUtils.GetLabelFor(SystemParamId);
+                } catch(Autodesk.Revit.Exceptions.InvalidOperationException) {
+                    return $"Без имени ({SystemParamId})";
+                }
             }
             set => throw new NotSupportedException(
                 $"Для установки имени параметра нужно использовать свойство \"{nameof(SystemParamId)}\".");
