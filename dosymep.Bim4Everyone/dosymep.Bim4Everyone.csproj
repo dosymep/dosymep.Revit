@@ -61,6 +61,8 @@
             <Private>False</Private>
         </Reference>
 
+        <Reference Include="PresentationFramework" />
+
         <Reference Include="pyRevitLabs.Json">
             <HintPath>$(AppData)\pyRevit-Master\bin\pyRevitLabs.Json.dll</HintPath>
             <Private>False</Private>
