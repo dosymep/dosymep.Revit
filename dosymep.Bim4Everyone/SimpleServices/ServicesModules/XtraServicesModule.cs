@@ -16,6 +16,9 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             Bind<IUIThemeService>()
                 .To<XtraWindowsThemeService>();
 
+            Bind<IUIThemeUpdaterService>()
+                .To<XtraThemeUpdaterService>();
+
             Bind<WindowInteropHelper>()
                 .ToSelf()
                 .WithPropertyValue(nameof(WindowInteropHelper.Owner),
@@ -43,7 +46,11 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
 
             Bind<IProgressDialogService>()
                 .To<XtraProgressDialogService>()
-                .WithConstructorArgument(typeof(Window), GetRootWindow);
+                .WithConstructorArgument(typeof(Window), GetRootWindow)
+                .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeService),
+                    c => c.Kernel.Get<IUIThemeService>())
+                .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeUpdaterService),
+                    c => c.Kernel.Get<IUIThemeUpdaterService>());
 
             Bind<INotificationService>()
                 .To<XtraNotificationService>()
