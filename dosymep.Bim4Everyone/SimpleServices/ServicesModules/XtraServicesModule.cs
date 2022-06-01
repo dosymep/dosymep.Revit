@@ -16,10 +16,6 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             Bind<IUIThemeService>()
                 .To<XtraWindowsThemeService>();
 
-            Bind<IRootWindowService>()
-                .To<RootWindowService>()
-                .InSingletonScope();
-
             Bind<WindowInteropHelper>()
                 .ToSelf()
                 .WithPropertyValue(nameof(WindowInteropHelper.Owner),

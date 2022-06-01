@@ -1,5 +1,7 @@
 ﻿using Autodesk.Revit.UI;
 
+using dosymep.SimpleServices;
+
 using Ninject.Modules;
 
 namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
@@ -12,6 +14,13 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
 
         public override void Load() {
             Bind<UIApplication>().ToConstant(_uiApplication);
+
+            Bind<IPluginInfoService>()
+                .To<PluginInfoService>();
+
+            Bind<IRootWindowService>()
+                .To<RootWindowService>()
+                .InSingletonScope();
         }
     }
 }

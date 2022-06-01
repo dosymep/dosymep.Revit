@@ -3,6 +3,7 @@
 using dosymep.SimpleServices;
 
 using Ninject;
+using Ninject.Activation;
 using Ninject.Modules;
 
 using pyRevitLabs.Json;
@@ -13,7 +14,8 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
         public override void Load() {
             Bind<ISerializationBinder>()
                 .To<PluginSerializationBinder>()
-                .WithConstructorArgument(typeof(Assembly), c => c.Kernel.Get<Assembly>());
+                .WhenAnyAncestorMatches(c => GetPluginAssembly(c) != null)
+                .WithConstructorArgument(typeof(Assembly), GetPluginAssembly);
 
             Bind<JsonSerializerSettings>().ToSelf()
                 .WithPropertyValue(nameof(Formatting), Formatting.Indented)
@@ -25,6 +27,10 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
                     c => c.Kernel.TryGet<JsonSerializerSettings>())
                 .WithConstructorArgument(typeof(ISerializationBinder),
                     c => c.Kernel.TryGet<ISerializationBinder>());
+        }
+
+        private Assembly GetPluginAssembly(IContext context) {
+            return context.Kernel.Get<IPluginInfoService>().PluginAssembly;
         }
     }
 }
