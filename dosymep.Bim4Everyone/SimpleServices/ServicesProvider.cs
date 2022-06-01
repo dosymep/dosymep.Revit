@@ -11,20 +11,6 @@ using dosymep.Bim4Everyone.SimpleServices.ServicesModules;
 
 using Ninject;
 
-using dosymep.SimpleServices;
-using dosymep.SimpleServices.PlatformProfiles;
-using dosymep.SimpleServices.PlatformProfiles.ProfileStorages;
-using dosymep.Xpf.Core.SimpleServices;
-
-using Ninject.Activation;
-using Ninject.Modules;
-
-using pyRevitLabs.Json;
-using pyRevitLabs.Json.Serialization;
-
-using Serilog;
-using Serilog.Events;
-
 namespace dosymep.Bim4Everyone.SimpleServices {
     /// <summary>
     /// Класс предоставляющий доступ к внутренним сервисам платформы
