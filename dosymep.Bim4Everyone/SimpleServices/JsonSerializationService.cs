@@ -35,25 +35,27 @@ namespace dosymep.Bim4Everyone.SimpleServices {
     }
 
     internal class PluginSerializationBinder : ISerializationBinder {
-        private readonly Assembly _pluginAssembly;
+        private readonly IPluginInfoService _pluginInfoService;
         private readonly DefaultSerializationBinder _defaultBinder = new DefaultSerializationBinder();
 
-        public PluginSerializationBinder(Assembly pluginAssembly) {
-            _pluginAssembly = pluginAssembly ?? throw new ArgumentNullException(nameof(pluginAssembly));
+        public PluginSerializationBinder(IPluginInfoService pluginInfoService) {
+            _pluginInfoService = pluginInfoService;
         }
 
         public Type BindToType(string assemblyName, string typeName) {
-            if(assemblyName.Equals(_pluginAssembly.GetName().Name)) {
-                return _pluginAssembly.GetType(typeName);
+            if(_pluginInfoService.PluginAssembly != null
+               && assemblyName.Equals(_pluginInfoService.PluginAssembly.GetName().Name)) {
+                return _pluginInfoService.PluginAssembly.GetType(typeName);
             } else {
                 return _defaultBinder.BindToType(assemblyName, typeName);
             }
         }
 
         public void BindToName(Type serializedType, out string assemblyName, out string typeName) {
-            if(serializedType.Assembly.GetName().Name.Equals(_pluginAssembly.GetName().Name)) {
+            if(_pluginInfoService.PluginAssembly != null
+               && serializedType.Assembly.GetName().Name.Equals(_pluginInfoService.PluginAssembly.GetName().Name)) {
                 typeName = serializedType.FullName;
-                assemblyName = _pluginAssembly.GetName().Name;
+                assemblyName = _pluginInfoService.PluginAssembly.GetName().Name;
             } else {
                 _defaultBinder.BindToName(serializedType, out assemblyName, out typeName);
             }

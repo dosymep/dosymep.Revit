@@ -16,7 +16,8 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             Bind<UIApplication>().ToConstant(_uiApplication);
 
             Bind<IPluginInfoService>()
-                .To<PluginInfoService>();
+                .To<PluginInfoService>()
+                .InSingletonScope();
 
             Bind<IRootWindowService>()
                 .To<RootWindowService>()

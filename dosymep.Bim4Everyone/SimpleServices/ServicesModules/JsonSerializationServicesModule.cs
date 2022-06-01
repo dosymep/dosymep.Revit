@@ -13,9 +13,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
     internal class JsonSerializationServicesModule : NinjectModule {
         public override void Load() {
             Bind<ISerializationBinder>()
-                .To<PluginSerializationBinder>()
-                .WhenAnyAncestorMatches(c => GetPluginAssembly(c) != null)
-                .WithConstructorArgument(typeof(Assembly), GetPluginAssembly);
+                .To<PluginSerializationBinder>();
 
             Bind<JsonSerializerSettings>().ToSelf()
                 .WithPropertyValue(nameof(Formatting), Formatting.Indented)
@@ -27,10 +25,6 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
                     c => c.Kernel.TryGet<JsonSerializerSettings>())
                 .WithConstructorArgument(typeof(ISerializationBinder),
                     c => c.Kernel.TryGet<ISerializationBinder>());
-        }
-
-        private Assembly GetPluginAssembly(IContext context) {
-            return context.Kernel.Get<IPluginInfoService>().PluginAssembly;
         }
     }
 }
