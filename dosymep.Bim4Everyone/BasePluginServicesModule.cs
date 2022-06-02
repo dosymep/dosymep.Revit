@@ -1,11 +1,10 @@
-﻿using System;
-using System.Linq;
+﻿using dosymep.Bim4Everyone.SimpleServices;
 
 using Ninject;
 using Ninject.Modules;
 using Ninject.Planning.Bindings;
 
-namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
+namespace dosymep.Bim4Everyone {
     /// <summary>
     /// Абстрактный класс модуля для плагина.
     /// </summary>
