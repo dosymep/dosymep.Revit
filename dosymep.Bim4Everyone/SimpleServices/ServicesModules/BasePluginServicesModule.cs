@@ -9,7 +9,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
     /// <summary>
     /// Абстрактный класс модуля для плагина.
     /// </summary>
-    public abstract class PluginServicesModule : NinjectModule {
+    public abstract class BasePluginServicesModule : NinjectModule {
         /// <summary>
         /// Инициализация модуля плагина для контейнера зависимостей.
         /// </summary>
