@@ -19,11 +19,6 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             Bind<IUIThemeUpdaterService>()
                 .To<XtraThemeUpdaterService>();
 
-            Bind<WindowInteropHelper>()
-                .ToSelf()
-                .WithPropertyValue(nameof(WindowInteropHelper.Owner),
-                    c => c.Kernel.Get<UIApplication>().MainWindowHandle);
-
             Bind<IDispatcherService>()
                 .To<XtraDispatcherService>()
                 .WithConstructorArgument(typeof(Window), GetRootWindow);
@@ -55,7 +50,9 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             Bind<INotificationService>()
                 .To<XtraNotificationService>()
                 .WithConstructorArgument(typeof(string), "Bim4Everyone")
-                .WithConstructorArgument(typeof(Window), GetRootWindow);
+                .WithConstructorArgument(typeof(Window), GetRootWindow)
+                .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeService),
+                    c => c.Kernel.Get<IUIThemeService>());
         }
 
         private Window GetRootWindow(IContext context) {
