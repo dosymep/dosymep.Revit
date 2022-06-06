@@ -84,5 +84,8 @@
       <Compile Update="DocumentExtensions.TransmissionData.cs">
         <DependentUpon>DocumentExtensions.cs</DependentUpon>
       </Compile>
+      <Compile Update="ParamExtensions.UnitTypes.cs">
+        <DependentUpon>ParamExtensions.cs</DependentUpon>
+      </Compile>
     </ItemGroup>
 </Project>
