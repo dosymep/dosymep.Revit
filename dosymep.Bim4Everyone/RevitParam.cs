@@ -30,11 +30,27 @@ namespace dosymep.Bim4Everyone {
         /// </summary>
         public virtual string Description { get; set; }
 
+        #if D2020 || R2020
+        
+        /// <summary>
+        /// Тип измерения параметра.
+        /// </summary>
+        public virtual UnitType UnitType { get; set; }
+        
+        #else
+        
+        /// <summary>
+        /// Тип измерения параметра.
+        /// </summary>
+        public virtual ForgeTypeId UnitType { get; set; }
+        
+        #endif
+
         /// <summary>
         /// Тип параметра.
         /// </summary>
         public virtual StorageType StorageType { get; set; }
-
+        
         /// <summary>
         /// Проверяет на существование параметра в документе.
         /// </summary>

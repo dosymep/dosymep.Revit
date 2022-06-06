@@ -63,6 +63,20 @@ namespace dosymep.Bim4Everyone.SystemParams {
         [JsonIgnore]
         public override string Description => null;
         
+#if D2020 || R2020
+        
+        /// <inheritdoc/>
+        [JsonIgnore]
+        public override UnitType UnitType => SystemParamId.GetUnitType();
+        
+#else
+        
+        /// <inheritdoc/>
+        [JsonIgnore]
+        public override ForgeTypeId UnitType => SystemParamId.GetUnitType();
+        
+#endif
+
         /// <inheritdoc/>
         [JsonIgnore]
         public override StorageType StorageType => SystemParamId.GetStorageType();
