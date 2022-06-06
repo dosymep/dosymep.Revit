@@ -23,7 +23,9 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// <summary>
         /// Инициализирует конфигурацию системных параметров.
         /// </summary>
-        internal SystemParamsConfig() { }
+        internal SystemParamsConfig() {
+            _revitParams = GetSystemParams().ToDictionary(item => item.Id);
+        }
 
         /// <summary>
         /// Инициализирует конфигурацию системных параметров.
@@ -72,62 +74,32 @@ namespace dosymep.Bim4Everyone.SystemParams {
         }
 
         /// <inheritdoc/>
-        public override RevitParam this[string paramId] {
-            get {
-                if(string.IsNullOrEmpty(paramId)) {
-                    throw new ArgumentException("Value cannot be null or empty.", nameof(paramId));
-                }
-
-                if(HasParamId(paramId)) {
-                    return CreateRevitParam(_languageType, paramId);
-                }
-
-                return null;
-            }
-        }
-
-        /// <inheritdoc/>
         public SystemParam this[BuiltInParameter paramId] 
-            => CreateRevitParam(_languageType, paramId);
+            =>  (SystemParam) this[paramId.ToString()];
 
         /// <inheritdoc/>
         IEnumerable<SystemParam> ISystemParamsService.GetRevitParams() {
-            return Enum.GetValues(typeof(BuiltInParameter))
-                .Cast<BuiltInParameter>()
-                .Select(item => CreateRevitParam(_languageType, item));
-        }
-
-        /// <inheritdoc/>
-        public override IEnumerable<RevitParam> GetRevitParams() {
-            return Enum.GetValues(typeof(BuiltInParameter))
-                .Cast<BuiltInParameter>()
-                .Select(item => CreateRevitParam(_languageType, item));
+            return base.GetRevitParams().Cast<SystemParam>();
         }
         
         private SystemParam CreateRevitParam(LanguageType? languageType, string paramId) {
-            return string.IsNullOrEmpty(paramId) ? null : new SystemParam(languageType, paramId);
+            return string.IsNullOrEmpty(paramId) ? null : new SystemParam(paramId) {LanguageType = languageType};
         }
         
         private SystemParam CreateRevitParam(LanguageType? languageType, BuiltInParameter systemParamId) {
             string paramId = GetParamId(systemParamId);
-            return new SystemParam(languageType, paramId);
+            return new SystemParam(paramId){LanguageType = languageType};
         }
         
         private string GetParamId(BuiltInParameter systemParamId) {
             return Enum.GetName(typeof(BuiltInParameter), systemParamId);
         }
         
-        private bool HasParamId(string paramId) {
-            return string.IsNullOrEmpty(paramId)
-                ? false
-                : Enum.IsDefined(typeof(BuiltInParameter), paramId);
-        }
-        
 #if D2022 || R2022
-        
+
         /// <inheritdoc/>
-        public SystemParam this[ForgeTypeId paramId] 
-            => CreateRevitParam(_languageType, paramId);
+        public SystemParam this[ForgeTypeId paramId]
+            => (SystemParam) this[GetParamId(paramId)];
         
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(ForgeTypeId systemParamId) {
@@ -223,6 +195,12 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// <returns>Возвращает конфигурацию по умолчанию.</returns>
         public static SystemParamsConfig GetDefaultConfig() {
             return new SystemParamsConfig();
+        }
+        
+        private IEnumerable<RevitParam> GetSystemParams() {
+            return Enum.GetValues(typeof(BuiltInParameter))
+                .Cast<BuiltInParameter>()
+                .Select(item => CreateRevitParam(_languageType, item));
         }
     }
 }

@@ -60,7 +60,7 @@ namespace dosymep.Revit {
 
             return parameterElement.Id.IntegerValue == (int) builtInParameter;
         }
-        
+
         /// <summary>
         /// Возвращает <see cref="BuiltInParameter"/> для определения параметра.
         /// </summary>
@@ -73,5 +73,36 @@ namespace dosymep.Revit {
 
             return BuiltInParameter.INVALID;
         }
+
+#if D2020 || R2020
+
+        /// <summary>
+        /// Возвращает единицу измерения параметра.
+        /// </summary>
+        /// <param name="parameterElement">Элемент параметра.</param>
+        /// <returns>Возвращает единицу измерения параметра.</returns>
+        public static UnitType GetUnitType(this ParameterElement parameterElement) {
+            if(parameterElement == null) {
+                throw new ArgumentNullException(nameof(parameterElement));
+            }
+
+            return parameterElement.GetDefinition().UnitType;
+        }
+
+#else
+        /// <summary>
+        /// Возвращает единицу измерения параметра.
+        /// </summary>
+        /// <param name="parameterElement">Элемент параметра.</param>
+        /// <returns>Возвращает единицу измерения параметра.</returns>
+        public static ForgeTypeId GetUnitType(this ParameterElement parameterElement) {
+            if(parameterElement == null) {
+                throw new ArgumentNullException(nameof(parameterElement));
+            }
+
+            return parameterElement.GetDefinition().GetSpecTypeId();
+        }
+#endif
+
     }
 }

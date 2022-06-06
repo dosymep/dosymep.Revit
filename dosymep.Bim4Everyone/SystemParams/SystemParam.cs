@@ -18,68 +18,60 @@ namespace dosymep.Bim4Everyone.SystemParams {
     /// </summary>
     public class SystemParam : RevitParam {
         /// <summary>
-        /// Создает экземпляр класса системного параметра.
+        /// Конструктор класса системного параметра.
         /// </summary>
-        /// <param name="languageType">Язык системы.</param>
-        /// <param name="id">Наименование свойства системного параметра.</param>
+        /// <param name="paramId">Идентификатор параметра.</param>
         [JsonConstructor]
-        internal SystemParam(LanguageType? languageType, string id) {
-            LanguageType = languageType;
-
-            Id = id ?? throw new ArgumentNullException(nameof(id));
-            SystemParamId = (BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), id);
+        internal SystemParam(string paramId)
+            : base(paramId) {
+            SystemParamId = (BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), paramId);
         }
-        
+
         /// <summary>
         /// Системное наименование параметра.
         /// </summary>
         [JsonIgnore]
         public BuiltInParameter SystemParamId { get; }
 
-        /// <inheritdoc/>
-        [JsonIgnore]
-        public override string Name {
-            get {
-                try {
-                    if(LanguageType.HasValue) {
-                        return LabelUtils.GetLabelFor(SystemParamId, LanguageType.Value);
-                    }
 
-                    return LabelUtils.GetLabelFor(SystemParamId);
-                } catch(Autodesk.Revit.Exceptions.InvalidOperationException) {
-                    return $"Без имени ({SystemParamId})";
-                }
-            }
-            set => throw new NotSupportedException(
-                $"Для установки имени параметра нужно использовать свойство \"{nameof(SystemParamId)}\".");
-        }
-        
         /// <summary>
-        /// Язык параметра.
+        /// Язык системного параметра.
         /// </summary>
-        public LanguageType? LanguageType { get; }
-
-        /// <inheritdoc/>
         [JsonIgnore]
-        public override string Description => null;
-        
+        public LanguageType? LanguageType { get; set; }
+
+        /// <summary>
+        /// Наименование параметра.
+        /// </summary>
+        [JsonIgnore]
+        public override string Name
+            => LanguageType == null
+                ? LabelUtils.GetLabelFor(SystemParamId)
+                : LabelUtils.GetLabelFor(SystemParamId, LanguageType.Value);
+
+        /// <summary>
+        /// Тип параметра.
+        /// </summary>
+        [JsonIgnore]
+        public override StorageType StorageType => SystemParamId.GetStorageType();
+
 #if D2020 || R2020
-        
-        /// <inheritdoc/>
+
+        /// <summary>
+        /// Тип измерения параметра.
+        /// </summary>
         [JsonIgnore]
         public override UnitType UnitType => SystemParamId.GetUnitType();
         
 #else
         
-        /// <inheritdoc/>
-        [JsonIgnore]
+        /// <summary>
+        /// Тип измерения параметра.
+        /// </summary>
+        [JsonIgnore]        
         public override ForgeTypeId UnitType => SystemParamId.GetUnitType();
         
 #endif
-
-        /// <inheritdoc/>
-        [JsonIgnore]
-        public override StorageType StorageType => SystemParamId.GetStorageType();
 
         /// <inheritdoc/>
         public override bool IsExistsParam(Document document) {

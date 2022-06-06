@@ -15,6 +15,11 @@ namespace dosymep.Bim4Everyone {
     /// </summary>
     public abstract class RevitParamsConfig : IRevitParamsService {
         /// <summary>
+        /// Перечень всех общих параметров проекта.
+        /// </summary>
+        protected Dictionary<string, RevitParam> _revitParams;
+
+        /// <summary>
         /// Сохранение текущей конфигурации.
         /// </summary>
         /// <param name="configPath">Путь до конфигурации.</param>
@@ -28,15 +33,24 @@ namespace dosymep.Bim4Everyone {
         }
 
         /// <inheritdoc />
-        public virtual RevitParam this[string paramId] => (RevitParam) GetType().GetProperty(paramId)?.GetValue(this);
+        public RevitParam this[string paramId] => GetRevitParam(paramId);
 
         /// <inheritdoc />
         public virtual IEnumerable<RevitParam> GetRevitParams() {
-            return GetType().GetProperties()
-                .Where(item => item.GetIndexParameters().Length == 0)
-                .Select(item => item.GetValue(this))
-                .OfType<RevitParam>()
+            return _revitParams.Values
                 .OrderBy(item => item.Id);
+        }
+
+        private RevitParam GetRevitParam(string paramId) {
+            if(string.IsNullOrEmpty(paramId)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(paramId));
+            }
+
+            if(_revitParams.TryGetValue(paramId, out RevitParam revitParam)) {
+                return revitParam;
+            }
+
+            throw new Exception($"Не был найден параметр с идентификатором \"{paramId}\".");
         }
     }
 }

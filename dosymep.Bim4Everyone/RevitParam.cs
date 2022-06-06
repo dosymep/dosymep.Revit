@@ -16,9 +16,21 @@ namespace dosymep.Bim4Everyone {
     /// </summary>
     public abstract class RevitParam : IEquatable<RevitParam> {
         /// <summary>
+        /// Создает экземпляр класса параметра Revit.
+        /// </summary>
+        /// <param name="paramId">Идентификатор параметра.</param>
+        protected RevitParam(string paramId) {
+            if(string.IsNullOrEmpty(paramId)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(paramId));
+            }
+
+            Id = paramId;
+        }
+        
+        /// <summary>
         /// Идентификатор параметра.
         /// </summary>
-        public string Id { get; set; }
+        public string Id { get; }
 
         /// <summary>
         /// Наименование параметра.
@@ -28,28 +40,28 @@ namespace dosymep.Bim4Everyone {
         /// <summary>
         /// Описание параметра.
         /// </summary>
-        public virtual string Description { get; set; }
+        public virtual string Description { get; internal set; }
+        
+        /// <summary>
+        /// Тип параметра.
+        /// </summary>
+        public virtual StorageType StorageType { get; internal set; }
 
         #if D2020 || R2020
         
         /// <summary>
         /// Тип измерения параметра.
         /// </summary>
-        public virtual UnitType UnitType { get; set; }
+        public virtual UnitType UnitType { get; internal set; }
         
         #else
         
         /// <summary>
         /// Тип измерения параметра.
         /// </summary>
-        public virtual ForgeTypeId UnitType { get; set; }
+        public virtual ForgeTypeId UnitType { get; internal set; }
         
         #endif
-
-        /// <summary>
-        /// Тип параметра.
-        /// </summary>
-        public virtual StorageType StorageType { get; set; }
         
         /// <summary>
         /// Проверяет на существование параметра в документе.
