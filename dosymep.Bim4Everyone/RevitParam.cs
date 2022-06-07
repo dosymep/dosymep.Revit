@@ -40,26 +40,26 @@ namespace dosymep.Bim4Everyone {
         /// <summary>
         /// Описание параметра.
         /// </summary>
-        public virtual string Description { get; internal set; }
+        public virtual string Description { get; set; }
         
         /// <summary>
         /// Тип параметра.
         /// </summary>
-        public virtual StorageType StorageType { get; internal set; }
+        public virtual StorageType StorageType { get; set; }
 
         #if D2020 || R2020
         
         /// <summary>
         /// Тип измерения параметра.
         /// </summary>
-        public virtual UnitType UnitType { get; internal set; }
+        public virtual UnitType UnitType { get; set; }
         
         #else
         
         /// <summary>
         /// Тип измерения параметра.
         /// </summary>
-        public virtual ForgeTypeId UnitType { get; internal set; }
+        public virtual ForgeTypeId UnitType { get; set; }
         
         #endif
         
