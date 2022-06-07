@@ -89,7 +89,8 @@ namespace dosymep.Revit {
             return parameterElement.GetDefinition().UnitType;
         }
 
-#else
+#elif D2021 || R2021
+
         /// <summary>
         /// Возвращает единицу измерения параметра.
         /// </summary>
@@ -102,6 +103,22 @@ namespace dosymep.Revit {
 
             return parameterElement.GetDefinition().GetSpecTypeId();
         }
+
+#else
+        
+        /// <summary>
+        /// Возвращает единицу измерения параметра.
+        /// </summary>
+        /// <param name="parameterElement">Элемент параметра.</param>
+        /// <returns>Возвращает единицу измерения параметра.</returns>
+        public static ForgeTypeId GetUnitType(this ParameterElement parameterElement) {
+            if(parameterElement == null) {
+                throw new ArgumentNullException(nameof(parameterElement));
+            }
+
+            return parameterElement.GetDefinition().GetGroupTypeId();
+        }
+
 #endif
 
     }
