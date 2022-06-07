@@ -17,11 +17,11 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <summary>
         /// Конструктор класса общего параметра.
         /// </summary>
-        /// <param name="paramId">Идентификатор параметра.</param>
+        /// <param name="id">Идентификатор параметра.</param>
         /// <param name="guid">Guid общего параметра.</param>
         [JsonConstructor]
-        internal SharedParam(string paramId, Guid guid)
-            : base(paramId) {
+        internal SharedParam(string id, Guid guid)
+            : base(id) {
             Guid = guid;
         }
 

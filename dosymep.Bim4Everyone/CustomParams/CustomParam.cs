@@ -12,9 +12,9 @@ namespace dosymep.Bim4Everyone.CustomParams {
         /// <summary>
         /// Создает экземпляр пользовательского параметра Revit.
         /// </summary>
-        /// <param name="paramId">Идентификатор параметра.</param>
-        public CustomParam(string paramId)
-            : base(paramId) {
+        /// <param name="id">Идентификатор параметра.</param>
+        public CustomParam(string id)
+            : base(id) {
         }
 
         /// <inheritdoc />

@@ -20,11 +20,11 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// <summary>
         /// Конструктор класса системного параметра.
         /// </summary>
-        /// <param name="paramId">Идентификатор параметра.</param>
+        /// <param name="id">Идентификатор параметра.</param>
         [JsonConstructor]
-        internal SystemParam(string paramId)
-            : base(paramId) {
-            SystemParamId = (BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), paramId);
+        internal SystemParam(string id)
+            : base(id) {
+            SystemParamId = (BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), id);
         }
 
         /// <summary>

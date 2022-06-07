@@ -18,13 +18,13 @@ namespace dosymep.Bim4Everyone {
         /// <summary>
         /// Создает экземпляр класса параметра Revit.
         /// </summary>
-        /// <param name="paramId">Идентификатор параметра.</param>
-        protected RevitParam(string paramId) {
-            if(string.IsNullOrEmpty(paramId)) {
-                throw new ArgumentException("Value cannot be null or empty.", nameof(paramId));
+        /// <param name="id">Идентификатор параметра.</param>
+        protected RevitParam(string id) {
+            if(string.IsNullOrEmpty(id)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(id));
             }
 
-            Id = paramId;
+            Id = id;
         }
         
         /// <summary>

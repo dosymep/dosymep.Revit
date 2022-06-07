@@ -18,10 +18,10 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// <summary>
         /// Конструктор класса параметра проекта.
         /// </summary>
-        /// <param name="paramId">Идентификатор параметра.</param>
+        /// <param name="id">Идентификатор параметра.</param>
         [JsonConstructor]
-        internal ProjectParam(string paramId)
-            : base(paramId) {
+        internal ProjectParam(string id)
+            : base(id) {
         }
 
         /// <inheritdoc/>
