@@ -44,10 +44,17 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// Наименование параметра.
         /// </summary>
         [JsonIgnore]
-        public override string Name
-            => LanguageType == null
-                ? LabelUtils.GetLabelFor(SystemParamId)
-                : LabelUtils.GetLabelFor(SystemParamId, LanguageType.Value);
+        public override string Name {
+            get {
+                try {
+                    return LanguageType == null
+                        ? LabelUtils.GetLabelFor(SystemParamId)
+                        : LabelUtils.GetLabelFor(SystemParamId, LanguageType.Value);
+                } catch(Autodesk.Revit.Exceptions.InvalidOperationException) {
+                    return $"Без имени ({SystemParamId})";
+                }
+            }
+        }
 
         /// <summary>
         /// Тип параметра.
