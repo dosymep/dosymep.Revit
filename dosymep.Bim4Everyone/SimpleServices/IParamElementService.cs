@@ -1,4 +1,6 @@
-﻿using Autodesk.Revit.DB;
+﻿using System.Collections.Generic;
+
+using Autodesk.Revit.DB;
 
 namespace dosymep.Bim4Everyone.SimpleServices {
     /// <summary>
@@ -38,5 +40,12 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <param name="revitParamElement">Элемент параметра проекта.</param>
         /// <returns>Возвращает новый созданный параметр проекта.</returns>
         RevitParam CreateRevitParam(Document document, string propertyName, ParameterElement revitParamElement);
+        
+        /// <summary>
+        /// Возвращает весь список параметров.
+        /// </summary>
+        /// <param name="document">Документ из которого берутся параметры.</param>
+        /// <returns>Возвращает весь список общих параметров.</returns>
+        IEnumerable<RevitParam> GetRevitParams(Document document);
     }
 }

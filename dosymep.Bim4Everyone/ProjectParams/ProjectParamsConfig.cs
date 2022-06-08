@@ -497,6 +497,20 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         IEnumerable<ProjectParam> IProjectParamsService.GetRevitParams() {
             return base.GetRevitParams().OfType<ProjectParam>();
         }
+        
+        /// <inheritdoc/>
+        IEnumerable<RevitParam> IParamElementService.GetRevitParams(Document document) {
+            return GetRevitParams(document);
+        }
+
+        /// <inheritdoc/>
+        public IEnumerable<ProjectParam> GetRevitParams(Document document) {
+            return new FilteredElementCollector(document)
+                .OfClass(typeof(ParameterElement))
+                .OfType<ParameterElement>()
+                .Where(item => item.IsProjectParam())
+                .Select(item => CreateRevitParam(document, item));
+        }
 
         /// <summary>
         /// Загрузка текущей конфигурации.

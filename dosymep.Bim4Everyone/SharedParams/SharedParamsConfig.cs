@@ -786,6 +786,20 @@ namespace dosymep.Bim4Everyone.SharedParams {
         IEnumerable<SharedParam> ISharedParamsService.GetRevitParams() {
             return base.GetRevitParams().OfType<SharedParam>();
         }
+        
+        /// <inheritdoc/>
+        IEnumerable<RevitParam> IParamElementService.GetRevitParams(Document document) {
+            return GetRevitParams(document);
+        }
+
+        /// <inheritdoc/>
+        public IEnumerable<SharedParam> GetRevitParams(Document document) {
+            return new FilteredElementCollector(document)
+                .OfClass(typeof(ParameterElement))
+                .OfType<ParameterElement>()
+                .Where(item => item.IsSharedParam())
+                .Select(item => CreateRevitParam(document, item));
+        }
 
         /// <summary>
         /// Загрузка текущей конфигурации.

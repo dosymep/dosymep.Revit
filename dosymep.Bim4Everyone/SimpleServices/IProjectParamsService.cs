@@ -54,5 +54,12 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// </summary>
         /// <returns>Возвращает весь список параметров проекта.</returns>
         new IEnumerable<ProjectParam> GetRevitParams();
+        
+        /// <summary>
+        /// Возвращает весь список параметров проекта.
+        /// </summary>
+        /// <param name="document">Документ из которого берутся параметры.</param>
+        /// <returns>Возвращает весь список общих параметров.</returns>
+        new IEnumerable<ProjectParam> GetRevitParams(Document document);
     }
 }
