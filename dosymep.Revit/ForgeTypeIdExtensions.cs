@@ -11,6 +11,16 @@ namespace dosymep.Revit {
     /// </summary>
     public static class ForgeTypeIdExtensions {
         /// <summary>
+        /// Пустой ForgeTypeId
+        /// </summary>
+        public static ForgeTypeId EmptyForgeTypeId { get; } = new ForgeTypeId();
+
+        /// <summary>
+        /// Наименование свойства SpecTypeId Undefined
+        /// </summary>
+        public static string UnitTypeUndefinedName { get; } = "UT_Undefined";
+
+        /// <summary>
         /// Возвращает наименование свойства единицы измерения <see cref="SpecTypeId"/>.
         /// </summary>
         /// <param name="forgeTypeId">Единица измерения.</param>
@@ -20,11 +30,15 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(forgeTypeId));
             }
 
+            if(forgeTypeId == EmptyForgeTypeId) {
+                return UnitTypeUndefinedName;
+            }
+
 #if D2021 || R2021
 
             if(!UnitUtils.IsSpec(forgeTypeId)) {
                 throw new ArgumentException(
-                    $"Переданный ForgeTypeId \"{forgeTypeId.TypeId}\"не является единицей измерения.",
+                    $"Переданный ForgeTypeId \"{forgeTypeId.TypeId}\" не является единицей измерения.",
                     nameof(forgeTypeId));
             }
 
@@ -32,7 +46,7 @@ namespace dosymep.Revit {
 
             if(!UnitUtils.IsMeasurableSpec(forgeTypeId)) {
                 throw new ArgumentException(
-                    $"Переданный ForgeTypeId \"{forgeTypeId.TypeId}\"не является единицей измерения.",
+                    $"Переданный ForgeTypeId \"{forgeTypeId.TypeId}\" не является единицей измерения.",
                     nameof(forgeTypeId));
             }
 
@@ -42,7 +56,7 @@ namespace dosymep.Revit {
                 .FirstOrDefault(item => item.GetValue(null)?.Equals(forgeTypeId) == true)?.Name;
         }
 
-        
+
         /// <summary>
         /// Возвращает <see cref="Autodesk.Revit.DB.ForgeTypeId"/> единицы измерения по имени свойства <see cref="SpecTypeId"/>.
         /// </summary>
@@ -51,6 +65,10 @@ namespace dosymep.Revit {
         public static ForgeTypeId GetSpecIdByName(string specTypeIdName) {
             if(string.IsNullOrEmpty(specTypeIdName)) {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(specTypeIdName));
+            }
+
+            if(specTypeIdName == UnitTypeUndefinedName) {
+                return EmptyForgeTypeId;
             }
 
             return (ForgeTypeId) typeof(SpecTypeId).GetProperty(specTypeIdName)?.GetValue(null);
