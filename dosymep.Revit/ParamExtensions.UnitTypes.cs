@@ -2187,1023 +2187,1023 @@ namespace dosymep.Revit {
         public static ForgeTypeId GetUnitType(this BuiltInParameter builtInParameter) {
             switch((int) builtInParameter) {
                 case -1155215: // BuiltInParameter.REBAR_HOOK_LENGTH_OVERRIDE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155214: // BuiltInParameter.INFRASTRUCTURE_ALIGNMENT_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155213: // BuiltInParameter.INFRASTRUCTURE_ALIGNMENT_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155210: // BuiltInParameter.ASSEMBLY_PRECAST_FREEZE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155202: // BuiltInParameter.PATH_OF_TRAVEL_FROM_ROOM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155201: // BuiltInParameter.PATH_OF_TRAVEL_TO_ROOM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155150: // BuiltInParameter.RBS_ELEC_NUMBER_OF_CIRCUITS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155146: // BuiltInParameter.STEEL_ELEM_PROFILE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155136: // BuiltInParameter.STEEL_ELEM_PLATE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155130: // BuiltInParameter.STEEL_ELEM_ANCHOR_ORIENTATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155122: // BuiltInParameter.STEEL_ELEM_BOLT_LOCATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155116: // BuiltInParameter.GENERIC_ZONE_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155100: // BuiltInParameter.RBS_ELEC_PANEL_FEED_THRU_LUGS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155094: // BuiltInParameter.PATH_OF_TRAVEL_VIEW_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155093: // BuiltInParameter.PATH_OF_TRAVEL_LEVEL_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155092: // BuiltInParameter.STRUCTURAL_CONNECTION_OVERRIDE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155074: // BuiltInParameter.STEEL_ELEM_WELD_PREFIX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155073: // BuiltInParameter.STEEL_ELEM_WELD_TEXT_MODULE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155060: // BuiltInParameter.STEEL_ELEM_PATTERN_NUMBER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155052: // BuiltInParameter.STEEL_ELEM_PATTERN_NUMBER_Y
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155051: // BuiltInParameter.STEEL_ELEM_PATTERN_NUMBER_X
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155047: // BuiltInParameter.STEEL_ELEM_WELD_DOUBLE_WELDPREP
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155046: // BuiltInParameter.STEEL_ELEM_WELD_DOUBLE_SURFACESHAPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155045: // BuiltInParameter.STEEL_ELEM_WELD_DOUBLE_TEXT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155043: // BuiltInParameter.STEEL_ELEM_WELD_DOUBLE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155039: // BuiltInParameter.STEEL_ELEM_WELD_MAIN_WELDPREP
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155038: // BuiltInParameter.STEEL_ELEM_WELD_MAIN_SURFACESHAPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155037: // BuiltInParameter.STEEL_ELEM_WELD_MAIN_TEXT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155035: // BuiltInParameter.STEEL_ELEM_WELD_CONTINUOUS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155034: // BuiltInParameter.STEEL_ELEM_WELD_LOCATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155031: // BuiltInParameter.STEEL_ELEM_WELD_MAIN_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155018: // BuiltInParameter.STEEL_ELEM_BOLT_COATING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155017: // BuiltInParameter.STEEL_ELEM_ANCHOR_LENGTH
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155016: // BuiltInParameter.STEEL_ELEM_SHEARSTUD_DIAMETER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155015: // BuiltInParameter.STEEL_ELEM_SHEARSTUD_GRADE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155014: // BuiltInParameter.STEEL_ELEM_SHEARSTUD_STANDARD
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155013: // BuiltInParameter.STEEL_ELEM_ANCHOR_DIAMETER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155012: // BuiltInParameter.STEEL_ELEM_ANCHOR_ASSEMBLY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155011: // BuiltInParameter.STEEL_ELEM_ANCHOR_GRADE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155010: // BuiltInParameter.STEEL_ELEM_ANCHOR_STANDARD
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155009: // BuiltInParameter.STEEL_ELEM_COATING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155008: // BuiltInParameter.STEEL_ELEM_BOLT_DIAMETER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155007: // BuiltInParameter.STEEL_ELEM_BOLT_ASSEMBLY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155006: // BuiltInParameter.STEEL_ELEM_BOLT_GRADE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1155005: // BuiltInParameter.STEEL_ELEM_BOLT_STANDARD
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154695: // BuiltInParameter.REBAR_WORKSHOP_INSTRUCTIONS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154694: // BuiltInParameter.REBAR_GEOMETRY_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154687: // BuiltInParameter.ROOM_OUTDOOR_AIRFLOW_STANDARD_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154662: // BuiltInParameter.ROOM_OUTDOOR_AIR_INFO_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154656: // BuiltInParameter.REBAR_ELEM_ENDTREATMENT_END
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154655: // BuiltInParameter.REBAR_ELEM_ENDTREATMENT_START
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154653: // BuiltInParameter.COUPLER_COUPLED_ENDTREATMENT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154652: // BuiltInParameter.COUPLER_MAIN_ENDTREATMENT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154649: // BuiltInParameter.COUPLER_MARK
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154642: // BuiltInParameter.COUPLER_NUMBER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154641: // BuiltInParameter.COUPLER_QUANTITY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154640: // BuiltInParameter.COUPLER_COUPLED_BAR_SIZE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154639: // BuiltInParameter.COUPLER_MAIN_BAR_SIZE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154638: // BuiltInParameter.COUPLER_CODE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154620: //
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154619: // BuiltInParameter.REBAR_ELEM_HOST_MARK
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154618: // BuiltInParameter.REBAR_SHAPE_IMAGE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154617: // BuiltInParameter.FABRIC_NUMBER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154616: // BuiltInParameter.REBAR_NUMBER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1154614: // BuiltInParameter.NUMBER_PARTITION_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153528: // BuiltInParameter.MEP_ZONE_EQUIPMENT_DRAW_VENTILATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153527: // BuiltInParameter.MEP_VRF_LOOP
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153526: // BuiltInParameter.MEP_REHEAT_HOTWATER_LOOP
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153519: // BuiltInParameter.MEP_ZONE_EQUIPMENT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153518: // BuiltInParameter.MEP_ANALYTICAL_EQUIPMENT_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153517: // BuiltInParameter.MEP_ZONE_HOTWATER_LOOP
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153516: // BuiltInParameter.MEP_ZONE_AIR_LOOP
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153514: // BuiltInParameter.MEP_REHEAT_COIL_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153513: // BuiltInParameter.MEP_ZONE_EQUIPMENT_BEHAVIOR
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153512: // BuiltInParameter.MEP_ZONE_EQUIPMENT_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153511: // BuiltInParameter.MEP_AIRLOOP_FANTYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153510: // BuiltInParameter.MEP_CHILLED_WATER_LOOP
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153509: // BuiltInParameter.MEP_COOLING_COIL_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153508: // BuiltInParameter.MEP_HEATING_HOTWATER_LOOP
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153507: // BuiltInParameter.MEP_HEATING_COIL_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153506: // BuiltInParameter.MEP_PREHEAT_HOTWATER_LOOP
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153505: // BuiltInParameter.MEP_AIRLOOP_PREHEAT_COILTYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153504: // BuiltInParameter.MEP_AIRLOOP_HEATEXCHANGER_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153503: // BuiltInParameter.MEP_CONDENSER_WATER_LOOP
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153502: // BuiltInParameter.MEP_WATERLOOP_CHILLERTYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153501: // BuiltInParameter.MEP_WATERLOOP_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153500: // BuiltInParameter.MEP_ANALYTICAL_LOOP_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153114: // BuiltInParameter.MEP_IGNORE_FLOW_ANALYSIS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153113: // BuiltInParameter.MEP_ANALYTICAL_LOOP_BOUNDARY_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153112: // BuiltInParameter.MECHANICAL_EQUIPMENT_SET_ID_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153111: // BuiltInParameter.MECHANICAL_EQUIPMENT_SET_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153110: // BuiltInParameter.MECHANICAL_EQUIPMENT_SET_ON_STANDBY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153109: // BuiltInParameter.MECHANICAL_EQUIPMENT_SET_ON_DUTY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153106: // BuiltInParameter.MEP_ANALYTICAL_CRITICALPATH_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153100: // BuiltInParameter.MEP_EQUIPMENT_CLASSIFICATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153004: // BuiltInParameter.STRUCTURAL_CONNECTION_INPUT_ELEMENTS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153002: // BuiltInParameter.STRUCTURAL_CONNECTION_CODE_CHECKING_STATUS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1153001: // BuiltInParameter.STRUCTURAL_CONNECTION_APPROVAL_STATUS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152385: // BuiltInParameter.ALL_MODEL_IMAGE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152384: // BuiltInParameter.ALL_MODEL_TYPE_IMAGE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152383: // BuiltInParameter.STRUCT_FRAM_JOIN_STATUS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152372: // BuiltInParameter.END_Z_JUSTIFICATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152370: // BuiltInParameter.END_Y_JUSTIFICATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152368: // BuiltInParameter.START_Z_JUSTIFICATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152366: // BuiltInParameter.START_Y_JUSTIFICATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152364: // BuiltInParameter.Z_JUSTIFICATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152362: // BuiltInParameter.Y_JUSTIFICATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152353: //
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152345: // BuiltInParameter.DPART_SHAPE_MODIFIED
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152344: // BuiltInParameter.DPART_EXCLUDED
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152335: // BuiltInParameter.DPART_BASE_LEVEL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1152314: // BuiltInParameter.PHY_MATERIAL_PARAM_STRUCTURAL_THERMAL_TREATED
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1151306: // BuiltInParameter.STAIRS_RUN_ACTUAL_NUMBER_OF_TREADS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1151305: // BuiltInParameter.STAIRS_RUN_ACTUAL_NUMBER_OF_RISERS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1151211: // BuiltInParameter.STAIRSTYPE_INTERMEDIATE_SUPPORT_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1151210: // BuiltInParameter.STAIRSTYPE_LEFT_SIDE_SUPPORT_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1151209: // BuiltInParameter.STAIRSTYPE_RIGHT_SIDE_SUPPORT_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1151208: // BuiltInParameter.STAIRSTYPE_LANDING_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1151207: // BuiltInParameter.STAIRSTYPE_RUN_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150481: // BuiltInParameter.PROPERTY_SET_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150468: // BuiltInParameter.RBS_DUCT_PIPE_SYSTEM_ABBREVIATION_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150466: // BuiltInParameter.PROPERTY_SET_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150465: // BuiltInParameter.PHY_MATERIAL_PARAM_SUBCLASS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150464: // BuiltInParameter.PHY_MATERIAL_PARAM_CLASS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150435: // BuiltInParameter.RBS_REFERENCE_FREESIZE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150434: // BuiltInParameter.RBS_REFERENCE_OVERALLSIZE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150432: // BuiltInParameter.RBS_REFERENCE_LINING_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150430: // BuiltInParameter.RBS_REFERENCE_INSULATION_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150427: // BuiltInParameter.RBS_PIPE_CALCULATED_SIZE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150426: // BuiltInParameter.RBS_DUCT_CALCULATED_SIZE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150420: // BuiltInParameter.ASSEMBLY_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1150403: // BuiltInParameter.ASSEMBLY_NAMING_CATEGORY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1141012: // BuiltInParameter.FABRICATION_BRA_SIZE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1141011: // BuiltInParameter.FABRICATION_SEC_SIZE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1141010: // BuiltInParameter.FABRICATION_PRI_SIZE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140999: // BuiltInParameter.FABRICATION_FITTING_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140977: // BuiltInParameter.FABRICATION_PART_NOTES
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140975: // BuiltInParameter.FABRICATION_PART_ITEM_NUMBER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140973: // BuiltInParameter.FABRICATION_SERVICE_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140971: // BuiltInParameter.FABRICATION_PART_DOUBLEWALL_MATERIAL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140970: // BuiltInParameter.FABRICATION_PART_CUT_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140969: // BuiltInParameter.FABRICATION_PART_BOUGHT_OUT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140968: // BuiltInParameter.FABRICATION_PART_ALIAS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140966: // BuiltInParameter.FABRICATION_PRODUCT_CODE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140920: // BuiltInParameter.FABRICATION_VENDOR
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140916: // BuiltInParameter.FABRICATION_LEVEL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140915: // BuiltInParameter.FABRICATION_SPECIFICATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140914: // BuiltInParameter.FABRICATION_VENDOR_CODE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140910: // BuiltInParameter.FABRICATION_PRODUCT_DATA_INSTALL_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140909: // BuiltInParameter.FABRICATION_PART_MATERIAL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140908: // BuiltInParameter.FABRICATION_PRODUCT_DATA_OEM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140907: // BuiltInParameter.FABRICATION_PRODUCT_DATA_PRODUCT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140906: // BuiltInParameter.FABRICATION_PRODUCT_DATA_ITEM_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140905: // BuiltInParameter.FABRICATION_PRODUCT_DATA_SIZE_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140904: // BuiltInParameter.FABRICATION_PRODUCT_DATA_MATERIAL_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140903: // BuiltInParameter.FABRICATION_PRODUCT_DATA_SPECIFICATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140902: // BuiltInParameter.FABRICATION_PRODUCT_DATA_LONG_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140901: // BuiltInParameter.FABRICATION_PRODUCT_DATA_RANGE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140900: // BuiltInParameter.FABRICATION_PRODUCT_DATA_FINISH_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140702: // BuiltInParameter.TRUSS_ELEMENT_CLASS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140422: // BuiltInParameter.KEYNOTE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140417: // BuiltInParameter.PHY_MATERIAL_PARAM_GRADE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140416: // BuiltInParameter.PHY_MATERIAL_PARAM_SPECIES
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140400: // BuiltInParameter.PHY_MATERIAL_PARAM_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140362: // BuiltInParameter.ELEM_CATEGORY_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140339: // BuiltInParameter.FABRICATION_SERVICE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140336: // BuiltInParameter.RBS_DUCT_SYSTEM_CALCULATION_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140335: // BuiltInParameter.RBS_PIPE_SYSTEM_CALCULATION_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140334: // BuiltInParameter.RBS_PIPING_SYSTEM_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140333: // BuiltInParameter.RBS_DUCT_SYSTEM_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140332: // BuiltInParameter.RBS_SYSTEM_ABBREVIATION_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140327: // BuiltInParameter.RBS_SYSTEM_NUM_ELEMENTS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140326: // BuiltInParameter.RBS_SYSTEM_BASE_ELEMENT_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140325: // BuiltInParameter.RBS_SYSTEM_CLASSIFICATION_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140324: // BuiltInParameter.RBS_SYSTEM_NAME_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140323: // BuiltInParameter.PHY_MATERIAL_PARAM_LIGHT_WEIGHT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140322: // BuiltInParameter.PHY_MATERIAL_PARAM_BEHAVIOR
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140279: // BuiltInParameter.RBS_SEGMENT_DESCRIPTION_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140278: // BuiltInParameter.RBS_PIPE_JOINTTYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140263: // BuiltInParameter.RBS_FP_SPRINKLER_PRESSURE_CLASS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140262: // BuiltInParameter.RBS_FP_SPRINKLER_ORIFICE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140261: // BuiltInParameter.RBS_FP_SPRINKLER_COVERAGE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140260: // BuiltInParameter.RBS_FP_SPRINKLER_RESPONSE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140218: // BuiltInParameter.RBS_PIPE_FLUID_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140209: // BuiltInParameter.RBS_PIPE_FLOW_STATE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140202: // BuiltInParameter.RBS_PIPE_MATERIAL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140200: // BuiltInParameter.RBS_PIPE_CLASS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140181: // BuiltInParameter.RBS_ELEC_CIRCUIT_SLOT_INDEX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140180: // BuiltInParameter.CIRCUIT_WAYS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140179: // BuiltInParameter.CIRCUIT_LOAD_CLASSIFICATION_ABBREVIATION_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140178: // BuiltInParameter.CIRCUIT_PHASE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140176: // BuiltInParameter.RBS_ELEC_CIRCUIT_CONNECTION_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140169: // BuiltInParameter.RBS_ELEC_PANEL_LOCATION_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140156: // BuiltInParameter.RBS_ELEC_CIRCUIT_NOTES_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140155: // BuiltInParameter.RBS_ELEC_CIRCUIT_NUMBER_OF_ELEMENTS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140150: // BuiltInParameter.RBS_ELEC_PANEL_SCHEDULE_FOOTER_NOTES_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140149: // BuiltInParameter.RBS_ELEC_PANEL_SCHEDULE_HEADER_NOTES_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140148: // BuiltInParameter.RBS_ELEC_PANEL_NUMWIRES_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140147: // BuiltInParameter.RBS_ELEC_PANEL_NUMPHASES_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140145: // BuiltInParameter.RBS_ELEC_PANEL_NEUTRAL_BUS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140144: // BuiltInParameter.RBS_ELEC_PANEL_GROUND_BUS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140143: // BuiltInParameter.RBS_ELEC_PANEL_BUSSING_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140142: // BuiltInParameter.RBS_ELEC_PANEL_SUBFEED_LUGS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140141: // BuiltInParameter.RBS_ELEC_PANEL_SUPPLY_FROM_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140139: // BuiltInParameter.RBS_ELEC_PANEL_MAINSTYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140138: // BuiltInParameter.RBS_ELEC_PANEL_FEED_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140129: // BuiltInParameter.RBS_CABLETRAYCONDUIT_BENDORFITTING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140128: // BuiltInParameter.RBS_CTC_SERVICE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140120: // BuiltInParameter.CIRCUIT_LOAD_CLASSIFICATION_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140118: // BuiltInParameter.CONDUIT_STANDARD_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140110: // BuiltInParameter.RBS_ELEC_SWITCH_ID_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140104: // BuiltInParameter.RBS_ELEC_CIRCUIT_PANEL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140103: // BuiltInParameter.RBS_ELEC_CIRCUIT_NUMBER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140101: // BuiltInParameter.RBS_ELEC_CIRCUIT_WIRE_NUM_RUNS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140100: // BuiltInParameter.RBS_ELEC_CIRCUIT_WIRE_NUM_HOTS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140099: // BuiltInParameter.RBS_ELEC_CIRCUIT_WIRE_NUM_NEUTRALS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140098: // BuiltInParameter.RBS_ELEC_CIRCUIT_WIRE_NUM_GROUNDS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140089: // BuiltInParameter.RBS_ELEC_CIRCUIT_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140084: // BuiltInParameter.RBS_ELEC_MODIFICATIONS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140083: // BuiltInParameter.RBS_ELEC_ENCLOSURE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140081: // BuiltInParameter.RBS_ELEC_MOUNTING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140080: // BuiltInParameter.RBS_ELEC_SHORT_CIRCUIT_RATING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140079: // BuiltInParameter.RBS_ELEC_MAX_POLE_BREAKERS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140078: // BuiltInParameter.RBS_ELEC_PANEL_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140037: // BuiltInParameter.RBS_ELEC_CIRCUIT_WIRE_SIZE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140036: // BuiltInParameter.RBS_ELEC_CIRCUIT_WIRE_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140018: // BuiltInParameter.RBS_ELEC_CIRCUIT_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140009: // BuiltInParameter.RBS_ELEC_POWER_FACTOR_STATE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140003: // BuiltInParameter.RBS_ELEC_BALANCED_LOAD
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1140001: // BuiltInParameter.RBS_ELEC_NUMBER_OF_POLES
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1133500: // BuiltInParameter.GROUP_LEVEL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114817: // BuiltInParameter.SPACE_REFERENCE_LEVEL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114705: // BuiltInParameter.SYSTEM_ZONE_LEVEL_ID
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114700: // BuiltInParameter.ZONE_SPACE_OUTDOOR_AIR_OPTION_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114400: // BuiltInParameter.RBS_GBXML_OPENING_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114384: // BuiltInParameter.SPACE_ZONE_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114341: // BuiltInParameter.ZONE_USE_AIR_CHANGES_PER_HOUR_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114340: // BuiltInParameter.ZONE_USE_OUTSIDE_AIR_PER_AREA_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114339: // BuiltInParameter.ZONE_USE_OUTSIDE_AIR_PER_PERSON_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114338: // BuiltInParameter.ZONE_USE_DEHUMIDIFICATION_SETPOINT_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114337: // BuiltInParameter.ZONE_USE_HUMIDIFICATION_SETPOINT_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114330: // BuiltInParameter.SPACE_IS_PLENUM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114329: // BuiltInParameter.SPACE_IS_OCCUPIABLE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114327: // BuiltInParameter.SPACE_ASSOC_ROOM_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114317: // BuiltInParameter.ZONE_LEVEL_ID
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114304: // BuiltInParameter.ZONE_SERVICE_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114300: // BuiltInParameter.ZONE_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114259: // BuiltInParameter.ROOM_BASE_HEAT_LOAD_ON_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114258: // BuiltInParameter.ROOM_LIGHTING_LOAD_UNITS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114257: // BuiltInParameter.ROOM_POWER_LOAD_UNITS_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114252: // BuiltInParameter.ROOM_BASE_RETURN_AIRFLOW_ON_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114251: // BuiltInParameter.ROOM_CONSTRUCTION_SET_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114246: // BuiltInParameter.RBS_GBXML_SURFACE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114241: // BuiltInParameter.RBS_ELECTRICAL_DATA
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114240: // BuiltInParameter.RBS_CALCULATED_SIZE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114224: // BuiltInParameter.ROOM_BASE_LIGHTING_LOAD_ON_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114223: // BuiltInParameter.ROOM_BASE_POWER_LOAD_ON_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114173: // BuiltInParameter.ROOM_OCCUPANCY_UNIT_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114172: // BuiltInParameter.ROOM_SPACE_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114171: // BuiltInParameter.ROOM_CONDITION_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114167: // BuiltInParameter.RBS_SIZE_LOCK
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1114125: // BuiltInParameter.RBS_SECTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019100: // BuiltInParameter.WALL_CROSS_SECTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019011: // BuiltInParameter.IFC_ORGANIZATION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019010: // BuiltInParameter.IFC_APPLICATION_VERSION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019009: // BuiltInParameter.IFC_APPLICATION_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019008: // BuiltInParameter.PROJECT_ORGANIZATION_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019007: // BuiltInParameter.PROJECT_ORGANIZATION_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019006: // BuiltInParameter.PROJECT_BUILDING_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019005: // BuiltInParameter.PROJECT_AUTHOR
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019004: // BuiltInParameter.IFC_SITE_GUID
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019003: // BuiltInParameter.IFC_BUILDING_GUID
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019002: // BuiltInParameter.IFC_PROJECT_GUID
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019001: // BuiltInParameter.IFC_TYPE_GUID
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1019000: // BuiltInParameter.IFC_GUID
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018362: // BuiltInParameter.PATH_REIN_SHAPE_2
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018361: // BuiltInParameter.PATH_REIN_SHAPE_1
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018354: // BuiltInParameter.PATH_REIN_SUMMARY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018306: // BuiltInParameter.PATH_REIN_TYPE_2
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018305: // BuiltInParameter.PATH_REIN_TYPE_1
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018304: // BuiltInParameter.PATH_REIN_ALTERNATING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018303: // BuiltInParameter.PATH_REIN_NUMBER_OF_BARS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018300: // BuiltInParameter.PATH_REIN_FACE_SLAB
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018274: // BuiltInParameter.REBAR_BAR_DEFORMATION_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018269: // BuiltInParameter.REBAR_SYSTEM_NUMBER_OF_LINES_BOTTOM_DIR_2_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018268: // BuiltInParameter.REBAR_SYSTEM_NUMBER_OF_LINES_BOTTOM_DIR_1_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018267: // BuiltInParameter.REBAR_SYSTEM_NUMBER_OF_LINES_TOP_DIR_2_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018266: // BuiltInParameter.REBAR_SYSTEM_NUMBER_OF_LINES_TOP_DIR_1_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018257: // BuiltInParameter.REBAR_SYSTEM_BAR_TYPE_BOTTOM_DIR_2_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018256: // BuiltInParameter.REBAR_SYSTEM_BAR_TYPE_BOTTOM_DIR_1_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018255: // BuiltInParameter.REBAR_SYSTEM_BAR_TYPE_TOP_DIR_2_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018254: // BuiltInParameter.REBAR_SYSTEM_BAR_TYPE_TOP_DIR_1_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018253: // BuiltInParameter.REBAR_SYSTEM_ACTIVE_BOTTOM_DIR_2_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018252: // BuiltInParameter.REBAR_SYSTEM_ACTIVE_BOTTOM_DIR_1_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018251: // BuiltInParameter.REBAR_SYSTEM_ACTIVE_TOP_DIR_2_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018250: // BuiltInParameter.REBAR_SYSTEM_ACTIVE_TOP_DIR_1_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018023: // BuiltInParameter.REBAR_SYSTEM_TOP_MINOR_MATCHES_BOTTOM_MINOR
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018022: // BuiltInParameter.REBAR_SYSTEM_TOP_MAJOR_MATCHES_BOTTOM_MAJOR
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018021: // BuiltInParameter.REBAR_SYSTEM_BOTTOM_MAJOR_MATCHES_BOTTOM_MINOR
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018020: // BuiltInParameter.REBAR_SYSTEM_TOP_MAJOR_MATCHES_TOP_MINOR
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018019: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_DIR_2_NO_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018018: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_DIR_2_WITH_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018017: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_DIR_1_NO_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018016: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_DIR_1_WITH_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018015: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_BOTTOM_DIR_2_NO_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018014: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_BOTTOM_DIR_2_WITH_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018013: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_BOTTOM_DIR_1_NO_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018012: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_BOTTOM_DIR_1_WITH_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018011: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_TOP_DIR_2_NO_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018010: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_TOP_DIR_2_WITH_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018009: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_TOP_DIR_1_NO_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018008: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_TOP_DIR_1_WITH_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018003: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_NO_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018002: // BuiltInParameter.REBAR_SYSTEM_LAYER_SUMMARY_WITH_SPACING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1018001: // BuiltInParameter.REBAR_SYSTEM_LAYOUT_RULE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017736: // BuiltInParameter.FABRIC_WIRE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017733: // BuiltInParameter.FABRIC_PARAM_SHARED_FAMILY_KEY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017705: // BuiltInParameter.FABRIC_PARAM_LOCATION_GENERIC
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017701: // BuiltInParameter.FABRIC_PARAM_SHEET_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017619: // BuiltInParameter.FABRIC_SHEET_MINOR_NUMBER_OF_WIRES
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017612: // BuiltInParameter.FABRIC_SHEET_MAJOR_NUMBER_OF_WIRES
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017604: // BuiltInParameter.FABRIC_SHEET_MINOR_DIRECTION_WIRE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017603: // BuiltInParameter.FABRIC_SHEET_MAJOR_DIRECTION_WIRE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017602: // BuiltInParameter.FABRIC_SHEET_PHYSICAL_MATERIAL_ASSET
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017065: // BuiltInParameter.REBAR_QUANITY_BY_DISTRIB
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017062: // BuiltInParameter.REBAR_MAXIM_SUFFIX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017061: // BuiltInParameter.REBAR_MINIM_SUFFIX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017060: // BuiltInParameter.REBAR_NUMBER_SUFFIX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017055: // BuiltInParameter.REBAR_HOST_CATEGORY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017047: // BuiltInParameter.REBAR_INSTANCE_STIRRUP_TIE_ATTACHMENT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017032: // BuiltInParameter.REBAR_ELEM_SCHEDULE_MARK
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017026: // BuiltInParameter.REBAR_ELEM_HOOK_STYLE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017015: // BuiltInParameter.REBAR_SHAPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017012: // BuiltInParameter.REBAR_ELEM_QUANTITY_OF_BARS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017008: // BuiltInParameter.REBAR_ELEM_HOOK_END_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1017006: // BuiltInParameter.REBAR_ELEM_HOOK_START_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1015084: // BuiltInParameter.LOAD_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1015083: // BuiltInParameter.LOAD_COMMENTS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1015082: // BuiltInParameter.LOAD_CASE_NATURE_TEXT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1015005: // BuiltInParameter.LOAD_IS_REACTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1015003: // BuiltInParameter.LOAD_IS_UNIFORM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1015001: // BuiltInParameter.LOAD_USE_LOCAL_COORDINATE_SYSTEM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1015000: // BuiltInParameter.LOAD_CASE_ID
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1013451: // BuiltInParameter.ANALYTICAL_GEOMETRY_IS_VALID
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1013450: // BuiltInParameter.STRUCTURAL_ASSET_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1013446: // BuiltInParameter.ANALYTICAL_MODEL_NODES_MARK
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1013445: // BuiltInParameter.ANALYTICAL_MODEL_FOUNDATIONS_MARK
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1013444: // BuiltInParameter.ANALYTICAL_MODEL_SURFACE_ELEMENTS_MARK
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1013443: // BuiltInParameter.ANALYTICAL_MODEL_STICK_ELEMENTS_MARK
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1013419: // BuiltInParameter.JOIST_SYSTEM_NEW_BEAM_TYPE_NO_FAM_NAME_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1013411: // BuiltInParameter.JOIST_SYSTEM_NEW_BEAM_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1013410: // BuiltInParameter.JOIST_SYSTEM_LAYOUT_RULE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012837: // BuiltInParameter.SLAB_EDGE_PROFILE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012836: // BuiltInParameter.GUTTER_PROFILE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012819: // BuiltInParameter.FASCIA_PROFILE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012809: // BuiltInParameter.WALL_SWEEP_WALL_SUBCATEGORY_ID
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012800: // BuiltInParameter.WALL_SWEEP_PROFILE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012619: // BuiltInParameter.PROPERTY_SEGMENT_L_R
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012617: // BuiltInParameter.PROPERTY_SEGMENT_E_W
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012615: // BuiltInParameter.PROPERTY_SEGMENT_N_S
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012201: // BuiltInParameter.DATUM_VOLUME_OF_INTEREST
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012101: // BuiltInParameter.PHASE_DEMOLISHED
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012100: // BuiltInParameter.PHASE_CREATED
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012098: // BuiltInParameter.MASS_DATA_SLAB
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012045: // BuiltInParameter.MASS_DATA_SURFACE_DATA_SOURCE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012040: // BuiltInParameter.MASS_DATA_GLAZING_IS_SHADED
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012038: // BuiltInParameter.MASS_DATA_UNDERGROUND
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012031: // BuiltInParameter.MASS_DATA_SUBCATEGORY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012030: // BuiltInParameter.MASS_DATA_CONCEPTUAL_CONSTRUCTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012027: // BuiltInParameter.MASS_ZONE_CONDITION_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012026: // BuiltInParameter.MASS_ZONE_SPACE_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012023: // BuiltInParameter.MASS_SURFACEDATA_MATERIAL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012022: // BuiltInParameter.MASS_ZONE_MATERIAL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012020: // BuiltInParameter.LEVEL_DATA_MASS_TYPE_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012019: // BuiltInParameter.LEVEL_DATA_MASS_INSTANCE_COMMENTS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012018: // BuiltInParameter.LEVEL_DATA_MASS_TYPE_COMMENTS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012017: // BuiltInParameter.LEVEL_DATA_MASS_FAMILY_AND_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012016: // BuiltInParameter.LEVEL_DATA_MASS_FAMILY_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012015: // BuiltInParameter.LEVEL_DATA_SPACE_USAGE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012014: // BuiltInParameter.LEVEL_DATA_OWNING_LEVEL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1012013: // BuiltInParameter.LEVEL_DATA_MASS_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1011955: // BuiltInParameter.PROJECT_REVISION_REVISION_ISSUED_BY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1011954: // BuiltInParameter.PROJECT_REVISION_REVISION_ISSUED_TO
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010707: // BuiltInParameter.PLUMBING_FIXTURES_VENT_CONNECTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010706: // BuiltInParameter.PLUMBING_FIXTURES_WASTE_CONNECTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010705: // BuiltInParameter.PLUMBING_FIXTURES_CW_CONNECTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010704: // BuiltInParameter.PLUMBING_FIXTURES_HW_CONNECTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010703: // BuiltInParameter.PLUMBING_FIXTURES_TRAP
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010702: // BuiltInParameter.PLUMBING_FIXTURES_DRAIN
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010701: // BuiltInParameter.PLUMBING_FIXTURES_SUPPLY_PIPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010700: // BuiltInParameter.PLUMBING_FIXTURES_SUPPLY_FITTING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010501: // BuiltInParameter.LIGHTING_FIXTURE_LAMP
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010500: // BuiltInParameter.LIGHTING_FIXTURE_WATTAGE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010401: // BuiltInParameter.ELECTICAL_EQUIP_VOLTAGE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010400: // BuiltInParameter.ELECTICAL_EQUIP_WATTAGE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010109: // BuiltInParameter.ALL_MODEL_MODEL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010108: // BuiltInParameter.ALL_MODEL_MANUFACTURER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010106: // BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010105: // BuiltInParameter.ALL_MODEL_TYPE_COMMENTS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010104: // BuiltInParameter.ALL_MODEL_URL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1010103: // BuiltInParameter.ALL_MODEL_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1009530: // BuiltInParameter.ANALYTICAL_LINK_RELEASE_ROTATION_Z
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1009529: // BuiltInParameter.ANALYTICAL_LINK_RELEASE_ROTATION_Y
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1009528: // BuiltInParameter.ANALYTICAL_LINK_RELEASE_ROTATION_X
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1009527: // BuiltInParameter.ANALYTICAL_LINK_RELEASE_TRANSLATION_Z
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1009526: // BuiltInParameter.ANALYTICAL_LINK_RELEASE_TRANSLATION_Y
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1009525: // BuiltInParameter.ANALYTICAL_LINK_RELEASE_TRANSLATION_X
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1009524: // BuiltInParameter.ANALYTICAL_MODEL_PHYSICAL_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1008620: // BuiltInParameter.STAIRS_RAILING_BASE_LEVEL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1008000: // BuiltInParameter.DATUM_TEXT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1007721: // BuiltInParameter.RVT_LINK_INSTANCE_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1007246: // BuiltInParameter.STAIRS_ACTUAL_NUM_RISERS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1007235: // BuiltInParameter.STAIRS_MULTISTORY_TOP_LEVEL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1007201: // BuiltInParameter.STAIRS_TOP_LEVEL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1007200: // BuiltInParameter.STAIRS_BASE_LEVEL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1007112: // BuiltInParameter.LEVEL_IS_STRUCTURAL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1007111: // BuiltInParameter.LEVEL_IS_BUILDING_STORY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1007110: // BuiltInParameter.LEVEL_UP_TO_LEVEL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1007109: // BuiltInParameter.LEVEL_RELATIVE_BASE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006922: // BuiltInParameter.ROOM_UPPER_LEVEL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006916: // BuiltInParameter.ROOM_LEVEL_ID
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006909: // BuiltInParameter.ROOM_OCCUPANCY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006907: // BuiltInParameter.ROOM_DEPARTMENT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006906: // BuiltInParameter.ROOM_FINISH_BASE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006905: // BuiltInParameter.ROOM_FINISH_CEILING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006904: // BuiltInParameter.ROOM_FINISH_WALL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006903: // BuiltInParameter.ROOM_FINISH_FLOOR
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006901: // BuiltInParameter.ROOM_NUMBER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006900: // BuiltInParameter.ROOM_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006321: // BuiltInParameter.PROJECT_ISSUE_DATE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006320: // BuiltInParameter.PROJECT_STATUS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006319: // BuiltInParameter.CLIENT_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006317: // BuiltInParameter.PROJECT_NAME
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006316: // BuiltInParameter.PROJECT_NUMBER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1006210: // BuiltInParameter.BUILDING_CURVE_GSTYLE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1005554: // BuiltInParameter.STRUCTURAL_SECTION_NAME_KEY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1005501: // BuiltInParameter.STRUCTURAL_SECTION_SHAPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1005500: // BuiltInParameter.STRUCTURAL_MATERIAL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1005436: // BuiltInParameter.ANALYTICAL_ROUGHNESS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1004011: // BuiltInParameter.CURVE_IS_DETAIL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1002563: // BuiltInParameter.COLUMN_LOCATION_MARK
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1002503: // BuiltInParameter.OMNICLASS_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1002502: // BuiltInParameter.OMNICLASS_CODE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1002501: // BuiltInParameter.UNIFORMAT_DESCRIPTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1002500: // BuiltInParameter.UNIFORMAT_CODE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1002107: // BuiltInParameter.MATERIAL_ID_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1002064: // BuiltInParameter.SCHEDULE_TOP_LEVEL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1002063: // BuiltInParameter.SCHEDULE_BASE_LEVEL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1002062: // BuiltInParameter.SCHEDULE_LEVEL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1002052: // BuiltInParameter.ELEM_FAMILY_AND_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1002051: // BuiltInParameter.ELEM_FAMILY_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1002050: // BuiltInParameter.ELEM_TYPE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001954: // BuiltInParameter.FLOOR_PARAM_IS_STRUCTURAL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001708: // BuiltInParameter.ROOF_BASE_LEVEL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001597: // BuiltInParameter.NODE_CONNECTION_STATUS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001577: // BuiltInParameter.STRUCTURAL_FLOOR_ANALYZES_AS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001576: // BuiltInParameter.STRUCTURAL_ANALYZES_AS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001563: // BuiltInParameter.CONTINUOUS_FOOTING_STRUCTURAL_USAGE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001549: // BuiltInParameter.STRUCTURAL_BOTTOM_RELEASE_MZ
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001548: // BuiltInParameter.STRUCTURAL_BOTTOM_RELEASE_MY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001547: // BuiltInParameter.STRUCTURAL_BOTTOM_RELEASE_MX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001546: // BuiltInParameter.STRUCTURAL_BOTTOM_RELEASE_FZ
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001545: // BuiltInParameter.STRUCTURAL_BOTTOM_RELEASE_FY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001544: // BuiltInParameter.STRUCTURAL_BOTTOM_RELEASE_FX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001543: // BuiltInParameter.STRUCTURAL_TOP_RELEASE_MZ
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001542: // BuiltInParameter.STRUCTURAL_TOP_RELEASE_MY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001541: // BuiltInParameter.STRUCTURAL_TOP_RELEASE_MX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001540: // BuiltInParameter.STRUCTURAL_TOP_RELEASE_FZ
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001539: // BuiltInParameter.STRUCTURAL_TOP_RELEASE_FY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001538: // BuiltInParameter.STRUCTURAL_TOP_RELEASE_FX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001537: // BuiltInParameter.STRUCTURAL_BOTTOM_RELEASE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001536: // BuiltInParameter.STRUCTURAL_TOP_RELEASE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001530: // BuiltInParameter.STRUCTURAL_CAMBER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001529: // BuiltInParameter.STRUCTURAL_NUMBER_OF_STUDS
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001528: // BuiltInParameter.STRUCTURAL_END_RELEASE_MZ
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001527: // BuiltInParameter.STRUCTURAL_END_RELEASE_MY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001526: // BuiltInParameter.STRUCTURAL_END_RELEASE_MX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001525: // BuiltInParameter.STRUCTURAL_END_RELEASE_FZ
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001524: // BuiltInParameter.STRUCTURAL_END_RELEASE_FY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001523: // BuiltInParameter.STRUCTURAL_END_RELEASE_FX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001522: // BuiltInParameter.STRUCTURAL_START_RELEASE_MZ
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001521: // BuiltInParameter.STRUCTURAL_START_RELEASE_MY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001520: // BuiltInParameter.STRUCTURAL_START_RELEASE_MX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001519: // BuiltInParameter.STRUCTURAL_START_RELEASE_FZ
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001518: // BuiltInParameter.STRUCTURAL_START_RELEASE_FY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001517: // BuiltInParameter.STRUCTURAL_START_RELEASE_FX
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001516: // BuiltInParameter.STRUCTURAL_END_RELEASE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001515: // BuiltInParameter.STRUCTURAL_START_RELEASE_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001405: // BuiltInParameter.ALL_MODEL_TYPE_MARK, BuiltInParameter.WINDOW_TYPE_ID
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001383: // BuiltInParameter.INSTANCE_REFERENCE_LEVEL_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001381: // BuiltInParameter.INSTANCE_STRUCT_USAGE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001211: // BuiltInParameter.DOOR_OPERATION_TYPE, BuiltInParameter.WINDOW_OPERATION_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001210: // BuiltInParameter.DOOR_FRAME_MATERIAL
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001209: // BuiltInParameter.DOOR_FRAME_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001208
                     : // BuiltInParameter.CASEWORK_FINISH, BuiltInParameter.CURTAIN_WALL_PANELS_FINISH, BuiltInParameter.DOOR_FINISH, BuiltInParameter.GENERIC_FINISH
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001207
                     : // BuiltInParameter.CASEWORK_CONSTRUCTION_TYPE, BuiltInParameter.CURTAIN_WALL_PANELS_CONSTRUCTION_TYPE, BuiltInParameter.DOOR_CONSTRUCTION_TYPE, BuiltInParameter.GENERIC_CONSTRUCTION_TYPE, BuiltInParameter.WINDOW_CONSTRUCTION_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001206: // BuiltInParameter.DOOR_FIRE_RATING, BuiltInParameter.FIRE_RATING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001203: // BuiltInParameter.ALL_MODEL_MARK, BuiltInParameter.DOOR_NUMBER
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001139: // BuiltInParameter.DPART_LAYER_CONSTRUCTION
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001132: // BuiltInParameter.DPART_ORIGINAL_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001127: // BuiltInParameter.DPART_MATERIAL_ID_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001126: // BuiltInParameter.DPART_ORIGINAL_FAMILY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001125: // BuiltInParameter.DPART_ORIGINAL_CATEGORY
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001119: // BuiltInParameter.WALL_STRUCTURAL_USAGE_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001107: // BuiltInParameter.WALL_BASE_CONSTRAINT
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001103: // BuiltInParameter.WALL_HEIGHT_TYPE
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001007: // BuiltInParameter.WALL_ATTR_ROOM_BOUNDING
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001006: // BuiltInParameter.FUNCTION_PARAM
-                    return new ForgeTypeId();
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
 
                 case -1155217: // BuiltInParameter.REBAR_HOOK_ROTATION_AT_END_SCHEDULES_TAGS_FILTERS
                     return SpecTypeId.Angle;
@@ -4396,18 +4396,19 @@ namespace dosymep.Revit {
 
 #else
 
+                case -1155221: // BuiltInParameter.REBAR_MODIFIED_SET
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                case -1155219: // BuiltInParameter.DPART_LAYER_INDEX
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                case -1019110: // BuiltInParameter.WALL_TAPERED_USE_INSTANCE_ANGLES
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                case -1019107: // BuiltInParameter.WALL_TYPE_WIDTH_MEASURED_AT
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                case -1002053: // BuiltInParameter.ELEM_PARTITION_PARAM
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                
                 case -1005434: // BuiltInParameter.ANALYTICAL_THERMAL_MASS
                     return SpecTypeId.HeatCapacityPerArea;
-                case -1155221: // BuiltInParameter.REBAR_MODIFIED_SET
-                    return new ForgeTypeId();
-                case -1155219: // BuiltInParameter.DPART_LAYER_INDEX
-                    return new ForgeTypeId();
-                case -1019110: // BuiltInParameter.WALL_TAPERED_USE_INSTANCE_ANGLES
-                    return new ForgeTypeId();
-                case -1019107: // BuiltInParameter.WALL_TYPE_WIDTH_MEASURED_AT
-                    return new ForgeTypeId();
-                case -1002053: // BuiltInParameter.ELEM_PARTITION_PARAM
-                    return new ForgeTypeId();
                 case -1155223: // BuiltInParameter.REBAR_MODEL_BAR_DIAMETER
                     return SpecTypeId.BarDiameter;
                 case -1114821: // BuiltInParameter.SPACE_VOLUME
