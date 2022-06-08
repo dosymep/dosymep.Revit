@@ -26,7 +26,7 @@ namespace dosymep.Bim4Everyone {
 
             Id = id;
         }
-        
+
         /// <summary>
         /// Идентификатор параметра.
         /// </summary>
@@ -41,28 +41,37 @@ namespace dosymep.Bim4Everyone {
         /// Описание параметра.
         /// </summary>
         public virtual string Description { get; set; }
-        
+
         /// <summary>
         /// Тип параметра.
         /// </summary>
         public virtual StorageType StorageType { get; set; }
 
-        #if D2020 || R2020
-        
+#if D2020 || R2020
+
         /// <summary>
         /// Тип измерения параметра.
         /// </summary>
         public virtual UnitType UnitType { get; set; }
-        
-        #else
-        
+
+#else
+
         /// <summary>
         /// Тип измерения параметра.
         /// </summary>
-        public virtual ForgeTypeId UnitType { get; set; }
-        
-        #endif
-        
+        [JsonIgnore]
+        public virtual ForgeTypeId UnitType {
+            get => ForgeTypeIdExtensions.GetSpecIdByName(UnitTypeName);
+            set => UnitTypeName = value.GetSpecTypeIdName();
+        }
+
+        /// <summary>
+        /// Наименование свойства типа измерения параметра.
+        /// </summary>
+        public virtual string UnitTypeName { get; set; }
+
+#endif
+
         /// <summary>
         /// Проверяет на существование параметра в документе.
         /// </summary>

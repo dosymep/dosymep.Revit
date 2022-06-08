@@ -236,7 +236,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam CheckCorrectDistanceGrid
             => new ProjectParam(nameof(CheckCorrectDistanceGrid)) {
-                Name = "Пров_Ровно от Оси", UnitType = SpecTypeId.Number, StorageType = StorageType.String
+                Name = "Пров_Ровно от Оси", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
             };
 
         /// <summary>
@@ -244,7 +244,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam CheckIsNormalGrid
             => new ProjectParam(nameof(CheckIsNormalGrid)) {
-                Name = "Пров_Ортогональность Осям", UnitType = SpecTypeId.Number, StorageType = StorageType.String
+                Name = "Пров_Ортогональность Осям", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
             };
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam IsRoomBalcony
             => new ProjectParam(nameof(IsRoomBalcony)) {
-                Name = "КВГ_Летнее", UnitType = SpecTypeId.Number, StorageType = StorageType.Integer
+                Name = "КВГ_Летнее", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Integer
             };
 
         /// <summary>
@@ -260,7 +260,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam IsRoomLiving
             => new ProjectParam(nameof(IsRoomLiving)) {
-                Name = "КВГ_Жилое", UnitType = SpecTypeId.Number, StorageType = StorageType.Integer
+                Name = "КВГ_Жилое", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Integer
             };
 
         /// <summary>
@@ -268,7 +268,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam IsRoomNumberFix
             => new ProjectParam(nameof(IsRoomNumberFix)) {
-                Name = "КВГ_ПМЩ_Фиксация номера", UnitType = SpecTypeId.Number, StorageType = StorageType.Integer
+                Name = "КВГ_ПМЩ_Фиксация номера", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Integer
             };
 
         /// <summary>
@@ -276,7 +276,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam NumberingOrder
             => new ProjectParam(nameof(NumberingOrder)) {
-                Name = "КВГ_Приоритет нумерации", UnitType = SpecTypeId.Number, StorageType = StorageType.Integer
+                Name = "КВГ_Приоритет нумерации", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Integer
             };
 
         /// <summary>
@@ -284,7 +284,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam ProjectStage
             => new ProjectParam(nameof(ProjectStage)) {
-                Name = "_Стадия Проекта", UnitType = SpecTypeId.Number, StorageType = StorageType.String
+                Name = "_Стадия Проекта", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
             };
 
         /// <summary>
@@ -292,7 +292,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam ViewGroup
             => new ProjectParam(nameof(ViewGroup)) {
-                Name = "_Группа Видов", UnitType = SpecTypeId.Number, StorageType = StorageType.String
+                Name = "_Группа Видов", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
             };
 
         /// <summary>
@@ -300,7 +300,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam WithFullSheetNumber
             => new ProjectParam(nameof(WithFullSheetNumber)) {
-                Name = "_Полный Номер Листа", UnitType = SpecTypeId.Number, StorageType = StorageType.Integer
+                Name = "_Полный Номер Листа", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Integer
             };
 
         /// <summary>
@@ -308,7 +308,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam WithSheetNumber
             => new ProjectParam(nameof(WithSheetNumber)) {
-                Name = "_Номера Листа Наличие", UnitType = SpecTypeId.Number, StorageType = StorageType.Integer
+                Name = "_Номера Листа Наличие", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Integer
             };
 
         /// <summary>
@@ -316,7 +316,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam ViewNumberOnSheet
             => new ProjectParam(nameof(ViewNumberOnSheet)) {
-                Name = "_Номер Вида на Листе", UnitType = SpecTypeId.Number, StorageType = StorageType.String
+                Name = "_Номер Вида на Листе", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
             };
 
         /// <summary>
@@ -324,7 +324,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomGroupName
             => new ProjectParam(nameof(RoomGroupName)) {
-                Name = "КВГ_Группа", UnitType = SpecTypeId.Number, StorageType = StorageType.ElementId
+                Name = "КВГ_Группа", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
             };
 
         /// <summary>
@@ -332,7 +332,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam FireCompartmentName
             => new ProjectParam(nameof(RoomGroupName)) {
-                Name = "КВГ_Пожарный отсек", UnitType = SpecTypeId.Number, StorageType = StorageType.ElementId
+                Name = "КВГ_Пожарный отсек", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
             };
 
         /// <summary>
@@ -340,7 +340,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomSectionName
             => new ProjectParam(nameof(RoomSectionName)) {
-                Name = "КВГ_Секция", UnitType = SpecTypeId.Number, StorageType = StorageType.ElementId
+                Name = "КВГ_Секция", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
             };
 
         /// <summary>
@@ -348,7 +348,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomTypeGroupName
             => new ProjectParam(nameof(RoomTypeGroupName)) {
-                Name = "КВГ_Тип группы помещений", UnitType = SpecTypeId.Number, StorageType = StorageType.ElementId
+                Name = "КВГ_Тип группы помещений", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
             };
 
         /// <summary>
@@ -356,7 +356,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomName
             => new ProjectParam(nameof(RoomTypeGroupName)) {
-                Name = "КВГ_Наименование", UnitType = SpecTypeId.Number, StorageType = StorageType.ElementId
+                Name = "КВГ_Наименование", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
             };
 
 #if D2021 || R2021
@@ -366,7 +366,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomAreaRatio
             => new ProjectParam(nameof(RoomAreaRatio)) {
-                Name = "КВГ_Коэффициент площади", UnitType = SpecTypeId.Number, StorageType = StorageType.Double
+                Name = "КВГ_Коэффициент площади", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -374,7 +374,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam ApartmentGroupName
             => new ProjectParam(nameof(ApartmentGroupName)) {
-                Name = "КВГ_Доп. сортировка групп", UnitType = SpecTypeId.Number, StorageType = StorageType.String
+                Name = "КВГ_Доп. сортировка групп", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
             };
 
         /// <summary>
@@ -382,7 +382,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomGroupShortName
             => new ProjectParam(nameof(RoomGroupShortName)) {
-                Name = "КВГ_ПМЩ_Группа короткое", UnitType = SpecTypeId.Number, StorageType = StorageType.String
+                Name = "КВГ_ПМЩ_Группа короткое", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
             };
 
         /// <summary>
@@ -390,7 +390,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam FireCompartmentShortName
             => new ProjectParam(nameof(FireCompartmentShortName)) {
-                Name = "КВГ_Пожарный отсек короткое", UnitType = SpecTypeId.Number, StorageType = StorageType.String
+                Name = "КВГ_Пожарный отсек короткое", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
             };
 
         /// <summary>
@@ -398,7 +398,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomSectionShortName
             => new ProjectParam(nameof(RoomSectionShortName)) {
-                Name = "КВГ_Секция короткое", UnitType = SpecTypeId.Number, StorageType = StorageType.String
+                Name = "КВГ_Секция короткое", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
             };
 
         /// <summary>
@@ -407,7 +407,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         public ProjectParam RoomTypeGroupShortName
             => new ProjectParam(nameof(RoomTypeGroupShortName)) {
                 Name = "КВГ_Тип группы помещений короткий",
-                UnitType = SpecTypeId.Number,
+                UnitTypeName = nameof(SpecTypeId.Number),
                 StorageType = StorageType.String
             };
 
@@ -416,7 +416,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam ApartmentAreaMinSpec
             => new ProjectParam(nameof(ApartmentAreaMinSpec)) {
-                Name = "КВГ_КВР_Площадь по ТЗ мин", UnitType = SpecTypeId.Area, StorageType = StorageType.Double
+                Name = "КВГ_КВР_Площадь по ТЗ мин", UnitTypeName = nameof(SpecTypeId.Area), StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -424,7 +424,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam ApartmentAreaMaxSpec
             => new ProjectParam(nameof(ApartmentAreaMaxSpec)) {
-                Name = "КВГ_КВР_Площадь по ТЗ макс", UnitType = SpecTypeId.Area, StorageType = StorageType.Double
+                Name = "КВГ_КВР_Площадь по ТЗ макс", UnitTypeName = nameof(SpecTypeId.Area), StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -432,7 +432,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam ApartmentAreaSpec
             => new ProjectParam(nameof(ApartmentAreaSpec)) {
-                Name = "КВГ_КВР_Площадь по ТЗ", UnitType = SpecTypeId.Number, StorageType = StorageType.String
+                Name = "КВГ_КВР_Площадь по ТЗ", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
             };
 
 #endif

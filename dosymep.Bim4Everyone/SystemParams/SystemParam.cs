@@ -64,20 +64,20 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
 #if D2020 || R2020
 
-        /// <summary>
-        /// Тип измерения параметра.
-        /// </summary>
+        /// <inheritdoc/>
         [JsonIgnore]
         public override UnitType UnitType => SystemParamId.GetUnitType();
         
 #else
         
-        /// <summary>
-        /// Тип измерения параметра.
-        /// </summary>
+        /// <inheritdoc/>
         [JsonIgnore]        
         public override ForgeTypeId UnitType => SystemParamId.GetUnitType();
-        
+
+        /// <inheritdoc/>
+        [JsonIgnore]
+        public override string UnitTypeName => UnitType.GetSpecTypeIdName();
+
 #endif
 
         /// <inheritdoc/>

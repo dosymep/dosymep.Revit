@@ -49,6 +49,10 @@ namespace dosymep.Revit {
         /// <param name="specTypeIdName">Наименование свойства единицы измерения.</param>
         /// <returns>Возвращает <see cref="Autodesk.Revit.DB.ForgeTypeId"/> единицы измерения по имени свойства <see cref="SpecTypeId"/>.</returns>
         public static ForgeTypeId GetSpecIdByName(string specTypeIdName) {
+            if(string.IsNullOrEmpty(specTypeIdName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(specTypeIdName));
+            }
+
             return (ForgeTypeId) typeof(SpecTypeId).GetProperty(specTypeIdName)?.GetValue(null);
         }
     }
