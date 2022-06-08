@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,8 +38,15 @@ namespace dosymep.Bim4Everyone {
 
         /// <inheritdoc />
         public virtual IEnumerable<RevitParam> GetRevitParams() {
-            return _revitParams.Values
+            var properties = GetType().GetProperties()
+                .Where(item => item.GetIndexParameters().Length == 0)
+                .Select(item => item.GetValue(this))
+                .OfType<RevitParam>()
                 .OrderBy(item => item.Id);
+
+            return _revitParams.Values
+                .OrderBy(item => item.Id)
+                .Union(properties);
         }
 
         private RevitParam GetRevitParam(string paramId) {
@@ -48,6 +56,11 @@ namespace dosymep.Bim4Everyone {
 
             if(_revitParams.TryGetValue(paramId, out RevitParam revitParam)) {
                 return revitParam;
+            }
+
+            PropertyInfo property = this.GetType().GetProperty(paramId);
+            if(property != null) {
+                return (RevitParam) property.GetValue(this);
             }
 
             throw new Exception($"Не был найден параметр с идентификатором \"{paramId}\".");
