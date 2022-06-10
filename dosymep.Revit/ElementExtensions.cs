@@ -12,7 +12,7 @@ namespace dosymep.Revit {
     /// </summary>
     public static class ElementExtensions {
         #region Получение параметра по его имени
-
+        
         /// <summary>
         /// Проверяет на существование параметра в элементе.
         /// </summary>
@@ -20,9 +20,40 @@ namespace dosymep.Revit {
         /// <param name="paramName">Наименование параметра.</param>
         /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
         public static bool IsExistsParam(this Element element, string paramName) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(paramName));
+            }
+
+            try {
+                element.GetParam(paramName);
+                return true;
+            } catch {
+                return false;
+            }
+        }
+        
+        /// <summary>
+        /// Проверяет на существование значение параметра в элементе.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает true - если значение параметра существует, иначе false.</returns>
+        public static bool IsExistsParamValue(this Element element, string paramName) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(paramName));
+            }
+
             return element.GetParamValueOrDefault(paramName) != default;
         }
-
+        
         /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.
         /// </summary>
@@ -216,7 +247,7 @@ namespace dosymep.Revit {
         #endregion
 
         #region Получение общего параметра по его имени
-
+        
         /// <summary>
         /// Проверяет на существование общего параметра в элементе.
         /// </summary>
@@ -224,6 +255,29 @@ namespace dosymep.Revit {
         /// <param name="paramName">Наименование параметра.</param>
         /// <returns>Возвращает true - если общий параметр существует, иначе false.</returns>
         public static bool IsExistsSharedParam(this Element element, string paramName) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(paramName));
+            }
+
+            try {
+                element.GetSharedParam(paramName);
+                return true;
+            } catch {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Проверяет на существование значение общего параметра в элементе.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Наименование параметра.</param>
+        /// <returns>Возвращает true - если значение общего параметра существует, иначе false.</returns>
+        public static bool IsExistsSharedParamValue(this Element element, string paramName) {
             return element.GetSharedParamValueOrDefault(paramName) != default;
         }
 
@@ -447,6 +501,37 @@ namespace dosymep.Revit {
         /// <param name="paramName">Наименование параметра проекта.</param>
         /// <returns>Возвращает true - если параметр проекта существует, иначе false.</returns>
         public static bool IsExistsProjectParam(this Element element, string paramName) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(paramName));
+            }
+
+            try {
+                element.GetProjectParam(paramName);
+                return true;
+            } catch {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Проверяет на существование значения параметра проекта в элементе.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Наименование параметра проекта.</param>
+        /// <returns>Возвращает true - если значение параметра проекта существует, иначе false.</returns>
+        public static bool IsExistsProjectParamValue(this Element element, string paramName) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(paramName));
+            }
+
             return element.GetProjectParamValueOrDefault(paramName) != default;
         }
 
@@ -643,7 +728,7 @@ namespace dosymep.Revit {
         #endregion
         
         #region Получение параметра по BuiltInParameter
-
+        
         /// <summary>
         /// Проверяет на существование параметра в элементе.
         /// </summary>
@@ -651,6 +736,29 @@ namespace dosymep.Revit {
         /// <param name="builtInParameter">Встроенный тип параметра.</param>
         /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
         public static bool IsExistsParam(this Element element, BuiltInParameter builtInParameter) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            try {
+                element.GetParam(builtInParameter);
+                return true;
+            } catch {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Проверяет на существование значения параметра в элементе.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="builtInParameter">Встроенный тип параметра.</param>
+        /// <returns>Возвращает true - если значение параметра существует, иначе false.</returns>
+        public static bool IsExistsParamValue(this Element element, BuiltInParameter builtInParameter) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
             return element.GetParamValueOrDefault(builtInParameter) != default;
         }
         
@@ -825,6 +933,37 @@ namespace dosymep.Revit {
         /// <param name="forgeTypeId">Встроенный тип параметра.</param>
         /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
         public static bool IsExistsParam(this Element element, ForgeTypeId forgeTypeId) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(forgeTypeId == null) {
+                throw new ArgumentNullException(nameof(forgeTypeId));
+            }
+
+            try {
+                element.GetParam(forgeTypeId);
+                return true;
+            } catch {
+                return false;
+            }
+        }
+        
+        /// <summary>
+        /// Проверяет на существование значения параметра в элементе.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <returns>Возвращает true - если значение параметра существует, иначе false.</returns>
+        public static bool IsExistsParamValue(this Element element, ForgeTypeId forgeTypeId) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(forgeTypeId == null) {
+                throw new ArgumentNullException(nameof(forgeTypeId));
+            }
+
             return element.GetParamValueOrDefault(forgeTypeId) != default;
         }
         
