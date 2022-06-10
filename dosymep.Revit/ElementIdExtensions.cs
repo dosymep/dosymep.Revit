@@ -13,6 +13,15 @@ namespace dosymep.Revit {
         public static bool IsNull(this ElementId elementId) {
             return elementId == null || elementId == ElementId.InvalidElementId;
         }
+        
+        /// <summary>
+        /// Проверяет идентификатор на не null.
+        /// </summary>
+        /// <param name="elementId">Идентификатор элемента.</param>
+        /// <returns>Возвращает true - если идентификатор элемента не null или <see cref="Autodesk.Revit.DB.ElementId.InvalidElementId"/>, иначе false.</returns>
+        public static bool IsNotNull(this ElementId elementId) {
+            return !elementId.IsNull();
+        }
 
         /// <summary>
         /// Проверяет идентификатор, является ли он системным.
