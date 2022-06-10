@@ -24,6 +24,14 @@ namespace dosymep.Bim4Everyone {
         /// <param name="revitParam">Параметр Revit.</param>
         /// <returns>Возвращает true - если параметр существует, иначе false.</returns>
         public static bool IsExistsParam(this Element element, RevitParam revitParam) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam == null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
             try {
                 element.GetParam(revitParam);
                 return true;
@@ -39,6 +47,14 @@ namespace dosymep.Bim4Everyone {
         /// <param name="revitParam">Параметр Revit.</param>
         /// <returns>Возвращает true - если значение параметра существует, иначе false.</returns>
         public static bool IsExistsParamValue(this Element element, RevitParam revitParam) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam == null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
             return element.GetParamValueOrDefault(revitParam) != default;
         }
         
