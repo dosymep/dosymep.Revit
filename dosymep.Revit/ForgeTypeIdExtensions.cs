@@ -44,7 +44,7 @@ namespace dosymep.Revit {
 
 #else
 
-            if(!UnitUtils.IsMeasurableSpec(forgeTypeId)) {
+            if(!SpecUtils.IsSpec(forgeTypeId)) {
                 throw new ArgumentException(
                     $"Переданный ForgeTypeId \"{forgeTypeId.TypeId}\" не является единицей измерения.",
                     nameof(forgeTypeId));
