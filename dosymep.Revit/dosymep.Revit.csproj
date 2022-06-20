@@ -1,91 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>net48</TargetFramework>
-        <OutputType>Library</OutputType>
-        <Platforms>x64</Platforms>
-        <Authors>dosymep</Authors>
-        <PackageTags>dosymep, revit</PackageTags>
-        <PackageProjectUrl>https://github.com/dosymep/dosymep.Revit.git</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/dosymep/dosymep.Revit.git</RepositoryUrl>
-        <RepositoryType>Git</RepositoryType>
-        <Configurations>D2020;D2021;D2022;R2020;R2021;R2022</Configurations>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D2020|x64'">
-        <RevitVersion>2020</RevitVersion>
-        <OutputPath>bin\x64\Debug\$(RevitVersion)</OutputPath>
-        <DocumentationFile>bin\Debug\$(RevitVersion)\dosymep.Revit.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D2021|x64'">
-        <RevitVersion>2021</RevitVersion>
-        <OutputPath>bin\x64\Debug\$(RevitVersion)</OutputPath>
-        <DocumentationFile>bin\Debug\$(RevitVersion)\dosymep.Revit.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D2022|x64'">
-        <RevitVersion>2022</RevitVersion>
-        <OutputPath>bin\x64\Debug\$(RevitVersion)</OutputPath>
-        <DocumentationFile>bin\Debug\$(RevitVersion)\dosymep.Revit.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R2020|x64'">
-        <RevitVersion>2020</RevitVersion>
-        <OutputPath>bin\x64\Release\$(RevitVersion)</OutputPath>
-        <DocumentationFile>bin\Debug\$(RevitVersion)\dosymep.Revit.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R2021|x64'">
-        <RevitVersion>2021</RevitVersion>
-        <OutputPath>bin\x64\Release\$(RevitVersion)</OutputPath>
-        <DocumentationFile>bin\Debug\$(RevitVersion)\dosymep.Revit.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R2022|x64'">
-        <RevitVersion>2022</RevitVersion>
-        <OutputPath>bin\x64\Release\$(RevitVersion)</OutputPath>
-        <DocumentationFile>bin\Debug\$(RevitVersion)\dosymep.Revit.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup>
-        <Version>$(RevitVersion).2.4</Version>
-    </PropertyGroup>
+    <Import Project="..\ProjectProps\Common.props"/>
 
     <ItemGroup>
-        <Reference Include="RevitAPI">
-            <HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\RevitAPI.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-        
-        <Reference Include="RevitAPIUI">
-            <HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\RevitAPIUI.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-        
         <Reference Include="System.Net.Http">
             <Private>False</Private>
         </Reference>
     </ItemGroup>
-
+    
     <ItemGroup>
-        <PackageReference Include="Microsoft.CSharp" Version="4.7.0">
-            <PrivateAssets>all</PrivateAssets>
-        </PackageReference>
-        
-        <PackageReference Include="OpenMcdf" Version="2.2.1.9">
-            <PrivateAssets>all</PrivateAssets>
-        </PackageReference>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="ParamExtensions.ParamTypes.cs">
-        <DependentUpon>ParamExtensions.cs</DependentUpon>
-      </Compile>
-      <Compile Update="DocumentExtensions.TransmissionData.cs">
-        <DependentUpon>DocumentExtensions.cs</DependentUpon>
-      </Compile>
-      <Compile Update="ParamExtensions.UnitTypes.cs">
-        <DependentUpon>ParamExtensions.cs</DependentUpon>
-      </Compile>
+        <Compile Update="ParamExtensions.ParamTypes.cs">
+            <DependentUpon>ParamExtensions.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DocumentExtensions.TransmissionData.cs">
+            <DependentUpon>DocumentExtensions.cs</DependentUpon>
+        </Compile>
+        <Compile Update="ParamExtensions.UnitTypes.cs">
+            <DependentUpon>ParamExtensions.cs</DependentUpon>
+        </Compile>
     </ItemGroup>
 </Project>

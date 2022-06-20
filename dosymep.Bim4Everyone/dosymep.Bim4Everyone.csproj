@@ -1,54 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>net48</TargetFramework>
-        <OutputType>Library</OutputType>
-        <Platforms>x64</Platforms>
-        <Authors>dosymep</Authors>
-        <PackageTags>dosymep, revit, bim4everyone</PackageTags>
-        <PackageProjectUrl>https://github.com/dosymep/dosymep.git</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/dosymep/dosymep.git</RepositoryUrl>
-        <RepositoryType>Git</RepositoryType>
-        <Configurations>D2020;D2021;D2022;R2020;R2021;R2022;R2022</Configurations>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D2020|x64'">
-        <RevitVersion>2020</RevitVersion>
-        <OutputPath>bin\x64\Debug\$(RevitVersion)</OutputPath>
-        <DocumentationFile>bin\Debug\$(RevitVersion)\dosymep.Bim4Everyone.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D2021|x64'">
-        <RevitVersion>2021</RevitVersion>
-        <OutputPath>bin\x64\Debug\$(RevitVersion)</OutputPath>
-        <DocumentationFile>bin\Debug\$(RevitVersion)\dosymep.Bim4Everyone.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D2022|x64'">
-        <RevitVersion>2022</RevitVersion>
-        <OutputPath>bin\x64\Debug\$(RevitVersion)</OutputPath>
-        <DocumentationFile>bin\Debug\$(RevitVersion)\dosymep.Bim4Everyone.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R2020|x64'">
-        <RevitVersion>2020</RevitVersion>
-        <OutputPath>bin\x64\Release\$(RevitVersion)</OutputPath>
-        <DocumentationFile>bin\Release\$(RevitVersion)\dosymep.Bim4Everyone.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R2021|x64'">
-        <RevitVersion>2021</RevitVersion>
-        <OutputPath>bin\x64\Release\$(RevitVersion)</OutputPath>
-        <DocumentationFile>bin\Release\$(RevitVersion)\dosymep.Bim4Everyone.xml</DocumentationFile>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R2022|x64'">
-        <RevitVersion>2022</RevitVersion>
-        <OutputPath>bin\x64\Release\$(RevitVersion)</OutputPath>
-        <DocumentationFile>bin\Release\$(RevitVersion)\dosymep.Bim4Everyone.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup>
-        <Version>$(RevitVersion).2.4</Version>
-    </PropertyGroup>
+    <Import Project="..\ProjectProps\Common.props"/>
 
     <ItemGroup>
         <Reference Include="dosymep.SimpleServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -61,44 +12,33 @@
             <Private>False</Private>
         </Reference>
 
-        <Reference Include="PresentationFramework" />
-
         <Reference Include="pyRevitLabs.Json">
             <HintPath>$(AppData)\pyRevit-Master\bin\pyRevitLabs.Json.dll</HintPath>
             <Private>False</Private>
         </Reference>
-
-        <Reference Include="RevitAPI">
-            <HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\RevitAPI.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-
-        <Reference Include="RevitAPIUI">
-            <HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\RevitAPIUI.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
     </ItemGroup>
 
     <ItemGroup>
-        <Reference Include="PresentationCore" />
-        <PackageReference Include="Microsoft.CSharp" Version="4.7.0">
-            <PrivateAssets>all</PrivateAssets>
-        </PackageReference>
-        
+        <Reference Include="PresentationFramework"/>
+        <Reference Include="PresentationCore"/>
+
         <PackageReference Include="Ninject" Version="3.3.4">
             <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
-        
+
         <PackageReference Include="Serilog" Version="2.10.0">
             <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
-        
+
         <PackageReference Include="Serilog.Sinks.File" Version="5.0.0">
             <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\dosymep.Revit\dosymep.Revit.csproj" />
+        <ProjectReference Include="..\dosymep.Revit\dosymep.Revit.csproj"/>
     </ItemGroup>
 </Project>
