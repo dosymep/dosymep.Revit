@@ -116,7 +116,7 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(parameterElement));
             }
 
-            return parameterElement.GetDefinition().GetGroupTypeId();
+            return parameterElement.GetDefinition().GetDataType();
         }
 
 #endif
