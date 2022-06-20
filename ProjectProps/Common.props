@@ -7,20 +7,6 @@
         <Configurations>D2020;D2021;D2022;R2020;R2021;R2022</Configurations>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(Configuration.StartsWith(`D`))'">
-        <Optimization>false</Optimization>
-        <DebugSymbols>true</DebugSymbols>
-        <OutputPath>bin\x64\Debug</OutputPath>
-        <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration.StartsWith(`R`))'">
-        <Optimize>true</Optimize>
-        <DebugSymbols>false</DebugSymbols>
-        <OutputPath>bin\x64\Release</OutputPath>
-        <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
-    </PropertyGroup>
-
     <PropertyGroup Condition="'$(Configuration)'=='D2020' OR '$(Configuration)'=='R2020'">
         <RevitVersion>2020</RevitVersion>
     </PropertyGroup>
@@ -55,6 +41,22 @@
 
     <PropertyGroup Condition="'$(RevitVersion)'>='2022'">
         <DefineConstants>$(DefineConstants);REVIT_2022_OR_GREATER</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration.StartsWith(`D`))'">
+        <Optimization>false</Optimization>
+        <DebugSymbols>true</DebugSymbols>
+        <OutputPath>bin\x64\Debug\$(RevitVersion)</OutputPath>
+        <DocumentationFile>bin\x64\Debug\$(RevitVersion)\$(MSBuildProjectName).xml</DocumentationFile>
+        <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration.StartsWith(`R`))'">
+        <Optimize>true</Optimize>
+        <DebugSymbols>false</DebugSymbols>
+        <OutputPath>bin\x64\Release\$(RevitVersion)</OutputPath>
+        <DocumentationFile>bin\x64\Release\$(RevitVersion)\$(MSBuildProjectName).xml</DocumentationFile>
+        <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
     </PropertyGroup>
 
     <PropertyGroup>
