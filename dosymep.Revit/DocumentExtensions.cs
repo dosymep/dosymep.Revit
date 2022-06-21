@@ -347,7 +347,8 @@ namespace dosymep.Revit {
             }
         }
         
-    #if D2022 || R2022
+    #if REVIT_2022_OR_GREATER
+        
         /// <summary>
         /// Возвращает тип системного параметра.
         /// </summary>
@@ -369,6 +370,7 @@ namespace dosymep.Revit {
                 return Autodesk.Revit.DB.StorageType.None;
             }
         }
+        
     #endif
     }
 }

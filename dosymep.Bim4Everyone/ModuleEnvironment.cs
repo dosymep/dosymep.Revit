@@ -22,21 +22,34 @@ namespace dosymep.Bim4Everyone {
             ParametersTemplatePath = Path.Combine(TemplatesPath, "project_parameters.rvt");
         }
 
-#if D2020 || R2020
+#if REVIT_2020
+
         /// <summary>
         /// Текущая версия Revit.
         /// </summary>
         public static string RevitVersion { get; set; } = "2020";
-#elif D2021 || R2021
+        
+#elif REVIT_2021
+
         /// <summary>
         /// Текущая версия Revit.
         /// </summary>
         public static string RevitVersion { get; set; } = "2021";
-#elif D2022 || R2022
+        
+#elif REVIT_2022
+        
         /// <summary>
         /// Текущая версия Revit.
         /// </summary>
         public static string RevitVersion { get; set; } = "2022";
+        
+#else
+
+        /// <summary>
+        /// Текущая версия Revit.
+        /// </summary>
+        public static string RevitVersion => throw new NotImplementedException("Версия Revit не установлена.");
+
 #endif
 
         /// <summary>

@@ -42,7 +42,8 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <returns>Возвращает системный параметр.</returns>
         SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId, LanguageType languageType);
         
-#if D2022 || R2022
+#if REVIT_2022_OR_GREATER
+        
         /// <summary>
         /// Возвращает системный параметр.
         /// </summary>
@@ -80,6 +81,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// </summary>
         /// <param name="paramId">Идентификатор параметра Revit.</param>
         SystemParam this[ForgeTypeId paramId] { get; }
+
 #endif
         
         /// <summary>

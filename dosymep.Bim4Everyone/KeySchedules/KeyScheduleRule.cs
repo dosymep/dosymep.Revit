@@ -47,7 +47,8 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// </summary>
         public List<string> RequiredProjectParams { get; set; } = new List<string>();
 
-#if D2020 || R2020 || D2021 || R2021
+#if REVIT_2020 || REVIT_2021
+
         /// <summary>
         /// Обязательные системные параметры проекта в спецификации.
         /// </summary>
@@ -57,7 +58,9 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// Системные параметры проекта, которые должны быть обязательно заполнены в спецификации.
         /// </summary>
         public List<BuiltInParameter> FilledSystemParams { get; set; } = new List<BuiltInParameter>();
+        
 #else
+        
         /// <summary>
         /// Обязательные системные параметры проекта в спецификации.
         /// </summary>
@@ -67,6 +70,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// Системные параметры проекта, которые должны быть обязательно заполнены в спецификации.
         /// </summary>
         public List<ForgeTypeId> FilledSystemParams { get; set; } = new List<ForgeTypeId>();
+
 #endif
 
         /// <summary>

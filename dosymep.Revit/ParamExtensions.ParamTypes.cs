@@ -3287,13 +3287,15 @@ namespace dosymep.Revit {
                 case BuiltInParameter.WALL_ATTR_HEIGHT_PARAM: return StorageType.Double;
                 case BuiltInParameter.WALL_ATTR_WIDTH_PARAM: return StorageType.Double;
                 case BuiltInParameter.INVALID: return StorageType.None;
-#if D2020 || R2020
+#if REVIT_2020
+
                 case BuiltInParameter.RBS_ELEC_CIRCUIT_NAMING: return StorageType.Integer;
                 case BuiltInParameter
                     .RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SURFACE_INDENTIFICATION_RESOLUTION:
                     return StorageType.Double;
                 case BuiltInParameter.RBS_ENERGY_ANALYSIS_BUILDING_ENVELOPE_ANALYTICAL_SPACE_INDENTIFICATION_RESOLUTION:
                     return StorageType.Double;
+
 #else
                 case BuiltInParameter.RBS_ELEC_CIRCUIT_NAMING: return StorageType.ElementId;
                 case BuiltInParameter.VOID_CUTS_GEOMETRY: return StorageType.Integer;
@@ -3347,7 +3349,7 @@ namespace dosymep.Revit {
                 case BuiltInParameter.WALL_SWEEP_ORIENTATION: return StorageType.Integer;
 #endif
 
-#if D2022 || R2022
+#if REVIT_2022_OR_GREATER
 
                 case BuiltInParameter.PREFER_DIM_SIDE_UI_FILTER: return StorageType.Integer;
                 case BuiltInParameter.MULTIPLE_ALIGNMENT_UI_TOGGLE: return StorageType.Integer;
@@ -3401,7 +3403,8 @@ namespace dosymep.Revit {
             }
         }
 
-#if D2020 || R2020 || D2021 || R2021
+#if REVIT_2020 || REVIT_2021
+
         /// <summary>
         /// Возвращает тип параметра.
         /// </summary>

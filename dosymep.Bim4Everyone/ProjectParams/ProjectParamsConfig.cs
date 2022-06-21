@@ -27,7 +27,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// <remarks>Перед использованием нужно вызвать <see cref="Load(string)"/></remarks>
         public static ProjectParamsConfig Instance { get; internal set; }
 
-#if D2020 || R2020
+#if REVIT_2020
+
         /// <summary>
         /// Пров_Ровно от Оси
         /// </summary>
@@ -231,6 +232,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             };
 
 #else
+        
         /// <summary>
         /// Пров_Ровно от Оси
         /// </summary>
@@ -358,8 +360,10 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             => new ProjectParam(nameof(RoomTypeGroupName)) {
                 Name = "КВГ_Наименование", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
             };
+        
+#endif
 
-#if D2021 || R2021
+#if REVIT_2021
 
         /// <summary>
         /// КВГ_Коэффициент площади
@@ -434,8 +438,6 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             => new ProjectParam(nameof(ApartmentAreaSpec)) {
                 Name = "КВГ_КВР_Площадь по ТЗ", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
             };
-
-#endif
 
 #endif
 

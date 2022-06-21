@@ -63,7 +63,7 @@ namespace dosymep.Bim4Everyone {
             throw new NotImplementedException();
         }
 
-#if D2020 || R2020 || R2021 || R2021
+#if REVIT_2020 || REVIT_2021
 
         /// <summary>
         /// Создает параметр типа у семейства.

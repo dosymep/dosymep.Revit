@@ -27,7 +27,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <remarks>Перед использованием нужно вызвать <see cref="LoadInstance(string)"/></remarks>
         public static SharedParamsConfig Instance { get; internal set; }
 
-#if D2020 || R2020
+#if REVIT_2020
+
         /// <summary>
         /// ADSK_Комплект чертежей
         /// </summary>

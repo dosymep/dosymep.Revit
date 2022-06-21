@@ -25,7 +25,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
         #region Квартирография
 
-#if D2020 || R2020 || D2021 || R2021
+#if REVIT_2020 || REVIT_2021
 
         /// <summary>
         /// КВГ_(Ключ.) - Группа помещений

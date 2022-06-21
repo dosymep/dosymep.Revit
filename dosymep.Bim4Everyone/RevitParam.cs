@@ -47,7 +47,7 @@ namespace dosymep.Bim4Everyone {
         /// </summary>
         public virtual StorageType StorageType { get; set; }
 
-#if D2020 || R2020
+#if REVIT_2020
 
         /// <summary>
         /// Тип измерения параметра.

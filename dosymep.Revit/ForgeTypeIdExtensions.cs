@@ -4,7 +4,7 @@ using System.Linq;
 using Autodesk.Revit.DB;
 
 namespace dosymep.Revit {
-#if D2021 || R2021 || D2022 || R2022
+#if REVIT_2021_OR_GREATER
 
     /// <summary>
     /// Расширения для класса <see cref="Autodesk.Revit.DB.ForgeTypeId"/>.

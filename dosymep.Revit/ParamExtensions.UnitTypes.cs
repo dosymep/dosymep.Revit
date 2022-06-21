@@ -4,7 +4,8 @@ using Autodesk.Revit.DB;
 
 namespace dosymep.Revit {
     public partial class ParamExtensions {
-#if D2020 || R2020
+#if REVIT_2020
+
         /// <summary>
         /// Возвращает <see cref="Autodesk.Revit.DB.UnitType"/> для системного параметра.
         /// </summary>
@@ -2177,7 +2178,7 @@ namespace dosymep.Revit {
 
 #endif
 
-#if D2021 || R2021 || D2022 || R2022
+#if REVIT_2021_OR_GREATER
 
         /// <summary>
         /// Возвращает <see cref="Autodesk.Revit.DB.ForgeTypeId"/> для системного параметра.
@@ -4389,12 +4390,14 @@ namespace dosymep.Revit {
                     return SpecTypeId.Length;
                 case -1001000: // BuiltInParameter.WALL_ATTR_WIDTH_PARAM
                     return SpecTypeId.Length;
-#if D2021 || R2021
+#if REVIT_2021
 
                 case -1005434: // BuiltInParameter.ANALYTICAL_THERMAL_MASS
                     return SpecTypeId.ThermalMass;
 
-#else
+#endif
+                
+#if REVIT_2022_OR_GREATER
 
                 case -1155221: // BuiltInParameter.REBAR_MODIFIED_SET
                     return ForgeTypeIdExtensions.EmptyForgeTypeId;
