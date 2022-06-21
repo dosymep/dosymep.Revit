@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 using Autodesk.Revit.DB;
 
@@ -13,7 +16,7 @@ namespace dosymep.Revit {
         /// <summary>
         /// Пустой ForgeTypeId
         /// </summary>
-        public static ForgeTypeId EmptyForgeTypeId { get; } = new ForgeTypeId();
+        public static readonly ForgeTypeId EmptyForgeTypeId = new ForgeTypeId();
 
         /// <summary>
         /// Наименование свойства SpecTypeId Undefined
@@ -34,6 +37,16 @@ namespace dosymep.Revit {
                 return UnitTypeUndefinedName;
             }
 
+#if REVIT_2021
+
+            if(!UnitUtils.IsSpec(forgeTypeId)) {
+                throw new ArgumentException(
+                    $"Переданный ForgeTypeId \"{forgeTypeId.TypeId}\" не является единицей измерения.",
+                    nameof(forgeTypeId));
+            }
+
+#endif
+
 #if REVIT_2022_OR_GREATER
 
             if(!SpecUtils.IsSpec(forgeTypeId)) {
@@ -44,8 +57,15 @@ namespace dosymep.Revit {
 
 #endif
 
-            return typeof(SpecTypeId).GetProperties()
-                .FirstOrDefault(item => item.GetValue(null)?.Equals(forgeTypeId) == true)?.Name;
+            PropertyInfo propertyInfo = GetSpecIdTypes()
+                .SelectMany(item => item.GetProperties())
+                .FirstOrDefault(item => item.GetValue(null)?.Equals(forgeTypeId) == true);
+
+            if(propertyInfo == null) {
+                return UnitTypeUndefinedName;
+            }
+
+            return $"{propertyInfo.DeclaringType?.FullName}.{propertyInfo.Name}";
         }
 
 
@@ -63,9 +83,28 @@ namespace dosymep.Revit {
                 return EmptyForgeTypeId;
             }
 
-            return (ForgeTypeId) typeof(SpecTypeId).GetProperty(specTypeIdName)?.GetValue(null);
+            int index = specTypeIdName.LastIndexOf('.');
+            if(index < 0) {
+                return EmptyForgeTypeId;
+            }
+
+            string typeName = specTypeIdName.Substring(0, index);
+            string propertyName = specTypeIdName.Substring(index + 1, specTypeIdName.Length - index - 1);
+
+            return (ForgeTypeId) typeof(SpecTypeId).Assembly
+                .GetType(typeName)
+                .GetProperty(propertyName)
+                ?.GetValue(null) ?? EmptyForgeTypeId;
+        }
+
+        private static IEnumerable<Type> GetSpecIdTypes() {
+            yield return typeof(SpecTypeId);
+            foreach(Type innerType in typeof(SpecTypeId).GetMembers().OfType<Type>()) {
+                yield return innerType;
+            }
         }
     }
 
 #endif
+    
 }
