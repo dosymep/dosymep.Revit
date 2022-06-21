@@ -34,15 +34,7 @@ namespace dosymep.Revit {
                 return UnitTypeUndefinedName;
             }
 
-#if D2021 || R2021
-
-            if(!UnitUtils.IsSpec(forgeTypeId)) {
-                throw new ArgumentException(
-                    $"Переданный ForgeTypeId \"{forgeTypeId.TypeId}\" не является единицей измерения.",
-                    nameof(forgeTypeId));
-            }
-
-#else
+#if REVIT_2022_OR_GREATER
 
             if(!SpecUtils.IsSpec(forgeTypeId)) {
                 throw new ArgumentException(
