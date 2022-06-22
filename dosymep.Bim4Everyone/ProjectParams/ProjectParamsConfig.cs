@@ -333,7 +333,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// КВГ_Пожарный отсек
         /// </summary>
         public ProjectParam FireCompartmentName
-            => new ProjectParam(nameof(RoomGroupName)) {
+            => new ProjectParam(nameof(FireCompartmentName)) {
                 Name = "КВГ_Пожарный отсек", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
             };
 
@@ -357,7 +357,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// КВГ_Наименование
         /// </summary>
         public ProjectParam RoomName
-            => new ProjectParam(nameof(RoomTypeGroupName)) {
+            => new ProjectParam(nameof(RoomName)) {
                 Name = "КВГ_Наименование", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
             };
         
