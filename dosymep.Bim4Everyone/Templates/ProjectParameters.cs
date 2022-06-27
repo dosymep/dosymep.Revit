@@ -11,13 +11,17 @@ using dosymep.Bim4Everyone;
 using dosymep.Bim4Everyone.KeySchedules;
 using dosymep.Bim4Everyone.ProjectParams;
 using dosymep.Bim4Everyone.SharedParams;
+using dosymep.Bim4Everyone.SimpleServices;
 using dosymep.Revit;
+using dosymep.SimpleServices;
 
 namespace dosymep.Bim4Everyone.Templates {
     /// <summary>
     /// Класс по копирование параметров проекта.
     /// </summary>
     public class ProjectParameters {
+        private readonly ILoggerService _loggerService;
+
         /// <summary>
         /// Создает экземпляр класса параметров проекта.
         /// </summary>
@@ -34,7 +38,9 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <summary>
         /// Конструктор класса.
         /// </summary>
-        internal ProjectParameters() { }
+        internal ProjectParameters() {
+            _loggerService = ServicesProvider.GetPlatformService<ILoggerService>();
+        }
 
         /// <summary>
         /// Приложение Revit.
@@ -369,7 +375,7 @@ namespace dosymep.Bim4Everyone.Templates {
                 .Where(item => item != null)
                 .Select(item => item.Id)
                 .ToArray();
-                    
+
             if(sourceParamElementIds.Length > 0) {
                 ElementTransformUtils.CopyElements(source, sourceParamElementIds, target,
                     Transform.Identity,
@@ -379,8 +385,12 @@ namespace dosymep.Bim4Everyone.Templates {
 
         private void RevitParamsSync(Document source, Document target, IEnumerable<RevitParam> revitParams) {
             foreach(RevitParam revitParam in revitParams) {
-                if(revitParam.IsExistsParam(target)) {
-                    RevitParamBindingsSync(source, target, revitParam);
+                try {
+                    if(revitParam.IsExistsParam(target)) {
+                        RevitParamBindingsSync(source, target, revitParam);
+                    }
+                } catch(Exception ex) {
+                    _loggerService.Warning(ex, "Не удалось синхронизировать параметр {@revitParam} в документе {@document}", revitParam, target.Title);
                 }
             }
         }
