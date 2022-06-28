@@ -331,6 +331,23 @@ namespace dosymep.Bim4Everyone.SharedParams {
             => new SharedParam(nameof(VISUnit), new Guid("02d3bf80-f03c-4055-ad5c-3dfb2c6ff26a")) {
                 Name = "ФОП_ВИС_Единица измерения", UnitType = UnitType.UT_Number, StorageType = StorageType.String
             };
+        
+        /// <summary>
+        /// ФОП_ВИС_Имя внесистемных элементов
+        /// </summary>
+        public SharedParam VISOutSystemName
+            => new SharedParam(nameof(VISUnit), new Guid("ccbdb4ac-389e-4e17-890f-bdd1c6368724")) {
+                Name = "ФОП_ВИС_Имя внесистемных элементов", UnitType = UnitType.UT_Number, StorageType = StorageType.String
+            };
+        
+        
+        /// <summary>
+        /// ФОП_ВИС_Сокращение для системы
+        /// </summary>
+        public SharedParam VISSystemShortName
+            => new SharedParam(nameof(VISUnit), new Guid("da024aab-a886-456c-b7c1-64fcaf40383d")) {
+                Name = "ФОП_ВИС_Сокращение для системы", UnitType = UnitType.UT_Number, StorageType = StorageType.String
+            };
 
 #else
 
@@ -635,6 +652,24 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public SharedParam VISUnit
             => new SharedParam(nameof(VISUnit), new Guid("02d3bf80-f03c-4055-ad5c-3dfb2c6ff26a")) {
                 Name = "ФОП_ВИС_Единица измерения", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
+            };
+        
+        
+        /// <summary>
+        /// ФОП_ВИС_Имя внесистемных элементов
+        /// </summary>
+        public SharedParam VISOutSystemName
+            => new SharedParam(nameof(VISUnit), new Guid("ccbdb4ac-389e-4e17-890f-bdd1c6368724")) {
+                Name = "ФОП_ВИС_Имя внесистемных элементов", UnitType = SpecTypeId.String.Text, StorageType = StorageType.String
+            };
+        
+        
+        /// <summary>
+        /// ФОП_ВИС_Сокращение для системы
+        /// </summary>
+        public SharedParam VISSystemShortName
+            => new SharedParam(nameof(VISUnit), new Guid("da024aab-a886-456c-b7c1-64fcaf40383d")) {
+                Name = "ФОП_ВИС_Сокращение для системы", UnitType = SpecTypeId.String.Text, StorageType = StorageType.String
             };
 
 #endif
