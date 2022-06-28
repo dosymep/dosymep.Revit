@@ -2184,7 +2184,7 @@ namespace dosymep.Revit {
         /// Возвращает <see cref="Autodesk.Revit.DB.ForgeTypeId"/> для системного параметра.
         /// </summary>
         /// <param name="builtInParameter">Системный параметр.</param>
-        /// <returns>Возвращает <see cref="Autodesk.Revit.DB.UnitType"/> для системного параметра.</returns>
+        /// <returns>Возвращает <see cref="Autodesk.Revit.DB.ForgeTypeId"/> для системного параметра.</returns>
         public static ForgeTypeId GetUnitType(this BuiltInParameter builtInParameter) {
             switch((int) builtInParameter) {
                 case -1155215: // BuiltInParameter.REBAR_HOOK_LENGTH_OVERRIDE
