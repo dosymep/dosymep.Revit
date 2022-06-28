@@ -64,6 +64,21 @@ namespace dosymep.Bim4Everyone.Schedules {
         /// КВГ_Удаление помещений по этажам
         /// </summary>
         public ScheduleRule RoomsCheckRemoves { get; internal set; } = new ScheduleRule() { ScheduleName = "КВГ_Удаление помещений по этажам" };
+        
+        /// <summary>
+        /// КВГ_(Проверка) Отклонение от площади по ТЗ
+        /// </summary>
+        public ScheduleRule RoomsCheckDeviationAreas { get; internal set; } = new ScheduleRule() { ScheduleName = "КВГ_(Проверка) Отклонение от площади по ТЗ" };
+        
+        /// <summary>
+        /// КВГ_(Проверка) Квартирография по типам
+        /// </summary>
+        public ScheduleRule RoomsCheckTypes { get; internal set; } = new ScheduleRule() { ScheduleName = "КВГ_(Проверка) Квартирография по типам" };
+        
+        /// <summary>
+        /// КВГ_(Проверка) Тип группы
+        /// </summary>
+        public ScheduleRule RoomsCheckGroupTypes { get; internal set; } = new ScheduleRule() { ScheduleName = "КВГ_(Проверка) Тип группы" };
 
         #endregion
 
