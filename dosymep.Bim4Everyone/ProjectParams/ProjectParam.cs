@@ -75,5 +75,184 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
             return param;
         }
+
+#if REVIT_2020
+
+        /// <summary>
+        /// Возвращает единицу измерения параметра по его идентификатору.
+        /// </summary>
+        /// <param name="paramId">Идентификатор параметра.</param>
+        /// <returns>Возвращает единицу измерения параметра по его идентификатору.</returns>
+        internal static UnitType GetUnitType(string paramId) {
+            switch(paramId) {
+                case nameof(ProjectParamsConfig.ViewGroup):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.ProjectStage):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.ViewNumberOnSheet):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.WithFullSheetNumber):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.WithSheetNumber):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.RoomAreaRatio):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.IsRoomBalcony):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.IsRoomLiving):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.RoomGroupShortName):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.ApartmentGroupName):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.RoomSectionShortName):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.RoomTypeGroupShortName):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.FireCompartmentShortName):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.ApartmentAreaSpec):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.ApartmentAreaMinSpec):
+                    return UnitType.UT_Area;
+                case nameof(ProjectParamsConfig.ApartmentAreaMaxSpec):
+                    return UnitType.UT_Area;
+                case nameof(ProjectParamsConfig.IsRoomNumberFix):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.NumberingOrder):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.CheckCorrectDistanceGrid):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.CheckIsNormalGrid):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.RoomGroupName):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.FireCompartmentName):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.RoomSectionName):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.RoomTypeGroupName):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.RoomName):
+                    return UnitType.UT_Number;
+                default:
+                    throw new ArgumentException($"Не найден параметр проекта с идентификатором \"{paramId}\".",
+                        nameof(paramId));
+            }
+        }
+        
+#elif REVIT_2021
+        
+        /// <summary>
+        /// Возвращает единицу измерения параметра по его идентификатору.
+        /// </summary>
+        /// <param name="paramId">Идентификатор параметра.</param>
+        /// <returns>Возвращает единицу измерения параметра по его идентификатору.</returns>
+        internal static ForgeTypeId GetUnitType(string paramId) {
+            switch(paramId) {
+                case nameof(ProjectParamsConfig.ViewGroup):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.ProjectStage):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.ViewNumberOnSheet):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.WithFullSheetNumber):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.WithSheetNumber):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.RoomAreaRatio):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.IsRoomBalcony):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.IsRoomLiving):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.RoomGroupShortName):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.ApartmentGroupName):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.RoomSectionShortName):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.RoomTypeGroupShortName):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.FireCompartmentShortName):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.ApartmentAreaSpec):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.ApartmentAreaMinSpec):
+                    return SpecTypeId.Area;
+                case nameof(ProjectParamsConfig.ApartmentAreaMaxSpec):
+                    return SpecTypeId.Area;
+                case nameof(ProjectParamsConfig.IsRoomNumberFix):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.NumberingOrder):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.CheckCorrectDistanceGrid):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.CheckIsNormalGrid):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.RoomGroupName):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.FireCompartmentName):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.RoomSectionName):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.RoomTypeGroupName):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.RoomName):
+                    return SpecTypeId.Number;
+                default:
+                    throw new ArgumentException($"Не найден параметр проекта с идентификатором \"{paramId}\".",
+                        nameof(paramId));
+            }
+        }
+
+#else
+        
+        /// <summary>
+        /// Возвращает единицу измерения параметра по его идентификатору.
+        /// </summary>
+        /// <param name="paramId">Идентификатор параметра.</param>
+        /// <returns>Возвращает единицу измерения параметра по его идентификатору.</returns>
+        internal static ForgeTypeId GetUnitType(string paramId) {
+            switch(paramId) {
+                case nameof(ProjectParamsConfig.ViewGroup):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.ProjectStage):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.ViewNumberOnSheet):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.WithFullSheetNumber):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(ProjectParamsConfig.WithSheetNumber):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(ProjectParamsConfig.IsRoomBalcony):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(ProjectParamsConfig.IsRoomLiving):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(ProjectParamsConfig.IsRoomNumberFix):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(ProjectParamsConfig.NumberingOrder):
+                    return SpecTypeId.Int.Integer;
+                case nameof(ProjectParamsConfig.CheckIsNormalGrid):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.CheckCorrectDistanceGrid):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.RoomGroupName):
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                case nameof(ProjectParamsConfig.FireCompartmentName):
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                case nameof(ProjectParamsConfig.RoomSectionName):
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                case nameof(ProjectParamsConfig.RoomTypeGroupName):
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                case nameof(ProjectParamsConfig.RoomName):
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                default:
+                    throw new ArgumentException($"Не найден параметр проекта с идентификатором \"{paramId}\".",
+                        nameof(paramId));
+            }
+        }
+
+#endif
     }
 }

@@ -27,102 +27,14 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// <remarks>Перед использованием нужно вызвать <see cref="Load(string)"/></remarks>
         public static ProjectParamsConfig Instance { get; internal set; }
 
-#if REVIT_2020
-
-        /// <summary>
-        /// Пров_Ровно от Оси
-        /// </summary>
-        public ProjectParam CheckCorrectDistanceGrid
-            => new ProjectParam(nameof(CheckCorrectDistanceGrid)) {
-                Name = "Пров_Ровно от Оси", UnitType = UnitType.UT_Number, StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// Пров_Ортогональность Осям
-        /// </summary>
-        public ProjectParam CheckIsNormalGrid
-            => new ProjectParam(nameof(CheckIsNormalGrid)) {
-                Name = "Пров_Ортогональность Осям", UnitType = UnitType.UT_Number, StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// КВГ_Летнее
-        /// </summary>
-        public ProjectParam IsRoomBalcony
-            => new ProjectParam(nameof(IsRoomBalcony)) {
-                Name = "КВГ_Летнее", UnitType = UnitType.UT_Number, StorageType = StorageType.Integer
-            };
-
-        /// <summary>
-        /// КВГ_Жилое
-        /// </summary>
-        public ProjectParam IsRoomLiving
-            => new ProjectParam(nameof(IsRoomLiving)) {
-                Name = "КВГ_Жилое", UnitType = UnitType.UT_Number, StorageType = StorageType.Integer
-            };
-
-        /// <summary>
-        /// КВГ_ПМЩ_Фиксация номера
-        /// </summary>
-        public ProjectParam IsRoomNumberFix
-            => new ProjectParam(nameof(IsRoomNumberFix)) {
-                Name = "КВГ_ПМЩ_Фиксация номера", UnitType = UnitType.UT_Number, StorageType = StorageType.Integer
-            };
-
-        /// <summary>
-        /// КВГ_Приоритет нумерации
-        /// </summary>
-        public ProjectParam NumberingOrder
-            => new ProjectParam(nameof(NumberingOrder)) {
-                Name = "КВГ_Приоритет нумерации", UnitType = UnitType.UT_Number, StorageType = StorageType.Integer
-            };
-
-        /// <summary>
-        /// _Стадия Проекта
-        /// </summary>
-        public ProjectParam ProjectStage
-            => new ProjectParam(nameof(ProjectStage)) {
-                Name = "_Стадия Проекта", UnitType = UnitType.UT_Number, StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// _Группа Видов
-        /// </summary>
-        public ProjectParam ViewGroup
-            => new ProjectParam(nameof(ViewGroup)) {
-                Name = "_Группа Видов", UnitType = UnitType.UT_Number, StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// _Полный Номер Листа
-        /// </summary>
-        public ProjectParam WithFullSheetNumber
-            => new ProjectParam(nameof(WithFullSheetNumber)) {
-                Name = "_Полный Номер Листа", UnitType = UnitType.UT_Number, StorageType = StorageType.Integer
-            };
-
-        /// <summary>
-        /// _Номера Листа Наличие
-        /// </summary>
-        public ProjectParam WithSheetNumber
-            => new ProjectParam(nameof(WithSheetNumber)) {
-                Name = "_Номера Листа Наличие", UnitType = UnitType.UT_Number, StorageType = StorageType.Integer
-            };
-
-        /// <summary>
-        /// _Номер Вида на Листе
-        /// </summary>
-        public ProjectParam ViewNumberOnSheet
-            => new ProjectParam(nameof(ViewNumberOnSheet)) {
-                Name = "_Номер Вида на Листе", UnitType = UnitType.UT_Number, StorageType = StorageType.String
-            };
-
         /// <summary>
         /// КВГ_Группа
         /// </summary>
         public ProjectParam RoomGroupName
             => new ProjectParam(nameof(RoomGroupName)) {
-                Name = "КВГ_Группа", UnitType = UnitType.UT_Number, StorageType = StorageType.ElementId
+                Name = "КВГ_Группа",
+                UnitType = ProjectParam.GetUnitType(nameof(RoomGroupName)),
+                StorageType = StorageType.ElementId
             };
 
         /// <summary>
@@ -130,7 +42,9 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam FireCompartmentName
             => new ProjectParam(nameof(FireCompartmentName)) {
-                Name = "КВГ_Пожарный отсек", UnitType = UnitType.UT_Number, StorageType = StorageType.ElementId
+                Name = "КВГ_Пожарный отсек",
+                UnitType = ProjectParam.GetUnitType(nameof(FireCompartmentName)),
+                StorageType = StorageType.ElementId
             };
 
         /// <summary>
@@ -138,7 +52,9 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomSectionName
             => new ProjectParam(nameof(RoomSectionName)) {
-                Name = "КВГ_Секция", UnitType = UnitType.UT_Number, StorageType = StorageType.ElementId
+                Name = "КВГ_Секция",
+                UnitType = ProjectParam.GetUnitType(nameof(RoomSectionName)),
+                StorageType = StorageType.ElementId
             };
 
         /// <summary>
@@ -146,7 +62,9 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomTypeGroupName
             => new ProjectParam(nameof(RoomTypeGroupName)) {
-                Name = "КВГ_Тип группы помещений", UnitType = UnitType.UT_Number, StorageType = StorageType.ElementId
+                Name = "КВГ_Тип группы помещений",
+                UnitType = ProjectParam.GetUnitType(nameof(RoomTypeGroupName)),
+                StorageType = StorageType.ElementId
             };
 
         /// <summary>
@@ -154,7 +72,130 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomName
             => new ProjectParam(nameof(RoomName)) {
-                Name = "КВГ_Наименование", UnitType = UnitType.UT_Number, StorageType = StorageType.ElementId
+                Name = "КВГ_Наименование",
+                UnitType = ProjectParam.GetUnitType(nameof(RoomName)), StorageType = StorageType.ElementId
+            };
+
+        /// <summary>
+        /// _Группа Видов
+        /// </summary>
+        public ProjectParam ViewGroup
+            => new ProjectParam(nameof(ViewGroup)) {
+                Name = "_Группа Видов",
+                UnitType = ProjectParam.GetUnitType(nameof(ViewGroup)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// _Номер Вида на Листе
+        /// </summary>
+        public ProjectParam ViewNumberOnSheet
+            => new ProjectParam(nameof(ViewNumberOnSheet)) {
+                Name = "_Номер Вида на Листе",
+                UnitType = ProjectParam.GetUnitType(nameof(ViewNumberOnSheet)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// _Номера Листа Наличие
+        /// </summary>
+        public ProjectParam WithSheetNumber
+            => new ProjectParam(nameof(WithSheetNumber)) {
+                Name = "_Номера Листа Наличие",
+                UnitType = ProjectParam.GetUnitType(nameof(WithSheetNumber)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// _Полный Номер Листа
+        /// </summary>
+        public ProjectParam WithFullSheetNumber
+            => new ProjectParam(nameof(WithFullSheetNumber)) {
+                Name = "_Полный Номер Листа",
+                UnitType = ProjectParam.GetUnitType(nameof(WithFullSheetNumber)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// _Стадия Проекта
+        /// </summary>
+        public ProjectParam ProjectStage
+            => new ProjectParam(nameof(ProjectStage)) {
+                Name = "_Стадия Проекта",
+                UnitType = ProjectParam.GetUnitType(nameof(ProjectStage)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// КВГ_Жилое
+        /// </summary>
+        public ProjectParam IsRoomLiving
+            => new ProjectParam(nameof(IsRoomLiving)) {
+                Name = "КВГ_Жилое",
+                UnitType = ProjectParam.GetUnitType(nameof(IsRoomLiving)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// КВГ_Летнее
+        /// </summary>
+        public ProjectParam IsRoomBalcony
+            => new ProjectParam(nameof(IsRoomBalcony)) {
+                Name = "КВГ_Летнее",
+                UnitType = ProjectParam.GetUnitType(nameof(IsRoomBalcony)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// КВГ_ПМЩ_Фиксация номера
+        /// </summary>
+        public ProjectParam IsRoomNumberFix
+            => new ProjectParam(nameof(IsRoomNumberFix)) {
+                Name = "КВГ_ПМЩ_Фиксация номера",
+                UnitType = ProjectParam.GetUnitType(nameof(IsRoomNumberFix)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// КВГ_Приоритет нумерации
+        /// </summary>
+        public ProjectParam NumberingOrder
+            => new ProjectParam(nameof(NumberingOrder)) {
+                Name = "КВГ_Приоритет нумерации",
+                UnitType = ProjectParam.GetUnitType(nameof(NumberingOrder)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// Пров_Ортогональность Осям
+        /// </summary>
+        public ProjectParam CheckIsNormalGrid
+            => new ProjectParam(nameof(CheckIsNormalGrid)) {
+                Name = "Пров_Ортогональность Осям",
+                UnitType = ProjectParam.GetUnitType(nameof(CheckIsNormalGrid)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// Пров_Ровно от Оси
+        /// </summary>
+        public ProjectParam CheckCorrectDistanceGrid
+            => new ProjectParam(nameof(CheckCorrectDistanceGrid)) {
+                Name = "Пров_Ровно от Оси",
+                UnitType = ProjectParam.GetUnitType(nameof(CheckCorrectDistanceGrid)),
+                StorageType = StorageType.String
+            };
+
+#if REVIT_2020 || REVIT_2021
+
+        /// <summary>
+        /// КВГ_Доп. сортировка групп
+        /// </summary>
+        public ProjectParam ApartmentGroupName
+            => new ProjectParam(nameof(ApartmentGroupName)) {
+                Name = "КВГ_Доп. сортировка групп",
+                UnitType = ProjectParam.GetUnitType(nameof(ApartmentGroupName)),
+                StorageType = StorageType.String
             };
 
         /// <summary>
@@ -162,15 +203,9 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomAreaRatio
             => new ProjectParam(nameof(RoomAreaRatio)) {
-                Name = "КВГ_Коэффициент площади", UnitType = UnitType.UT_Number, StorageType = StorageType.Double
-            };
-
-        /// <summary>
-        /// КВГ_Доп. сортировка групп
-        /// </summary>
-        public ProjectParam ApartmentGroupName
-            => new ProjectParam(nameof(ApartmentGroupName)) {
-                Name = "КВГ_Доп. сортировка групп", UnitType = UnitType.UT_Number, StorageType = StorageType.String
+                Name = "КВГ_Коэффициент площади",
+                UnitType = ProjectParam.GetUnitType(nameof(RoomAreaRatio)),
+                StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -178,7 +213,9 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomGroupShortName
             => new ProjectParam(nameof(RoomGroupShortName)) {
-                Name = "КВГ_ПМЩ_Группа короткое", UnitType = UnitType.UT_Number, StorageType = StorageType.String
+                Name = "КВГ_ПМЩ_Группа короткое",
+                UnitType = ProjectParam.GetUnitType(nameof(RoomGroupShortName)),
+                StorageType = StorageType.String
             };
 
         /// <summary>
@@ -186,7 +223,9 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam FireCompartmentShortName
             => new ProjectParam(nameof(FireCompartmentShortName)) {
-                Name = "КВГ_Пожарный отсек короткое", UnitType = UnitType.UT_Number, StorageType = StorageType.String
+                Name = "КВГ_Пожарный отсек короткое",
+                UnitType = ProjectParam.GetUnitType(nameof(FireCompartmentShortName)),
+                StorageType = StorageType.String
             };
 
         /// <summary>
@@ -194,7 +233,9 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam RoomSectionShortName
             => new ProjectParam(nameof(RoomSectionShortName)) {
-                Name = "КВГ_Секция короткое", UnitType = UnitType.UT_Number, StorageType = StorageType.String
+                Name = "КВГ_Секция короткое",
+                UnitType = ProjectParam.GetUnitType(nameof(RoomSectionShortName)),
+                StorageType = StorageType.String
             };
 
         /// <summary>
@@ -203,7 +244,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         public ProjectParam RoomTypeGroupShortName
             => new ProjectParam(nameof(RoomTypeGroupShortName)) {
                 Name = "КВГ_Тип группы помещений короткий",
-                UnitType = UnitType.UT_Number,
+                UnitType = ProjectParam.GetUnitType(nameof(RoomTypeGroupShortName)),
                 StorageType = StorageType.String
             };
 
@@ -212,7 +253,9 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam ApartmentAreaMinSpec
             => new ProjectParam(nameof(ApartmentAreaMinSpec)) {
-                Name = "КВГ_КВР_Площадь по ТЗ мин", UnitType = UnitType.UT_Area, StorageType = StorageType.Double
+                Name = "КВГ_КВР_Площадь по ТЗ мин",
+                UnitType = ProjectParam.GetUnitType(nameof(ApartmentAreaMinSpec)),
+                StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -220,7 +263,9 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam ApartmentAreaMaxSpec
             => new ProjectParam(nameof(ApartmentAreaMaxSpec)) {
-                Name = "КВГ_КВР_Площадь по ТЗ макс", UnitType = UnitType.UT_Area, StorageType = StorageType.Double
+                Name = "КВГ_КВР_Площадь по ТЗ макс",
+                UnitType = ProjectParam.GetUnitType(nameof(ApartmentAreaMaxSpec)),
+                StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -228,219 +273,12 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         /// </summary>
         public ProjectParam ApartmentAreaSpec
             => new ProjectParam(nameof(ApartmentAreaSpec)) {
-                Name = "КВГ_КВР_Площадь по ТЗ", UnitType = UnitType.UT_Number, StorageType = StorageType.String
-            };
-
-#else
-        
-        /// <summary>
-        /// Пров_Ровно от Оси
-        /// </summary>
-        public ProjectParam CheckCorrectDistanceGrid
-            => new ProjectParam(nameof(CheckCorrectDistanceGrid)) {
-                Name = "Пров_Ровно от Оси", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// Пров_Ортогональность Осям
-        /// </summary>
-        public ProjectParam CheckIsNormalGrid
-            => new ProjectParam(nameof(CheckIsNormalGrid)) {
-                Name = "Пров_Ортогональность Осям", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// КВГ_Летнее
-        /// </summary>
-        public ProjectParam IsRoomBalcony
-            => new ProjectParam(nameof(IsRoomBalcony)) {
-                Name = "КВГ_Летнее", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Integer
-            };
-
-        /// <summary>
-        /// КВГ_Жилое
-        /// </summary>
-        public ProjectParam IsRoomLiving
-            => new ProjectParam(nameof(IsRoomLiving)) {
-                Name = "КВГ_Жилое", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Integer
-            };
-
-        /// <summary>
-        /// КВГ_ПМЩ_Фиксация номера
-        /// </summary>
-        public ProjectParam IsRoomNumberFix
-            => new ProjectParam(nameof(IsRoomNumberFix)) {
-                Name = "КВГ_ПМЩ_Фиксация номера", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Integer
-            };
-
-        /// <summary>
-        /// КВГ_Приоритет нумерации
-        /// </summary>
-        public ProjectParam NumberingOrder
-            => new ProjectParam(nameof(NumberingOrder)) {
-                Name = "КВГ_Приоритет нумерации", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Integer
-            };
-
-        /// <summary>
-        /// _Стадия Проекта
-        /// </summary>
-        public ProjectParam ProjectStage
-            => new ProjectParam(nameof(ProjectStage)) {
-                Name = "_Стадия Проекта", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// _Группа Видов
-        /// </summary>
-        public ProjectParam ViewGroup
-            => new ProjectParam(nameof(ViewGroup)) {
-                Name = "_Группа Видов", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// _Полный Номер Листа
-        /// </summary>
-        public ProjectParam WithFullSheetNumber
-            => new ProjectParam(nameof(WithFullSheetNumber)) {
-                Name = "_Полный Номер Листа", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Integer
-            };
-
-        /// <summary>
-        /// _Номера Листа Наличие
-        /// </summary>
-        public ProjectParam WithSheetNumber
-            => new ProjectParam(nameof(WithSheetNumber)) {
-                Name = "_Номера Листа Наличие", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Integer
-            };
-
-        /// <summary>
-        /// _Номер Вида на Листе
-        /// </summary>
-        public ProjectParam ViewNumberOnSheet
-            => new ProjectParam(nameof(ViewNumberOnSheet)) {
-                Name = "_Номер Вида на Листе", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// КВГ_Группа
-        /// </summary>
-        public ProjectParam RoomGroupName
-            => new ProjectParam(nameof(RoomGroupName)) {
-                Name = "КВГ_Группа", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
-            };
-
-        /// <summary>
-        /// КВГ_Пожарный отсек
-        /// </summary>
-        public ProjectParam FireCompartmentName
-            => new ProjectParam(nameof(FireCompartmentName)) {
-                Name = "КВГ_Пожарный отсек", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
-            };
-
-        /// <summary>
-        /// КВГ_Секция
-        /// </summary>
-        public ProjectParam RoomSectionName
-            => new ProjectParam(nameof(RoomSectionName)) {
-                Name = "КВГ_Секция", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
-            };
-
-        /// <summary>
-        /// КВГ_Тип группы помещений
-        /// </summary>
-        public ProjectParam RoomTypeGroupName
-            => new ProjectParam(nameof(RoomTypeGroupName)) {
-                Name = "КВГ_Тип группы помещений", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
-            };
-
-        /// <summary>
-        /// КВГ_Наименование
-        /// </summary>
-        public ProjectParam RoomName
-            => new ProjectParam(nameof(RoomName)) {
-                Name = "КВГ_Наименование", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.ElementId
-            };
-        
-#endif
-
-#if REVIT_2021
-
-        /// <summary>
-        /// КВГ_Коэффициент площади
-        /// </summary>
-        public ProjectParam RoomAreaRatio
-            => new ProjectParam(nameof(RoomAreaRatio)) {
-                Name = "КВГ_Коэффициент площади", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.Double
-            };
-
-        /// <summary>
-        /// КВГ_Доп. сортировка групп
-        /// </summary>
-        public ProjectParam ApartmentGroupName
-            => new ProjectParam(nameof(ApartmentGroupName)) {
-                Name = "КВГ_Доп. сортировка групп", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// КВГ_ПМЩ_Группа короткое
-        /// </summary>
-        public ProjectParam RoomGroupShortName
-            => new ProjectParam(nameof(RoomGroupShortName)) {
-                Name = "КВГ_ПМЩ_Группа короткое", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// КВГ_Пожарный отсек короткое
-        /// </summary>
-        public ProjectParam FireCompartmentShortName
-            => new ProjectParam(nameof(FireCompartmentShortName)) {
-                Name = "КВГ_Пожарный отсек короткое", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// КВГ_Секция короткое
-        /// </summary>
-        public ProjectParam RoomSectionShortName
-            => new ProjectParam(nameof(RoomSectionShortName)) {
-                Name = "КВГ_Секция короткое", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
-            };
-
-        /// <summary>
-        /// КВГ_Тип группы помещений короткий
-        /// </summary>
-        public ProjectParam RoomTypeGroupShortName
-            => new ProjectParam(nameof(RoomTypeGroupShortName)) {
-                Name = "КВГ_Тип группы помещений короткий",
-                UnitTypeName = nameof(SpecTypeId.Number),
+                Name = "КВГ_КВР_Площадь по ТЗ",
+                UnitType = ProjectParam.GetUnitType(nameof(ApartmentAreaSpec)),
                 StorageType = StorageType.String
             };
 
-        /// <summary>
-        /// КВГ_КВР_Площадь по ТЗ мин
-        /// </summary>
-        public ProjectParam ApartmentAreaMinSpec
-            => new ProjectParam(nameof(ApartmentAreaMinSpec)) {
-                Name = "КВГ_КВР_Площадь по ТЗ мин", UnitTypeName = nameof(SpecTypeId.Area), StorageType = StorageType.Double
-            };
-
-        /// <summary>
-        /// КВГ_КВР_Площадь по ТЗ макс
-        /// </summary>
-        public ProjectParam ApartmentAreaMaxSpec
-            => new ProjectParam(nameof(ApartmentAreaMaxSpec)) {
-                Name = "КВГ_КВР_Площадь по ТЗ макс", UnitTypeName = nameof(SpecTypeId.Area), StorageType = StorageType.Double
-            };
-
-        /// <summary>
-        /// КВГ_КВР_Площадь по ТЗ
-        /// </summary>
-        public ProjectParam ApartmentAreaSpec
-            => new ProjectParam(nameof(ApartmentAreaSpec)) {
-                Name = "КВГ_КВР_Площадь по ТЗ", UnitTypeName = nameof(SpecTypeId.Number), StorageType = StorageType.String
-            };
-
 #endif
-
 
         /// <inheritdoc />
         RevitParam IParamElementService.CreateRevitParam(Document document, string revitParamName) {
