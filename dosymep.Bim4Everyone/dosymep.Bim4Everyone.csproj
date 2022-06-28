@@ -1,5 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <Import Project="..\ProjectProps\Common.props"/>
+    <PropertyGroup>
+      <Configurations>D2020;D2021;D2022;R2020;R2021;R2022;D2023;R2023</Configurations>
+      <Platforms>x64</Platforms>
+    </PropertyGroup>
+    <Import Project="..\ProjectProps\Common.props" />
 
     <ItemGroup>
         <Reference Include="dosymep.SimpleServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -19,8 +23,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Reference Include="PresentationFramework"/>
-        <Reference Include="PresentationCore"/>
+        <Reference Include="PresentationFramework" />
+        <Reference Include="PresentationCore" />
 
         <PackageReference Include="Ninject" Version="3.3.4">
             <PrivateAssets>all</PrivateAssets>
@@ -39,6 +43,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\dosymep.Revit\dosymep.Revit.csproj"/>
+        <ProjectReference Include="..\dosymep.Revit\dosymep.Revit.csproj" />
     </ItemGroup>
 </Project>
