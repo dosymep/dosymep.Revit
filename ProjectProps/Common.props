@@ -22,7 +22,7 @@
     <PropertyGroup Condition="'$(Configuration)'=='D2023' OR '$(Configuration)'=='R2023'">
         <RevitVersion>2023</RevitVersion>
     </PropertyGroup>
-    
+
     <PropertyGroup Condition="'$(RevitVersion)'=='2020'">
         <DefineConstants>$(DefineConstants);REVIT_2020</DefineConstants>
     </PropertyGroup>
@@ -38,7 +38,23 @@
     <PropertyGroup Condition="'$(RevitVersion)'=='2023'">
         <DefineConstants>$(DefineConstants);REVIT_2023</DefineConstants>
     </PropertyGroup>
-    
+
+    <PropertyGroup Condition="'$(RevitVersion)'&lt;='2020'">
+        <DefineConstants>$(DefineConstants);REVIT_2020_OR_LESS</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(RevitVersion)'&lt;='2021'">
+        <DefineConstants>$(DefineConstants);REVIT_2021_OR_LESS</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(RevitVersion)'&lt;='2022'">
+        <DefineConstants>$(DefineConstants);REVIT_2022_OR_LESS</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(RevitVersion)'&lt;='2023'">
+        <DefineConstants>$(DefineConstants);REVIT_2023_OR_LESS</DefineConstants>
+    </PropertyGroup>
+
     <PropertyGroup Condition="'$(RevitVersion)'>='2020'">
         <DefineConstants>$(DefineConstants);REVIT_2020_OR_GREATER</DefineConstants>
     </PropertyGroup>
