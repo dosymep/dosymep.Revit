@@ -15,7 +15,9 @@ namespace dosymep.Bim4Everyone {
         /// Статический конструктор
         /// </summary>
         static ModuleEnvironment() {
-            CurrentLibraryPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            CurrentLibraryPath =
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                    @"pyRevit\Extensions\BIM4Everyone.lib\dosymep_libs\libs", RevitVersion);
             
             TemplatesPath = Path.Combine(CurrentLibraryPath, "templates");
             EmptyTemplatePath = Path.Combine(TemplatesPath, "empty_project.rte");

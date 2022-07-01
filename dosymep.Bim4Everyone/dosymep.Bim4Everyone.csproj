@@ -3,12 +3,12 @@
 
     <ItemGroup>
         <Reference Include="dosymep.SimpleServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-            <HintPath>$(AppData)\pyRevit\Extensions\BIM4Everyone.lib\dosymep.SimpleServices.dll</HintPath>
+            <HintPath>$(AppData)\pyRevit\Extensions\BIM4Everyone.lib\dosymep_libs\libs\dosymep.SimpleServices.dll</HintPath>
             <Private>False</Private>
         </Reference>
 
         <Reference Include="dosymep.Xpf.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-            <HintPath>$(AppData)\pyRevit\Extensions\BIM4Everyone.lib\dosymep.Xpf.Core.dll</HintPath>
+            <HintPath>$(AppData)\pyRevit\Extensions\BIM4Everyone.lib\dosymep_libs\libs\dosymep.Xpf.Core.dll</HintPath>
             <Private>False</Private>
         </Reference>
 
