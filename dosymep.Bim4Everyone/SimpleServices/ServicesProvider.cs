@@ -2,9 +2,8 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Windows;
-using System.Windows.Interop;
 
+using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.UI;
 
 using dosymep.Bim4Everyone.SimpleServices.ServicesModules;
@@ -33,10 +32,20 @@ namespace dosymep.Bim4Everyone.SimpleServices {
             Instance?.Dispose();
             Instance = new StandardKernel();
             Instance.Load(new XtraServicesModule(),
-                new ProfileServicesModule(),
-                new SerilogServicesModule(),
+                new SerilogServicesModule(false),
                 new JsonSerializationServicesModule(),
                 new RevitServicesModule(uiApplication));
+        }
+        
+        /// <summary>
+        /// Загружает сервисы платформы.
+        /// </summary>
+        public static void LoadInstanceCore(Application application) {
+            Instance?.Dispose();
+            Instance = new StandardKernel();
+            Instance.Bind<Application>().ToConstant(application);
+            Instance.Load(new SerilogServicesModule(true),
+                new JsonSerializationServicesModule());
         }
 
         /// <summary>
