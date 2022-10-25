@@ -32,7 +32,10 @@
             <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
 
-        <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
 
         <PackageReference Include="Serilog.Sinks.File" Version="5.0.0">
             <PrivateAssets>all</PrivateAssets>
