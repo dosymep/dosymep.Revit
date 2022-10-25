@@ -69,9 +69,9 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
         private static ILogger InitRevitCoreConsoleLogger(IContext context) {
             var application = context.Kernel.Get<Application>();
             var localFileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                "RevitCoreConsole", application.VersionNumber, "RevitCoreConsole_.log");
+                "RevitCoreConsole", application.VersionNumber, "Bim4Everyone_.log");
 
-            RollingInterval rollingInterval = RollingInterval.Day;
+            RollingInterval rollingInterval = RollingInterval.Infinite;
             int fileSizeLimitBytes = 500000000;
             bool rollOnFileSizeLimit = true;
             int retainedFileCountLimit = 99;
@@ -104,7 +104,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
         }
 
         public void Emit(LogEvent logEvent) {
-            _application.WriteJournalComment(logEvent.RenderMessage(_formatProvider), true);
+            _application.WriteJournalComment(logEvent.RenderMessage(_formatProvider), false);
         }
     }
 
