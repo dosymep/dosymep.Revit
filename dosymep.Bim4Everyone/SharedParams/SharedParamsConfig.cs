@@ -177,7 +177,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
             };
         
         /// <summary>
-        /// ФОП_Секция СМР
+        /// ФОП_Типизация СМР
         /// </summary>
         public SharedParam BuildingWorksTyping
             => new SharedParam(nameof(BuildingWorksSection), new Guid("2e5cc8dc-7598-4d94-887b-d239bcf4de76")) {
