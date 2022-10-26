@@ -5,7 +5,6 @@
       <option name="Build" default="false" projectName="dosymep.Bim4Everyone" projectPath="file://$PROJECT_DIR$/dosymep.Bim4Everyone/dosymep.Bim4Everyone.csproj" />
       <option name="RunConfigurationTask" enabled="true" run_configuration_name="Publish D2021" run_configuration_type="DotNetFolderPublish" />
       <option name="RunConfigurationTask" enabled="true" run_configuration_name="Publish D2022" run_configuration_type="DotNetFolderPublish" />
-      <option name="RunConfigurationTask" enabled="true" run_configuration_name="Publish D2023" run_configuration_type="DotNetFolderPublish" />
     </method>
   </configuration>
 </component>
