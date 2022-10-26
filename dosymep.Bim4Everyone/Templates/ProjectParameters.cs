@@ -412,6 +412,7 @@ namespace dosymep.Bim4Everyone.Templates {
                     if(targetAllCategories.TryGetValue(sourceCategory.Name, out var targetCategory)) {
                         if(!targetCategories.Contains(targetCategory)) {
                             targetCategories.Insert(targetCategory);
+                            target.ParameterBindings.ReInsert(targetSettings.Definition, targetSettings.Binding);
                         }
                     }
                 }
