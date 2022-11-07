@@ -5,9 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using dosymep.Revit.Transmissions;
-
-using InvalidOperationException = Autodesk.Revit.Exceptions.InvalidOperationException;
+using Autodesk.Revit.DB;
 
 namespace dosymep.Revit {
     /// <summary>
@@ -23,7 +21,7 @@ namespace dosymep.Revit {
         /// <param name="paramName">Наименование параметра.</param>
         /// <returns>Возвращает true если параметр был добавлен в Revit, иначе false.</returns>
         /// <exception cref="System.ArgumentException">Наименование параметра не может быть null или пустым.</exception>
-        public static bool IsExistsParam(this Autodesk.Revit.DB.Document document, string paramName) {
+        public static bool IsExistsParam(this Document document, string paramName) {
             if(string.IsNullOrEmpty(paramName)) {
                 throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
@@ -38,7 +36,7 @@ namespace dosymep.Revit {
         /// <param name="paramName">Наименование параметра проекта.</param>
         /// <returns>Возвращает true если параметр проекта был добавлен в Revit, иначе false.</returns>
         /// <exception cref="System.ArgumentException">Наименование параметра проекта не может быть null или пустым.</exception>
-        public static bool IsExistsProjectParam(this Autodesk.Revit.DB.Document document, string paramName) {
+        public static bool IsExistsProjectParam(this Document document, string paramName) {
             if(string.IsNullOrEmpty(paramName)) {
                 throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
@@ -53,7 +51,7 @@ namespace dosymep.Revit {
         /// <param name="paramName">Наименование общего параметра проекта.</param>
         /// <returns>Возвращает true если общий параметр проекта был добавлен в Revit, иначе false.</returns>
         /// <exception cref="System.ArgumentException">Наименование общего параметра не может быть null или пустым.</exception>
-        public static bool IsExistsSharedParam(this Autodesk.Revit.DB.Document document, string paramName) {
+        public static bool IsExistsSharedParam(this Document document, string paramName) {
             if(string.IsNullOrEmpty(paramName)) {
                 throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
             }
@@ -68,7 +66,7 @@ namespace dosymep.Revit {
         /// <param name="paramGuid">Guid общего параметра проекта.</param>
         /// <returns>Возвращает true если общий параметр проекта был добавлен в Revit, иначе false.</returns>
         /// <exception cref="System.ArgumentException">Наименование общего параметра не может быть null или пустым.</exception>
-        public static bool IsExistsSharedParam(this Autodesk.Revit.DB.Document document, Guid paramGuid) {
+        public static bool IsExistsSharedParam(this Document document, Guid paramGuid) {
             return document.GetSharedParams().Any(item => item.GuidValue.Equals(paramGuid));
         }
 
@@ -82,7 +80,7 @@ namespace dosymep.Revit {
         /// <param name="document">Документ.</param>
         /// <param name="paramName">Наименование параметра.</param>
         /// <returns>Возвращает параметр проекта по имени. Если не параметр не был найден, то возвращается null.</returns>
-        public static Autodesk.Revit.DB.ParameterElement GetProjectParam(this Autodesk.Revit.DB.Document document, string paramName) {
+        public static ParameterElement GetProjectParam(this Document document, string paramName) {
             return document.GetProjectParams().FirstOrDefault(item => item.Name.Equals(paramName));
         }
         
@@ -92,7 +90,7 @@ namespace dosymep.Revit {
         /// <param name="document">Документ.</param>
         /// <param name="paramName">Наименование общего параметра.</param>
         /// <returns>Возвращает общий параметр по имени. Если не параметр не был найден, то возвращается null.</returns>
-        public static Autodesk.Revit.DB.SharedParameterElement GetSharedParam(this Autodesk.Revit.DB.Document document, string paramName) {
+        public static SharedParameterElement GetSharedParam(this Document document, string paramName) {
             return document.GetSharedParams().FirstOrDefault(item => item.Name.Equals(paramName)); 
         }
         
@@ -102,7 +100,7 @@ namespace dosymep.Revit {
         /// <param name="document">Документ.</param>
         /// <param name="paramGuid">Guid общего параметра.</param>
         /// <returns>Возвращает общий параметр по имени. Если не параметр не был найден, то возвращается null.</returns>
-        public static Autodesk.Revit.DB.SharedParameterElement GetSharedParam(this Autodesk.Revit.DB.Document document, Guid paramGuid) {
+        public static SharedParameterElement GetSharedParam(this Document document, Guid paramGuid) {
             return document.GetSharedParams().FirstOrDefault(item => item.GuidValue.Equals(paramGuid)); 
         }
         
@@ -112,7 +110,7 @@ namespace dosymep.Revit {
         /// <param name="document">Документ.</param>
         /// <param name="paramName">Наименование параметра.</param>
         /// <returns>Возвращает глобальный параметр по имени. Если не параметр не был найден, то возвращается null.</returns>
-        public static Autodesk.Revit.DB.GlobalParameter GetGlobalParam(this Autodesk.Revit.DB.Document document, string paramName) {
+        public static GlobalParameter GetGlobalParam(this Document document, string paramName) {
             return document.GetGlobalParams().FirstOrDefault(item => item.Name.Equals(paramName)); 
         }
 
@@ -121,7 +119,7 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="document">Документ Revit.</param>
         /// <returns>Возвращает список параметров проекта.</returns>
-        public static IEnumerable<Autodesk.Revit.DB.ParameterElement> GetProjectParams(this Autodesk.Revit.DB.Document document) {
+        public static IEnumerable<ParameterElement> GetProjectParams(this Document document) {
             return document.GetProjectParamElements()
                 .Where(item => item.IsProjectParam());
         }
@@ -131,10 +129,10 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="document">Документ Revit.</param>
         /// <returns>Возвращает список общих параметров.</returns>
-        public static IEnumerable<Autodesk.Revit.DB.SharedParameterElement> GetSharedParams(this Autodesk.Revit.DB.Document document) {
+        public static IEnumerable<SharedParameterElement> GetSharedParams(this Document document) {
             return document.GetProjectParamElements()
                 .Where(item => item.IsSharedParam())
-                .OfType<Autodesk.Revit.DB.SharedParameterElement>();
+                .OfType<SharedParameterElement>();
         }
         
         /// <summary>
@@ -142,10 +140,10 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="document">Документ Revit.</param>
         /// <returns>Возвращает список глобальных параметров.</returns>
-        public static IEnumerable<Autodesk.Revit.DB.GlobalParameter> GetGlobalParams(this Autodesk.Revit.DB.Document document) {
-            return new Autodesk.Revit.DB.FilteredElementCollector(document)
-                .OfClass(typeof(Autodesk.Revit.DB.GlobalParameter))
-                .OfType<Autodesk.Revit.DB.GlobalParameter>();
+        public static IEnumerable<GlobalParameter> GetGlobalParams(this Document document) {
+            return new FilteredElementCollector(document)
+                .OfClass(typeof(GlobalParameter))
+                .OfType<GlobalParameter>();
         }
 
         /// <summary>
@@ -153,8 +151,8 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="document">Документ Revit.</param>
         /// <returns>Возвращает все параметры проекта.</returns>
-        public static IEnumerable<Autodesk.Revit.DB.ParameterElement> GetProjectParamElements(this Autodesk.Revit.DB.Document document) {
-            return document.GetParameterBindings().Select(item => document.GetElement(((dynamic) item.Definition).Id)).OfType<Autodesk.Revit.DB.ParameterElement>();
+        public static IEnumerable<ParameterElement> GetProjectParamElements(this Document document) {
+            return document.GetParameterBindings().Select(item => document.GetElement(((dynamic) item.Definition).Id)).OfType<ParameterElement>();
         }
 
         /// <summary>
@@ -162,10 +160,10 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="document">Документ Revit.</param>
         /// <returns>Возвращает связку определения параметра с привязкой.</returns>
-        public static IEnumerable<(Autodesk.Revit.DB.Definition Definition, Autodesk.Revit.DB.Binding Binding)> GetParameterBindings(this Autodesk.Revit.DB.Document document) {
+        public static IEnumerable<(Definition Definition, Binding Binding)> GetParameterBindings(this Document document) {
             var iterator = document.ParameterBindings.ForwardIterator();
             while(iterator.MoveNext()) {
-                yield return (iterator.Key, (Autodesk.Revit.DB.Binding) iterator.Current);
+                yield return (iterator.Key, (Binding) iterator.Current);
             }
         }
         
@@ -175,8 +173,8 @@ namespace dosymep.Revit {
         /// <param name="document">Документ.</param>
         /// <param name="paramName">Наименование параметра.</param>
         /// <returns>Возвращает настройки привязки для системного параметра. Если параметр не был найден возвращает null.</returns>
-        public static (Autodesk.Revit.DB.Definition Definition, Autodesk.Revit.DB.Binding Binding) GetSystemParamBinding(
-            this Autodesk.Revit.DB.Document document, string paramName) {
+        public static (Definition Definition, Binding Binding) GetSystemParamBinding(
+            this Document document, string paramName) {
             return document.GetParameterBindings()
                 .Where(item => item.Definition.Name.Equals(paramName))
                 .FirstOrDefault(item => document.IsSystemParamDefinition(item.Definition));
@@ -188,8 +186,8 @@ namespace dosymep.Revit {
         /// <param name="document">Документ.</param>
         /// <param name="paramName">Наименование параметра.</param>
         /// <returns>Возвращает настройки привязки для общего параметра. Если параметр не был найден возвращает null.</returns>
-        public static (Autodesk.Revit.DB.Definition Definition, Autodesk.Revit.DB.Binding Binding) GetSharedParamBinding(
-            this Autodesk.Revit.DB.Document document, string paramName) {
+        public static (Definition Definition, Binding Binding) GetSharedParamBinding(
+            this Document document, string paramName) {
             return document.GetParameterBindings()
                 .Where(item => item.Definition.Name.Equals(paramName))
                 .FirstOrDefault(item => document.IsSharedParamDefinition(item.Definition));
@@ -201,8 +199,8 @@ namespace dosymep.Revit {
         /// <param name="document">Документ.</param>
         /// <param name="paramName">Наименование параметра.</param>
         /// <returns>Возвращает настройки привязки для параметра проекта. Если параметр не был найден возвращает null.</returns>
-        public static (Autodesk.Revit.DB.Definition Definition, Autodesk.Revit.DB.Binding Binding) GetProjectParamBinding(
-            this Autodesk.Revit.DB.Document document,string paramName) {
+        public static (Definition Definition, Binding Binding) GetProjectParamBinding(
+            this Document document,string paramName) {
             return document.GetParameterBindings()
                 .Where(item => item.Definition.Name.Equals(paramName))
                 .FirstOrDefault(item => document.IsProjectParamDefinition(item.Definition));
@@ -218,7 +216,7 @@ namespace dosymep.Revit {
         /// <param name="document">Документ Revit.</param>
         /// <param name="definition">Определение параметра.</param>
         /// <returns>Возвращает true - если определение параметра является внутренним, иначе false.</returns>
-        public static bool IsSystemParamDefinition(this Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.Definition definition) {
+        public static bool IsSystemParamDefinition(this Document document, Definition definition) {
             if(document is null) {
                 throw new ArgumentNullException(nameof(document));
             }
@@ -236,7 +234,7 @@ namespace dosymep.Revit {
         /// <param name="document">Документ Revit.</param>
         /// <param name="definition">Определение параметра.</param>
         /// <returns>Возвращает true - если определение параметра является общим, иначе false.</returns>
-        public static bool IsSharedParamDefinition(this Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.Definition definition) {
+        public static bool IsSharedParamDefinition(this Document document, Definition definition) {
             if(document is null) {
                 throw new ArgumentNullException(nameof(document));
             }
@@ -250,7 +248,7 @@ namespace dosymep.Revit {
                 return false;
             }
 
-            return document.GetElement(elementId) is Autodesk.Revit.DB.SharedParameterElement;
+            return document.GetElement(elementId) is SharedParameterElement;
         }
         
         /// <summary>
@@ -259,7 +257,7 @@ namespace dosymep.Revit {
         /// <param name="document">Документ Revit.</param>
         /// <param name="definition">Определение параметра.</param>
         /// <returns>Возвращает true - если определение является глобальным параметром, иначе false.</returns>
-        public static bool IsGlobalParamDefinition(this Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.Definition definition) {
+        public static bool IsGlobalParamDefinition(this Document document, Definition definition) {
             if(document is null) {
                 throw new ArgumentNullException(nameof(document));
             }
@@ -273,7 +271,7 @@ namespace dosymep.Revit {
                 return false;
             }
             
-            return document.GetElement(elementId) is Autodesk.Revit.DB.GlobalParameter;
+            return document.GetElement(elementId) is GlobalParameter;
         }
         
         /// <summary>
@@ -282,7 +280,7 @@ namespace dosymep.Revit {
         /// <param name="document">Документ Revit.</param>
         /// <param name="definition">Определение параметра.</param>
         /// <returns>Возвращает true - если определение параметра является проекта, иначе false.</returns>
-        public static bool IsProjectParamDefinition(this Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.Definition definition) {
+        public static bool IsProjectParamDefinition(this Document document, Definition definition) {
             if(document is null) {
                 throw new ArgumentNullException(nameof(document));
             }
@@ -296,7 +294,7 @@ namespace dosymep.Revit {
                 return false;
             }
             
-            return document.GetElement(elementId) is Autodesk.Revit.DB.ParameterElement
+            return document.GetElement(elementId) is ParameterElement
                    && !document.IsSharedParamDefinition(definition)
                    && !document.IsGlobalParamDefinition(definition);
         }
@@ -309,21 +307,21 @@ namespace dosymep.Revit {
         /// <param name="document">Документ Revit.</param>
         /// <param name="transactionName">Название транзакции.</param>
         /// <returns>Возвращает запущенную транзакцию на изменение документа.</returns>
-        public static Autodesk.Revit.DB.Transaction StartTransaction(this Autodesk.Revit.DB.Document document, string transactionName) {
-            var transaction = new Autodesk.Revit.DB.Transaction(document);
+        public static Transaction StartTransaction(this Document document, string transactionName) {
+            var transaction = new Transaction(document);
             transaction.BIMStart(transactionName);
 
             return transaction;
         }
-        
+
         /// <summary>
         /// Запускает групповую транзакцию на изменение документа.
         /// </summary>
         /// <param name="document">Документ Revit.</param>
         /// <param name="transactionName">Название транзакции.</param>
         /// <returns>Возвращает запущенную групповую транзакцию на изменение документа.</returns>
-        public static Autodesk.Revit.DB.TransactionGroup StartTransactionGroup(this Autodesk.Revit.DB.Document document, string transactionName) {
-            var transaction = new Autodesk.Revit.DB.TransactionGroup(document);
+        public static TransactionGroup StartTransactionGroup(this Document document, string transactionName) {
+            var transaction = new TransactionGroup(document);
             transaction.BIMStart(transactionName);
 
             return transaction;
@@ -335,15 +333,15 @@ namespace dosymep.Revit {
         /// <param name="document">Документ Revit.</param>
         /// <param name="builtInParameter">Системный параметр документа.</param>
         /// <returns>Возвращает тип системного параметра.</returns>
-        public static Autodesk.Revit.DB.StorageType GetStorageType(this Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.BuiltInParameter builtInParameter) {
+        public static StorageType GetStorageType(this Document document, BuiltInParameter builtInParameter) {
             if(document == null) {
                 throw new ArgumentNullException(nameof(document));
             }
 
             try {
                 return document.get_TypeOfStorage(builtInParameter);
-            } catch(InvalidOperationException) {
-                return Autodesk.Revit.DB.StorageType.None;
+            } catch(Autodesk.Revit.Exceptions.InvalidOperationException) {
+                return StorageType.None;
             }
         }
         
@@ -355,7 +353,7 @@ namespace dosymep.Revit {
         /// <param name="document">Документ Revit.</param>
         /// <param name="forgeTypeId">Системный параметр документа.</param>
         /// <returns>Возвращает тип системного параметра.</returns>
-        public static Autodesk.Revit.DB.StorageType GetStorageType(this Autodesk.Revit.DB.Document document, Autodesk.Revit.DB.ForgeTypeId forgeTypeId) {
+        public static StorageType GetStorageType(this Document document, ForgeTypeId forgeTypeId) {
             if(document == null) {
                 throw new ArgumentNullException(nameof(document));
             }
@@ -366,8 +364,8 @@ namespace dosymep.Revit {
 
             try {
                 return document.GetTypeOfStorage(forgeTypeId);
-            } catch(InvalidOperationException) {
-                return Autodesk.Revit.DB.StorageType.None;
+            } catch(Autodesk.Revit.Exceptions.InvalidOperationException) {
+                return StorageType.None;
             }
         }
         
