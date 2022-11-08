@@ -183,6 +183,14 @@ namespace dosymep.Bim4Everyone.SharedParams {
             => new SharedParam(nameof(BuildingWorksTyping), new Guid("2e5cc8dc-7598-4d94-887b-d239bcf4de76")) {
                 Name = "ФОП_Типизация СМР", UnitType = SharedParam.GetUnitType(nameof(BuildingWorksTyping)), StorageType = StorageType.String
             };
+        
+        /// <summary>
+        /// ФОП_Фиксация координаты СМР
+        /// </summary>
+        public SharedParam FixBuildingWorks
+            => new SharedParam(nameof(FixBuildingWorks), new Guid("ff9554f5-b037-40d3-ad9f-c46ebc5d8244")) {
+                Name = "ФОП_Фиксация координаты СМР", UnitType = SharedParam.GetUnitType(nameof(FixBuildingWorks)), StorageType = StorageType.Integer
+            };
 
         /// <summary>
         /// ФОП_Пожарный отсек
