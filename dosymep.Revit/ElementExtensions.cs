@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 using Autodesk.Revit.DB;
+
+using dosymep.Revit.Geometry;
 
 namespace dosymep.Revit {
     /// <summary>
@@ -1136,5 +1139,96 @@ namespace dosymep.Revit {
         #endregion
 
 #endif
+
+        /// <summary>
+        /// Проверяет элемент является ли он <see cref="Autodesk.Revit.DB.ElementType"/>
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <returns>Возвращает true - если элемент является типом элемента, иначе false.</returns>
+        public static bool IsElementType(this Element element) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            return element is ElementType;
+        }
+
+        /// <summary>
+        /// Проверяет есть ли тип у элемента.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <returns>Возвращает true - если у элемента есть тип, иначе false.</returns>
+        public static bool HasElementType(this Element element) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            return element.GetTypeId().IsNotNull();
+        }
+        
+        /// <summary>
+        /// Возвращает тип элемента.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <returns>Возвращает тип элемента.</returns>
+        public static T GetElementType<T>(this Element element) where T : ElementType {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            return (T) element.Document.GetElement(element.GetTypeId());
+        }
+
+        /// <summary>
+        /// Возвращает <see cref="BoundingBoxXYZ"/> по умолчанию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <returns>Возвращает <see cref="BoundingBoxXYZ"/> по умолчанию.</returns>
+        /// <remarks>Может вернуть Null, если у элемента нет <see cref="BoundingBoxXYZ"/>.</remarks>
+        public static BoundingBoxXYZ GetBoundingBox(this Element element) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            return element.get_BoundingBox(null);
+        }
+
+        /// <summary>
+        /// Возвращает <see cref="BoundingBoxXYZ"/> по умолчанию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="view">Вид у которого будет браться <see cref="BoundingBoxXYZ"/>.</param>
+        /// <returns>Возвращает <see cref="BoundingBoxXYZ"/> по умолчанию.</returns>
+        /// <remarks>Может вернуть Null, если у элемента нет <see cref="BoundingBoxXYZ"/>.</remarks>
+        public static BoundingBoxXYZ GetBoundingBox(this Element element, View view) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(view == null) {
+                throw new ArgumentNullException(nameof(view));
+            }
+
+            return element.get_BoundingBox(view);
+        }
+
+        internal static IEnumerable<BoundingBoxXYZ> GetBoundingBoxes(this IEnumerable<Element> elements, 
+            View view,
+            Dictionary<string, Transform> transforms) {
+            foreach (Element element in elements) {
+                string uniqId = element.Document.GetUniqId();
+                Transform transform = transforms.TryGetValue(uniqId, out Transform trans) ? trans : Transform.Identity;
+                BoundingBoxXYZ bb = element.GetBoundingBox(view);
+                if(bb != null) {
+                    yield return bb.TransformBoundingBox(transform);
+                }
+            }
+        }
+
+        internal static BoundingBoxXYZ CreateCommonBoundingBox(this IEnumerable<Element> elements,
+            View view,
+            Dictionary<string, Transform> transforms) {
+            return elements.GetBoundingBoxes(view, transforms).ToArray().CreateCommonBoundingBox();
+        }
     }
 }

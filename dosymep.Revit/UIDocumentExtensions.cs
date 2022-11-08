@@ -58,7 +58,11 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(elements));
             }
 
-            document.SetSelectedElements(elements.Select(item => item.Id));
+            var elementIds = elements
+                .Where(item => document.IsNotLinkedElement(item))
+                .Select(item => item.Id);
+            
+            document.SetSelectedElements(elementIds);
         }
 
         /// <summary>
@@ -96,5 +100,44 @@ namespace dosymep.Revit {
         }
 
         #endregion
+        
+        /// <summary>
+        /// Возвращает уникальный идентификатор документа.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <returns>Возвращает уникальный идентификатор документа.</returns>
+        /// <remarks>На данный момент возвращает отображаемое имя документа <see cref="Document.Title"/>.</remarks>
+        public static string GetUniqId(this UIDocument document) {
+            return document.Document.GetUniqId();
+        }
+        
+        /// <summary>
+        /// Возвращает активный вид.
+        /// </summary>
+        /// <param name="uiDocument">Документ.</param>
+        /// <returns>Возвращает активный вид.</returns>
+        public static UIView GetActiveUIView(this UIDocument uiDocument) {
+            return uiDocument.GetOpenUIViews().First(item => item.ViewId == uiDocument.ActiveView.Id);
+        }
+        
+        /// <summary>
+        /// Возвращает признак того что элемент из связанного документа.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="element">Элемент.</param>
+        /// <returns>True если элемент из связанного документа, иначе false.</returns>
+        public static bool IsLinkedElement(this UIDocument document, Element element) {
+            return !element.Document.IsLinkedElement(element);
+        }
+        
+        /// <summary>
+        /// Возвращает признак того что элемент не из связанного документа.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="element">Элемент.</param>
+        /// <returns>True если элемент не из связанного документа, иначе false.</returns>
+        public static bool IsNotLinkedElement(this UIDocument document, Element element) {
+            return !document.IsLinkedElement(element);
+        }
     }
 }

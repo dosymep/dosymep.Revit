@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,6 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Autodesk.Revit.DB;
+using Autodesk.Revit.UI;
+
+using dosymep.Revit.Geometry;
 
 namespace dosymep.Revit {
     /// <summary>
@@ -328,6 +332,89 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
+        /// Возвращает уникальный идентификатор документа.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <returns>Возвращает уникальный идентификатор документа.</returns>
+        /// <remarks>На данный момент возвращает отображаемое имя документа <see cref="Document.Title"/>.</remarks>
+        public static string GetUniqId(this Document document) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            return document.Title;
+        }
+
+        /// <summary>
+        /// Показывает и выделяет элементы в документе.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="view">3D вид.</param>
+        /// <param name="elements">Список элементов.</param>
+        /// <param name="offset">Расстояние на которое увеличивается <see cref="BoundingBoxXYZ"/>, во внутренних координатах.</param>
+        public static void ZoomToElements(this Document document, View3D view, IList<Element> elements, double offset = 5) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(view == null) {
+                throw new ArgumentNullException(nameof(view));
+            }
+
+            if(elements == null) {
+                throw new ArgumentNullException(nameof(elements));
+            }
+
+            var uiDocument = new UIDocument(document);
+
+            uiDocument.ActiveView = view;
+            UIView uiView = uiDocument.GetActiveUIView();
+
+            Dictionary<string, Transform> transforms = document.GetTopLinkInstances()
+                .ToDictionary(item => item.Document.GetUniqId(),
+                    item => item.GetTotalTransform());
+
+            BoundingBoxXYZ bb = elements.CreateCommonBoundingBox(view, transforms)
+                .IncreaseBoundingBox(offset);
+            
+            using(Transaction transaction = document.StartTransaction("Установка подрезки.")) {
+                view.SetSectionBox(bb);
+                uiView.ZoomAndCenterRectangle(bb.Min, bb.Max);
+                uiDocument.SetSelectedElements(elements);
+
+                transaction.Commit();
+            }
+        }
+        
+        /// <summary>
+        /// Возвращает признак того что элемент из связанного документа.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="element">Элемент.</param>
+        /// <returns>True если элемент из связанного документа, иначе false.</returns>
+        public static bool IsLinkedElement(this Document document, Element element) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            return !element.Document.GetUniqId().Equals(document.GetUniqId());
+        }
+        
+        /// <summary>
+        /// Возвращает признак того что элемент не из связанного документа.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="element">Элемент.</param>
+        /// <returns>True если элемент не из связанного документа, иначе false.</returns>
+        public static bool IsNotLinkedElement(this Document document, Element element) {
+            return !document.IsLinkedElement(element);
+        }
+
+        /// <summary>
         /// Возвращает тип системного параметра.
         /// </summary>
         /// <param name="document">Документ Revit.</param>
@@ -370,5 +457,22 @@ namespace dosymep.Revit {
         }
         
     #endif
+        
+        /// <summary>
+        /// Возвращает ссылки верхнего уровня.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <returns>Возвращает ссылки верхнего уровня.</returns>
+        internal static IEnumerable<RevitLinkInstance> GetTopLinkInstances(this Document document) {
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            return new FilteredElementCollector(document)
+                .OfClass(typeof(RevitLinkInstance))
+                .Cast<RevitLinkInstance>()
+                .Where(item => item.GetLinkDocument() != null)
+                .Where(item => !item.GetElementType<RevitLinkType>().IsNestedLink);
+        }
     }
 }
