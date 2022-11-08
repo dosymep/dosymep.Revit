@@ -1,4 +1,5 @@
-﻿using Autodesk.Revit.UI;
+﻿using Autodesk.Revit.ApplicationServices;
+using Autodesk.Revit.UI;
 
 using dosymep.SimpleServices;
 
@@ -13,8 +14,16 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
         }
 
         public override void Load() {
-            Bind<UIApplication>().ToConstant(_uiApplication);
-
+            Bind<UIApplication>()
+                .ToConstant(_uiApplication);
+            
+            Bind<Application>()
+                .ToConstant(_uiApplication.Application);
+            
+            Bind<ILanguageService>()
+                .To<RevitLanguageService>()
+                .InSingletonScope();
+            
             Bind<IPluginInfoService>()
                 .To<PluginInfoService>()
                 .InSingletonScope();
