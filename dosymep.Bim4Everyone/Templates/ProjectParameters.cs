@@ -416,6 +416,11 @@ namespace dosymep.Bim4Everyone.Templates {
                         }
                     }
                 }
+                
+                // После вызова ReInsert сбрасывается свойство VariesAcrossGroups
+                var sourceDefinition = (InternalDefinition) sourceSettings.Definition;
+                var targetDefinition = (InternalDefinition) targetSettings.Definition;
+                targetDefinition.SetAllowVaryBetweenGroups(target, sourceDefinition.VariesAcrossGroups);
             }
         }
 
