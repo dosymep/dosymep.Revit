@@ -100,22 +100,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Reference Include="RevitAPI">
-            <HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\RevitAPI.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-
-        <Reference Include="RevitAPIUI">
-            <HintPath>$(ProgramW6432)\Autodesk\Revit $(RevitVersion)\RevitAPIUI.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-    </ItemGroup>
-
-    <ItemGroup>
         <PackageReference Include="Microsoft.CSharp" Version="4.7.0"/>
         <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0"/>
 
         <PackageReference Include="OpenMcdf" Version="2.2.1.9">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+        
+        <PackageReference Include="Autodesk.Revit.SDK" Version="$(RevitVersion).*">
             <PrivateAssets>all</PrivateAssets>
             <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
