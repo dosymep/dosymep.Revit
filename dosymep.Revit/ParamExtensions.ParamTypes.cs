@@ -3372,11 +3372,7 @@ namespace dosymep.Revit {
 #endif
 
 #if REVIT_2022_OR_GREATER
-
-                case BuiltInParameter.PREFER_DIM_SIDE_UI_FILTER: return StorageType.Integer;
-                case BuiltInParameter.MULTIPLE_ALIGNMENT_UI_TOGGLE: return StorageType.Integer;
-                case BuiltInParameter.LOCK_ALIGNMENT_UI_TOGGLE: return StorageType.Integer;
-                case BuiltInParameter.REBAR_INSTANCE_BAR_MODEL_DIAMETER: return StorageType.Double;
+                
                 case BuiltInParameter.REBAR_MODEL_BAR_DIAMETER: return StorageType.Double;
                 case BuiltInParameter.VIEW_SHOW_GRIDS: return StorageType.None;
                 case BuiltInParameter.REBAR_MODIFIED_SET: return StorageType.Integer;
@@ -3412,6 +3408,15 @@ namespace dosymep.Revit {
                 case BuiltInParameter.DIM_PREFIX: return StorageType.String;
                 case BuiltInParameter.ASSOCIATED_LEVEL_OFFSET: return StorageType.Double;
                 case BuiltInParameter.ASSOCIATED_LEVEL: return StorageType.ElementId;
+
+#endif
+
+#if REVIT_2023_OR_GREATER
+
+                case BuiltInParameter.PREFER_DIM_SIDE_UI_FILTER: return StorageType.Integer;
+                case BuiltInParameter.MULTIPLE_ALIGNMENT_UI_TOGGLE: return StorageType.Integer;
+                case BuiltInParameter.LOCK_ALIGNMENT_UI_TOGGLE: return StorageType.Integer;
+                case BuiltInParameter.REBAR_INSTANCE_BAR_MODEL_DIAMETER: return StorageType.Double;
 
 #endif
                 default:
@@ -3574,7 +3579,10 @@ namespace dosymep.Revit {
             }
         }
 
-#else
+#endif
+        
+#if REVIT_2022_OR_GREATER
+        
         /// <summary>
         /// Возвращает тип параметра.
         /// </summary>
@@ -3584,6 +3592,40 @@ namespace dosymep.Revit {
             if(forgeTypeId == null) {
                 throw new ArgumentNullException(nameof(forgeTypeId));
             }
+            
+#if REVIT_2022
+
+            if(forgeTypeId == ParameterTypeId.RbsElecDistributionNodePowerSource) { return StorageType.String; }
+            
+            if(forgeTypeId == ParameterTypeId.MultiLeaderTagUi) { return StorageType.Integer; }
+            
+            if(forgeTypeId == ParameterTypeId.FabricationBraSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationCenterlineElevationOfPart) { return StorageType.Double; }
+            
+            if(forgeTypeId == ParameterTypeId.FabricationPriSize) { return StorageType.String; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSecSize) { return StorageType.String; }
+            
+            if(forgeTypeId == ParameterTypeId.FabricationSpotBottomElevationIncludeInsulationOfPart) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpotBottomElevationOfPart) { return StorageType.Double; }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpotTopElevationIncludeInsulationOfPart) {
+                return StorageType.Double;
+            }
+
+            if(forgeTypeId == ParameterTypeId.FabricationSpotTopElevationOfPart) { return StorageType.Double; }
+            
+            if(forgeTypeId == ParameterTypeId.RbsElectricalLoadZoneType) { return StorageType.ElementId; }
+            
+            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalAreaMeasurement) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalAreaParam) { return StorageType.Double; }
+
+#endif
 
             if(forgeTypeId == ParameterTypeId.ActualMaxRidgeHeightParam) { return StorageType.Double; }
 
@@ -5821,8 +5863,6 @@ namespace dosymep.Revit {
 
             if(forgeTypeId == ParameterTypeId.LoadUseLocalCoordinateSystem) { return StorageType.Integer; }
 
-            if(forgeTypeId == ParameterTypeId.LockAlignmentUiToggle) { return StorageType.Integer; }
-
             if(forgeTypeId == ParameterTypeId.LockedBaseOffset) { return StorageType.Double; }
 
             if(forgeTypeId == ParameterTypeId.LockedEndOffset) { return StorageType.Double; }
@@ -6062,8 +6102,6 @@ namespace dosymep.Revit {
             if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationShowDimensionText) { return StorageType.Integer; }
 
             if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationTagType) { return StorageType.ElementId; }
-
-            if(forgeTypeId == ParameterTypeId.MultipleAlignmentUiToggle) { return StorageType.Integer; }
 
             if(forgeTypeId == ParameterTypeId.MultistoryStairsActualTreadDepth) { return StorageType.Double; }
 
@@ -6446,8 +6484,6 @@ namespace dosymep.Revit {
             if(forgeTypeId == ParameterTypeId.PointcloudinstanceName) { return StorageType.String; }
 
             if(forgeTypeId == ParameterTypeId.PointcloudtypeScale) { return StorageType.Double; }
-
-            if(forgeTypeId == ParameterTypeId.PreferDimSideUiFilter) { return StorageType.Integer; }
 
             if(forgeTypeId == ParameterTypeId.PrimaryOptionId) { return StorageType.ElementId; }
 
@@ -12623,8 +12659,6 @@ namespace dosymep.Revit {
 
             if(forgeTypeId == ParameterTypeId.LoadUseLocalCoordinateSystem) { return StorageType.Integer; }
 
-            if(forgeTypeId == ParameterTypeId.LockAlignmentUiToggle) { return StorageType.Integer; }
-
             if(forgeTypeId == ParameterTypeId.LockedBaseOffset) { return StorageType.Double; }
 
             if(forgeTypeId == ParameterTypeId.LockedEndOffset) { return StorageType.Double; }
@@ -12864,8 +12898,6 @@ namespace dosymep.Revit {
             if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationShowDimensionText) { return StorageType.Integer; }
 
             if(forgeTypeId == ParameterTypeId.MultiReferenceAnnotationTagType) { return StorageType.ElementId; }
-
-            if(forgeTypeId == ParameterTypeId.MultipleAlignmentUiToggle) { return StorageType.Integer; }
 
             if(forgeTypeId == ParameterTypeId.MultistoryStairsActualTreadDepth) { return StorageType.Double; }
 
@@ -13248,8 +13280,6 @@ namespace dosymep.Revit {
             if(forgeTypeId == ParameterTypeId.PointcloudinstanceName) { return StorageType.String; }
 
             if(forgeTypeId == ParameterTypeId.PointcloudtypeScale) { return StorageType.Double; }
-
-            if(forgeTypeId == ParameterTypeId.PreferDimSideUiFilter) { return StorageType.Integer; }
 
             if(forgeTypeId == ParameterTypeId.PrimaryOptionId) { return StorageType.ElementId; }
 
@@ -17203,6 +17233,22 @@ namespace dosymep.Revit {
 
             if(forgeTypeId == ParameterTypeId.SurfacePatternIdParam) { return StorageType.None; }
 
+#if REVIT_2023_OR_GREATER
+
+            if(forgeTypeId == ParameterTypeId.LockAlignmentUiToggle) { return StorageType.Integer; }
+            
+            if(forgeTypeId == ParameterTypeId.MultipleAlignmentUiToggle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PreferDimSideUiFilter) { return StorageType.Integer; }
+            
+            if(forgeTypeId == ParameterTypeId.LockAlignmentUiToggle) { return StorageType.Integer; }
+            
+            if(forgeTypeId == ParameterTypeId.MultipleAlignmentUiToggle) { return StorageType.Integer; }
+
+            if(forgeTypeId == ParameterTypeId.PreferDimSideUiFilter) { return StorageType.Integer; }
+
+#endif
+
             throw new System.ArgumentOutOfRangeException(nameof(forgeTypeId),
                 $"Не удалось определить тип параметра для \"{forgeTypeId}\".");
         }
@@ -17217,7 +17263,6 @@ namespace dosymep.Revit {
             if(definition == null) {
                 throw new ArgumentNullException(nameof(definition));
             }
-
 
             ForgeTypeId dataType = definition.GetDataType();
             if(dataType == SpecTypeId.Acceleration) { return StorageType.Double; }
@@ -17535,70 +17580,6 @@ namespace dosymep.Revit {
             if(dataType == SpecTypeId.WireDiameter) { return StorageType.Double; }
 
             if(dataType == SpecTypeId.Boolean.YesNo) { return StorageType.Integer; }
-
-#if REVIT_2021
-
-            if(forgeTypeId == ParameterTypeId.RbsElecDistributionNodePowerSource) { return StorageType.String; }
-            
-            if(forgeTypeId == ParameterTypeId.MultiLeaderTagUi) { return StorageType.Integer; }
-            
-            if(forgeTypeId == ParameterTypeId.FabricationBraSize) { return StorageType.String; }
-
-            if(forgeTypeId == ParameterTypeId.FabricationCenterlineElevationOfPart) { return StorageType.Double; }
-            
-            if(forgeTypeId == ParameterTypeId.FabricationPriSize) { return StorageType.String; }
-
-            if(forgeTypeId == ParameterTypeId.FabricationSecSize) { return StorageType.String; }
-            
-            if(forgeTypeId == ParameterTypeId.FabricationSpotBottomElevationIncludeInsulationOfPart) {
-                return StorageType.Double;
-            }
-
-            if(forgeTypeId == ParameterTypeId.FabricationSpotBottomElevationOfPart) { return StorageType.Double; }
-
-            if(forgeTypeId == ParameterTypeId.FabricationSpotTopElevationIncludeInsulationOfPart) {
-                return StorageType.Double;
-            }
-
-            if(forgeTypeId == ParameterTypeId.FabricationSpotTopElevationOfPart) { return StorageType.Double; }
-            
-            if(forgeTypeId == ParameterTypeId.RbsElectricalLoadZoneType) { return StorageType.ElementId; }
-            
-            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalAreaMeasurement) { return StorageType.Integer; }
-
-            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalAreaParam) { return StorageType.Double; }
-            
-            if(forgeTypeId == ParameterTypeId.FabricationBraSize) { return StorageType.String; }
-
-            if(forgeTypeId == ParameterTypeId.FabricationCenterlineElevationOfPart) { return StorageType.Double; }
-            
-            if(forgeTypeId == ParameterTypeId.FabricationPriSize) { return StorageType.String; }
-            
-            if(forgeTypeId == ParameterTypeId.FabricationSpotBottomElevationIncludeInsulationOfPart) {
-                return StorageType.Double;
-            }
-
-            if(forgeTypeId == ParameterTypeId.FabricationSpotBottomElevationOfPart) { return StorageType.Double; }
-
-            if(forgeTypeId == ParameterTypeId.FabricationSpotTopElevationIncludeInsulationOfPart) {
-                return StorageType.Double;
-            }
-
-            if(forgeTypeId == ParameterTypeId.FabricationSpotTopElevationOfPart) { return StorageType.Double; }
-            
-            if(forgeTypeId == ParameterTypeId.MultiLeaderTagUi) { return StorageType.Integer; }
-            
-            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalAreaMeasurement) { return StorageType.Integer; }
-
-            if(forgeTypeId == ParameterTypeId.RbsElecAnalyticalAreaParam) { return StorageType.Double; }
-
-            if(forgeTypeId == ParameterTypeId.RbsElecDistributionNodePowerSource) { return StorageType.String; }
-            
-            if(forgeTypeId == ParameterTypeId.RbsElectricalLoadZoneType) { return StorageType.ElementId; }
-            
-            if(forgeTypeId == ParameterTypeId.FabricationSecSize) { return StorageType.String; }
-
-#endif
 
             throw new System.ArgumentOutOfRangeException($"Не удалось определить тип параметра для \"{dataType}\".");
         }
