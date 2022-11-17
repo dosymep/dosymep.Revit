@@ -403,20 +403,13 @@ namespace dosymep.Bim4Everyone.Templates {
                 var targetCategories = ((ElementBinding) targetSettings.Binding).Categories;
                 var sourceCategories = ((ElementBinding) sourceSettings.Binding).Categories;
 
-                var targetAllCategories =
-                    target.Settings.Categories
-                        .OfType<Category>()
-                        .ToDictionary(item => item.Name);
-
                 foreach(Category sourceCategory in sourceCategories) {
-                    if(targetAllCategories.TryGetValue(sourceCategory.Name, out var targetCategory)) {
-                        if(!targetCategories.Contains(targetCategory)) {
-                            targetCategories.Insert(targetCategory);
-                            target.ParameterBindings.ReInsert(targetSettings.Definition, targetSettings.Binding);
-                        }
+                    if(!targetCategories.Contains(sourceCategory)) {
+                        targetCategories.Insert(sourceCategory);
+                        target.ParameterBindings.ReInsert(targetSettings.Definition, targetSettings.Binding);
                     }
                 }
-                
+
                 // После вызова ReInsert сбрасывается свойство VariesAcrossGroups
                 var sourceDefinition = (InternalDefinition) sourceSettings.Definition;
                 var targetDefinition = (InternalDefinition) targetSettings.Definition;
