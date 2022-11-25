@@ -191,6 +191,14 @@ namespace dosymep.Bim4Everyone.SharedParams {
             => new SharedParam(nameof(FixBuildingWorks), new Guid("ff9554f5-b037-40d3-ad9f-c46ebc5d8244")) {
                 Name = "ФОП_Фиксация координаты СМР", UnitType = SharedParam.GetUnitType(nameof(FixBuildingWorks)), StorageType = StorageType.Integer
             };
+        
+        /// <summary>
+        /// ФОП_Этаж СМР
+        /// </summary>
+        public SharedParam BuildingWorksLevel
+            => new SharedParam(nameof(BuildingWorksLevel), new Guid("326da28a-41b9-40af-9ac9-2ef7e16d50e8")) {
+                Name = "ФОП_Этаж СМР", UnitType = SharedParam.GetUnitType(nameof(BuildingWorksLevel)), StorageType = StorageType.String
+            };
 
         /// <summary>
         /// ФОП_Пожарный отсек
