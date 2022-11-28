@@ -17,7 +17,7 @@ namespace dosymep.Revit.Geometry {
         public static Solid CreateSolid(this BoundingBoxXYZ bb) {
             // Честно стырил с форума autodesk
             // https://forums.autodesk.com/t5/revit-api-forum/create-solid-from-boundingbox/td-p/6330376
-            
+
             XYZ pt0 = new XYZ(bb.Min.X, bb.Min.Y, bb.Min.Z);
             XYZ pt1 = new XYZ(bb.Max.X, bb.Min.Y, bb.Min.Z);
             XYZ pt2 = new XYZ(bb.Max.X, bb.Max.Y, bb.Min.Z);
@@ -183,10 +183,7 @@ namespace dosymep.Revit.Geometry {
                 return new BoundingBoxXYZ();
             }
 
-            return new BoundingBoxXYZ() {
-                Min = bbs.GetMaxPoint(),
-                Max = bbs.GetMinPoint(),
-            };
+            return new BoundingBoxXYZ() {Min = bbs.GetMaxPoint(), Max = bbs.GetMinPoint(),};
         }
 
         /// <summary>
@@ -203,10 +200,7 @@ namespace dosymep.Revit.Geometry {
                 return new BoundingBoxXYZ();
             }
 
-            return new BoundingBoxXYZ() {
-                Min = bbs.GetMinPoint(),
-                Max = bbs.GetMaxPoint(),
-            };
+            return new BoundingBoxXYZ() {Min = bbs.GetMinPoint(), Max = bbs.GetMaxPoint(),};
         }
 
         /// <summary>
@@ -223,7 +217,7 @@ namespace dosymep.Revit.Geometry {
                 bbs.Max(item => item.Max.Y),
                 bbs.Max(item => item.Max.Z));
         }
-        
+
         /// <summary>
         /// Возвращает минимальную точку по всем <see cref="BoundingBoxXYZ"/>.
         /// </summary>
@@ -237,6 +231,19 @@ namespace dosymep.Revit.Geometry {
             return new XYZ(bbs.Min(item => item.Min.X),
                 bbs.Min(item => item.Min.Y),
                 bbs.Min(item => item.Min.Z));
+        }
+
+        /// <summary>
+        /// Возвращает центральную точку <see cref="BoundingBoxXYZ"/>.
+        /// </summary>
+        /// <param name="bb">Экземпляр <see cref="BoundingBoxXYZ"/>.</param>
+        /// <returns>Возвращает центральную точку <see cref="BoundingBoxXYZ"/>.</returns>
+        public static XYZ GetMidPoint(this BoundingBoxXYZ bb) {
+            if(bb == null) {
+                throw new ArgumentNullException(nameof(bb));
+            }
+
+            return bb.Min + (bb.Max - bb.Min) / 2;
         }
     }
 }
