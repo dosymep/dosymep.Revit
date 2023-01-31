@@ -52,7 +52,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         public SharedParam ApartmentAreaFix
             => new SharedParam(nameof(ApartmentAreaFix), new Guid("3d6c5084-d6ab-490e-baa6-f8d119a0d628")) {
-                Name = "ФОП_ФИКС_КВР_Площадь без коэф.", UnitType = SharedParam.GetUnitType(nameof(ApartmentAreaFix)), StorageType = StorageType.None
+                Name = "ФОП_ФИКС_КВР_Площадь без коэф.", UnitType = SharedParam.GetUnitType(nameof(ApartmentAreaFix)), StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public SharedParam ApartmentAreaNoBalconyFix
             => new SharedParam(nameof(ApartmentAreaNoBalconyFix),
                 new Guid("8226f116-c19e-4797-a3bb-55ac79acdf44")) {
-                Name = "ФОП_ФИКС_КВР_Площадь без ЛП", UnitType = SharedParam.GetUnitType(nameof(ApartmentAreaNoBalconyFix)), StorageType = StorageType.None
+                Name = "ФОП_ФИКС_КВР_Площадь без ЛП", UnitType = SharedParam.GetUnitType(nameof(ApartmentAreaNoBalconyFix)), StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         public SharedParam ApartmentAreaRatioFix
             => new SharedParam(nameof(ApartmentAreaRatioFix), new Guid("77713404-35ef-4c8a-a5c4-c6f3d4da16c2")) {
-                Name = "ФОП_ФИКС_КВР_Площадь с коэф.", UnitType = SharedParam.GetUnitType(nameof(ApartmentAreaRatioFix)), StorageType = StorageType.None
+                Name = "ФОП_ФИКС_КВР_Площадь с коэф.", UnitType = SharedParam.GetUnitType(nameof(ApartmentAreaRatioFix)), StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         public SharedParam ApartmentFullAreaFix
             => new SharedParam(nameof(ApartmentFullAreaFix), new Guid("bc1bf705-37a8-404e-af7c-ca072168b994")) {
-                Name = "ФОП_ФИКС_КВР_Площадь по пятну", UnitType = SharedParam.GetUnitType(nameof(ApartmentFullAreaFix)), StorageType = StorageType.None
+                Name = "ФОП_ФИКС_КВР_Площадь по пятну", UnitType = SharedParam.GetUnitType(nameof(ApartmentFullAreaFix)), StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -142,6 +142,14 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public SharedParam ApartmentLivingArea
             => new SharedParam(nameof(ApartmentLivingArea), new Guid("3e43f7d6-6dfe-4b88-a874-7c54272789b7")) {
                 Name = "ФОП_КВР_Площадь жилая", UnitType = SharedParam.GetUnitType(nameof(ApartmentLivingArea)), StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ФИКС_КВР_Площадь жилая
+        /// </summary>
+        public SharedParam ApartmentLivingAreaFix
+            => new SharedParam(nameof(ApartmentLivingAreaFix), new Guid("421ec146-2f9b-48ae-9bcc-1f478c115e7e")) {
+                Name = "ФОП_ФИКС_КВР_Площадь жилая", UnitType = SharedParam.GetUnitType(nameof(ApartmentLivingAreaFix)), StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -239,7 +247,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         public SharedParam RoomAreaFix
             => new SharedParam(nameof(RoomAreaFix), new Guid("64bf4d4d-6ef3-4cfd-b452-eccdde94a8ad")) {
-                Name = "ФОП_ФИКС_ПМЩ_Площадь", UnitType = SharedParam.GetUnitType(nameof(RoomAreaFix)), StorageType = StorageType.None
+                Name = "ФОП_ФИКС_ПМЩ_Площадь", UnitType = SharedParam.GetUnitType(nameof(RoomAreaFix)), StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -263,7 +271,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         public SharedParam RoomAreaWithRatioFix
             => new SharedParam(nameof(RoomAreaWithRatioFix), new Guid("46bc1213-6d5a-4164-84d0-598a9abcf70d")) {
-                Name = "ФОП_ФИКС_ПМЩ_Площадь с коэф.", UnitType = SharedParam.GetUnitType(nameof(RoomAreaWithRatioFix)), StorageType = StorageType.None
+                Name = "ФОП_ФИКС_ПМЩ_Площадь с коэф.", UnitType = SharedParam.GetUnitType(nameof(RoomAreaWithRatioFix)), StorageType = StorageType.Double
             };
 
         /// <summary>

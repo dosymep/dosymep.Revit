@@ -199,6 +199,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return UnitType.UT_Area;
                 case nameof(SharedParamsConfig.ApartmentAreaRatioFix):
                     return UnitType.UT_Area;
+                case nameof(SharedParamsConfig.ApartmentLivingAreaFix):
+                    return UnitType.UT_Area;
                 case nameof(SharedParamsConfig.RoomAreaFix):
                     return UnitType.UT_Area;
                 case nameof(SharedParamsConfig.RoomAreaWithRatioFix):
