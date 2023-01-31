@@ -299,6 +299,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.Area;
                 case nameof(SharedParamsConfig.ApartmentAreaRatioFix):
                     return SpecTypeId.Area;
+                case nameof(SharedParamsConfig.ApartmentLivingAreaFix):
+                    return SpecTypeId.Area;
                 case nameof(SharedParamsConfig.RoomAreaFix):
                     return SpecTypeId.Area;
                 case nameof(SharedParamsConfig.RoomAreaWithRatioFix):
@@ -396,6 +398,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.ApartmentFullAreaFix):
                     return SpecTypeId.Area;
                 case nameof(SharedParamsConfig.ApartmentAreaRatioFix):
+                    return SpecTypeId.Area;
+                case nameof(SharedParamsConfig.ApartmentLivingAreaFix):
                     return SpecTypeId.Area;
                 case nameof(SharedParamsConfig.RoomAreaFix):
                     return SpecTypeId.Area;
