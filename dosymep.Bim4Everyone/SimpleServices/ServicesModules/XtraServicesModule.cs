@@ -14,10 +14,12 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
     internal class XtraServicesModule : NinjectModule {
         public override void Load() {
             Bind<IUIThemeService>()
-                .To<XtraWindowsThemeService>();
+                .To<XtraWindowsThemeService>()
+                .InSingletonScope();
 
             Bind<IUIThemeUpdaterService>()
-                .To<XtraThemeUpdaterService>();
+                .To<XtraThemeUpdaterService>()
+                .InSingletonScope();
 
             Bind<IDispatcherService>()
                 .To<XtraDispatcherService>()
