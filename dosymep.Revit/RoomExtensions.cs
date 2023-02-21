@@ -13,55 +13,47 @@ namespace dosymep.Revit {
     /// </summary>
     public static class RoomExtensions {
         /// <summary>
-        /// Опции получения границ помещений по умолчанию.
+        /// Проверяет является помещение избыточным.
         /// </summary>
-        public static readonly SpatialElementBoundaryOptions DefaultBoundaryOptions
-            = new SpatialElementBoundaryOptions();
-
-        /// <summary>
-        /// Проверяет является элемент избыточным.
-        /// </summary>
-        /// <param name="room">Проверяемый элемент.</param>
-        /// <param name="options">Опции получение границ элемента.</param>
-        /// <returns>Возвращает true если элемент является избыточным, иначе false.</returns>
+        /// <param name="room">Проверяемое помещение.</param>
+        /// <param name="options">Опции получение границ помещения.</param>
+        /// <returns>Возвращает true если помещение является избыточным, иначе false.</returns>
         public static bool IsRedundant(this Room room,
             SpatialElementBoundaryOptions options = default) {
-            double roomArea = room.GetParamValueOrDefault<double>(BuiltInParameter.ROOM_AREA);
-            return roomArea == 0 && room.GetBoundarySegments(options ?? DefaultBoundaryOptions).Count > 0;
+            return ((SpatialElement) room).IsRedundant(options);
         }
 
         /// <summary>
-        /// Проверяет является элемент не избыточным.
+        /// Проверяет является помещение не избыточным.
         /// </summary>
-        /// <param name="room">Проверяемый элемент.</param>
-        /// <param name="options">Опции получение границ элемента.</param>
-        /// <returns>Возвращает true если элемент является не избыточным, иначе false.</returns>
+        /// <param name="room">Проверяемое помещение.</param>
+        /// <param name="options">Опции получение границ помещения.</param>
+        /// <returns>Возвращает true если помещение является не избыточным, иначе false.</returns>
         public static bool IsNotRedundant(this Room room,
             SpatialElementBoundaryOptions options = default) {
-            return !room.IsRedundant(options);
+            return ((SpatialElement) room).IsNotRedundant(options);
         }
 
         /// <summary>
-        /// Проверяет является элемент замкнутым.
+        /// Проверяет является помещение замкнутым.
         /// </summary>
-        /// <param name="room">Проверяемый элемент.</param>
-        /// <param name="options">Опции получение границ элемента.</param>
-        /// <returns>Возвращает true если элемент является замкнутым, иначе false.</returns>
+        /// <param name="room">Проверяемое помещение.</param>
+        /// <param name="options">Опции получение границ помещения.</param>
+        /// <returns>Возвращает true если помещение является замкнутым, иначе false.</returns>
         public static bool IsEnclosed(this Room room,
             SpatialElementBoundaryOptions options = default) {
-            double roomArea = room.GetParamValueOrDefault<double>(BuiltInParameter.ROOM_AREA);
-            return roomArea > 0 && room.GetBoundarySegments(options ?? DefaultBoundaryOptions).Count > 0;
+            return ((SpatialElement) room).IsEnclosed(options);
         }
 
         /// <summary>
-        /// Проверяет является элемент не замкнутым.
+        /// Проверяет является помещение не замкнутым.
         /// </summary>
-        /// <param name="room">Проверяемый элемент.</param>
-        /// <param name="options">Опции получение границ элемента.</param>
-        /// <returns>Возвращает true если элемент является не замкнутым, иначе false.</returns>
+        /// <param name="room">Проверяемое помещение.</param>
+        /// <param name="options">Опции получение границ помещения.</param>
+        /// <returns>Возвращает true если помещение является не замкнутым, иначе false.</returns>
         public static bool IsNotEnclosed(this Room room,
             SpatialElementBoundaryOptions options = default) {
-            return !room.IsEnclosed(options);
+            return ((SpatialElement) room).IsNotEnclosed(options);
         }
     }
 }
