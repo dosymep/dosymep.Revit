@@ -26,15 +26,10 @@ namespace dosymep.Revit {
         /// <returns>Возвращает true если были найдены самопересечения, иначе false.</returns>
         public static bool IsSelfCrossBoundaries(this SpatialElement spatialElement,
             SpatialElementBoundaryOptions options = default) {
-            var segments = spatialElement.GetBoundarySegments(options ?? DefaultBoundaryOptions)
-                .FirstOrDefault();
-
-            if(segments == null) {
-                return false;
-            }
-
-            var enumSegments = segments.Zip(segments.Skip(2),
-                (leftSegment, rightSegment) => (leftSegment, rightSegment));
+            var boundarySegments = spatialElement.GetBoundarySegments(options ?? DefaultBoundaryOptions);
+            foreach(IList<BoundarySegment> segments in boundarySegments) {
+                var enumSegments = segments.Zip(segments.Skip(2),
+                    (leftSegment, rightSegment) => (leftSegment, rightSegment));
 
             foreach((BoundarySegment leftSegment, BoundarySegment rightSegment) in enumSegments) {
                 Curve leftCurve = leftSegment.GetCurve();
