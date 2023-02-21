@@ -215,6 +215,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.FixBuildingWorks):
                     return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.FixComment):
+                    return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.VISOutSystemName):
                     return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.VISSystemShortName):
@@ -314,6 +316,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.BuildingWorksLevel):
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.FixBuildingWorks):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.FixComment):
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.VISOutSystemName):
                     return SpecTypeId.Number;
@@ -415,6 +419,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.FixBuildingWorks):
                     return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.FixComment):
+                    return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISOutSystemName):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISSystemShortName):
