@@ -208,6 +208,15 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 Name = "ФОП_Этаж СМР", UnitType = SharedParam.GetUnitType(nameof(BuildingWorksLevel)), StorageType = StorageType.String
             };
 
+
+        /// <summary>
+        /// ФОП_ФИКС_Комментарии
+        /// </summary>
+        public SharedParam FixComment
+            => new SharedParam(nameof(FixComment), new Guid("9aa1f257-c6bd-4ca7-b958-4bcb17cf1c32")) {
+                Name = "ФОП_ФИКС_Комментарии", UnitType = SharedParam.GetUnitType(nameof(FixComment)), StorageType = StorageType.String
+            };
+
         /// <summary>
         /// ФОП_Пожарный отсек
         /// </summary>
