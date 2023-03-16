@@ -1212,6 +1212,36 @@ namespace dosymep.Revit {
             return element.get_BoundingBox(view);
         }
 
+        /// <summary>
+        /// Проверяет принадлежность элемента к переданной категории.
+        /// </summary>
+        /// <param name="element">Проверяемый элемент.</param>
+        /// <param name="category">Проверяемая категория.</param>
+        /// <returns>Возвращает true - если элемент является переданной категории, иначе false.</returns>
+        public static bool InAnyCategory(this Element element, BuiltInCategory category) {
+            return element.Category.Id.IntegerValue == (int) category;
+        }
+
+        /// <summary>
+        /// Проверяет принадлежность элемента к переданным категориям.
+        /// </summary>
+        /// <param name="element">Проверяемый элемент.</param>
+        /// <param name="categories">Проверяемые категории.</param>
+        /// <returns>Возвращает true - если элемент является переданным категориям, иначе false.</returns>
+        public static bool InAnyCategory(this Element element, params BuiltInCategory[] categories) {
+            return element.InAnyCategory(categories.AsEnumerable());
+        }
+        
+        /// <summary>
+        /// Проверяет принадлежность элемента к переданным категориям.
+        /// </summary>
+        /// <param name="element">Проверяемый элемент.</param>
+        /// <param name="categories">Проверяемые категории.</param>
+        /// <returns>Возвращает true - если элемент является переданным категориям, иначе false.</returns>
+        public static bool InAnyCategory(this Element element, IEnumerable<BuiltInCategory> categories) {
+            return categories.Any(item => element.InAnyCategory(item));
+        }
+
         internal static IEnumerable<BoundingBoxXYZ> GetBoundingBoxes(this IEnumerable<Element> elements, 
             View view,
             Dictionary<string, Transform> transforms) {
