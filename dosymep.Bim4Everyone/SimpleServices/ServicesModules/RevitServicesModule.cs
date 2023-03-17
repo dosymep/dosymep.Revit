@@ -31,6 +31,10 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             Bind<IRootWindowService>()
                 .To<RootWindowService>()
                 .InSingletonScope();
+
+            Bind<IBimModelPartsService>()
+                .To<BimModelPartsService>()
+                .InSingletonScope();
         }
     }
 }
