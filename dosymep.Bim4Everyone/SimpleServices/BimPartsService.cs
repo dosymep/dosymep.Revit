@@ -16,14 +16,38 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         }
 
         public bool InAnyBimModelParts(string documentName, BimModelPart bimModelPart) {
+            if(bimModelPart == null) {
+                throw new ArgumentNullException(nameof(bimModelPart));
+            }
+
+            if(string.IsNullOrEmpty(documentName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(documentName));
+            }
+
             return GetBimModelPart(documentName) == bimModelPart;
         }
 
         public bool InAnyBimModelParts(string documentName, params BimModelPart[] bimModelParts) {
+            if(bimModelParts == null) {
+                throw new ArgumentNullException(nameof(bimModelParts));
+            }
+
+            if(string.IsNullOrEmpty(documentName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(documentName));
+            }
+
             return InAnyBimModelParts(documentName, bimModelParts.AsEnumerable());
         }
 
         public bool InAnyBimModelParts(string documentName, IEnumerable<BimModelPart> bimModelParts) {
+            if(bimModelParts == null) {
+                throw new ArgumentNullException(nameof(bimModelParts));
+            }
+
+            if(string.IsNullOrEmpty(documentName)) {
+                throw new ArgumentException("Value cannot be null or empty.", nameof(documentName));
+            }
+
             return bimModelParts.Any(item => GetBimModelPart(documentName) == item);
         }
 

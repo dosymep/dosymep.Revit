@@ -16,6 +16,10 @@ namespace dosymep.Bim4Everyone.SimpleServices
         /// <param name="document">Документ.</param>
         /// <returns>Возвращает раздел модели по документу.</returns>
         internal static BimModelPart GetBimModelPart(this IBimModelPartsService service, Document document) {
+            if(service == null) {
+                throw new ArgumentNullException(nameof(service));
+            }
+
             if(document == null) {
                 throw new ArgumentNullException(nameof(document));
             }
@@ -32,6 +36,18 @@ namespace dosymep.Bim4Everyone.SimpleServices
         /// <returns>Возвращает раздел модели по документу.</returns>
         public static bool InAnyBimModelParts(this IBimModelPartsService service, Document document,
             BimModelPart bimModelPart) {
+            if(service == null) {
+                throw new ArgumentNullException(nameof(service));
+            }
+
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(bimModelPart == null) {
+                throw new ArgumentNullException(nameof(bimModelPart));
+            }
+
             return service.InAnyBimModelParts(document.Title, bimModelPart);
         }
 
@@ -44,6 +60,18 @@ namespace dosymep.Bim4Everyone.SimpleServices
         /// <returns>Возвращает раздел модели по документу.</returns>
         public static bool InAnyBimModelParts(this IBimModelPartsService service, Document document,
             params BimModelPart[] bimModelParts) {
+            if(service == null) {
+                throw new ArgumentNullException(nameof(service));
+            }
+
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(bimModelParts == null) {
+                throw new ArgumentNullException(nameof(bimModelParts));
+            }
+
             return service.InAnyBimModelParts(document.Title, bimModelParts);
         }
 
@@ -56,6 +84,18 @@ namespace dosymep.Bim4Everyone.SimpleServices
         /// <returns>Возвращает раздел модели по документу.</returns>
         public static bool InAnyBimModelParts(this IBimModelPartsService service, Document document,
             IEnumerable<BimModelPart> bimModelParts) {
+            if(service == null) {
+                throw new ArgumentNullException(nameof(service));
+            }
+
+            if(document == null) {
+                throw new ArgumentNullException(nameof(document));
+            }
+
+            if(bimModelParts == null) {
+                throw new ArgumentNullException(nameof(bimModelParts));
+            }
+
             return service.InAnyBimModelParts(document.Title, bimModelParts);
         }
     }
