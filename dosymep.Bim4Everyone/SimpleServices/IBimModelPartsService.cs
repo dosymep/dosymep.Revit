@@ -9,20 +9,35 @@ namespace dosymep.Bim4Everyone.SimpleServices
     /// </summary>
     public interface IBimModelPartsService {
         /// <summary>
-        /// Проверят является ли документ переданному разделу.
+        /// Получает раздел по переданному имени документа.
         /// </summary>
-        /// <param name="document">Документ.</param>
-        /// <param name="bimModelPart">Раздел BIM модели.</param>
-        /// <returns>Возвращает раздел модели по документу.</returns>
-        bool IsBimModelPart(Document document, BimModelPart bimModelPart);
-
+        /// <param name="documentName">Имя документа.</param>
+        /// <returns>Возвращает раздел модели по имени документа.</returns>
+        BimModelPart GetBimModelPart(string documentName);
+        
         /// <summary>
         /// Проверят является ли документ переданному разделу.
         /// </summary>
         /// <param name="documentName">Имя документа.</param>
         /// <param name="bimModelPart">Раздел BIM модели.</param>
         /// <returns>Возвращает раздел модели по документу.</returns>
-        bool IsBimModelPart(string documentName, BimModelPart bimModelPart);
+        bool InAnyBimModelParts(string documentName, BimModelPart bimModelPart);
+        
+        /// <summary>
+        /// Проверят является ли документ переданному разделу.
+        /// </summary>
+        /// <param name="documentName">Имя документа.</param>
+        /// <param name="bimModelParts">Раздел BIM модели.</param>
+        /// <returns>Возвращает раздел модели по документу.</returns>
+        bool InAnyBimModelParts(string documentName, params BimModelPart[] bimModelParts);
+        
+        /// <summary>
+        /// Проверят является ли документ переданному разделу.
+        /// </summary>
+        /// <param name="documentName">Имя документа.</param>
+        /// <param name="bimModelParts">Раздел BIM модели.</param>
+        /// <returns>Возвращает раздел модели по документу.</returns>
+        bool InAnyBimModelParts(string documentName, IEnumerable<BimModelPart> bimModelParts);
 
         /// <summary>
         /// Возвращает все разделы BIM модели.
