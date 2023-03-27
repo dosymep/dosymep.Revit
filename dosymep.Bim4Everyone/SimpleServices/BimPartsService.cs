@@ -53,7 +53,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
 
         public IEnumerable<BimModelPart> GetBimModelParts() {
             return typeof(BimModelPart)
-                .GetFields(BindingFlags.Static)
+                .GetFields(BindingFlags.Static | BindingFlags.Public)
                 .Select(item => item.GetValue(null))
                 .OfType<BimModelPart>();
         }
