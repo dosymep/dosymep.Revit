@@ -14,7 +14,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <param name="service">Сервис.</param>
         /// <param name="document">Документ.</param>
         /// <returns>Возвращает раздел модели по документу.</returns>
-        internal static BimModelPart GetBimModelPart(this IBimModelPartsService service, Document document) {
+        public static BimModelPart GetBimModelPart(this IBimModelPartsService service, Document document) {
             if(service == null) {
                 throw new ArgumentNullException(nameof(service));
             }
