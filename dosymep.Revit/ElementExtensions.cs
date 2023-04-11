@@ -1219,7 +1219,7 @@ namespace dosymep.Revit {
         /// <param name="category">Проверяемая категория.</param>
         /// <returns>Возвращает true - если элемент является переданной категории, иначе false.</returns>
         public static bool InAnyCategory(this Element element, BuiltInCategory category) {
-            return element.Category.Id.IntegerValue == (int) category;
+            return (BuiltInCategory) element.Category.Id.GetIdValue() == category;
         }
 
         /// <summary>

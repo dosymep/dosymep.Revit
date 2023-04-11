@@ -161,7 +161,7 @@ namespace dosymep.Revit {
             }
 
             if(definition is InternalDefinition internalDefinition) {
-                return internalDefinition.Id.IntegerValue == (int) builtInParameter;
+                return (BuiltInParameter) internalDefinition.Id.GetIdValue() == builtInParameter;
             }
 
             return false;
@@ -175,7 +175,7 @@ namespace dosymep.Revit {
         public static BuiltInParameter GetBuiltInParameter(this Definition definition) {
             if(definition is InternalDefinition internalDefinition) {
                 if(internalDefinition.Id.IsSystemId()) {
-                    return (BuiltInParameter) internalDefinition.Id.IntegerValue;
+                    return (BuiltInParameter) internalDefinition.Id.GetIdValue();
                 }
             }
 

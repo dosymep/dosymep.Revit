@@ -58,7 +58,7 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(parameterElement));
             }
 
-            return parameterElement.Id.IntegerValue == (int) builtInParameter;
+            return (BuiltInParameter) parameterElement.Id.GetIdValue() == builtInParameter;
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace dosymep.Revit {
         /// <returns>Возвращает <see cref="BuiltInParameter"/> для определения параметра, для не системных параметров возвращает <see cref="BuiltInParameter.INVALID"/>.</returns>
         public static BuiltInParameter GetBuiltInParameter(this ParameterElement parameterElement) {
             if(parameterElement.Id.IsSystemId()) {
-                return (BuiltInParameter) parameterElement.Id.IntegerValue;
+                return (BuiltInParameter) parameterElement.Id.GetIdValue();
             }
 
             return BuiltInParameter.INVALID;

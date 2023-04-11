@@ -13,7 +13,7 @@ namespace dosymep.Revit {
         public static bool IsNull(this ElementId elementId) {
             return elementId == null || elementId == ElementId.InvalidElementId;
         }
-        
+
         /// <summary>
         /// Проверяет идентификатор на не null.
         /// </summary>
@@ -29,7 +29,7 @@ namespace dosymep.Revit {
         /// <param name="elementId">Идентификатор элемента.</param>
         /// <returns>Возвращает true - если идентификатор элемента является системным, иначе false.</returns>
         public static bool IsSystemId(this ElementId elementId) {
-            return !elementId.IsNull() && elementId.IntegerValue < 0;
+            return !elementId.IsNull() && elementId.GetIdValue() < 0;
         }
 
         /// <summary>
@@ -38,7 +38,22 @@ namespace dosymep.Revit {
         /// <param name="elementId">Идентификатор элемента.</param>
         /// <returns>Возвращает true - если идентификатор элемента является не системным, иначе false.</returns>
         public static bool IsNotSystemId(this ElementId elementId) {
-            return !elementId.IsNull() && elementId.IntegerValue > 0;
+            return !elementId.IsNull() && elementId.GetIdValue() > 0;
         }
+
+        /// <summary>
+        /// Возвращает числовое значение идентификатора элемента.
+        /// </summary>
+        /// <param name="elementId">Идентификатор элемента.</param>
+        /// <returns> Возвращает числовое значение идентификатора элемента.</returns>
+#if REVIT_2023_OR_LESS
+        public static int GetIdValue(this ElementId elementId) {
+            return elementId.IntegerValue;
+        }
+#else
+        public static long GetIdValue(this ElementId elementId) {
+            return elementId.Value;
+        }
+#endif
     }
 }
