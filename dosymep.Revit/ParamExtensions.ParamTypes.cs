@@ -1021,13 +1021,10 @@ namespace dosymep.Revit {
                 case BuiltInParameter.RBS_PIPE_FLOW_PARAM: return StorageType.Double;
                 case BuiltInParameter.RBS_PIPE_INNER_DIAM_PARAM: return StorageType.Double;
                 case BuiltInParameter.RBS_PIPE_REYNOLDS_NUMBER_PARAM: return StorageType.Double;
-                case BuiltInParameter.RBS_PIPE_RELATIVE_ROUGHNESS_PARAM: return StorageType.Double;
                 case BuiltInParameter.RBS_PIPE_FLOW_STATE_PARAM: return StorageType.Integer;
-                case BuiltInParameter.RBS_PIPE_FRICTION_FACTOR_PARAM: return StorageType.Double;
                 case BuiltInParameter.RBS_PIPE_VELOCITY_PARAM: return StorageType.Double;
                 case BuiltInParameter.RBS_PIPE_FRICTION_PARAM: return StorageType.Double;
                 case BuiltInParameter.RBS_PIPE_PRESSUREDROP_PARAM: return StorageType.Double;
-                case BuiltInParameter.RBS_PIPE_ROUGHNESS_PARAM: return StorageType.Double;
                 case BuiltInParameter.RBS_PIPE_MATERIAL_PARAM: return StorageType.ElementId;
                 case BuiltInParameter.RBS_PIPE_CONNECTIONTYPE_PARAM: return StorageType.ElementId;
                 case BuiltInParameter.RBS_PIPE_CLASS_PARAM: return StorageType.ElementId;
@@ -1481,7 +1478,6 @@ namespace dosymep.Revit {
                 case BuiltInParameter.RBS_LINING_THICKNESS: return StorageType.Double;
                 case BuiltInParameter.RBS_INSULATION_THICKNESS: return StorageType.Double;
                 case BuiltInParameter.RBS_FRICTION: return StorageType.Double;
-                case BuiltInParameter.RBS_CURVETYPE_ROUGHNESS_PARAM: return StorageType.Double;
                 case BuiltInParameter.RBS_CURVETYPE_DEFAULT_TRANSITION_PARAM: return StorageType.ElementId;
                 case BuiltInParameter.RBS_CURVETYPE_DEFAULT_CROSS_PARAM: return StorageType.ElementId;
                 case BuiltInParameter.RBS_CURVETYPE_DEFAULT_TEE_PARAM: return StorageType.ElementId;
@@ -1872,7 +1868,6 @@ namespace dosymep.Revit {
                 case BuiltInParameter.LOAD_FORCE_FX: return StorageType.Double;
                 case BuiltInParameter.LOAD_IS_HOSTED: return StorageType.Integer;
                 case BuiltInParameter.LOAD_IS_REACTION: return StorageType.Integer;
-                case BuiltInParameter.LOAD_IS_CREATED_BY_API: return StorageType.Integer;
                 case BuiltInParameter.LOAD_IS_UNIFORM: return StorageType.Integer;
                 case BuiltInParameter.LOAD_USE_LOCAL_COORDINATE_SYSTEM: return StorageType.Integer;
                 case BuiltInParameter.LOAD_CASE_ID: return StorageType.ElementId;
@@ -2061,7 +2056,6 @@ namespace dosymep.Revit {
                 case BuiltInParameter.TOPOGRAPHY_LINK_PATH: return StorageType.String;
                 case BuiltInParameter.TOPOGRAPHY_LINK_NAME: return StorageType.String;
                 case BuiltInParameter.BOUNDARY_RADIUS: return StorageType.Double;
-                case BuiltInParameter.CONTOUR_SUBCATEGORY_ID: return StorageType.ElementId;
                 case BuiltInParameter.BOUNDARY_BEARING: return StorageType.Double;
                 case BuiltInParameter.BOUNDARY_DISTANCE: return StorageType.Double;
                 case BuiltInParameter.CONTOUR_ELEVATION_STEP: return StorageType.Double;
@@ -3329,10 +3323,6 @@ namespace dosymep.Revit {
                 case BuiltInParameter.SPACE_HUMIDIFICATION_SET_POINT: return StorageType.Double;
                 case BuiltInParameter.SPACE_COOLING_SET_POINT: return StorageType.Double;
                 case BuiltInParameter.SPACE_HEATING_SET_POINT: return StorageType.Double;
-                case BuiltInParameter.ALIGNMENT_STATION_LABEL_SET_END_STATION: return StorageType.Double;
-                case BuiltInParameter.ALIGNMENT_STATION_LABEL_SET_START_STATION: return StorageType.Double;
-                case BuiltInParameter.ALIGNMENT_STATION_LABEL_SET_INTERVAL: return StorageType.Double;
-                case BuiltInParameter.ALIGNMENT_STATION_LABEL_SET_OFFSET: return StorageType.Double;
                 case BuiltInParameter.WALL_SINGLE_SLANT_ANGLE_FROM_VERTICAL: return StorageType.Double;
                 case BuiltInParameter.WALL_CROSS_SECTION: return StorageType.Integer;
                 case BuiltInParameter.FAMILY_ROTATE_TEXT_WITH_COMPONENT: return StorageType.Integer;
@@ -4222,8 +4212,6 @@ namespace dosymep.Revit {
             if(forgeTypeId == ParameterTypeId.ContourLabelsPrimaryOnly) { return StorageType.Integer; }
 
             if(forgeTypeId == ParameterTypeId.ContourLabelsRelativeBase) { return StorageType.ElementId; }
-
-            if(forgeTypeId == ParameterTypeId.ContourSubcategoryId) { return StorageType.ElementId; }
 
             if(forgeTypeId == ParameterTypeId.CouplerCode) { return StorageType.String; }
 
@@ -5815,8 +5803,6 @@ namespace dosymep.Revit {
 
             if(forgeTypeId == ParameterTypeId.LoadForceFz) { return StorageType.Double; }
 
-            if(forgeTypeId == ParameterTypeId.LoadIsCreatedByApi) { return StorageType.Integer; }
-
             if(forgeTypeId == ParameterTypeId.LoadIsHosted) { return StorageType.Integer; }
 
             if(forgeTypeId == ParameterTypeId.LoadIsProjected) { return StorageType.Integer; }
@@ -6807,8 +6793,6 @@ namespace dosymep.Revit {
 
             if(forgeTypeId == ParameterTypeId.RbsCurvetypePreferredBranchParam) { return StorageType.Integer; }
 
-            if(forgeTypeId == ParameterTypeId.RbsCurvetypeRoughnessParam) { return StorageType.Double; }
-
             if(forgeTypeId == ParameterTypeId.RbsDistributionsysConfigParam) { return StorageType.Integer; }
 
             if(forgeTypeId == ParameterTypeId.RbsDistributionsysNumwiresParam) { return StorageType.Integer; }
@@ -7398,9 +7382,7 @@ namespace dosymep.Revit {
             if(forgeTypeId == ParameterTypeId.RbsPipeFluidTypeParam) { return StorageType.ElementId; }
 
             if(forgeTypeId == ParameterTypeId.RbsPipeFluidViscosityParam) { return StorageType.Double; }
-
-            if(forgeTypeId == ParameterTypeId.RbsPipeFrictionFactorParam) { return StorageType.Double; }
-
+            
             if(forgeTypeId == ParameterTypeId.RbsPipeFrictionParam) { return StorageType.Double; }
 
             if(forgeTypeId == ParameterTypeId.RbsPipeHwfuParam) { return StorageType.Double; }
@@ -7419,11 +7401,7 @@ namespace dosymep.Revit {
 
             if(forgeTypeId == ParameterTypeId.RbsPipePressuredropParam) { return StorageType.Double; }
 
-            if(forgeTypeId == ParameterTypeId.RbsPipeRelativeRoughnessParam) { return StorageType.Double; }
-
             if(forgeTypeId == ParameterTypeId.RbsPipeReynoldsNumberParam) { return StorageType.Double; }
-
-            if(forgeTypeId == ParameterTypeId.RbsPipeRoughnessParam) { return StorageType.Double; }
 
             if(forgeTypeId == ParameterTypeId.RbsPipeSegmentParam) { return StorageType.ElementId; }
 
@@ -11019,8 +10997,6 @@ namespace dosymep.Revit {
 
             if(forgeTypeId == ParameterTypeId.ContourLabelsRelativeBase) { return StorageType.ElementId; }
 
-            if(forgeTypeId == ParameterTypeId.ContourSubcategoryId) { return StorageType.ElementId; }
-
             if(forgeTypeId == ParameterTypeId.CouplerCode) { return StorageType.String; }
 
             if(forgeTypeId == ParameterTypeId.CouplerCoupledBarSize) { return StorageType.ElementId; }
@@ -12611,8 +12587,6 @@ namespace dosymep.Revit {
 
             if(forgeTypeId == ParameterTypeId.LoadForceFz) { return StorageType.Double; }
 
-            if(forgeTypeId == ParameterTypeId.LoadIsCreatedByApi) { return StorageType.Integer; }
-
             if(forgeTypeId == ParameterTypeId.LoadIsHosted) { return StorageType.Integer; }
 
             if(forgeTypeId == ParameterTypeId.LoadIsProjected) { return StorageType.Integer; }
@@ -13603,8 +13577,6 @@ namespace dosymep.Revit {
 
             if(forgeTypeId == ParameterTypeId.RbsCurvetypePreferredBranchParam) { return StorageType.Integer; }
 
-            if(forgeTypeId == ParameterTypeId.RbsCurvetypeRoughnessParam) { return StorageType.Double; }
-
             if(forgeTypeId == ParameterTypeId.RbsDistributionsysConfigParam) { return StorageType.Integer; }
 
             if(forgeTypeId == ParameterTypeId.RbsDistributionsysNumwiresParam) { return StorageType.Integer; }
@@ -14195,8 +14167,6 @@ namespace dosymep.Revit {
 
             if(forgeTypeId == ParameterTypeId.RbsPipeFluidViscosityParam) { return StorageType.Double; }
 
-            if(forgeTypeId == ParameterTypeId.RbsPipeFrictionFactorParam) { return StorageType.Double; }
-
             if(forgeTypeId == ParameterTypeId.RbsPipeFrictionParam) { return StorageType.Double; }
 
             if(forgeTypeId == ParameterTypeId.RbsPipeHwfuParam) { return StorageType.Double; }
@@ -14215,11 +14185,7 @@ namespace dosymep.Revit {
 
             if(forgeTypeId == ParameterTypeId.RbsPipePressuredropParam) { return StorageType.Double; }
 
-            if(forgeTypeId == ParameterTypeId.RbsPipeRelativeRoughnessParam) { return StorageType.Double; }
-
             if(forgeTypeId == ParameterTypeId.RbsPipeReynoldsNumberParam) { return StorageType.Double; }
-
-            if(forgeTypeId == ParameterTypeId.RbsPipeRoughnessParam) { return StorageType.Double; }
 
             if(forgeTypeId == ParameterTypeId.RbsPipeSegmentParam) { return StorageType.ElementId; }
 
