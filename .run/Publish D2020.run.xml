@@ -6,6 +6,7 @@
       <option name="RunConfigurationTask" enabled="true" run_configuration_name="Publish D2021" run_configuration_type="DotNetFolderPublish" />
       <option name="RunConfigurationTask" enabled="true" run_configuration_name="Publish D2022" run_configuration_type="DotNetFolderPublish" />
       <option name="RunConfigurationTask" enabled="true" run_configuration_name="Publish D2023" run_configuration_type="DotNetFolderPublish" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="Publish D2024" run_configuration_type="DotNetFolderPublish" />
     </method>
   </configuration>
 </component>
