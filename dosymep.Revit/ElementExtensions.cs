@@ -1171,12 +1171,41 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="element">Элемент.</param>
         /// <returns>Возвращает тип элемента.</returns>
+        public static ElementType GetElementType(this Element element) {
+            if(element == null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+            
+            if(element.IsElementType()) {
+                throw new ArgumentException("Был передан тип элемента.", nameof(element));
+            }
+
+            if(!element.HasElementType()) {
+                throw new ArgumentException("У элемента нет элемента типа", nameof(element));
+            }
+
+            return (ElementType) element.Document.GetElement(element.GetTypeId());
+        }
+        
+        /// <summary>
+        /// Возвращает тип элемента.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <returns>Возвращает тип элемента.</returns>
         public static T GetElementType<T>(this Element element) where T : ElementType {
             if(element == null) {
                 throw new ArgumentNullException(nameof(element));
             }
+            
+            if(element.IsElementType()) {
+                throw new ArgumentException("Был передан тип элемента.", nameof(element));
+            }
 
-            return (T) element.Document.GetElement(element.GetTypeId());
+            if(!element.HasElementType()) {
+                throw new ArgumentException("У элемента нет элемента типа", nameof(element));
+            }
+
+            return (T) element.GetElementType();
         }
 
         /// <summary>
