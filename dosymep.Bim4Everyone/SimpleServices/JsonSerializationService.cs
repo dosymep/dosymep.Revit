@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
+
+using Autodesk.Revit.DB;
 
 using dosymep.SimpleServices;
 
@@ -13,6 +16,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         public JsonSerializationService(JsonSerializerSettings settings, ISerializationBinder serializationBinder) {
             _settings = settings ?? new JsonSerializerSettings();
             _settings.SerializationBinder = serializationBinder;
+            _settings.Converters = new List<JsonConverter>() {new ElementIdConverter()};
         }
 
         public string FileExtension => ".json";
@@ -59,6 +63,29 @@ namespace dosymep.Bim4Everyone.SimpleServices {
             } else {
                 _defaultBinder.BindToName(serializedType, out assemblyName, out typeName);
             }
+        }
+    }
+
+    internal class ElementIdConverter : JsonConverter<ElementId> {
+        public override void WriteJson(JsonWriter writer, ElementId value, JsonSerializer serializer) {
+#if REVIT_2023_OR_LESS
+            writer.WriteValue(value.IntegerValue.ToString());
+#else
+            writer.WriteValue(value.Value.ToString());
+#endif
+        }
+
+        public override ElementId ReadJson(
+            JsonReader reader,
+            Type objectType,
+            ElementId existingValue,
+            bool hasExistingValue,
+            JsonSerializer serializer) {
+#if REVIT_2023_OR_LESS
+            return new ElementId((int) reader.Value);
+#else
+            return new ElementId((long) reader.Value);
+#endif
         }
     }
 }
