@@ -139,7 +139,6 @@ namespace dosymep.Bim4Everyone.SystemParams {
 #endif
 
         /// <inheritdoc/>
-        [Obsolete]
         SystemParam ISystemParamsService.this[string paramId]
             => (SystemParam) this[paramId];
 
