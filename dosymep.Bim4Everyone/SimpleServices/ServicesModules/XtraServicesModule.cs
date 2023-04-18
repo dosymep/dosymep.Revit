@@ -22,28 +22,22 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
                 .InSingletonScope();
 
             Bind<IDispatcherService>()
-                .To<XtraDispatcherService>()
-                .WithConstructorArgument(typeof(Window), GetRootWindow);
+                .To<XtraDispatcherService>();
 
             Bind<IMessageBoxService>()
-                .To<XtraMessageBoxService>()
-                .WithConstructorArgument(typeof(Window), GetRootWindow);
+                .To<XtraMessageBoxService>();
 
             Bind<IOpenFileDialogService>()
-                .To<XtraOpenFileDialogService>()
-                .WithConstructorArgument(typeof(Window), GetRootWindow);
+                .To<XtraOpenFileDialogService>();
 
             Bind<ISaveFileDialogService>()
-                .To<XtraSaveFileDialogService>()
-                .WithConstructorArgument(typeof(Window), GetRootWindow);
+                .To<XtraSaveFileDialogService>();
 
             Bind<IOpenFolderDialogService>()
-                .To<XtraOpenFolderDialogService>()
-                .WithConstructorArgument(typeof(Window), GetRootWindow);
+                .To<XtraOpenFolderDialogService>();
 
             Bind<IProgressDialogService>()
                 .To<XtraProgressDialogService>()
-                .WithConstructorArgument(typeof(Window), GetRootWindow)
                 .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeService),
                     c => c.Kernel.Get<IUIThemeService>())
                 .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeUpdaterService),
@@ -52,13 +46,8 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             Bind<INotificationService>()
                 .To<XtraNotificationService>()
                 .WithConstructorArgument(typeof(string), "Bim4Everyone")
-                .WithConstructorArgument(typeof(Window), GetRootWindow)
                 .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeService),
                     c => c.Kernel.Get<IUIThemeService>());
-        }
-
-        private Window GetRootWindow(IContext context) {
-            return context.Kernel.Get<IRootWindowService>().RootWindow;
         }
     }
 }

@@ -27,9 +27,6 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             
             Bind<IPlatformCommandsService>()
                 .To<PlatformCommandsService>();
-            
-            Bind<IPlatformCommandsService>()
-                .To<PlatformCommandsService>();
 
             Bind<IInvokeButtonFactory>()
                 .To<InvokeButtonFactory>();
