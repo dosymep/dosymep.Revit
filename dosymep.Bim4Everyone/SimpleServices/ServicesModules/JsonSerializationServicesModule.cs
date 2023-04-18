@@ -12,9 +12,6 @@ using pyRevitLabs.Json.Serialization;
 namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
     internal class JsonSerializationServicesModule : NinjectModule {
         public override void Load() {
-            Bind<ISerializationBinder>()
-                .To<PluginSerializationBinder>();
-
             Bind<JsonSerializerSettings>().ToSelf()
                 .WithPropertyValue(nameof(Formatting), Formatting.Indented)
                 .WithPropertyValue(nameof(TypeNameHandling), TypeNameHandling.Objects);
