@@ -7,7 +7,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.InvokeButtons
         public static readonly InvokeButtonCommand CheckLevelsCommand = new InvokeButtonCommand(PlatformCommandIds.CheckLevelsCommandId,
             $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\pyRevit\Extensions\01.BIM.extension\BIM.tab\СМР.panel\СМР.stack\Проверить уровни.invokebutton",
             "RevitCheckingLevels.RevitCheckingLevelsCommand",
-            $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\pyRevit\Extensions\01.BIM.extension\BIM.tab\bin");
+            $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\pyRevit\Extensions\01.BIM.extension\BIM.tab\bin\RevitCheckingLevels.dll");
 
         public InvokeButtonCommand(Guid commandId,
             string commandPath, string commandTypeName, string assemblyPath)
@@ -25,6 +25,11 @@ namespace dosymep.Bim4Everyone.SimpleServices.InvokeButtons
         /// Путь до сборки с командой.
         /// </summary>
         public string AssemblyPath { get; }
+
+        /// <summary>
+        /// Путь до папки сборки с командой.
+        /// </summary>
+        public string AssemblyDirectory => Path.GetDirectoryName(AssemblyPath);
         
         /// <summary>
         /// Имя сборки.

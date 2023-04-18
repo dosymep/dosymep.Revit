@@ -17,11 +17,17 @@ namespace dosymep.Bim4Everyone.SimpleServices.InvokeButtons {
         }
 
         public Result InvokeCommand(ref string message, ElementSet elements, Dictionary<string, string> journalData) {
-            if(!File.Exists(_invokeButtonCommand.AssemblyName)) {
-                throw new InvalidOperationException("Не была найдена сборка запускаемой команды.");
+            string assemblyPath = Path.Combine(_invokeButtonCommand.AssemblyDirectory, 
+                $"{Path.GetFileNameWithoutExtension(_invokeButtonCommand.AssemblyName)}_{ModuleEnvironment.RevitVersion}.dll");
+
+            if(!File.Exists(assemblyPath)) {
+                assemblyPath = _invokeButtonCommand.AssemblyPath;
+                if(!File.Exists(assemblyPath)) {
+                    throw new InvalidOperationException("Не была найдена сборка запускаемой команды.");
+                }
             }
 
-            Assembly assembly = Assembly.Load(File.ReadAllBytes(_invokeButtonCommand.AssemblyName));
+            Assembly assembly = Assembly.Load(File.ReadAllBytes(assemblyPath));
             var commandType = assembly.GetType(_invokeButtonCommand.CommandTypeName);
             var externalCommand = (IExternalCommand) Activator.CreateInstance(commandType);
             return externalCommand.Execute(CreateExternalCommandData(journalData), ref message, elements);
