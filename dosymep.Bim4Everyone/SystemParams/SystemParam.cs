@@ -24,7 +24,11 @@ namespace dosymep.Bim4Everyone.SystemParams {
         [JsonConstructor]
         internal SystemParam(string id)
             : base(id) {
-            SystemParamId = (BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), id);
+            SystemParamId = GetSystemParamId(id);
+        }
+
+        internal static BuiltInParameter GetSystemParamId(string paramId) {
+            return (BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), paramId);
         }
 
         /// <summary>
@@ -60,7 +64,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// Тип параметра.
         /// </summary>
         [JsonIgnore]
-        public override StorageType StorageType => SystemParamId.GetStorageType();
+        public override StorageType StorageType { get; set; }
 
 #if REVIT_2020
 

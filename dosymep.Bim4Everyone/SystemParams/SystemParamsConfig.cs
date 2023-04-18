@@ -24,7 +24,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// Инициализирует конфигурацию системных параметров.
         /// </summary>
         internal SystemParamsConfig() {
-            _revitParams = GetSystemParams().ToDictionary(item => item.Id);
+            _revitParams = new Dictionary<string, RevitParam>();
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
             }
 
             string paramId = GetParamId(systemParamId);
-            return CreateRevitParam(_languageType, paramId);
+            return CreateRevitParam(document, _languageType, paramId);
         }
 
         /// <inheritdoc/>
@@ -72,7 +72,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
             }
 
             string paramId = GetParamId(systemParamId);
-            return CreateRevitParam(languageType, paramId);
+            return CreateRevitParam(document, languageType, paramId);
         }
 
         /// <inheritdoc/>
@@ -85,12 +85,20 @@ namespace dosymep.Bim4Everyone.SystemParams {
         }
 
         private SystemParam CreateRevitParam(LanguageType? languageType, string paramId) {
-            return string.IsNullOrEmpty(paramId) ? null : new SystemParam(paramId) {LanguageType = languageType};
+            return string.IsNullOrEmpty(paramId)
+                ? null
+                : new SystemParam(paramId) {
+                    LanguageType = languageType, StorageType = SystemParam.GetSystemParamId(paramId).GetStorageType()
+                };
         }
 
-        private SystemParam CreateRevitParam(LanguageType? languageType, BuiltInParameter systemParamId) {
-            string paramId = GetParamId(systemParamId);
-            return new SystemParam(paramId) {LanguageType = languageType};
+        private SystemParam CreateRevitParam(Document document, LanguageType? languageType, string paramId) {
+            return string.IsNullOrEmpty(paramId)
+                ? null
+                : new SystemParam(paramId) {
+                    LanguageType = languageType,
+                    StorageType = document.GetStorageType(SystemParam.GetSystemParamId(paramId))
+                };
         }
 
         private string GetParamId(BuiltInParameter systemParamId) {
@@ -124,7 +132,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
             }
 
             string paramId = GetParamId(systemParamId);
-            return CreateRevitParam(_languageType, paramId);
+            return CreateRevitParam(document, _languageType, paramId);
         }
 
         /// <inheritdoc/>
@@ -148,16 +156,13 @@ namespace dosymep.Bim4Everyone.SystemParams {
             }
 
             string paramId = GetParamId(systemParamId);
-            return CreateRevitParam(languageType, paramId);
-        }
-        
-        private SystemParam CreateRevitParam(LanguageType? languageType, ForgeTypeId systemParamId) {
-            string paramId = GetParamId(systemParamId);
-            return CreateRevitParam(languageType, paramId);
+            return CreateRevitParam(document, languageType, paramId);
         }
 
         private string GetParamId(ForgeTypeId systemParamId) {
+#pragma warning disable CS0618
             return Enum.GetName(typeof(BuiltInParameter), ParameterUtils.GetBuiltInParameter(systemParamId));
+#pragma warning restore CS0618
         }
 
 #endif
@@ -197,11 +202,6 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// <returns>Возвращает конфигурацию по умолчанию.</returns>
         public static SystemParamsConfig GetDefaultConfig() {
             return new SystemParamsConfig();
-        }
-
-        private IEnumerable<RevitParam> GetSystemParams() {
-            return Enum.GetNames(typeof(BuiltInParameter))
-                .Select(item => CreateRevitParam(_languageType, item));
         }
     }
 }
