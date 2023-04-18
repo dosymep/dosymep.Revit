@@ -10,6 +10,7 @@ namespace dosymep.Revit {
         /// <param name="builtInParameter">Системный тип параметра.</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentOutOfRangeException">Выбрасывает исключение если не был сопоставлен тип данных к параметру.</exception>
+        [Obsolete]
         public static StorageType GetStorageType(this BuiltInParameter builtInParameter) {
             switch(builtInParameter) {
                 case BuiltInParameter.PATH_OF_TRAVEL_FROM_ROOM: return StorageType.String;
@@ -3578,6 +3579,7 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="forgeTypeId">Системный тип параметра.</param>
         /// <returns>Возвращает тип параметра.</returns>
+        [Obsolete]
         public static StorageType GetStorageType(this ForgeTypeId forgeTypeId) {
             if(forgeTypeId == null) {
                 throw new ArgumentNullException(nameof(forgeTypeId));
