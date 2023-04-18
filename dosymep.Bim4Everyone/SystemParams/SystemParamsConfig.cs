@@ -55,13 +55,6 @@ namespace dosymep.Bim4Everyone.SystemParams {
         }
 
         /// <inheritdoc/>
-        [Obsolete]
-        public SystemParam CreateRevitParam(BuiltInParameter systemParamId, LanguageType languageType) {
-            string paramId = GetParamId(systemParamId);
-            return CreateRevitParam(languageType, paramId);
-        }
-
-        /// <inheritdoc/>
         public SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId,
             LanguageType languageType) {
             if(document == null) {
@@ -108,17 +101,6 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// <inheritdoc/>
         public SystemParam this[ForgeTypeId paramId]
             => (SystemParam) this[GetParamId(paramId)];
-        
-        /// <inheritdoc/>
-        [Obsolete]
-        public SystemParam CreateRevitParam(ForgeTypeId systemParamId) {
-            if(systemParamId == null) {
-                throw new ArgumentNullException(nameof(systemParamId));
-            }
-
-            string paramId = GetParamId(systemParamId);
-            return CreateRevitParam(_languageType, paramId);
-        }
 
         /// <inheritdoc/>
         public SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId) {
@@ -132,17 +114,6 @@ namespace dosymep.Bim4Everyone.SystemParams {
 
             string paramId = GetParamId(systemParamId);
             return CreateRevitParam(document, _languageType, paramId);
-        }
-
-        /// <inheritdoc/>
-        [Obsolete]
-        public SystemParam CreateRevitParam(ForgeTypeId systemParamId, LanguageType languageType) {
-            if(systemParamId == null) {
-                throw new ArgumentNullException(nameof(systemParamId));
-            }
-            
-            string paramId = GetParamId(systemParamId);
-            return CreateRevitParam(languageType, paramId);
         }
 
         /// <inheritdoc/>

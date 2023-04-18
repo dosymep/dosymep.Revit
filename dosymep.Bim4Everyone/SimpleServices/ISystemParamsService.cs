@@ -31,15 +31,6 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <summary>
         /// Возвращает системный параметр.
         /// </summary>
-        /// <param name="systemParamId">Системный параметр.</param>
-        /// <param name="languageType">Язык возвращаемого параметра.</param>
-        /// <returns>Возвращает системный параметр.</returns>
-        [Obsolete]
-        SystemParam CreateRevitParam(BuiltInParameter systemParamId, LanguageType languageType);
-        
-        /// <summary>
-        /// Возвращает системный параметр.
-        /// </summary>
         /// <param name="document">Документ системного параметра.</param>
         /// <param name="systemParamId">Системный параметр.</param>
         /// /// <param name="languageType">Язык возвращаемого параметра.</param>
@@ -47,15 +38,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId, LanguageType languageType);
         
 #if REVIT_2022_OR_GREATER
-        
-        /// <summary>
-        /// Возвращает системный параметр.
-        /// </summary>
-        /// <param name="systemParamId">Системный параметр.</param>
-        /// <returns>Возвращает системный параметр.</returns>
-        [Obsolete]
-        SystemParam CreateRevitParam(ForgeTypeId systemParamId);
-        
+
         /// <summary>
         /// Возвращает системный параметр.
         /// </summary>
@@ -64,15 +47,6 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <returns>Возвращает системный параметр.</returns>
         SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId);
 
-        /// <summary>
-        /// Возвращает системный параметр.
-        /// </summary>
-        /// <param name="systemParamId">Системный параметр.</param>
-        /// <param name="languageType">Язык возвращаемого параметра.</param>
-        /// <returns>Возвращает системный параметр.</returns>
-        [Obsolete]
-        SystemParam CreateRevitParam(ForgeTypeId systemParamId, LanguageType languageType);
-        
         /// <summary>
         /// Возвращает системный параметр.
         /// </summary>
