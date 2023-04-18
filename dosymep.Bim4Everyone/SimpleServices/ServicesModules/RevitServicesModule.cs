@@ -1,6 +1,7 @@
 ﻿using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.UI;
 
+using dosymep.Bim4Everyone.SimpleServices.InvokeButtons;
 using dosymep.SimpleServices;
 
 using Ninject.Modules;
@@ -24,13 +25,16 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
                 .To<RevitLanguageService>()
                 .InSingletonScope();
             
-            Bind<IPluginInfoService>()
-                .To<PluginInfoService>()
-                .InSingletonScope();
+            Bind<IPlatformCommandsService>()
+                .To<PlatformCommandsService>();
+            
+            Bind<IPlatformCommandsService>()
+                .To<PlatformCommandsService>();
 
-            Bind<IRootWindowService>()
-                .To<RootWindowService>()
-                .InSingletonScope();
+            Bind<IInvokeButtonFactory>()
+                .To<InvokeButtonFactory>();
+
+            Bind<InvokeButton>().ToSelf();
 
             Bind<IBimModelPartsService>()
                 .To<BimModelPartsService>()
