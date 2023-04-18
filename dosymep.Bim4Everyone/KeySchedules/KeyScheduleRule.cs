@@ -87,14 +87,14 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 throw new ArgumentException($"Переданная спецификация имеет другое наименование \"{viewSchedule.Name}\".", nameof(viewSchedule));
             }
 
-            return new KeyScheduleTesting(viewSchedule, GetKeyScheduleRuleInternal());
+            return new KeyScheduleTesting(viewSchedule, GetKeyScheduleRuleInternal(viewSchedule));
         }
 
         /// <summary>
         /// Возвращает внутренние настройки проверки ключевых спецификаций.
         /// </summary>
         /// <returns>Возвращает внутренние настройки проверки ключевых спецификаций.</returns>
-        private KeyScheduleRuleInternal GetKeyScheduleRuleInternal() {
+        private KeyScheduleRuleInternal GetKeyScheduleRuleInternal(ViewSchedule viewSchedule) {
             Dictionary<string, RevitParam> propertySharedParams = SharedParamsConfig.Instance
                 .GetRevitParams()
                 .Select(item=>item.AsRevitParam())
@@ -109,11 +109,11 @@ namespace dosymep.Bim4Everyone.KeySchedules {
 
             var filledSharedParams = FilledSharedParamNames.Select(item => propertySharedParams[item]);
             var filledProjectParams = FilledProjectParamNames.Select(item => propertyProjectParams[item]);
-            var filledSystemParams = FilledSystemParams.Select(item => SystemParamsConfig.Instance.CreateRevitParam(item));
+            var filledSystemParams = FilledSystemParams.Select(item => SystemParamsConfig.Instance.CreateRevitParam(viewSchedule.Document, item));
 
             var requiredSharedParams = RequiredSharedParams.Select(item => propertySharedParams[item]);
             var requiredProjectParams = RequiredProjectParams.Select(item => propertyProjectParams[item]);
-            var requiredSystemParams = RequiredSystemParams.Select(item => SystemParamsConfig.Instance.CreateRevitParam(item));
+            var requiredSystemParams = RequiredSystemParams.Select(item => SystemParamsConfig.Instance.CreateRevitParam(viewSchedule.Document, item));
 
             return new KeyScheduleRuleInternal() {
                 KeyScheduleRule = this,
