@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
@@ -43,6 +38,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
         public static SystemParamsConfig Instance { get; internal set; }
 
         /// <inheritdoc/>
+        [Obsolete]
         public SystemParam CreateRevitParam(BuiltInParameter systemParamId) {
             string paramId = GetParamId(systemParamId);
             return CreateRevitParam(_languageType, paramId);
@@ -59,6 +55,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
         }
 
         /// <inheritdoc/>
+        [Obsolete]
         public SystemParam CreateRevitParam(BuiltInParameter systemParamId, LanguageType languageType) {
             string paramId = GetParamId(systemParamId);
             return CreateRevitParam(languageType, paramId);
@@ -84,6 +81,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
             return base.GetRevitParams().Cast<SystemParam>();
         }
 
+        [Obsolete]
         private SystemParam CreateRevitParam(LanguageType? languageType, string paramId) {
             return string.IsNullOrEmpty(paramId)
                 ? null
@@ -112,6 +110,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
             => (SystemParam) this[GetParamId(paramId)];
         
         /// <inheritdoc/>
+        [Obsolete]
         public SystemParam CreateRevitParam(ForgeTypeId systemParamId) {
             if(systemParamId == null) {
                 throw new ArgumentNullException(nameof(systemParamId));
@@ -136,6 +135,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
         }
 
         /// <inheritdoc/>
+        [Obsolete]
         public SystemParam CreateRevitParam(ForgeTypeId systemParamId, LanguageType languageType) {
             if(systemParamId == null) {
                 throw new ArgumentNullException(nameof(systemParamId));
@@ -168,6 +168,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
 #endif
 
         /// <inheritdoc/>
+        [Obsolete]
         SystemParam ISystemParamsService.this[string paramId]
             => (SystemParam) this[paramId];
 

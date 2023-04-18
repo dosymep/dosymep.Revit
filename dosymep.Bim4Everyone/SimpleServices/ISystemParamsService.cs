@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
@@ -15,6 +16,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// </summary>
         /// <param name="systemParamId">Системный параметр.</param>
         /// <returns>Возвращает системный параметр.</returns>
+        [Obsolete]
         SystemParam CreateRevitParam(BuiltInParameter systemParamId);
         
         /// <summary>
@@ -23,6 +25,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <param name="document">Документ системного параметра.</param>
         /// <param name="systemParamId">Системный параметр.</param>
         /// <returns>Возвращает системный параметр.</returns>
+        [Obsolete]
         SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId);
 
         /// <summary>
@@ -31,6 +34,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <param name="systemParamId">Системный параметр.</param>
         /// <param name="languageType">Язык возвращаемого параметра.</param>
         /// <returns>Возвращает системный параметр.</returns>
+        [Obsolete]
         SystemParam CreateRevitParam(BuiltInParameter systemParamId, LanguageType languageType);
         
         /// <summary>
@@ -49,6 +53,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// </summary>
         /// <param name="systemParamId">Системный параметр.</param>
         /// <returns>Возвращает системный параметр.</returns>
+        [Obsolete]
         SystemParam CreateRevitParam(ForgeTypeId systemParamId);
         
         /// <summary>
@@ -65,6 +70,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <param name="systemParamId">Системный параметр.</param>
         /// <param name="languageType">Язык возвращаемого параметра.</param>
         /// <returns>Возвращает системный параметр.</returns>
+        [Obsolete]
         SystemParam CreateRevitParam(ForgeTypeId systemParamId, LanguageType languageType);
         
         /// <summary>
@@ -80,6 +86,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// Возвращает системный параметр по его имени (идентификатору).
         /// </summary>
         /// <param name="paramId">Идентификатор параметра Revit.</param>
+        [Obsolete]
         SystemParam this[ForgeTypeId paramId] { get; }
 
 #endif
@@ -88,19 +95,21 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// Возвращает системный параметр по его имени (идентификатору).
         /// </summary>
         /// <param name="paramId">Идентификатор параметра Revit.</param>
+        [Obsolete]
         SystemParam this[BuiltInParameter paramId] { get; }
         
         /// <summary>
         /// Возвращает системный параметр по его имени (идентификатору).
         /// </summary>
         /// <param name="paramId">Идентификатор параметра Revit.</param>
+        [Obsolete]
         new SystemParam this[string paramId] { get; }
         
         /// <summary>
         /// Возвращает весь список системных параметров.
         /// </summary>
         /// <returns>Возвращает весь список системных параметров.</returns>
+        [Obsolete]
         new IEnumerable<SystemParam> GetRevitParams();
-        
     }
 }
