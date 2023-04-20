@@ -21,33 +21,36 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
                 .To<XtraThemeUpdaterService>()
                 .InSingletonScope();
 
-            Bind<IDispatcherService>()
-                .To<XtraDispatcherService>();
-
             Bind<IMessageBoxService>()
-                .To<XtraMessageBoxService>();
+                .To<XtraMessageBoxService>()
+                .WithConstructorArgument("window", c => null);
 
             Bind<IOpenFileDialogService>()
-                .To<XtraOpenFileDialogService>();
+                .To<XtraOpenFileDialogService>()
+                .WithConstructorArgument("window", c => null);
 
             Bind<ISaveFileDialogService>()
-                .To<XtraSaveFileDialogService>();
+                .To<XtraSaveFileDialogService>()
+                .WithConstructorArgument("window", c => null);
 
             Bind<IOpenFolderDialogService>()
-                .To<XtraOpenFolderDialogService>();
+                .To<XtraOpenFolderDialogService>()
+                .WithConstructorArgument("window", c => null);
 
             Bind<IProgressDialogService>()
                 .To<XtraProgressDialogService>()
                 .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeService),
                     c => c.Kernel.Get<IUIThemeService>())
                 .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeUpdaterService),
-                    c => c.Kernel.Get<IUIThemeUpdaterService>());
+                    c => c.Kernel.Get<IUIThemeUpdaterService>())
+                .WithConstructorArgument("window", c => null);
 
             Bind<INotificationService>()
                 .To<XtraNotificationService>()
                 .WithConstructorArgument(typeof(string), "Bim4Everyone")
                 .WithPropertyValue(nameof(XtraProgressDialogService.UIThemeService),
-                    c => c.Kernel.Get<IUIThemeService>());
+                    c => c.Kernel.Get<IUIThemeService>())
+                .WithConstructorArgument("window", c => null);
         }
     }
 }
