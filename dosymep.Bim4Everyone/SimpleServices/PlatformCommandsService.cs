@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
@@ -23,12 +24,14 @@ namespace dosymep.Bim4Everyone.SimpleServices {
                 throw new ArgumentException("Value cannot be null or empty.", nameof(commandId));
             }
 
-            if(commandId != PlatformCommandIds.CheckLevelsCommandId) {
-                throw new ArgumentException($"Команда с переданным идентификатором не найдена \"{commandId}\".",
-                    nameof(commandId));
+            var invokableCommand = InvokeButtonCommand.GetInvokeButtonCommands()
+                .FirstOrDefault(item => item.CommandId == commandId);
+            
+            if(invokableCommand == null) {
+                throw new ArgumentException($"Команда с переданным идентификатором не найдена \"{commandId}\".", nameof(commandId));
             }
 
-            return _invokeButtonFactory.Create(InvokeButtonCommand.CheckLevelsCommand).InvokeCommand(ref message, elements, journalData);
+            return _invokeButtonFactory.Create(invokableCommand).InvokeCommand(ref message, elements, journalData);
         }
     }
 }
