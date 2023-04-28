@@ -233,7 +233,7 @@ namespace dosymep.Bim4Everyone
         public BimModelPart Parent { get; set; }
 
         internal override bool IsBimPart(string documentName) {
-            return documentName.Contains("_" + Parent.Id + "_" + Id);
+            return documentName.Contains("_" + Parent.Id + "_" + Id) || base.IsBimPart(documentName);
         }
     }
 }

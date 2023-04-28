@@ -11,7 +11,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
             }
 
             return GetBimModelParts()
-                .OrderBy(item => item.GetType() == typeof(BimModelSubPart))
+                .OrderBy(item => item.GetType() == typeof(BimModelPart))
                 .FirstOrDefault(item => item.IsBimPart(documentName));
         }
 
