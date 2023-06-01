@@ -32,20 +32,9 @@ namespace dosymep.Bim4Everyone.SimpleServices {
             Instance?.Dispose();
             Instance = new StandardKernel();
             Instance.Load(new XtraServicesModule(),
-                new SerilogServicesModule(false),
+                new SerilogServicesModule(),
                 new JsonSerializationServicesModule(),
                 new RevitServicesModule(uiApplication));
-        }
-        
-        /// <summary>
-        /// Загружает сервисы платформы.
-        /// </summary>
-        public static void LoadInstanceCore(Application application) {
-            Instance?.Dispose();
-            Instance = new StandardKernel();
-            Instance.Bind<Application>().ToConstant(application);
-            Instance.Load(new SerilogServicesModule(true),
-                new JsonSerializationServicesModule());
         }
 
         /// <summary>

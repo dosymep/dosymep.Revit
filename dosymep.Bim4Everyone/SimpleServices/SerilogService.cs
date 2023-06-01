@@ -323,7 +323,11 @@ namespace dosymep.Bim4Everyone.SimpleServices
         }
 
         public ILoggerService ForPluginContext(string pluginContextName) {
-            return new SerilogService(_logger.ForContext("PluginName", pluginContextName));
+            return new SerilogService(new LoggerConfiguration()
+                .WriteTo.Logger(_logger)
+                .Enrich.WithProperty("PluginName", pluginContextName)
+                .Enrich.WithProperty("PluginSessionId", Guid.NewGuid())
+                .CreateLogger());
         }
     }
 }

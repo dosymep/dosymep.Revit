@@ -12,6 +12,16 @@
             <Private>False</Private>
         </Reference>
 
+        <Reference Include="Serilog.Sinks.Autodesk.Revit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>$(AppData)\pyRevit\Extensions\BIM4Everyone.lib\dosymep_libs\libs\Serilog.Sinks.Autodesk.Revit.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+
+        <Reference Include="Serilog.Enrichers.Autodesk.Revit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>$(AppData)\pyRevit\Extensions\BIM4Everyone.lib\dosymep_libs\libs\Serilog.Enrichers.Autodesk.Revit.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+
         <Reference Include="pyRevitLabs.Json">
             <HintPath>$(AppData)\pyRevit-Master\bin\pyRevitLabs.Json.dll</HintPath>
             <Private>False</Private>

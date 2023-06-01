@@ -12,25 +12,15 @@ using Ninject.Modules;
 
 using Serilog;
 using Serilog.Configuration;
+using Serilog.Context;
 using Serilog.Core;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
 
 namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
     internal class SerilogServicesModule : NinjectModule {
-        private readonly bool _isRevitCoreConsole;
-
-        public SerilogServicesModule(bool isRevitCoreConsole) {
-            _isRevitCoreConsole = isRevitCoreConsole;
-        }
-
         public override void Load() {
-            if(_isRevitCoreConsole) {
-                Bind<ILogger>().ToMethod(InitRevitCoreConsoleLogger).InSingletonScope();
-            } else {
-                Bind<ILogger>().ToMethod(InitLogger).InSingletonScope();
-            }
-
+            Bind<ILogger>().ToMethod(InitLogger).InSingletonScope();
             Bind<ILoggerService>().To<SerilogService>().InSingletonScope();
         }
 
@@ -44,76 +34,32 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             RollingInterval rollingInterval = RollingInterval.Day;
             int fileSizeLimitBytes = 50000000;
             bool rollOnFileSizeLimit = true;
-            int retainedFileCountLimit = 10;
+            int retainedFileCountLimit = 100;
             string outputTemplate = "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {Level:u3}] {PluginName} "
-                                    + "{{\"MachineName\": \"{MachineName}\", \"UserName\": \"{EnvironmentUserName}\", \"$type\": \"Windows\"}} "
-                                    + "{{\"RevitVersion\": \"{RevitVersion}\", \"UserName\": \"{AutodeskUsername}\", \"LoginUserId\": \"{AutodeskLoginUserId}\", \"$type\": \"Autodesk\"}} "
+                                    + "{{\"UserName\": \"{EnvironmentUserName}\", \"MachineName\": \"{EnvironmentMachineName}\", \"$type\": \"Windows\"}} "
+                                    + "{{\"RevitVersion\": \"{RevitVersion}\", \"UserName\": \"{RevitUserName}\", \"$type\": \"Autodesk\"}} "
                                     + "{Message}{NewLine}{Exception}";
 
             var loggerConfiguration = new LoggerConfiguration()
+                .Enrich.WithProperty("SessionId", Guid.NewGuid())
                 .Enrich.WithProperty("PluginName", "Bim4Everyone")
-                .Enrich.WithProperty("MachineName", Environment.MachineName)
+                .Enrich.WithProperty("PluginSessionId", Guid.NewGuid())
                 .Enrich.WithProperty("EnvironmentUserName", Environment.UserName)
-                .Enrich.WithProperty("RevitVersion", uiApplication.Application.VersionBuild)
-                .Enrich.WithProperty("AutodeskUsername", uiApplication.Application.Username)
-                .Enrich.WithProperty("AutodeskLoginUserId", uiApplication.Application.LoginUserId)
+                .Enrich.WithProperty("EnvironmentMachineName", Environment.MachineName)
+                .Enrich.WithRevitBuild(uiApplication)
+                .Enrich.WithRevitVersion(uiApplication)
+                .Enrich.WithRevitLanguage(uiApplication)
+                .Enrich.WithRevitUserName(uiApplication)
+                .Enrich.WithRevitDocumentTitle(uiApplication)
+                .Enrich.WithRevitDocumentPathName(uiApplication)
+                .Enrich.WithRevitDocumentModelPath(uiApplication)
+                .WriteTo.RevitJournal(uiApplication)
                 .WriteTo.File(platformFileName, shared: true, rollingInterval: rollingInterval,
                     fileSizeLimitBytes: fileSizeLimitBytes, rollOnFileSizeLimit: rollOnFileSizeLimit,
                     retainedFileCountLimit: retainedFileCountLimit, outputTemplate: outputTemplate)
-                .WriteTo.RevitJournalSink(uiApplication.Application)
                 .MinimumLevel.Verbose();
-
+            
             return loggerConfiguration.CreateLogger();
-        }
-
-        private static ILogger InitRevitCoreConsoleLogger(IContext context) {
-            var application = context.Kernel.Get<Application>();
-            var localFileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                "RevitCoreConsole", application.VersionNumber, "Bim4Everyone_.log");
-
-            RollingInterval rollingInterval = RollingInterval.Infinite;
-            int fileSizeLimitBytes = 500000000;
-            bool rollOnFileSizeLimit = true;
-            int retainedFileCountLimit = 99;
-            string outputTemplate = "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {Level:u3}] {PluginName} "
-                                    + "{{\"RevitVersion\": \"{RevitVersion}\", \"UserName\": \"{AutodeskUsername}\", \"$type\": \"Autodesk\"}} "
-                                    + "{Message}{NewLine}{Exception}";
-
-            var loggerConfiguration = new LoggerConfiguration()
-                .Enrich.WithProperty("PluginName", "RevitCoreConsole")
-                .Enrich.WithProperty("RevitVersion", application.VersionBuild)
-                .Enrich.WithProperty("AutodeskUsername", application.Username)
-                .WriteTo.File(localFileName, rollingInterval: rollingInterval,
-                    fileSizeLimitBytes: fileSizeLimitBytes, rollOnFileSizeLimit: rollOnFileSizeLimit,
-                    retainedFileCountLimit: retainedFileCountLimit, outputTemplate: outputTemplate)
-                .WriteTo.Console(theme: AnsiConsoleTheme.Code)
-                .WriteTo.RevitJournalSink(application)
-                .MinimumLevel.Verbose();
-
-            return loggerConfiguration.CreateLogger();
-        }
-    }
-
-    internal class RevitJournalSink : ILogEventSink {
-        private readonly Application _application;
-        private readonly IFormatProvider _formatProvider;
-
-        public RevitJournalSink(Application application, IFormatProvider formatProvider) {
-            _application = application;
-            _formatProvider = formatProvider;
-        }
-
-        public void Emit(LogEvent logEvent) {
-            _application.WriteJournalComment(logEvent.RenderMessage(_formatProvider), false);
-        }
-    }
-
-    internal static class RevitJournalSinkExtensions {
-        public static LoggerConfiguration RevitJournalSink(
-            this LoggerSinkConfiguration loggerConfiguration,
-            Application application,
-            IFormatProvider formatProvider = null) {
-            return loggerConfiguration.Sink(new RevitJournalSink(application, formatProvider));
         }
     }
 }
