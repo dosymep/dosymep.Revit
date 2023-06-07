@@ -307,6 +307,12 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 Name = "ФОП_Тип группы помещений", UnitType = SharedParam.GetUnitType(nameof(RoomTypeGroupShortName)), StorageType = StorageType.String
             };
 
+        public SharedParam RoomMultilevelGroup
+            => new SharedParam(nameof(RoomMultilevelGroup), new Guid("7d6fdcf2-e138-4a79-b122-04fc8667f4dc")) {
+                Name = "ФОП_Многоуровневая группа", UnitType = SharedParam.GetUnitType(nameof(RoomMultilevelGroup)),
+        StorageType = StorageType.String
+            };
+
         /// <summary>
         /// ФОП_Количество комнат
         /// </summary>

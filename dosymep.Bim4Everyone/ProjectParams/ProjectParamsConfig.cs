@@ -166,6 +166,13 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 StorageType = StorageType.Integer
             };
 
+        public ProjectParam IsRoomMainLevel
+            => new ProjectParam(nameof(IsRoomMainLevel)) {
+                Name = "КВГ_Основной этаж",
+                UnitType = ProjectParam.GetUnitType(nameof(IsRoomMainLevel)),
+                StorageType = StorageType.Integer
+    };
+
         /// <summary>
         /// Пров_Ортогональность Осям
         /// </summary>

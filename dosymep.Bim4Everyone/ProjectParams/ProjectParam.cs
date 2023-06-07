@@ -121,6 +121,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                     return UnitType.UT_Number;
                 case nameof(ProjectParamsConfig.NumberingOrder):
                     return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.IsRoomMainLevel):
+                    return UnitType.UT_Number;
                 case nameof(ProjectParamsConfig.CheckCorrectDistanceGrid):
                     return UnitType.UT_Number;
                 case nameof(ProjectParamsConfig.CheckIsNormalGrid):
@@ -186,6 +188,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                     return SpecTypeId.Number;
                 case nameof(ProjectParamsConfig.NumberingOrder):
                     return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.IsRoomMainLevel):
+                    return SpecTypeId.Number;
                 case nameof(ProjectParamsConfig.CheckCorrectDistanceGrid):
                     return SpecTypeId.Number;
                 case nameof(ProjectParamsConfig.CheckIsNormalGrid):
@@ -207,7 +211,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         }
 
 #else
-        
+
         /// <summary>
         /// Возвращает единицу измерения параметра по его идентификатору.
         /// </summary>
@@ -233,6 +237,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                     return SpecTypeId.Boolean.YesNo;
                 case nameof(ProjectParamsConfig.NumberingOrder):
                     return SpecTypeId.Int.Integer;
+                case nameof(ProjectParamsConfig.IsRoomMainLevel):
+                    return SpecTypeId.Boolean.YesNo;
                 case nameof(ProjectParamsConfig.CheckIsNormalGrid):
                     return SpecTypeId.String.Text;
                 case nameof(ProjectParamsConfig.CheckCorrectDistanceGrid):
