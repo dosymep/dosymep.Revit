@@ -18,7 +18,11 @@ namespace dosymep.Bim4Everyone {
             CurrentLibraryPath =
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
                     @"pyRevit\Extensions\BIM4Everyone.lib\dosymep_libs\libs", RevitVersion);
-            
+
+            CurrentConfigPath =
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                    @"pyRevit\pyRevit_config.ini");
+
             TemplatesPath = Path.Combine(CurrentLibraryPath, "templates");
             EmptyTemplatePath = Path.Combine(TemplatesPath, "empty_project.rte");
             ParametersTemplatePath = Path.Combine(TemplatesPath, "project_parameters.rvt");
@@ -45,6 +49,11 @@ namespace dosymep.Bim4Everyone {
         /// Путь до текущей библиотеки
         /// </summary>
         public static string CurrentLibraryPath { get; }
+
+        /// <summary>
+        /// Текущая конфигурация платформы.
+        /// </summary>
+        internal static string CurrentConfigPath { get; }
 
         #region Templates
 
