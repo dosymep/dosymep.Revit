@@ -63,7 +63,6 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// <summary>
         /// Тип параметра.
         /// </summary>
-        [JsonIgnore]
         public override StorageType StorageType { get; set; }
 
 #if REVIT_2020
