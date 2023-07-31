@@ -137,6 +137,14 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                     return UnitType.UT_Number;
                 case nameof(ProjectParamsConfig.RoomName):
                     return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.RelatedRoomName):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.RelatedRoomNumber):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.RelatedRoomID):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.RelatedApartmentNumber):
+                    return UnitType.UT_Number;
                 default:
                     throw new ArgumentException($"Не найден параметр проекта с идентификатором \"{paramId}\".",
                         nameof(paramId));
@@ -204,6 +212,14 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                     return SpecTypeId.Number;
                 case nameof(ProjectParamsConfig.RoomName):
                     return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.RelatedRoomName):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.RelatedRoomNumber):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.RelatedRoomID):
+                    return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.RelatedApartmentNumber):
+                    return SpecTypeId.Number;
                 default:
                     throw new ArgumentException($"Не найден параметр проекта с идентификатором \"{paramId}\".",
                         nameof(paramId));
@@ -242,6 +258,14 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 case nameof(ProjectParamsConfig.CheckIsNormalGrid):
                     return SpecTypeId.String.Text;
                 case nameof(ProjectParamsConfig.CheckCorrectDistanceGrid):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.RelatedRoomName):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.RelatedRoomNumber):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.RelatedRoomID):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.RelatedApartmentNumber):
                     return SpecTypeId.String.Text;
                 case nameof(ProjectParamsConfig.RoomGroupName):
                     return ForgeTypeIdExtensions.EmptyForgeTypeId;

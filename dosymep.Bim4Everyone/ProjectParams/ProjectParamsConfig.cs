@@ -196,6 +196,46 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 StorageType = StorageType.String
             };
 
+        /// <summary>
+        /// Имя помещения
+        /// </summary>
+        public ProjectParam RelatedRoomName
+            => new ProjectParam(nameof(RelatedRoomName)) {
+                Name = "Имя помещения",
+                UnitType = ProjectParam.GetUnitType(nameof(RelatedRoomName)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// Номер помещения
+        /// </summary>
+        public ProjectParam RelatedRoomNumber
+            => new ProjectParam(nameof(RelatedRoomNumber)) {
+                Name = "Номер помещения",
+                UnitType = ProjectParam.GetUnitType(nameof(RelatedRoomNumber)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ID помещения
+        /// </summary>
+        public ProjectParam RelatedRoomID
+            => new ProjectParam(nameof(RelatedRoomID)) {
+                Name = "ID помещения",
+                UnitType = ProjectParam.GetUnitType(nameof(RelatedRoomID)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// Номер квартиры
+        /// </summary>
+        public ProjectParam RelatedApartmentNumber
+            => new ProjectParam(nameof(RelatedApartmentNumber)) {
+                Name = "Номер квартиры",
+                UnitType = ProjectParam.GetUnitType(nameof(RelatedApartmentNumber)),
+                StorageType = StorageType.String
+            };
+
 #if REVIT_2020 || REVIT_2021
 
         /// <summary>
