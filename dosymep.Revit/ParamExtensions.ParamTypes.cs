@@ -17548,6 +17548,11 @@ namespace dosymep.Revit {
             if(dataType == SpecTypeId.WireDiameter) { return StorageType.Double; }
 
             if(dataType == SpecTypeId.Boolean.YesNo) { return StorageType.Integer; }
+            
+            // Появились параметры категории семейств
+            if(Category.IsBuiltInCategory(dataType)) {
+                return StorageType.ElementId;
+            }
 
             throw new System.ArgumentOutOfRangeException($"Не удалось определить тип параметра для \"{dataType}\".");
         }

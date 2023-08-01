@@ -49,7 +49,7 @@ namespace dosymep.Revit {
 
 #if REVIT_2022_OR_GREATER
 
-            if(!SpecUtils.IsSpec(forgeTypeId)) {
+            if(!SpecUtils.IsValidDataType(forgeTypeId)) {
                 throw new ArgumentException(
                     $"Переданный ForgeTypeId \"{forgeTypeId.TypeId}\" не является единицей измерения.",
                     nameof(forgeTypeId));
