@@ -227,12 +227,12 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             };
 
         /// <summary>
-        /// Номер квартиры
+        /// Группа помещения
         /// </summary>
-        public ProjectParam RelatedApartmentNumber
-            => new ProjectParam(nameof(RelatedApartmentNumber)) {
-                Name = "Номер квартиры",
-                UnitType = ProjectParam.GetUnitType(nameof(RelatedApartmentNumber)),
+        public ProjectParam RelatedRoomGroup
+            => new ProjectParam(nameof(RelatedRoomGroup)) {
+                Name = "Группа помещения",
+                UnitType = ProjectParam.GetUnitType(nameof(RelatedRoomGroup)),
                 StorageType = StorageType.String
             };
 
