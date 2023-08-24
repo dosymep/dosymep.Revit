@@ -13,9 +13,15 @@ using Ninject.Modules;
 namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
     internal class XtraServicesModule : NinjectModule {
         public override void Load() {
+#if REVIT_2023_OR_LESS
             Bind<IUIThemeService>()
                 .To<XtraWindowsThemeService>()
                 .InSingletonScope();
+#else
+            Bind<IUIThemeService>()
+                .To<RevitThemeService>()
+                .InSingletonScope();
+#endif
 
             Bind<IUIThemeUpdaterService>()
                 .To<XtraThemeUpdaterService>()
