@@ -9,6 +9,7 @@ using Autodesk.Revit.UI;
 using dosymep.Bim4Everyone.SimpleServices.ServicesModules;
 
 using Ninject;
+using Ninject.Extensions.ChildKernel;
 
 namespace dosymep.Bim4Everyone.SimpleServices {
     /// <summary>
@@ -45,6 +46,24 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <returns>Возвращает сервис из контейнера.</returns>
         public static T GetPlatformService<T>() {
             return Instance.Get<T>();
+        }
+        
+        /// <summary>
+        /// Добавляет сервисы платформы в контейнер.
+        /// </summary>
+        /// <param name="application">Приложение Revit.</param>
+        /// <returns>Возвращает новый контейнер с сервисами платформы.</returns>
+        public static IKernel CreatePlatformServices(this UIApplication application) {
+            return new ChildKernel(Instance);
+        }
+        
+        /// <summary>
+        /// Добавляет сервисы платформы в контейнер.
+        /// </summary>
+        /// <param name="application">Приложение Revit.</param>
+        /// <returns>Возвращает новый контейнер с сервисами платформы.</returns>
+        public static IKernel CreatePlatformServices(this Application application) {
+            return new ChildKernel(Instance);
         }
     }
 }
