@@ -44,7 +44,10 @@
             <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
 
-        <PackageReference Include="Ninject.Extensions.ChildKernel" Version="3.3.0" />
+        <PackageReference Include="Ninject.Extensions.ChildKernel" Version="3.3.0">
+            <PrivateAssets>all</PrivateAssets>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
 
         <PackageReference Include="Serilog" Version="2.10.0">
             <PrivateAssets>all</PrivateAssets>
