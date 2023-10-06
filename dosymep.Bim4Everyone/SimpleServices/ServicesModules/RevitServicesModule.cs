@@ -16,10 +16,12 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
 
         public override void Load() {
             Bind<UIApplication>()
-                .ToConstant(_uiApplication);
+                .ToConstant(_uiApplication)
+                .InTransientScope();
             
             Bind<Application>()
-                .ToConstant(_uiApplication.Application);
+                .ToConstant(_uiApplication.Application)
+                .InTransientScope();
             
             Bind<ILanguageService>()
                 .To<RevitLanguageService>()
