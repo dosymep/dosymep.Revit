@@ -40,9 +40,9 @@ namespace dosymep.Bim4Everyone.SimpleServices {
     internal class ElementIdConverter : JsonConverter<ElementId> {
         public override void WriteJson(JsonWriter writer, ElementId value, JsonSerializer serializer) {
 #if REVIT_2023_OR_LESS
-            writer.WriteValue(value.IntegerValue.ToString());
+            writer.WriteValue(value.IntegerValue);
 #else
-            writer.WriteValue(value.Value.ToString());
+            writer.WriteValue(value.Value);
 #endif
         }
 
@@ -52,10 +52,15 @@ namespace dosymep.Bim4Everyone.SimpleServices {
             ElementId existingValue,
             bool hasExistingValue,
             JsonSerializer serializer) {
+            
+            if(reader.Value is null) {
+                return ElementId.InvalidElementId;
+            }
+            
 #if REVIT_2023_OR_LESS
-            return new ElementId((int) reader.Value);
+            return new ElementId(Convert.ToInt32(reader.Value));
 #else
-            return new ElementId((long) reader.Value);
+            return new ElementId(Convert.ToInt64(reader.Value));
 #endif
         }
     }
