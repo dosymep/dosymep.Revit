@@ -1,6 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <Import Project="..\ProjectProps\Common.props" />
 
+    <PropertyGroup>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <Resource Include="..\assets\Bim4Everyone.png" Link="assets\Bim4Everyone.png" />
+    </ItemGroup>
+    
     <ItemGroup>
         <Reference Include="dosymep.SimpleServices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
             <HintPath>$(AppData)\pyRevit\Extensions\BIM4Everyone.lib\dosymep_libs\libs\dosymep.SimpleServices.dll</HintPath>
@@ -32,6 +40,7 @@
             <Private>False</Private>
         </Reference>
 
+        <Reference Include="WindowsBase" />
         <Reference Include="System.Net.Http" />
     </ItemGroup>
 

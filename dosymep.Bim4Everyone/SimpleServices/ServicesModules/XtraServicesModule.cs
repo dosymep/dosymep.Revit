@@ -1,6 +1,9 @@
 ﻿using System;
+using System.IO;
+using System.Net.Cache;
 using System.Windows;
 using System.Windows.Interop;
+using System.Windows.Media.Imaging;
 
 using Autodesk.Revit.UI;
 
@@ -25,11 +28,12 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             Kernel?.UseXtraMessageBox();
             Kernel?.UseXtraThemeUpdater();
             Kernel?.UseXtraProgressDialog();
-
+            
             Kernel?.UseXtraNotifications(
                 applicationId: "Revit " + ModuleEnvironment.RevitVersion,
                 defaultAuthor: "dosymep",
-                defaultFooter: "Revit " + ModuleEnvironment.RevitVersion);
+                defaultFooter: "Revit " + ModuleEnvironment.RevitVersion,
+                defaultImage: new BitmapImage(new Uri("/dosymep.Bim4Everyone;component/assets/Bim4Everyone.png", UriKind.Relative)));
 
             Kernel?.UseXtraOpenFileDialog(
                 initialDirectory: Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
