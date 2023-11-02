@@ -6,7 +6,7 @@
     </PropertyGroup>
     
     <ItemGroup>
-        <Resource Include="..\assets\Bim4Everyone.png" Link="assets\Bim4Everyone.png" />
+        <Resource Include="..\..\assets\Bim4Everyone.png" Link="assets\Bim4Everyone.png" />
     </ItemGroup>
     
     <ItemGroup>
