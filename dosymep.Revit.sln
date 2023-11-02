@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dosymep.Bim4Everyone", "dosymep.Bim4Everyone\dosymep.Bim4Everyone.csproj", "{C4E51BBA-E45F-4FF3-AE71-E787CD4CD977}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dosymep.Bim4Everyone", "src\dosymep.Bim4Everyone\dosymep.Bim4Everyone.csproj", "{C4E51BBA-E45F-4FF3-AE71-E787CD4CD977}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dosymep.Revit", "dosymep.Revit\dosymep.Revit.csproj", "{F46DDC6B-336D-4D01-BAD3-6C1CDB64E79D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dosymep.Revit", "src\dosymep.Revit\dosymep.Revit.csproj", "{F46DDC6B-336D-4D01-BAD3-6C1CDB64E79D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3CA65F4E-8C63-4AEE-BF54-241A76BE1062}"
 	ProjectSection(SolutionItems) = preProject
