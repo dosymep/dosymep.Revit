@@ -1,4 +1,6 @@
-﻿using Autodesk.Revit.DB;
+﻿using System;
+
+using Autodesk.Revit.DB;
 
 namespace dosymep.Revit {
     /// <summary>
@@ -39,6 +41,36 @@ namespace dosymep.Revit {
         /// <returns>Возвращает true - если идентификатор элемента является не системным, иначе false.</returns>
         public static bool IsNotSystemId(this ElementId elementId) {
             return !elementId.IsNull() && elementId.GetIdValue() > 0;
+        }
+
+        /// <summary>
+        /// Конвертирует идентификатор в <see cref="BuiltInCategory"/>.
+        /// </summary>
+        /// <param name="elementId">Идентификатор элемента.</param>
+        /// <returns>Возвращает <see cref="BuiltInCategory"/>.</returns>
+        /// <exception cref="System.ArgumentException">Если идентификатор не является встроенной категорией.</exception>
+        public static BuiltInCategory AsBuiltInCategory(this ElementId elementId) {
+            if(elementId.IsNotSystemId()) {
+                throw new ArgumentException(
+                    $"Идентификатор \"{elementId.GetIdValue()}\" не является системным.", nameof(elementId));
+            }
+
+            return (BuiltInCategory) elementId.GetIdValue();
+        }
+
+        /// <summary>
+        /// Конвертирует идентификатор в <see cref="BuiltInParameter"/>.
+        /// </summary>
+        /// <param name="elementId">Идентификатор элемента.</param>
+        /// <returns>Возвращает <see cref="BuiltInParameter"/>.</returns>
+        /// <exception cref="System.ArgumentException">Если идентификатор не является встроенным параметром.</exception>
+        public static BuiltInParameter AsBuiltInParameter(this ElementId elementId) {
+            if(elementId.IsNotSystemId()) {
+                throw new ArgumentException(
+                    $"Идентификатор \"{elementId.GetIdValue()}\" не является системным.", nameof(elementId));
+            }
+
+            return (BuiltInParameter) elementId.GetIdValue();
         }
 
         /// <summary>
