@@ -1,6 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <Import Project="..\ProjectProps\Common.props" />
-
     <ItemGroup>
         <Reference Include="System.Net.Http">
             <Private>False</Private>
