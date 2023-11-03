@@ -1,50 +1,44 @@
 {
+  "$schema": "https://github.com/dotnet/docfx/blob/main/schemas/v1.0/schema.json",
   "metadata": [
     {
-      "src": [
-        {
-          "src": "../",
-          "files": [
-            "bin/**.dll"
-          ]
-        }
-      ],
-      "dest": "api",
-      "outputFormat": "mref",
-      "includePrivateMembers": false,
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false,
-      "noRestore": false,
-      "namespaceLayout": "flattened",
-      "memberLayout": "samePage",
-      "enumSortOrder": "alphabetic",
-      "allowCompilationErrors": false
+      "dest": "api/2020",
+      "src": [ { "src": "../bin", "files": "2020/**.dll" } ]
+    },
+    {
+      "dest": "api/2021",
+      "src": [ { "src": "../bin", "files": "2021/**.dll" } ]
+    },
+    {
+      "dest": "api/2022",
+      "src": [ { "src": "../bin", "files": "2022/**.dll" } ]
+    },
+    {
+      "dest": "api/2023",
+      "src": [ { "src": "../bin", "files": "2023/**.dll" } ]
+    },
+    {
+      "dest": "api/2024",
+      "src": [ { "src": "../bin", "files": "2024/**.dll" } ]
     }
   ],
   "build": {
     "content": [
-      {
-        "files": [
-          "api/**.yml",
-          "api/index.md"
-        ]
-      },
-      {
-        "files": [
-          "articles/**.md",
-          "articles/**/toc.yml",
-          "toc.yml",
-          "*.md"
-        ]
-      }
+      { "files": [ "api/index.md" ] },
+      { "files": [ "toc.yml", "*.md" ] },
+      { "files": [ "articles/**.md", "articles/**/toc.yml" ] },
+      
+      { "group": "2020", "files": [ "api/2020/*.yml", "api/2020/index.md" ] },
+      { "group": "2021", "files": [ "api/2021/*.yml", "api/2021/index.md" ] },
+      { "group": "2022", "files": [ "api/2022/*.yml", "api/2022/index.md" ] },
+      { "group": "2023", "files": [ "api/2023/*.yml", "api/2023/index.md" ] },
+      { "group": "2024", "files": [ "api/2024/*.yml", "api/2024/index.md" ] }
     ],
+    
     "resource": [
-      {
-        "files": [
-          "images/**"
-        ]
-      }
+      { "files": [ "images/**" ] }
     ],
+    
     "output": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
@@ -54,6 +48,27 @@
     ],
     "postProcessors": [],
     "keepFileLink": false,
-    "disableGitFeatures": false
+    "disableGitFeatures": false,
+    "globalMetadata" :
+    {
+      "_appName" : "dosymep.Revit",
+      "_appTitle" : "dosymep.Revit",
+      "_appFooter" : "Copyright &copy; 2023 dosymep",
+      "_enableSearch": true,
+      "_disableContribution": true
+    },
+    "sitemap": {
+      "baseUrl": "https://dosymep.github.io/dosymep.Revit",
+      "priority": 0.8,
+      "changefreq": "monthly",
+      "fileOptions": {
+        "**/articles/**": {
+          "priority": 0.8
+        },
+        "**/api/**": {
+          "priority": 0.3
+        }
+      }
+    }
   }
 }
