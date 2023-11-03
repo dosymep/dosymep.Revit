@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{E062AE01-4F4B-414C-ADB9-DE981CDC5628}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		D2020|x64 = D2020|x64
@@ -30,6 +32,8 @@ Global
 		R2024|x64 = R2024|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E062AE01-4F4B-414C-ADB9-DE981CDC5628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E062AE01-4F4B-414C-ADB9-DE981CDC5628}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4E51BBA-E45F-4FF3-AE71-E787CD4CD977}.D2020|x64.ActiveCfg = D2020|x64
 		{C4E51BBA-E45F-4FF3-AE71-E787CD4CD977}.D2020|x64.Build.0 = D2020|x64
 		{C4E51BBA-E45F-4FF3-AE71-E787CD4CD977}.D2021|x64.ActiveCfg = D2021|x64
