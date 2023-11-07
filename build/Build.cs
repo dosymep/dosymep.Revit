@@ -6,12 +6,14 @@ using dosymep.Nuke.RevitVersions;
 
 using Nuke.Common;
 using Nuke.Common.IO;
+using Nuke.Common.ProjectModel;
 using Nuke.Common.Tooling;
 using Nuke.Common.Tools.DotNet;
+using Nuke.Components;
 
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 
-class Build : NukeBuild {
+class Build : NukeBuild, IHazSolution {
     /// Support plugins are available for:
     ///   - JetBrains ReSharper        https://nuke.build/resharper
     ///   - JetBrains Rider            https://nuke.build/rider
@@ -39,8 +41,7 @@ class Build : NukeBuild {
     [Parameter("Max Revit version.")]
     readonly RevitVersion MaxVersion = RevitVersion.Rv2024;
 
-    [Parameter("Build Revit versions.")] 
-    readonly RevitVersion[] RevitVersions = new RevitVersion[0];
+    [Parameter("Build Revit versions.")] readonly RevitVersion[] RevitVersions = new RevitVersion[0];
 
     IEnumerable<RevitVersion> BuildRevitVersions;
 
@@ -62,13 +63,21 @@ class Build : NukeBuild {
                 .DeleteDirectories();
         });
 
-    Target Compile => _ => _
+    Target Restore => _ => _
         .DependsOn(Clean)
+        .Executes(() => {
+            DotNetRestore(s => s
+                .SetProjectFile(((IHazSolution) this).Solution));
+        });
+
+    Target Compile => _ => _
+        .DependsOn(Restore)
         .Executes(() => {
             DotNetBuild(s => s
                 .EnableForce()
                 .DisableNoRestore()
                 .SetConfiguration(Configuration)
+                .SetProjectFile(((IHazSolution) this).Solution)
                 .When(IsServerBuild, _ => _
                     .EnableContinuousIntegrationBuild())
                 .CombineWith(BuildRevitVersions, (settings, version) => {
