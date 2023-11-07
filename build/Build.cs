@@ -100,14 +100,18 @@ class Build : NukeBuild, IHazSolution {
                 }));
         });
 
-    Target DocsCompile => _ => _
-        .DependsOn(Compile)
+    Target DownloadDocFx => _ => _
         .Executes(() => {
             // В nuget.org лежит старая версия
             ProcessTasks.StartProcess(
                 "dotnet",
                 "tool install -g docfx");
+        });
 
+    Target DocsCompile => _ => _
+        .DependsOn(Compile)
+        .DependsOn(DownloadDocFx)
+        .Executes(() => {
             ProcessTasks.StartProcess(
                 "docfx",
                 DocsConfig
