@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -16,7 +17,6 @@ class Build : NukeBuild {
     ///   - JetBrains Rider            https://nuke.build/rider
     ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
     ///   - Microsoft VSCode           https://nuke.build/vscode
-
     public static int Main() => Execute<Build>(x => x.Compile);
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
@@ -25,16 +25,30 @@ class Build : NukeBuild {
     [Parameter] readonly AbsolutePath Output = RootDirectory / "bin";
     [Parameter] readonly string DocsOutput = Path.Combine("docs", "_site");
     [Parameter] readonly string DocsConfig = Path.Combine("docs", "docfx.json");
-    
+
     /// <summary>
     /// Min Revit version.
     /// </summary>
-    [Parameter("Min Revit version.")] readonly RevitVersion MinVersion = RevitVersion.Rv2020;
+    [Parameter("Min Revit version.")]
+    readonly RevitVersion MinVersion = RevitVersion.Rv2020;
 
     /// <summary>
     /// Max Revit version.
     /// </summary>
-    [Parameter("Max Revit version.")] readonly RevitVersion MaxVersion = RevitVersion.Rv2024;
+    [Parameter("Max Revit version.")]
+    readonly RevitVersion MaxVersion = RevitVersion.Rv2024;
+
+    [Parameter("Build Revit versions.")] 
+    readonly RevitVersion[] RevitVersions = new RevitVersion[0];
+
+    IEnumerable<RevitVersion> BuildRevitVersions;
+
+    protected override void OnBuildInitialized() {
+        base.OnBuildInitialized();
+        BuildRevitVersions = RevitVersions.Length > 0
+            ? RevitVersions
+            : RevitVersion.GetRevitVersions(MinVersion, MaxVersion);
+    }
 
     Target Clean => _ => _
         .Executes(() => {
@@ -55,7 +69,7 @@ class Build : NukeBuild {
                 .SetConfiguration(Configuration)
                 .When(IsServerBuild, _ => _
                     .EnableContinuousIntegrationBuild())
-                .CombineWith(RevitVersion.GetRevitVersions(MinVersion, MaxVersion), (settings, version) => {
+                .CombineWith(BuildRevitVersions, (settings, version) => {
                     return settings
                         .SetOutputDirectory(Output / version)
                         .SetProperty("RevitVersion", (int) version);
@@ -67,9 +81,9 @@ class Build : NukeBuild {
         .Executes(() => {
             // В nuget.org лежит старая версия
             ProcessTasks.StartProcess(
-                "dotnet", 
+                "dotnet",
                 "tool install -g docfx");
-            
+
             ProcessTasks.StartProcess(
                 "docfx",
                 DocsConfig

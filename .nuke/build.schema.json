@@ -101,6 +101,24 @@
             "type": "string"
           }
         },
+        "RevitVersions": {
+          "type": "array",
+          "description": "Build Revit versions",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Rv2016",
+              "Rv2017",
+              "Rv2018",
+              "Rv2019",
+              "Rv2020",
+              "Rv2021",
+              "Rv2022",
+              "Rv2023",
+              "Rv2024"
+            ]
+          }
+        },
         "Root": {
           "type": "string",
           "description": "Root directory during build execution"
