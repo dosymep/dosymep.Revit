@@ -37,12 +37,27 @@ jobs:
         with:
           name: docs-site
           path: docs/_site
-      
+  
+  deploy:
+    concurrency: ci-${{ github.ref }}
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+  
+      # Download Artifacts: https://github.com/actions/download-artifact
+      - name: Download Artifacts
+        uses: actions/download-artifact@v3.0.2
+        with:
+          name: docs-site
+          path: docs/_site
+          
       # Publish docs: https://github.com/JamesIves/github-pages-deploy-action
       - name: Publish to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           clean: true
           force: true
           branch: gh-pages
