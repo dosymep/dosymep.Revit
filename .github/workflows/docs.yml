@@ -20,10 +20,6 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 7.0.x
-      
-      # Add nuget source
-      - name: Add nuget package source
-        run: dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
         
       # Add DevExpress source: https://docs.devexpress.com/GeneralInformation/117209/installation/install-devexpress-controls-using-nuget-packages/manage-packages-with-dotnet-cli
       - name: Add DevExpress package source
