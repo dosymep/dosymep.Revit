@@ -74,7 +74,6 @@ class Build : NukeBuild, IHazSolution {
         });
 
     Target DownloadBim4Everyone => _ => _
-        .Triggers(Restore)
         .Executes(() => {
             // потому что основные пакеты лежат в библиотеке pyRevit
             Git("clone https://github.com/eirannejad/pyRevit.git %appdata%/pyRevit-Master");
@@ -82,6 +81,7 @@ class Build : NukeBuild, IHazSolution {
         });
 
     Target Compile => _ => _
+        .DependsOn(Restore)
         .DependsOn(DownloadBim4Everyone)
         .Executes(() => {
             DotNetBuild(s => s
