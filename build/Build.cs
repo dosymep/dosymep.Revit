@@ -68,7 +68,6 @@ class Build : NukeBuild, IHazSolution {
     Target Restore => _ => _
         .DependsOn(Clean)
         .Executes(() => {
-            Git("clone https://github.com/dosymep/BIM4Everyone.git %appdata%/pyRevit/Extensions");
             DotNetRestore(s => s
                 .SetProjectFile(((IHazSolution) this).Solution));
         });
