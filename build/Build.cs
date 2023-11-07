@@ -78,7 +78,7 @@ class Build : NukeBuild, IHazSolution {
             // потому что основные пакеты лежат в библиотеке pyRevit
             string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             Git($"clone https://github.com/eirannejad/pyRevit.git {appdata}/pyRevit-Master");
-            Git($"clone https://github.com/dosymep/BIM4Everyone.git {appdata}/pyRevit/Extensions");
+            Git($"clone https://github.com/dosymep/BIM4Everyone.git {appdata}/pyRevit/Extensions/BIM4Everyone.lib");
         });
 
     Target Compile => _ => _
