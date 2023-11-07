@@ -1,0 +1,47 @@
+name: docs
+
+on:
+  workflow_dispatch:
+
+# Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+permissions:
+  pages: write      # to deploy to Pages
+  contents: write
+  id-token: write   # to verify the deployment originates from an appropriate source
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        
+      # Install the .NET Core workload
+      - name: Install .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.0.x
+      
+      # Build docs
+      - name: Run './build.cmd '
+        run: ./build.cmd docs-compile
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      # Upload docs site: https://github.com/marketplace/actions/upload-a-build-artifact
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: docs-site
+          path: docs/_site
+      
+      # Publish docs: https://github.com/JamesIves/github-pages-deploy-action
+      - name: Publish docs
+        uses: JamesIves/github-pages-deploy-action@4.4.3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          clean: true
+          force: true
+          branch: gh-pages
+          folder: docs/_site
+          git-config-name: dosymep
+          git-config-email: dosymep@gmail.com
