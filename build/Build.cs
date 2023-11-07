@@ -105,7 +105,8 @@ class Build : NukeBuild, IHazSolution {
             // В nuget.org лежит старая версия
             ProcessTasks.StartProcess(
                 "dotnet",
-                "tool install -g docfx");
+                "tool install -g docfx")
+                .WaitForExit();
         });
 
     Target DocsCompile => _ => _
