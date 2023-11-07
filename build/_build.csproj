@@ -8,10 +8,13 @@
     <NukeRootDirectory>..</NukeRootDirectory>
     <NukeScriptDirectory>..</NukeScriptDirectory>
     <NukeTelemetryVersion>1</NukeTelemetryVersion>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Nuke.Common" Version="7.0.6" />
+    <PackageReference Include="dosymep.Nuke.RevitVersions" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

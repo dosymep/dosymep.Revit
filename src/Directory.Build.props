@@ -1,91 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="RevitVersions\Autodesk.Revit.Sdk.Refs.*.props"/>
+    
     <PropertyGroup>
         <TargetFramework>net48</TargetFramework>
         <OutputType>Library</OutputType>
         <Platforms>x64</Platforms>
         <NoWarn>1701;1702;MSB3246</NoWarn>
         <Configurations>D2020;D2021;D2022;D2023;D2024;R2020;R2021;R2022;R2023;R2024</Configurations>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)'=='D2020' OR '$(Configuration)'=='R2020'">
-        <RevitVersion>2020</RevitVersion>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)'=='D2021' OR '$(Configuration)'=='R2021'">
-        <RevitVersion>2021</RevitVersion>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)'=='D2022' OR '$(Configuration)'=='R2022'">
-        <RevitVersion>2022</RevitVersion>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)'=='D2023' OR '$(Configuration)'=='R2023'">
-        <RevitVersion>2023</RevitVersion>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)'=='D2024' OR '$(Configuration)'=='R2024'">
-        <RevitVersion>2024</RevitVersion>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'=='2020'">
-        <DefineConstants>$(DefineConstants);REVIT_2020</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'=='2021'">
-        <DefineConstants>$(DefineConstants);REVIT_2021</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'=='2022'">
-        <DefineConstants>$(DefineConstants);REVIT_2022</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'=='2023'">
-        <DefineConstants>$(DefineConstants);REVIT_2023</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'=='2024'">
-        <DefineConstants>$(DefineConstants);REVIT_2024</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'&lt;='2020'">
-        <DefineConstants>$(DefineConstants);REVIT_2020_OR_LESS</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'&lt;='2021'">
-        <DefineConstants>$(DefineConstants);REVIT_2021_OR_LESS</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'&lt;='2022'">
-        <DefineConstants>$(DefineConstants);REVIT_2022_OR_LESS</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'&lt;='2023'">
-        <DefineConstants>$(DefineConstants);REVIT_2023_OR_LESS</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'&lt;='2024'">
-        <DefineConstants>$(DefineConstants);REVIT_2024_OR_LESS</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'>='2020'">
-        <DefineConstants>$(DefineConstants);REVIT_2020_OR_GREATER</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'>='2021'">
-        <DefineConstants>$(DefineConstants);REVIT_2021_OR_GREATER</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'>='2022'">
-        <DefineConstants>$(DefineConstants);REVIT_2022_OR_GREATER</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'>='2023'">
-        <DefineConstants>$(DefineConstants);REVIT_2023_OR_GREATER</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(RevitVersion)'>='2024'">
-        <DefineConstants>$(DefineConstants);REVIT_2024_OR_GREATER</DefineConstants>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration.StartsWith(`D`))'">

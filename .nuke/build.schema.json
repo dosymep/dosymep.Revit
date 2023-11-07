@@ -49,6 +49,36 @@
             "VSCode"
           ]
         },
+        "MaxVersion": {
+          "type": "string",
+          "description": "Max Revit version",
+          "enum": [
+            "Rv2016",
+            "Rv2017",
+            "Rv2018",
+            "Rv2019",
+            "Rv2020",
+            "Rv2021",
+            "Rv2022",
+            "Rv2023",
+            "Rv2024"
+          ]
+        },
+        "MinVersion": {
+          "type": "string",
+          "description": "Min Revit version",
+          "enum": [
+            "Rv2016",
+            "Rv2017",
+            "Rv2018",
+            "Rv2019",
+            "Rv2020",
+            "Rv2021",
+            "Rv2022",
+            "Rv2023",
+            "Rv2024"
+          ]
+        },
         "NoLogo": {
           "type": "boolean",
           "description": "Disables displaying the NUKE logo"
