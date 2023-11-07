@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -75,8 +76,9 @@ class Build : NukeBuild, IHazSolution {
     Target DownloadBim4Everyone => _ => _
         .Executes(() => {
             // потому что основные пакеты лежат в библиотеке pyRevit
-            Git("clone https://github.com/eirannejad/pyRevit.git %appdata%/pyRevit-Master");
-            Git("clone https://github.com/dosymep/BIM4Everyone.git %appdata%/pyRevit/Extensions");
+            string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            Git($"clone https://github.com/eirannejad/pyRevit.git {appdata}/pyRevit-Master");
+            Git($"clone https://github.com/dosymep/BIM4Everyone.git {appdata}/pyRevit/Extensions");
         });
 
     Target Compile => _ => _
