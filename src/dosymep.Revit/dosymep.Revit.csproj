@@ -1,14 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-      <Configurations>D2020;D2021;D2022;D2023;D2024;Debug;Release</Configurations>
-      <Platforms>x64</Platforms>
-    </PropertyGroup>
     <ItemGroup>
-        <Reference Include="System.Net.Http">
-            <Private>False</Private>
-        </Reference>
+        <Reference Include="System.Net.Http"/>
     </ItemGroup>
-    
+
     <ItemGroup>
         <Compile Update="ParamExtensions.ParamTypes.cs">
             <DependentUpon>ParamExtensions.cs</DependentUpon>
