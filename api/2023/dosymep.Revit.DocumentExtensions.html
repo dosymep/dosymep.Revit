@@ -1,0 +1,1581 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DocumentExtensions
+ | dosymep.Revit </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DocumentExtensions
+ | dosymep.Revit ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="dosymep.Revit">
+            dosymep.Revit
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="dosymep.Revit.DocumentExtensions">
+
+
+
+  <h1 id="dosymep_Revit_DocumentExtensions" data-uid="dosymep.Revit.DocumentExtensions" class="text-break">
+    Class DocumentExtensions
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.Revit.html">Revit</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.Revit.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Расширения для документа Revit.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class DocumentExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DocumentExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetGlobalParam_" data-uid="dosymep.Revit.DocumentExtensions.GetGlobalParam*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetGlobalParam_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Revit.DocumentExtensions.GetGlobalParam(Autodesk.Revit.DB.Document,System.String)">
+  GetGlobalParam(Document, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает глобальный параметр по имени.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GlobalParameter GetGlobalParam(this Document document, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GlobalParameter</span></dt>
+    <dd><p>Возвращает глобальный параметр по имени. Если не параметр не был найден, то возвращается null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetGlobalParams_" data-uid="dosymep.Revit.DocumentExtensions.GetGlobalParams*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetGlobalParams_Autodesk_Revit_DB_Document_" data-uid="dosymep.Revit.DocumentExtensions.GetGlobalParams(Autodesk.Revit.DB.Document)">
+  GetGlobalParams(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает список глобальных параметров.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;GlobalParameter&gt; GetGlobalParams(this Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">GlobalParameter</span>&gt;</dt>
+    <dd><p>Возвращает список глобальных параметров.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetParameterBindings_" data-uid="dosymep.Revit.DocumentExtensions.GetParameterBindings*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetParameterBindings_Autodesk_Revit_DB_Document_" data-uid="dosymep.Revit.DocumentExtensions.GetParameterBindings(Autodesk.Revit.DB.Document)">
+  GetParameterBindings(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает связку определения параметра с привязкой.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;(Definition Definition, Binding Binding)&gt; GetParameterBindings(this Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;(<span class="xref">Definition</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-autodesk.revit.db.definition,autodesk.revit.db.binding-.definition">Definition</a>, <span class="xref">Binding</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-autodesk.revit.db.definition,autodesk.revit.db.binding-.binding">Binding</a>)&gt;</dt>
+    <dd><p>Возвращает связку определения параметра с привязкой.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetProjectParam_" data-uid="dosymep.Revit.DocumentExtensions.GetProjectParam*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetProjectParam_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Revit.DocumentExtensions.GetProjectParam(Autodesk.Revit.DB.Document,System.String)">
+  GetProjectParam(Document, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает параметр проекта по имени.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ParameterElement GetProjectParam(this Document document, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ParameterElement</span></dt>
+    <dd><p>Возвращает параметр проекта по имени. Если не параметр не был найден, то возвращается null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetProjectParamBinding_" data-uid="dosymep.Revit.DocumentExtensions.GetProjectParamBinding*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetProjectParamBinding_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Revit.DocumentExtensions.GetProjectParamBinding(Autodesk.Revit.DB.Document,System.String)">
+  GetProjectParamBinding(Document, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает настройки привязки для параметра проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static (Definition Definition, Binding Binding) GetProjectParamBinding(this Document document, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>(<span class="xref">Definition</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-autodesk.revit.db.definition,autodesk.revit.db.binding-.definition">Definition</a>, <span class="xref">Binding</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-autodesk.revit.db.definition,autodesk.revit.db.binding-.binding">Binding</a>)</dt>
+    <dd><p>Возвращает настройки привязки для параметра проекта. Если параметр не был найден возвращает null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetProjectParamElements_" data-uid="dosymep.Revit.DocumentExtensions.GetProjectParamElements*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetProjectParamElements_Autodesk_Revit_DB_Document_" data-uid="dosymep.Revit.DocumentExtensions.GetProjectParamElements(Autodesk.Revit.DB.Document)">
+  GetProjectParamElements(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает все параметры проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;ParameterElement&gt; GetProjectParamElements(this Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">ParameterElement</span>&gt;</dt>
+    <dd><p>Возвращает все параметры проекта.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetProjectParams_" data-uid="dosymep.Revit.DocumentExtensions.GetProjectParams*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetProjectParams_Autodesk_Revit_DB_Document_" data-uid="dosymep.Revit.DocumentExtensions.GetProjectParams(Autodesk.Revit.DB.Document)">
+  GetProjectParams(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает список параметров проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;ParameterElement&gt; GetProjectParams(this Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">ParameterElement</span>&gt;</dt>
+    <dd><p>Возвращает список параметров проекта.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetSharedParam_" data-uid="dosymep.Revit.DocumentExtensions.GetSharedParam*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetSharedParam_Autodesk_Revit_DB_Document_System_Guid_" data-uid="dosymep.Revit.DocumentExtensions.GetSharedParam(Autodesk.Revit.DB.Document,System.Guid)">
+  GetSharedParam(Document, Guid)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает общий параметр по имени.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SharedParameterElement GetSharedParam(this Document document, Guid paramGuid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+    <dt><code>paramGuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>Guid общего параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">SharedParameterElement</span></dt>
+    <dd><p>Возвращает общий параметр по имени. Если не параметр не был найден, то возвращается null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetSharedParam_" data-uid="dosymep.Revit.DocumentExtensions.GetSharedParam*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetSharedParam_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Revit.DocumentExtensions.GetSharedParam(Autodesk.Revit.DB.Document,System.String)">
+  GetSharedParam(Document, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает общий параметр по имени.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SharedParameterElement GetSharedParam(this Document document, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование общего параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">SharedParameterElement</span></dt>
+    <dd><p>Возвращает общий параметр по имени. Если не параметр не был найден, то возвращается null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetSharedParamBinding_" data-uid="dosymep.Revit.DocumentExtensions.GetSharedParamBinding*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetSharedParamBinding_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Revit.DocumentExtensions.GetSharedParamBinding(Autodesk.Revit.DB.Document,System.String)">
+  GetSharedParamBinding(Document, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает настройки привязки для общего параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static (Definition Definition, Binding Binding) GetSharedParamBinding(this Document document, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>(<span class="xref">Definition</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-autodesk.revit.db.definition,autodesk.revit.db.binding-.definition">Definition</a>, <span class="xref">Binding</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-autodesk.revit.db.definition,autodesk.revit.db.binding-.binding">Binding</a>)</dt>
+    <dd><p>Возвращает настройки привязки для общего параметра. Если параметр не был найден возвращает null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetSharedParams_" data-uid="dosymep.Revit.DocumentExtensions.GetSharedParams*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetSharedParams_Autodesk_Revit_DB_Document_" data-uid="dosymep.Revit.DocumentExtensions.GetSharedParams(Autodesk.Revit.DB.Document)">
+  GetSharedParams(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает список общих параметров.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;SharedParameterElement&gt; GetSharedParams(this Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">SharedParameterElement</span>&gt;</dt>
+    <dd><p>Возвращает список общих параметров.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetStorageType_" data-uid="dosymep.Revit.DocumentExtensions.GetStorageType*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetStorageType_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.DocumentExtensions.GetStorageType(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.BuiltInParameter)">
+  GetStorageType(Document, BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает тип системного параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StorageType GetStorageType(this Document document, BuiltInParameter builtInParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Системный параметр документа.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">StorageType</span></dt>
+    <dd><p>Возвращает тип системного параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetStorageType_" data-uid="dosymep.Revit.DocumentExtensions.GetStorageType*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetStorageType_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_ForgeTypeId_" data-uid="dosymep.Revit.DocumentExtensions.GetStorageType(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ForgeTypeId)">
+  GetStorageType(Document, ForgeTypeId)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает тип системного параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StorageType GetStorageType(this Document document, ForgeTypeId forgeTypeId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+    <dt><code>forgeTypeId</code> <span class="xref">ForgeTypeId</span></dt>
+    <dd><p>Системный параметр документа.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">StorageType</span></dt>
+    <dd><p>Возвращает тип системного параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetSystemParamBinding_" data-uid="dosymep.Revit.DocumentExtensions.GetSystemParamBinding*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetSystemParamBinding_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Revit.DocumentExtensions.GetSystemParamBinding(Autodesk.Revit.DB.Document,System.String)">
+  GetSystemParamBinding(Document, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает настройки привязки для системного параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static (Definition Definition, Binding Binding) GetSystemParamBinding(this Document document, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>(<span class="xref">Definition</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-autodesk.revit.db.definition,autodesk.revit.db.binding-.definition">Definition</a>, <span class="xref">Binding</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-autodesk.revit.db.definition,autodesk.revit.db.binding-.binding">Binding</a>)</dt>
+    <dd><p>Возвращает настройки привязки для системного параметра. Если параметр не был найден возвращает null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_GetUniqId_" data-uid="dosymep.Revit.DocumentExtensions.GetUniqId*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_GetUniqId_Autodesk_Revit_DB_Document_" data-uid="dosymep.Revit.DocumentExtensions.GetUniqId(Autodesk.Revit.DB.Document)">
+  GetUniqId(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает уникальный идентификатор документа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetUniqId(this Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Возвращает уникальный идентификатор документа.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Revit_DocumentExtensions_GetUniqId_Autodesk_Revit_DB_Document__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>На данный момент возвращает отображаемое имя документа <span class="xref">Autodesk.Revit.DB.Document.Title</span>.</p>
+</div>
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_IsExistsParam_" data-uid="dosymep.Revit.DocumentExtensions.IsExistsParam*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_IsExistsParam_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Revit.DocumentExtensions.IsExistsParam(Autodesk.Revit.DB.Document,System.String)">
+  IsExistsParam(Document, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на наличие параметра документа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsExistsParam(this Document document, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true если параметр был добавлен в Revit, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Наименование параметра не может быть null или пустым.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_IsExistsProjectParam_" data-uid="dosymep.Revit.DocumentExtensions.IsExistsProjectParam*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_IsExistsProjectParam_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Revit.DocumentExtensions.IsExistsProjectParam(Autodesk.Revit.DB.Document,System.String)">
+  IsExistsProjectParam(Document, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на наличие параметра проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsExistsProjectParam(this Document document, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true если параметр проекта был добавлен в Revit, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Наименование параметра проекта не может быть null или пустым.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_IsExistsSharedParam_" data-uid="dosymep.Revit.DocumentExtensions.IsExistsSharedParam*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_IsExistsSharedParam_Autodesk_Revit_DB_Document_System_Guid_" data-uid="dosymep.Revit.DocumentExtensions.IsExistsSharedParam(Autodesk.Revit.DB.Document,System.Guid)">
+  IsExistsSharedParam(Document, Guid)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на наличие общего параметра проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsExistsSharedParam(this Document document, Guid paramGuid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+    <dt><code>paramGuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>Guid общего параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true если общий параметр проекта был добавлен в Revit, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Наименование общего параметра не может быть null или пустым.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_IsExistsSharedParam_" data-uid="dosymep.Revit.DocumentExtensions.IsExistsSharedParam*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_IsExistsSharedParam_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Revit.DocumentExtensions.IsExistsSharedParam(Autodesk.Revit.DB.Document,System.String)">
+  IsExistsSharedParam(Document, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на наличие общего параметра проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsExistsSharedParam(this Document document, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование общего параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true если общий параметр проекта был добавлен в Revit, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Наименование общего параметра не может быть null или пустым.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_IsGlobalParamDefinition_" data-uid="dosymep.Revit.DocumentExtensions.IsGlobalParamDefinition*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_IsGlobalParamDefinition_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_Definition_" data-uid="dosymep.Revit.DocumentExtensions.IsGlobalParamDefinition(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Definition)">
+  IsGlobalParamDefinition(Document, Definition)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет является ли определение глобальным параметром.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsGlobalParamDefinition(this Document document, Definition definition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+    <dt><code>definition</code> <span class="xref">Definition</span></dt>
+    <dd><p>Определение параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если определение является глобальным параметром, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_IsLinkedElement_" data-uid="dosymep.Revit.DocumentExtensions.IsLinkedElement*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_IsLinkedElement_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_Element_" data-uid="dosymep.Revit.DocumentExtensions.IsLinkedElement(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Element)">
+  IsLinkedElement(Document, Element)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает признак того что элемент из связанного документа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsLinkedElement(this Document document, Element element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True если элемент из связанного документа, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_IsNotLinkedElement_" data-uid="dosymep.Revit.DocumentExtensions.IsNotLinkedElement*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_IsNotLinkedElement_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_Element_" data-uid="dosymep.Revit.DocumentExtensions.IsNotLinkedElement(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Element)">
+  IsNotLinkedElement(Document, Element)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает признак того что элемент не из связанного документа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsNotLinkedElement(this Document document, Element element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True если элемент не из связанного документа, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_IsProjectParamDefinition_" data-uid="dosymep.Revit.DocumentExtensions.IsProjectParamDefinition*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_IsProjectParamDefinition_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_Definition_" data-uid="dosymep.Revit.DocumentExtensions.IsProjectParamDefinition(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Definition)">
+  IsProjectParamDefinition(Document, Definition)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет является ли определение параметра проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsProjectParamDefinition(this Document document, Definition definition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+    <dt><code>definition</code> <span class="xref">Definition</span></dt>
+    <dd><p>Определение параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если определение параметра является проекта, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_IsSharedParamDefinition_" data-uid="dosymep.Revit.DocumentExtensions.IsSharedParamDefinition*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_IsSharedParamDefinition_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_Definition_" data-uid="dosymep.Revit.DocumentExtensions.IsSharedParamDefinition(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Definition)">
+  IsSharedParamDefinition(Document, Definition)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет является ли определение параметра общим.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsSharedParamDefinition(this Document document, Definition definition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+    <dt><code>definition</code> <span class="xref">Definition</span></dt>
+    <dd><p>Определение параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если определение параметра является общим, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_IsSystemParamDefinition_" data-uid="dosymep.Revit.DocumentExtensions.IsSystemParamDefinition*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_IsSystemParamDefinition_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_Definition_" data-uid="dosymep.Revit.DocumentExtensions.IsSystemParamDefinition(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Definition)">
+  IsSystemParamDefinition(Document, Definition)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет является ли определение параметра внутренним.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsSystemParamDefinition(this Document document, Definition definition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+    <dt><code>definition</code> <span class="xref">Definition</span></dt>
+    <dd><p>Определение параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если определение параметра является внутренним, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_StartTransaction_" data-uid="dosymep.Revit.DocumentExtensions.StartTransaction*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_StartTransaction_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Revit.DocumentExtensions.StartTransaction(Autodesk.Revit.DB.Document,System.String)">
+  StartTransaction(Document, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Запускает транзакцию на изменение документа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Transaction StartTransaction(this Document document, string transactionName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+    <dt><code>transactionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Название транзакции.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transaction</span></dt>
+    <dd><p>Возвращает запущенную транзакцию на изменение документа.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_StartTransactionGroup_" data-uid="dosymep.Revit.DocumentExtensions.StartTransactionGroup*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_StartTransactionGroup_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Revit.DocumentExtensions.StartTransactionGroup(Autodesk.Revit.DB.Document,System.String)">
+  StartTransactionGroup(Document, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Запускает групповую транзакцию на изменение документа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup StartTransactionGroup(this Document document, string transactionName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+    <dt><code>transactionName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Название транзакции.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TransactionGroup</span></dt>
+    <dd><p>Возвращает запущенную групповую транзакцию на изменение документа.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_UnloadAllLinks_" data-uid="dosymep.Revit.DocumentExtensions.UnloadAllLinks*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_UnloadAllLinks_System_Collections_Generic_IEnumerable_System_String__" data-uid="dosymep.Revit.DocumentExtensions.UnloadAllLinks(System.Collections.Generic.IEnumerable{System.String})">
+  UnloadAllLinks(IEnumerable&lt;string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Выгружает все связанные файлы для переданных документов Revit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UnloadAllLinks(IEnumerable&lt;string&gt; rvtFileNames)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rvtFileNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Документы Revit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Revit_DocumentExtensions_UnloadAllLinks_System_Collections_Generic_IEnumerable_System_String___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Работает без использования API <span class="xref">Autodesk.Revit.DB.TransmissionData</span></p>
+</div>
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_UnloadAllLinks_" data-uid="dosymep.Revit.DocumentExtensions.UnloadAllLinks*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_UnloadAllLinks_System_String_" data-uid="dosymep.Revit.DocumentExtensions.UnloadAllLinks(System.String)">
+  UnloadAllLinks(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Выгружает все связанные файлы для переданного документа Revit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UnloadAllLinks(string rvtFileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rvtFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Revit_DocumentExtensions_UnloadAllLinks_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Работает без использования API <span class="xref">Autodesk.Revit.DB.TransmissionData</span></p>
+</div>
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_UnloadAllLinks_" data-uid="dosymep.Revit.DocumentExtensions.UnloadAllLinks*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_UnloadAllLinks_System_String___" data-uid="dosymep.Revit.DocumentExtensions.UnloadAllLinks(System.String[])">
+  UnloadAllLinks(params string[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Выгружает все связанные файлы для переданных документов Revit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UnloadAllLinks(params string[] rvtFileNames)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rvtFileNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Документы Revit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Revit_DocumentExtensions_UnloadAllLinks_System_String____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Работает без использования API <span class="xref">Autodesk.Revit.DB.TransmissionData</span></p>
+</div>
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_UnloadAllLinksApi_" data-uid="dosymep.Revit.DocumentExtensions.UnloadAllLinksApi*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_UnloadAllLinksApi_System_Collections_Generic_IEnumerable_System_String__" data-uid="dosymep.Revit.DocumentExtensions.UnloadAllLinksApi(System.Collections.Generic.IEnumerable{System.String})">
+  UnloadAllLinksApi(IEnumerable&lt;string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Выгружает все связанные файлы для переданных документов Revit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UnloadAllLinksApi(IEnumerable&lt;string&gt; rvtFileNames)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rvtFileNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Документы Revit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Revit_DocumentExtensions_UnloadAllLinksApi_System_Collections_Generic_IEnumerable_System_String___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Работает c использованием API <span class="xref">Autodesk.Revit.DB.TransmissionData</span></p>
+</div>
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_UnloadAllLinksApi_" data-uid="dosymep.Revit.DocumentExtensions.UnloadAllLinksApi*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_UnloadAllLinksApi_System_String_" data-uid="dosymep.Revit.DocumentExtensions.UnloadAllLinksApi(System.String)">
+  UnloadAllLinksApi(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Выгружает все связанные файлы для переданного документа Revit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UnloadAllLinksApi(string rvtFileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rvtFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Документ Revit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Revit_DocumentExtensions_UnloadAllLinksApi_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Работает c использованием API <span class="xref">Autodesk.Revit.DB.TransmissionData</span></p>
+</div>
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_UnloadAllLinksApi_" data-uid="dosymep.Revit.DocumentExtensions.UnloadAllLinksApi*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_UnloadAllLinksApi_System_String___" data-uid="dosymep.Revit.DocumentExtensions.UnloadAllLinksApi(System.String[])">
+  UnloadAllLinksApi(params string[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Выгружает все связанные файлы для переданных документов Revit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void UnloadAllLinksApi(params string[] rvtFileNames)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rvtFileNames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Документы Revit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Revit_DocumentExtensions_UnloadAllLinksApi_System_String____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Работает c использованием API <span class="xref">Autodesk.Revit.DB.TransmissionData</span></p>
+</div>
+
+
+
+
+  <a id="dosymep_Revit_DocumentExtensions_ZoomToElements_" data-uid="dosymep.Revit.DocumentExtensions.ZoomToElements*"></a>
+
+  <h3 id="dosymep_Revit_DocumentExtensions_ZoomToElements_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_View3D_System_Collections_Generic_IList_Autodesk_Revit_DB_Element__System_Double_" data-uid="dosymep.Revit.DocumentExtensions.ZoomToElements(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.View3D,System.Collections.Generic.IList{Autodesk.Revit.DB.Element},System.Double)">
+  ZoomToElements(Document, View3D, IList&lt;Element&gt;, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Показывает и выделяет элементы в документе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ZoomToElements(this Document document, View3D view, IList&lt;Element&gt; elements, double offset = 5)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+    <dt><code>view</code> <span class="xref">View3D</span></dt>
+    <dd><p>3D вид.</p>
+</dd>
+    <dt><code>elements</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<span class="xref">Element</span>&gt;</dt>
+    <dd><p>Список элементов.</p>
+</dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Расстояние на которое увеличивается <span class="xref">Autodesk.Revit.DB.BoundingBoxXYZ</span>, во внутренних координатах.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

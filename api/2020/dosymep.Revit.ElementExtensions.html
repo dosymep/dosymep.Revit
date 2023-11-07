@@ -1,0 +1,2628 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ElementExtensions
+ | dosymep.Revit </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ElementExtensions
+ | dosymep.Revit ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="dosymep.Revit">
+            dosymep.Revit
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="dosymep.Revit.ElementExtensions">
+
+
+
+  <h1 id="dosymep_Revit_ElementExtensions" data-uid="dosymep.Revit.ElementExtensions" class="text-break">
+    Class ElementExtensions
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.Revit.html">Revit</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.Revit.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Расширения для элемента Revit.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ElementExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ElementExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetBoundingBox_" data-uid="dosymep.Revit.ElementExtensions.GetBoundingBox*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetBoundingBox_Autodesk_Revit_DB_Element_" data-uid="dosymep.Revit.ElementExtensions.GetBoundingBox(Autodesk.Revit.DB.Element)">
+  GetBoundingBox(Element)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает <span class="xref">Autodesk.Revit.DB.BoundingBoxXYZ</span> по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BoundingBoxXYZ GetBoundingBox(this Element element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">BoundingBoxXYZ</span></dt>
+    <dd><p>Возвращает <span class="xref">Autodesk.Revit.DB.BoundingBoxXYZ</span> по умолчанию.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Revit_ElementExtensions_GetBoundingBox_Autodesk_Revit_DB_Element__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Может вернуть Null, если у элемента нет <span class="xref">Autodesk.Revit.DB.BoundingBoxXYZ</span>.</p>
+</div>
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetBoundingBox_" data-uid="dosymep.Revit.ElementExtensions.GetBoundingBox*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetBoundingBox_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_View_" data-uid="dosymep.Revit.ElementExtensions.GetBoundingBox(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.View)">
+  GetBoundingBox(Element, View)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает <span class="xref">Autodesk.Revit.DB.BoundingBoxXYZ</span> по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BoundingBoxXYZ GetBoundingBox(this Element element, View view)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>view</code> <span class="xref">View</span></dt>
+    <dd><p>Вид у которого будет браться <span class="xref">Autodesk.Revit.DB.BoundingBoxXYZ</span>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">BoundingBoxXYZ</span></dt>
+    <dd><p>Возвращает <span class="xref">Autodesk.Revit.DB.BoundingBoxXYZ</span> по умолчанию.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Revit_ElementExtensions_GetBoundingBox_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_View__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Может вернуть Null, если у элемента нет <span class="xref">Autodesk.Revit.DB.BoundingBoxXYZ</span>.</p>
+</div>
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetElementType_" data-uid="dosymep.Revit.ElementExtensions.GetElementType*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetElementType_Autodesk_Revit_DB_Element_" data-uid="dosymep.Revit.ElementExtensions.GetElementType(Autodesk.Revit.DB.Element)">
+  GetElementType(Element)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает тип элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ElementType GetElementType(this Element element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ElementType</span></dt>
+    <dd><p>Возвращает тип элемента.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetElementType_" data-uid="dosymep.Revit.ElementExtensions.GetElementType*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetElementType__1_Autodesk_Revit_DB_Element_" data-uid="dosymep.Revit.ElementExtensions.GetElementType``1(Autodesk.Revit.DB.Element)">
+  GetElementType&lt;T&gt;(Element)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает тип элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetElementType&lt;T&gt;(this Element element) where T : ElementType</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Возвращает тип элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetParam_" data-uid="dosymep.Revit.ElementExtensions.GetParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetParam_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ElementExtensions.GetParam(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter)">
+  GetParam(Element, BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает параметр.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Parameter GetParam(this Element element, BuiltInParameter builtInParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Parameter</span></dt>
+    <dd><p>Возвращает параметр.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetParam_" data-uid="dosymep.Revit.ElementExtensions.GetParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetParam_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.GetParam(Autodesk.Revit.DB.Element,System.String)">
+  GetParam(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает параметр.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Parameter GetParam(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Parameter</span></dt>
+    <dd><p>Возвращает параметр.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetParamValue_" data-uid="dosymep.Revit.ElementExtensions.GetParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetParamValue_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ElementExtensions.GetParamValue(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter)">
+  GetParamValue(Element, BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetParamValue(this Element element, BuiltInParameter builtInParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Возвращает значение параметра элемента.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetParamValue_" data-uid="dosymep.Revit.ElementExtensions.GetParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetParamValue_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.GetParamValue(Autodesk.Revit.DB.Element,System.String)">
+  GetParamValue(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetParamValue(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Возвращает значение параметра элемента.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetParamValueOrDefault_" data-uid="dosymep.Revit.ElementExtensions.GetParamValueOrDefault*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetParamValueOrDefault_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_System_Object_" data-uid="dosymep.Revit.ElementExtensions.GetParamValueOrDefault(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter,System.Object)">
+  GetParamValueOrDefault(Element, BuiltInParameter, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра либо значение по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetParamValueOrDefault(this Element element, BuiltInParameter builtInParameter, object @default = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+    <dt><code>default</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Значение по умолчанию.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Возвращает значение параметра либо значение по умолчанию.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetParamValueOrDefault_" data-uid="dosymep.Revit.ElementExtensions.GetParamValueOrDefault*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetParamValueOrDefault_Autodesk_Revit_DB_Element_System_String_System_Object_" data-uid="dosymep.Revit.ElementExtensions.GetParamValueOrDefault(Autodesk.Revit.DB.Element,System.String,System.Object)">
+  GetParamValueOrDefault(Element, string, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра либо значение по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetParamValueOrDefault(this Element element, string paramName, object @default = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+    <dt><code>default</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Значение по умолчанию.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Возвращает значение параметра либо значение по умолчанию.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetParamValueOrDefault_" data-uid="dosymep.Revit.ElementExtensions.GetParamValueOrDefault*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetParamValueOrDefault__1_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter___0_" data-uid="dosymep.Revit.ElementExtensions.GetParamValueOrDefault``1(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter,``0)">
+  GetParamValueOrDefault&lt;T&gt;(Element, BuiltInParameter, T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра либо значение по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetParamValueOrDefault&lt;T&gt;(this Element element, BuiltInParameter builtInParameter, T @default = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+    <dt><code>default</code> <span class="xref">T</span></dt>
+    <dd><p>Значение по умолчанию.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Возвращает значение параметра либо значение по умолчанию.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetParamValueOrDefault_" data-uid="dosymep.Revit.ElementExtensions.GetParamValueOrDefault*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetParamValueOrDefault__1_Autodesk_Revit_DB_Element_System_String___0_" data-uid="dosymep.Revit.ElementExtensions.GetParamValueOrDefault``1(Autodesk.Revit.DB.Element,System.String,``0)">
+  GetParamValueOrDefault&lt;T&gt;(Element, string, T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра либо значение по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetParamValueOrDefault&lt;T&gt;(this Element element, string paramName, T @default = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+    <dt><code>default</code> <span class="xref">T</span></dt>
+    <dd><p>Значение по умолчанию.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Возвращает значение параметра либо значение по умолчанию.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetParamValue_" data-uid="dosymep.Revit.ElementExtensions.GetParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetParamValue__1_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ElementExtensions.GetParamValue``1(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter)">
+  GetParamValue&lt;T&gt;(Element, BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetParamValue&lt;T&gt;(this Element element, BuiltInParameter builtInParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Возвращает значение параметра элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetParamValue_" data-uid="dosymep.Revit.ElementExtensions.GetParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetParamValue__1_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.GetParamValue``1(Autodesk.Revit.DB.Element,System.String)">
+  GetParamValue&lt;T&gt;(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetParamValue&lt;T&gt;(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Возвращает значение параметра элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetProjectParam_" data-uid="dosymep.Revit.ElementExtensions.GetProjectParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetProjectParam_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.GetProjectParam(Autodesk.Revit.DB.Element,System.String)">
+  GetProjectParam(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает параметр проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Parameter GetProjectParam(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Parameter</span></dt>
+    <dd><p>Возвращает параметр проекта.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetProjectParamValue_" data-uid="dosymep.Revit.ElementExtensions.GetProjectParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetProjectParamValue_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.GetProjectParamValue(Autodesk.Revit.DB.Element,System.String)">
+  GetProjectParamValue(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра проекта элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetProjectParamValue(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Возвращает значение параметра проекта элемента.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetProjectParamValueOrDefault_" data-uid="dosymep.Revit.ElementExtensions.GetProjectParamValueOrDefault*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetProjectParamValueOrDefault_Autodesk_Revit_DB_Element_System_String_System_Object_" data-uid="dosymep.Revit.ElementExtensions.GetProjectParamValueOrDefault(Autodesk.Revit.DB.Element,System.String,System.Object)">
+  GetProjectParamValueOrDefault(Element, string, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра проекта либо значение по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetProjectParamValueOrDefault(this Element element, string paramName, object @default = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+    <dt><code>default</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Значение по умолчанию.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Возвращает значение параметра проекта либо значение по умолчанию.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetProjectParamValueOrDefault_" data-uid="dosymep.Revit.ElementExtensions.GetProjectParamValueOrDefault*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetProjectParamValueOrDefault__1_Autodesk_Revit_DB_Element_System_String___0_" data-uid="dosymep.Revit.ElementExtensions.GetProjectParamValueOrDefault``1(Autodesk.Revit.DB.Element,System.String,``0)">
+  GetProjectParamValueOrDefault&lt;T&gt;(Element, string, T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра проекта либо значение по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetProjectParamValueOrDefault&lt;T&gt;(this Element element, string paramName, T @default = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+    <dt><code>default</code> <span class="xref">T</span></dt>
+    <dd><p>Значение по умолчанию.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Возвращает значение параметра проекта либо значение по умолчанию.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetProjectParamValue_" data-uid="dosymep.Revit.ElementExtensions.GetProjectParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetProjectParamValue__1_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.GetProjectParamValue``1(Autodesk.Revit.DB.Element,System.String)">
+  GetProjectParamValue&lt;T&gt;(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра проекта элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetProjectParamValue&lt;T&gt;(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Возвращает значение параметра проекта элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetSharedParam_" data-uid="dosymep.Revit.ElementExtensions.GetSharedParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetSharedParam_Autodesk_Revit_DB_Element_System_Guid_" data-uid="dosymep.Revit.ElementExtensions.GetSharedParam(Autodesk.Revit.DB.Element,System.Guid)">
+  GetSharedParam(Element, Guid)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает общий параметр.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Parameter GetSharedParam(this Element element, Guid paramGuid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramGuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>Guid общего параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Parameter</span></dt>
+    <dd><p>Возвращает общий параметр.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetSharedParam_" data-uid="dosymep.Revit.ElementExtensions.GetSharedParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetSharedParam_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.GetSharedParam(Autodesk.Revit.DB.Element,System.String)">
+  GetSharedParam(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает общий параметр.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Parameter GetSharedParam(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование общего параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Parameter</span></dt>
+    <dd><p>Возвращает общий параметр.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetSharedParamValue_" data-uid="dosymep.Revit.ElementExtensions.GetSharedParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetSharedParamValue_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.GetSharedParamValue(Autodesk.Revit.DB.Element,System.String)">
+  GetSharedParamValue(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение общего параметра элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetSharedParamValue(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование общего параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Возвращает значение общего параметра элемента.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetSharedParamValueOrDefault_" data-uid="dosymep.Revit.ElementExtensions.GetSharedParamValueOrDefault*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetSharedParamValueOrDefault_Autodesk_Revit_DB_Element_System_String_System_Object_" data-uid="dosymep.Revit.ElementExtensions.GetSharedParamValueOrDefault(Autodesk.Revit.DB.Element,System.String,System.Object)">
+  GetSharedParamValueOrDefault(Element, string, object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение общего параметра либо значение по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object GetSharedParamValueOrDefault(this Element element, string paramName, object @default = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование общего параметра.</p>
+</dd>
+    <dt><code>default</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Значение по умолчанию.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Возвращает значение общего параметра либо значение по умолчанию.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetSharedParamValueOrDefault_" data-uid="dosymep.Revit.ElementExtensions.GetSharedParamValueOrDefault*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetSharedParamValueOrDefault__1_Autodesk_Revit_DB_Element_System_String___0_" data-uid="dosymep.Revit.ElementExtensions.GetSharedParamValueOrDefault``1(Autodesk.Revit.DB.Element,System.String,``0)">
+  GetSharedParamValueOrDefault&lt;T&gt;(Element, string, T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение общего параметра либо значение по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetSharedParamValueOrDefault&lt;T&gt;(this Element element, string paramName, T @default = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование общего параметра.</p>
+</dd>
+    <dt><code>default</code> <span class="xref">T</span></dt>
+    <dd><p>Значение по умолчанию.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Возвращает значение общего параметра либо значение по умолчанию.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_GetSharedParamValue_" data-uid="dosymep.Revit.ElementExtensions.GetSharedParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_GetSharedParamValue__1_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.GetSharedParamValue``1(Autodesk.Revit.DB.Element,System.String)">
+  GetSharedParamValue&lt;T&gt;(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение общего параметра элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetSharedParamValue&lt;T&gt;(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование общего параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Возвращает значение общего параметра элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_HasElementType_" data-uid="dosymep.Revit.ElementExtensions.HasElementType*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_HasElementType_Autodesk_Revit_DB_Element_" data-uid="dosymep.Revit.ElementExtensions.HasElementType(Autodesk.Revit.DB.Element)">
+  HasElementType(Element)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет есть ли тип у элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasElementType(this Element element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если у элемента есть тип, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_InAnyCategory_" data-uid="dosymep.Revit.ElementExtensions.InAnyCategory*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_InAnyCategory_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInCategory_" data-uid="dosymep.Revit.ElementExtensions.InAnyCategory(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInCategory)">
+  InAnyCategory(Element, BuiltInCategory)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет принадлежность элемента к переданной категории.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool InAnyCategory(this Element element, BuiltInCategory category)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Проверяемый элемент.</p>
+</dd>
+    <dt><code>category</code> <span class="xref">BuiltInCategory</span></dt>
+    <dd><p>Проверяемая категория.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если элемент является переданной категории, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_InAnyCategory_" data-uid="dosymep.Revit.ElementExtensions.InAnyCategory*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_InAnyCategory_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInCategory___" data-uid="dosymep.Revit.ElementExtensions.InAnyCategory(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInCategory[])">
+  InAnyCategory(Element, params BuiltInCategory[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет принадлежность элемента к переданным категориям.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool InAnyCategory(this Element element, params BuiltInCategory[] categories)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Проверяемый элемент.</p>
+</dd>
+    <dt><code>categories</code> <span class="xref">BuiltInCategory</span>[]</dt>
+    <dd><p>Проверяемые категории.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если элемент является переданным категориям, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_InAnyCategory_" data-uid="dosymep.Revit.ElementExtensions.InAnyCategory*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_InAnyCategory_Autodesk_Revit_DB_Element_System_Collections_Generic_IEnumerable_Autodesk_Revit_DB_BuiltInCategory__" data-uid="dosymep.Revit.ElementExtensions.InAnyCategory(Autodesk.Revit.DB.Element,System.Collections.Generic.IEnumerable{Autodesk.Revit.DB.BuiltInCategory})">
+  InAnyCategory(Element, IEnumerable&lt;BuiltInCategory&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет принадлежность элемента к переданным категориям.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool InAnyCategory(this Element element, IEnumerable&lt;BuiltInCategory&gt; categories)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Проверяемый элемент.</p>
+</dd>
+    <dt><code>categories</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">BuiltInCategory</span>&gt;</dt>
+    <dd><p>Проверяемые категории.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если элемент является переданным категориям, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_IsElementType_" data-uid="dosymep.Revit.ElementExtensions.IsElementType*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsElementType_Autodesk_Revit_DB_Element_" data-uid="dosymep.Revit.ElementExtensions.IsElementType(Autodesk.Revit.DB.Element)">
+  IsElementType(Element)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет элемент является ли он <span class="xref">Autodesk.Revit.DB.ElementType</span></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsElementType(this Element element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если элемент является типом элемента, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_IsExistsParam_" data-uid="dosymep.Revit.ElementExtensions.IsExistsParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsExistsParam_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ElementExtensions.IsExistsParam(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter)">
+  IsExistsParam(Element, BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на существование параметра в элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsExistsParam(this Element element, BuiltInParameter builtInParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если параметр существует, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_IsExistsParam_" data-uid="dosymep.Revit.ElementExtensions.IsExistsParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsExistsParam_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.IsExistsParam(Autodesk.Revit.DB.Element,System.String)">
+  IsExistsParam(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на существование параметра в элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsExistsParam(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если параметр существует, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_IsExistsParamValue_" data-uid="dosymep.Revit.ElementExtensions.IsExistsParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsExistsParamValue_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ElementExtensions.IsExistsParamValue(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter)">
+  IsExistsParamValue(Element, BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на существование значения параметра в элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsExistsParamValue(this Element element, BuiltInParameter builtInParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если значение параметра существует, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_IsExistsParamValue_" data-uid="dosymep.Revit.ElementExtensions.IsExistsParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsExistsParamValue_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.IsExistsParamValue(Autodesk.Revit.DB.Element,System.String)">
+  IsExistsParamValue(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на существование значение параметра в элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsExistsParamValue(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если значение параметра существует, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_IsExistsProjectParam_" data-uid="dosymep.Revit.ElementExtensions.IsExistsProjectParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsExistsProjectParam_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.IsExistsProjectParam(Autodesk.Revit.DB.Element,System.String)">
+  IsExistsProjectParam(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на существование параметра проекта в элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsExistsProjectParam(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если параметр проекта существует, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_IsExistsProjectParamValue_" data-uid="dosymep.Revit.ElementExtensions.IsExistsProjectParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsExistsProjectParamValue_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.IsExistsProjectParamValue(Autodesk.Revit.DB.Element,System.String)">
+  IsExistsProjectParamValue(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на существование значения параметра проекта в элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsExistsProjectParamValue(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если значение параметра проекта существует, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_IsExistsSharedParam_" data-uid="dosymep.Revit.ElementExtensions.IsExistsSharedParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsExistsSharedParam_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.IsExistsSharedParam(Autodesk.Revit.DB.Element,System.String)">
+  IsExistsSharedParam(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на существование общего параметра в элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsExistsSharedParam(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если общий параметр существует, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_IsExistsSharedParamValue_" data-uid="dosymep.Revit.ElementExtensions.IsExistsSharedParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsExistsSharedParamValue_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.IsExistsSharedParamValue(Autodesk.Revit.DB.Element,System.String)">
+  IsExistsSharedParamValue(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на существование значение общего параметра в элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsExistsSharedParamValue(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если значение общего параметра существует, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_RemoveParamValue_" data-uid="dosymep.Revit.ElementExtensions.RemoveParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_RemoveParamValue_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ElementExtensions.RemoveParamValue(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter)">
+  RemoveParamValue(Element, BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Удаляет параметр по его встроенному типу.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool RemoveParamValue(this Element element, BuiltInParameter builtInParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает признак удаления параметра true - если был удален, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_RemoveParamValue_" data-uid="dosymep.Revit.ElementExtensions.RemoveParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_RemoveParamValue_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.RemoveParamValue(Autodesk.Revit.DB.Element,System.String)">
+  RemoveParamValue(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Удаляет параметр по его имени.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool RemoveParamValue(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает признак удаления параметра true - если был удален, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_RemoveProjectParamValue_" data-uid="dosymep.Revit.ElementExtensions.RemoveProjectParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_RemoveProjectParamValue_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.RemoveProjectParamValue(Autodesk.Revit.DB.Element,System.String)">
+  RemoveProjectParamValue(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Удаляет параметр проекта по его имени.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool RemoveProjectParamValue(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает признак удаления параметра проекта true - если был удален, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_RemoveSharedParamValue_" data-uid="dosymep.Revit.ElementExtensions.RemoveSharedParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_RemoveSharedParamValue_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.RemoveSharedParamValue(Autodesk.Revit.DB.Element,System.String)">
+  RemoveSharedParamValue(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Удаляет общий параметр по его имени.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool RemoveSharedParamValue(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование общего параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает признак удаления общего параметра true - если был удален, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetParamValue_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_Autodesk_Revit_DB_ElementId_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter,Autodesk.Revit.DB.ElementId)">
+  SetParamValue(Element, BuiltInParameter, ElementId)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetParamValue(this Element element, BuiltInParameter builtInParameter, ElementId paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+    <dt><code>paramValue</code> <span class="xref">ElementId</span></dt>
+    <dd><p>Значение параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetParamValue_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_System_Double_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter,System.Double)">
+  SetParamValue(Element, BuiltInParameter, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetParamValue(this Element element, BuiltInParameter builtInParameter, double paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+    <dt><code>paramValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Значение параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetParamValue_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_System_Int32_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter,System.Int32)">
+  SetParamValue(Element, BuiltInParameter, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetParamValue(this Element element, BuiltInParameter builtInParameter, int paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+    <dt><code>paramValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Значение параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetParamValue_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_System_String_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter,System.String)">
+  SetParamValue(Element, BuiltInParameter, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetParamValue(this Element element, BuiltInParameter builtInParameter, string paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+    <dt><code>paramValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Значение параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetParamValue_Autodesk_Revit_DB_Element_System_String_Autodesk_Revit_DB_ElementId_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue(Autodesk.Revit.DB.Element,System.String,Autodesk.Revit.DB.ElementId)">
+  SetParamValue(Element, string, ElementId)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetParamValue(this Element element, string paramName, ElementId paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+    <dt><code>paramValue</code> <span class="xref">ElementId</span></dt>
+    <dd><p>Значение параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetParamValue_Autodesk_Revit_DB_Element_System_String_System_Double_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue(Autodesk.Revit.DB.Element,System.String,System.Double)">
+  SetParamValue(Element, string, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetParamValue(this Element element, string paramName, double paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+    <dt><code>paramValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Значение параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetParamValue_Autodesk_Revit_DB_Element_System_String_System_Int32_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue(Autodesk.Revit.DB.Element,System.String,System.Int32)">
+  SetParamValue(Element, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetParamValue(this Element element, string paramName, int paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+    <dt><code>paramValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Значение параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetParamValue_Autodesk_Revit_DB_Element_System_String_System_String_" data-uid="dosymep.Revit.ElementExtensions.SetParamValue(Autodesk.Revit.DB.Element,System.String,System.String)">
+  SetParamValue(Element, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetParamValue(this Element element, string paramName, string paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра.</p>
+</dd>
+    <dt><code>paramValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Значение параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetProjectParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetProjectParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetProjectParamValue_Autodesk_Revit_DB_Element_System_String_Autodesk_Revit_DB_ElementId_" data-uid="dosymep.Revit.ElementExtensions.SetProjectParamValue(Autodesk.Revit.DB.Element,System.String,Autodesk.Revit.DB.ElementId)">
+  SetProjectParamValue(Element, string, ElementId)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение параметра проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetProjectParamValue(this Element element, string paramName, ElementId paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра. проекта</p>
+</dd>
+    <dt><code>paramValue</code> <span class="xref">ElementId</span></dt>
+    <dd><p>Значение параметра проекта.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetProjectParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetProjectParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetProjectParamValue_Autodesk_Revit_DB_Element_System_String_System_Double_" data-uid="dosymep.Revit.ElementExtensions.SetProjectParamValue(Autodesk.Revit.DB.Element,System.String,System.Double)">
+  SetProjectParamValue(Element, string, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение параметра проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetProjectParamValue(this Element element, string paramName, double paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+    <dt><code>paramValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Значение параметра проекта.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetProjectParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetProjectParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetProjectParamValue_Autodesk_Revit_DB_Element_System_String_System_Int32_" data-uid="dosymep.Revit.ElementExtensions.SetProjectParamValue(Autodesk.Revit.DB.Element,System.String,System.Int32)">
+  SetProjectParamValue(Element, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение параметра проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetProjectParamValue(this Element element, string paramName, int paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+    <dt><code>paramValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Значение параметра проекта.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetProjectParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetProjectParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetProjectParamValue_Autodesk_Revit_DB_Element_System_String_System_String_" data-uid="dosymep.Revit.ElementExtensions.SetProjectParamValue(Autodesk.Revit.DB.Element,System.String,System.String)">
+  SetProjectParamValue(Element, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение параметра проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetProjectParamValue(this Element element, string paramName, string paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+    <dt><code>paramValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Значение параметра проекта.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetSharedParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetSharedParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetSharedParamValue_Autodesk_Revit_DB_Element_System_String_Autodesk_Revit_DB_ElementId_" data-uid="dosymep.Revit.ElementExtensions.SetSharedParamValue(Autodesk.Revit.DB.Element,System.String,Autodesk.Revit.DB.ElementId)">
+  SetSharedParamValue(Element, string, ElementId)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение общего параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetSharedParamValue(this Element element, string paramName, ElementId paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование общего параметра.</p>
+</dd>
+    <dt><code>paramValue</code> <span class="xref">ElementId</span></dt>
+    <dd><p>Значение общего параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetSharedParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetSharedParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetSharedParamValue_Autodesk_Revit_DB_Element_System_String_System_Double_" data-uid="dosymep.Revit.ElementExtensions.SetSharedParamValue(Autodesk.Revit.DB.Element,System.String,System.Double)">
+  SetSharedParamValue(Element, string, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение общего параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetSharedParamValue(this Element element, string paramName, double paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование общего  параметра.</p>
+</dd>
+    <dt><code>paramValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Значение общего параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetSharedParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetSharedParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetSharedParamValue_Autodesk_Revit_DB_Element_System_String_System_Int32_" data-uid="dosymep.Revit.ElementExtensions.SetSharedParamValue(Autodesk.Revit.DB.Element,System.String,System.Int32)">
+  SetSharedParamValue(Element, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение общего параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetSharedParamValue(this Element element, string paramName, int paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование общего параметра.</p>
+</dd>
+    <dt><code>paramValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Значение общего параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_SetSharedParamValue_" data-uid="dosymep.Revit.ElementExtensions.SetSharedParamValue*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_SetSharedParamValue_Autodesk_Revit_DB_Element_System_String_System_String_" data-uid="dosymep.Revit.ElementExtensions.SetSharedParamValue(Autodesk.Revit.DB.Element,System.String,System.String)">
+  SetSharedParamValue(Element, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает значение общего параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetSharedParamValue(this Element element, string paramName, string paramValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование общего параметра.</p>
+</dd>
+    <dt><code>paramValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Значение общего параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

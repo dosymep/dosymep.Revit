@@ -1,0 +1,529 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SharedParam
+ | dosymep.Revit </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SharedParam
+ | dosymep.Revit ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="dosymep.Revit">
+            dosymep.Revit
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam">
+
+
+
+  <h1 id="dosymep_Bim4Everyone_SharedParams_SharedParam" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam" class="text-break">
+    Class SharedParam
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.Bim4Everyone.html">Bim4Everyone</a>.<a class="xref" href="dosymep.Bim4Everyone.SharedParams.html">SharedParams</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.Bim4Everyone.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Класс общего параметра</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SharedParam : RevitParam, IEquatable&lt;RevitParam&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.RevitParam.html">RevitParam</a></div>
+      <div><span class="xref">SharedParam</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="dosymep.Bim4Everyone.RevitParam.html">RevitParam</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_IsExistsParam_Autodesk_Revit_DB_Element_">RevitParam.IsExistsParam(Element)</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_AsRevitParam">RevitParam.AsRevitParam()</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_Equals_dosymep_Bim4Everyone_RevitParam_">RevitParam.Equals(RevitParam)</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_Equals_System_Object_">RevitParam.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_GetHashCode">RevitParam.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_Id">RevitParam.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_Name">RevitParam.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_Description">RevitParam.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_StorageType">RevitParam.StorageType</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_UnitType">RevitParam.UnitType</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_UnitTypeName">RevitParam.UnitTypeName</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="dosymep_Bim4Everyone_SharedParams_SharedParam_Guid_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.Guid*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SharedParams_SharedParam_Guid" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.Guid">
+  Guid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Guid общего параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid Guid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_Bim4Everyone_SharedParams_SharedParam_GetExternalDefinition_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.GetExternalDefinition*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SharedParams_SharedParam_GetExternalDefinition_Autodesk_Revit_ApplicationServices_Application_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.GetExternalDefinition(Autodesk.Revit.ApplicationServices.Application)">
+  GetExternalDefinition(Application)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает описание общего параметра из ФОП.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExternalDefinition GetExternalDefinition(Application application)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>application</code> <span class="xref">Application</span></dt>
+    <dd><p>Приложение Revit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ExternalDefinition</span></dt>
+    <dd><p>Возвращает описание общего параметра из ФОП.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SharedParams_SharedParam_GetExternalDefinition_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.GetExternalDefinition*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SharedParams_SharedParam_GetExternalDefinition_Autodesk_Revit_ApplicationServices_Application_System_String_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.GetExternalDefinition(Autodesk.Revit.ApplicationServices.Application,System.String)">
+  GetExternalDefinition(Application, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает описание общего параметра из ФОП.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExternalDefinition GetExternalDefinition(Application application, string groupName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>application</code> <span class="xref">Application</span></dt>
+    <dd><p>Приложение Revit.</p>
+</dd>
+    <dt><code>groupName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование группы параметров.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ExternalDefinition</span></dt>
+    <dd><p>Возвращает описание общего параметра из ФОП.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SharedParams_SharedParam_GetParam_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.GetParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SharedParams_SharedParam_GetParam_Autodesk_Revit_DB_Element_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.GetParam(Autodesk.Revit.DB.Element)">
+  GetParam(Element)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает параметр элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Parameter GetParam(Element element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Parameter</span></dt>
+    <dd><p>Возвращает параметр элемента.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SharedParams_SharedParam_GetParamBinding_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.GetParamBinding*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SharedParams_SharedParam_GetParamBinding_Autodesk_Revit_DB_Document_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.GetParamBinding(Autodesk.Revit.DB.Document)">
+  GetParamBinding(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает настройки привязки параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override (Definition Definition, Binding Binding) GetParamBinding(Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>(<span class="xref">Definition</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-autodesk.revit.db.definition,autodesk.revit.db.binding-.definition">Definition</a>, <span class="xref">Binding</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-autodesk.revit.db.definition,autodesk.revit.db.binding-.binding">Binding</a>)</dt>
+    <dd><p>Возвращает настройки привязки параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SharedParams_SharedParam_GetRevitParamElement_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.GetRevitParamElement*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SharedParams_SharedParam_GetRevitParamElement_Autodesk_Revit_DB_Document_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.GetRevitParamElement(Autodesk.Revit.DB.Document)">
+  GetRevitParamElement(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает элемент параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ParameterElement GetRevitParamElement(Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ParameterElement</span></dt>
+    <dd><p>Возвращает элемент параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SharedParams_SharedParam_IsExistsParam_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.IsExistsParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SharedParams_SharedParam_IsExistsParam_Autodesk_Revit_DB_Document_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.IsExistsParam(Autodesk.Revit.DB.Document)">
+  IsExistsParam(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на существование параметра в документе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsExistsParam(Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если параметр существует, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SharedParams_SharedParam_IsRevitParam_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.IsRevitParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SharedParams_SharedParam_IsRevitParam_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_Definition_" data-uid="dosymep.Bim4Everyone.SharedParams.SharedParam.IsRevitParam(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Definition)">
+  IsRevitParam(Document, Definition)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет является ли определение параметра общим параметром.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsRevitParam(Document document, Definition definition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+    <dt><code>definition</code> <span class="xref">Definition</span></dt>
+    <dd><p>Определение параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если определение параметра является общим параметром, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

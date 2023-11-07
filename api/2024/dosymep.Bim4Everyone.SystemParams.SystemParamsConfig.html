@@ -1,0 +1,663 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SystemParamsConfig
+ | dosymep.Revit </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SystemParamsConfig
+ | dosymep.Revit ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="dosymep.Revit">
+            dosymep.Revit
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig">
+
+
+
+  <h1 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig" class="text-break">
+    Class SystemParamsConfig
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.Bim4Everyone.html">Bim4Everyone</a>.<a class="xref" href="dosymep.Bim4Everyone.SystemParams.html">SystemParams</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.Bim4Everyone.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Конфигурация системных параметров.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SystemParamsConfig : RevitParamsConfig, ISystemParamsService, IRevitParamsService</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.RevitParamsConfig.html">RevitParamsConfig</a></div>
+      <div><span class="xref">SystemParamsConfig</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.html">ISystemParamsService</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.html">IRevitParamsService</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParamsConfig.html#dosymep_Bim4Everyone_RevitParamsConfig__revitParams">RevitParamsConfig._revitParams</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParamsConfig.html#dosymep_Bim4Everyone_RevitParamsConfig_GetRevitParams">RevitParamsConfig.GetRevitParams()</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParamsConfig.html#dosymep_Bim4Everyone_RevitParamsConfig_Item_System_String_">RevitParamsConfig.this[string]</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_Instance_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.Instance*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_Instance" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.Instance">
+  Instance
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Текущее состояние конфигурации.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SystemParamsConfig Instance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.html">SystemParamsConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_Instance_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Перед использованием нужно вызвать <a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.html#dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_LoadInstance_System_Nullable_Autodesk_Revit_ApplicationServices_LanguageType__">LoadInstance(LanguageType?)</a></p>
+</div>
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_Item_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.Item*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_Item_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.Item(Autodesk.Revit.DB.BuiltInParameter)">
+  this[BuiltInParameter]
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает системный параметр по его имени (идентификатору).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SystemParam this[BuiltInParameter paramId] { get; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>paramId</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Идентификатор параметра Revit.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParam.html">SystemParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_Item_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.Item*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_Item_Autodesk_Revit_DB_ForgeTypeId_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.Item(Autodesk.Revit.DB.ForgeTypeId)">
+  this[ForgeTypeId]
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает системный параметр по его имени (идентификатору).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SystemParam this[ForgeTypeId paramId] { get; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>paramId</code> <span class="xref">ForgeTypeId</span></dt>
+    <dd><p>Идентификатор параметра Revit.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParam.html">SystemParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_CreateRevitParam_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.CreateRevitParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_CreateRevitParam_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.CreateRevitParam(Autodesk.Revit.DB.BuiltInParameter)">
+  CreateRevitParam(BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает системный параметр.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete]
+public SystemParam CreateRevitParam(BuiltInParameter systemParamId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>systemParamId</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Системный параметр.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParam.html">SystemParam</a></dt>
+    <dd><p>Возвращает системный параметр.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_CreateRevitParam_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.CreateRevitParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_CreateRevitParam_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.CreateRevitParam(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.BuiltInParameter)">
+  CreateRevitParam(Document, BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает системный параметр.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ системного параметра.</p>
+</dd>
+    <dt><code>systemParamId</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Системный параметр.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParam.html">SystemParam</a></dt>
+    <dd><p>Возвращает системный параметр.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_CreateRevitParam_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.CreateRevitParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_CreateRevitParam_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_BuiltInParameter_Autodesk_Revit_ApplicationServices_LanguageType_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.CreateRevitParam(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.BuiltInParameter,Autodesk.Revit.ApplicationServices.LanguageType)">
+  CreateRevitParam(Document, BuiltInParameter, LanguageType)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает системный параметр.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId, LanguageType languageType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ системного параметра.</p>
+</dd>
+    <dt><code>systemParamId</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Системный параметр.</p>
+</dd>
+    <dt><code>languageType</code> <span class="xref">LanguageType</span></dt>
+    <dd><p>Язык возвращаемого параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParam.html">SystemParam</a></dt>
+    <dd><p>Возвращает системный параметр.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_CreateRevitParam_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.CreateRevitParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_CreateRevitParam_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_ForgeTypeId_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.CreateRevitParam(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ForgeTypeId)">
+  CreateRevitParam(Document, ForgeTypeId)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает системный параметр.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ системного параметра.</p>
+</dd>
+    <dt><code>systemParamId</code> <span class="xref">ForgeTypeId</span></dt>
+    <dd><p>Системный параметр.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParam.html">SystemParam</a></dt>
+    <dd><p>Возвращает системный параметр.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_CreateRevitParam_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.CreateRevitParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_CreateRevitParam_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_ForgeTypeId_Autodesk_Revit_ApplicationServices_LanguageType_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.CreateRevitParam(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ForgeTypeId,Autodesk.Revit.ApplicationServices.LanguageType)">
+  CreateRevitParam(Document, ForgeTypeId, LanguageType)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает системный параметр.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SystemParam CreateRevitParam(Document document, ForgeTypeId systemParamId, LanguageType languageType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ системного параметра.</p>
+</dd>
+    <dt><code>systemParamId</code> <span class="xref">ForgeTypeId</span></dt>
+    <dd><p>Системный параметр.</p>
+</dd>
+    <dt><code>languageType</code> <span class="xref">LanguageType</span></dt>
+    <dd><p>Язык возвращаемого параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParam.html">SystemParam</a></dt>
+    <dd><p>Возвращает системный параметр.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_GetDefaultConfig_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.GetDefaultConfig*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_GetDefaultConfig" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.GetDefaultConfig">
+  GetDefaultConfig()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает конфигурацию по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SystemParamsConfig GetDefaultConfig()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.html">SystemParamsConfig</a></dt>
+    <dd><p>Возвращает конфигурацию по умолчанию.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_Load_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.Load*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_Load_System_Nullable_Autodesk_Revit_ApplicationServices_LanguageType__" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.Load(System.Nullable{Autodesk.Revit.ApplicationServices.LanguageType})">
+  Load(LanguageType?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Загрузка текущей конфигурации.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SystemParamsConfig Load(LanguageType? languageType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>languageType</code> <span class="xref">LanguageType</span>?</dt>
+    <dd><p>Язык системы.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.html">SystemParamsConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_LoadInstance_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.LoadInstance*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_LoadInstance_System_Nullable_Autodesk_Revit_ApplicationServices_LanguageType__" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.LoadInstance(System.Nullable{Autodesk.Revit.ApplicationServices.LanguageType})">
+  LoadInstance(LanguageType?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Загрузка текущей конфигурации.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LoadInstance(LanguageType? languageType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>languageType</code> <span class="xref">LanguageType</span>?</dt>
+    <dd><p>Язык системы.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_Save_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.Save*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SystemParams_SystemParamsConfig_Save_System_String_" data-uid="dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.Save(System.String)">
+  Save(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Сохранение текущей конфигурации.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Save(string configPath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Путь до конфигурации.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

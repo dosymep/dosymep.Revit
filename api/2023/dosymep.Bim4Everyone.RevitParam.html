@@ -1,0 +1,807 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RevitParam
+ | dosymep.Revit </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RevitParam
+ | dosymep.Revit ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="dosymep.Revit">
+            dosymep.Revit
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="dosymep.Bim4Everyone.RevitParam">
+
+
+
+  <h1 id="dosymep_Bim4Everyone_RevitParam" data-uid="dosymep.Bim4Everyone.RevitParam" class="text-break">
+    Class RevitParam
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.Bim4Everyone.html">Bim4Everyone</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.Bim4Everyone.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Абстрактный класс параметра Revit.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class RevitParam : IEquatable&lt;RevitParam&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">RevitParam</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="dosymep.Bim4Everyone.RevitParam.html">RevitParam</a>&gt;</div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="dosymep.Bim4Everyone.CustomParams.CustomParam.html">CustomParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.CustomParams.CustomParam.html">CustomParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.CustomParams.CustomParam.html">CustomParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.CustomParams.CustomParam.html">CustomParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SharedParams.SharedParam.html">SharedParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SharedParams.SharedParam.html">SharedParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SharedParams.SharedParam.html">SharedParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SharedParams.SharedParam.html">SharedParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParam.html">SystemParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParam.html">SystemParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParam.html">SystemParam</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SystemParams.SystemParam.html">SystemParam</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam__ctor_" data-uid="dosymep.Bim4Everyone.RevitParam.#ctor*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam__ctor_System_String_" data-uid="dosymep.Bim4Everyone.RevitParam.#ctor(System.String)">
+  RevitParam(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Создает экземпляр класса параметра Revit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected RevitParam(string id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Идентификатор параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_Description_" data-uid="dosymep.Bim4Everyone.RevitParam.Description*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_Description" data-uid="dosymep.Bim4Everyone.RevitParam.Description">
+  Description
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Описание параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Description { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_Id_" data-uid="dosymep.Bim4Everyone.RevitParam.Id*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_Id" data-uid="dosymep.Bim4Everyone.RevitParam.Id">
+  Id
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Идентификатор параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_Name_" data-uid="dosymep.Bim4Everyone.RevitParam.Name*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_Name" data-uid="dosymep.Bim4Everyone.RevitParam.Name">
+  Name
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Наименование параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string Name { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_StorageType_" data-uid="dosymep.Bim4Everyone.RevitParam.StorageType*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_StorageType" data-uid="dosymep.Bim4Everyone.RevitParam.StorageType">
+  StorageType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Тип параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual StorageType StorageType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">StorageType</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_UnitType_" data-uid="dosymep.Bim4Everyone.RevitParam.UnitType*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_UnitType" data-uid="dosymep.Bim4Everyone.RevitParam.UnitType">
+  UnitType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Тип измерения параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ForgeTypeId UnitType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ForgeTypeId</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_UnitTypeName_" data-uid="dosymep.Bim4Everyone.RevitParam.UnitTypeName*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_UnitTypeName" data-uid="dosymep.Bim4Everyone.RevitParam.UnitTypeName">
+  UnitTypeName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Наименование свойства типа измерения параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string UnitTypeName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_AsRevitParam_" data-uid="dosymep.Bim4Everyone.RevitParam.AsRevitParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_AsRevitParam" data-uid="dosymep.Bim4Everyone.RevitParam.AsRevitParam">
+  AsRevitParam()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает параметр Revit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RevitParam AsRevitParam()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.RevitParam.html">RevitParam</a></dt>
+    <dd><p>Возвращает параметр Revit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_Equals_" data-uid="dosymep.Bim4Everyone.RevitParam.Equals*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_Equals_System_Object_" data-uid="dosymep.Bim4Everyone.RevitParam.Equals(System.Object)">
+  Equals(object)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_Equals_" data-uid="dosymep.Bim4Everyone.RevitParam.Equals*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_Equals_dosymep_Bim4Everyone_RevitParam_" data-uid="dosymep.Bim4Everyone.RevitParam.Equals(dosymep.Bim4Everyone.RevitParam)">
+  Equals(RevitParam)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(RevitParam other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="dosymep.Bim4Everyone.RevitParam.html">RevitParam</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_GetHashCode_" data-uid="dosymep.Bim4Everyone.RevitParam.GetHashCode*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_GetHashCode" data-uid="dosymep.Bim4Everyone.RevitParam.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_GetParam_" data-uid="dosymep.Bim4Everyone.RevitParam.GetParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_GetParam_Autodesk_Revit_DB_Element_" data-uid="dosymep.Bim4Everyone.RevitParam.GetParam(Autodesk.Revit.DB.Element)">
+  GetParam(Element)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает параметр элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Parameter GetParam(Element element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Parameter</span></dt>
+    <dd><p>Возвращает параметр элемента.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_GetParamBinding_" data-uid="dosymep.Bim4Everyone.RevitParam.GetParamBinding*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_GetParamBinding_Autodesk_Revit_DB_Document_" data-uid="dosymep.Bim4Everyone.RevitParam.GetParamBinding(Autodesk.Revit.DB.Document)">
+  GetParamBinding(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает настройки привязки параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract (Definition Definition, Binding Binding) GetParamBinding(Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>(<span class="xref">Definition</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-autodesk.revit.db.definition,autodesk.revit.db.binding-.definition">Definition</a>, <span class="xref">Binding</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-autodesk.revit.db.definition,autodesk.revit.db.binding-.binding">Binding</a>)</dt>
+    <dd><p>Возвращает настройки привязки параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_GetRevitParamElement_" data-uid="dosymep.Bim4Everyone.RevitParam.GetRevitParamElement*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_GetRevitParamElement_Autodesk_Revit_DB_Document_" data-uid="dosymep.Bim4Everyone.RevitParam.GetRevitParamElement(Autodesk.Revit.DB.Document)">
+  GetRevitParamElement(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает элемент параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract ParameterElement GetRevitParamElement(Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ParameterElement</span></dt>
+    <dd><p>Возвращает элемент параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_IsExistsParam_" data-uid="dosymep.Bim4Everyone.RevitParam.IsExistsParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_IsExistsParam_Autodesk_Revit_DB_Document_" data-uid="dosymep.Bim4Everyone.RevitParam.IsExistsParam(Autodesk.Revit.DB.Document)">
+  IsExistsParam(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на существование параметра в документе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool IsExistsParam(Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если параметр существует, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_IsExistsParam_" data-uid="dosymep.Bim4Everyone.RevitParam.IsExistsParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_IsExistsParam_Autodesk_Revit_DB_Element_" data-uid="dosymep.Bim4Everyone.RevitParam.IsExistsParam(Autodesk.Revit.DB.Element)">
+  IsExistsParam(Element)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет на существование параметра в элементе.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsExistsParam(Element element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если параметр существует, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_RevitParam_IsRevitParam_" data-uid="dosymep.Bim4Everyone.RevitParam.IsRevitParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_RevitParam_IsRevitParam_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_Definition_" data-uid="dosymep.Bim4Everyone.RevitParam.IsRevitParam(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.Definition)">
+  IsRevitParam(Document, Definition)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет является ли определение параметра параметром Revit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsRevitParam(Document document, Definition definition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ.</p>
+</dd>
+    <dt><code>definition</code> <span class="xref">Definition</span></dt>
+    <dd><p>Определение параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если определение параметра является параметром Revit, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

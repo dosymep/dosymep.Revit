@@ -1,0 +1,1235 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ProjectParamsConfig
+ | dosymep.Revit </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ProjectParamsConfig
+ | dosymep.Revit ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="dosymep.Revit">
+            dosymep.Revit
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig">
+
+
+
+  <h1 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig" class="text-break">
+    Class ProjectParamsConfig
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.Bim4Everyone.html">Bim4Everyone</a>.<a class="xref" href="dosymep.Bim4Everyone.ProjectParams.html">ProjectParams</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.Bim4Everyone.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Конфигурация параметров проекта.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ProjectParamsConfig : RevitParamsConfig, IProjectParamsService, IParamElementService, IRevitParamsService</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.RevitParamsConfig.html">RevitParamsConfig</a></div>
+      <div><span class="xref">ProjectParamsConfig</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SimpleServices.IProjectParamsService.html">IProjectParamsService</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SimpleServices.IParamElementService.html">IParamElementService</a></div>
+      <div><a class="xref" href="dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.html">IRevitParamsService</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParamsConfig.html#dosymep_Bim4Everyone_RevitParamsConfig__revitParams">RevitParamsConfig._revitParams</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParamsConfig.html#dosymep_Bim4Everyone_RevitParamsConfig_Save_System_String_">RevitParamsConfig.Save(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParamsConfig.html#dosymep_Bim4Everyone_RevitParamsConfig_GetRevitParams">RevitParamsConfig.GetRevitParams()</a>
+    </div>
+    <div>
+      <a class="xref" href="dosymep.Bim4Everyone.RevitParamsConfig.html#dosymep_Bim4Everyone_RevitParamsConfig_Item_System_String_">RevitParamsConfig.this[string]</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_CheckCorrectDistanceGrid_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.CheckCorrectDistanceGrid*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_CheckCorrectDistanceGrid" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.CheckCorrectDistanceGrid">
+  CheckCorrectDistanceGrid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Пров_Ровно от Оси</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam CheckCorrectDistanceGrid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_CheckIsNormalGrid_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.CheckIsNormalGrid*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_CheckIsNormalGrid" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.CheckIsNormalGrid">
+  CheckIsNormalGrid
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Пров_Ортогональность Осям</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam CheckIsNormalGrid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_FireCompartmentName_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.FireCompartmentName*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_FireCompartmentName" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.FireCompartmentName">
+  FireCompartmentName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>КВГ_Пожарный отсек</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam FireCompartmentName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_Instance_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.Instance*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_Instance" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.Instance">
+  Instance
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Текущее состояние конфигурации.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ProjectParamsConfig Instance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html">ProjectParamsConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_Instance_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Перед использованием нужно вызвать <a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_Load_System_String_">Load(string)</a></p>
+</div>
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_IsRoomBalcony_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomBalcony*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_IsRoomBalcony" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomBalcony">
+  IsRoomBalcony
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>КВГ_Летнее</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam IsRoomBalcony { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_IsRoomLiving_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomLiving*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_IsRoomLiving" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomLiving">
+  IsRoomLiving
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>КВГ_Жилое</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam IsRoomLiving { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_IsRoomMainLevel_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomMainLevel*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_IsRoomMainLevel" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomMainLevel">
+  IsRoomMainLevel
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>КВГ_Основной этаж</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam IsRoomMainLevel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_IsRoomNumberFix_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomNumberFix*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_IsRoomNumberFix" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomNumberFix">
+  IsRoomNumberFix
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>КВГ_ПМЩ_Фиксация номера</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam IsRoomNumberFix { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_NumberingOrder_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.NumberingOrder*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_NumberingOrder" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.NumberingOrder">
+  NumberingOrder
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>КВГ_Приоритет нумерации</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam NumberingOrder { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ProjectStage_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ProjectStage*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ProjectStage" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ProjectStage">
+  ProjectStage
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>_Стадия Проекта</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam ProjectStage { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RelatedRoomGroup_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RelatedRoomGroup*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RelatedRoomGroup" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RelatedRoomGroup">
+  RelatedRoomGroup
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Группа помещения</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam RelatedRoomGroup { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RelatedRoomID_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RelatedRoomID*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RelatedRoomID" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RelatedRoomID">
+  RelatedRoomID
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>ID помещения</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam RelatedRoomID { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RelatedRoomName_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RelatedRoomName*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RelatedRoomName" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RelatedRoomName">
+  RelatedRoomName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Имя помещения</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam RelatedRoomName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RelatedRoomNumber_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RelatedRoomNumber*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RelatedRoomNumber" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RelatedRoomNumber">
+  RelatedRoomNumber
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Номер помещения</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam RelatedRoomNumber { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomGroupName_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomGroupName*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomGroupName" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomGroupName">
+  RoomGroupName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>КВГ_Группа</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam RoomGroupName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomName_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomName*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomName" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomName">
+  RoomName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>КВГ_Наименование</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam RoomName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomSectionName_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomSectionName*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomSectionName" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomSectionName">
+  RoomSectionName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>КВГ_Секция</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam RoomSectionName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomTypeGroupName_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomTypeGroupName*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomTypeGroupName" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomTypeGroupName">
+  RoomTypeGroupName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>КВГ_Тип группы помещений</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam RoomTypeGroupName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ViewGroup_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ViewGroup*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ViewGroup" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ViewGroup">
+  ViewGroup
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>_Группа Видов</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam ViewGroup { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ViewNumberOnSheet_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ViewNumberOnSheet*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ViewNumberOnSheet" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ViewNumberOnSheet">
+  ViewNumberOnSheet
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>_Номер Вида на Листе</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam ViewNumberOnSheet { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_WithFullSheetNumber_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.WithFullSheetNumber*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_WithFullSheetNumber" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.WithFullSheetNumber">
+  WithFullSheetNumber
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>_Полный Номер Листа</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam WithFullSheetNumber { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_WithSheetNumber_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.WithSheetNumber*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_WithSheetNumber" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.WithSheetNumber">
+  WithSheetNumber
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>_Номера Листа Наличие</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam WithSheetNumber { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_CreateRevitParam_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.CreateRevitParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_CreateRevitParam_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_ParameterElement_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.CreateRevitParam(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ParameterElement)">
+  CreateRevitParam(Document, ParameterElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Создает параметр проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam CreateRevitParam(Document document, ParameterElement revitParamElement)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ параметра проекта.</p>
+</dd>
+    <dt><code>revitParamElement</code> <span class="xref">ParameterElement</span></dt>
+    <dd><p>Элемент параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd><p>Возвращает новый созданный параметр проекта.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_CreateRevitParam_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.CreateRevitParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_CreateRevitParam_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.CreateRevitParam(Autodesk.Revit.DB.Document,System.String)">
+  CreateRevitParam(Document, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Создает параметр проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam CreateRevitParam(Document document, string revitParamName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ параметра проекта.</p>
+</dd>
+    <dt><code>revitParamName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd><p>Возвращает новый созданный параметр проекта.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_CreateRevitParam_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.CreateRevitParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_CreateRevitParam_Autodesk_Revit_DB_Document_System_String_Autodesk_Revit_DB_ParameterElement_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.CreateRevitParam(Autodesk.Revit.DB.Document,System.String,Autodesk.Revit.DB.ParameterElement)">
+  CreateRevitParam(Document, string, ParameterElement)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Создает параметр проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam CreateRevitParam(Document document, string propertyName, ParameterElement revitParamElement)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ параметра проекта.</p>
+</dd>
+    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Уникальное название параметра.</p>
+</dd>
+    <dt><code>revitParamElement</code> <span class="xref">ParameterElement</span></dt>
+    <dd><p>Элемент параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd><p>Возвращает новый созданный параметр проекта.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_CreateRevitParam_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.CreateRevitParam*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_CreateRevitParam_Autodesk_Revit_DB_Document_System_String_System_String_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.CreateRevitParam(Autodesk.Revit.DB.Document,System.String,System.String)">
+  CreateRevitParam(Document, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Создает параметр проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectParam CreateRevitParam(Document document, string propertyName, string revitParamName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ параметра проекта.</p>
+</dd>
+    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Уникальное название параметра.</p>
+</dd>
+    <dt><code>revitParamName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a></dt>
+    <dd><p>Возвращает новый созданный параметр проекта.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_GetDefaultConfig_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.GetDefaultConfig*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_GetDefaultConfig" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.GetDefaultConfig">
+  GetDefaultConfig()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает конфигурацию по умолчанию.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ProjectParamsConfig GetDefaultConfig()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html">ProjectParamsConfig</a></dt>
+    <dd><p>Возвращает конфигурацию по умолчанию.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_GetRevitParams_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.GetRevitParams*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_GetRevitParams_Autodesk_Revit_DB_Document_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.GetRevitParams(Autodesk.Revit.DB.Document)">
+  GetRevitParams(Document)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает весь список параметров проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ProjectParam&gt; GetRevitParams(Document document)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>document</code> <span class="xref">Document</span></dt>
+    <dd><p>Документ из которого берутся параметры.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParam.html">ProjectParam</a>&gt;</dt>
+    <dd><p>Возвращает весь список общих параметров.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_Load_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.Load*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_Load_System_String_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.Load(System.String)">
+  Load(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Загрузка текущей конфигурации.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ProjectParamsConfig Load(string configPath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Путь до конфигурации.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html">ProjectParamsConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_Load_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Возвращает конфигурацию по умолчанию если был найден переданный файл.</p>
+</div>
+
+
+
+
+  <a id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_LoadInstance_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.LoadInstance*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_LoadInstance_System_String_" data-uid="dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.LoadInstance(System.String)">
+  LoadInstance(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Загрузка текущей конфигурации.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LoadInstance(string configPath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Путь до конфигурации.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_LoadInstance_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Возвращает конфигурацию по умолчанию если был найден переданный файл.</p>
+</div>
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

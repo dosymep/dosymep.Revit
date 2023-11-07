@@ -1,0 +1,654 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ParamExtensions
+ | dosymep.Revit </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ParamExtensions
+ | dosymep.Revit ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="dosymep.Revit">
+            dosymep.Revit
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="dosymep.Revit.ParamExtensions">
+
+
+
+  <h1 id="dosymep_Revit_ParamExtensions" data-uid="dosymep.Revit.ParamExtensions" class="text-break">
+    Class ParamExtensions
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.Revit.html">Revit</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.Revit.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Расширения класса параметров.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ParamExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ParamExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_Revit_ParamExtensions_AsObject_" data-uid="dosymep.Revit.ParamExtensions.AsObject*"></a>
+
+  <h3 id="dosymep_Revit_ParamExtensions_AsObject_Autodesk_Revit_DB_Parameter_" data-uid="dosymep.Revit.ParamExtensions.AsObject(Autodesk.Revit.DB.Parameter)">
+  AsObject(Parameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает значение параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object AsObject(this Parameter parameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameter</code> <span class="xref">Parameter</span></dt>
+    <dd><p>Параметр.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Возвращает значение параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ParamExtensions_GetBuiltInParameter_" data-uid="dosymep.Revit.ParamExtensions.GetBuiltInParameter*"></a>
+
+  <h3 id="dosymep_Revit_ParamExtensions_GetBuiltInParameter_Autodesk_Revit_DB_Definition_" data-uid="dosymep.Revit.ParamExtensions.GetBuiltInParameter(Autodesk.Revit.DB.Definition)">
+  GetBuiltInParameter(Definition)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает <span class="xref">Autodesk.Revit.DB.BuiltInParameter</span> для определения параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BuiltInParameter GetBuiltInParameter(this Definition definition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definition</code> <span class="xref">Definition</span></dt>
+    <dd><p>Определение параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Возвращает <span class="xref">Autodesk.Revit.DB.BuiltInParameter</span> для определения параметра, для не системных параметров возвращает <span class="xref">Autodesk.Revit.DB.BuiltInParameter.INVALID</span>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ParamExtensions_GetCategories_" data-uid="dosymep.Revit.ParamExtensions.GetCategories*"></a>
+
+  <h3 id="dosymep_Revit_ParamExtensions_GetCategories_Autodesk_Revit_DB_Binding_" data-uid="dosymep.Revit.ParamExtensions.GetCategories(Autodesk.Revit.DB.Binding)">
+  GetCategories(Binding)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает нумератор категорий.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Category&gt; GetCategories(this Binding binding)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>binding</code> <span class="xref">Binding</span></dt>
+    <dd><p>Привязка параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">Category</span>&gt;</dt>
+    <dd><p>Возвращает нумератор категорий.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ParamExtensions_GetElementId_" data-uid="dosymep.Revit.ParamExtensions.GetElementId*"></a>
+
+  <h3 id="dosymep_Revit_ParamExtensions_GetElementId_Autodesk_Revit_DB_Definition_" data-uid="dosymep.Revit.ParamExtensions.GetElementId(Autodesk.Revit.DB.Definition)">
+  GetElementId(Definition)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает идентификатор определения параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ElementId GetElementId(this Definition definition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definition</code> <span class="xref">Definition</span></dt>
+    <dd><p>Определение параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ElementId</span></dt>
+    <dd><p>Возвращает идентификатор определения параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ParamExtensions_GetStorageType_" data-uid="dosymep.Revit.ParamExtensions.GetStorageType*"></a>
+
+  <h3 id="dosymep_Revit_ParamExtensions_GetStorageType_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ParamExtensions.GetStorageType(Autodesk.Revit.DB.BuiltInParameter)">
+  GetStorageType(BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает тип параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete]
+public static StorageType GetStorageType(this BuiltInParameter builtInParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Системный тип параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">StorageType</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Выбрасывает исключение если не был сопоставлен тип данных к параметру.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Revit_ParamExtensions_GetStorageType_" data-uid="dosymep.Revit.ParamExtensions.GetStorageType*"></a>
+
+  <h3 id="dosymep_Revit_ParamExtensions_GetStorageType_Autodesk_Revit_DB_Definition_" data-uid="dosymep.Revit.ParamExtensions.GetStorageType(Autodesk.Revit.DB.Definition)">
+  GetStorageType(Definition)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает тип параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StorageType GetStorageType(this Definition definition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definition</code> <span class="xref">Definition</span></dt>
+    <dd><p>Определение параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">StorageType</span></dt>
+    <dd><p>Возвращает тип параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Выбрасывает исключение если не был сопоставлен тип данных к параметру.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Revit_ParamExtensions_GetUnitType_" data-uid="dosymep.Revit.ParamExtensions.GetUnitType*"></a>
+
+  <h3 id="dosymep_Revit_ParamExtensions_GetUnitType_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ParamExtensions.GetUnitType(Autodesk.Revit.DB.BuiltInParameter)">
+  GetUnitType(BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает <span class="xref">Autodesk.Revit.DB.ForgeTypeId</span> для системного параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ForgeTypeId GetUnitType(this BuiltInParameter builtInParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Системный параметр.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ForgeTypeId</span></dt>
+    <dd><p>Возвращает <span class="xref">Autodesk.Revit.DB.ForgeTypeId</span> для системного параметра.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ParamExtensions_IsId_" data-uid="dosymep.Revit.ParamExtensions.IsId*"></a>
+
+  <h3 id="dosymep_Revit_ParamExtensions_IsId_Autodesk_Revit_DB_Definition_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ParamExtensions.IsId(Autodesk.Revit.DB.Definition,Autodesk.Revit.DB.BuiltInParameter)">
+  IsId(Definition, BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет <span class="xref">Autodesk.Revit.DB.BuiltInParameter</span> является ли он идентификатором системного параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsId(this Definition definition, BuiltInParameter builtInParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>definition</code> <span class="xref">Definition</span></dt>
+    <dd><p>Определение параметра.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Системный параметр.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если <span class="xref">Autodesk.Revit.DB.BuiltInParameter</span> является идентификатором системного параметра, иначе false</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ParamExtensions_IsInstanceBinding_" data-uid="dosymep.Revit.ParamExtensions.IsInstanceBinding*"></a>
+
+  <h3 id="dosymep_Revit_ParamExtensions_IsInstanceBinding_Autodesk_Revit_DB_Binding_" data-uid="dosymep.Revit.ParamExtensions.IsInstanceBinding(Autodesk.Revit.DB.Binding)">
+  IsInstanceBinding(Binding)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет является ли привязка параметра для экземпляром элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsInstanceBinding(this Binding binding)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>binding</code> <span class="xref">Binding</span></dt>
+    <dd><p>Привязка параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если привязка параметра является экземпляром элемента.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ParamExtensions_IsTypeBinding_" data-uid="dosymep.Revit.ParamExtensions.IsTypeBinding*"></a>
+
+  <h3 id="dosymep_Revit_ParamExtensions_IsTypeBinding_Autodesk_Revit_DB_Binding_" data-uid="dosymep.Revit.ParamExtensions.IsTypeBinding(Autodesk.Revit.DB.Binding)">
+  IsTypeBinding(Binding)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет является ли привязка параметра для типа элемента.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsTypeBinding(this Binding binding)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>binding</code> <span class="xref">Binding</span></dt>
+    <dd><p>Привязка параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает true - если привязка параметра является типом элемента.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ParamExtensions_RemoveValue_" data-uid="dosymep.Revit.ParamExtensions.RemoveValue*"></a>
+
+  <h3 id="dosymep_Revit_ParamExtensions_RemoveValue_Autodesk_Revit_DB_Parameter_" data-uid="dosymep.Revit.ParamExtensions.RemoveValue(Autodesk.Revit.DB.Parameter)">
+  RemoveValue(Parameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Удаляет значение параметра (устанавливает значение по умолчанию)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveValue(this Parameter parameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameter</code> <span class="xref">Parameter</span></dt>
+    <dd><p>Параметр.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ParamExtensions_Set_" data-uid="dosymep.Revit.ParamExtensions.Set*"></a>
+
+  <h3 id="dosymep_Revit_ParamExtensions_Set_Autodesk_Revit_DB_Parameter_Autodesk_Revit_DB_Parameter_" data-uid="dosymep.Revit.ParamExtensions.Set(Autodesk.Revit.DB.Parameter,Autodesk.Revit.DB.Parameter)">
+  Set(Parameter, Parameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Присваивает значение параметра по значению другого параметра.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Set(this Parameter leftParameter, Parameter rightParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>leftParameter</code> <span class="xref">Parameter</span></dt>
+    <dd><p>Параметр в который присваивается значение.</p>
+</dd>
+    <dt><code>rightParameter</code> <span class="xref">Parameter</span></dt>
+    <dd><p>Параметр значение которого присваивается.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

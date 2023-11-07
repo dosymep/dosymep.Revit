@@ -1,0 +1,5354 @@
+{
+  "sitemap": {
+    "fileOptions": {
+      "**/articles/**": {
+        "baseUrl": "https://dosymep.github.io/dosymep.Revit/",
+        "changefreq": "monthly",
+        "priority": 0.8
+      },
+      "**/api/**": {
+        "baseUrl": "https://dosymep.github.io/dosymep.Revit/",
+        "changefreq": "monthly",
+        "priority": 0.3
+      }
+    },
+    "baseUrl": "https://dosymep.github.io/dosymep.Revit/",
+    "changefreq": "monthly",
+    "priority": 0.8
+  },
+  "source_base_path": "D:/a/dosymep.Revit/dosymep.Revit/docs",
+  "xrefmap": [
+    "xrefmap.yml",
+    "2020.xrefmap.yml",
+    "2021.xrefmap.yml",
+    "2022.xrefmap.yml",
+    "2023.xrefmap.yml",
+    "2024.xrefmap.yml"
+  ],
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.BasePluginServicesModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.BasePluginServicesModule.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.BimModelPart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.BimModelPart.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.CustomParams.CustomParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.CustomParams.CustomParam.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.CustomParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.CustomParams.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.DocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.DocumentExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.ElementExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.KeySchedules.KeyScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.KeySchedules.KeyScheduleRule.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.KeySchedules.KeyScheduleTesting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.KeySchedules.KeyScheduleTesting.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.KeySchedules.KeySchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.KeySchedules.KeySchedulesConfig.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.KeySchedules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.KeySchedules.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.ModuleEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.ModuleEnvironment.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.PlatformCommandIds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.PlatformCommandIds.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.ProjectConfigs.IConfigSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.ProjectConfigs.IConfigSerializer.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig-1.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.ProjectConfigs.ProjectSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.ProjectConfigs.ProjectSettings.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.ProjectConfigs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.ProjectConfigs.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.ProjectParams.ProjectParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.ProjectParams.ProjectParam.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.ProjectParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.ProjectParams.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.RevitParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.RevitParam.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.RevitParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.RevitParamsConfig.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.RevitScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.RevitScheduleRule.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.RevitSchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.RevitSchedulesConfig.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.Schedules.ScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.Schedules.ScheduleRule.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.Schedules.SchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.Schedules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.Schedules.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SharedParams.SharedParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SharedParams.SharedParam.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SharedParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SharedParams.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.BimModelPartsServiceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.BimModelPartsServiceExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IParamElementService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IParamElementService.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IProjectParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IProjectParamsService.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SystemParams.SystemParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SystemParams.SystemParam.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SystemParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SystemParams.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.Templates.EmptyProject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.Templates.EmptyProject.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.Templates.ProjectParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.Templates.ProjectParameters.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.Templates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.Templates.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.AreaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.AreaExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.CategoryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.CategoryExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Comparators.ElementComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Comparators.ElementComparer.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Comparators.LogicalStringComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Comparators.LogicalStringComparer.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Comparators.ViewSheetComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Comparators.ViewSheetComparer.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Comparators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Comparators.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.DocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.DocumentExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ElementExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ElementIdExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ElementIdExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Geometry.BoundingBoxExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Geometry.BoundingBoxExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Geometry.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Geometry.ElementExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Geometry.GeometryObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Geometry.GeometryObjectExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Geometry.SolidExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Geometry.SolidExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Geometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Geometry.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ParamElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ParamElementExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ParamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ParamExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.RoomExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.RoomExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.DirectoryInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.DirectoryInfo.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.IRevitServerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.IRevitServerClient.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.ISerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.ISerializer.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.LockState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.LockState.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.ModelLockInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.ModelLockInfo.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.ModelLockOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.ModelLockOptions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.ModelLockTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.ModelLockTypes.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.RevitContents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.RevitContents.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.RevitFolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.RevitFolder.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.RevitModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.RevitModel.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.RevitResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.RevitResponse.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.RevitServerClientBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.RevitServerClientBuilder.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.ServerInformations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.ServerInformations.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.ServerRoles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.ServerRoles.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.ServerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.ServerClient.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.SpatialElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.SpatialElementExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.TransactionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.TransactionExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Transmissions.ExternalFileReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Transmissions.ExternalFileReference.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Transmissions.ExternalFileReferenceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Transmissions.ExternalFileReferenceType.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Transmissions.LoadState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Transmissions.LoadState.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Transmissions.PathType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Transmissions.PathType.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Transmissions.TransmissionData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Transmissions.TransmissionData.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Transmissions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Transmissions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.UIApplicationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.UIApplicationExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.UIDocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.UIDocumentExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/2020/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/index.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/2020/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/2020/toc.json"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.BasePluginServicesModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.BasePluginServicesModule.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.BimModelPart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.BimModelPart.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.CustomParams.CustomParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.CustomParams.CustomParam.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.CustomParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.CustomParams.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.DocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.DocumentExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.ElementExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.KeySchedules.KeyScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.KeySchedules.KeyScheduleRule.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.KeySchedules.KeyScheduleTesting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.KeySchedules.KeyScheduleTesting.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.KeySchedules.KeySchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.KeySchedules.KeySchedulesConfig.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.KeySchedules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.KeySchedules.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.ModuleEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.ModuleEnvironment.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.PlatformCommandIds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.PlatformCommandIds.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.ProjectConfigs.IConfigSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.ProjectConfigs.IConfigSerializer.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig-1.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.ProjectConfigs.ProjectSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.ProjectConfigs.ProjectSettings.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.ProjectConfigs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.ProjectConfigs.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.ProjectParams.ProjectParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.ProjectParams.ProjectParam.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.ProjectParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.ProjectParams.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.RevitParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.RevitParam.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.RevitParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.RevitParamsConfig.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.RevitScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.RevitScheduleRule.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.RevitSchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.RevitSchedulesConfig.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.Schedules.ScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.Schedules.ScheduleRule.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.Schedules.SchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.Schedules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.Schedules.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SharedParams.SharedParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SharedParams.SharedParam.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SharedParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SharedParams.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.BimModelPartsServiceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.BimModelPartsServiceExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IParamElementService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IParamElementService.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IProjectParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IProjectParamsService.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SystemParams.SystemParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SystemParams.SystemParam.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SystemParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SystemParams.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.Templates.EmptyProject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.Templates.EmptyProject.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.Templates.ProjectParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.Templates.ProjectParameters.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.Templates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.Templates.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.AreaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.AreaExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.CategoryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.CategoryExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Comparators.ElementComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Comparators.ElementComparer.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Comparators.LogicalStringComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Comparators.LogicalStringComparer.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Comparators.ViewSheetComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Comparators.ViewSheetComparer.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Comparators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Comparators.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.DocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.DocumentExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ElementExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ElementIdExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ElementIdExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ForgeTypeIdExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ForgeTypeIdExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Geometry.BoundingBoxExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Geometry.BoundingBoxExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Geometry.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Geometry.ElementExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Geometry.GeometryObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Geometry.GeometryObjectExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Geometry.SolidExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Geometry.SolidExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Geometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Geometry.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ParamElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ParamElementExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ParamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ParamExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.RoomExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.RoomExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.DirectoryInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.DirectoryInfo.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.IRevitServerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.IRevitServerClient.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.ISerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.ISerializer.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.LockState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.LockState.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.ModelLockInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.ModelLockInfo.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.ModelLockOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.ModelLockOptions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.ModelLockTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.ModelLockTypes.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.RevitContents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.RevitContents.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.RevitFolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.RevitFolder.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.RevitModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.RevitModel.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.RevitResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.RevitResponse.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.RevitServerClientBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.RevitServerClientBuilder.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.ServerInformations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.ServerInformations.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.ServerRoles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.ServerRoles.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.ServerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.ServerClient.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.SpatialElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.SpatialElementExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.TransactionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.TransactionExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Transmissions.ExternalFileReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Transmissions.ExternalFileReference.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Transmissions.ExternalFileReferenceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Transmissions.ExternalFileReferenceType.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Transmissions.LoadState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Transmissions.LoadState.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Transmissions.PathType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Transmissions.PathType.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Transmissions.TransmissionData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Transmissions.TransmissionData.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Transmissions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Transmissions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.UIApplicationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.UIApplicationExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.UIDocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.UIDocumentExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/2021/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/index.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/2021/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/2021/toc.json"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.BasePluginServicesModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.BasePluginServicesModule.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.BimModelPart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.BimModelPart.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.CustomParams.CustomParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.CustomParams.CustomParam.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.CustomParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.CustomParams.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.DocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.DocumentExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.ElementExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.KeySchedules.KeyScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.KeySchedules.KeyScheduleRule.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.KeySchedules.KeyScheduleTesting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.KeySchedules.KeyScheduleTesting.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.KeySchedules.KeySchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.KeySchedules.KeySchedulesConfig.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.KeySchedules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.KeySchedules.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.ModuleEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.ModuleEnvironment.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.PlatformCommandIds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.PlatformCommandIds.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.ProjectConfigs.IConfigSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.ProjectConfigs.IConfigSerializer.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig-1.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.ProjectConfigs.ProjectSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.ProjectConfigs.ProjectSettings.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.ProjectConfigs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.ProjectConfigs.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.ProjectParams.ProjectParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.ProjectParams.ProjectParam.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.ProjectParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.ProjectParams.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.RevitParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.RevitParam.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.RevitParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.RevitParamsConfig.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.RevitScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.RevitScheduleRule.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.RevitSchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.RevitSchedulesConfig.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.Schedules.ScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.Schedules.ScheduleRule.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.Schedules.SchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.Schedules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.Schedules.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SharedParams.SharedParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SharedParams.SharedParam.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SharedParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SharedParams.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.BimModelPartsServiceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.BimModelPartsServiceExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IParamElementService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IParamElementService.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IProjectParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IProjectParamsService.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SystemParams.SystemParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SystemParams.SystemParam.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SystemParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SystemParams.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.Templates.EmptyProject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.Templates.EmptyProject.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.Templates.ProjectParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.Templates.ProjectParameters.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.Templates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.Templates.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.AreaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.AreaExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.CategoryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.CategoryExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Comparators.ElementComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Comparators.ElementComparer.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Comparators.LogicalStringComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Comparators.LogicalStringComparer.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Comparators.ViewSheetComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Comparators.ViewSheetComparer.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Comparators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Comparators.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.DocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.DocumentExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ElementExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ElementIdExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ElementIdExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ForgeTypeIdExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ForgeTypeIdExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Geometry.BoundingBoxExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Geometry.BoundingBoxExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Geometry.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Geometry.ElementExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Geometry.GeometryObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Geometry.GeometryObjectExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Geometry.SolidExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Geometry.SolidExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Geometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Geometry.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ParamElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ParamElementExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ParamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ParamExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.RoomExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.RoomExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.DirectoryInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.DirectoryInfo.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.IRevitServerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.IRevitServerClient.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.ISerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.ISerializer.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.LockState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.LockState.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.ModelLockInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.ModelLockInfo.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.ModelLockOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.ModelLockOptions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.ModelLockTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.ModelLockTypes.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.RevitContents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.RevitContents.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.RevitFolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.RevitFolder.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.RevitModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.RevitModel.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.RevitResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.RevitResponse.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.RevitServerClientBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.RevitServerClientBuilder.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.ServerInformations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.ServerInformations.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.ServerRoles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.ServerRoles.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.ServerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.ServerClient.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.SpatialElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.SpatialElementExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.TransactionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.TransactionExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Transmissions.ExternalFileReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Transmissions.ExternalFileReference.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Transmissions.ExternalFileReferenceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Transmissions.ExternalFileReferenceType.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Transmissions.LoadState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Transmissions.LoadState.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Transmissions.PathType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Transmissions.PathType.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Transmissions.TransmissionData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Transmissions.TransmissionData.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Transmissions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Transmissions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.UIApplicationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.UIApplicationExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.UIDocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.UIDocumentExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/2022/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/index.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/2022/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/2022/toc.json"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.BasePluginServicesModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.BasePluginServicesModule.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.BimModelPart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.BimModelPart.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.CustomParams.CustomParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.CustomParams.CustomParam.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.CustomParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.CustomParams.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.DocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.DocumentExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.ElementExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.KeySchedules.KeyScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.KeySchedules.KeyScheduleRule.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.KeySchedules.KeyScheduleTesting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.KeySchedules.KeyScheduleTesting.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.KeySchedules.KeySchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.KeySchedules.KeySchedulesConfig.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.KeySchedules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.KeySchedules.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.ModuleEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.ModuleEnvironment.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.PlatformCommandIds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.PlatformCommandIds.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.ProjectConfigs.IConfigSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.ProjectConfigs.IConfigSerializer.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig-1.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.ProjectConfigs.ProjectSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.ProjectConfigs.ProjectSettings.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.ProjectConfigs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.ProjectConfigs.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParam.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.ProjectParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.ProjectParams.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.RevitParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.RevitParam.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.RevitParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.RevitParamsConfig.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.RevitScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.RevitScheduleRule.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.RevitSchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.RevitSchedulesConfig.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.Schedules.ScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.Schedules.ScheduleRule.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.Schedules.SchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.Schedules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.Schedules.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SharedParams.SharedParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SharedParams.SharedParam.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SharedParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SharedParams.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.BimModelPartsServiceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.BimModelPartsServiceExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IParamElementService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IParamElementService.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IProjectParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IProjectParamsService.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SystemParams.SystemParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SystemParams.SystemParam.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SystemParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SystemParams.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.Templates.EmptyProject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.Templates.EmptyProject.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.Templates.ProjectParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.Templates.ProjectParameters.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.Templates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.Templates.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.AreaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.AreaExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.CategoryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.CategoryExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Comparators.ElementComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Comparators.ElementComparer.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Comparators.LogicalStringComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Comparators.LogicalStringComparer.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Comparators.ViewSheetComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Comparators.ViewSheetComparer.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Comparators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Comparators.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.DocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.DocumentExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ElementExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ElementIdExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ElementIdExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ForgeTypeIdExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ForgeTypeIdExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Geometry.BoundingBoxExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Geometry.BoundingBoxExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Geometry.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Geometry.ElementExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Geometry.GeometryObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Geometry.GeometryObjectExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Geometry.SolidExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Geometry.SolidExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Geometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Geometry.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ParamElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ParamElementExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ParamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ParamExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.RoomExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.RoomExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.DirectoryInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.DirectoryInfo.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.IRevitServerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.IRevitServerClient.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.ISerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.ISerializer.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.LockState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.LockState.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.ModelLockInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.ModelLockInfo.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.ModelLockOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.ModelLockOptions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.ModelLockTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.ModelLockTypes.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.RevitContents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.RevitContents.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.RevitFolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.RevitFolder.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.RevitModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.RevitModel.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.RevitResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.RevitResponse.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.RevitServerClientBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.RevitServerClientBuilder.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.ServerInformations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.ServerInformations.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.ServerRoles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.ServerRoles.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.ServerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.ServerClient.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.SpatialElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.SpatialElementExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.TransactionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.TransactionExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Transmissions.ExternalFileReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Transmissions.ExternalFileReference.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Transmissions.ExternalFileReferenceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Transmissions.ExternalFileReferenceType.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Transmissions.LoadState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Transmissions.LoadState.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Transmissions.PathType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Transmissions.PathType.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Transmissions.TransmissionData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Transmissions.TransmissionData.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Transmissions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Transmissions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.UIApplicationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.UIApplicationExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.UIDocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.UIDocumentExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/2023/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/index.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/2023/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/2023/toc.json"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.BasePluginServicesModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.BasePluginServicesModule.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.BimModelPart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.BimModelPart.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.CustomParams.CustomParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.CustomParams.CustomParam.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.CustomParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.CustomParams.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.DocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.DocumentExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.ElementExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.KeySchedules.KeyScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.KeySchedules.KeyScheduleRule.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.KeySchedules.KeyScheduleTesting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.KeySchedules.KeyScheduleTesting.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.KeySchedules.KeySchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.KeySchedules.KeySchedulesConfig.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.KeySchedules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.KeySchedules.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.ModuleEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.ModuleEnvironment.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.PlatformCommandIds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.PlatformCommandIds.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.ProjectConfigs.IConfigSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.ProjectConfigs.IConfigSerializer.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig-1.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfig.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.ProjectConfigs.ProjectSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.ProjectConfigs.ProjectSettings.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.ProjectConfigs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.ProjectConfigs.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.ProjectParams.ProjectParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.ProjectParams.ProjectParam.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.ProjectParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.ProjectParams.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.RevitParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.RevitParam.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.RevitParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.RevitParamsConfig.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.RevitScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.RevitScheduleRule.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.RevitSchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.RevitSchedulesConfig.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.Schedules.ScheduleRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.Schedules.ScheduleRule.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.Schedules.SchedulesConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.Schedules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.Schedules.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SharedParams.SharedParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SharedParams.SharedParam.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SharedParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SharedParams.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.BimModelPartsServiceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.BimModelPartsServiceExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IParamElementService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IParamElementService.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IProjectParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IProjectParamsService.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SystemParams.SystemParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SystemParams.SystemParam.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SystemParams.SystemParamsConfig.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SystemParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SystemParams.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.Templates.EmptyProject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.Templates.EmptyProject.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.Templates.ProjectParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.Templates.ProjectParameters.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.Templates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.Templates.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.AreaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.AreaExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.CategoryExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.CategoryExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Comparators.ElementComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Comparators.ElementComparer.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Comparators.LogicalStringComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Comparators.LogicalStringComparer.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Comparators.ViewSheetComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Comparators.ViewSheetComparer.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Comparators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Comparators.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.DocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.DocumentExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ElementExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ElementIdExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ElementIdExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ForgeTypeIdExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ForgeTypeIdExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Geometry.BoundingBoxExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Geometry.BoundingBoxExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Geometry.ElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Geometry.ElementExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Geometry.GeometryObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Geometry.GeometryObjectExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Geometry.SolidExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Geometry.SolidExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Geometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Geometry.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ParamElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ParamElementExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ParamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ParamExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.RoomExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.RoomExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.DirectoryInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.DirectoryInfo.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.IRevitServerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.IRevitServerClient.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.ISerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.ISerializer.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.LockState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.LockState.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.ModelLockInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.ModelLockInfo.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.ModelLockOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.ModelLockOptions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.ModelLockTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.ModelLockTypes.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.RevitContents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.RevitContents.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.RevitFolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.RevitFolder.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.RevitModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.RevitModel.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.RevitResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.RevitResponse.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.RevitServerClientBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.RevitServerClientBuilder.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.ServerInformations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.ServerInformations.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.ServerRoles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.ServerRoles.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.ServerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.ServerClient.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.SpatialElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.SpatialElementExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.TransactionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.TransactionExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Transmissions.ExternalFileReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Transmissions.ExternalFileReference.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Transmissions.ExternalFileReferenceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Transmissions.ExternalFileReferenceType.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Transmissions.LoadState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Transmissions.LoadState.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Transmissions.PathType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Transmissions.PathType.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Transmissions.TransmissionData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Transmissions.TransmissionData.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Transmissions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Transmissions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.UIApplicationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.UIApplicationExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.UIDocumentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.UIDocumentExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/2024/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/index.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/2024/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/2024/toc.json"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    },
+    {
+      "name": "2020",
+      "xrefmap": "2020.xrefmap.yml"
+    },
+    {
+      "name": "2021",
+      "xrefmap": "2021.xrefmap.yml"
+    },
+    {
+      "name": "2022",
+      "xrefmap": "2022.xrefmap.yml"
+    },
+    {
+      "name": "2023",
+      "xrefmap": "2023.xrefmap.yml"
+    },
+    {
+      "name": "2024",
+      "xrefmap": "2024.xrefmap.yml"
+    }
+  ]
+}

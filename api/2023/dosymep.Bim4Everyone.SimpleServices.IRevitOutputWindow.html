@@ -1,0 +1,798 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IRevitOutputWindow
+ | dosymep.Revit </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IRevitOutputWindow
+ | dosymep.Revit ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="dosymep.Revit">
+            dosymep.Revit
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow">
+
+
+
+  <h1 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow" class="text-break">
+    Interface IRevitOutputWindow
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="dosymep.html">dosymep</a>.<a class="xref" href="dosymep.Bim4Everyone.html">Bim4Everyone</a>.<a class="xref" href="dosymep.Bim4Everyone.SimpleServices.html">SimpleServices</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>dosymep.Bim4Everyone.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Интерфейс неблокирующего окна вывода сообщений.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IRevitOutputWindow</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_IconPath_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.IconPath*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_IconPath" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.IconPath">
+  IconPath
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Путь до иконки окна.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string IconPath { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_Title_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.Title*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_Title" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.Title">
+  Title
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Заголовок окна.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Title { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_Center_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.Center*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_Center" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.Center">
+  Center()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ставит окно по центру монитора.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Center()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_Close_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.Close*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_Close" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.Close">
+  Close()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Закрывает окно.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Close()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_GetElementLinks_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.GetElementLinks*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_GetElementLinks_Autodesk_Revit_DB_Element_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.GetElementLinks(Autodesk.Revit.DB.Element)">
+  GetElementLinks(Element)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает ссылку на элемент.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetElementLinks(Element element)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Возвращает ссылку на элемент.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_GetElementLinks_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.GetElementLinks*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_GetElementLinks_Autodesk_Revit_DB_ElementId_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.GetElementLinks(Autodesk.Revit.DB.ElementId)">
+  GetElementLinks(ElementId)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает ссылку на элемент.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetElementLinks(ElementId elementId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>elementId</code> <span class="xref">ElementId</span></dt>
+    <dd><p>Идентификатор элемента.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Возвращает ссылку на элемент.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_GetElementLinks_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.GetElementLinks*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_GetElementLinks_Autodesk_Revit_DB_ElementId___" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.GetElementLinks(Autodesk.Revit.DB.ElementId[])">
+  GetElementLinks(params ElementId[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает ссылки на элементы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetElementLinks(params ElementId[] elementIds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>elementIds</code> <span class="xref">ElementId</span>[]</dt>
+    <dd><p>Массив идентификаторов элементов.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Возвращает ссылки на элементы.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_GetElementLinks_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.GetElementLinks*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_GetElementLinks_Autodesk_Revit_DB_Element___" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.GetElementLinks(Autodesk.Revit.DB.Element[])">
+  GetElementLinks(params Element[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает ссылки на элементы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetElementLinks(params Element[] elements)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>elements</code> <span class="xref">Element</span>[]</dt>
+    <dd><p>Массив элементов.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Возвращает ссылки на элементы.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_GetElementLinks_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.GetElementLinks*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_GetElementLinks_System_Collections_Generic_IEnumerable_Autodesk_Revit_DB_ElementId__" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.GetElementLinks(System.Collections.Generic.IEnumerable{Autodesk.Revit.DB.ElementId})">
+  GetElementLinks(IEnumerable&lt;ElementId&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает ссылки на элементы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetElementLinks(IEnumerable&lt;ElementId&gt; elementIds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>elementIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">ElementId</span>&gt;</dt>
+    <dd><p>Перечисление идентификаторов элементов.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Возвращает ссылки на элементы.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_GetElementLinks_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.GetElementLinks*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_GetElementLinks_System_Collections_Generic_IEnumerable_Autodesk_Revit_DB_Element__" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.GetElementLinks(System.Collections.Generic.IEnumerable{Autodesk.Revit.DB.Element})">
+  GetElementLinks(IEnumerable&lt;Element&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает ссылки на элементы.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetElementLinks(IEnumerable&lt;Element&gt; elements)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>elements</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">Element</span>&gt;</dt>
+    <dd><p>Перечисление элементов.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Возвращает ссылки на элементы.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_Hide_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.Hide*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_Hide" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.Hide">
+  Hide()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Скрывает окно.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Hide()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_PrintCode_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.PrintCode*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_PrintCode_System_String_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.PrintCode(System.String)">
+  PrintCode(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Печатает содержимое кода.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void PrintCode(string code)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>code</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Содержимое кода.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_PrintHTML_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.PrintHTML*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_PrintHTML_System_String_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.PrintHTML(System.String)">
+  PrintHTML(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Печатает HTML содержимое.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void PrintHTML(string html)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>html</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>HTML содержимое.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_PrintImage_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.PrintImage*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_PrintImage_System_String_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.PrintImage(System.String)">
+  PrintImage(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Печатает изображение.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void PrintImage(string imagePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>imagePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Путь до печатаемого изображения.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_PrintMarkdown_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.PrintMarkdown*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_PrintMarkdown_System_String_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.PrintMarkdown(System.String)">
+  PrintMarkdown(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Печатает содержимое markdown документа.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void PrintMarkdown(string markdown)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>markdown</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Содержимое markdown.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_PrintTable_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.PrintTable*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_PrintTable_System_Collections_Generic_List_System_String____System_String_System_Collections_Generic_List_System_String__" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.PrintTable(System.Collections.Generic.List{System.String[]},System.String,System.Collections.Generic.List{System.String})">
+  PrintTable(List&lt;string[]&gt;, string, List&lt;string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Печатает таблицу.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void PrintTable(List&lt;string[]&gt; rows, string title = null, List&lt;string&gt; columns = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rows</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]&gt;</dt>
+    <dd><p>Список строк.</p>
+</dd>
+    <dt><code>title</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Наименование таблицы.</p>
+</dd>
+    <dt><code>columns</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Список наименований колонок.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_PrintText_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.PrintText*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_PrintText_System_String_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.PrintText(System.String)">
+  PrintText(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Печатает содержимое текста.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void PrintText(string text)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Текстовое содержимое.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_SetSize_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.SetSize*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_SetSize_System_Double_System_Double_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.SetSize(System.Double,System.Double)">
+  SetSize(double, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Устанавливает размер окна.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetSize(double width, double height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Ширина окна.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Высота окна.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_Show_" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.Show*"></a>
+
+  <h3 id="dosymep_Bim4Everyone_SimpleServices_IRevitOutputWindow_Show" data-uid="dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.Show">
+  Show()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Показывает окно.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Show()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Copyright &copy; 2023 dosymep
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
