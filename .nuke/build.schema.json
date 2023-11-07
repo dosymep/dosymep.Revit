@@ -18,6 +18,9 @@
           "type": "boolean",
           "description": "Indicates to continue a previously failed build attempt"
         },
+        "DocsCaches": {
+          "type": "string"
+        },
         "DocsConfig": {
           "type": "string"
         },

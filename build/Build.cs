@@ -25,6 +25,7 @@ class Build : NukeBuild {
     [Parameter] readonly AbsolutePath Output = RootDirectory / "bin";
     [Parameter] readonly string DocsOutput = Path.Combine("docs", "_site");
     [Parameter] readonly string DocsConfig = Path.Combine("docs", "docfx.json");
+    [Parameter] readonly AbsolutePath DocsCaches = RootDirectory / Path.Combine("docs", "api");
 
     /// <summary>
     /// Min Revit version.
@@ -54,6 +55,7 @@ class Build : NukeBuild {
         .Executes(() => {
             Output.CreateOrCleanDirectory();
             (RootDirectory / DocsOutput).CreateOrCleanDirectory();
+            DocsCaches.GlobFiles("**/*.yml").DeleteFiles();
             RootDirectory.GlobDirectories("**/bin", "**/obj")
                 .Where(item => item != (RootDirectory / "build" / "bin"))
                 .Where(item => item != (RootDirectory / "build" / "obj"))
