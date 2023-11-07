@@ -74,6 +74,7 @@ class Build : NukeBuild, IHazSolution {
         });
 
     Target DownloadBim4Everyone => _ => _
+        .OnlyWhenStatic(() => IsServerBuild)
         .Executes(() => {
             // потому что основные пакеты лежат в библиотеке pyRevit
             string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
