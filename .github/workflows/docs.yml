@@ -35,8 +35,8 @@ jobs:
           path: docs/_site
       
       # Publish docs: https://github.com/JamesIves/github-pages-deploy-action
-      - name: Publish docs
-        uses: JamesIves/github-pages-deploy-action@4.4.3
+      - name: Publish to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           clean: true
