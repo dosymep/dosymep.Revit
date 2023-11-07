@@ -5,6 +5,7 @@ using System.Linq;
 using dosymep.Nuke.RevitVersions;
 
 using Nuke.Common;
+using Nuke.Common.CI.GitLab;
 using Nuke.Common.IO;
 using Nuke.Common.ProjectModel;
 using Nuke.Common.Tooling;
@@ -12,6 +13,7 @@ using Nuke.Common.Tools.DotNet;
 using Nuke.Components;
 
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
+using static Nuke.Common.Tools.Git.GitTasks;
 
 class Build : NukeBuild, IHazSolution {
     /// Support plugins are available for:
@@ -66,12 +68,21 @@ class Build : NukeBuild, IHazSolution {
     Target Restore => _ => _
         .DependsOn(Clean)
         .Executes(() => {
+            Git("clone https://github.com/dosymep/BIM4Everyone.git %appdata%/pyRevit/Extensions");
             DotNetRestore(s => s
                 .SetProjectFile(((IHazSolution) this).Solution));
         });
 
+    Target DownloadBim4Everyone => _ => _
+        .Triggers(Restore)
+        .Executes(() => {
+            // потому что основные пакеты лежат в библиотеке pyRevit
+            Git("clone https://github.com/eirannejad/pyRevit.git %appdata%/pyRevit-Master");
+            Git("clone https://github.com/dosymep/BIM4Everyone.git %appdata%/pyRevit/Extensions");
+        });
+
     Target Compile => _ => _
-        .DependsOn(Restore)
+        .DependsOn(DownloadBim4Everyone)
         .Executes(() => {
             DotNetBuild(s => s
                 .EnableForce()
