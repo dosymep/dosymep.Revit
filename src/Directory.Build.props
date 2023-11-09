@@ -49,7 +49,7 @@
             <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
 
-        <PackageReference Include="ModPlus.Revit.API.$(RevitVersion)" Version="*">
+        <PackageReference Include="Autodesk.Revit.Sdk.Refs.$(RevitVersion)" Version="*">
             <PrivateAssets>all</PrivateAssets>
             <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
