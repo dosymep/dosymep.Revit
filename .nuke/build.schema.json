@@ -134,9 +134,16 @@
             "enum": [
               "Clean",
               "Compile",
-              "DocsCompile"
+              "DocsCompile",
+              "DownloadBim4Everyone",
+              "DownloadDocFx",
+              "Restore"
             ]
           }
+        },
+        "Solution": {
+          "type": "string",
+          "description": "Path to a solution file that is automatically loaded"
         },
         "Target": {
           "type": "array",
@@ -146,7 +153,10 @@
             "enum": [
               "Clean",
               "Compile",
-              "DocsCompile"
+              "DocsCompile",
+              "DownloadBim4Everyone",
+              "DownloadDocFx",
+              "Restore"
             ]
           }
         },
