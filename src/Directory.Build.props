@@ -10,7 +10,7 @@
         <TargetFramework>net48</TargetFramework>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         
-        <RevitVersion>2024</RevitVersion>
+        <!-- <RevitVersion>2024</RevitVersion> ломаются подсказки кода -->
         <Configurations>D2020;D2021;D2022;D2023;D2024;Debug;Release</Configurations>
     </PropertyGroup>
 
