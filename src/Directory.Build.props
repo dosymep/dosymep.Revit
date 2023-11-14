@@ -28,7 +28,7 @@
         <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
     </PropertyGroup>
 
-    <PropertyGroup>
+    <PropertyGroup Condition="$(RevitVersion) != ''">
         <Version>$(RevitVersion).2.4</Version>
         <FileVersion>$(RevitVersion).2.4</FileVersion>
         <Company>dosymep</Company>
@@ -49,7 +49,9 @@
             <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
 
-        <PackageReference Include="Autodesk.Revit.Sdk.Refs.$(RevitVersion)" Version="*">
+        <PackageReference 
+                Condition="$(RevitVersion) != ''"
+                Include="Autodesk.Revit.Sdk.Refs.$(RevitVersion)" Version="*">
             <PrivateAssets>all</PrivateAssets>
             <ExcludeAssets>runtime</ExcludeAssets>
         </PackageReference>
