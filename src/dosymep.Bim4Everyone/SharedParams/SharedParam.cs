@@ -431,6 +431,62 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISSystemShortName):
                     return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.FloorFinishingType1):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.FloorFinishingType2):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.CeilingFinishingType1):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.CeilingFinishingType2):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.WallFinishingType1):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.WallFinishingType2):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.WallFinishingType3):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.WallFinishingType4):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.WallFinishingType5):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.WallFinishingType6):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.WallFinishingType7):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.WallFinishingType8):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.WallFinishingType9):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.WallFinishingType10):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.BaseboardFinishingType1):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.BaseboardFinishingType2):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.FinishingRoomName):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.FinishingRoomNumber):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.FinishingRoomNames):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.FinishingRoomNumbers):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.FinishingType):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.FloorFinishingOrder):
+                    return SpecTypeId.Currency;
+                case nameof(SharedParamsConfig.CeilingFinishingOrder):
+                    return SpecTypeId.Currency;
+                case nameof(SharedParamsConfig.WallFinishingOrder):
+                    return SpecTypeId.Currency;
+                case nameof(SharedParamsConfig.BaseboardFinishingOrder):
+                    return SpecTypeId.Currency;
+                case nameof(SharedParamsConfig.SizeLengthAdditional):
+                    return SpecTypeId.Currency;
+                case nameof(SharedParamsConfig.SizeArea):
+                    return SpecTypeId.Area;
+                case nameof(SharedParamsConfig.SizeVolume):
+                    return SpecTypeId.Volume;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));

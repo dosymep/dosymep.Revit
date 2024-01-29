@@ -277,6 +277,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                     return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case nameof(ProjectParamsConfig.RoomName):
                     return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                case nameof(ProjectParamsConfig.RoomFinishingType):
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 default:
                     throw new ArgumentException($"Не найден параметр проекта с идентификатором \"{paramId}\".",
                         nameof(paramId));

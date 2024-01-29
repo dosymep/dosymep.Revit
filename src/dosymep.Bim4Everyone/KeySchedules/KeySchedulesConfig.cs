@@ -239,6 +239,38 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 },
                 FilledProjectParamNames = new List<string>() { }
             };
+
+        /// <summary>
+        /// КВГ_(Ключ.) - Тип группы
+        /// </summary>
+        public KeyScheduleRule RoomsFinishing { get; internal set; }
+            = new KeyScheduleRule() {
+                ScheduleName = "ОТД_(Ключ.) - Отделка помещений",
+                KeyRevitParamName = nameof(ProjectParamsConfig.RoomFinishingType),
+
+                RequiredSharedParams = new List<string>() {
+                    nameof(SharedParamsConfig.FloorFinishingType1),
+                    nameof(SharedParamsConfig.FloorFinishingType2),
+                    nameof(SharedParamsConfig.CeilingFinishingType1),
+                    nameof(SharedParamsConfig.CeilingFinishingType2),
+                    nameof(SharedParamsConfig.WallFinishingType1),
+                    nameof(SharedParamsConfig.WallFinishingType2),
+                    nameof(SharedParamsConfig.WallFinishingType3),
+                    nameof(SharedParamsConfig.WallFinishingType4),
+                    nameof(SharedParamsConfig.WallFinishingType5),
+                    nameof(SharedParamsConfig.WallFinishingType6),
+                    nameof(SharedParamsConfig.WallFinishingType7),
+                    nameof(SharedParamsConfig.WallFinishingType8),
+                    nameof(SharedParamsConfig.WallFinishingType9),
+                    nameof(SharedParamsConfig.WallFinishingType10),
+                    nameof(SharedParamsConfig.BaseboardFinishingType1),
+                    nameof(SharedParamsConfig.BaseboardFinishingType2)
+                },
+                RequiredProjectParams = new List<string>() { },
+
+                FilledSharedParamNames = new List<string>() { },
+                FilledProjectParamNames = new List<string>() { }
+            };
 #endif
 
         #endregion
