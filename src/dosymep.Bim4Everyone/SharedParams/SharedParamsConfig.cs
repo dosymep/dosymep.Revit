@@ -300,6 +300,14 @@ namespace dosymep.Bim4Everyone.SharedParams {
             };
 
         /// <summary>
+        /// ФОП_ПМЩ_Корпус
+        /// </summary>
+        public SharedParam RoomBuildingShortName
+            => new SharedParam(nameof(RoomBuildingShortName), new Guid("a3486213-68bc-4ad6-8019-bb5144fb67c0")) {
+                Name = "ФОП_ПМЩ_Корпус", UnitType = SharedParam.GetUnitType(nameof(RoomBuildingShortName)), StorageType = StorageType.String
+            };
+
+        /// <summary>
         /// ФОП_Тип группы помещений
         /// </summary>
         public SharedParam RoomTypeGroupShortName
