@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface ISharedParamsService
- | dosymep.Revit </title>
+      <title>Interface ISharedParamsService | dosymep.Revit </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface ISharedParamsService
- | dosymep.Revit ">
+      <meta name="title" content="Interface ISharedParamsService | dosymep.Revit ">
       
+      <meta name="description" content="Сервис предоставляет доступ к общим параметрам.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -30,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -90,8 +89,7 @@
 
 
   <h1 id="dosymep_Bim4Everyone_SimpleServices_ISharedParamsService" data-uid="dosymep.Bim4Everyone.SimpleServices.ISharedParamsService" class="text-break">
-    Interface ISharedParamsService
-  
+Interface ISharedParamsService  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/ISharedParamsService.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -113,7 +111,7 @@
 
 
 
-  <dl class="typelist derived">
+  <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
     <div>
@@ -134,7 +132,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_ISharedParamsService_Item_System_String_" data-uid="dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.Item(System.String)">
   this[string]
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/ISharedParamsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает общий параметр по его имени (идентификатору).</p>
@@ -176,7 +174,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_ISharedParamsService_CreateRevitParam_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_ParameterElement_" data-uid="dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.CreateRevitParam(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ParameterElement)">
   CreateRevitParam(Document, ParameterElement)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/ISharedParamsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Создает общий параметр.</p>
@@ -218,7 +216,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_ISharedParamsService_CreateRevitParam_Autodesk_Revit_DB_Document_System_String_" data-uid="dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.CreateRevitParam(Autodesk.Revit.DB.Document,System.String)">
   CreateRevitParam(Document, string)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/ISharedParamsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Создает общий параметр.</p>
@@ -260,7 +258,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_ISharedParamsService_CreateRevitParam_Autodesk_Revit_DB_Document_System_String_Autodesk_Revit_DB_ParameterElement_" data-uid="dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.CreateRevitParam(Autodesk.Revit.DB.Document,System.String,Autodesk.Revit.DB.ParameterElement)">
   CreateRevitParam(Document, string, ParameterElement)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/ISharedParamsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Создает общий параметр.</p>
@@ -305,7 +303,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_ISharedParamsService_CreateRevitParam_Autodesk_Revit_DB_Document_System_String_System_String_" data-uid="dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.CreateRevitParam(Autodesk.Revit.DB.Document,System.String,System.String)">
   CreateRevitParam(Document, string, string)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/ISharedParamsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Создает общий параметр.</p>
@@ -350,7 +348,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_ISharedParamsService_GetRevitParams" data-uid="dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.GetRevitParams">
   GetRevitParams()
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/ISharedParamsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает весь список общих параметров.</p>
@@ -383,7 +381,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_ISharedParamsService_GetRevitParams_Autodesk_Revit_DB_Document_" data-uid="dosymep.Bim4Everyone.SimpleServices.ISharedParamsService.GetRevitParams(Autodesk.Revit.DB.Document)">
   GetRevitParams(Document)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/ISharedParamsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает весь список общих параметров.</p>

@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IRevitServerClient
- | dosymep.Revit </title>
+      <title>Interface IRevitServerClient | dosymep.Revit </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IRevitServerClient
- | dosymep.Revit ">
+      <meta name="title" content="Interface IRevitServerClient | dosymep.Revit ">
       
+      <meta name="description" content="Интерфейс взаимодействия с Revit сервером.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -30,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -90,8 +89,7 @@
 
 
   <h1 id="dosymep_Revit_ServerClient_IRevitServerClient" data-uid="dosymep.Revit.ServerClient.IRevitServerClient" class="text-break">
-    Interface IRevitServerClient
-  
+Interface IRevitServerClient  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ServerClient/IRevitServerClient.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -127,7 +125,7 @@
 
   <h3 id="dosymep_Revit_ServerClient_IRevitServerClient_ServerName" data-uid="dosymep.Revit.ServerClient.IRevitServerClient.ServerName">
   ServerName
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ServerClient/IRevitServerClient.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Наименование Revit сервера</p>
@@ -159,7 +157,7 @@
 
   <h3 id="dosymep_Revit_ServerClient_IRevitServerClient_ServerVersion" data-uid="dosymep.Revit.ServerClient.IRevitServerClient.ServerVersion">
   ServerVersion
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ServerClient/IRevitServerClient.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Версия Revit сервера</p>
@@ -195,7 +193,7 @@
 
   <h3 id="dosymep_Revit_ServerClient_IRevitServerClient_GetAllRevitContentsAsync_System_String_System_Threading_CancellationToken_" data-uid="dosymep.Revit.ServerClient.IRevitServerClient.GetAllRevitContentsAsync(System.String,System.Threading.CancellationToken)">
   GetAllRevitContentsAsync(string, CancellationToken)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ServerClient/IRevitServerClient.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает всю структуру Revit сервера по переданной папке.</p>
@@ -237,7 +235,7 @@
 
   <h3 id="dosymep_Revit_ServerClient_IRevitServerClient_GetAllRevitContentsAsync_System_Threading_CancellationToken_" data-uid="dosymep.Revit.ServerClient.IRevitServerClient.GetAllRevitContentsAsync(System.Threading.CancellationToken)">
   GetAllRevitContentsAsync(CancellationToken)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ServerClient/IRevitServerClient.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает всю структуру Revit сервера.</p>
@@ -276,7 +274,7 @@
 
   <h3 id="dosymep_Revit_ServerClient_IRevitServerClient_GetContentsAsync_System_String_System_Threading_CancellationToken_" data-uid="dosymep.Revit.ServerClient.IRevitServerClient.GetContentsAsync(System.String,System.Threading.CancellationToken)">
   GetContentsAsync(string, CancellationToken)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ServerClient/IRevitServerClient.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает список дочерних элементов переданной папки.</p>
@@ -318,7 +316,7 @@
 
   <h3 id="dosymep_Revit_ServerClient_IRevitServerClient_GetDirectoryInfoAsync_System_String_System_Threading_CancellationToken_" data-uid="dosymep.Revit.ServerClient.IRevitServerClient.GetDirectoryInfoAsync(System.String,System.Threading.CancellationToken)">
   GetDirectoryInfoAsync(string, CancellationToken)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ServerClient/IRevitServerClient.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает информацию о переданном элементе.</p>
@@ -360,7 +358,7 @@
 
   <h3 id="dosymep_Revit_ServerClient_IRevitServerClient_GetRootContentsAsync_System_Threading_CancellationToken_" data-uid="dosymep.Revit.ServerClient.IRevitServerClient.GetRootContentsAsync(System.Threading.CancellationToken)">
   GetRootContentsAsync(CancellationToken)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ServerClient/IRevitServerClient.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает список родительских элементов.</p>
@@ -399,7 +397,7 @@
 
   <h3 id="dosymep_Revit_ServerClient_IRevitServerClient_GetRootDirectoryInfoAsync_System_Threading_CancellationToken_" data-uid="dosymep.Revit.ServerClient.IRevitServerClient.GetRootDirectoryInfoAsync(System.Threading.CancellationToken)">
   GetRootDirectoryInfoAsync(CancellationToken)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ServerClient/IRevitServerClient.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает информацию о родительском элементе.</p>
@@ -438,7 +436,7 @@
 
   <h3 id="dosymep_Revit_ServerClient_IRevitServerClient_GetServerPropertiesAsync_System_Threading_CancellationToken_" data-uid="dosymep.Revit.ServerClient.IRevitServerClient.GetServerPropertiesAsync(System.Threading.CancellationToken)">
   GetServerPropertiesAsync(CancellationToken)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ServerClient/IRevitServerClient.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает информацию о Revit сервере.</p>

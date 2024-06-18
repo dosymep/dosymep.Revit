@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class ParamExtensions
- | dosymep.Revit </title>
+      <title>Class ParamExtensions | dosymep.Revit </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class ParamExtensions
- | dosymep.Revit ">
+      <meta name="title" content="Class ParamExtensions | dosymep.Revit ">
       
+      <meta name="description" content="Расширения класса параметров.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -30,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -90,8 +89,7 @@
 
 
   <h1 id="dosymep_Revit_ParamExtensions" data-uid="dosymep.Revit.ParamExtensions" class="text-break">
-    Class ParamExtensions
-  
+Class ParamExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.ParamTypes.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -120,7 +118,7 @@
 
 
 
-  <dl class="typelist derived">
+  <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
     <div>
@@ -159,7 +157,7 @@
 
   <h3 id="dosymep_Revit_ParamExtensions_AsObject_Autodesk_Revit_DB_Parameter_" data-uid="dosymep.Revit.ParamExtensions.AsObject(Autodesk.Revit.DB.Parameter)">
   AsObject(Parameter)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает значение параметра.</p>
@@ -198,7 +196,7 @@
 
   <h3 id="dosymep_Revit_ParamExtensions_GetBuiltInParameter_Autodesk_Revit_DB_Definition_" data-uid="dosymep.Revit.ParamExtensions.GetBuiltInParameter(Autodesk.Revit.DB.Definition)">
   GetBuiltInParameter(Definition)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает <span class="xref">Autodesk.Revit.DB.BuiltInParameter</span> для определения параметра.</p>
@@ -237,7 +235,7 @@
 
   <h3 id="dosymep_Revit_ParamExtensions_GetCategories_Autodesk_Revit_DB_Binding_" data-uid="dosymep.Revit.ParamExtensions.GetCategories(Autodesk.Revit.DB.Binding)">
   GetCategories(Binding)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает нумератор категорий.</p>
@@ -276,7 +274,7 @@
 
   <h3 id="dosymep_Revit_ParamExtensions_GetElementId_Autodesk_Revit_DB_Definition_" data-uid="dosymep.Revit.ParamExtensions.GetElementId(Autodesk.Revit.DB.Definition)">
   GetElementId(Definition)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает идентификатор определения параметра.</p>
@@ -315,7 +313,7 @@
 
   <h3 id="dosymep_Revit_ParamExtensions_GetStorageType_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ParamExtensions.GetStorageType(Autodesk.Revit.DB.BuiltInParameter)">
   GetStorageType(BuiltInParameter)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.ParamTypes.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает тип параметра.</p>
@@ -360,7 +358,7 @@ public static StorageType GetStorageType(this BuiltInParameter builtInParameter)
 
   <h3 id="dosymep_Revit_ParamExtensions_GetStorageType_Autodesk_Revit_DB_Definition_" data-uid="dosymep.Revit.ParamExtensions.GetStorageType(Autodesk.Revit.DB.Definition)">
   GetStorageType(Definition)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.ParamTypes.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает тип параметра.</p>
@@ -405,7 +403,7 @@ public static StorageType GetStorageType(this BuiltInParameter builtInParameter)
 
   <h3 id="dosymep_Revit_ParamExtensions_GetStorageType_Autodesk_Revit_DB_ForgeTypeId_" data-uid="dosymep.Revit.ParamExtensions.GetStorageType(Autodesk.Revit.DB.ForgeTypeId)">
   GetStorageType(ForgeTypeId)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.ParamTypes.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает тип параметра.</p>
@@ -445,7 +443,7 @@ public static StorageType GetStorageType(this ForgeTypeId forgeTypeId)</code></p
 
   <h3 id="dosymep_Revit_ParamExtensions_GetUnitType_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ParamExtensions.GetUnitType(Autodesk.Revit.DB.BuiltInParameter)">
   GetUnitType(BuiltInParameter)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.UnitTypes.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает <span class="xref">Autodesk.Revit.DB.ForgeTypeId</span> для системного параметра.</p>
@@ -484,7 +482,7 @@ public static StorageType GetStorageType(this ForgeTypeId forgeTypeId)</code></p
 
   <h3 id="dosymep_Revit_ParamExtensions_IsId_Autodesk_Revit_DB_Definition_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ParamExtensions.IsId(Autodesk.Revit.DB.Definition,Autodesk.Revit.DB.BuiltInParameter)">
   IsId(Definition, BuiltInParameter)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Проверяет <span class="xref">Autodesk.Revit.DB.BuiltInParameter</span> является ли он идентификатором системного параметра.</p>
@@ -526,7 +524,7 @@ public static StorageType GetStorageType(this ForgeTypeId forgeTypeId)</code></p
 
   <h3 id="dosymep_Revit_ParamExtensions_IsInstanceBinding_Autodesk_Revit_DB_Binding_" data-uid="dosymep.Revit.ParamExtensions.IsInstanceBinding(Autodesk.Revit.DB.Binding)">
   IsInstanceBinding(Binding)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Проверяет является ли привязка параметра для экземпляром элемента.</p>
@@ -565,7 +563,7 @@ public static StorageType GetStorageType(this ForgeTypeId forgeTypeId)</code></p
 
   <h3 id="dosymep_Revit_ParamExtensions_IsTypeBinding_Autodesk_Revit_DB_Binding_" data-uid="dosymep.Revit.ParamExtensions.IsTypeBinding(Autodesk.Revit.DB.Binding)">
   IsTypeBinding(Binding)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Проверяет является ли привязка параметра для типа элемента.</p>
@@ -604,7 +602,7 @@ public static StorageType GetStorageType(this ForgeTypeId forgeTypeId)</code></p
 
   <h3 id="dosymep_Revit_ParamExtensions_RemoveValue_Autodesk_Revit_DB_Parameter_" data-uid="dosymep.Revit.ParamExtensions.RemoveValue(Autodesk.Revit.DB.Parameter)">
   RemoveValue(Parameter)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Удаляет значение параметра (устанавливает значение по умолчанию)</p>
@@ -637,7 +635,7 @@ public static StorageType GetStorageType(this ForgeTypeId forgeTypeId)</code></p
 
   <h3 id="dosymep_Revit_ParamExtensions_Set_Autodesk_Revit_DB_Parameter_Autodesk_Revit_DB_Parameter_" data-uid="dosymep.Revit.ParamExtensions.Set(Autodesk.Revit.DB.Parameter,Autodesk.Revit.DB.Parameter)">
   Set(Parameter, Parameter)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/ParamExtensions.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Присваивает значение параметра по значению другого параметра.</p>

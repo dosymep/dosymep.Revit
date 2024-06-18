@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IBimModelPartsService
- | dosymep.Revit </title>
+      <title>Interface IBimModelPartsService | dosymep.Revit </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IBimModelPartsService
- | dosymep.Revit ">
+      <meta name="title" content="Interface IBimModelPartsService | dosymep.Revit ">
       
+      <meta name="description" content="Сервис по получению разделов BIM модели.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -30,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -90,8 +89,7 @@
 
 
   <h1 id="dosymep_Bim4Everyone_SimpleServices_IBimModelPartsService" data-uid="dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService" class="text-break">
-    Interface IBimModelPartsService
-  
+Interface IBimModelPartsService  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/IBimModelPartsService.cs"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -161,7 +159,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_IBimModelPartsService_GetBimModelPart_System_String_" data-uid="dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.GetBimModelPart(System.String)">
   GetBimModelPart(string)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/IBimModelPartsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Получает раздел по переданному имени документа.</p>
@@ -200,7 +198,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_IBimModelPartsService_GetBimModelParts" data-uid="dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.GetBimModelParts">
   GetBimModelParts()
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/IBimModelPartsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает все разделы BIM модели.</p>
@@ -233,7 +231,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_IBimModelPartsService_GetBimModelSubParts_dosymep_Bim4Everyone_BimModelPart_" data-uid="dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.GetBimModelSubParts(dosymep.Bim4Everyone.BimModelPart)">
   GetBimModelSubParts(BimModelPart)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/IBimModelPartsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Возвращает все разделы BIM модели.</p>
@@ -272,7 +270,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_IBimModelPartsService_InAnyBimModelParts_System_String_System_Collections_Generic_IEnumerable_dosymep_Bim4Everyone_BimModelPart__" data-uid="dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.InAnyBimModelParts(System.String,System.Collections.Generic.IEnumerable{dosymep.Bim4Everyone.BimModelPart})">
   InAnyBimModelParts(string, IEnumerable&lt;BimModelPart&gt;)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/IBimModelPartsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Проверят является ли документ переданному разделу.</p>
@@ -314,7 +312,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_IBimModelPartsService_InAnyBimModelParts_System_String_dosymep_Bim4Everyone_BimModelPart_" data-uid="dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.InAnyBimModelParts(System.String,dosymep.Bim4Everyone.BimModelPart)">
   InAnyBimModelParts(string, BimModelPart)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/IBimModelPartsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Проверят является ли документ переданному разделу.</p>
@@ -356,7 +354,7 @@
 
   <h3 id="dosymep_Bim4Everyone_SimpleServices_IBimModelPartsService_InAnyBimModelParts_System_String_dosymep_Bim4Everyone_BimModelPart___" data-uid="dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.InAnyBimModelParts(System.String,dosymep.Bim4Everyone.BimModelPart[])">
   InAnyBimModelParts(string, params BimModelPart[])
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Bim4Everyone/SimpleServices/IBimModelPartsService.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Проверят является ли документ переданному разделу.</p>
