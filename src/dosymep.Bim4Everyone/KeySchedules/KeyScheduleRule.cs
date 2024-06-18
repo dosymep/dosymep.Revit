@@ -47,7 +47,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
         /// </summary>
         public List<string> RequiredProjectParams { get; set; } = new List<string>();
 
-#if REVIT_2020 || REVIT_2021
+#if REVIT2020 || REVIT2021
 
         /// <summary>
         /// Обязательные системные параметры проекта в спецификации.

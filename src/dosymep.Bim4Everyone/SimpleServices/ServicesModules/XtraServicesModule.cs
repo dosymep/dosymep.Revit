@@ -18,12 +18,12 @@ using Ninject.Modules;
 namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
     internal class XtraServicesModule : NinjectModule {
         public override void Load() {
-#if REVIT_2023_OR_LESS
-            Kernel?.UseXtraTheme();
-#else
+#if REVIT2024_OR_GREATER
             Bind<IUIThemeService>()
                 .To<RevitThemeService>()
                 .InSingletonScope();
+#else
+            Kernel?.UseXtraTheme();
 #endif
             Kernel?.UseXtraMessageBox();
             Kernel?.UseXtraThemeUpdater();

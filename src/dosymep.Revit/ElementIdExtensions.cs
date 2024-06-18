@@ -78,13 +78,13 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="elementId">Идентификатор элемента.</param>
         /// <returns> Возвращает числовое значение идентификатора элемента.</returns>
-#if REVIT_2023_OR_LESS
-        public static int GetIdValue(this ElementId elementId) {
-            return elementId.IntegerValue;
-        }
-#else
+#if REVIT2024_OR_GREATER
         public static long GetIdValue(this ElementId elementId) {
             return elementId.Value;
+        }
+#else
+        public static int GetIdValue(this ElementId elementId) {
+            return elementId.IntegerValue;
         }
 #endif
     }

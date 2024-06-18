@@ -125,7 +125,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                    ?? (ExternalDefinition) definitionFile.Groups.get_Item(groupName)?.Definitions.get_Item(Name);
         }
 
-#if REVIT_2020
+#if REVIT2020
         /// <summary>
         /// Возвращает единицу измерения параметра по его идентификатору.
         /// </summary>
@@ -229,7 +229,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
             }
         }
 
-#elif REVIT_2021
+#elif REVIT2021
         /// <summary>
         /// Возвращает единицу измерения параметра по его идентификатору.
         /// </summary>

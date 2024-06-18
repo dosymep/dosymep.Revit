@@ -8,7 +8,7 @@ using dosymep.SimpleServices;
 namespace dosymep.Bim4Everyone.SimpleServices {
     internal class RevitThemeService : 
         IUIThemeService
-#if REVIT_2024_OR_GREATER
+#if REVIT2024_OR_GREATER
         , IDisposable
 #endif
     {
@@ -28,7 +28,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
             return UIThemes.Light;
         }
         
-#if REVIT_2024_OR_GREATER
+#if REVIT2024_OR_GREATER
         private readonly UIApplication _uiApplication;
 
         public RevitThemeService(UIApplication uiApplication) {

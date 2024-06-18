@@ -3281,7 +3281,7 @@ namespace dosymep.Revit {
                 case BuiltInParameter.WALL_ATTR_HEIGHT_PARAM: return StorageType.Double;
                 case BuiltInParameter.WALL_ATTR_WIDTH_PARAM: return StorageType.Double;
                 case BuiltInParameter.INVALID: return StorageType.None;
-#if REVIT_2020
+#if REVIT2020
 
                 case BuiltInParameter.RBS_ELEC_CIRCUIT_NAMING: return StorageType.Integer;
                 case BuiltInParameter
@@ -3341,7 +3341,7 @@ namespace dosymep.Revit {
                 
 #endif
 
-#if REVIT_2022
+#if REVIT2022
 
                 case BuiltInParameter.RBS_ELEC_ANALYTICAL_AREA_MEASUREMENT: return StorageType.Integer;
                 case BuiltInParameter.RBS_ELEC_DISTRIBUTION_NODE_POWER_SOURCE: return StorageType.String;
@@ -3350,19 +3350,19 @@ namespace dosymep.Revit {
 
 #endif
 
-#if REVIT_2022_OR_LESS
+#if !REVIT2024_OR_GREATER
 
                 case BuiltInParameter.FABRICATION_BRA_SIZE: return StorageType.String;
                 
 #endif
 
-#if REVIT_2022
+#if REVIT2022
 
                 case BuiltInParameter.MULTI_LEADER_TAG_UI: return StorageType.Integer;
 
 #endif
 
-#if REVIT_2022_OR_GREATER
+#if REVIT2022_OR_GREATER
                 
                 case BuiltInParameter.REBAR_MODEL_BAR_DIAMETER: return StorageType.Double;
                 case BuiltInParameter.VIEW_SHOW_GRIDS: return StorageType.None;
@@ -3402,7 +3402,7 @@ namespace dosymep.Revit {
 
 #endif
 
-#if REVIT_2023_OR_GREATER
+#if REVIT2023_OR_GREATER
 
                 case BuiltInParameter.PREFER_DIM_SIDE_UI_FILTER: return StorageType.Integer;
                 case BuiltInParameter.MULTIPLE_ALIGNMENT_UI_TOGGLE: return StorageType.Integer;
@@ -3416,7 +3416,7 @@ namespace dosymep.Revit {
             }
         }
 
-#if REVIT_2020 || REVIT_2021
+#if REVIT2020 || REVIT2021
         /// <summary>
         /// Возвращает тип параметра.
         /// </summary>
@@ -3572,7 +3572,7 @@ namespace dosymep.Revit {
 
 #endif
         
-#if REVIT_2022_OR_GREATER
+#if REVIT2022_OR_GREATER
         
         /// <summary>
         /// Возвращает тип параметра.
@@ -3585,7 +3585,7 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(forgeTypeId));
             }
             
-#if REVIT_2022
+#if REVIT2022
 
             if(forgeTypeId == ParameterTypeId.RbsElecDistributionNodePowerSource) { return StorageType.String; }
             
@@ -17201,7 +17201,7 @@ namespace dosymep.Revit {
 
             if(forgeTypeId == ParameterTypeId.SurfacePatternIdParam) { return StorageType.None; }
 
-#if REVIT_2023_OR_GREATER
+#if REVIT2023_OR_GREATER
 
             if(forgeTypeId == ParameterTypeId.LockAlignmentUiToggle) { return StorageType.Integer; }
             

@@ -31,15 +31,15 @@ namespace dosymep.Bim4Everyone {
         /// <summary>
         /// Текущая версия Revit.
         /// </summary>
-#if REVIT_2020
+#if REVIT2020
         public static string RevitVersion { get; set; } = "2020";
-#elif REVIT_2021
+#elif REVIT2021
         public static string RevitVersion { get; set; } = "2021";
-#elif REVIT_2022
+#elif REVIT2022
         public static string RevitVersion { get; set; } = "2022";
-#elif REVIT_2023
+#elif REVIT2023
         public static string RevitVersion { get; set; } = "2023";
-#elif REVIT_2024
+#elif REVIT2024
         public static string RevitVersion { get; set; } = "2024";
 #else
         public static string RevitVersion => throw new NotImplementedException("Версия Revit не установлена.");

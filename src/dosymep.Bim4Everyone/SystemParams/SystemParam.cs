@@ -65,7 +65,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// </summary>
         public override StorageType StorageType { get; set; }
 
-#if REVIT_2020
+#if REVIT2020
 
         /// <inheritdoc/>
         [JsonIgnore]

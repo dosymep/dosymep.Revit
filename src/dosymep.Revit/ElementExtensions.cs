@@ -925,7 +925,7 @@ namespace dosymep.Revit {
 
         #endregion
 
-#if REVIT_2022_OR_GREATER
+#if REVIT2022_OR_GREATER
 
         #region Получение параметра по ForgeTypeId
 

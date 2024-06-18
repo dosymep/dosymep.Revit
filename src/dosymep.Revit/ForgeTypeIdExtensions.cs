@@ -7,7 +7,7 @@ using System.Reflection;
 using Autodesk.Revit.DB;
 
 namespace dosymep.Revit {
-#if REVIT_2021_OR_GREATER
+#if REVIT2021_OR_GREATER
 
     /// <summary>
     /// Расширения для класса <see cref="Autodesk.Revit.DB.ForgeTypeId"/>.
@@ -37,7 +37,7 @@ namespace dosymep.Revit {
                 return UnitTypeUndefinedName;
             }
 
-#if REVIT_2021
+#if REVIT2021
 
             if(!UnitUtils.IsSpec(forgeTypeId)) {
                 throw new ArgumentException(
@@ -47,7 +47,7 @@ namespace dosymep.Revit {
 
 #endif
 
-#if REVIT_2022_OR_GREATER
+#if REVIT2022_OR_GREATER
 
             if(!SpecUtils.IsValidDataType(forgeTypeId)) {
                 throw new ArgumentException(

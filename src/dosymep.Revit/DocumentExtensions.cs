@@ -432,7 +432,7 @@ namespace dosymep.Revit {
             }
         }
         
-    #if REVIT_2022_OR_GREATER
+    #if REVIT2022_OR_GREATER
         
         /// <summary>
         /// Возвращает тип системного параметра.

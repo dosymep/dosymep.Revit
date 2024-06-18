@@ -96,7 +96,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
             return Enum.GetName(typeof(BuiltInParameter), systemParamId);
         }
 
-#if REVIT_2022_OR_GREATER
+#if REVIT2022_OR_GREATER
 
         /// <inheritdoc/>
         public SystemParam this[ForgeTypeId paramId]

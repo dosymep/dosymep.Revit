@@ -246,7 +246,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 StorageType = StorageType.ElementId
             };
 
-#if REVIT_2020 || REVIT_2021
+#if REVIT2020 || REVIT2021
 
         /// <summary>
         /// КВГ_Доп. сортировка групп

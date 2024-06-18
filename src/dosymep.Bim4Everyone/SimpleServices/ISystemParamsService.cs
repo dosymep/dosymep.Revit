@@ -36,7 +36,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         /// <returns>Возвращает системный параметр.</returns>
         SystemParam CreateRevitParam(Document document, BuiltInParameter systemParamId, LanguageType languageType);
         
-#if REVIT_2022_OR_GREATER
+#if REVIT2022_OR_GREATER
 
         /// <summary>
         /// Возвращает системный параметр.

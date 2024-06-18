@@ -74,7 +74,7 @@ namespace dosymep.Revit {
             return BuiltInParameter.INVALID;
         }
 
-#if REVIT_2020
+#if REVIT2020
 
         /// <summary>
         /// Возвращает единицу измерения параметра.
@@ -89,7 +89,7 @@ namespace dosymep.Revit {
             return parameterElement.GetDefinition().UnitType;
         }
 
-#elif REVIT_2021
+#elif REVIT2021
 
         /// <summary>
         /// Возвращает единицу измерения параметра.
