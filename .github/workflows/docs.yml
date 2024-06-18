@@ -17,13 +17,16 @@ jobs:
         
       # Install the .NET Core workload
       - name: Install .NET Core
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 7.0.x
+          dotnet-version: 8.0.x
         
       # Add DevExpress source: https://docs.devexpress.com/GeneralInformation/117209/installation/install-devexpress-controls-using-nuget-packages/manage-packages-with-dotnet-cli
       - name: Add DevExpress package source
         run: dotnet nuget add source https://nuget.devexpress.com/api -n DXFeed -u DevExpress -p ${{ secrets.DEVEXPRESS_FEED_URL }}
+      
+      - name: Install docfx
+        run: dotnet tool install -g docfx
     
       # Build docs
       - name: Run './build.cmd '
@@ -33,7 +36,7 @@ jobs:
       
       # Upload docs site: https://github.com/marketplace/actions/upload-a-build-artifact
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: docs-site
           path: docs/_site
@@ -44,18 +47,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
   
       # Download Artifacts: https://github.com/actions/download-artifact
       - name: Download Artifacts
-        uses: actions/download-artifact@v3.0.2
+        uses: actions/download-artifact@v4
         with:
           name: docs-site
           path: docs/_site
           
       # Publish docs: https://github.com/JamesIves/github-pages-deploy-action
       - name: Publish to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           clean: true

@@ -64,7 +64,8 @@
             "Rv2021",
             "Rv2022",
             "Rv2023",
-            "Rv2024"
+            "Rv2024",
+            "Rv2025"
           ]
         },
         "MinVersion": {
@@ -79,7 +80,8 @@
             "Rv2021",
             "Rv2022",
             "Rv2023",
-            "Rv2024"
+            "Rv2024",
+            "Rv2025"
           ]
         },
         "NoLogo": {
@@ -118,7 +120,8 @@
               "Rv2021",
               "Rv2022",
               "Rv2023",
-              "Rv2024"
+              "Rv2024",
+              "Rv2025"
             ]
           }
         },
@@ -136,7 +139,6 @@
               "Compile",
               "DocsCompile",
               "DownloadBim4Everyone",
-              "DownloadDocFx",
               "Restore"
             ]
           }
@@ -155,7 +157,6 @@
               "Compile",
               "DocsCompile",
               "DownloadBim4Everyone",
-              "DownloadDocFx",
               "Restore"
             ]
           }

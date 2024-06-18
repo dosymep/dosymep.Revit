@@ -5,11 +5,7 @@
         <Platforms>x64</Platforms>
         <OutputType>Library</OutputType>
         <NoWarn>1701;1702;MSB3246</NoWarn>
-        <TargetFramework>net48</TargetFramework>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-
-        <RevitVersion Condition="'$(RevitVersion)' == ''">2024</RevitVersion> <!-- set default revit version -->
-        <TargetFramework Condition="'$(TargetFramework)' == ''">net48</TargetFramework> <!-- set default target framework -->
         <Configurations>D2020;D2021;D2022;D2023;D2024;Debug;Release</Configurations>
     </PropertyGroup>
 

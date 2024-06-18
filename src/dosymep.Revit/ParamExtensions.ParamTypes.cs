@@ -3350,12 +3350,6 @@ namespace dosymep.Revit {
 
 #endif
 
-#if !REVIT2024_OR_GREATER
-
-                case BuiltInParameter.FABRICATION_BRA_SIZE: return StorageType.String;
-                
-#endif
-
 #if REVIT2022
 
                 case BuiltInParameter.MULTI_LEADER_TAG_UI: return StorageType.Integer;

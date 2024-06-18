@@ -1,4 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework> <!-- set default target framework -->
+        <RevitVersion Condition="'$(RevitVersion)' == ''">2024</RevitVersion> <!-- set default revit version -->
+    </PropertyGroup>
+    
     <ItemGroup>
         <Reference Include="System.Net.Http"/>
     </ItemGroup>
