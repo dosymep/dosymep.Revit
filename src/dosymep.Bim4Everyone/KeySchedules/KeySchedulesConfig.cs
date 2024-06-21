@@ -239,7 +239,11 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 },
                 FilledProjectParamNames = new List<string>() { }
             };
+#endif
 
+        #endregion
+
+#if REVIT2022_OR_GREATER
         /// <summary>
         /// КВГ_(Ключ.) - Тип группы
         /// </summary>
@@ -272,8 +276,6 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 FilledProjectParamNames = new List<string>() { }
             };
 #endif
-
-        #endregion
 
         /// <summary>
         /// Загрузка текущей конфигурации.
