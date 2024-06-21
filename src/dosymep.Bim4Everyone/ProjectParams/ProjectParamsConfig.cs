@@ -236,16 +236,6 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 StorageType = StorageType.String
             };
 
-        /// <summary>
-        /// КВГ_Группа
-        /// </summary>
-        public ProjectParam RoomFinishingType
-            => new ProjectParam(nameof(RoomGroupName)) {
-                Name = "ОТД_Тип отделки",
-                UnitType = ProjectParam.GetUnitType(nameof(RoomFinishingType)),
-                StorageType = StorageType.ElementId
-            };
-
 #if REVIT2020 || REVIT2021
 
         /// <summary>
@@ -338,6 +328,16 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 StorageType = StorageType.String
             };
 
+#else
+        /// <summary>
+        /// ОТД_Тип отделки
+        /// </summary>
+        public ProjectParam RoomFinishingType
+            => new ProjectParam(nameof(RoomGroupName)) {
+                Name = "ОТД_Тип отделки",
+                UnitType = ProjectParam.GetUnitType(nameof(RoomFinishingType)),
+                StorageType = StorageType.ElementId
+            };
 #endif
 
         /// <inheritdoc />
