@@ -409,6 +409,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 Name = "ФОП_ВИС_Сокращение для системы", UnitType = SharedParam.GetUnitType(nameof(VISSystemShortName)), StorageType = StorageType.String
             };
 
+#if REVIT2022_OR_GREATER
         /// <summary>
         /// ФОП_ОТД_Полы Тип 1
         /// </summary>
@@ -688,6 +689,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 UnitType = SharedParam.GetUnitType(nameof(SizeVolume)),
                 StorageType = StorageType.Double
             };
+#endif
 
         /// <inheritdoc />
         RevitParam IParamElementService.CreateRevitParam(Document document, string revitParamName) {
