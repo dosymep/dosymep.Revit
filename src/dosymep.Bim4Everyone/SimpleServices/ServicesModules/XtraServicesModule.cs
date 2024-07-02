@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Net.Cache;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
@@ -43,6 +45,10 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
 
             Kernel?.UseXtraOpenFolderDialog(
                 initialDirectory: Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+            
+            Kernel?.UseXtraLocalization(
+                $"/dosymep.Bim4Everyone;component/Localization/Language.xaml",
+                CultureInfo.GetCultureInfo("ru-RU"));
         }
     }
 }

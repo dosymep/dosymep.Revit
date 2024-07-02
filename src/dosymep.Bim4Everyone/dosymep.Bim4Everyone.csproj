@@ -40,6 +40,7 @@
             <Private>False</Private>
         </Reference>
 
+        <Reference Include="System.Web" />
         <Reference Include="WindowsBase" />
         <Reference Include="System.Net.Http" />
     </ItemGroup>

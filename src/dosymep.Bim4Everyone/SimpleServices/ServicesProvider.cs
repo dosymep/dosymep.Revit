@@ -2,14 +2,17 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Windows;
 
-using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.UI;
 
 using dosymep.Bim4Everyone.SimpleServices.ServicesModules;
+using dosymep.SimpleServices;
 
 using Ninject;
 using Ninject.Extensions.ChildKernel;
+
+using Application = Autodesk.Revit.ApplicationServices.Application;
 
 namespace dosymep.Bim4Everyone.SimpleServices {
     /// <summary>
@@ -37,6 +40,9 @@ namespace dosymep.Bim4Everyone.SimpleServices {
                 new ConfigurationServicesModule(),
                 new JsonSerializationServicesModule(),
                 new RevitServicesModule(uiApplication));
+
+            GetPlatformService<ILocalizationService>()
+                .SetLocalization(GetPlatformService<ILanguageService>().HostLanguage);
         }
 
         /// <summary>

@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    
+    <system:String x:Key="Logger.StartPlugin">Запуск команды расширения</system:String>
+    <system:String x:Key="Logger.FinishPlugin">Выход из команды расширения</system:String>
+    
+    <system:String x:Key="Logger.ErrorPlugin">Ошибка в команде расширения</system:String>
+    <system:String x:Key="Logger.CancelPlugin">Отмена выполнения команды расширения</system:String>
+    
+    
+    <system:String x:Key="Logger.RepoIsNotUpdated">Репозиторий не был обновлен: \"{@RepoInfo}\"</system:String>
+    <system:String x:Key="Logger.RepoErrorUpdated">Ошибка обновления расширения: \"{@RepoInfo}\"</system:String>
+    
+    <system:String x:Key="Logger.PlatformInitCorrect">Инициализация платформы прошла успешно</system:String>
+    <system:String x:Key="Logger.PlatformInitWithError">Инициализация платформы прошла с ошибкой</system:String>
+    
+    <system:String x:Key="Notification.PlatformInitCorrect">Инициализация платформы прошла успешно.</system:String>
+    <system:String x:Key="Notification.PlatformInitWithError">Инициализация платформы прошла с ошибкой, пожалуйста переустановите платформу.</system:String>
+    
+    <system:String x:Key="Notification.CSharpCaptionPlugin">C#</system:String>
+    <system:String x:Key="Notification.IronPythonCaptionPlugin">IronPython</system:String>
+    
+    <system:String x:Key="Notification.ExitPlugin">Выход из скрипта.</system:String>
+    <system:String x:Key="Notification.CorrectExitPlugin">Выполнение скрипта завершено успешно.</system:String>
+    
+    <system:String x:Key="Notification.ErrorPlugin">Выполнение скрипта завершено с ошибкой.</system:String>
+    <system:String x:Key="Notification.CancelPlugin">Выполнение скрипта отменено.</system:String>
+    
+    <system:String x:Key="Notification.FatalTitle">Ошибка</system:String>
+    <system:String x:Key="Notification.WarningTitle">Предупреждение</system:String>
+    
+</ResourceDictionary>
