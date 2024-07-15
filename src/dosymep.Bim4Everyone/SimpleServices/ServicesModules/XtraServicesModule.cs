@@ -12,6 +12,7 @@ using Autodesk.Revit.UI;
 using DevExpress.Mvvm.UI;
 
 using dosymep.Bim4Everyone.SimpleServices.Configuration;
+using dosymep.Bim4Everyone.SimpleServices.NullServices;
 using dosymep.SimpleServices;
 using dosymep.Xpf.Core.Ninject;
 using dosymep.Xpf.Core.SimpleServices;
@@ -39,23 +40,27 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             CorpSettings corpSettings = configurationService?.CorpSettings;
             NotificationSettings notificationSettings = configurationService?.NotificationSettings;
 
-            BitmapImage defaultImage = new BitmapImage(
-                new Uri("/dosymep.Bim4Everyone;component/assets/Bim4Everyone.png", UriKind.Relative));
-            
-            if(!string.IsNullOrEmpty(corpSettings?.ImagePath)) {
-                if(File.Exists(corpSettings.ImagePath)) {
-                    defaultImage = new BitmapImage(new Uri(corpSettings.ImagePath, UriKind.RelativeOrAbsolute));
-                }
-            }
+            if(notificationSettings?.IsActive == false) {
+                Bind<INotificationService>().To<NullNotificationService>();
+            } else {
+                BitmapImage defaultImage = new BitmapImage(
+                    new Uri("/dosymep.Bim4Everyone;component/assets/Bim4Everyone.png", UriKind.Relative));
 
-            Kernel?.UseXtraNotifications(
-                defaultImage: defaultImage,
-                applicationId: "Revit " + ModuleEnvironment.RevitVersion,
-                defaultAuthor: "dosymep",
-                defaultFooter: "Revit " + ModuleEnvironment.RevitVersion,
-                notificationScreen: notificationSettings?.NotificationScreen ?? NotificationScreen.Primary,
-                notificationPosition: notificationSettings?.NotificationPosition ?? NotificationPosition.BottomRight,
-                notificationVisibleMaxCount: notificationSettings?.NotificationVisibleMaxCount ?? 5);
+                if(!string.IsNullOrEmpty(corpSettings?.ImagePath)) {
+                    if(File.Exists(corpSettings.ImagePath)) {
+                        defaultImage = new BitmapImage(new Uri(corpSettings.ImagePath, UriKind.RelativeOrAbsolute));
+                    }
+                }
+
+                Kernel?.UseXtraNotifications(
+                    defaultImage: defaultImage,
+                    applicationId: "Revit " + ModuleEnvironment.RevitVersion,
+                    defaultAuthor: "dosymep",
+                    defaultFooter: "Revit " + ModuleEnvironment.RevitVersion,
+                    notificationScreen: notificationSettings?.NotificationScreen ?? NotificationScreen.Primary,
+                    notificationPosition: notificationSettings?.NotificationPosition ?? NotificationPosition.BottomRight,
+                    notificationVisibleMaxCount: notificationSettings?.NotificationVisibleMaxCount ?? 5);
+            }
 
             Kernel?.UseXtraOpenFileDialog(
                 initialDirectory: Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
