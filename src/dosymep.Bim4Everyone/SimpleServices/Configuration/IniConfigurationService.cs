@@ -19,7 +19,15 @@ namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
         }
         
         public bool KeyExists(string section, string key) {
-            return Read(section, key).Length > 0;
+            return Read(section, key)?.Length > 0;
+        }
+
+        public int ReadInt(string section, string key) {
+            if(int.TryParse(Read(section, key), out int result)) {
+                return result;
+            }
+
+            return default;
         }
 
         public bool ReadBool(string section, string key) {
