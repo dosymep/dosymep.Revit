@@ -35,11 +35,13 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         public static void LoadInstance(UIApplication uiApplication) {
             Instance?.Dispose();
             Instance = new StandardKernel();
-            Instance.Load(new XtraServicesModule(),
+            Instance.Load(
+                new RevitServicesModule(uiApplication),
+                new ConfigurationServicesModule(),
+                new XtraServicesModule(),
                 new SerilogServicesModule(),
                 new ConfigurationServicesModule(),
-                new JsonSerializationServicesModule(),
-                new RevitServicesModule(uiApplication));
+                new JsonSerializationServicesModule());
 
             GetPlatformService<ILocalizationService>()
                 .SetLocalization(GetPlatformService<ILanguageService>().HostLanguage);
