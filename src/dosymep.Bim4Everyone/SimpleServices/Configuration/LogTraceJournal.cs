@@ -15,7 +15,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
         /// <summary>
         /// Признак активности журналирования.
         /// </summary>
-        public bool IsActive => _configurationService.ReadBool("log_trace.journal", "active");
+        public bool? IsActive => _configurationService.ReadBool("log_trace.journal", "active");
         
         /// <summary>
         /// Уровень логгирования.
@@ -25,7 +25,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
         /// <summary>
         /// Использовать время UTC.
         /// </summary>
-        public bool UseUtc => _configurationService.ReadBool("log_trace.journal", "utc");
+        public bool? UseUtc => _configurationService.ReadBool("log_trace.journal", "utc");
 
         /// <summary>
         /// Формат вывода событий.

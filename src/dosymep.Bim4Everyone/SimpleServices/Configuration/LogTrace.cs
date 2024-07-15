@@ -14,7 +14,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
         /// <summary>
         /// Признак активности.
         /// </summary>
-        public bool IsActive => _configurationService.ReadBool("log_trace", "active");
+        public bool? IsActive => _configurationService.ReadBool("log_trace", "active");
         
         /// <summary>
         /// Уровень логгирования.

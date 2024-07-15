@@ -30,12 +30,12 @@ namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
             return default;
         }
 
-        public bool ReadBool(string section, string key) {
+        public bool? ReadBool(string section, string key) {
             if(bool.TryParse(Read(section, key), out bool result)) {
                 return result;
             }
 
-            return false;
+            return default;
         }
 
         public TEnum ReadEnum<TEnum>(string section, string key) where TEnum : struct {

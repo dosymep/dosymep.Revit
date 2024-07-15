@@ -47,7 +47,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
                 context.Kernel.Get<IPlatformConfigurationService>();
             
             LogTrace logTrace = configurationService.LogTrace;
-            if(logTrace.IsActive && !string.IsNullOrEmpty(logTrace.ServerName)) {
+            if(logTrace.IsActive == true && !string.IsNullOrEmpty(logTrace.ServerName)) {
                 loggerConfiguration.WriteTo.Bim4Everyone(logTrace.ServerName, logTrace.LogLevel);
             }
 

@@ -14,7 +14,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
         /// <summary>
         /// Признак активности уведомлений.
         /// </summary>
-        public bool IsActive {
+        public bool? IsActive {
             get => _configurationService.ReadBool("notification", "active");
             set => _configurationService.Write("notification", "active", value.ToString());
         }
