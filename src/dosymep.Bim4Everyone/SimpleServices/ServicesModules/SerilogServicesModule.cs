@@ -42,8 +42,11 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
                 .Enrich.WithRevitDocumentModelPath(uiApplication)
                 .WriteTo.RevitJournal(uiApplication, true)
                 .MinimumLevel.Verbose();
+
+            IPlatformConfigurationService configurationService = 
+                context.Kernel.Get<IPlatformConfigurationService>();
             
-            var logTrace = context.Kernel.Get<LogTrace>();
+            LogTrace logTrace = configurationService.LogTrace;
             if(logTrace.IsActive && !string.IsNullOrEmpty(logTrace.ServerName)) {
                 loggerConfiguration.WriteTo.Bim4Everyone(logTrace.ServerName, logTrace.LogLevel);
             }

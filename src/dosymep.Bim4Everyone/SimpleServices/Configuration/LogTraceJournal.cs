@@ -2,18 +2,34 @@
 using Serilog.Events;
 
 namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
-    internal class LogTraceJournal {
+    /// <summary>
+    /// Настройки журналирования в ревит.
+    /// </summary>
+    public class LogTraceJournal {
         private readonly IniConfigurationService _configurationService;
 
-        public LogTraceJournal(IniConfigurationService configurationService) {
+        internal LogTraceJournal(IniConfigurationService configurationService) {
             _configurationService = configurationService;
         }
 
+        /// <summary>
+        /// Признак активности журналирования.
+        /// </summary>
         public bool IsActive => _configurationService.ReadBool("log_trace.journal", "active");
+        
+        /// <summary>
+        /// Уровень логгирования.
+        /// </summary>
         public LogEventLevel LogLevel => _configurationService.ReadEnum<LogEventLevel>("log_trace", "level");
 
+        /// <summary>
+        /// Использовать время UTC.
+        /// </summary>
         public bool UseUtc => _configurationService.ReadBool("log_trace.journal", "utc");
 
+        /// <summary>
+        /// Формат вывода событий.
+        /// </summary>
         public string OutputTemplate => _configurationService.Read("log_trace.journal", "output_template")
                                 ?? AutodeskRevitSinkLoggerConfigurationExtensions.DefaultOutputTemplate;
     }
