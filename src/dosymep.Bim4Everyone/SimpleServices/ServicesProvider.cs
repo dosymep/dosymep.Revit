@@ -40,7 +40,6 @@ namespace dosymep.Bim4Everyone.SimpleServices {
                 new ConfigurationServicesModule(),
                 new XtraServicesModule(),
                 new SerilogServicesModule(),
-                new ConfigurationServicesModule(),
                 new JsonSerializationServicesModule());
 
             GetPlatformService<ILocalizationService>()

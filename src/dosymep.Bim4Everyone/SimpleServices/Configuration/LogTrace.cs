@@ -19,7 +19,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
         /// <summary>
         /// Уровень логгирования.
         /// </summary>
-        public LogEventLevel LogLevel => _configurationService.ReadEnum<LogEventLevel>("log_trace", "level");
+        public LogEventLevel? LogLevel => _configurationService.ReadEnum<LogEventLevel>("log_trace", "level");
         
         /// <summary>
         /// Наименование сервера телеметрии.

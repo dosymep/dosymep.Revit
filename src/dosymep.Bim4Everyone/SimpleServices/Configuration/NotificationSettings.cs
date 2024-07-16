@@ -22,23 +22,23 @@ namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
         /// <summary>
         /// Экран уведомлений.
         /// </summary>
-        public NotificationScreen NotificationScreen {
+        public NotificationScreen? NotificationScreen {
             get => _configurationService.ReadEnum<NotificationScreen>("notification", "screen");
             set => _configurationService.Write("notification", "screen", value.ToString());
         }
-        
+
         /// <summary>
         /// Позиция уведомлений.
         /// </summary>
-        public NotificationPosition NotificationPosition {
+        public NotificationPosition? NotificationPosition {
             get => _configurationService.ReadEnum<NotificationPosition>("notification", "position");
             set => _configurationService.Write("notification", "position", value.ToString());
         }
-        
+
         /// <summary>
         /// Максимальное количество уведомлений на экране.
         /// </summary>
-        public int NotificationVisibleMaxCount{
+        public int? NotificationVisibleMaxCount {
             get => _configurationService.ReadInt("notification", "max_visible");
             set => _configurationService.Write("notification", "max_visible", value.ToString());
         }

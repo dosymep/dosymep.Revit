@@ -22,31 +22,31 @@ namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
             return Read(section, key)?.Length > 0;
         }
 
-        public int ReadInt(string section, string key) {
+        public int? ReadInt(string section, string key, int? @default = default) {
             if(int.TryParse(Read(section, key), out int result)) {
                 return result;
             }
 
-            return default;
+            return @default;
         }
 
-        public bool? ReadBool(string section, string key) {
+        public bool? ReadBool(string section, string key, bool? @default = default) {
             if(bool.TryParse(Read(section, key), out bool result)) {
                 return result;
             }
 
-            return default;
+            return @default;
         }
 
-        public TEnum ReadEnum<TEnum>(string section, string key) where TEnum : struct {
+        public TEnum? ReadEnum<TEnum>(string section, string key, TEnum? @default = default) where TEnum : struct {
             if(Enum.TryParse(Read(section, key), out TEnum result)) {
                 return result;
             }
 
-            return default;
+            return @default;
         }
 
-        public string Read(string section, string key) {
+        public string Read(string section, string key, string @default = default) {
             var retVal = new StringBuilder(255);
             GetPrivateProfileString(section, key, string.Empty, retVal, 255, _iniPath);
             return string.IsNullOrEmpty(retVal.ToString()) ? null : retVal.ToString();
