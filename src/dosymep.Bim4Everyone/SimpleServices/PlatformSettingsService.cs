@@ -1,10 +1,10 @@
 using dosymep.Bim4Everyone.SimpleServices.Configuration;
 
 namespace dosymep.Bim4Everyone.SimpleServices {
-    internal sealed class PlatformConfigurationService : IPlatformConfigurationService {
+    internal sealed class PlatformSettingsService : IPlatformSettingsService {
         private readonly IniConfigurationService _configurationService;
 
-        public PlatformConfigurationService(IniConfigurationService configurationService) {
+        public PlatformSettingsService(IniConfigurationService configurationService) {
             _configurationService = configurationService;
         }
 

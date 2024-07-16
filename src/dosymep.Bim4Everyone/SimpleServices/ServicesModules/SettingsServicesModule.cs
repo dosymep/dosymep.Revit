@@ -3,10 +3,10 @@
 using Ninject.Modules;
 
 namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
-    internal class ConfigurationServicesModule : NinjectModule {
+    internal class SettingsServicesModule : NinjectModule {
         public override void Load() {
-            Bind<IPlatformConfigurationService>()
-                .To<PlatformConfigurationService>();
+            Bind<IPlatformSettingsService>()
+                .To<PlatformSettingsService>();
 
             Bind<IniConfigurationService>().ToSelf()
                 .WithConstructorArgument("iniPath", ModuleEnvironment.CurrentConfigPath);

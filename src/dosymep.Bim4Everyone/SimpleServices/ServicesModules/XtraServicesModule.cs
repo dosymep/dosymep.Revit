@@ -35,10 +35,10 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             Kernel?.UseXtraThemeUpdater();
             Kernel?.UseXtraProgressDialog();
 
-            IPlatformConfigurationService configurationService = Kernel?.Get<IPlatformConfigurationService>();
+            IPlatformSettingsService settingsService = Kernel?.Get<IPlatformSettingsService>();
             
-            CorpSettings corpSettings = configurationService?.CorpSettings;
-            NotificationSettings notificationSettings = configurationService?.NotificationSettings;
+            CorpSettings corpSettings = settingsService?.CorpSettings;
+            NotificationSettings notificationSettings = settingsService?.NotificationSettings;
 
             if(notificationSettings?.IsActive == false) {
                 Bind<INotificationService>().To<NullNotificationService>();

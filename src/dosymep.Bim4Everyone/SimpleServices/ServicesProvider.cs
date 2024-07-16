@@ -37,7 +37,7 @@ namespace dosymep.Bim4Everyone.SimpleServices {
             Instance = new StandardKernel();
             Instance.Load(
                 new RevitServicesModule(uiApplication),
-                new ConfigurationServicesModule(),
+                new SettingsServicesModule(),
                 new XtraServicesModule(),
                 new SerilogServicesModule(),
                 new JsonSerializationServicesModule());

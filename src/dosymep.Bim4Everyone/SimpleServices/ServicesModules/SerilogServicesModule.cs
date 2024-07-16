@@ -43,10 +43,10 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
                 .WriteTo.RevitJournal(uiApplication, true)
                 .MinimumLevel.Verbose();
 
-            IPlatformConfigurationService configurationService = 
-                context.Kernel.Get<IPlatformConfigurationService>();
+            IPlatformSettingsService settingsService = 
+                context.Kernel.Get<IPlatformSettingsService>();
             
-            LogTrace logTrace = configurationService.LogTrace;
+            LogTrace logTrace = settingsService.LogTrace;
             if(logTrace.IsActive == true && !string.IsNullOrEmpty(logTrace.ServerName)) {
                 loggerConfiguration.WriteTo.Bim4Everyone(logTrace.ServerName, logTrace.LogLevel ?? LogEventLevel.Debug);
             }
