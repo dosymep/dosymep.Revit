@@ -47,7 +47,8 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
                     new Uri("/dosymep.Bim4Everyone;component/assets/Bim4Everyone.png", UriKind.Relative));
 
                 if(!string.IsNullOrEmpty(corpSettings?.ImagePath)) {
-                    if(File.Exists(corpSettings.ImagePath)) {
+                    if(File.Exists(corpSettings.ImagePath)
+                        || Uri.TryCreate(corpSettings.ImagePath, UriKind.Absolute, out Uri _)) {
                         defaultImage = new BitmapImage(new Uri(corpSettings.ImagePath, UriKind.RelativeOrAbsolute));
                     }
                 }
