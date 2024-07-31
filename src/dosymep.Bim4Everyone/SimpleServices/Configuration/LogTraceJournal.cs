@@ -15,22 +15,27 @@ namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
         /// <summary>
         /// Признак активности журналирования.
         /// </summary>
-        public bool? IsActive => _configurationService.ReadBool("log_trace.journal", "active");
-        
+        public bool? IsActive => _configurationService.ReadBool("log_trace.journal", "active", true);
+
         /// <summary>
         /// Уровень логгирования.
         /// </summary>
-        public LogEventLevel? LogLevel => _configurationService.ReadEnum<LogEventLevel>("log_trace", "level");
+        public LogEventLevel? LogLevel => _configurationService.ReadEnum<LogEventLevel>(
+            "log_trace.journal", 
+            "level",
+            LogEventLevel.Information);
 
         /// <summary>
         /// Использовать время UTC.
         /// </summary>
-        public bool? UseUtc => _configurationService.ReadBool("log_trace.journal", "utc");
+        public bool? UseUtc => _configurationService.ReadBool("log_trace.journal", "utc", true);
 
         /// <summary>
         /// Формат вывода событий.
         /// </summary>
-        public string OutputTemplate => _configurationService.Read("log_trace.journal", "output_template")
-                                ?? AutodeskRevitSinkLoggerConfigurationExtensions.DefaultOutputTemplate;
+        public string OutputTemplate => _configurationService.Read(
+            "log_trace.journal", 
+            "output_template",
+            AutodeskRevitSinkLoggerConfigurationExtensions.DefaultOutputTemplate);
     }
 }

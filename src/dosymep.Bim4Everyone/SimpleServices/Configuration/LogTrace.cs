@@ -14,13 +14,16 @@ namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
         /// <summary>
         /// Признак активности.
         /// </summary>
-        public bool? IsActive => _configurationService.ReadBool("log_trace", "active");
-        
+        public bool? IsActive => _configurationService.ReadBool("log_trace", "active", true);
+
         /// <summary>
         /// Уровень логгирования.
         /// </summary>
-        public LogEventLevel? LogLevel => _configurationService.ReadEnum<LogEventLevel>("log_trace", "level");
-        
+        public LogEventLevel? LogLevel => _configurationService.ReadEnum<LogEventLevel>(
+            "log_trace",
+            "level",
+            LogEventLevel.Information);
+
         /// <summary>
         /// Наименование сервера телеметрии.
         /// </summary>
