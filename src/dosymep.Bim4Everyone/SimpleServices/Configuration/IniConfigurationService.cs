@@ -49,7 +49,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.Configuration {
         public string Read(string section, string key, string @default = default) {
             var retVal = new StringBuilder(255);
             GetPrivateProfileString(section, key, string.Empty, retVal, 255, _iniPath);
-            return string.IsNullOrEmpty(retVal.ToString()) ? null : retVal.ToString();
+            return string.IsNullOrEmpty(retVal.ToString()) ? @default : retVal.ToString();
         }
 
         public void Write(string section, string key, string value) {
