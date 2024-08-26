@@ -409,6 +409,587 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 Name = "ФОП_ВИС_Сокращение для системы", UnitType = SharedParam.GetUnitType(nameof(VISSystemShortName)), StorageType = StorageType.String
             };
 
+        /// <summary>
+        /// ФОП_ВИС_Живое сечение, м2
+        /// </summary>
+        public SharedParam VISCrossSection
+            => new SharedParam(nameof(VISCrossSection), new Guid("c57b0650-d5cc-4d2b-9b62-12ee6734ce93")) {
+                Name = "ФОП_ВИС_Живое сечение, м2",
+                UnitType = SharedParam.GetUnitType(nameof(VISCrossSection)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_КМС
+        /// </summary>
+        public SharedParam VISLocalResistanceCoef
+            => new SharedParam(nameof(VISLocalResistanceCoef), new Guid("7439de5b-9486-464e-9a40-851782cc923c")) {
+                Name = "ФОП_ВИС_КМС",
+                UnitType = SharedParam.GetUnitType(nameof(VISLocalResistanceCoef)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Экономическая функция
+        /// </summary>
+        public SharedParam VISEconomicFunction
+            => new SharedParam(nameof(VISEconomicFunction), new Guid("23772cae-9eaa-4f96-99ba-b65a7f44f8cf")) {
+                Name = "ФОП_ВИС_КМС",
+                UnitType = SharedParam.GetUnitType(nameof(VISEconomicFunction)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_ЭФ для системы
+        /// </summary>
+        public SharedParam VISHvacSystemFunction
+            => new SharedParam(nameof(VISHvacSystemFunction), new Guid("e83cce16-974a-4356-a6f8-7a1cafa3a232")) {
+                Name = "ФОП_ВИС_ЭФ для системы",
+                UnitType = SharedParam.GetUnitType(nameof(VISHvacSystemFunction)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Имя системы
+        /// </summary>
+        public SharedParam VISSystemName
+            => new SharedParam(nameof(VISSystemName), new Guid("56edfca3-7f93-4fee-b82b-363bc2c1b8d9")) {
+                Name = "ФОП_ВИС_Имя системы",
+                UnitType = SharedParam.GetUnitType(nameof(VISSystemName)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Имя системы принудительное
+        /// </summary>
+        public SharedParam VISSystemNameForced
+            => new SharedParam(nameof(VISSystemNameForced), new Guid("5f90a621-46e0-4964-95e0-a40ac5c066fe")) {
+                Name = "ФОП_ВИС_Имя системы принудительное",
+                UnitType = SharedParam.GetUnitType(nameof(VISSystemNameForced)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Код изделия
+        /// </summary>
+        public SharedParam VISItemCode
+            => new SharedParam(nameof(VISItemCode), new Guid("637311d8-d4ec-4996-ad7d-94b64ff8e80f")) {
+                Name = "ФОП_ВИС_Код изделия",
+                UnitType = SharedParam.GetUnitType(nameof(VISItemCode)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Завод-изготовитель
+        /// </summary>
+        public SharedParam VISManufacturer
+            => new SharedParam(nameof(VISManufacturer), new Guid("2b4c380c-fb24-4dd4-b238-9a81380ee678")) {
+                Name = "ФОП_ВИС_Завод-изготовитель",
+                UnitType = SharedParam.GetUnitType(nameof(VISManufacturer)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Группирование принудительное
+        /// </summary>
+        public SharedParam VISGroupingForced
+            => new SharedParam(nameof(VISGroupingForced), new Guid("d8f8a985-fd21-474c-95b7-fa776a8b3bd6")) {
+                Name = "ФОП_ВИС_Группирование принудительное",
+                UnitType = SharedParam.GetUnitType(nameof(VISGroupingForced)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Наименование принудительное
+        /// </summary>
+        public SharedParam VISNameForced
+            => new SharedParam(nameof(VISNameForced), new Guid("c8f6a5b0-718b-4482-8c5d-8359e487cf59")) {
+                Name = "ФОП_ВИС_Наименование принудительное",
+                UnitType = SharedParam.GetUnitType(nameof(VISNameForced)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Дополнение к имени
+        /// </summary>
+        public SharedParam VISNameAddition
+            => new SharedParam(nameof(VISNameAddition), new Guid("56f6e7aa-cffc-4595-bb22-7559d7d52284")) {
+                Name = "ФОП_ВИС_Дополнение к имени",
+                UnitType = SharedParam.GetUnitType(nameof(VISNameAddition)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Отметка оси от нуля
+        /// </summary>
+        public SharedParam VISMarkAxisToZero
+            => new SharedParam(nameof(VISMarkAxisToZero), new Guid("a1674535-4757-4178-8cd4-eb1aa3ed08d9")) {
+                Name = "ФОП_ВИС_Отметка оси от нуля",
+                UnitType = SharedParam.GetUnitType(nameof(VISMarkAxisToZero)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Отметка низа от нуля
+        /// </summary>
+        public SharedParam VISMarkBottomToZero
+            => new SharedParam(nameof(VISMarkBottomToZero), new Guid("0a5a0183-6210-4909-a7d9-75efd616cd39")) {
+                Name = "ФОП_ВИС_Отметка низа от нуля",
+                UnitType = SharedParam.GetUnitType(nameof(VISMarkBottomToZero)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Позиция
+        /// </summary>
+        public SharedParam VISPosition
+            => new SharedParam(nameof(VISPosition), new Guid("3f809907-b64c-4a8d-be5e-06709ee28386")) {
+                Name = "ФОП_ВИС_Позиция",
+                UnitType = SharedParam.GetUnitType(nameof(VISPosition)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Марка
+        /// </summary>
+        public SharedParam VISMarkNumber
+            => new SharedParam(nameof(VISMarkNumber), new Guid("c4b7716a-64db-4a8f-ae8d-aecaff39e162")) {
+                Name = "ФОП_ВИС_Марка",
+                UnitType = SharedParam.GetUnitType(nameof(VISMarkNumber)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Примечание
+        /// </summary>
+        public SharedParam VISNote
+            => new SharedParam(nameof(VISNote), new Guid("9c36f220-4c81-4900-a604-4abc394ca95b")) {
+                Name = "ФОП_ВИС_Примечание",
+                UnitType = SharedParam.GetUnitType(nameof(VISNote)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Индивидуальный запас
+        /// </summary>
+        public SharedParam VISIndividualStock
+            => new SharedParam(nameof(VISIndividualStock), new Guid("9ff26b45-f894-4c78-a6e2-5808d77f2222")) {
+                Name = "ФОП_ВИС_Индивидуальный запас",
+                UnitType = SharedParam.GetUnitType(nameof(VISIndividualStock)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Максимальная толщина воздуховода
+        /// </summary>
+        public SharedParam VISMaxDuctThickness
+            => new SharedParam(nameof(VISMaxDuctThickness), new Guid("79dc7595-bcde-4bb4-a9b7-95417c7f5a8b")) {
+                Name = "ФОП_ВИС_Максимальная толщина воздуховода",
+                UnitType = SharedParam.GetUnitType(nameof(VISMaxDuctThickness)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Узел
+        /// </summary>
+        public SharedParam VISJunction
+            => new SharedParam(nameof(VISJunction), new Guid("c39ded76-eb20-4a21-abf3-6db36aca369b")) {
+                Name = "ФОП_ВИС_Узел",
+                UnitType = SharedParam.GetUnitType(nameof(VISJunction)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Исключить из узла
+        /// </summary>
+        public SharedParam VISExcludeFromJunction
+            => new SharedParam(nameof(VISExcludeFromJunction), new Guid("ebecee67-fdfc-4c3f-a102-714d9bdc44ed")) {
+                Name = "ФОП_ВИС_Исключить из узла",
+                UnitType = SharedParam.GetUnitType(nameof(VISExcludeFromJunction)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Ду
+        /// </summary>
+        public SharedParam VISDiameterNominal
+            => new SharedParam(nameof(VISDiameterNominal), new Guid("1ac7f9f7-fdd7-40fb-9a9c-1d704bedca90")) {
+                Name = "ФОП_ВИС_Ду",
+                UnitType = SharedParam.GetUnitType(nameof(VISDiameterNominal)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Ду х Стенка
+        /// </summary>
+        public SharedParam VISDiameterNominalXThikness
+            => new SharedParam(nameof(VISDiameterNominalXThikness), new Guid("049dde32-c903-4736-b1bc-5d9b4e51ffc5")) {
+                Name = "ФОП_ВИС_Ду х Стенка",
+                UnitType = SharedParam.GetUnitType(nameof(VISDiameterNominalXThikness)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Днар х Стенка
+        /// </summary>
+        public SharedParam VISDiameterExternalXThikness
+            => new SharedParam(nameof(VISDiameterExternalXThikness), new Guid("e3939e06-3185-48bc-b920-cb05c6b70d69")) {
+                Name = "ФОП_ВИС_Ду",
+                UnitType = SharedParam.GetUnitType(nameof(VISDiameterExternalXThikness)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Имя трубы из сегмента
+        /// </summary>
+        public SharedParam VISIsPipeNameFromSegment
+            => new SharedParam(nameof(VISIsPipeNameFromSegment), new Guid("e84ed706-336f-4c35-b9c4-3ed44ff71cbb")) {
+                Name = "ФОП_ВИС_Имя трубы из сегмента",
+                UnitType = SharedParam.GetUnitType(nameof(VISIsPipeNameFromSegment)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Расчет краски и грунтовки
+        /// </summary>
+        public SharedParam VISIsPaintCalculation
+            => new SharedParam(nameof(VISIsPaintCalculation), new Guid("afdbc978-78fe-4824-a0f7-ad629dd42d1f")) {
+                Name = "ФОП_ВИС_Расчет краски и грунтовки",
+                UnitType = SharedParam.GetUnitType(nameof(VISIsPaintCalculation)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Расчет хомутов
+        /// </summary>
+        public SharedParam VISIsClampsCalculation
+            => new SharedParam(nameof(VISIsClampsCalculation), new Guid("9ee7f02e-1f56-4bf8-ae36-6e5d63aee44c")) {
+                Name = "ФОП_ВИС_Расчет хомутов",
+                UnitType = SharedParam.GetUnitType(nameof(VISIsClampsCalculation)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Расчет металла для креплений
+        /// </summary>
+        public SharedParam VISIsFasteningMetalCalculation
+            => new SharedParam(nameof(VISIsFasteningMetalCalculation), new Guid("e4cdcf39-3a2a-41b9-8050-3ceb82cb95e9")) {
+                Name = "ФОП_ВИС_Расчет металла для креплений",
+                UnitType = SharedParam.GetUnitType(nameof(VISIsFasteningMetalCalculation)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Учитывать фитинги труб по типу трубы
+        /// </summary>
+        public SharedParam VISConsiderPipeFittingsByType
+            => new SharedParam(nameof(VISConsiderPipeFittingsByType), new Guid("b09cf837-fea0-4cbc-a58c-57fed7e8fcce")) {
+                Name = "ФОП_ВИС_Учитывать фитинги труб по типу трубы",
+                UnitType = SharedParam.GetUnitType(nameof(VISConsiderPipeFittingsByType)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Учитывать фитинги воздуховодов
+        /// </summary>
+        public SharedParam VISConsiderDuctFittings
+            => new SharedParam(nameof(VISConsiderDuctFittings), new Guid("eb14322a-187b-4188-8b86-2c3e495d4758")) {
+                Name = "ФОП_ВИС_Учитывать фитинги воздуховодов",
+                UnitType = SharedParam.GetUnitType(nameof(VISConsiderDuctFittings)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Учитывать фитинги труб
+        /// </summary>
+        public SharedParam VISConsiderPipeFittings
+            => new SharedParam(nameof(VISConsiderPipeFittings), new Guid("a586535e-0af7-4cd6-b70e-4f04938f9d44")) {
+                Name = "ФОП_ВИС_Учитывать фитинги труб",
+                UnitType = SharedParam.GetUnitType(nameof(VISConsiderPipeFittings)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Запас изоляции
+        /// </summary>
+        public SharedParam VISInsulationReserve
+            => new SharedParam(nameof(VISInsulationReserve), new Guid("9c8bbeba-f50b-42b2-9160-9e66b66cf065")) {
+                Name = "ФОП_ВИС_Запас изоляции",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationReserve)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Запас изоляции воздуховодов
+        /// </summary>
+        public SharedParam VISDuctInsulationReserve
+            => new SharedParam(nameof(VISDuctInsulationReserve), new Guid("bb0bf4d1-4874-4102-afb4-e8cda9e06009")) {
+                Name = "ФОП_ВИС_Запас изоляции воздуховодов",
+                UnitType = SharedParam.GetUnitType(nameof(VISDuctInsulationReserve)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Запас изоляции труб
+        /// </summary>
+        public SharedParam VISPipeInsulationReserve
+            => new SharedParam(nameof(VISPipeInsulationReserve), new Guid("cacdb0b3-3e22-44ea-a3c3-8e6de06bc10f")) {
+                Name = "ФОП_ВИС_Запас изоляции труб",
+                UnitType = SharedParam.GetUnitType(nameof(VISPipeInsulationReserve)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Запас воздуховодов/труб
+        /// </summary>
+        public SharedParam VISPipeDuctReserve
+            => new SharedParam(nameof(VISPipeDuctReserve), new Guid("871f822a-047b-4f76-9cf0-9d9796b4e984")) {
+                Name = "ФОП_ВИС_Запас воздуховодов/труб",
+                UnitType = SharedParam.GetUnitType(nameof(VISPipeDuctReserve)),
+                StorageType = StorageType.Double
+            };
+
+
+        /// <summary>
+        /// ФОП_ВИС_Замена параметра_Единица измерения
+        /// </summary>
+        public SharedParam VISParamReplacementUnit
+            => new SharedParam(nameof(VISParamReplacementUnit), new Guid("c418500a-4f16-493b-b26d-abd2f313eb7b")) {
+                Name = "ФОП_ВИС_Замена параметра_Единица измерения",
+                UnitType = SharedParam.GetUnitType(nameof(VISParamReplacementUnit)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Замена параметра_Завод-изготовитель
+        /// </summary>
+        public SharedParam VISParamReplacementManufacturer
+            => new SharedParam(nameof(VISParamReplacementManufacturer), new Guid("e4262902-9261-4bf4-99af-09ab749a9d46")) {
+                Name = "ФОП_ВИС_Замена параметра_Завод-изготовитель",
+                UnitType = SharedParam.GetUnitType(nameof(VISParamReplacementManufacturer)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Замена параметра_Код изделия
+        /// </summary>
+        public SharedParam VISParamReplacementItemCode
+            => new SharedParam(nameof(VISParamReplacementItemCode), new Guid("e70a0caa-9a9e-437b-b60f-e15e09f1d99a")) {
+                Name = "ФОП_ВИС_Замена параметра_Код изделия",
+                UnitType = SharedParam.GetUnitType(nameof(VISParamReplacementItemCode)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Замена параметра_Марка
+        /// </summary>
+        public SharedParam VISParamReplacementMarkNumber
+            => new SharedParam(nameof(VISParamReplacementMarkNumber), new Guid("a79cc2b7-021e-4102-a71b-1d2c685b7d53")) {
+                Name = "ФОП_ВИС_Замена параметра_Марка",
+                UnitType = SharedParam.GetUnitType(nameof(VISParamReplacementMarkNumber)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Замена параметра_Наименование
+        /// </summary>
+        public SharedParam VISParamReplacementName
+            => new SharedParam(nameof(VISParamReplacementName), new Guid("9ff51aa4-40d9-43db-9697-2348cda6bc4d")) {
+                Name = "ФОП_ВИС_Замена параметра_Наименование",
+                UnitType = SharedParam.GetUnitType(nameof(VISParamReplacementName)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 1_Наименование
+        /// </summary>
+        public SharedParam VISInsulationConsumable1Name
+            => new SharedParam(nameof(VISInsulationConsumable1Name), new Guid("2691c56f-e6c0-4a36-817b-8482ec64763c")) {
+                Name = "ФОП_ВИС_Изол_Расходник 1_Наименование",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable1Name)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 1_Марка
+        /// </summary>
+        public SharedParam VISInsulationConsumable1MarkNumber
+            => new SharedParam(nameof(VISInsulationConsumable1MarkNumber), new Guid("a6bbaacf-95d0-458a-8df9-b83605588331")) {
+                Name = "ФОП_ВИС_Изол_Расходник 1_Марка",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable1MarkNumber)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 1_Изготовитель
+        /// </summary>
+        public SharedParam VISInsulationConsumable1Manufacturer
+            => new SharedParam(nameof(VISInsulationConsumable1Manufacturer), new Guid("91341b01-0c21-4815-8499-492cdd8c94b3")) {
+                Name = "ФОП_ВИС_Изол_Расходник 1_Изготовитель",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable1Manufacturer)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 1_Ед. изм.
+        /// </summary>
+        public SharedParam VISInsulationConsumable1Unit
+            => new SharedParam(nameof(VISInsulationConsumable1Unit), new Guid("67b6f08b-a2a1-4513-be40-1cfbdc736130")) {
+                Name = "ФОП_ВИС_Изол_Расходник 1_Ед. изм.",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable1Unit)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 1_Расход на м2
+        /// </summary>
+        public SharedParam VISInsulationConsumable1ConsumptionPerSqM
+            => new SharedParam(nameof(VISInsulationConsumable1ConsumptionPerSqM), new Guid("02aecec0-1508-40e4-8aa6-f94b87c1b61e")) {
+                Name = "ФОП_ВИС_Изол_Расходник 1_Расход на м2",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable1ConsumptionPerSqM)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 1_Расход по м.п.
+        /// </summary>
+        public SharedParam VISInsulationConsumable1ConsumptionPerMetr
+            => new SharedParam(nameof(VISInsulationConsumable1ConsumptionPerMetr), new Guid("d2e92911-441f-4fea-b96e-783c29e71772")) {
+                Name = "ФОП_ВИС_Изол_Расходник 1_Расход по м.п.",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable1ConsumptionPerMetr)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 2_Наименование
+        /// </summary>
+        public SharedParam VISInsulationConsumable2Name
+            => new SharedParam(nameof(VISInsulationConsumable2Name), new Guid("ea6b08ae-f3cf-480b-a6fb-2e534135218f")) {
+                Name = "ФОП_ВИС_Изол_Расходник 2_Наименование",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable2Name)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 2_Марка
+        /// </summary>
+        public SharedParam VISInsulationConsumable2MarkNumber
+            => new SharedParam(nameof(VISInsulationConsumable2MarkNumber), new Guid("5e33608b-e63d-4f01-9f7b-9840341240f0")) {
+                Name = "ФОП_ВИС_Изол_Расходник 2_Марка",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable2MarkNumber)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 2_Изготовитель
+        /// </summary>
+        public SharedParam VISInsulationConsumable2Manufacturer
+            => new SharedParam(nameof(VISInsulationConsumable2Manufacturer), new Guid("de09a7d6-18ae-4dfc-addc-dcfb7f60e466")) {
+                Name = "ФОП_ВИС_Изол_Расходник 2_Изготовитель",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable2Manufacturer)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 2_Ед. изм.
+        /// </summary>
+        public SharedParam VISInsulationConsumable2Unit
+            => new SharedParam(nameof(VISInsulationConsumable2Unit), new Guid("484618a7-433f-463d-be6d-070da59a46f8")) {
+                Name = "ФОП_ВИС_Изол_Расходник 2_Ед. изм.",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable2Unit)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 2_Расход на м2
+        /// </summary>
+        public SharedParam VISInsulationConsumable2ConsumptionPerSqM
+            => new SharedParam(nameof(VISInsulationConsumable2ConsumptionPerSqM), new Guid("fcc08f24-fc00-46dd-a5dc-fb770d6d1b81")) {
+                Name = "ФОП_ВИС_Изол_Расходник 2_Расход на м2",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable2ConsumptionPerSqM)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 2_Расход по м.п.
+        /// </summary>
+        public SharedParam VISInsulationConsumable2ConsumptionPerMetr
+            => new SharedParam(nameof(VISInsulationConsumable2ConsumptionPerMetr), new Guid("4acb1680-baa5-4668-87a5-1387300416e5")) {
+                Name = "ФОП_ВИС_Изол_Расходник 2_Расход по м.п.",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable2ConsumptionPerMetr)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 3_Наименование
+        /// </summary>
+        public SharedParam VISInsulationConsumable3Name
+            => new SharedParam(nameof(VISInsulationConsumable3Name), new Guid("665fb0bb-f896-4fe6-bd94-bf2fd06eaef9")) {
+                Name = "ФОП_ВИС_Изол_Расходник 3_Наименование",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable3Name)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 3_Марка
+        /// </summary>
+        public SharedParam VISInsulationConsumable3MarkNumber
+            => new SharedParam(nameof(VISInsulationConsumable3MarkNumber), new Guid("0c50fbd5-4388-43f4-919e-03dc32ac48f0")) {
+                Name = "ФОП_ВИС_Изол_Расходник 3_Марка",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable3MarkNumber)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 3_Изготовитель
+        /// </summary>
+        public SharedParam VISInsulationConsumable3Manufacturer
+            => new SharedParam(nameof(VISInsulationConsumable3Manufacturer), new Guid("34443524-f178-497a-8dac-b8b68a762b8e")) {
+                Name = "ФОП_ВИС_Изол_Расходник 3_Изготовитель",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable3Manufacturer)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 3_Ед. изм.
+        /// </summary>
+        public SharedParam VISInsulationConsumable3Unit
+            => new SharedParam(nameof(VISInsulationConsumable3Unit), new Guid("86e6da57-fd7b-4ab2-92f2-d8f61061ee3a")) {
+                Name = "ФОП_ВИС_Изол_Расходник 3_Ед. изм.",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable3Unit)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 3_Расход на м2
+        /// </summary>
+        public SharedParam VISInsulationConsumable3ConsumptionPerSqM
+            => new SharedParam(nameof(VISInsulationConsumable3ConsumptionPerSqM), new Guid("8f516f37-d5b6-4ca9-8437-9957073a760b")) {
+                Name = "ФОП_ВИС_Изол_Расходник 3_Расход на м2",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable3ConsumptionPerSqM)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Изол_Расходник 3_Расход по м.п.
+        /// </summary>
+        public SharedParam VISInsulationConsumable3ConsumptionPerMetr
+            => new SharedParam(nameof(VISInsulationConsumable3ConsumptionPerMetr), new Guid("488e75dc-91c9-49d8-81cc-81170875c1b5")) {
+                Name = "ФОП_ВИС_Изол_Расходник 3_Расход по м.п.",
+                UnitType = SharedParam.GetUnitType(nameof(VISInsulationConsumable3ConsumptionPerMetr)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
+        /// ФОП_Экономическая функция
+        /// </summary>
+        public SharedParam EconomicFunction
+            => new SharedParam(nameof(EconomicFunction), new Guid("75686bc4-a44c-43c1-bf5a-344f044e2a73")) {
+                Name = "ФОП_Экономическая функция",
+                UnitType = SharedParam.GetUnitType(nameof(EconomicFunction)),
+                StorageType = StorageType.String
+            };
+
 #if REVIT2022_OR_GREATER
         /// <summary>
         /// ФОП_ОТД_Полы Тип 1
