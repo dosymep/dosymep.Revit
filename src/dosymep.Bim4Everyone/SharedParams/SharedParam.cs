@@ -632,7 +632,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.VISUnit):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISMass):
-                    return SpecTypeId.Number;
+                    return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISMinDuctThickness):
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.VISCombinedName):
@@ -662,7 +662,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.BuildingWorksLevel):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.FixBuildingWorks):
-                    return SpecTypeId.Number;
+                    return SpecTypeId.Boolean.YesNo;
                 case nameof(SharedParamsConfig.FixComment):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISOutSystemName):

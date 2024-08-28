@@ -362,8 +362,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// ФОП_ВИС_Масса
         /// </summary>
         public SharedParam VISMass
-            => new SharedParam(nameof(VISMass), new Guid("4a62a841-b2d0-4c94-aca8-c907f1adcc88")) {
-                Name = "ФОП_ВИС_Масса", UnitType = SharedParam.GetUnitType(nameof(VISMass)), StorageType = StorageType.Double
+            => new SharedParam(nameof(VISMass), new Guid("8aa9bea3-2478-49d4-a47b-75af34dbdad8")) {
+                Name = "ФОП_ВИС_Масса", UnitType = SharedParam.GetUnitType(nameof(VISMass)), StorageType = StorageType.String
             };
 
         /// <summary>
