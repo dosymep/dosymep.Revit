@@ -434,7 +434,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         public SharedParam VISEconomicFunction
             => new SharedParam(nameof(VISEconomicFunction), new Guid("23772cae-9eaa-4f96-99ba-b65a7f44f8cf")) {
-                Name = "ФОП_ВИС_КМС",
+                Name = "ФОП_ВИС_Экономическая функция",
                 UnitType = SharedParam.GetUnitType(nameof(VISEconomicFunction)),
                 StorageType = StorageType.String
             };
@@ -634,7 +634,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         public SharedParam VISDiameterExternalXThikness
             => new SharedParam(nameof(VISDiameterExternalXThikness), new Guid("e3939e06-3185-48bc-b920-cb05c6b70d69")) {
-                Name = "ФОП_ВИС_Ду",
+                Name = "ФОП_ВИС_Днар х Стенка",
                 UnitType = SharedParam.GetUnitType(nameof(VISDiameterExternalXThikness)),
                 StorageType = StorageType.Integer
             };
