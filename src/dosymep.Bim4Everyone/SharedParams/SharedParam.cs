@@ -225,6 +225,122 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.VISSystemShortName):
                     return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISCrossSection):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISLocalResistanceCoef):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISEconomicFunction):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISHvacSystemFunction):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISSystemName):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISSystemNameForced):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISItemCode):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISManufacturer):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISGroupingForced):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISNameForced):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISNameAddition):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISMarkAxisToZero):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISMarkBottomToZero):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISPosition):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISMarkNumber):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISNote):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISIndividualStock):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISMaxDuctThickness):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISJunction):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISExcludeFromJunction):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISDiameterNominal):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISDiameterNominalXThikness):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISDiameterExternalXThikness):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISIsPipeNameFromSegment):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISIsPaintCalculation):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISIsClampsCalculation):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISIsFasteningMetalCalculation):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISConsiderPipeFittingsByType):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISConsiderDuctFittings):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISConsiderPipeFittings):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationReserve):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISDuctInsulationReserve):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISPipeInsulationReserve):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISPipeDuctReserve):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISParamReplacementUnit):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISParamReplacementManufacturer):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISParamReplacementItemCode):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISParamReplacementMarkNumber):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISParamReplacementName):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1Name):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1MarkNumber):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1Manufacturer):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1Unit):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1ConsumptionPerSqM):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1ConsumptionPerMetr):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2Name):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2MarkNumber):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2Manufacturer):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2Unit):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2ConsumptionPerSqM):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2ConsumptionPerMetr):
+                    return UnitType.UT_Number;                
+                case nameof(SharedParamsConfig.VISInsulationConsumable3Name):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3MarkNumber):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3Manufacturer):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3Unit):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3ConsumptionPerSqM):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3ConsumptionPerMetr):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.EconomicFunction):
+                    return UnitType.UT_Number;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
@@ -331,6 +447,122 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.VISSystemShortName):
                     return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISCrossSection):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISLocalResistanceCoef):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISEconomicFunction):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISHvacSystemFunction):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISSystemName):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISSystemNameForced):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISItemCode):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISManufacturer):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISGroupingForced):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISNameForced):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISNameAddition):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISMarkAxisToZero):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISMarkBottomToZero):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISPosition):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISMarkNumber):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISNote):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISIndividualStock):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISMaxDuctThickness):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISJunction):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISExcludeFromJunction):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISDiameterNominal):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISDiameterNominalXThikness):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISDiameterExternalXThikness):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISIsPipeNameFromSegment):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISIsPaintCalculation):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISIsClampsCalculation):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISIsFasteningMetalCalculation):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISConsiderPipeFittingsByType):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISConsiderDuctFittings):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISConsiderPipeFittings):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationReserve):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISDuctInsulationReserve):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISPipeInsulationReserve):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISPipeDuctReserve):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISParamReplacementUnit):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISParamReplacementManufacturer):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISParamReplacementItemCode):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISParamReplacementMarkNumber):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISParamReplacementName):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1Name):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1MarkNumber):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1Manufacturer):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1Unit):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1ConsumptionPerSqM):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1ConsumptionPerMetr):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2Name):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2MarkNumber):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2Manufacturer):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2Unit):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2ConsumptionPerSqM):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2ConsumptionPerMetr):
+                    return SpecTypeId.Number;                
+                case nameof(SharedParamsConfig.VISInsulationConsumable3Name):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3MarkNumber):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3Manufacturer):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3Unit):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3ConsumptionPerSqM):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3ConsumptionPerMetr):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.EconomicFunction):
+                    return SpecTypeId.Number;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
@@ -384,7 +616,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.RoomSectionShortName):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.RoomBuildingShortName):
-                return SpecTypeId.String.Text;
+                    return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.RoomTypeGroupShortName):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.RoomMultilevelGroup):
@@ -400,7 +632,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.VISUnit):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISMass):
-                    return SpecTypeId.Number;
+                    return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISMinDuctThickness):
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.VISCombinedName):
@@ -430,7 +662,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.BuildingWorksLevel):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.FixBuildingWorks):
-                    return SpecTypeId.Number;
+                    return SpecTypeId.Boolean.YesNo;
                 case nameof(SharedParamsConfig.FixComment):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISOutSystemName):
@@ -493,6 +725,122 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.Area;
                 case nameof(SharedParamsConfig.SizeVolume):
                     return SpecTypeId.Volume;
+                case nameof(SharedParamsConfig.VISCrossSection):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISLocalResistanceCoef):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISEconomicFunction):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISHvacSystemFunction):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISSystemName):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISSystemNameForced):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISItemCode):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISManufacturer):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISGroupingForced):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISNameForced):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISNameAddition):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISMarkAxisToZero):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISMarkBottomToZero):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISPosition):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISMarkNumber):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISNote):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISIndividualStock):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISMaxDuctThickness):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISJunction):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISExcludeFromJunction):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISDiameterNominal):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISDiameterNominalXThikness):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISDiameterExternalXThikness):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISIsPipeNameFromSegment):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISIsPaintCalculation):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISIsClampsCalculation):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISIsFasteningMetalCalculation):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISConsiderPipeFittingsByType):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISConsiderDuctFittings):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISConsiderPipeFittings):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISInsulationReserve):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISDuctInsulationReserve):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISPipeInsulationReserve):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISPipeDuctReserve):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISParamReplacementUnit):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISParamReplacementManufacturer):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISParamReplacementItemCode):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISParamReplacementMarkNumber):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISParamReplacementName):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1Name):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1MarkNumber):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1Manufacturer):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1Unit):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1ConsumptionPerSqM):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable1ConsumptionPerMetr):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2Name):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2MarkNumber):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2Manufacturer):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2Unit):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2ConsumptionPerSqM):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable2ConsumptionPerMetr):
+                    return SpecTypeId.Boolean.YesNo;                
+                case nameof(SharedParamsConfig.VISInsulationConsumable3Name):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3MarkNumber):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3Manufacturer):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3Unit):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3ConsumptionPerSqM):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISInsulationConsumable3ConsumptionPerMetr):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.EconomicFunction):
+                    return SpecTypeId.String.Text;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
