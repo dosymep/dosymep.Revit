@@ -388,6 +388,72 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Configuration.CorpSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Configuration.CorpSettings.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTraceJournal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTraceJournal.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Configuration.NotificationSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Configuration.NotificationSettings.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Configuration.SocialsSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Configuration.SocialsSettings.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Configuration.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
       "output": {
         ".html": {
@@ -414,6 +480,17 @@
       "output": {
         ".html": {
           "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IPlatformSettingsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IPlatformSettingsService.html"
         }
       },
       "version": "2020",
@@ -1425,6 +1502,72 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.CorpSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.CorpSettings.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTraceJournal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTraceJournal.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.NotificationSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.NotificationSettings.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.SocialsSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.SocialsSettings.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
       "output": {
         ".html": {
@@ -1451,6 +1594,17 @@
       "output": {
         ".html": {
           "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IPlatformSettingsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IPlatformSettingsService.html"
         }
       },
       "version": "2021",
@@ -2473,6 +2627,72 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Configuration.CorpSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Configuration.CorpSettings.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTraceJournal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTraceJournal.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Configuration.NotificationSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Configuration.NotificationSettings.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Configuration.SocialsSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Configuration.SocialsSettings.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Configuration.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
       "output": {
         ".html": {
@@ -2499,6 +2719,17 @@
       "output": {
         ".html": {
           "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IPlatformSettingsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IPlatformSettingsService.html"
         }
       },
       "version": "2022",
@@ -3521,6 +3752,72 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Configuration.CorpSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Configuration.CorpSettings.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTraceJournal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTraceJournal.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Configuration.NotificationSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Configuration.NotificationSettings.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Configuration.SocialsSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Configuration.SocialsSettings.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Configuration.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
       "output": {
         ".html": {
@@ -3547,6 +3844,17 @@
       "output": {
         ".html": {
           "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IPlatformSettingsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IPlatformSettingsService.html"
         }
       },
       "version": "2023",
@@ -4569,6 +4877,72 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Configuration.CorpSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Configuration.CorpSettings.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTraceJournal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTraceJournal.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Configuration.NotificationSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Configuration.NotificationSettings.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Configuration.SocialsSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Configuration.SocialsSettings.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Configuration.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
       "output": {
         ".html": {
@@ -4595,6 +4969,17 @@
       "output": {
         ".html": {
           "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IPlatformCommandsService.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IPlatformSettingsService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IPlatformSettingsService.html"
         }
       },
       "version": "2024",
