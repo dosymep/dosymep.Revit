@@ -841,6 +841,10 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.Boolean.YesNo;
                 case nameof(SharedParamsConfig.EconomicFunction):
                     return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.BuildingNumber):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.ConstructionWorksNumber):
+                    return SpecTypeId.String.Text;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));

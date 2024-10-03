@@ -1270,6 +1270,26 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 UnitType = SharedParam.GetUnitType(nameof(SizeVolume)),
                 StorageType = StorageType.Double
             };
+
+        /// <summary>
+        /// ФОП_ПМЩ_Номер здания
+        /// </summary>
+        public SharedParam BuildingNumber
+            => new SharedParam(nameof(BuildingNumber), new Guid("22b6b0fc-80fe-4a60-8136-18e619927126")) {
+                Name = "ФОП_ПМЩ_Номер здания",
+                UnitType = SharedParam.GetUnitType(nameof(BuildingNumber)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ПМЩ_Номер ОКС
+        /// </summary>
+        public SharedParam ConstructionWorksNumber
+            => new SharedParam(nameof(ConstructionWorksNumber), new Guid("2564126d-dd7e-4c35-8d04-12b40679ab45")) {
+                Name = "ФОП_ПМЩ_Номер ОКС",
+                UnitType = SharedParam.GetUnitType(nameof(ConstructionWorksNumber)),
+                StorageType = StorageType.String
+            };
 #endif
 
         /// <inheritdoc />
