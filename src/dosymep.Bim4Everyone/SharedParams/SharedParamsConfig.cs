@@ -385,6 +385,16 @@ namespace dosymep.Bim4Everyone.SharedParams {
             };
 
         /// <summary>
+        /// ФОП_ВИС_Число ДЕ
+        /// </summary>
+        public SharedParam VISSpecNumbersCurrency
+            => new SharedParam(nameof(VISSpecNumbersCurrency), new Guid("c3c6bfd8-fcc3-449a-9112-e45198fc8037")) {
+                Name = "ФОП_ВИС_Число ДЕ",
+                UnitType = SharedParam.GetUnitType(nameof(VISSpecNumbersCurrency)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
         /// ФОП_ВИС_Единица измерения
         /// </summary>
         public SharedParam VISUnit
@@ -446,6 +456,16 @@ namespace dosymep.Bim4Everyone.SharedParams {
             => new SharedParam(nameof(VISHvacSystemFunction), new Guid("e83cce16-974a-4356-a6f8-7a1cafa3a232")) {
                 Name = "ФОП_ВИС_ЭФ для системы",
                 UnitType = SharedParam.GetUnitType(nameof(VISHvacSystemFunction)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_ЭФ принудительная
+        /// </summary>
+        public SharedParam VISHvacSystemForcedFunction
+            => new SharedParam(nameof(VISHvacSystemForcedFunction), new Guid("96302de2-fb03-48da-bbd0-db6d9fb9a79d")) {
+                Name = "ФОП_ВИС_ЭФ принудительная",
+                UnitType = SharedParam.GetUnitType(nameof(VISHvacSystemForcedFunction)),
                 StorageType = StorageType.String
             };
 

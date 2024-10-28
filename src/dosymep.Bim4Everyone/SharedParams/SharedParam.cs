@@ -195,6 +195,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.VISSpecNumbers):
                     return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISSpecNumbersCurrency):
+                    return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.ApartmentAreaFix):
                     return UnitType.UT_Area;
                 case nameof(SharedParamsConfig.ApartmentAreaNoBalconyFix):
@@ -232,6 +234,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.VISEconomicFunction):
                     return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.VISHvacSystemFunction):
+                    return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.VISHvacSystemForcedFunction):
                     return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.VISSystemName):
                     return UnitType.UT_Number;
@@ -417,6 +421,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.VISSpecNumbers):
                     return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISSpecNumbersCurrency):
+                    return SpecTypeId.Currency;
                 case nameof(SharedParamsConfig.ApartmentAreaFix):
                     return SpecTypeId.Area;
                 case nameof(SharedParamsConfig.ApartmentAreaNoBalconyFix):
@@ -454,6 +460,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.VISEconomicFunction):
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.VISHvacSystemFunction):
+                    return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISHvacSystemForcedFunction):
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.VISSystemName):
                     return SpecTypeId.Number;
@@ -639,6 +647,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISSpecNumbers):
                     return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.VISSpecNumbersCurrency):
+                    return SpecTypeId.Currency;
                 case nameof(SharedParamsConfig.ApartmentAreaFix):
                     return SpecTypeId.Area;
                 case nameof(SharedParamsConfig.ApartmentAreaNoBalconyFix):
@@ -732,6 +742,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.VISEconomicFunction):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISHvacSystemFunction):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISHvacSystemForcedFunction):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISSystemName):
                     return SpecTypeId.String.Text;
