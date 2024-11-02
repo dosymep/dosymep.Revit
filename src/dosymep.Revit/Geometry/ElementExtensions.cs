@@ -41,7 +41,7 @@ namespace dosymep.Revit.Geometry {
         /// в координатах документа этого элемента относительно начала проекта.
         /// </summary>
         /// <param name="element">Элемент у которого берутся <see cref="Solid"/>.</param>
-        /// <param name="options">Настройки получения <see cref="Solid"/> из <see cref="Autodesk.Revit.DB.Element"/></param>
+        /// <param name="options">Настройки получения <see cref="Solid"/> из <see cref="Autodesk.Revit.DB.Element"/>.</param>
         /// <returns>Возвращает все <see cref="Solid"/> объекты из <see cref="Autodesk.Revit.DB.Element"/>.</returns>
         /// <exception cref="System.ArgumentNullException">Исключение, если один из обязательных параметров null.</exception>
         public static IEnumerable<Solid> GetSolids(this Element element, Options options) {
