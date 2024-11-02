@@ -2840,6 +2840,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType2
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType2
   nameWithType: SharedParamsConfig.BaseboardFinishingType2
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingNumber
+  name: BuildingNumber
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingNumber
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingNumber
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingNumber
+  nameWithType: SharedParamsConfig.BuildingNumber
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingNumber*
+  name: BuildingNumber
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingNumber_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingNumber
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingNumber
+  nameWithType: SharedParamsConfig.BuildingNumber
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksBlock
   name: BuildingWorksBlock
   href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksBlock
@@ -2924,6 +2936,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType2
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType2
   nameWithType: SharedParamsConfig.CeilingFinishingType2
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ConstructionWorksNumber
+  name: ConstructionWorksNumber
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_ConstructionWorksNumber
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ConstructionWorksNumber
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ConstructionWorksNumber
+  nameWithType: SharedParamsConfig.ConstructionWorksNumber
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ConstructionWorksNumber*
+  name: ConstructionWorksNumber
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_ConstructionWorksNumber_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ConstructionWorksNumber
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ConstructionWorksNumber
+  nameWithType: SharedParamsConfig.ConstructionWorksNumber
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CreateRevitParam(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ParameterElement)
   name: CreateRevitParam(Document, ParameterElement)
   href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_CreateRevitParam_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_ParameterElement_
@@ -3533,6 +3557,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISGroupingForced
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISGroupingForced
   nameWithType: SharedParamsConfig.VISGroupingForced
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemForcedFunction
+  name: VISHvacSystemForcedFunction
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISHvacSystemForcedFunction
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemForcedFunction
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemForcedFunction
+  nameWithType: SharedParamsConfig.VISHvacSystemForcedFunction
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemForcedFunction*
+  name: VISHvacSystemForcedFunction
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISHvacSystemForcedFunction_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemForcedFunction
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemForcedFunction
+  nameWithType: SharedParamsConfig.VISHvacSystemForcedFunction
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemFunction
   name: VISHvacSystemFunction
   href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISHvacSystemFunction
@@ -4109,6 +4145,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbers
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbers
   nameWithType: SharedParamsConfig.VISSpecNumbers
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbersCurrency
+  name: VISSpecNumbersCurrency
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSpecNumbersCurrency
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbersCurrency
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbersCurrency
+  nameWithType: SharedParamsConfig.VISSpecNumbersCurrency
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbersCurrency*
+  name: VISSpecNumbersCurrency
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSpecNumbersCurrency_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbersCurrency
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbersCurrency
+  nameWithType: SharedParamsConfig.VISSpecNumbersCurrency
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSystemName
   name: VISSystemName
   href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSystemName
@@ -7652,6 +7700,12 @@ references:
   commentId: M:dosymep.Revit.Geometry.ElementExtensions.GetSolids(Autodesk.Revit.DB.Element)
   fullName: dosymep.Revit.Geometry.ElementExtensions.GetSolids(Autodesk.Revit.DB.Element)
   nameWithType: ElementExtensions.GetSolids(Element)
+- uid: dosymep.Revit.Geometry.ElementExtensions.GetSolids(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Options)
+  name: GetSolids(Element, Options)
+  href: api/2023/dosymep.Revit.Geometry.ElementExtensions.html#dosymep_Revit_Geometry_ElementExtensions_GetSolids_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_Options_
+  commentId: M:dosymep.Revit.Geometry.ElementExtensions.GetSolids(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Options)
+  fullName: dosymep.Revit.Geometry.ElementExtensions.GetSolids(Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Options)
+  nameWithType: ElementExtensions.GetSolids(Element, Options)
 - uid: dosymep.Revit.Geometry.ElementExtensions.GetSolids*
   name: GetSolids
   href: api/2023/dosymep.Revit.Geometry.ElementExtensions.html#dosymep_Revit_Geometry_ElementExtensions_GetSolids_

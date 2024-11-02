@@ -160,7 +160,11 @@ Class ElementExtensions  <a class="header-action link-secondary" title="View sou
   <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/Geometry/ElementExtensions.cs"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Возвращает все <span class="xref">Autodesk.Revit.DB.Solid</span> объекты из <span class="xref">Autodesk.Revit.DB.Element</span>.</p>
+  <div class="markdown level1 summary"><p>Возвращает все <span class="xref">Autodesk.Revit.DB.Solid</span> объекты из <span class="xref">Autodesk.Revit.DB.Element</span> с <span class="xref">Autodesk.Revit.DB.Options</span> по умолчанию<br>
+в координатах документа этого элемента относительно начала проекта.<br>
+Настройки <span class="xref">Autodesk.Revit.DB.Options</span> по умолчанию:<br><pre><code class="lang-csharp">ComputeReferences = true
+IncludeNonVisibleObjects = false
+DetailLevel = ViewDetailLevel.Fine.</code></pre>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -189,6 +193,61 @@ Class ElementExtensions  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Исключение, если один из обязательных параметров null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="dosymep_Revit_Geometry_ElementExtensions_GetSolids_" data-uid="dosymep.Revit.Geometry.ElementExtensions.GetSolids*"></a>
+
+  <h3 id="dosymep_Revit_Geometry_ElementExtensions_GetSolids_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_Options_" data-uid="dosymep.Revit.Geometry.ElementExtensions.GetSolids(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Options)">
+  GetSolids(Element, Options)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/dosymep/dosymep.Revit/blob/master/src/dosymep.Revit/Geometry/ElementExtensions.cs"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Возвращает все <span class="xref">Autodesk.Revit.DB.Solid</span> объекты из <span class="xref">Autodesk.Revit.DB.Element</span> с заданными <span class="xref">Autodesk.Revit.DB.Options</span><br>
+в координатах документа этого элемента относительно начала проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Solid&gt; GetSolids(this Element element, Options options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент у которого берутся <span class="xref">Autodesk.Revit.DB.Solid</span>.</p>
+</dd>
+    <dt><code>options</code> <span class="xref">Options</span></dt>
+    <dd><p>Настройки получения <span class="xref">Autodesk.Revit.DB.Solid</span> из <span class="xref">Autodesk.Revit.DB.Element</span>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">Solid</span>&gt;</dt>
+    <dd><p>Возвращает все <span class="xref">Autodesk.Revit.DB.Solid</span> объекты из <span class="xref">Autodesk.Revit.DB.Element</span>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Исключение, если один из обязательных параметров null.</p>
+</dd>
+  </dl>
 
 
 

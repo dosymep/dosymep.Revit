@@ -3413,6 +3413,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISGroupingForced
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISGroupingForced
   nameWithType: SharedParamsConfig.VISGroupingForced
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemForcedFunction
+  name: VISHvacSystemForcedFunction
+  href: api/2021/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISHvacSystemForcedFunction
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemForcedFunction
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemForcedFunction
+  nameWithType: SharedParamsConfig.VISHvacSystemForcedFunction
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemForcedFunction*
+  name: VISHvacSystemForcedFunction
+  href: api/2021/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISHvacSystemForcedFunction_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemForcedFunction
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemForcedFunction
+  nameWithType: SharedParamsConfig.VISHvacSystemForcedFunction
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISHvacSystemFunction
   name: VISHvacSystemFunction
   href: api/2021/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISHvacSystemFunction
@@ -3989,6 +4001,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbers
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbers
   nameWithType: SharedParamsConfig.VISSpecNumbers
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbersCurrency
+  name: VISSpecNumbersCurrency
+  href: api/2021/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSpecNumbersCurrency
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbersCurrency
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbersCurrency
+  nameWithType: SharedParamsConfig.VISSpecNumbersCurrency
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbersCurrency*
+  name: VISSpecNumbersCurrency
+  href: api/2021/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSpecNumbersCurrency_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbersCurrency
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbersCurrency
+  nameWithType: SharedParamsConfig.VISSpecNumbersCurrency
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSystemName
   name: VISSystemName
   href: api/2021/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSystemName
@@ -7262,6 +7286,12 @@ references:
   commentId: M:dosymep.Revit.Geometry.ElementExtensions.GetSolids(Autodesk.Revit.DB.Element)
   fullName: dosymep.Revit.Geometry.ElementExtensions.GetSolids(Autodesk.Revit.DB.Element)
   nameWithType: ElementExtensions.GetSolids(Element)
+- uid: dosymep.Revit.Geometry.ElementExtensions.GetSolids(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Options)
+  name: GetSolids(Element, Options)
+  href: api/2021/dosymep.Revit.Geometry.ElementExtensions.html#dosymep_Revit_Geometry_ElementExtensions_GetSolids_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_Options_
+  commentId: M:dosymep.Revit.Geometry.ElementExtensions.GetSolids(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Options)
+  fullName: dosymep.Revit.Geometry.ElementExtensions.GetSolids(Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Options)
+  nameWithType: ElementExtensions.GetSolids(Element, Options)
 - uid: dosymep.Revit.Geometry.ElementExtensions.GetSolids*
   name: GetSolids
   href: api/2021/dosymep.Revit.Geometry.ElementExtensions.html#dosymep_Revit_Geometry_ElementExtensions_GetSolids_
