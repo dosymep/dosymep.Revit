@@ -15,7 +15,7 @@ namespace dosymep.Revit {
     /// </summary>
     public static class ElementExtensions {
         #region Получение параметра по его имени
-        
+
         /// <summary>
         /// Проверяет на существование параметра в элементе.
         /// </summary>
@@ -32,13 +32,12 @@ namespace dosymep.Revit {
             }
 
             try {
-                element.GetParam(paramName);
-                return true;
+                return element.TryGetParam(paramName, out _);
             } catch {
                 return false;
             }
         }
-        
+
         /// <summary>
         /// Проверяет на существование значение параметра в элементе.
         /// </summary>
@@ -56,7 +55,7 @@ namespace dosymep.Revit {
 
             return element.GetParamValueOrDefault(paramName) != default;
         }
-        
+
         /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.
         /// </summary>
@@ -239,8 +238,8 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            var param = element.LookupParameter(paramName);
-            if(param is null) {
+            bool isExists = TryGetParam(element, paramName, out Parameter param);
+            if(!isExists) {
                 throw new ArgumentException($"Параметра с заданным именем \"{paramName}\" у элемента не существует.", nameof(paramName));
             }
 
@@ -250,7 +249,7 @@ namespace dosymep.Revit {
         #endregion
 
         #region Получение общего параметра по его имени
-        
+
         /// <summary>
         /// Проверяет на существование общего параметра в элементе.
         /// </summary>
@@ -267,8 +266,7 @@ namespace dosymep.Revit {
             }
 
             try {
-                element.GetSharedParam(paramName);
-                return true;
+                return element.TryGetSharedParam(paramName, out _);
             } catch {
                 return false;
             }
@@ -466,14 +464,14 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            Parameter param = element.GetParameters(paramName).FirstOrDefault(item => item.IsShared);
-            if(param is null) {
+            bool isExists = element.TryGetSharedParam(paramName, out Parameter param);
+            if(!isExists) {
                 throw new ArgumentException($"Общего параметра с заданным именем \"{paramName}\" у элемента не существует.", nameof(paramName));
             }
 
             return param;
         }
-        
+
         /// <summary>
         /// Возвращает общий параметр.
         /// </summary>
@@ -485,8 +483,8 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            Parameter param = element.get_Parameter(paramGuid);
-            if(param is null) {
+            bool isExists = element.TryGetSharedParam(paramGuid, out Parameter param);
+            if(!isExists) {
                 throw new ArgumentException($"Общего параметра с заданным Guid \"{paramGuid}\" у элемента не существует.", nameof(paramGuid));
             }
 
@@ -494,7 +492,7 @@ namespace dosymep.Revit {
         }
 
         #endregion
-        
+
         #region Получение параметра проекта по его имени
 
         /// <summary>
@@ -513,8 +511,7 @@ namespace dosymep.Revit {
             }
 
             try {
-                element.GetProjectParam(paramName);
-                return true;
+                return element.TryGetProjectParam(paramName, out _);
             } catch {
                 return false;
             }
@@ -720,8 +717,8 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            Parameter param = element.GetParameters(paramName).FirstOrDefault(item => !item.IsShared);
-            if(param is null) {
+            bool isExists = element.TryGetProjectParam(paramName, out Parameter param);
+            if(!isExists) {
                 throw new ArgumentException($"Параметра с заданным именем \"{paramName}\" у элемента не существует.", nameof(paramName));
             }
 
@@ -729,9 +726,9 @@ namespace dosymep.Revit {
         }
 
         #endregion
-        
+
         #region Получение параметра по BuiltInParameter
-        
+
         /// <summary>
         /// Проверяет на существование параметра в элементе.
         /// </summary>
@@ -744,8 +741,7 @@ namespace dosymep.Revit {
             }
 
             try {
-                element.GetParam(builtInParameter);
-                return true;
+                return element.TryGetParam(builtInParameter, out _);
             } catch {
                 return false;
             }
@@ -764,7 +760,7 @@ namespace dosymep.Revit {
 
             return element.GetParamValueOrDefault(builtInParameter) != default;
         }
-        
+
         /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.
         /// </summary>
@@ -803,7 +799,7 @@ namespace dosymep.Revit {
                 return @default;
             }
         }
-        
+
         /// <summary>
         /// Возвращает значение параметра элемента.
         /// </summary>
@@ -915,8 +911,8 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            var param = element.get_Parameter(builtInParameter);
-            if(param is null) {
+            bool isExists = element.TryGetParam(builtInParameter, out Parameter param);
+            if(!isExists) {
                 throw new ArgumentException($"Параметра с заданным именем \"{builtInParameter}\" у элемента не существует.", nameof(builtInParameter));
             }
 
@@ -945,13 +941,12 @@ namespace dosymep.Revit {
             }
 
             try {
-                element.GetParam(forgeTypeId);
-                return true;
+                return element.TryGetParam(forgeTypeId, out _);
             } catch {
                 return false;
             }
         }
-        
+
         /// <summary>
         /// Проверяет на существование значения параметра в элементе.
         /// </summary>
@@ -969,7 +964,7 @@ namespace dosymep.Revit {
 
             return element.GetParamValueOrDefault(forgeTypeId) != default;
         }
-        
+
         /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.
         /// </summary>
@@ -993,7 +988,7 @@ namespace dosymep.Revit {
                 return @default;
             }
         }
-        
+
         /// <summary>
         /// Возвращает значение параметра либо значение по умолчанию.
         /// </summary>
@@ -1012,7 +1007,7 @@ namespace dosymep.Revit {
                 return @default;
             }
         }
-        
+
         /// <summary>
         /// Возвращает значение параметра элемента.
         /// </summary>
@@ -1113,8 +1108,8 @@ namespace dosymep.Revit {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            var param = element.GetParameter(forgeTypeId);
-            if(param is null) {
+            bool isExists = element.TryGetParam(forgeTypeId, out Parameter param);
+            if(!isExists) {
                 throw new ArgumentException($"Параметра с заданным именем \"{forgeTypeId}\" у элемента не существует.", nameof(forgeTypeId));
             }
 
@@ -1165,7 +1160,7 @@ namespace dosymep.Revit {
 
             return element.GetTypeId().IsNotNull();
         }
-        
+
         /// <summary>
         /// Возвращает тип элемента.
         /// </summary>
@@ -1175,7 +1170,7 @@ namespace dosymep.Revit {
             if(element == null) {
                 throw new ArgumentNullException(nameof(element));
             }
-            
+
             if(element.IsElementType()) {
                 throw new ArgumentException("Был передан тип элемента.", nameof(element));
             }
@@ -1186,7 +1181,7 @@ namespace dosymep.Revit {
 
             return (ElementType) element.Document.GetElement(element.GetTypeId());
         }
-        
+
         /// <summary>
         /// Возвращает тип элемента.
         /// </summary>
@@ -1196,7 +1191,7 @@ namespace dosymep.Revit {
             if(element == null) {
                 throw new ArgumentNullException(nameof(element));
             }
-            
+
             if(element.IsElementType()) {
                 throw new ArgumentException("Был передан тип элемента.", nameof(element));
             }
@@ -1260,7 +1255,7 @@ namespace dosymep.Revit {
         public static bool InAnyCategory(this Element element, params BuiltInCategory[] categories) {
             return element.InAnyCategory(categories.AsEnumerable());
         }
-        
+
         /// <summary>
         /// Проверяет принадлежность элемента к переданным категориям.
         /// </summary>
@@ -1271,10 +1266,10 @@ namespace dosymep.Revit {
             return categories.Any(item => element.InAnyCategory(item));
         }
 
-        internal static IEnumerable<BoundingBoxXYZ> GetBoundingBoxes(this IEnumerable<Element> elements, 
+        internal static IEnumerable<BoundingBoxXYZ> GetBoundingBoxes(this IEnumerable<Element> elements,
             View view,
             Dictionary<string, Transform> transforms) {
-            foreach (Element element in elements) {
+            foreach(Element element in elements) {
                 string uniqId = element.Document.GetUniqId();
                 Transform transform = transforms.TryGetValue(uniqId, out Transform trans) ? trans : Transform.Identity;
                 BoundingBoxXYZ bb = element.GetBoundingBox(view);
@@ -1289,5 +1284,81 @@ namespace dosymep.Revit {
             Dictionary<string, Transform> transforms) {
             return elements.GetBoundingBoxes(view, transforms).ToArray().CreateCommonBoundingBox();
         }
+
+        /// <summary>
+        /// Пытается найти параметр у элемента по названию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Название параметра.</param>
+        /// <param name="param">Параметр, если он найден.</param>
+        /// <returns>True, если параметр найден и не равен null, иначе False.</returns>
+        private static bool TryGetParam(this Element element, string paramName, out Parameter param) {
+            param = element.LookupParameter(paramName);
+            return param != null;
+        }
+
+        /// <summary>
+        /// Пытается найти общий параметр у элемента по названию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Название общего параметра.</param>
+        /// <param name="param">Параметр, если он найден.</param>
+        /// <returns>True, если параметр найден и не равен null, иначе False.</returns>
+        private static bool TryGetSharedParam(this Element element, string paramName, out Parameter param) {
+            param = element.GetParameters(paramName).FirstOrDefault(item => item.IsShared);
+            return param != null;
+        }
+
+        /// <summary>
+        /// Пытается найти общий параметр у элемента по Guid.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramGuid">Guid общего параметра.</param>
+        /// <param name="param">Параметр, если он найден.</param>
+        /// <returns>True, если параметр найден и не равен null, иначе False.</returns>
+        private static bool TryGetSharedParam(this Element element, Guid paramGuid, out Parameter param) {
+            param = element.get_Parameter(paramGuid);
+            return param != null;
+        }
+
+        /// <summary>
+        /// Пытается найти параметр проекта у элемента по названию.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Название параметра проекта.</param>
+        /// <param name="param">Параметр, если он найден.</param>
+        /// <returns>True, если параметр найден и не равен null, иначе False.</returns>
+        private static bool TryGetProjectParam(this Element element, string paramName, out Parameter param) {
+            param = element.GetParameters(paramName).FirstOrDefault(item => !item.IsShared);
+            return param != null;
+        }
+
+        /// <summary>
+        /// Пытается найти параметр у элемента по <see cref="BuiltInParameter"/>.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="builtInParameter">Значение <see cref="BuiltInParameter"/> параметра.</param>
+        /// <param name="param">Параметр, если он найден.</param>
+        /// <returns>True, если параметр найден и не равен null, иначе False.</returns>
+        private static bool TryGetParam(this Element element, BuiltInParameter builtInParameter, out Parameter param) {
+            param = element.get_Parameter(builtInParameter);
+            return param != null;
+        }
+
+#if REVIT2022_OR_GREATER
+
+        /// <summary>
+        /// Пытается найти параметр проекта у элемента по <see cref="Autodesk.Revit.DB.ForgeTypeId"/>.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Значение <see cref="Autodesk.Revit.DB.ForgeTypeId"/> параметра.</param>
+        /// <param name="param">Параметр, если он найден.</param>
+        /// <returns>True, если параметр найден и не равен null, иначе False.</returns>
+        private static bool TryGetParam(this Element element, ForgeTypeId forgeTypeId, out Parameter param) {
+            param = element.GetParameter(forgeTypeId);
+            return param != null;
+        }
+
+#endif
     }
 }
