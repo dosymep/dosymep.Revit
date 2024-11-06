@@ -1010,6 +1010,16 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 StorageType = StorageType.String
             };
 
+        /// <summary>
+        /// ФОП_Зеркальность
+        /// </summary>
+        public SharedParam ElementMirroring
+            => new SharedParam(nameof(ElementMirroring), new Guid("ba68fa97-0493-4bb7-80f7-87b377802437")) {
+                Name = "ФОП_Зеркальность",
+                UnitType = SharedParam.GetUnitType(nameof(ElementMirroring)),
+                StorageType = StorageType.Double
+            };
+
 #if REVIT2022_OR_GREATER
         /// <summary>
         /// ФОП_ОТД_Полы Тип 1
@@ -1308,6 +1318,16 @@ namespace dosymep.Bim4Everyone.SharedParams {
             => new SharedParam(nameof(ConstructionWorksNumber), new Guid("2564126d-dd7e-4c35-8d04-12b40679ab45")) {
                 Name = "ФОП_ПМЩ_Номер ОКС",
                 UnitType = SharedParam.GetUnitType(nameof(ConstructionWorksNumber)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_Класс ММ
+        /// </summary>
+        public SharedParam ParkingSpaceClass
+            => new SharedParam(nameof(ParkingSpaceClass), new Guid("f84676b0-e969-45af-8f36-d2a961367afe")) {
+                Name = "ФОП_Класс ММ",
+                UnitType = SharedParam.GetUnitType(nameof(ParkingSpaceClass)),
                 StorageType = StorageType.String
             };
 #endif

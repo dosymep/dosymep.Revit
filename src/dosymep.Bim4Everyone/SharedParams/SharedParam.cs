@@ -196,7 +196,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.VISSpecNumbers):
                     return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.VISSpecNumbersCurrency):
-                    return UnitType.UT_Number;
+                    return UnitType.UT_Currency;
                 case nameof(SharedParamsConfig.ApartmentAreaFix):
                     return UnitType.UT_Area;
                 case nameof(SharedParamsConfig.ApartmentAreaNoBalconyFix):
@@ -345,6 +345,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.EconomicFunction):
                     return UnitType.UT_Number;
+                case nameof(SharedParamsConfig.ElementMirroring):
+                    return UnitType.UT_Currency;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
@@ -571,6 +573,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.EconomicFunction):
                     return SpecTypeId.Number;
+                case nameof(SharedParamsConfig.ElementMirroring):
+                    return SpecTypeId.Currency;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
@@ -856,7 +860,11 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.BuildingNumber):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.ConstructionWorksNumber):
+                    return SpecTypeId.String.Text;                
+                case nameof(SharedParamsConfig.ParkingSpaceClass):
                     return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.ElementMirroring):
+                    return SpecTypeId.Currency;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
