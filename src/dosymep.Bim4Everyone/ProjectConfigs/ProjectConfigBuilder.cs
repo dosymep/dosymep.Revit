@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using dosymep.Revit.ServerClient;
 
 namespace dosymep.Bim4Everyone.ProjectConfigs {
     /// <summary>
@@ -26,11 +20,16 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
         /// Интерфейс сериализатора.
         /// </summary>
         private IConfigSerializer _serializer;
-        
+
         /// <summary>
         /// Версия Revit.
         /// </summary>
         private string _revitVersion;
+
+        /// <summary>
+        /// Путь к файлу конфигурации проекта.
+        /// </summary>
+        private string _projectConfigPath;
 
         /// <summary>
         /// Устанавливает наименование плагина.
@@ -61,7 +60,7 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
             _serializer = serializer;
             return this;
         }
-        
+
         /// <summary>
         /// Устанавливает версию Revit.
         /// </summary>
@@ -69,6 +68,16 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
         /// <returns>Возвращает текущий билдер.</returns>
         public ProjectConfigBuilder SetRevitVersion(string revitVersion) {
             _revitVersion = revitVersion;
+            return this;
+        }
+
+        /// <summary>
+        /// Устанавливает путь к файлу конфигурации проекта для его десериализации.
+        /// </summary>
+        /// <param name="projectConfigPath">Путь к файлу конфигурации проекта.</param>
+        /// <returns>Возвращает текущий билдер.</returns>
+        public ProjectConfigBuilder SetProjectConfigPath(string projectConfigPath) {
+            _projectConfigPath = projectConfigPath;
             return this;
         }
 
@@ -92,14 +101,16 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
                 throw new InvalidOperationException("Перед конструированием объекта, требуется установить наименование файла конфигурации проекта.");
             }
 
-            string projectConfigPath = GetConfigPath(_pluginName, _projectConfigName, _revitVersion);
+            string projectConfigPath = string.IsNullOrWhiteSpace(_projectConfigPath)
+                ? GetConfigPath(_pluginName, _projectConfigName, _revitVersion)
+                : _projectConfigPath;
             if(File.Exists(projectConfigPath)) {
                 string fileContent = File.ReadAllText(projectConfigPath);
-                
+
                 T projectConfig = _serializer.Deserialize<T>(fileContent);
                 projectConfig.Serializer = _serializer;
                 projectConfig.ProjectConfigPath = projectConfigPath;
-                
+
                 return projectConfig;
             }
 
@@ -114,8 +125,8 @@ namespace dosymep.Bim4Everyone.ProjectConfigs {
         /// <param name="revitVersion">Версия Revit.</param>
         /// <returns>Возвращает путь до конфигурации проекта.</returns>
         private static string GetConfigPath(string pluginName, string projectConfigName, string revitVersion) {
-            return string.IsNullOrEmpty(revitVersion) 
-                ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "dosymep", pluginName, projectConfigName) 
+            return string.IsNullOrEmpty(revitVersion)
+                ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "dosymep", pluginName, projectConfigName)
                 : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "dosymep", revitVersion, pluginName, projectConfigName);
         }
     }
