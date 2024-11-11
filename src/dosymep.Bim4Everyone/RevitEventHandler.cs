@@ -119,7 +119,8 @@ namespace dosymep.Bim4Everyone {
         }
 
         /// <summary>
-        /// Заканчивает ожидание завершения асинхронной задачи.
+        /// Заканчивает ожидание завершения асинхронной задачи. 
+        /// Если в процессе выполнения <see cref="TransactAction"/> возникло исключение, оно будет выброшено здесь.
         /// </summary>
         public void GetResult() {
             if(_exception != null) {
