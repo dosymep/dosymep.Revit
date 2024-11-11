@@ -31,6 +31,9 @@ namespace dosymep.Bim4Everyone {
         /// <summary>
         /// Создает экземпляр <see cref="Autodesk.Revit.UI.ExternalEvent"/> с обработчиком в качестве текущего экземпляра <see cref="RevitEventHandler"/>.
         /// </summary>
+        /// <param name="externalEventName">Название обработчика события, используемое Revit в качестве идентификатора.</param>
+        /// <exception cref="System.ArgumentNullException">Исключение, если обязательный параметр null.</exception>
+        /// <exception cref="System.ArgumentException">Исключение, если название обработчика пустая строка или состоит только из пробелов.</exception>
         public RevitEventHandler(string externalEventName) {
             if(externalEventName is null) {
                 throw new ArgumentNullException(nameof(externalEventName));
