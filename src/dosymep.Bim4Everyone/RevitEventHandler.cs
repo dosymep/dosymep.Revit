@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using System.Runtime.ExceptionServices;
 
 using Autodesk.Revit.UI;
 
@@ -16,10 +17,14 @@ namespace dosymep.Bim4Everyone {
     /// 
     /// // Добавьте метод во ViewModel, который будет вызываться из не модального окна на клике кнопки.
     /// private async void DoCommand() {
-    ///     await _handler.SetTransactAction(app => TaskDialog.Show(
-    ///             "Handler sample",
-    ///             $"Selected elements count: {app.ActiveUIDocument.Selection.GetElementIds().Count}"))
-    ///         .Raise();
+    ///     try {
+    ///         await _handler.SetTransactAction(app => TaskDialog.Show(
+    ///                 "Handler sample",
+    ///                 $"Selected elements count: {app.ActiveUIDocument.Selection.GetElementIds().Count}"))
+    ///             .Raise();
+    ///     } catch(Exception ex) {
+    ///         TaskDialog.Show("Error", ex.Message);
+    ///     }
     /// }
     /// </code>
     /// </summary>
@@ -27,6 +32,7 @@ namespace dosymep.Bim4Everyone {
         private readonly ExternalEvent _externalEvent;
         private readonly string _name;
         private Action _continuation;
+        private Exception _exception;
 
         /// <summary>
         /// Создает экземпляр <see cref="Autodesk.Revit.UI.ExternalEvent"/> с обработчиком в качестве текущего экземпляра <see cref="RevitEventHandler"/>.
@@ -73,6 +79,9 @@ namespace dosymep.Bim4Everyone {
         public void Execute(UIApplication app) {
             try {
                 TransactAction?.Invoke(app);
+                _exception = null;
+            } catch(Exception ex) {
+                _exception = ex;
             } finally {
                 IsCompleted = true;
                 _continuation?.Invoke();
@@ -112,6 +121,10 @@ namespace dosymep.Bim4Everyone {
         /// <summary>
         /// Заканчивает ожидание завершения асинхронной задачи.
         /// </summary>
-        public void GetResult() { }
+        public void GetResult() {
+            if(_exception != null) {
+                ExceptionDispatchInfo.Capture(_exception).Throw();
+            }
+        }
     }
 }
