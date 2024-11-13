@@ -4,7 +4,7 @@ using System.Runtime.ExceptionServices;
 
 using Autodesk.Revit.UI;
 
-namespace dosymep.Bim4Everyone {
+namespace dosymep.Revit.Handlers {
     /// <summary>
     /// Класс для регистрации и обработки событий <see cref="Autodesk.Revit.UI.ExternalEvent"/>.
     /// Пример использования для вызова команд из не модальных окон:
