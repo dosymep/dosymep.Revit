@@ -1302,6 +1302,36 @@ namespace dosymep.Bim4Everyone.SharedParams {
             };
 
         /// <summary>
+        /// ФОП_РАЗМ_Длина
+        /// </summary>
+        public SharedParam SizeLength
+            => new SharedParam(nameof(SizeLength), new Guid("6948f304-93e3-4e68-a76b-29e2aacc19ab")) {
+                Name = "ФОП_РАЗМ_Длина",
+                UnitType = SharedParam.GetUnitType(nameof(SizeLength)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_РАЗМ_Ширина
+        /// </summary>
+        public SharedParam SizeWidth
+            => new SharedParam(nameof(SizeWidth), new Guid("5ca11eed-a8b0-490a-8109-af59411e1639")) {
+                Name = "ФОП_РАЗМ_Ширина",
+                UnitType = SharedParam.GetUnitType(nameof(SizeWidth)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_РАЗМ_Высота
+        /// </summary>
+        public SharedParam SizeHeight
+            => new SharedParam(nameof(SizeHeight), new Guid("1aef8494-bbdd-41cd-9f45-40b6bd0e7913")) {
+                Name = "ФОП_РАЗМ_Высота",
+                UnitType = SharedParam.GetUnitType(nameof(SizeHeight)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
         /// ФОП_ПМЩ_Номер здания
         /// </summary>
         public SharedParam BuildingNumber
