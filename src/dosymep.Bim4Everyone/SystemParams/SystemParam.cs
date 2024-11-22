@@ -11,12 +11,18 @@ using Autodesk.Revit.DB;
 using dosymep.Revit;
 
 using pyRevitLabs.Json;
+using pyRevitLabs.Json.Linq;
 
 namespace dosymep.Bim4Everyone.SystemParams {
     /// <summary>
     /// Класс системного параметра.
     /// </summary>
     public class SystemParam : RevitParam {
+        /// <summary>
+        /// Идентификатор типа сериализатора.
+        /// </summary>
+        private static readonly Guid _typeId = new Guid("222CC682-ED41-4C85-80D8-544EC73A1884");
+        
         /// <summary>
         /// Конструктор класса системного параметра.
         /// </summary>
@@ -30,12 +36,36 @@ namespace dosymep.Bim4Everyone.SystemParams {
         internal static BuiltInParameter GetSystemParamId(string paramId) {
             return (BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), paramId);
         }
+        
+        /// <summary>
+        /// Проверяет тип объекта.
+        /// </summary>
+        /// <param name="token">Токен</param>
+        /// <returns>Возвращает true - если токен является нужным типом.</returns>
+        internal static bool CheckType(JToken token) {
+            return token.Value<Guid>("type_id") == _typeId;
+        }
 
+        /// <summary>
+        /// Метод сохранения параметра в json
+        /// </summary>
+        /// <param name="token">Токен</param>
+        internal static RevitParam ReadFromJson(JToken token) {
+            return RevitParam.ReadFromJson(token, new SystemParam(token.Value<string>("id")));
+        }
+
+
+        /// <inheritdoc />
+        protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) {
+            writer.WritePropertyName("type_id");
+            writer.WriteValue(_typeId);
+        }
+        
         /// <summary>
         /// Системное наименование параметра.
         /// </summary>
         [JsonIgnore]
-        public BuiltInParameter SystemParamId { get; }
+        public BuiltInParameter SystemParamId { get; private set; }
 
 
         /// <summary>

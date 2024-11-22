@@ -9,6 +9,7 @@ using Autodesk.Revit.DB;
 using dosymep.Revit;
 
 using pyRevitLabs.Json;
+using pyRevitLabs.Json.Linq;
 
 namespace dosymep.Bim4Everyone {
     /// <summary>
@@ -48,7 +49,6 @@ namespace dosymep.Bim4Everyone {
         public virtual StorageType StorageType { get; set; }
 
 #if REVIT2020
-
         /// <summary>
         /// Тип измерения параметра.
         /// </summary>
@@ -126,6 +126,55 @@ namespace dosymep.Bim4Everyone {
         public RevitParam AsRevitParam() {
             return this;
         }
+
+        #region Serialization
+
+        internal static T ReadFromJson<T>(JToken token, T revitParam) where T : RevitParam {
+            revitParam.Name = token.Value<string>("name");
+            revitParam.Description = token.Value<string>("description");
+            revitParam.StorageType = token.Value<StorageType>("storage_type");
+
+#if REVIT2020
+            revitParam.UnitType = token.Value<UnitType>("unit_type");
+#else
+            revitParam.UnitType = token.Value<ForgeTypeId>("unit_type");
+#endif
+
+            return revitParam;
+        }
+
+        /// <summary>
+        /// Метод сохранения параметра в json
+        /// </summary>
+        /// <param name="writer">Writer</param>
+        /// <param name="serializer">Serializer</param>
+        internal void SaveToJson(JsonWriter writer, JsonSerializer serializer) {
+            SaveToJsonImpl(writer, serializer);
+
+            writer.WritePropertyName("id");
+            writer.WriteValue(Id);
+
+            writer.WritePropertyName("name");
+            writer.WriteValue(Name);
+
+            writer.WritePropertyName("description");
+            writer.WriteValue(Description);
+
+            writer.WritePropertyName("storage_type");
+            writer.WriteValue(StorageType);
+
+            writer.WritePropertyName("unit_type");
+            writer.WriteValue(UnitType);
+        }
+
+        /// <summary>
+        /// Метод сохранения параметра в json
+        /// </summary>
+        /// <param name="writer">Writer</param>
+        /// <param name="serializer">Serializer</param>
+        protected abstract void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer);
+
+        #endregion
 
         #region IEquatable
 
