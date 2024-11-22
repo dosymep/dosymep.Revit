@@ -1,5 +1,7 @@
 ﻿using System.Reflection;
 
+using dosymep.Bim4Everyone.ProjectConfigs;
+using dosymep.Revit.ServerClient;
 using dosymep.SimpleServices;
 
 using Ninject;
@@ -14,9 +16,23 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
         public override void Load() {
             Bind<JsonSerializerSettings>().ToSelf()
                 .WithPropertyValue(nameof(Formatting), Formatting.Indented)
-                .WithPropertyValue(nameof(TypeNameHandling), TypeNameHandling.Objects);
+                .WithPropertyValue(nameof(TypeNameHandling), TypeNameHandling.None);
 
             Bind<ISerializationService>()
+                .To<JsonSerializationService>()
+                .WithConstructorArgument(typeof(JsonSerializerSettings),
+                    c => c.Kernel.TryGet<JsonSerializerSettings>())
+                .WithConstructorArgument(typeof(ISerializationBinder),
+                    c => c.Kernel.TryGet<ISerializationBinder>());
+            
+            Bind<ISerializer>()
+                .To<JsonSerializationService>()
+                .WithConstructorArgument(typeof(JsonSerializerSettings),
+                    c => c.Kernel.TryGet<JsonSerializerSettings>())
+                .WithConstructorArgument(typeof(ISerializationBinder),
+                    c => c.Kernel.TryGet<ISerializationBinder>());
+            
+            Bind<IConfigSerializer>()
                 .To<JsonSerializationService>()
                 .WithConstructorArgument(typeof(JsonSerializerSettings),
                     c => c.Kernel.TryGet<JsonSerializerSettings>())

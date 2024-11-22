@@ -5,10 +5,12 @@ using System.Reflection;
 using Autodesk.Revit.DB;
 
 using dosymep.Bim4Everyone.CustomParams;
+using dosymep.Bim4Everyone.ProjectConfigs;
 using dosymep.Bim4Everyone.ProjectParams;
 using dosymep.Bim4Everyone.SharedParams;
 using dosymep.Bim4Everyone.SystemParams;
 using dosymep.Revit;
+using dosymep.Revit.ServerClient;
 using dosymep.SimpleServices;
 
 using pyRevitLabs.Json;
@@ -16,7 +18,7 @@ using pyRevitLabs.Json.Linq;
 using pyRevitLabs.Json.Serialization;
 
 namespace dosymep.Bim4Everyone.SimpleServices {
-    internal class JsonSerializationService : ISerializationService {
+    internal class JsonSerializationService : ISerializationService, ISerializer, IConfigSerializer {
         private readonly JsonSerializerSettings _settings;
 
         public JsonSerializationService(JsonSerializerSettings settings) {
