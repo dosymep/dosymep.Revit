@@ -29,29 +29,6 @@ namespace dosymep.Bim4Everyone.ProjectParams {
         internal ProjectParam(string id)
             : base(id) {
         }
-        
-        /// <summary>
-        /// Проверяет тип объекта.
-        /// </summary>
-        /// <param name="token">Токен</param>
-        /// <returns>Возвращает true - если токен является нужным типом.</returns>
-        internal static bool CheckType(JToken token) {
-            return token.Value<Guid>("type_id") == _typeId;
-        }
-
-        /// <summary>
-        /// Метод сохранения параметра в json
-        /// </summary>
-        /// <param name="token">Токен</param>
-        internal static RevitParam ReadFromJson(JToken token) {
-            return RevitParam.ReadFromJson(token, new ProjectParam(token.Value<string>("id")));
-        }
-
-        /// <inheritdoc />
-        protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) {
-            writer.WritePropertyName("type_id");
-            writer.WriteValue(_typeId);
-        }
 
         /// <inheritdoc/>
         public override bool IsExistsParam(Document document) {
@@ -104,6 +81,33 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
             return param;
         }
+        
+        #region Serlization
+        
+        /// <summary>
+        /// Проверяет тип объекта.
+        /// </summary>
+        /// <param name="token">Токен</param>
+        /// <returns>Возвращает true - если токен является нужным типом.</returns>
+        internal static bool CheckType(JToken token) {
+            return token.Value<Guid>("type_id") == _typeId;
+        }
+
+        /// <summary>
+        /// Метод сохранения параметра в json
+        /// </summary>
+        /// <param name="token">Токен</param>
+        internal static RevitParam ReadFromJson(JToken token) {
+            return RevitParam.ReadFromJson(token, new ProjectParam(token.Value<string>("id")));
+        }
+
+        /// <inheritdoc />
+        protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) {
+            writer.WritePropertyName("type_id");
+            writer.WriteValue(_typeId);
+        }
+        
+        #endregion
 
 #if REVIT2020
 

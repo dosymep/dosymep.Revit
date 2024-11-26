@@ -30,33 +30,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
             : base(id) {
             Guid = guid;
         }
-        
-        /// <summary>
-        /// Проверяет тип объекта.
-        /// </summary>
-        /// <param name="token">Токен</param>
-        /// <returns>Возвращает true - если токен является нужным типом.</returns>
-        internal static bool CheckType(JToken token) {
-            return token.Value<Guid>("type_id") == _typeId;
-        }
-
-        /// <summary>
-        /// Метод сохранения параметра в json
-        /// </summary>
-        /// <param name="token">Токен</param>
-        internal static RevitParam ReadFromJson(JToken token) {
-            return RevitParam.ReadFromJson(
-                token, new SharedParam(token.Value<string>("id"), token.Value<Guid>("guid")));
-        }
-
-        /// <inheritdoc />
-        protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) {
-            writer.WritePropertyName("type_id");
-            writer.WriteValue(_typeId);
-            
-            writer.WritePropertyName("guid");
-            writer.WriteValue(Guid);
-        }
 
         /// <summary>
         /// Guid общего параметра.
@@ -156,6 +129,37 @@ namespace dosymep.Bim4Everyone.SharedParams {
                        .FirstOrDefault(item => item.GUID == Guid)
                    ?? (ExternalDefinition) definitionFile.Groups.get_Item(groupName)?.Definitions.get_Item(Name);
         }
+        
+        #region Serialization
+        
+        /// <summary>
+        /// Проверяет тип объекта.
+        /// </summary>
+        /// <param name="token">Токен</param>
+        /// <returns>Возвращает true - если токен является нужным типом.</returns>
+        internal static bool CheckType(JToken token) {
+            return token.Value<Guid>("type_id") == _typeId;
+        }
+
+        /// <summary>
+        /// Метод сохранения параметра в json
+        /// </summary>
+        /// <param name="token">Токен</param>
+        internal static RevitParam ReadFromJson(JToken token) {
+            return RevitParam.ReadFromJson(
+                token, new SharedParam(token.Value<string>("id"), token.Value<Guid>("guid")));
+        }
+
+        /// <inheritdoc />
+        protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) {
+            writer.WritePropertyName("type_id");
+            writer.WriteValue(_typeId);
+            
+            writer.WritePropertyName("guid");
+            writer.WriteValue(Guid);
+        }
+        
+        #endregion
 
 #if REVIT2020
         /// <summary>

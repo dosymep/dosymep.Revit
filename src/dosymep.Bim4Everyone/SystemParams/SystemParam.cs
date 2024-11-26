@@ -38,30 +38,6 @@ namespace dosymep.Bim4Everyone.SystemParams {
         }
         
         /// <summary>
-        /// Проверяет тип объекта.
-        /// </summary>
-        /// <param name="token">Токен</param>
-        /// <returns>Возвращает true - если токен является нужным типом.</returns>
-        internal static bool CheckType(JToken token) {
-            return token.Value<Guid>("type_id") == _typeId;
-        }
-
-        /// <summary>
-        /// Метод сохранения параметра в json
-        /// </summary>
-        /// <param name="token">Токен</param>
-        internal static RevitParam ReadFromJson(JToken token) {
-            return RevitParam.ReadFromJson(token, new SystemParam(token.Value<string>("id")));
-        }
-
-
-        /// <inheritdoc />
-        protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) {
-            writer.WritePropertyName("type_id");
-            writer.WriteValue(_typeId);
-        }
-        
-        /// <summary>
         /// Системное наименование параметра.
         /// </summary>
         [JsonIgnore]
@@ -146,5 +122,33 @@ namespace dosymep.Bim4Everyone.SystemParams {
         public override Parameter GetParam(Element element) {
             return element.GetParam(SystemParamId);
         }
+        
+        #region Serialization
+
+        /// <summary>
+        /// Проверяет тип объекта.
+        /// </summary>
+        /// <param name="token">Токен</param>
+        /// <returns>Возвращает true - если токен является нужным типом.</returns>
+        internal static bool CheckType(JToken token) {
+            return token.Value<Guid>("type_id") == _typeId;
+        }
+
+        /// <summary>
+        /// Метод сохранения параметра в json
+        /// </summary>
+        /// <param name="token">Токен</param>
+        internal static RevitParam ReadFromJson(JToken token) {
+            return RevitParam.ReadFromJson(token, new SystemParam(token.Value<string>("id")));
+        }
+
+
+        /// <inheritdoc />
+        protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) {
+            writer.WritePropertyName("type_id");
+            writer.WriteValue(_typeId);
+        }
+
+        #endregion
     }
 }

@@ -27,6 +27,28 @@ namespace dosymep.Bim4Everyone.CustomParams {
         public CustomParam(string id)
             : base(id) {
         }
+
+        /// <inheritdoc />
+        public override bool IsExistsParam(Document document) {
+            return document.IsExistsParam(Name);
+        }
+
+        /// <inheritdoc />
+        public override (Definition Definition, Binding Binding) GetParamBinding(Document document) {
+            return document.GetParameterBindings().FirstOrDefault(item => item.Definition.Name.Equals(Name));
+        }
+
+        /// <inheritdoc />
+        public override ParameterElement GetRevitParamElement(Document document) {
+            return document.GetProjectParamElements().FirstOrDefault(item => item.Name.Equals(Name));
+        }
+
+        /// <inheritdoc />
+        public override Parameter GetParam(Element element) {
+            return element.GetParam(Name);
+        }
+        
+        #region Serizalization
         
         /// <summary>
         /// Проверяет тип объекта.
@@ -50,25 +72,7 @@ namespace dosymep.Bim4Everyone.CustomParams {
             writer.WritePropertyName("type_id");
             writer.WriteValue(_typeId);
         }
-
-        /// <inheritdoc />
-        public override bool IsExistsParam(Document document) {
-            return document.IsExistsParam(Name);
-        }
-
-        /// <inheritdoc />
-        public override (Definition Definition, Binding Binding) GetParamBinding(Document document) {
-            return document.GetParameterBindings().FirstOrDefault(item => item.Definition.Name.Equals(Name));
-        }
-
-        /// <inheritdoc />
-        public override ParameterElement GetRevitParamElement(Document document) {
-            return document.GetProjectParamElements().FirstOrDefault(item => item.Name.Equals(Name));
-        }
-
-        /// <inheritdoc />
-        public override Parameter GetParam(Element element) {
-            return element.GetParam(Name);
-        }
+        
+        #endregion
     }
 }
