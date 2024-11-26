@@ -20,12 +20,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.Serialization {
         private readonly JsonSerializerSettings _settings;
 
         public JsonSerializationService(JsonSerializerSettings settings) {
-            _settings = settings ?? new JsonSerializerSettings();
-            _settings.Converters = new List<JsonConverter>() {new ElementIdConverter(), new RevitParamConverter()};
-            
-#if REVIT2021_OR_GREATER
-            _settings.Converters.Add(new ForgeTypeIdConverter());
-#endif
+            _settings = settings;
         }
 
         public string FileExtension => ".json";
