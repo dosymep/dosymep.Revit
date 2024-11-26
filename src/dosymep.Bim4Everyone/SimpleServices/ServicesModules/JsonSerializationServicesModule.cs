@@ -14,30 +14,13 @@ using pyRevitLabs.Json.Serialization;
 namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
     internal class JsonSerializationServicesModule : NinjectModule {
         public override void Load() {
+            Bind<ISerializer>().To<JsonSerializationService>();
+            Bind<IConfigSerializer>().To<JsonSerializationService>();
+            Bind<ISerializationService>().To<JsonSerializationService>();
+            
             Bind<JsonSerializerSettings>().ToSelf()
-                .WithPropertyValue(nameof(Formatting), Formatting.Indented)
-                .WithPropertyValue(nameof(TypeNameHandling), TypeNameHandling.None);
-
-            Bind<ISerializationService>()
-                .To<JsonSerializationService>()
-                .WithConstructorArgument(typeof(JsonSerializerSettings),
-                    c => c.Kernel.TryGet<JsonSerializerSettings>())
-                .WithConstructorArgument(typeof(ISerializationBinder),
-                    c => c.Kernel.TryGet<ISerializationBinder>());
-            
-            Bind<ISerializer>()
-                .To<JsonSerializationService>()
-                .WithConstructorArgument(typeof(JsonSerializerSettings),
-                    c => c.Kernel.TryGet<JsonSerializerSettings>())
-                .WithConstructorArgument(typeof(ISerializationBinder),
-                    c => c.Kernel.TryGet<ISerializationBinder>());
-            
-            Bind<IConfigSerializer>()
-                .To<JsonSerializationService>()
-                .WithConstructorArgument(typeof(JsonSerializerSettings),
-                    c => c.Kernel.TryGet<JsonSerializerSettings>())
-                .WithConstructorArgument(typeof(ISerializationBinder),
-                    c => c.Kernel.TryGet<ISerializationBinder>());
+                .WithPropertyValue(nameof(JsonSerializerSettings.Formatting), Formatting.Indented)
+                .WithPropertyValue(nameof(JsonSerializerSettings.TypeNameHandling), TypeNameHandling.None);
         }
     }
 }
