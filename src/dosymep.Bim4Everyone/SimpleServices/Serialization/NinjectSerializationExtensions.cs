@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 
 using dosymep.Bim4Everyone.ProjectConfigs;
+using dosymep.Bim4Everyone.SimpleServices.Serialization.JsonConverters;
 using dosymep.SimpleServices;
 
 using Ninject;
