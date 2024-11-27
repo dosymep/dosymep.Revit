@@ -17,18 +17,21 @@ namespace dosymep.Bim4Everyone.SimpleServices.Serialization {
         /// Добавляет в контейнер сервис сериализации <see cref="ISerializationService" />
         /// </summary>
         /// <param name="kernel">Ninject контейнер.</param>
-        /// <param name="setting">Настройки сериализатора.</param>
+        /// <param name="setupAction">Настройки сериализатора.</param>
         /// <returns>Возвращает настроенный контейнер Ninject.</returns>
         /// <exception cref="System.ArgumentNullException">kernel is null.</exception>
         public static IKernel UseJsonSerialization(this IKernel kernel,
-            Func<JsonSerializerSettings> setting = default) {
+            Action<JsonSerializerSettings> setupAction = default) {
             if(kernel == null) {
                 throw new ArgumentNullException(nameof(kernel));
             }
 
+            JsonSerializerSettings options = GetDefaultSettings();
+            setupAction?.Invoke(options);
+            
             kernel.Bind<ISerializationService>()
                 .To<JsonSerializationService>()
-                .WithConstructorArgument("settings", setting?.Invoke() ?? GetDefaultSettings());
+                .WithConstructorArgument("settings", options);
 
             return kernel;
         }
@@ -37,18 +40,21 @@ namespace dosymep.Bim4Everyone.SimpleServices.Serialization {
         /// Добавляет в контейнер сервис сериализации <see cref="IConfigSerializer" />
         /// </summary>
         /// <param name="kernel">Ninject контейнер.</param>
-        /// <param name="setting">Настройки сериализатора.</param>
+        /// <param name="setupAction">Настройки сериализатора.</param>
         /// <returns>Возвращает настроенный контейнер Ninject.</returns>
         /// <exception cref="System.ArgumentNullException">kernel is null.</exception>
         public static IKernel UseConfigSerialization(this IKernel kernel,
-            Func<JsonSerializerSettings> setting = default) {
+            Action<JsonSerializerSettings> setupAction = default) {
             if(kernel == null) {
                 throw new ArgumentNullException(nameof(kernel));
             }
+            
+            JsonSerializerSettings options = GetDefaultSettings();
+            setupAction?.Invoke(options);
 
             kernel.Bind<IConfigSerializer>()
                 .To<JsonSerializationService>()
-                .WithConstructorArgument("settings", setting?.Invoke() ?? GetDefaultSettings());
+                .WithConstructorArgument("settings", options);
 
             return kernel;
         }
