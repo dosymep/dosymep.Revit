@@ -96,11 +96,17 @@ namespace dosymep.Bim4Everyone.SimpleServices.Serialization {
 
             if(CustomParam.CheckType(token)) {
                 return CustomParam.ReadFromJson(token);
-            } else if(SystemParam.CheckType(token)) {
+            }
+
+            if(SystemParam.CheckType(token)) {
                 return SystemParam.ReadFromJson(token);
-            } else if(ProjectParam.CheckType(token)) {
+            }
+
+            if(ProjectParam.CheckType(token)) {
                 return ProjectParam.ReadFromJson(token);
-            } else if(SharedParam.CheckType(token)) {
+            }
+
+            if(SharedParam.CheckType(token)) {
                 return SharedParam.ReadFromJson(token);
             }
 
