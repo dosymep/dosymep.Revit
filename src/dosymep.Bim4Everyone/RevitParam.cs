@@ -137,7 +137,12 @@ namespace dosymep.Bim4Everyone {
 #if REVIT2020
             revitParam.UnitType = token.Value<UnitType>("unit_type");
 #else
-            revitParam.UnitType = token.Value<ForgeTypeId>("unit_type");
+            // не очень хорошо так делать
+            // надо как-то использовать настройки сериализатора
+            string unitType = token.Value<string>("unit_type");
+            revitParam.UnitType = !string.IsNullOrEmpty(unitType)
+                ? new ForgeTypeId(unitType)
+                : ForgeTypeIdExtensions.EmptyForgeTypeId;
 #endif
 
             return revitParam;
@@ -161,10 +166,10 @@ namespace dosymep.Bim4Everyone {
             writer.WriteValue(Description);
 
             writer.WritePropertyName("storage_type");
-            writer.WriteValue(StorageType);
+            writer.WriteValue(StorageType.ToString());
 
             writer.WritePropertyName("unit_type");
-            writer.WriteValue(UnitType);
+            serializer.Serialize(writer, UnitType);
         }
 
         /// <summary>
