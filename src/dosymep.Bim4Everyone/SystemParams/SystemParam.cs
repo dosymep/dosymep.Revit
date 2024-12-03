@@ -131,7 +131,7 @@ namespace dosymep.Bim4Everyone.SystemParams {
         /// <param name="token">Токен</param>
         /// <returns>Возвращает true - если токен является нужным типом.</returns>
         internal static bool CheckType(JToken token) {
-            return token.Value<Guid>("type_id") == _typeId;
+            return new Guid(token.Value<string>("type_id")) == _typeId;
         }
 
         /// <summary>

@@ -132,10 +132,10 @@ namespace dosymep.Bim4Everyone {
         internal static T ReadFromJson<T>(JToken token, T revitParam) where T : RevitParam {
             revitParam.Name = token.Value<string>("name");
             revitParam.Description = token.Value<string>("description");
-            revitParam.StorageType = token.Value<StorageType>("storage_type");
+            revitParam.StorageType = (StorageType) Enum.Parse(typeof(StorageType), token.Value<string>("storage_type"));
 
 #if REVIT2020
-            revitParam.UnitType = token.Value<UnitType>("unit_type");
+            revitParam.UnitType = (UnitType) Enum.Parse(typeof(UnitType), token.Value<string>("unit_type"));
 #else
             // не очень хорошо так делать
             // надо как-то использовать настройки сериализатора
@@ -154,8 +154,10 @@ namespace dosymep.Bim4Everyone {
         /// <param name="writer">Writer</param>
         /// <param name="serializer">Serializer</param>
         internal void SaveToJson(JsonWriter writer, JsonSerializer serializer) {
+            writer.WriteStartObject();
+            
             SaveToJsonImpl(writer, serializer);
-
+            
             writer.WritePropertyName("id");
             writer.WriteValue(Id);
 
@@ -170,6 +172,8 @@ namespace dosymep.Bim4Everyone {
 
             writer.WritePropertyName("unit_type");
             serializer.Serialize(writer, UnitType);
+            
+            writer.WriteEndObject();
         }
 
         /// <summary>

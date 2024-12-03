@@ -138,7 +138,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <param name="token">Токен</param>
         /// <returns>Возвращает true - если токен является нужным типом.</returns>
         internal static bool CheckType(JToken token) {
-            return token.Value<Guid>("type_id") == _typeId;
+            return new Guid(token.Value<string>("type_id")) == _typeId;
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <param name="token">Токен</param>
         internal static RevitParam ReadFromJson(JToken token) {
             return RevitParam.ReadFromJson(
-                token, new SharedParam(token.Value<string>("id"), token.Value<Guid>("guid")));
+                token, new SharedParam(token.Value<string>("id"), new Guid(token.Value<string>("guid"))));
         }
 
         /// <inheritdoc />
