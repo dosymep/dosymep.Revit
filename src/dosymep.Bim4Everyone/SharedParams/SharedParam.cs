@@ -765,6 +765,12 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.Area;
                 case nameof(SharedParamsConfig.SizeVolume):
                     return SpecTypeId.Volume;
+                case nameof(SharedParamsConfig.SizeLength):
+                    return SpecTypeId.Length;
+                case nameof(SharedParamsConfig.SizeWidth):
+                    return SpecTypeId.Length;
+                case nameof(SharedParamsConfig.SizeHeight):
+                    return SpecTypeId.Length;
                 case nameof(SharedParamsConfig.VISCrossSection):
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.VISLocalResistanceCoef):
