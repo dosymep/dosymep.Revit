@@ -8,6 +8,8 @@ using dosymep.SimpleServices;
 using Ninject;
 
 using pyRevitLabs.Json;
+using pyRevitLabs.Json.Converters;
+using pyRevitLabs.Json.Serialization;
 
 namespace dosymep.Bim4Everyone.SimpleServices.Serialization {
     /// <summary>
@@ -61,7 +63,11 @@ namespace dosymep.Bim4Everyone.SimpleServices.Serialization {
         }
 
         private static JsonSerializerSettings GetDefaultSettings() {
-            var converters = new List<JsonConverter>() {new ElementIdConverter(), new RevitParamConverter()};
+            List<JsonConverter> converters = new List<JsonConverter>() {
+                new ElementIdConverter(),
+                new RevitParamConverter(),
+                new StringEnumConverter(new DefaultNamingStrategy())
+            };
 
 #if REVIT2021_OR_GREATER
             converters.Add(new ForgeTypeIdConverter());
