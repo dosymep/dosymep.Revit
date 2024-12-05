@@ -1255,6 +1255,21 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.SetProjectConfigName
   fullName: dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.SetProjectConfigName
   nameWithType: ProjectConfigBuilder.SetProjectConfigName
+- uid: dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.SetProjectConfigPath(System.String)
+  name: SetProjectConfigPath(string)
+  href: api/2024/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.html#dosymep_Bim4Everyone_ProjectConfigs_ProjectConfigBuilder_SetProjectConfigPath_System_String_
+  commentId: M:dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.SetProjectConfigPath(System.String)
+  name.vb: SetProjectConfigPath(String)
+  fullName: dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.SetProjectConfigPath(string)
+  fullName.vb: dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.SetProjectConfigPath(String)
+  nameWithType: ProjectConfigBuilder.SetProjectConfigPath(string)
+  nameWithType.vb: ProjectConfigBuilder.SetProjectConfigPath(String)
+- uid: dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.SetProjectConfigPath*
+  name: SetProjectConfigPath
+  href: api/2024/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.html#dosymep_Bim4Everyone_ProjectConfigs_ProjectConfigBuilder_SetProjectConfigPath_
+  commentId: Overload:dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.SetProjectConfigPath
+  fullName: dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.SetProjectConfigPath
+  nameWithType: ProjectConfigBuilder.SetProjectConfigPath
 - uid: dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.SetRevitVersion(System.String)
   name: SetRevitVersion(string)
   href: api/2024/dosymep.Bim4Everyone.ProjectConfigs.ProjectConfigBuilder.html#dosymep_Bim4Everyone_ProjectConfigs_ProjectConfigBuilder_SetRevitVersion_System_String_
@@ -2999,6 +3014,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.EconomicFunction
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.EconomicFunction
   nameWithType: SharedParamsConfig.EconomicFunction
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ElementMirroring
+  name: ElementMirroring
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_ElementMirroring
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ElementMirroring
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ElementMirroring
+  nameWithType: SharedParamsConfig.ElementMirroring
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ElementMirroring*
+  name: ElementMirroring
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_ElementMirroring_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ElementMirroring
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ElementMirroring
+  nameWithType: SharedParamsConfig.ElementMirroring
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FinishingRoomName
   name: FinishingRoomName
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_FinishingRoomName
@@ -3221,6 +3248,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MechanicalSystemName
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MechanicalSystemName
   nameWithType: SharedParamsConfig.MechanicalSystemName
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ParkingSpaceClass
+  name: ParkingSpaceClass
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_ParkingSpaceClass
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ParkingSpaceClass
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ParkingSpaceClass
+  nameWithType: SharedParamsConfig.ParkingSpaceClass
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ParkingSpaceClass*
+  name: ParkingSpaceClass
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_ParkingSpaceClass_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ParkingSpaceClass
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ParkingSpaceClass
+  nameWithType: SharedParamsConfig.ParkingSpaceClass
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomArea
   name: RoomArea
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_RoomArea
@@ -3365,6 +3404,30 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeArea
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeArea
   nameWithType: SharedParamsConfig.SizeArea
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeHeight
+  name: SizeHeight
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeHeight
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeHeight
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeHeight
+  nameWithType: SharedParamsConfig.SizeHeight
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeHeight*
+  name: SizeHeight
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeHeight_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeHeight
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeHeight
+  nameWithType: SharedParamsConfig.SizeHeight
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeLength
+  name: SizeLength
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeLength
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeLength
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeLength
+  nameWithType: SharedParamsConfig.SizeLength
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeLength*
+  name: SizeLength
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeLength_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeLength
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeLength
+  nameWithType: SharedParamsConfig.SizeLength
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeLengthAdditional
   name: SizeLengthAdditional
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeLengthAdditional
@@ -3389,6 +3452,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeVolume
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeVolume
   nameWithType: SharedParamsConfig.SizeVolume
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeWidth
+  name: SizeWidth
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeWidth
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeWidth
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeWidth
+  nameWithType: SharedParamsConfig.SizeWidth
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeWidth*
+  name: SizeWidth
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeWidth_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeWidth
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeWidth
+  nameWithType: SharedParamsConfig.SizeWidth
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.StampSheetNumber
   name: StampSheetNumber
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_StampSheetNumber
