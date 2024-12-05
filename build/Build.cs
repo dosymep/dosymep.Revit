@@ -10,6 +10,7 @@ using Nuke.Common.CI.GitLab;
 using Nuke.Common.IO;
 using Nuke.Common.ProjectModel;
 using Nuke.Common.Tooling;
+using Nuke.Common.Tools.DocFX;
 using Nuke.Common.Tools.DotNet;
 using Nuke.Components;
 
@@ -31,6 +32,19 @@ class Build : NukeBuild, IHazSolution {
     [Parameter] readonly string DocsOutput = Path.Combine("docs", "_site");
     [Parameter] readonly string DocsConfig = Path.Combine("docs", "docfx.json");
     [Parameter] readonly AbsolutePath DocsCaches = RootDirectory / Path.Combine("docs", "api");
+    
+    // ReSharper disable once InconsistentNaming
+    [Parameter] readonly AbsolutePath pyRevitOutput;
+    [Parameter] readonly AbsolutePath Bim4EveryoneOutput;
+    [Parameter] readonly AbsolutePath PublishOutput;
+
+    public Build() {
+        AbsolutePath appdataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        
+        pyRevitOutput = appdataFolder / "pyRevit-Master";
+        Bim4EveryoneOutput = appdataFolder / "pyRevit" / "Extensions" / "BIM4Everyone.lib";
+        PublishOutput = Bim4EveryoneOutput / "dosymep_libs" / "libs";
+    }
 
     /// <summary>
     /// Min Revit version.
@@ -77,9 +91,8 @@ class Build : NukeBuild, IHazSolution {
         .OnlyWhenStatic(() => IsServerBuild)
         .Executes(() => {
             // потому что основные пакеты лежат в библиотеке pyRevit
-            string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            Git($"clone https://github.com/pyrevitlabs/pyRevit.git -b master {appdata}/pyRevit-Master");
-            Git($"clone https://github.com/dosymep/BIM4Everyone.git -b master {appdata}/pyRevit/Extensions/BIM4Everyone.lib");
+            Git($"clone https://github.com/pyrevitlabs/pyRevit.git -b master {pyRevitOutput}");
+            Git($"clone https://github.com/dosymep/BIM4Everyone.git -b master {Bim4EveryoneOutput}");
         });
 
     Target Compile => _ => _
@@ -91,12 +104,27 @@ class Build : NukeBuild, IHazSolution {
                 .DisableNoRestore()
                 .SetConfiguration(Configuration)
                 .SetProjectFile(((IHazSolution) this).Solution)
-                .When(IsServerBuild, _ => _
-                    .EnableContinuousIntegrationBuild())
+                .When(settings => IsServerBuild,
+                    _ => _
+                        .EnableContinuousIntegrationBuild())
                 .CombineWith(BuildRevitVersions,
                     (settings, version) => settings
-                        .SetOutputDirectory(Output / version)
+                        .SetProperty("OutputPath", Output / version)
                         .SetProperty("RevitVersion", (int) version)));
+        });
+
+    Target Publish => _ => _
+        .DependsOn(Restore)
+        .OnlyWhenStatic(() => IsLocalBuild)
+        .Executes(() => {
+            DotNetPublish(s => s
+                .EnableForce()
+                .DisableNoRestore()
+                .SetConfiguration(Configuration)
+                .CombineWith(BuildRevitVersions,
+                    (settings, version) => settings
+                        .SetProperty("RevitVersion", (int) version)
+                        .SetProperty("PublishDir", PublishOutput / version)));
         });
 
     Target DocsCompile => _ => _

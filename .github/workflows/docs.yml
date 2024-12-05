@@ -1,7 +1,12 @@
 name: docs
 
 on:
+  # manual
   workflow_dispatch:
+  
+  # when update main branch
+  push:
+    branches: [main, master]
 
 # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
 permissions:
