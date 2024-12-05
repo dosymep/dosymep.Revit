@@ -168,9 +168,14 @@ namespace dosymep.Bim4Everyone {
             writer.WritePropertyName(nameof(StorageType));
             writer.WriteValue(StorageType.ToString());
 
+#if REVIT2020
+            writer.WritePropertyName(nameof(UnitType));
+            writer.WriteValue(UnitType.ToString()); 
+#else
             writer.WritePropertyName(nameof(UnitTypeName));
             writer.WriteValue(UnitTypeName);
-
+#endif
+            
             writer.WriteEndObject();
         }
 
