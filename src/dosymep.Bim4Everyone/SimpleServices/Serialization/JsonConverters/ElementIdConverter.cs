@@ -9,7 +9,7 @@ using pyRevitLabs.Json;
 namespace dosymep.Bim4Everyone.SimpleServices.Serialization.JsonConverters {
     internal class ElementIdConverter : JsonConverter<ElementId> {
         public override void WriteJson(JsonWriter writer, ElementId value, JsonSerializer serializer) {
-            writer.WriteValue(value.GetIdValue());
+            writer.WriteValue(value?.GetIdValue());
         }
 
         public override ElementId ReadJson(

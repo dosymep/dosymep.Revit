@@ -14,13 +14,17 @@ using pyRevitLabs.Json.Linq;
 namespace dosymep.Bim4Everyone.SimpleServices.Serialization.JsonConverters {
     internal class RevitParamConverter : JsonConverter<RevitParam> {
         public override void WriteJson(JsonWriter writer, RevitParam value, JsonSerializer serializer) {
-            value.SaveToJson(writer, serializer);
+            value?.SaveToJson(writer, serializer);
         }
 
         public override RevitParam ReadJson(
             JsonReader reader, Type objectType,
             RevitParam existingValue, bool hasExistingValue, JsonSerializer serializer) {
-
+            
+            if(reader.TokenType != JsonToken.StartObject) {
+                return default;
+            }
+           
             JObject jObject = JObject.Load(reader);
             string paramType = jObject.Value<string>("$type");
 

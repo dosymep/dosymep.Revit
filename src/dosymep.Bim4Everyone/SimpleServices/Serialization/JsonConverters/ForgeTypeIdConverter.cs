@@ -11,14 +11,14 @@ using pyRevitLabs.Json;
 namespace dosymep.Bim4Everyone.SimpleServices.Serialization.JsonConverters {
     internal class ForgeTypeIdConverter : JsonConverter<ForgeTypeId> {
         public override void WriteJson(JsonWriter writer, ForgeTypeId value, JsonSerializer serializer) {
-            writer.WriteValue(value.TypeId);
+            writer.WriteValue(value?.TypeId);
         }
 
         public override ForgeTypeId ReadJson(
             JsonReader reader, Type objectType,
             ForgeTypeId existingValue, bool hasExistingValue, JsonSerializer serializer) {
             
-            return reader.Value == null
+            return reader.Value is null
                 ? ForgeTypeIdExtensions.EmptyForgeTypeId
                 : new ForgeTypeId(reader.Value.ToString());
         }
