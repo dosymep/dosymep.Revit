@@ -17,11 +17,6 @@ namespace dosymep.Bim4Everyone.ProjectParams {
     /// </summary>
     public class ProjectParam : RevitParam {
         /// <summary>
-        /// Идентификатор типа сериализатора.
-        /// </summary>
-        private static readonly Guid _typeId = new Guid("1A72D725-1D4C-467D-915F-FBE009998AD8");
-        
-        /// <summary>
         /// Конструктор класса параметра проекта.
         /// </summary>
         /// <param name="id">Идентификатор параметра.</param>

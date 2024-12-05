@@ -16,11 +16,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
     /// </summary>
     public class SharedParam : RevitParam {
         /// <summary>
-        /// Идентификатор типа сериализатора.
-        /// </summary>
-        private static readonly Guid _typeId = new Guid("8CE24338-8BEB-47B0-9BB1-B23ECABF1A1F");
-        
-        /// <summary>
         /// Конструктор класса общего параметра.
         /// </summary>
         /// <param name="id">Идентификатор параметра.</param>
