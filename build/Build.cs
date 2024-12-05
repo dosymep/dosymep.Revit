@@ -79,7 +79,8 @@ class Build : NukeBuild, IHazSolution {
             // потому что основные пакеты лежат в библиотеке pyRevit
             string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             Git($"clone https://github.com/pyrevitlabs/pyRevit.git -b master {appdata}/pyRevit-Master");
-            Git($"clone https://github.com/dosymep/BIM4Everyone.git -b master {appdata}/pyRevit/Extensions/BIM4Everyone.lib");
+            Git(
+                $"clone https://github.com/dosymep/BIM4Everyone.git -b master {appdata}/pyRevit/Extensions/BIM4Everyone.lib");
         });
 
     Target Compile => _ => _
@@ -87,6 +88,23 @@ class Build : NukeBuild, IHazSolution {
         .DependsOn(DownloadBim4Everyone)
         .Executes(() => {
             DotNetBuild(s => s
+                .EnableForce()
+                .DisableNoRestore()
+                .SetConfiguration(Configuration)
+                .SetProjectFile(((IHazSolution) this).Solution)
+                .When(IsServerBuild, _ => _
+                    .EnableContinuousIntegrationBuild())
+                .CombineWith(BuildRevitVersions,
+                    (settings, version) => settings
+                        .SetOutputDirectory(Output / version)
+                        .SetProperty("RevitVersion", (int) version)));
+        });
+    
+    Target Publish => _ => _
+        .DependsOn(Compile)
+        .OnlyWhenStatic(() => IsLocalBuild)
+        .Executes(() => {
+            DotNetPublish(s => s
                 .EnableForce()
                 .DisableNoRestore()
                 .SetConfiguration(Configuration)
