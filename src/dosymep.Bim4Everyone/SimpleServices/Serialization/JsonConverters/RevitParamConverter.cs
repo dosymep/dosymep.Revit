@@ -1,4 +1,7 @@
 using System;
+using System.IO;
+
+using Autodesk.Revit.DB;
 
 using dosymep.Bim4Everyone.CustomParams;
 using dosymep.Bim4Everyone.ProjectParams;
@@ -17,26 +20,32 @@ namespace dosymep.Bim4Everyone.SimpleServices.Serialization.JsonConverters {
         public override RevitParam ReadJson(
             JsonReader reader, Type objectType,
             RevitParam existingValue, bool hasExistingValue, JsonSerializer serializer) {
-            
-            JToken token = JToken.ReadFrom(reader);
 
-            if(CustomParam.CheckType(token)) {
-                return CustomParam.ReadFromJson(token);
+            JObject jObject = JObject.Load(reader);
+            string paramType = jObject.Value<string>("$type");
+
+            if(CheckType<SharedParam>(paramType)) {
+                return SharedParam.ReadFromJson(jObject, serializer);
             }
 
-            if(SystemParam.CheckType(token)) {
-                return SystemParam.ReadFromJson(token);
+            if(CheckType<ProjectParam>(paramType)) {
+                return ProjectParam.ReadFromJson(jObject, serializer);
             }
 
-            if(ProjectParam.CheckType(token)) {
-                return ProjectParam.ReadFromJson(token);
+            if(CheckType<SystemParam>(paramType)) {
+                return SystemParam.ReadFromJson(jObject, serializer);
             }
 
-            if(SharedParam.CheckType(token)) {
-                return SharedParam.ReadFromJson(token);
+            if(CheckType<CustomParam>(paramType)) {
+                return CustomParam.ReadFromJson(jObject, serializer);
             }
 
             throw new InvalidOperationException("Revit param type is unknown.");
+        }
+
+        private bool CheckType<T>(string paramType) {
+            string fullName = typeof(T).FullName;
+            return fullName != null && paramType?.StartsWith(fullName) == true;
         }
     }
 }

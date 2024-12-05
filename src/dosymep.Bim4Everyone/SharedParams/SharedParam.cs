@@ -131,31 +131,21 @@ namespace dosymep.Bim4Everyone.SharedParams {
         }
         
         #region Serialization
-        
-        /// <summary>
-        /// Проверяет тип объекта.
-        /// </summary>
-        /// <param name="token">Токен</param>
-        /// <returns>Возвращает true - если токен является нужным типом.</returns>
-        internal static bool CheckType(JToken token) {
-            return new Guid(token.Value<string>("type_id")) == _typeId;
-        }
 
         /// <summary>
         /// Метод сохранения параметра в json
         /// </summary>
         /// <param name="token">Токен</param>
-        internal static RevitParam ReadFromJson(JToken token) {
+        /// <param name="serializer">Сериализатор</param>
+        internal static RevitParam ReadFromJson(JObject token, JsonSerializer serializer) {
             return RevitParam.ReadFromJson(
-                token, new SharedParam(token.Value<string>("id"), new Guid(token.Value<string>("guid"))));
+                token, serializer, new SharedParam(
+                    token.Value<string>(nameof(Id)), token[nameof(Guid)].ToObject<Guid>(serializer)));
         }
 
         /// <inheritdoc />
         protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) {
-            writer.WritePropertyName("type_id");
-            writer.WriteValue(_typeId);
-            
-            writer.WritePropertyName("guid");
+            writer.WritePropertyName(nameof(Guid));
             writer.WriteValue(Guid);
         }
         

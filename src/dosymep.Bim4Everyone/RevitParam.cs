@@ -129,20 +129,15 @@ namespace dosymep.Bim4Everyone {
 
         #region Serialization
 
-        internal static T ReadFromJson<T>(JToken token, T revitParam) where T : RevitParam {
-            revitParam.Name = token.Value<string>("name");
-            revitParam.Description = token.Value<string>("description");
-            revitParam.StorageType = (StorageType) Enum.Parse(typeof(StorageType), token.Value<string>("storage_type"));
+        internal static T ReadFromJson<T>(JObject token, JsonSerializer serializer, T revitParam) where T : RevitParam {
+            revitParam.Name = token.Value<string>(nameof(Name));
+            revitParam.Description = token.Value<string>(nameof(Description));
+            revitParam.StorageType = token[nameof(StorageType)].ToObject<StorageType>(serializer);
 
 #if REVIT2020
-            revitParam.UnitType = (UnitType) Enum.Parse(typeof(UnitType), token.Value<string>("unit_type"));
+            revitParam.UnitType = token[nameof(UnitType)].ToObject<UnitType>(serializer);
 #else
-            // не очень хорошо так делать
-            // надо как-то использовать настройки сериализатора
-            string unitType = token.Value<string>("unit_type");
-            revitParam.UnitType = !string.IsNullOrEmpty(unitType)
-                ? new ForgeTypeId(unitType)
-                : ForgeTypeIdExtensions.EmptyForgeTypeId;
+            revitParam.UnitTypeName = token.Value<string>(nameof(UnitTypeName));
 #endif
 
             return revitParam;
@@ -156,23 +151,26 @@ namespace dosymep.Bim4Everyone {
         internal void SaveToJson(JsonWriter writer, JsonSerializer serializer) {
             writer.WriteStartObject();
             
+            writer.WritePropertyName("$type");
+            writer.WriteValue(GetType().FullName);
+
             SaveToJsonImpl(writer, serializer);
-            
-            writer.WritePropertyName("id");
+
+            writer.WritePropertyName(nameof(Id));
             writer.WriteValue(Id);
 
-            writer.WritePropertyName("name");
+            writer.WritePropertyName(nameof(Name));
             writer.WriteValue(Name);
 
-            writer.WritePropertyName("description");
+            writer.WritePropertyName(nameof(Description));
             writer.WriteValue(Description);
 
-            writer.WritePropertyName("storage_type");
+            writer.WritePropertyName(nameof(StorageType));
             writer.WriteValue(StorageType.ToString());
 
-            writer.WritePropertyName("unit_type");
-            serializer.Serialize(writer, UnitType);
-            
+            writer.WritePropertyName(nameof(UnitTypeName));
+            writer.WriteValue(UnitTypeName);
+
             writer.WriteEndObject();
         }
 
