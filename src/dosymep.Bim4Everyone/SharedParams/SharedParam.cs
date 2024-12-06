@@ -128,7 +128,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         #region Serialization
 
         /// <summary>
-        /// Метод сохранения параметра в json
+        /// Метод чтения параметра из json
         /// </summary>
         /// <param name="token">Токен</param>
         /// <param name="serializer">Сериализатор</param>

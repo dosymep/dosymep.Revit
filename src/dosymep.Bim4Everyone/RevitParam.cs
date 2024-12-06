@@ -144,7 +144,7 @@ namespace dosymep.Bim4Everyone {
         }
 
         /// <summary>
-        /// Метод сохранения параметра в json
+        /// Метод чтения параметра из json
         /// </summary>
         /// <param name="writer">Writer</param>
         /// <param name="serializer">Serializer</param>
@@ -180,7 +180,7 @@ namespace dosymep.Bim4Everyone {
         }
 
         /// <summary>
-        /// Метод сохранения параметра в json
+        /// Метод чтения параметра из json
         /// </summary>
         /// <param name="writer">Writer</param>
         /// <param name="serializer">Serializer</param>

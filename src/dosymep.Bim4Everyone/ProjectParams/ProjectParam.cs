@@ -77,10 +77,10 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             return param;
         }
         
-        #region Serlization
+        #region Serialization
 
         /// <summary>
-        /// Метод сохранения параметра в json
+        /// Метод чтения параметра из json
         /// </summary>
         /// <param name="token">Токен</param>
         /// <param name="serializer">Сериализатор</param>
