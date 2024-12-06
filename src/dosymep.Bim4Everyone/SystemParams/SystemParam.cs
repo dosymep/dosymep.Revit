@@ -11,6 +11,7 @@ using Autodesk.Revit.DB;
 using dosymep.Revit;
 
 using pyRevitLabs.Json;
+using pyRevitLabs.Json.Linq;
 
 namespace dosymep.Bim4Everyone.SystemParams {
     /// <summary>
@@ -30,12 +31,12 @@ namespace dosymep.Bim4Everyone.SystemParams {
         internal static BuiltInParameter GetSystemParamId(string paramId) {
             return (BuiltInParameter) Enum.Parse(typeof(BuiltInParameter), paramId);
         }
-
+        
         /// <summary>
         /// Системное наименование параметра.
         /// </summary>
         [JsonIgnore]
-        public BuiltInParameter SystemParamId { get; }
+        public BuiltInParameter SystemParamId { get; private set; }
 
 
         /// <summary>
@@ -116,5 +117,22 @@ namespace dosymep.Bim4Everyone.SystemParams {
         public override Parameter GetParam(Element element) {
             return element.GetParam(SystemParamId);
         }
+        
+        #region Serialization
+
+        /// <summary>
+        /// Метод чтения параметра из json
+        /// </summary>
+        /// <param name="token">Токен</param>
+        /// <param name="serializer">Сериализатор</param>
+        internal static RevitParam ReadFromJson(JObject token, JsonSerializer serializer) {
+            return RevitParam.ReadFromJson(token, serializer, new SystemParam(token.Value<string>(nameof(Id))));
+        }
+
+
+        /// <inheritdoc />
+        protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) { }
+
+        #endregion
     }
 }

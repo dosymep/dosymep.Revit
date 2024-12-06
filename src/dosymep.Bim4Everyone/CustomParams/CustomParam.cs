@@ -1,8 +1,12 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 using Autodesk.Revit.DB;
 
 using dosymep.Revit;
+
+using pyRevitLabs.Json;
+using pyRevitLabs.Json.Linq;
 
 namespace dosymep.Bim4Everyone.CustomParams {
     /// <summary>
@@ -36,5 +40,21 @@ namespace dosymep.Bim4Everyone.CustomParams {
         public override Parameter GetParam(Element element) {
             return element.GetParam(Name);
         }
+        
+        #region Serialization
+
+        /// <summary>
+        /// Метод чтения параметра из json
+        /// </summary>
+        /// <param name="token">Токен</param>
+        /// <param name="serializer">Сериализатор</param>
+        internal static RevitParam ReadFromJson(JObject token, JsonSerializer serializer) {
+            return RevitParam.ReadFromJson(token, serializer, new CustomParam(token.Value<string>(nameof(Id))));
+        }
+
+        /// <inheritdoc />
+        protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) { }
+        
+        #endregion
     }
 }

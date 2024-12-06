@@ -8,6 +8,7 @@ using Autodesk.Revit.DB;
 using dosymep.Revit;
 
 using pyRevitLabs.Json;
+using pyRevitLabs.Json.Linq;
 
 namespace dosymep.Bim4Everyone.SharedParams {
     /// <summary>
@@ -24,7 +25,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
             : base(id) {
             Guid = guid;
         }
-
 
         /// <summary>
         /// Guid общего параметра.
@@ -124,6 +124,27 @@ namespace dosymep.Bim4Everyone.SharedParams {
                        .FirstOrDefault(item => item.GUID == Guid)
                    ?? (ExternalDefinition) definitionFile.Groups.get_Item(groupName)?.Definitions.get_Item(Name);
         }
+        
+        #region Serialization
+
+        /// <summary>
+        /// Метод чтения параметра из json
+        /// </summary>
+        /// <param name="token">Токен</param>
+        /// <param name="serializer">Сериализатор</param>
+        internal static RevitParam ReadFromJson(JObject token, JsonSerializer serializer) {
+            return RevitParam.ReadFromJson(
+                token, serializer, new SharedParam(
+                    token.Value<string>(nameof(Id)), token[nameof(Guid)].ToObject<Guid>(serializer)));
+        }
+
+        /// <inheritdoc />
+        protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) {
+            writer.WritePropertyName(nameof(Guid));
+            writer.WriteValue(Guid);
+        }
+        
+        #endregion
 
 #if REVIT2020
         /// <summary>

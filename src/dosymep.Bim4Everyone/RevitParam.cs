@@ -9,6 +9,7 @@ using Autodesk.Revit.DB;
 using dosymep.Revit;
 
 using pyRevitLabs.Json;
+using pyRevitLabs.Json.Linq;
 
 namespace dosymep.Bim4Everyone {
     /// <summary>
@@ -48,7 +49,6 @@ namespace dosymep.Bim4Everyone {
         public virtual StorageType StorageType { get; set; }
 
 #if REVIT2020
-
         /// <summary>
         /// Тип измерения параметра.
         /// </summary>
@@ -126,6 +126,67 @@ namespace dosymep.Bim4Everyone {
         public RevitParam AsRevitParam() {
             return this;
         }
+
+        #region Serialization
+
+        internal static T ReadFromJson<T>(JObject token, JsonSerializer serializer, T revitParam) where T : RevitParam {
+            revitParam.Name = token.Value<string>(nameof(Name));
+            revitParam.Description = token.Value<string>(nameof(Description));
+            revitParam.StorageType = token[nameof(StorageType)].ToObject<StorageType>(serializer);
+
+#if REVIT2020
+            revitParam.UnitType = token[nameof(UnitType)].ToObject<UnitType>(serializer);
+#else
+            revitParam.UnitTypeName = token.Value<string>(nameof(UnitTypeName));
+#endif
+
+            return revitParam;
+        }
+
+        /// <summary>
+        /// Метод чтения параметра из json
+        /// </summary>
+        /// <param name="writer">Writer</param>
+        /// <param name="serializer">Serializer</param>
+        internal void SaveToJson(JsonWriter writer, JsonSerializer serializer) {
+            writer.WriteStartObject();
+            
+            writer.WritePropertyName("$type");
+            writer.WriteValue(GetType().FullName);
+
+            SaveToJsonImpl(writer, serializer);
+
+            writer.WritePropertyName(nameof(Id));
+            writer.WriteValue(Id);
+
+            writer.WritePropertyName(nameof(Name));
+            writer.WriteValue(Name);
+
+            writer.WritePropertyName(nameof(Description));
+            writer.WriteValue(Description);
+
+            writer.WritePropertyName(nameof(StorageType));
+            writer.WriteValue(StorageType.ToString());
+
+#if REVIT2020
+            writer.WritePropertyName(nameof(UnitType));
+            writer.WriteValue(UnitType.ToString()); 
+#else
+            writer.WritePropertyName(nameof(UnitTypeName));
+            writer.WriteValue(UnitTypeName);
+#endif
+            
+            writer.WriteEndObject();
+        }
+
+        /// <summary>
+        /// Метод чтения параметра из json
+        /// </summary>
+        /// <param name="writer">Writer</param>
+        /// <param name="serializer">Serializer</param>
+        protected abstract void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer);
+
+        #endregion
 
         #region IEquatable
 

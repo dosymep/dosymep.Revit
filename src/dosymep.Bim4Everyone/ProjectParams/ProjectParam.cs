@@ -9,6 +9,7 @@ using Autodesk.Revit.DB;
 using dosymep.Revit;
 
 using pyRevitLabs.Json;
+using pyRevitLabs.Json.Linq;
 
 namespace dosymep.Bim4Everyone.ProjectParams {
     /// <summary>
@@ -75,6 +76,22 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
             return param;
         }
+        
+        #region Serialization
+
+        /// <summary>
+        /// Метод чтения параметра из json
+        /// </summary>
+        /// <param name="token">Токен</param>
+        /// <param name="serializer">Сериализатор</param>
+        internal static RevitParam ReadFromJson(JObject token, JsonSerializer serializer) {
+            return RevitParam.ReadFromJson(token, serializer, new ProjectParam(token.Value<string>(nameof(Id))));
+        }
+
+        /// <inheritdoc />
+        protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) { }
+        
+        #endregion
 
 #if REVIT2020
 
