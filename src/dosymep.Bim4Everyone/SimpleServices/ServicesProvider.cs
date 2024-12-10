@@ -6,6 +6,7 @@ using System.Windows;
 
 using Autodesk.Revit.UI;
 
+using dosymep.Bim4Everyone.SimpleServices.Serialization;
 using dosymep.Bim4Everyone.SimpleServices.ServicesModules;
 using dosymep.SimpleServices;
 
@@ -39,8 +40,10 @@ namespace dosymep.Bim4Everyone.SimpleServices {
                 new RevitServicesModule(uiApplication),
                 new SettingsServicesModule(),
                 new XtraServicesModule(),
-                new SerilogServicesModule(),
-                new JsonSerializationServicesModule());
+                new SerilogServicesModule());
+
+            Instance.UseJsonSerialization();
+            Instance.UseConfigSerialization();
 
             GetPlatformService<ILocalizationService>()
                 .SetLocalization(GetPlatformService<ILanguageService>().HostLanguage);
