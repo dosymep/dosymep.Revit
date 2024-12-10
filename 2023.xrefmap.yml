@@ -403,6 +403,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.CustomParams.CustomParam.IsExistsParam
   fullName: dosymep.Bim4Everyone.CustomParams.CustomParam.IsExistsParam
   nameWithType: CustomParam.IsExistsParam
+- uid: dosymep.Bim4Everyone.CustomParams.CustomParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter,pyRevitLabs.Json.JsonSerializer)
+  name: SaveToJsonImpl(JsonWriter, JsonSerializer)
+  href: api/2023/dosymep.Bim4Everyone.CustomParams.CustomParam.html#dosymep_Bim4Everyone_CustomParams_CustomParam_SaveToJsonImpl_pyRevitLabs_Json_JsonWriter_pyRevitLabs_Json_JsonSerializer_
+  commentId: M:dosymep.Bim4Everyone.CustomParams.CustomParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter,pyRevitLabs.Json.JsonSerializer)
+  fullName: dosymep.Bim4Everyone.CustomParams.CustomParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter, pyRevitLabs.Json.JsonSerializer)
+  nameWithType: CustomParam.SaveToJsonImpl(JsonWriter, JsonSerializer)
+- uid: dosymep.Bim4Everyone.CustomParams.CustomParam.SaveToJsonImpl*
+  name: SaveToJsonImpl
+  href: api/2023/dosymep.Bim4Everyone.CustomParams.CustomParam.html#dosymep_Bim4Everyone_CustomParams_CustomParam_SaveToJsonImpl_
+  commentId: Overload:dosymep.Bim4Everyone.CustomParams.CustomParam.SaveToJsonImpl
+  fullName: dosymep.Bim4Everyone.CustomParams.CustomParam.SaveToJsonImpl
+  nameWithType: CustomParam.SaveToJsonImpl
 - uid: dosymep.Bim4Everyone.DocumentExtensions
   name: DocumentExtensions
   href: api/2023/dosymep.Bim4Everyone.DocumentExtensions.html
@@ -1514,6 +1526,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParam.IsRevitParam
   fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParam.IsRevitParam
   nameWithType: ProjectParam.IsRevitParam
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter,pyRevitLabs.Json.JsonSerializer)
+  name: SaveToJsonImpl(JsonWriter, JsonSerializer)
+  href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParam.html#dosymep_Bim4Everyone_ProjectParams_ProjectParam_SaveToJsonImpl_pyRevitLabs_Json_JsonWriter_pyRevitLabs_Json_JsonSerializer_
+  commentId: M:dosymep.Bim4Everyone.ProjectParams.ProjectParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter,pyRevitLabs.Json.JsonSerializer)
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter, pyRevitLabs.Json.JsonSerializer)
+  nameWithType: ProjectParam.SaveToJsonImpl(JsonWriter, JsonSerializer)
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParam.SaveToJsonImpl*
+  name: SaveToJsonImpl
+  href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParam.html#dosymep_Bim4Everyone_ProjectParams_ProjectParam_SaveToJsonImpl_
+  commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParam.SaveToJsonImpl
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParam.SaveToJsonImpl
+  nameWithType: ProjectParam.SaveToJsonImpl
 - uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig
   name: ProjectParamsConfig
   href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html
@@ -2060,6 +2084,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.RevitParam.Name
   fullName: dosymep.Bim4Everyone.RevitParam.Name
   nameWithType: RevitParam.Name
+- uid: dosymep.Bim4Everyone.RevitParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter,pyRevitLabs.Json.JsonSerializer)
+  name: SaveToJsonImpl(JsonWriter, JsonSerializer)
+  href: api/2023/dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_SaveToJsonImpl_pyRevitLabs_Json_JsonWriter_pyRevitLabs_Json_JsonSerializer_
+  commentId: M:dosymep.Bim4Everyone.RevitParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter,pyRevitLabs.Json.JsonSerializer)
+  fullName: dosymep.Bim4Everyone.RevitParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter, pyRevitLabs.Json.JsonSerializer)
+  nameWithType: RevitParam.SaveToJsonImpl(JsonWriter, JsonSerializer)
+- uid: dosymep.Bim4Everyone.RevitParam.SaveToJsonImpl*
+  name: SaveToJsonImpl
+  href: api/2023/dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_SaveToJsonImpl_
+  commentId: Overload:dosymep.Bim4Everyone.RevitParam.SaveToJsonImpl
+  fullName: dosymep.Bim4Everyone.RevitParam.SaveToJsonImpl
+  nameWithType: RevitParam.SaveToJsonImpl
 - uid: dosymep.Bim4Everyone.RevitParam.StorageType
   name: StorageType
   href: api/2023/dosymep.Bim4Everyone.RevitParam.html#dosymep_Bim4Everyone_RevitParam_StorageType
@@ -2609,6 +2645,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParam.IsRevitParam
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParam.IsRevitParam
   nameWithType: SharedParam.IsRevitParam
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter,pyRevitLabs.Json.JsonSerializer)
+  name: SaveToJsonImpl(JsonWriter, JsonSerializer)
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParam.html#dosymep_Bim4Everyone_SharedParams_SharedParam_SaveToJsonImpl_pyRevitLabs_Json_JsonWriter_pyRevitLabs_Json_JsonSerializer_
+  commentId: M:dosymep.Bim4Everyone.SharedParams.SharedParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter,pyRevitLabs.Json.JsonSerializer)
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter, pyRevitLabs.Json.JsonSerializer)
+  nameWithType: SharedParam.SaveToJsonImpl(JsonWriter, JsonSerializer)
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParam.SaveToJsonImpl*
+  name: SaveToJsonImpl
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParam.html#dosymep_Bim4Everyone_SharedParams_SharedParam_SaveToJsonImpl_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParam.SaveToJsonImpl
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParam.SaveToJsonImpl
+  nameWithType: SharedParam.SaveToJsonImpl
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig
   name: SharedParamsConfig
   href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html
@@ -5537,6 +5585,48 @@ references:
   fullName.vb: dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.this[]
   nameWithType: ISystemParamsService.this
   nameWithType.vb: ISystemParamsService.this[]
+- uid: dosymep.Bim4Everyone.SimpleServices.Serialization
+  name: dosymep.Bim4Everyone.SimpleServices.Serialization
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.Serialization.html
+  commentId: N:dosymep.Bim4Everyone.SimpleServices.Serialization
+  fullName: dosymep.Bim4Everyone.SimpleServices.Serialization
+  nameWithType: dosymep.Bim4Everyone.SimpleServices.Serialization
+- uid: dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions
+  name: NinjectSerializationExtensions
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.html
+  commentId: T:dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions
+  fullName: dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions
+  nameWithType: NinjectSerializationExtensions
+- uid: dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseConfigSerialization(Ninject.IKernel,System.Action{pyRevitLabs.Json.JsonSerializerSettings})
+  name: UseConfigSerialization(IKernel, Action<JsonSerializerSettings>)
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.html#dosymep_Bim4Everyone_SimpleServices_Serialization_NinjectSerializationExtensions_UseConfigSerialization_Ninject_IKernel_System_Action_pyRevitLabs_Json_JsonSerializerSettings__
+  commentId: M:dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseConfigSerialization(Ninject.IKernel,System.Action{pyRevitLabs.Json.JsonSerializerSettings})
+  name.vb: UseConfigSerialization(IKernel, Action(Of JsonSerializerSettings))
+  fullName: dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseConfigSerialization(Ninject.IKernel, System.Action<pyRevitLabs.Json.JsonSerializerSettings>)
+  fullName.vb: dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseConfigSerialization(Ninject.IKernel, System.Action(Of pyRevitLabs.Json.JsonSerializerSettings))
+  nameWithType: NinjectSerializationExtensions.UseConfigSerialization(IKernel, Action<JsonSerializerSettings>)
+  nameWithType.vb: NinjectSerializationExtensions.UseConfigSerialization(IKernel, Action(Of JsonSerializerSettings))
+- uid: dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseConfigSerialization*
+  name: UseConfigSerialization
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.html#dosymep_Bim4Everyone_SimpleServices_Serialization_NinjectSerializationExtensions_UseConfigSerialization_
+  commentId: Overload:dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseConfigSerialization
+  fullName: dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseConfigSerialization
+  nameWithType: NinjectSerializationExtensions.UseConfigSerialization
+- uid: dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseJsonSerialization(Ninject.IKernel,System.Action{pyRevitLabs.Json.JsonSerializerSettings})
+  name: UseJsonSerialization(IKernel, Action<JsonSerializerSettings>)
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.html#dosymep_Bim4Everyone_SimpleServices_Serialization_NinjectSerializationExtensions_UseJsonSerialization_Ninject_IKernel_System_Action_pyRevitLabs_Json_JsonSerializerSettings__
+  commentId: M:dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseJsonSerialization(Ninject.IKernel,System.Action{pyRevitLabs.Json.JsonSerializerSettings})
+  name.vb: UseJsonSerialization(IKernel, Action(Of JsonSerializerSettings))
+  fullName: dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseJsonSerialization(Ninject.IKernel, System.Action<pyRevitLabs.Json.JsonSerializerSettings>)
+  fullName.vb: dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseJsonSerialization(Ninject.IKernel, System.Action(Of pyRevitLabs.Json.JsonSerializerSettings))
+  nameWithType: NinjectSerializationExtensions.UseJsonSerialization(IKernel, Action<JsonSerializerSettings>)
+  nameWithType.vb: NinjectSerializationExtensions.UseJsonSerialization(IKernel, Action(Of JsonSerializerSettings))
+- uid: dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseJsonSerialization*
+  name: UseJsonSerialization
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.html#dosymep_Bim4Everyone_SimpleServices_Serialization_NinjectSerializationExtensions_UseJsonSerialization_
+  commentId: Overload:dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseJsonSerialization
+  fullName: dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.UseJsonSerialization
+  nameWithType: NinjectSerializationExtensions.UseJsonSerialization
 - uid: dosymep.Bim4Everyone.SimpleServices.ServicesProvider
   name: ServicesProvider
   href: api/2023/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.html
@@ -5708,6 +5798,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SystemParams.SystemParam.Name
   fullName: dosymep.Bim4Everyone.SystemParams.SystemParam.Name
   nameWithType: SystemParam.Name
+- uid: dosymep.Bim4Everyone.SystemParams.SystemParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter,pyRevitLabs.Json.JsonSerializer)
+  name: SaveToJsonImpl(JsonWriter, JsonSerializer)
+  href: api/2023/dosymep.Bim4Everyone.SystemParams.SystemParam.html#dosymep_Bim4Everyone_SystemParams_SystemParam_SaveToJsonImpl_pyRevitLabs_Json_JsonWriter_pyRevitLabs_Json_JsonSerializer_
+  commentId: M:dosymep.Bim4Everyone.SystemParams.SystemParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter,pyRevitLabs.Json.JsonSerializer)
+  fullName: dosymep.Bim4Everyone.SystemParams.SystemParam.SaveToJsonImpl(pyRevitLabs.Json.JsonWriter, pyRevitLabs.Json.JsonSerializer)
+  nameWithType: SystemParam.SaveToJsonImpl(JsonWriter, JsonSerializer)
+- uid: dosymep.Bim4Everyone.SystemParams.SystemParam.SaveToJsonImpl*
+  name: SaveToJsonImpl
+  href: api/2023/dosymep.Bim4Everyone.SystemParams.SystemParam.html#dosymep_Bim4Everyone_SystemParams_SystemParam_SaveToJsonImpl_
+  commentId: Overload:dosymep.Bim4Everyone.SystemParams.SystemParam.SaveToJsonImpl
+  fullName: dosymep.Bim4Everyone.SystemParams.SystemParam.SaveToJsonImpl
+  nameWithType: SystemParam.SaveToJsonImpl
 - uid: dosymep.Bim4Everyone.SystemParams.SystemParam.StorageType
   name: StorageType
   href: api/2023/dosymep.Bim4Everyone.SystemParams.SystemParam.html#dosymep_Bim4Everyone_SystemParams_SystemParam_StorageType

@@ -553,6 +553,28 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Serialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.Serialization.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.yml",
       "output": {
         ".html": {
@@ -1660,6 +1682,28 @@
       "output": {
         ".html": {
           "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Serialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.Serialization.html"
         }
       },
       "version": "2021",
@@ -2792,6 +2836,28 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Serialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.Serialization.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.yml",
       "output": {
         ".html": {
@@ -3917,6 +3983,28 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Serialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.Serialization.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.ServicesProvider.yml",
       "output": {
         ".html": {
@@ -5035,6 +5123,28 @@
       "output": {
         ".html": {
           "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.ISystemParamsService.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Serialization.NinjectSerializationExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Serialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.Serialization.html"
         }
       },
       "version": "2024",
