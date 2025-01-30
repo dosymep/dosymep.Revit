@@ -4316,6 +4316,42 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSystemShortName
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSystemShortName
   nameWithType: SharedParamsConfig.VISSystemShortName
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSAdd
+  name: VISTaskSSAdd
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISTaskSSAdd
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSAdd
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSAdd
+  nameWithType: SharedParamsConfig.VISTaskSSAdd
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSAdd*
+  name: VISTaskSSAdd
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISTaskSSAdd_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSAdd
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSAdd
+  nameWithType: SharedParamsConfig.VISTaskSSAdd
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSDate
+  name: VISTaskSSDate
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISTaskSSDate
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSDate
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSDate
+  nameWithType: SharedParamsConfig.VISTaskSSDate
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSDate*
+  name: VISTaskSSDate
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISTaskSSDate_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSDate
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSDate
+  nameWithType: SharedParamsConfig.VISTaskSSDate
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSMark
+  name: VISTaskSSMark
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISTaskSSMark
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSMark
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSMark
+  nameWithType: SharedParamsConfig.VISTaskSSMark
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSMark*
+  name: VISTaskSSMark
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISTaskSSMark_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSMark
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISTaskSSMark
+  nameWithType: SharedParamsConfig.VISTaskSSMark
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISUnit
   name: VISUnit
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISUnit
