@@ -1360,6 +1360,36 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 UnitType = SharedParam.GetUnitType(nameof(ParkingSpaceClass)),
                 StorageType = StorageType.String
             };
+
+        /// <summary>
+        /// ФОП_ВИС_СС Дата задания
+        /// </summary>
+        public SharedParam VISTaskSSDate
+            => new SharedParam(nameof(VISTaskSSDate), new Guid("63cbf6de-c1cb-467d-829e-235fa74656bb")) {
+                Name = "ФОП_ВИС_СС Дата задания",
+                UnitType = SharedParam.GetUnitType(nameof(VISTaskSSDate)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_СС Марка задания
+        /// </summary>
+        public SharedParam VISTaskSSMark
+            => new SharedParam(nameof(VISTaskSSMark), new Guid("2722332b-529f-4f4e-b729-5420f7e403e0")) {
+                Name = "ФОП_ВИС_СС Марка задания",
+                UnitType = SharedParam.GetUnitType(nameof(VISTaskSSMark)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_СС Добавить к заданию
+        /// </summary>
+        public SharedParam VISTaskSSAdd
+            => new SharedParam(nameof(VISTaskSSAdd), new Guid("9384dc86-2e82-4cb1-9d19-3c367e57b6c0")) {
+                Name = "ФОП_ВИС_СС Добавить к заданию",
+                UnitType = SharedParam.GetUnitType(nameof(VISTaskSSAdd)),
+                StorageType = StorageType.Integer
+            };
 #endif
 
         /// <inheritdoc />
