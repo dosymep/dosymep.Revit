@@ -892,6 +892,12 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.ElementMirroring):
                     return SpecTypeId.Currency;
+                case nameof(SharedParamsConfig.VISTaskSSDate):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISTaskSSMark):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISTaskSSAdd):
+                    return SpecTypeId.Boolean.YesNo;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
