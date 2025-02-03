@@ -181,5 +181,27 @@ namespace dosymep.Revit {
 
             return BuiltInParameter.INVALID;
         }
+
+        /// <summary>
+        /// Заново объявляет общий параметр в проекте, меняя его группу
+        /// </summary>
+        /// <param name="definition">Определение параметра</param>
+        /// <param name="document">Документ проекта</param>
+        /// <param name="groupId">ID группы параметра</param>
+        public static void ReInsertToGroup(this InternalDefinition definition, Autodesk.Revit.DB.Document document, ForgeTypeId groupId) {
+            if(definition.GetGroupTypeId() != groupId) {
+                Binding binding = document.ParameterBindings.get_Item(definition);
+
+                if(binding is ElementBinding elementBinding) {
+                    CategorySet categories = elementBinding.Categories;
+
+                    if(binding is InstanceBinding) {
+                        document.ParameterBindings.ReInsert(definition, new InstanceBinding(categories), groupId);
+                    } else if(binding is TypeBinding) {
+                        document.ParameterBindings.ReInsert(definition, new TypeBinding(categories), groupId);
+                    }
+                }
+            }
+        }
     }
 }
