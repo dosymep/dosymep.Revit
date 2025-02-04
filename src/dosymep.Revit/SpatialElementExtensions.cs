@@ -26,20 +26,31 @@ namespace dosymep.Revit {
         /// <returns>Возвращает true если были найдены самопересечения, иначе false.</returns>
         public static bool IsSelfCrossBoundaries(this SpatialElement spatialElement,
             SpatialElementBoundaryOptions options = default) {
-            var boundarySegments = spatialElement.GetBoundarySegments(options ?? DefaultBoundaryOptions);
-            foreach(IList<BoundarySegment> segments in boundarySegments) {
-                var enumSegments = segments.Zip(segments.Skip(2),
-                    (leftSegment, rightSegment) => (leftSegment, rightSegment));
+            IList<IList<BoundarySegment>> boundarySegments =
+                spatialElement.GetBoundarySegments(options ?? DefaultBoundaryOptions);
 
-                foreach((BoundarySegment leftSegment, BoundarySegment rightSegment) in enumSegments) {
-                    Curve leftCurve = leftSegment.GetCurve();
-                    Curve rightCurve = rightSegment.GetCurve();
+            BoundarySegment[] segments = boundarySegments
+                .SelectMany(item => item)
+                .ToArray();
 
-                    SetComparisonResult intersect = leftCurve.Intersect(rightCurve,
-                        out IntersectionResultArray _);
+            for(int indexLeft = 0; indexLeft < segments.Length; indexLeft++) {
+                Curve leftCurve = segments[indexLeft].GetCurve();
 
-                    if(intersect == SetComparisonResult.Overlap) {
-                        return true;
+                for(int indexRight = 1; indexRight < segments.Length; indexRight++) {
+                    Curve rightCurve = segments[indexRight].GetCurve();
+                    SetComparisonResult intersect = leftCurve.Intersect(rightCurve);
+                    
+                    if(indexRight - 1 == indexLeft
+                       || indexRight + 1 == indexLeft) {
+                        if(intersect == SetComparisonResult.Equal
+                           || intersect == SetComparisonResult.Subset
+                           || intersect == SetComparisonResult.Superset) {
+                            return true;
+                        }
+                    } else {
+                        if(intersect == SetComparisonResult.Overlap) {
+                            return true;
+                        }
                     }
                 }
             }
