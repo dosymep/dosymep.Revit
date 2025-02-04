@@ -39,9 +39,16 @@ namespace dosymep.Revit {
                 for(int indexRight = 1; indexRight < segments.Length; indexRight++) {
                     Curve rightCurve = segments[indexRight].GetCurve();
                     SetComparisonResult intersect = leftCurve.Intersect(rightCurve);
+
+                    if(indexLeft == indexRight) {
+                        continue;
+                    }
+
+                    bool result = Math.Abs(indexLeft - indexRight) == 1
+                                  || indexLeft == segments.Length - 1
+                                  || indexRight == segments.Length - 1;
                     
-                    if(indexRight - 1 == indexLeft
-                       || indexRight + 1 == indexLeft) {
+                    if(result) {
                         if(intersect == SetComparisonResult.Equal
                            || intersect == SetComparisonResult.Subset
                            || intersect == SetComparisonResult.Superset) {
