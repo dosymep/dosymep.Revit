@@ -195,10 +195,10 @@ namespace dosymep.Revit {
                 if(binding is ElementBinding elementBinding) {
                     CategorySet categories = elementBinding.Categories;
 
-                    if(binding is InstanceBinding) {
-                        document.ParameterBindings.ReInsert(definition, new InstanceBinding(categories), groupId);
-                    } else if(binding is TypeBinding) {
+                    if(binding is TypeBinding) {
                         document.ParameterBindings.ReInsert(definition, new TypeBinding(categories), groupId);
+                    } else if(binding is InstanceBinding) {
+                        document.ParameterBindings.ReInsert(definition, new InstanceBinding(categories), groupId);
                     }
                 }
             }
