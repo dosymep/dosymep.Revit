@@ -1,12 +1,23 @@
 name: build
 
 on:
-  pull_request:
   workflow_dispatch:
+  
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '_build/**'
+      - '.github/workflows/*.yaml'
+  
+  pull_request_target:
+    branches: [ main ]
+    paths-ignore:
+      - '_build/**'
+      - '.github/workflows/*.yaml'
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
       
