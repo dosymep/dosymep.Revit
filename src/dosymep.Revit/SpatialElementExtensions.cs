@@ -37,7 +37,7 @@ namespace dosymep.Revit {
                 Curve leftCurve = segments[indexLeft].GetCurve();
 
                 for(int indexRight = 1; indexRight < segments.Length; indexRight++) {
-                    if(indexLeft - indexRight <= 0) {
+                    if(indexLeft - indexRight >= 0) {
                         // pass duplicates: 1-3 and 3-1
                         continue;
                     }
@@ -45,8 +45,8 @@ namespace dosymep.Revit {
                     // true for connected segments (they overlapped)
                     // but needs check they can be inside each other 
                     // others overlapped and cross
-                    bool result = Math.Abs(indexLeft - indexRight) == 1
-                                  || indexLeft + indexRight == segments.Length - 1;
+                    bool result = indexRight - indexLeft == 1
+                                  || (indexRight - indexLeft) == (segments.Length - 1);
                     
                     Curve rightCurve = segments[indexRight].GetCurve();
                     SetComparisonResult intersect = leftCurve.Intersect(rightCurve);
