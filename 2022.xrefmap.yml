@@ -2843,6 +2843,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ApartmentLivingAreaFix
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ApartmentLivingAreaFix
   nameWithType: SharedParamsConfig.ApartmentLivingAreaFix
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ApartmentNameExtra
+  name: ApartmentNameExtra
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_ApartmentNameExtra
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ApartmentNameExtra
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ApartmentNameExtra
+  nameWithType: SharedParamsConfig.ApartmentNameExtra
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ApartmentNameExtra*
+  name: ApartmentNameExtra
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_ApartmentNameExtra_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ApartmentNameExtra
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ApartmentNameExtra
+  nameWithType: SharedParamsConfig.ApartmentNameExtra
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ApartmentNumber
   name: ApartmentNumber
   href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_ApartmentNumber
