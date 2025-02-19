@@ -1397,7 +1397,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         public SharedParam ApartmentNameExtra
             => new SharedParam(nameof(ApartmentNameExtra), new Guid("11552a57-bced-445f-a439-8353251d9128")) {
                 Name = "ФОП_Доп. имя помещения",
-                UnitType = SharedParam.GetUnitType(nameof(ApartmentNumberExtra)),
+                UnitType = SharedParam.GetUnitType(nameof(ApartmentNameExtra)),
                 StorageType = StorageType.String
             };
 #endif
