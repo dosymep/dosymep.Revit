@@ -636,6 +636,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.ApartmentNumberExtra):
                     return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.ApartmentNameExtra):
+                    return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.Level):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.RoomsCount):
