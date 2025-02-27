@@ -79,11 +79,21 @@ namespace dosymep.Bim4Everyone.Schedules {
         /// КВГ_(Проверка) Тип группы
         /// </summary>
         public ScheduleRule RoomsCheckGroupTypes { get; internal set; } = new ScheduleRule() { ScheduleName = "КВГ_(Проверка) Тип группы" };
-        
+
+        /// <summary>
+        /// КВГ_(Проверка) Фиксированные площади
+        /// </summary>
+        public ScheduleRule RoomsCheckFixedAreas{ get; internal set; } = new ScheduleRule() { ScheduleName = "КВГ_(Проверка) Фиксированные площади" };
+
         /// <summary>
         /// КВГ_Многоуровневые квартиры
         /// </summary>
         public ScheduleRule RoomsMultiLevel { get; internal set; } = new ScheduleRule() { ScheduleName = "КВГ_Многоуровневые квартиры" };
+
+        /// <summary>
+        /// КВГ_Летние помещения
+        /// </summary>
+        public ScheduleRule RoomsSummer { get; internal set; } = new ScheduleRule() { ScheduleName = "КВГ_Летние помещения" };
 
         #endregion
 
