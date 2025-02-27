@@ -191,7 +191,8 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 KeyRevitParamName = nameof(ProjectParamsConfig.FireCompartmentName),
 
                 RequiredSharedParams = new List<string>() {
-                    nameof(SharedParamsConfig.FireCompartmentShortName)
+                    nameof(SharedParamsConfig.FireCompartmentShortName),
+                    nameof(SharedParamsConfig.RoomBuildingShortName)
                 },
                 RequiredProjectParams = new List<string>() { },
 
