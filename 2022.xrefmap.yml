@@ -2420,6 +2420,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsCheckDeviationAreas
   fullName: dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsCheckDeviationAreas
   nameWithType: SchedulesConfig.RoomsCheckDeviationAreas
+- uid: dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsCheckFixedAreas
+  name: RoomsCheckFixedAreas
+  href: api/2022/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html#dosymep_Bim4Everyone_Schedules_SchedulesConfig_RoomsCheckFixedAreas
+  commentId: P:dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsCheckFixedAreas
+  fullName: dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsCheckFixedAreas
+  nameWithType: SchedulesConfig.RoomsCheckFixedAreas
+- uid: dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsCheckFixedAreas*
+  name: RoomsCheckFixedAreas
+  href: api/2022/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html#dosymep_Bim4Everyone_Schedules_SchedulesConfig_RoomsCheckFixedAreas_
+  commentId: Overload:dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsCheckFixedAreas
+  fullName: dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsCheckFixedAreas
+  nameWithType: SchedulesConfig.RoomsCheckFixedAreas
 - uid: dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsCheckGroup
   name: RoomsCheckGroup
   href: api/2022/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html#dosymep_Bim4Everyone_Schedules_SchedulesConfig_RoomsCheckGroup
@@ -2540,6 +2552,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsMultiLevel
   fullName: dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsMultiLevel
   nameWithType: SchedulesConfig.RoomsMultiLevel
+- uid: dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsSummer
+  name: RoomsSummer
+  href: api/2022/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html#dosymep_Bim4Everyone_Schedules_SchedulesConfig_RoomsSummer
+  commentId: P:dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsSummer
+  fullName: dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsSummer
+  nameWithType: SchedulesConfig.RoomsSummer
+- uid: dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsSummer*
+  name: RoomsSummer
+  href: api/2022/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html#dosymep_Bim4Everyone_Schedules_SchedulesConfig_RoomsSummer_
+  commentId: Overload:dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsSummer
+  fullName: dosymep.Bim4Everyone.Schedules.SchedulesConfig.RoomsSummer
+  nameWithType: SchedulesConfig.RoomsSummer
 - uid: dosymep.Bim4Everyone.SharedParams
   name: dosymep.Bim4Everyone.SharedParams
   href: api/2022/dosymep.Bim4Everyone.SharedParams.html
