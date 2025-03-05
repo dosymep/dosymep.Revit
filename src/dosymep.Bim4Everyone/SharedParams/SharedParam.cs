@@ -900,6 +900,38 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISTaskSSAdd):
                     return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.StampSheetRevision1):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevision2):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevision3):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevision4):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevision5):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevision6):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevision7):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevision8):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevisionValue1):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevisionValue2):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevisionValue3):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevisionValue4):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevisionValue5):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevisionValue6):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevisionValue7):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.StampSheetRevisionValue8):
+                    return SpecTypeId.String.Text;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
