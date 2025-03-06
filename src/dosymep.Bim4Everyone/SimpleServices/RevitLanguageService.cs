@@ -7,6 +7,8 @@ using dosymep.SimpleServices;
 
 namespace dosymep.Bim4Everyone.SimpleServices {
     internal class RevitLanguageService : ILanguageService {
+        public event Action<CultureInfo> LanguageChanged;
+        
         private readonly Application _application;
 
         public RevitLanguageService(Application application) {
