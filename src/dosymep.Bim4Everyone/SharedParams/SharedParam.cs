@@ -183,7 +183,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.Level):
                     return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.RoomsCount):
-                    return UnitType.UT_Number;
+                    return UnitType.UT_Currency;
                 case nameof(SharedParamsConfig.ApartmentGroupName):
                     return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.RoomGroupShortName):
@@ -411,7 +411,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.Level):
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.RoomsCount):
-                    return SpecTypeId.Number;
+                    return SpecTypeId.Currency;
                 case nameof(SharedParamsConfig.ApartmentGroupName):
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.RoomGroupShortName):
@@ -641,7 +641,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.Level):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.RoomsCount):
-                    return SpecTypeId.Int.Integer;
+                    return SpecTypeId.Currency;
                 case nameof(SharedParamsConfig.ApartmentGroupName):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.RoomGroupShortName):
