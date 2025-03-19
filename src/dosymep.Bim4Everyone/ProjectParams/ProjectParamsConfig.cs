@@ -157,6 +157,16 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             };
 
         /// <summary>
+        /// КВГ_ПМЩ_Фиксация этажа
+        /// </summary>
+        public ProjectParam IsRoomLevelFix
+            => new ProjectParam(nameof(IsRoomLevelFix)) {
+                Name = "КВГ_ПМЩ_Фиксация этажа",
+                UnitType = ProjectParam.GetUnitType(nameof(IsRoomLevelFix)),
+                StorageType = StorageType.Integer
+            };
+
+        /// <summary>
         /// КВГ_Приоритет нумерации
         /// </summary>
         public ProjectParam NumberingOrder
