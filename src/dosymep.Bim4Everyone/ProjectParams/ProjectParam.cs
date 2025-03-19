@@ -90,7 +90,7 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
         /// <inheritdoc />
         protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) { }
-        
+
         #endregion
 
 #if REVIT2020
@@ -135,6 +135,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 case nameof(ProjectParamsConfig.ApartmentAreaMaxSpec):
                     return UnitType.UT_Area;
                 case nameof(ProjectParamsConfig.IsRoomNumberFix):
+                    return UnitType.UT_Number;
+                case nameof(ProjectParamsConfig.IsRoomLevelFix):
                     return UnitType.UT_Number;
                 case nameof(ProjectParamsConfig.NumberingOrder):
                     return UnitType.UT_Number;
@@ -211,6 +213,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                     return SpecTypeId.Area;
                 case nameof(ProjectParamsConfig.IsRoomNumberFix):
                     return SpecTypeId.Number;
+                case nameof(ProjectParamsConfig.IsRoomLevelFix):
+                    return SpecTypeId.Number;
                 case nameof(ProjectParamsConfig.NumberingOrder):
                     return SpecTypeId.Number;
                 case nameof(ProjectParamsConfig.IsRoomMainLevel):
@@ -267,6 +271,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 case nameof(ProjectParamsConfig.IsRoomLiving):
                     return SpecTypeId.Boolean.YesNo;
                 case nameof(ProjectParamsConfig.IsRoomNumberFix):
+                    return SpecTypeId.Boolean.YesNo;
+                case nameof(ProjectParamsConfig.IsRoomLevelFix):
                     return SpecTypeId.Boolean.YesNo;
                 case nameof(ProjectParamsConfig.NumberingOrder):
                     return SpecTypeId.Int.Integer;
