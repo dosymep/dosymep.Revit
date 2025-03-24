@@ -1667,6 +1667,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomBalcony
   fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomBalcony
   nameWithType: ProjectParamsConfig.IsRoomBalcony
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomLevelFix
+  name: IsRoomLevelFix
+  href: api/2022/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_IsRoomLevelFix
+  commentId: P:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomLevelFix
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomLevelFix
+  nameWithType: ProjectParamsConfig.IsRoomLevelFix
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomLevelFix*
+  name: IsRoomLevelFix
+  href: api/2022/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_IsRoomLevelFix_
+  commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomLevelFix
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomLevelFix
+  nameWithType: ProjectParamsConfig.IsRoomLevelFix
 - uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomLiving
   name: IsRoomLiving
   href: api/2022/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_IsRoomLiving
