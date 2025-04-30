@@ -1392,6 +1392,16 @@ namespace dosymep.Bim4Everyone.SharedParams {
             };
 
         /// <summary>
+        /// ФОП_ВИС_Потери давления
+        /// </summary>
+        public SharedParam VISPressureLoss
+            => new SharedParam(nameof(VISPressureLoss), new Guid("d87b6933-00c5-421e-859e-60ff215174c0")) {
+                Name = "ФОП_ВИС_Потери давления",
+                UnitType = SharedParam.GetUnitType(nameof(VISPressureLoss)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
         /// ФОП_Доп. имя помещения
         /// </summary>
         public SharedParam ApartmentNameExtra
