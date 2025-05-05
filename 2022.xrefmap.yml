@@ -4496,6 +4496,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISPosition
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISPosition
   nameWithType: SharedParamsConfig.VISPosition
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISPressureLoss
+  name: VISPressureLoss
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISPressureLoss
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISPressureLoss
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISPressureLoss
+  nameWithType: SharedParamsConfig.VISPressureLoss
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISPressureLoss*
+  name: VISPressureLoss
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISPressureLoss_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISPressureLoss
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISPressureLoss
+  nameWithType: SharedParamsConfig.VISPressureLoss
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbers
   name: VISSpecNumbers
   href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSpecNumbers
