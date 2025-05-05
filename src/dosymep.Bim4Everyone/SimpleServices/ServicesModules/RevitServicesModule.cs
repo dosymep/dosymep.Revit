@@ -1,7 +1,10 @@
 ﻿using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.UI;
 
+using dosymep.Bim4Everyone.ProjectParams;
+using dosymep.Bim4Everyone.SharedParams;
 using dosymep.Bim4Everyone.SimpleServices.InvokeButtons;
+using dosymep.Bim4Everyone.SystemParams;
 using dosymep.SimpleServices;
 
 using Ninject.Modules;
@@ -18,15 +21,15 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
             Bind<UIApplication>()
                 .ToConstant(_uiApplication)
                 .InTransientScope();
-            
+
             Bind<Application>()
                 .ToConstant(_uiApplication.Application)
                 .InTransientScope();
-            
+
             Bind<ILanguageService>()
                 .To<RevitLanguageService>()
                 .InSingletonScope();
-            
+
             Bind<IPlatformCommandsService>()
                 .To<PlatformCommandsService>();
 
@@ -37,6 +40,22 @@ namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
 
             Bind<IBimModelPartsService>()
                 .To<BimModelPartsService>()
+                .InSingletonScope();
+
+            Bind<IRevitParamFactory>()
+                .To<RevitParamFactory>()
+                .InSingletonScope();
+
+            Bind<ISystemParamsService>()
+                .ToConstant(SystemParamsConfig.Instance)
+                .InSingletonScope();
+
+            Bind<ISharedParamsService>()
+                .ToConstant(SharedParamsConfig.Instance)
+                .InSingletonScope();
+
+            Bind<IProjectParamsService>()
+                .ToConstant(ProjectParamsConfig.Instance)
                 .InSingletonScope();
         }
     }
