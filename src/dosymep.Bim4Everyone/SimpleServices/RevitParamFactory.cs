@@ -38,20 +38,23 @@ namespace dosymep.Bim4Everyone.SimpleServices {
         }
 
         /// <inheritdoc />
-        public RevitParam Create(Document document, Definition paramDefinition) {
+        public bool CanCreate(Document document, ElementId paramId) {
             if(document == null) {
-                throw new ArgumentNullException(nameof(document));
+                return false;
             }
 
-            if(paramDefinition == null) {
-                throw new ArgumentNullException(nameof(paramDefinition));
+            if(paramId.IsNull()) {
+                return false;
             }
 
-            return Create(document, paramDefinition.GetElementId());
+            if(paramId.IsSystemId()) {
+                return true;
+            }
+
+            return document.GetElement(paramId) is ParameterElement;
         }
 
-        /// <inheritdoc />
-        public RevitParam Create(Document document, ParameterElement paramElement) {
+        private RevitParam Create(Document document, ParameterElement paramElement) {
             if(document == null) {
                 throw new ArgumentNullException(nameof(document));
             }
