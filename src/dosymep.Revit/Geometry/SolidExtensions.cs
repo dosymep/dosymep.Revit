@@ -44,15 +44,16 @@ namespace dosymep.Revit.Geometry {
         }
 
         /// <summary>
-        /// Возвращает объем <see cref="Solid"/>.
+        /// Возвращает объем <see cref="Solid"/> или значение по умолчанию, если объем не может быть определен.
         /// </summary>
         /// <param name="solid"><see cref="Solid"/>, для которого вычисляется объем.</param>
-        /// <returns>Возвращает объем <see cref="Solid"/>, или null, если объем не может быть определен.</returns>
-        public static double? GetVolumeOrDefault(this Solid solid) {
+        /// <param name="defaultValue">Значение по умолчанию, возвращаемое в случае, если объем <see cref="Solid"/> не может быть определен.</param>
+        /// <returns>Возвращает объем <see cref="Solid"/>, или значение по умолчанию, если объем не может быть определен.</returns>
+        public static double? GetVolumeOrDefault(this Solid solid, double? defaultValue = null) {
             try {
-                return solid?.Volume;
+                return solid?.Volume ?? defaultValue;
             } catch(InvalidOperationException) {
-                return null;
+                return defaultValue;
             }
         }
     }
