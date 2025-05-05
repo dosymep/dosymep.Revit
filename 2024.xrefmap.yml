@@ -5651,6 +5651,36 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.Title
   fullName: dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.Title
   nameWithType: IRevitOutputWindow.Title
+- uid: dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory
+  name: IRevitParamFactory
+  href: api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.html
+  commentId: T:dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory
+  fullName: dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory
+  nameWithType: IRevitParamFactory
+- uid: dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.CanCreate(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId)
+  name: CanCreate(Document, ElementId)
+  href: api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.html#dosymep_Bim4Everyone_SimpleServices_IRevitParamFactory_CanCreate_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_ElementId_
+  commentId: M:dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.CanCreate(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId)
+  fullName: dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.CanCreate(Autodesk.Revit.DB.Document, Autodesk.Revit.DB.ElementId)
+  nameWithType: IRevitParamFactory.CanCreate(Document, ElementId)
+- uid: dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.CanCreate*
+  name: CanCreate
+  href: api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.html#dosymep_Bim4Everyone_SimpleServices_IRevitParamFactory_CanCreate_
+  commentId: Overload:dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.CanCreate
+  fullName: dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.CanCreate
+  nameWithType: IRevitParamFactory.CanCreate
+- uid: dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.Create(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId)
+  name: Create(Document, ElementId)
+  href: api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.html#dosymep_Bim4Everyone_SimpleServices_IRevitParamFactory_Create_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_ElementId_
+  commentId: M:dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.Create(Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ElementId)
+  fullName: dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.Create(Autodesk.Revit.DB.Document, Autodesk.Revit.DB.ElementId)
+  nameWithType: IRevitParamFactory.Create(Document, ElementId)
+- uid: dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.Create*
+  name: Create
+  href: api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.html#dosymep_Bim4Everyone_SimpleServices_IRevitParamFactory_Create_
+  commentId: Overload:dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.Create
+  fullName: dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.Create
+  nameWithType: IRevitParamFactory.Create
 - uid: dosymep.Bim4Everyone.SimpleServices.IRevitParamsService
   name: IRevitParamsService
   href: api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.html

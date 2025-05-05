@@ -696,6 +696,21 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory",
+      "Summary": "<p sourcefile=\"api/2020/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.yml\" sourcestartlinenumber=\"1\">Определяет фабрику для создания экземпляров RevitParam.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.yml",
       "output": {
         ".html": {
@@ -2233,6 +2248,21 @@
       "IsMRef": true,
       "Title": "dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow",
       "Summary": "<p sourcefile=\"api/2021/dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.yml\" sourcestartlinenumber=\"1\">Интерфейс неблокирующего окна вывода сообщений.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory",
+      "Summary": "<p sourcefile=\"api/2021/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.yml\" sourcestartlinenumber=\"1\">Определяет фабрику для создания экземпляров RevitParam.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3791,6 +3821,21 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory",
+      "Summary": "<p sourcefile=\"api/2022/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.yml\" sourcestartlinenumber=\"1\">Определяет фабрику для создания экземпляров RevitParam.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.yml",
       "output": {
         ".html": {
@@ -5346,6 +5391,21 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory",
+      "Summary": "<p sourcefile=\"api/2023/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.yml\" sourcestartlinenumber=\"1\">Определяет фабрику для создания экземпляров RevitParam.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IRevitParamsService.yml",
       "output": {
         ".html": {
@@ -6898,6 +6958,21 @@
       "IsMRef": true,
       "Title": "dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow",
       "Summary": "<p sourcefile=\"api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitOutputWindow.yml\" sourcestartlinenumber=\"1\">Интерфейс неблокирующего окна вывода сообщений.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory",
+      "Summary": "<p sourcefile=\"api/2024/dosymep.Bim4Everyone.SimpleServices.IRevitParamFactory.yml\" sourcestartlinenumber=\"1\">Определяет фабрику для создания экземпляров RevitParam.</p>\n"
     },
     {
       "type": "ManagedReference",
