@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 using Autodesk.Revit.DB;
+
+using InvalidOperationException = Autodesk.Revit.Exceptions.InvalidOperationException;
 
 namespace dosymep.Revit.Geometry {
     /// <summary>
@@ -38,6 +41,20 @@ namespace dosymep.Revit.Geometry {
 
             result.Add(union);
             return result;
+        }
+
+        /// <summary>
+        /// Возвращает объем <see cref="Solid"/> или значение по умолчанию, если объем не может быть определен.
+        /// </summary>
+        /// <param name="solid"><see cref="Solid"/>, для которого вычисляется объем.</param>
+        /// <param name="defaultValue">Значение по умолчанию, возвращаемое в случае, если объем <see cref="Solid"/> не может быть определен.</param>
+        /// <returns>Возвращает объем <see cref="Solid"/>, или значение по умолчанию, если объем не может быть определен.</returns>
+        public static double? GetVolumeOrDefault(this Solid solid, double? defaultValue = null) {
+            try {
+                return solid?.Volume ?? defaultValue;
+            } catch(InvalidOperationException) {
+                return defaultValue;
+            }
         }
     }
 }
