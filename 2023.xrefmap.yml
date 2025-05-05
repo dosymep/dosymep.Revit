@@ -8234,6 +8234,21 @@ references:
   commentId: Overload:dosymep.Revit.Geometry.SolidExtensions.GetTransformedBoundingBox
   fullName: dosymep.Revit.Geometry.SolidExtensions.GetTransformedBoundingBox
   nameWithType: SolidExtensions.GetTransformedBoundingBox
+- uid: dosymep.Revit.Geometry.SolidExtensions.GetVolumeOrDefault(Autodesk.Revit.DB.Solid,System.Nullable{System.Double})
+  name: GetVolumeOrDefault(Solid, double?)
+  href: api/2023/dosymep.Revit.Geometry.SolidExtensions.html#dosymep_Revit_Geometry_SolidExtensions_GetVolumeOrDefault_Autodesk_Revit_DB_Solid_System_Nullable_System_Double__
+  commentId: M:dosymep.Revit.Geometry.SolidExtensions.GetVolumeOrDefault(Autodesk.Revit.DB.Solid,System.Nullable{System.Double})
+  name.vb: GetVolumeOrDefault(Solid, Double?)
+  fullName: dosymep.Revit.Geometry.SolidExtensions.GetVolumeOrDefault(Autodesk.Revit.DB.Solid, double?)
+  fullName.vb: dosymep.Revit.Geometry.SolidExtensions.GetVolumeOrDefault(Autodesk.Revit.DB.Solid, Double?)
+  nameWithType: SolidExtensions.GetVolumeOrDefault(Solid, double?)
+  nameWithType.vb: SolidExtensions.GetVolumeOrDefault(Solid, Double?)
+- uid: dosymep.Revit.Geometry.SolidExtensions.GetVolumeOrDefault*
+  name: GetVolumeOrDefault
+  href: api/2023/dosymep.Revit.Geometry.SolidExtensions.html#dosymep_Revit_Geometry_SolidExtensions_GetVolumeOrDefault_
+  commentId: Overload:dosymep.Revit.Geometry.SolidExtensions.GetVolumeOrDefault
+  fullName: dosymep.Revit.Geometry.SolidExtensions.GetVolumeOrDefault
+  nameWithType: SolidExtensions.GetVolumeOrDefault
 - uid: dosymep.Revit.ParamElementExtensions
   name: ParamElementExtensions
   href: api/2023/dosymep.Revit.ParamElementExtensions.html
