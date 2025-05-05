@@ -900,6 +900,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISTaskSSAdd):
                     return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.VISPressureLoss):
+                    return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.StampSheetRevision1):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.StampSheetRevision2):
