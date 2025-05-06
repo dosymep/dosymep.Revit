@@ -23,9 +23,9 @@ namespace dosymep.Revit {
         /// </summary>
         /// <param name="spatialElement">Проверяемый элемент.</param>
         /// <param name="options">Опции получение границ элемента.</param>
-        /// <returns>Возвращает true если были найдены самопересечения, иначе false.</returns>
+        /// <returns>Возвращает true, если были найдены самопересечения, иначе false.</returns>
         public static bool IsSelfCrossBoundaries(this SpatialElement spatialElement,
-            SpatialElementBoundaryOptions options = default) {
+            SpatialElementBoundaryOptions options = null) {
             IList<IList<BoundarySegment>> boundarySegments =
                 spatialElement.GetBoundarySegments(options ?? DefaultBoundaryOptions);
 
@@ -47,14 +47,16 @@ namespace dosymep.Revit {
                     // others overlapped and cross
                     bool result = indexRight - indexLeft == 1
                                   || (indexRight - indexLeft) == (segments.Length - 1);
-                    
+
                     Curve rightCurve = segments[indexRight].GetCurve();
                     SetComparisonResult intersect = leftCurve.Intersect(rightCurve);
                     
+                    // SetComparisonResult.Subset
+                    // SetComparisonResult.Superset
+                    // removed because the line should be unbound
+
                     if(result) {
-                        if(intersect == SetComparisonResult.Equal
-                           || intersect == SetComparisonResult.Subset
-                           || intersect == SetComparisonResult.Superset) {
+                        if(intersect == SetComparisonResult.Equal) {
                             return true;
                         }
                     } else {
@@ -69,7 +71,7 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
-        /// Проверяет является элемент избыточным.
+        /// Проверяет является ли элемент избыточным.
         /// </summary>
         /// <param name="spatialElement">Проверяемый элемент.</param>
         /// <param name="options">Опции получение границ элемента.</param>
