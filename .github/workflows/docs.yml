@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
         
@@ -40,11 +40,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       # Upload docs site: https://github.com/marketplace/actions/upload-a-build-artifact
-      - name: Upload Artifacts
+      - name: Upload docs
         uses: actions/upload-artifact@v4
         with:
           name: docs-site
           path: docs/_site
+          
+      # Upload docs site: https://github.com/marketplace/actions/upload-a-build-artifact
+      - name: Upload libraries
+        uses: actions/upload-artifact@v4
+        with:
+          name: bin
+          path: bin
   
   deploy:
     concurrency: ci-${{ github.ref }}

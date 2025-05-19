@@ -91,8 +91,8 @@ class Build : NukeBuild, IHazSolution {
         .OnlyWhenStatic(() => IsServerBuild)
         .Executes(() => {
             // потому что основные пакеты лежат в библиотеке pyRevit
-            Git($"clone https://github.com/pyrevitlabs/pyRevit.git -b master {pyRevitOutput}");
-            Git($"clone https://github.com/dosymep/BIM4Everyone.git -b master {Bim4EveryoneOutput}");
+            Git($"clone https://github.com/pyrevitlabs/pyRevit.git --depth 1 --branch v4.8.16.24121+2117 {pyRevitOutput}");
+            Git($"clone https://github.com/dosymep/BIM4Everyone.git --depth 1 --branch master {Bim4EveryoneOutput}");
         });
 
     Target Compile => _ => _
