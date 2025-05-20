@@ -8495,6 +8495,18 @@ references:
   commentId: Overload:dosymep.Revit.ParamExtensions.IsTypeBinding
   fullName: dosymep.Revit.ParamExtensions.IsTypeBinding
   nameWithType: ParamExtensions.IsTypeBinding
+- uid: dosymep.Revit.ParamExtensions.ReInsertToGroup(Autodesk.Revit.DB.InternalDefinition,Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ForgeTypeId)
+  name: ReInsertToGroup(InternalDefinition, Document, ForgeTypeId)
+  href: api/2024/dosymep.Revit.ParamExtensions.html#dosymep_Revit_ParamExtensions_ReInsertToGroup_Autodesk_Revit_DB_InternalDefinition_Autodesk_Revit_DB_Document_Autodesk_Revit_DB_ForgeTypeId_
+  commentId: M:dosymep.Revit.ParamExtensions.ReInsertToGroup(Autodesk.Revit.DB.InternalDefinition,Autodesk.Revit.DB.Document,Autodesk.Revit.DB.ForgeTypeId)
+  fullName: dosymep.Revit.ParamExtensions.ReInsertToGroup(Autodesk.Revit.DB.InternalDefinition, Autodesk.Revit.DB.Document, Autodesk.Revit.DB.ForgeTypeId)
+  nameWithType: ParamExtensions.ReInsertToGroup(InternalDefinition, Document, ForgeTypeId)
+- uid: dosymep.Revit.ParamExtensions.ReInsertToGroup*
+  name: ReInsertToGroup
+  href: api/2024/dosymep.Revit.ParamExtensions.html#dosymep_Revit_ParamExtensions_ReInsertToGroup_
+  commentId: Overload:dosymep.Revit.ParamExtensions.ReInsertToGroup
+  fullName: dosymep.Revit.ParamExtensions.ReInsertToGroup
+  nameWithType: ParamExtensions.ReInsertToGroup
 - uid: dosymep.Revit.ParamExtensions.RemoveValue(Autodesk.Revit.DB.Parameter)
   name: RemoveValue(Parameter)
   href: api/2024/dosymep.Revit.ParamExtensions.html#dosymep_Revit_ParamExtensions_RemoveValue_Autodesk_Revit_DB_Parameter_
