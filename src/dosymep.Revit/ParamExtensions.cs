@@ -183,6 +183,32 @@ namespace dosymep.Revit {
             return BuiltInParameter.INVALID;
         }
 
+#if REVIT2020 || REVIT2021
+        /// <summary>
+        /// Заново объявляет общий параметр в проекте, меняя его группу
+        /// </summary>
+        /// <param name="definition">Определение параметра</param>
+        /// <param name="document">Документ проекта</param>
+        /// <param name="group">Группа параметра</param>
+        public static void ReInsertToGroup(this Definition definition, Autodesk.Revit.DB.Document document, BuiltInParameterGroup group) {
+            if (definition.ParameterGroup != group) {
+                Binding binding = document.ParameterBindings.get_Item(definition);
+                if (binding is ElementBinding elementBinding) {
+                    CategorySet categories = elementBinding.Categories;
+
+                    document.ParameterBindings.Remove(definition);
+
+                    if (binding is InstanceBinding) {
+                        document.ParameterBindings.Insert(definition, new InstanceBinding(categories), group);
+                    } else if (binding is TypeBinding) {
+                        document.ParameterBindings.Insert(definition, new TypeBinding(categories), group);
+                    }
+                }
+            }
+        }
+    }
+}
+#else
         /// <summary>
         /// Заново объявляет общий параметр в проекте, меняя его группу
         /// </summary>
@@ -206,3 +232,4 @@ namespace dosymep.Revit {
         }
     }
 }
+#endif
