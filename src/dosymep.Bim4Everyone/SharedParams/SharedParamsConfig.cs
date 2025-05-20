@@ -329,7 +329,7 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// </summary>
         public SharedParam RoomsCount
             => new SharedParam(nameof(RoomsCount), new Guid("2498f7c7-de06-42c7-93dc-5e269cadc202")) {
-                Name = "ФОП_Количество комнат", UnitType = SharedParam.GetUnitType(nameof(RoomsCount)), StorageType = StorageType.Integer
+                Name = "ФОП_Количество комнат", UnitType = SharedParam.GetUnitType(nameof(RoomsCount)), StorageType = StorageType.Double
             };
 
         /// <summary>
@@ -1390,7 +1390,187 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 UnitType = SharedParam.GetUnitType(nameof(VISTaskSSAdd)),
                 StorageType = StorageType.Integer
             };
-#endif
+
+        /// <summary>
+        /// ФОП_ВИС_Потери давления
+        /// </summary>
+        public SharedParam VISPressureLoss
+            => new SharedParam(nameof(VISPressureLoss), new Guid("d87b6933-00c5-421e-859e-60ff215174c0")) {
+                Name = "ФОП_ВИС_Потери давления",
+                UnitType = SharedParam.GetUnitType(nameof(VISPressureLoss)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_Доп. имя помещения
+        /// </summary>
+        public SharedParam ApartmentNameExtra
+            => new SharedParam(nameof(ApartmentNameExtra), new Guid("11552a57-bced-445f-a439-8353251d9128")) {
+                Name = "ФОП_Доп. имя помещения",
+                UnitType = SharedParam.GetUnitType(nameof(ApartmentNameExtra)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// Ш.№Изм1
+        /// </summary>
+        public SharedParam StampSheetRevision1
+            => new SharedParam(nameof(StampSheetRevision1), new Guid("c7be433c-10d5-40c8-a5c2-1944fecd644e")) {
+                Name = "Ш.№Изм1",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevision1)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.№Изм2
+        /// </summary>
+        public SharedParam StampSheetRevision2
+            => new SharedParam(nameof(StampSheetRevision2), new Guid("e450f1c1-89d2-4f02-8c57-b1e2b9b3d83d")) {
+                Name = "Ш.№Изм2",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevision2)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.№Изм3
+        /// </summary>
+        public SharedParam StampSheetRevision3
+            => new SharedParam(nameof(StampSheetRevision3), new Guid("957fcafe-d7bf-4301-898b-6f06c482b3e4")) {
+                Name = "Ш.№Изм3",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevision3)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.№Изм4
+        /// </summary>
+        public SharedParam StampSheetRevision4
+            => new SharedParam(nameof(StampSheetRevision4), new Guid("be5f1ade-514a-4b32-b250-6a0842292997")) {
+                Name = "Ш.№Изм4",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevision4)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.№Изм5
+        /// </summary>
+        public SharedParam StampSheetRevision5
+            => new SharedParam(nameof(StampSheetRevision5), new Guid("11fea1fd-5ea4-4d57-90ce-2d72b2f07aba")) {
+                Name = "Ш.№Изм5",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevision5)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.№Изм6
+        /// </summary>
+        public SharedParam StampSheetRevision6
+            => new SharedParam(nameof(StampSheetRevision6), new Guid("b391d9fa-8fbf-4574-8040-ee567add42ed")) {
+                Name = "Ш.№Изм6",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevision6)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.№Изм7
+        /// </summary>
+        public SharedParam StampSheetRevision7
+            => new SharedParam(nameof(StampSheetRevision7), new Guid("b1042735-d74e-40a5-8314-23a01447755c")) {
+                Name = "Ш.№Изм7",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevision7)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.№Изм8
+        /// </summary>
+        public SharedParam StampSheetRevision8
+            => new SharedParam(nameof(StampSheetRevision8), new Guid("f6aea3f2-aa0e-415c-8fd4-d4db7a9a8be8")) {
+                Name = "Ш.№Изм8",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevision8)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.Значение.Изм/Зам№1
+        /// </summary>
+        public SharedParam StampSheetRevisionValue1
+            => new SharedParam(nameof(StampSheetRevisionValue1), new Guid("c6902b30-6190-44de-9f94-d5149b787310")) {
+                Name = "Ш.Значение.Изм/Зам№1",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevisionValue1)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.Значение.Изм/Зам№2
+        /// </summary>
+        public SharedParam StampSheetRevisionValue2
+            => new SharedParam(nameof(StampSheetRevisionValue2), new Guid("7f7e628c-2739-4752-a21c-64f59f1b28bc")) {
+                Name = "Ш.Значение.Изм/Зам№2",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevisionValue2)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.Значение.Изм/Зам№3
+        /// </summary>
+        public SharedParam StampSheetRevisionValue3
+            => new SharedParam(nameof(StampSheetRevisionValue3), new Guid("62311fd6-c076-4ed0-843a-3294e9ffa8fe")) {
+                Name = "Ш.Значение.Изм/Зам№3",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevisionValue3)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.Значение.Изм/Зам№4
+        /// </summary>
+        public SharedParam StampSheetRevisionValue4
+            => new SharedParam(nameof(StampSheetRevisionValue4), new Guid("38c8024e-dbf1-4ca3-af63-b3b008269159")) {
+                Name = "Ш.Значение.Изм/Зам№4",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevisionValue4)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.Значение.Изм/Зам№5
+        /// </summary>
+        public SharedParam StampSheetRevisionValue5
+            => new SharedParam(nameof(StampSheetRevisionValue5), new Guid("41aeccc5-6ea5-444e-bc06-2b232188bc00")) {
+                Name = "Ш.Значение.Изм/Зам№5",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevisionValue5)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.Значение.Изм/Зам№6
+        /// </summary>
+        public SharedParam StampSheetRevisionValue6
+            => new SharedParam(nameof(StampSheetRevisionValue6), new Guid("50950e51-078f-4a21-8c45-a847dc3207d8")) {
+                Name = "Ш.Значение.Изм/Зам№6",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevisionValue6)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.Значение.Изм/Зам№7
+        /// </summary>
+        public SharedParam StampSheetRevisionValue7
+            => new SharedParam(nameof(StampSheetRevisionValue7), new Guid("b1353820-2d6e-4811-8b26-152432916a1c")) {
+                Name = "Ш.Значение.Изм/Зам№7",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevisionValue7)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// Ш.Значение.Изм/Зам№8
+        /// </summary>
+        public SharedParam StampSheetRevisionValue8
+            => new SharedParam(nameof(StampSheetRevisionValue8), new Guid("64645b8a-8451-4812-b895-c83b1101ffe7")) {
+                Name = "Ш.Значение.Изм/Зам№8",
+                UnitType = SharedParam.GetUnitType(nameof(StampSheetRevisionValue8)),
+                StorageType = StorageType.String
+            };
+        #endif
 
         /// <inheritdoc />
         RevitParam IParamElementService.CreateRevitParam(Document document, string revitParamName) {
