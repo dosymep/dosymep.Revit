@@ -191,16 +191,18 @@ namespace dosymep.Revit {
         /// <param name="document">Документ проекта</param>
         /// <param name="group">Группа параметра</param>
         public static void ReInsertToGroup(this Definition definition, Autodesk.Revit.DB.Document document, BuiltInParameterGroup group) {
-            Binding binding = document.ParameterBindings.get_Item(definition);
-            if(binding is ElementBinding elementBinding) {
-                CategorySet categories = elementBinding.Categories;
+            if (definition.ParameterGroup != group) {
+                Binding binding = document.ParameterBindings.get_Item(definition);
+                if (binding is ElementBinding elementBinding) {
+                    CategorySet categories = elementBinding.Categories;
 
-                document.ParameterBindings.Remove(definition);
+                    document.ParameterBindings.Remove(definition);
 
-                if(binding is InstanceBinding) {
-                    document.ParameterBindings.Insert(definition, new InstanceBinding(categories), group);
-                } else if(binding is TypeBinding) {
-                    document.ParameterBindings.Insert(definition, new TypeBinding(categories), group);
+                    if (binding is InstanceBinding) {
+                        document.ParameterBindings.Insert(definition, new InstanceBinding(categories), group);
+                    } else if (binding is TypeBinding) {
+                        document.ParameterBindings.Insert(definition, new TypeBinding(categories), group);
+                    }
                 }
             }
         }
