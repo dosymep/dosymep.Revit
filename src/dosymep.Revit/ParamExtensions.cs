@@ -26,16 +26,16 @@ namespace dosymep.Revit {
                 var storageType = parameter.StorageType;
                 switch(storageType) {
                     case StorageType.Integer:
-                        return parameter.AsInteger();
+                    return parameter.AsInteger();
                     case StorageType.Double:
-                        return parameter.AsDouble();
+                    return parameter.AsDouble();
                     case StorageType.String: {
                         var value = parameter.AsString();
                         return string.IsNullOrWhiteSpace(value) ? null : value;
                     }
 
                     case StorageType.ElementId:
-                        return parameter.AsElementId();
+                    return parameter.AsElementId();
                 }
             }
 
@@ -55,17 +55,17 @@ namespace dosymep.Revit {
                 var storageType = parameter.StorageType;
                 switch(storageType) {
                     case StorageType.Integer:
-                        parameter.Set((int) default);
-                        break;
+                    parameter.Set((int) default);
+                    break;
                     case StorageType.Double:
-                        parameter.Set((double) default);
-                        break;
+                    parameter.Set((double) default);
+                    break;
                     case StorageType.String:
-                        parameter.Set((string) default);
-                        break;
+                    parameter.Set((string) default);
+                    break;
                     case StorageType.ElementId:
-                        parameter.Set((ElementId) default);
-                        break;
+                    parameter.Set((ElementId) default);
+                    break;
                 }
             }
         }
@@ -93,20 +93,20 @@ namespace dosymep.Revit {
             var storageType = rightParameter.StorageType;
             switch(storageType) {
                 case StorageType.Integer:
-                    leftParameter.Set(rightParameter.AsInteger());
-                    break;
+                leftParameter.Set(rightParameter.AsInteger());
+                break;
                 case StorageType.Double:
-                    leftParameter.Set(rightParameter.AsDouble());
-                    break;
+                leftParameter.Set(rightParameter.AsDouble());
+                break;
                 case StorageType.String:
-                    leftParameter.Set(rightParameter.AsObject()?.ToString());
-                    break;
+                leftParameter.Set(rightParameter.AsObject()?.ToString());
+                break;
                 case StorageType.ElementId:
-                    leftParameter.Set(rightParameter.AsElementId());
-                    break;
+                leftParameter.Set(rightParameter.AsElementId());
+                break;
                 default:
-                    leftParameter.Set((string) null);
-                    break;
+                leftParameter.Set((string) null);
+                break;
             }
         }
 
@@ -183,6 +183,30 @@ namespace dosymep.Revit {
             return BuiltInParameter.INVALID;
         }
 
+#if REVIT2020 || REVIT2021
+        /// <summary>
+        /// Заново объявляет общий параметр в проекте, меняя его группу
+        /// </summary>
+        /// <param name="definition">Определение параметра</param>
+        /// <param name="document">Документ проекта</param>
+        /// <param name="group">Группа параметра</param>
+        public static void ReInsertToGroup(this Definition definition, Autodesk.Revit.DB.Document document, BuiltInParameterGroup group) {
+            Binding binding = document.ParameterBindings.get_Item(definition);
+            if(binding is ElementBinding elementBinding) {
+                CategorySet categories = elementBinding.Categories;
+
+                document.ParameterBindings.Remove(definition);
+
+                if(binding is InstanceBinding) {
+                    document.ParameterBindings.Insert(definition, new InstanceBinding(categories), group);
+                } else if(binding is TypeBinding) {
+                    document.ParameterBindings.Insert(definition, new TypeBinding(categories), group);
+                }
+            }
+        }
+    }
+}
+#else
         /// <summary>
         /// Заново объявляет общий параметр в проекте, меняя его группу
         /// </summary>
@@ -206,3 +230,4 @@ namespace dosymep.Revit {
         }
     }
 }
+#endif
