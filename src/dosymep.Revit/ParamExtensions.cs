@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Autodesk.Revit.Creation;
 using Autodesk.Revit.DB;
 
 namespace dosymep.Revit {
@@ -181,5 +182,54 @@ namespace dosymep.Revit {
 
             return BuiltInParameter.INVALID;
         }
+
+#if REVIT2020 || REVIT2021
+        /// <summary>
+        /// Заново объявляет общий параметр в проекте, меняя его группу
+        /// </summary>
+        /// <param name="definition">Определение параметра</param>
+        /// <param name="document">Документ проекта</param>
+        /// <param name="group">Группа параметра</param>
+        public static void ReInsertToGroup(this Definition definition, Autodesk.Revit.DB.Document document, BuiltInParameterGroup group) {
+            if (definition.ParameterGroup != group) {
+                Binding binding = document.ParameterBindings.get_Item(definition);
+                if (binding is ElementBinding elementBinding) {
+                    CategorySet categories = elementBinding.Categories;
+
+                    document.ParameterBindings.Remove(definition);
+
+                    if (binding is InstanceBinding) {
+                        document.ParameterBindings.Insert(definition, new InstanceBinding(categories), group);
+                    } else if (binding is TypeBinding) {
+                        document.ParameterBindings.Insert(definition, new TypeBinding(categories), group);
+                    }
+                }
+            }
+        }
     }
 }
+#else
+        /// <summary>
+        /// Заново объявляет общий параметр в проекте, меняя его группу
+        /// </summary>
+        /// <param name="definition">Определение параметра</param>
+        /// <param name="document">Документ проекта</param>
+        /// <param name="groupId">ID группы параметра</param>
+        public static void ReInsertToGroup(this InternalDefinition definition, Autodesk.Revit.DB.Document document, ForgeTypeId groupId) {
+            if(definition.GetGroupTypeId() != groupId) {
+                Binding binding = document.ParameterBindings.get_Item(definition);
+
+                if(binding is ElementBinding elementBinding) {
+                    CategorySet categories = elementBinding.Categories;
+
+                    if(binding is InstanceBinding) {
+                        document.ParameterBindings.ReInsert(definition, new InstanceBinding(categories), groupId);
+                    } else if(binding is TypeBinding) {
+                        document.ParameterBindings.ReInsert(definition, new TypeBinding(categories), groupId);
+                    }
+                }
+            }
+        }
+    }
+}
+#endif
