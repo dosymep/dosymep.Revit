@@ -1042,6 +1042,36 @@ namespace dosymep.Bim4Everyone.SharedParams {
             };
 
         /// <summary>
+        /// ФОП_ОТД_Полы Тип 3
+        /// </summary>
+        public SharedParam FloorFinishingType3
+            => new SharedParam(nameof(FloorFinishingType3), new Guid("faf38afc-0eab-45f4-b24d-f6e1971747ed")) {
+                Name = "ФОП_ОТД_Полы Тип 3",
+                UnitType = SharedParam.GetUnitType(nameof(FloorFinishingType3)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ОТД_Полы Тип 4
+        /// </summary>
+        public SharedParam FloorFinishingType4
+            => new SharedParam(nameof(FloorFinishingType4), new Guid("a0353eb7-e49a-404d-9997-1ba4ccb68eef")) {
+                Name = "ФОП_ОТД_Полы Тип 4",
+                UnitType = SharedParam.GetUnitType(nameof(FloorFinishingType4)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ОТД_Полы Тип 5
+        /// </summary>
+        public SharedParam FloorFinishingType5
+            => new SharedParam(nameof(FloorFinishingType5), new Guid("50a11012-368d-4389-b447-8e13388c8596")) {
+                Name = "ФОП_ОТД_Полы Тип 5",
+                UnitType = SharedParam.GetUnitType(nameof(FloorFinishingType5)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
         /// ФОП_ОТД_Потолки Тип 1
         /// </summary>
         public SharedParam CeilingFinishingType1
@@ -1058,6 +1088,36 @@ namespace dosymep.Bim4Everyone.SharedParams {
             => new SharedParam(nameof(CeilingFinishingType2), new Guid("cd92e19f-d6fd-4b96-a36c-d72ec437ffaa")) {
                 Name = "ФОП_ОТД_Потолки Тип 2",
                 UnitType = SharedParam.GetUnitType(nameof(CeilingFinishingType2)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ОТД_Потолки Тип 3
+        /// </summary>
+        public SharedParam CeilingFinishingType3
+            => new SharedParam(nameof(CeilingFinishingType3), new Guid("4fa13b7d-97a0-4e39-8e14-885b6435d8dd")) {
+                Name = "ФОП_ОТД_Потолки Тип 3",
+                UnitType = SharedParam.GetUnitType(nameof(CeilingFinishingType3)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ОТД_Потолки Тип 4
+        /// </summary>
+        public SharedParam CeilingFinishingType4
+            => new SharedParam(nameof(CeilingFinishingType4), new Guid("f985418e-a043-454c-aaa3-8177fec97326")) {
+                Name = "ФОП_ОТД_Потолки Тип 4",
+                UnitType = SharedParam.GetUnitType(nameof(CeilingFinishingType4)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ОТД_Потолки Тип 5
+        /// </summary>
+        public SharedParam CeilingFinishingType5
+            => new SharedParam(nameof(CeilingFinishingType5), new Guid("bb3768ed-91dc-4945-89e6-9ad2683a0a0c")) {
+                Name = "ФОП_ОТД_Потолки Тип 5",
+                UnitType = SharedParam.GetUnitType(nameof(CeilingFinishingType5)),
                 StorageType = StorageType.String
             };
 
@@ -1178,6 +1238,36 @@ namespace dosymep.Bim4Everyone.SharedParams {
             => new SharedParam(nameof(BaseboardFinishingType2), new Guid("43324f43-4148-4b1f-aa46-d0d247d5cce5")) {
                 Name = "ФОП_ОТД_Плинтусы Тип 2",
                 UnitType = SharedParam.GetUnitType(nameof(BaseboardFinishingType2)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ОТД_Плинтусы Тип 3
+        /// </summary>
+        public SharedParam BaseboardFinishingType3
+            => new SharedParam(nameof(BaseboardFinishingType3), new Guid("8a440520-d34b-482d-965e-dce0e3fc3224")) {
+                Name = "ФОП_ОТД_Плинтусы Тип 3",
+                UnitType = SharedParam.GetUnitType(nameof(BaseboardFinishingType3)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ОТД_Плинтусы Тип 4
+        /// </summary>
+        public SharedParam BaseboardFinishingType4
+            => new SharedParam(nameof(BaseboardFinishingType4), new Guid("b1741f27-e041-48db-bfd5-85a05795cb23")) {
+                Name = "ФОП_ОТД_Плинтусы Тип 4",
+                UnitType = SharedParam.GetUnitType(nameof(BaseboardFinishingType4)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ОТД_Плинтусы Тип 5
+        /// </summary>
+        public SharedParam BaseboardFinishingType5
+            => new SharedParam(nameof(BaseboardFinishingType5), new Guid("cd4084e0-70c7-4904-b2a4-927550d3a9f2")) {
+                Name = "ФОП_ОТД_Плинтусы Тип 5",
+                UnitType = SharedParam.GetUnitType(nameof(BaseboardFinishingType5)),
                 StorageType = StorageType.String
             };
 
