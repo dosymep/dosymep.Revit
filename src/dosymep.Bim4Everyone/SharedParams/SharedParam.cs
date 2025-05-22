@@ -710,9 +710,21 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.FloorFinishingType2):
                     return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.FloorFinishingType3):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.FloorFinishingType4):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.FloorFinishingType5):
+                    return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.CeilingFinishingType1):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.CeilingFinishingType2):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.CeilingFinishingType3):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.CeilingFinishingType4):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.CeilingFinishingType5):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.WallFinishingType1):
                     return SpecTypeId.String.Text;
@@ -737,6 +749,12 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 case nameof(SharedParamsConfig.BaseboardFinishingType1):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.BaseboardFinishingType2):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.BaseboardFinishingType3):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.BaseboardFinishingType4):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.BaseboardFinishingType5):
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.FinishingRoomName):
                     return SpecTypeId.String.Text;

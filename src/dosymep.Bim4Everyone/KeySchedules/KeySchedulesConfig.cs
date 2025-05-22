@@ -256,8 +256,14 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 RequiredSharedParams = new List<string>() {
                     nameof(SharedParamsConfig.FloorFinishingType1),
                     nameof(SharedParamsConfig.FloorFinishingType2),
+                    nameof(SharedParamsConfig.FloorFinishingType3),
+                    nameof(SharedParamsConfig.FloorFinishingType4),
+                    nameof(SharedParamsConfig.FloorFinishingType5),
                     nameof(SharedParamsConfig.CeilingFinishingType1),
                     nameof(SharedParamsConfig.CeilingFinishingType2),
+                    nameof(SharedParamsConfig.CeilingFinishingType3),
+                    nameof(SharedParamsConfig.CeilingFinishingType4),
+                    nameof(SharedParamsConfig.CeilingFinishingType5),
                     nameof(SharedParamsConfig.WallFinishingType1),
                     nameof(SharedParamsConfig.WallFinishingType2),
                     nameof(SharedParamsConfig.WallFinishingType3),
@@ -269,7 +275,10 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                     nameof(SharedParamsConfig.WallFinishingType9),
                     nameof(SharedParamsConfig.WallFinishingType10),
                     nameof(SharedParamsConfig.BaseboardFinishingType1),
-                    nameof(SharedParamsConfig.BaseboardFinishingType2)
+                    nameof(SharedParamsConfig.BaseboardFinishingType2),
+                    nameof(SharedParamsConfig.BaseboardFinishingType3),
+                    nameof(SharedParamsConfig.BaseboardFinishingType4),
+                    nameof(SharedParamsConfig.BaseboardFinishingType5)
                 },
                 RequiredProjectParams = new List<string>() { },
 
