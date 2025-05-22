@@ -2951,6 +2951,42 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType2
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType2
   nameWithType: SharedParamsConfig.BaseboardFinishingType2
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType3
+  name: BaseboardFinishingType3
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BaseboardFinishingType3
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType3
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType3
+  nameWithType: SharedParamsConfig.BaseboardFinishingType3
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType3*
+  name: BaseboardFinishingType3
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BaseboardFinishingType3_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType3
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType3
+  nameWithType: SharedParamsConfig.BaseboardFinishingType3
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType4
+  name: BaseboardFinishingType4
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BaseboardFinishingType4
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType4
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType4
+  nameWithType: SharedParamsConfig.BaseboardFinishingType4
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType4*
+  name: BaseboardFinishingType4
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BaseboardFinishingType4_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType4
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType4
+  nameWithType: SharedParamsConfig.BaseboardFinishingType4
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType5
+  name: BaseboardFinishingType5
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BaseboardFinishingType5
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType5
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType5
+  nameWithType: SharedParamsConfig.BaseboardFinishingType5
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType5*
+  name: BaseboardFinishingType5
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BaseboardFinishingType5_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType5
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BaseboardFinishingType5
+  nameWithType: SharedParamsConfig.BaseboardFinishingType5
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingNumber
   name: BuildingNumber
   href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingNumber
@@ -3047,6 +3083,42 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType2
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType2
   nameWithType: SharedParamsConfig.CeilingFinishingType2
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType3
+  name: CeilingFinishingType3
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_CeilingFinishingType3
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType3
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType3
+  nameWithType: SharedParamsConfig.CeilingFinishingType3
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType3*
+  name: CeilingFinishingType3
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_CeilingFinishingType3_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType3
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType3
+  nameWithType: SharedParamsConfig.CeilingFinishingType3
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType4
+  name: CeilingFinishingType4
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_CeilingFinishingType4
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType4
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType4
+  nameWithType: SharedParamsConfig.CeilingFinishingType4
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType4*
+  name: CeilingFinishingType4
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_CeilingFinishingType4_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType4
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType4
+  nameWithType: SharedParamsConfig.CeilingFinishingType4
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType5
+  name: CeilingFinishingType5
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_CeilingFinishingType5
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType5
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType5
+  nameWithType: SharedParamsConfig.CeilingFinishingType5
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType5*
+  name: CeilingFinishingType5
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_CeilingFinishingType5_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType5
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingType5
+  nameWithType: SharedParamsConfig.CeilingFinishingType5
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ConstructionWorksNumber
   name: ConstructionWorksNumber
   href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_ConstructionWorksNumber
@@ -3254,6 +3326,42 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType2
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType2
   nameWithType: SharedParamsConfig.FloorFinishingType2
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType3
+  name: FloorFinishingType3
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_FloorFinishingType3
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType3
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType3
+  nameWithType: SharedParamsConfig.FloorFinishingType3
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType3*
+  name: FloorFinishingType3
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_FloorFinishingType3_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType3
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType3
+  nameWithType: SharedParamsConfig.FloorFinishingType3
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType4
+  name: FloorFinishingType4
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_FloorFinishingType4
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType4
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType4
+  nameWithType: SharedParamsConfig.FloorFinishingType4
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType4*
+  name: FloorFinishingType4
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_FloorFinishingType4_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType4
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType4
+  nameWithType: SharedParamsConfig.FloorFinishingType4
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType5
+  name: FloorFinishingType5
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_FloorFinishingType5
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType5
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType5
+  nameWithType: SharedParamsConfig.FloorFinishingType5
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType5*
+  name: FloorFinishingType5
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_FloorFinishingType5_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType5
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType5
+  nameWithType: SharedParamsConfig.FloorFinishingType5
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.GetDefaultConfig
   name: GetDefaultConfig()
   href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_GetDefaultConfig
