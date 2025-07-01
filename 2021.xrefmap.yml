@@ -4328,6 +4328,30 @@ references:
   commentId: T:dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace
   fullName: dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace
   nameWithType: LogTrace
+- uid: dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.EnableOpenDocTime
+  name: EnableOpenDocTime
+  href: api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.html#dosymep_Bim4Everyone_SimpleServices_Configuration_LogTrace_EnableOpenDocTime
+  commentId: P:dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.EnableOpenDocTime
+  fullName: dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.EnableOpenDocTime
+  nameWithType: LogTrace.EnableOpenDocTime
+- uid: dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.EnableOpenDocTime*
+  name: EnableOpenDocTime
+  href: api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.html#dosymep_Bim4Everyone_SimpleServices_Configuration_LogTrace_EnableOpenDocTime_
+  commentId: Overload:dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.EnableOpenDocTime
+  fullName: dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.EnableOpenDocTime
+  nameWithType: LogTrace.EnableOpenDocTime
+- uid: dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.EnableSyncDocTime
+  name: EnableSyncDocTime
+  href: api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.html#dosymep_Bim4Everyone_SimpleServices_Configuration_LogTrace_EnableSyncDocTime
+  commentId: P:dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.EnableSyncDocTime
+  fullName: dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.EnableSyncDocTime
+  nameWithType: LogTrace.EnableSyncDocTime
+- uid: dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.EnableSyncDocTime*
+  name: EnableSyncDocTime
+  href: api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.html#dosymep_Bim4Everyone_SimpleServices_Configuration_LogTrace_EnableSyncDocTime_
+  commentId: Overload:dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.EnableSyncDocTime
+  fullName: dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.EnableSyncDocTime
+  nameWithType: LogTrace.EnableSyncDocTime
 - uid: dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.IsActive
   name: IsActive
   href: api/2021/dosymep.Bim4Everyone.SimpleServices.Configuration.LogTrace.html#dosymep_Bim4Everyone_SimpleServices_Configuration_LogTrace_IsActive
