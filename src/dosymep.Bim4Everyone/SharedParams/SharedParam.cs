@@ -952,6 +952,10 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.StampSheetRevisionValue8):
                     return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.FopId):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.RoomFireCategory):
+                    return SpecTypeId.String.Text;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
