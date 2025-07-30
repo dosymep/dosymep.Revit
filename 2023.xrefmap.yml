@@ -3362,6 +3362,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType5
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingType5
   nameWithType: SharedParamsConfig.FloorFinishingType5
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FopId
+  name: FopId
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_FopId
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FopId
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FopId
+  nameWithType: SharedParamsConfig.FopId
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FopId*
+  name: FopId
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_FopId_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FopId
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FopId
+  nameWithType: SharedParamsConfig.FopId
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.GetDefaultConfig
   name: GetDefaultConfig()
   href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_GetDefaultConfig
@@ -3536,6 +3548,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomBuildingShortName
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomBuildingShortName
   nameWithType: SharedParamsConfig.RoomBuildingShortName
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFireCategory
+  name: RoomFireCategory
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_RoomFireCategory
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFireCategory
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFireCategory
+  nameWithType: SharedParamsConfig.RoomFireCategory
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFireCategory*
+  name: RoomFireCategory
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_RoomFireCategory_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFireCategory
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFireCategory
+  nameWithType: SharedParamsConfig.RoomFireCategory
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomGroupShortName
   name: RoomGroupShortName
   href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_RoomGroupShortName
