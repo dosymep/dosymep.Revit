@@ -1660,7 +1660,27 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 UnitType = SharedParam.GetUnitType(nameof(StampSheetRevisionValue8)),
                 StorageType = StorageType.String
             };
-        #endif
+
+        /// <summary>
+        /// ФОП_ID	
+        /// </summary>
+        public SharedParam FopId
+            => new SharedParam(nameof(FopId), new Guid("5a0fc547-0a86-4518-a0e3-718c1b116c45")) {
+                Name = "ФОП_ID",
+                UnitType = SharedParam.GetUnitType(nameof(FopId)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_Категория помещения
+        /// </summary>
+        public SharedParam RoomFireCategory
+            => new SharedParam(nameof(RoomFireCategory), new Guid("66005df5-7751-4ddb-bf84-b1f551d1d058")) {
+                Name = "ФОП_Категория помещения",
+                UnitType = SharedParam.GetUnitType(nameof(RoomFireCategory)),
+                StorageType = StorageType.String
+            };
+#endif
 
         /// <inheritdoc />
         RevitParam IParamElementService.CreateRevitParam(Document document, string revitParamName) {
