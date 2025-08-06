@@ -348,6 +348,56 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 UnitType = ProjectParam.GetUnitType(nameof(RoomFinishingType)),
                 StorageType = StorageType.ElementId
             };
+
+        /// <summary>
+        /// ВСП_Наименование спецификации
+        /// </summary>
+        public ProjectParam ListOfSchedulesListName
+            => new ProjectParam(nameof(ListOfSchedulesListName)) {
+                Name = "ВСП_Наименование спецификации",
+                UnitType = ProjectParam.GetUnitType(nameof(ListOfSchedulesListName)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ВСП_Номер листа
+        /// </summary>
+        public ProjectParam ListOfSchedulesSheetName
+            => new ProjectParam(nameof(ListOfSchedulesSheetName)) {
+                Name = "ВСП_Номер листа",
+                UnitType = ProjectParam.GetUnitType(nameof(ListOfSchedulesSheetName)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ВСП_Номер изменения
+        /// </summary>
+        public ProjectParam ListOfSchedulesRevNumber
+            => new ProjectParam(nameof(ListOfSchedulesRevNumber)) {
+                Name = "ВСП_Номер изменения",
+                UnitType = ProjectParam.GetUnitType(nameof(ListOfSchedulesRevNumber)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ВСП_Примечания
+        /// </summary>
+        public ProjectParam ListOfSchedulesNotes
+            => new ProjectParam(nameof(ListOfSchedulesNotes)) {
+                Name = "ВСП_Примечания",
+                UnitType = ProjectParam.GetUnitType(nameof(ListOfSchedulesNotes)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ВСП_Группировка
+        /// </summary>
+        public ProjectParam ListOfSchedulesGroup
+            => new ProjectParam(nameof(ListOfSchedulesGroup)) {
+                Name = "ВСП_Группировка",
+                UnitType = ProjectParam.GetUnitType(nameof(ListOfSchedulesGroup)),
+                StorageType = StorageType.String
+            };
 #endif
 
         /// <inheritdoc />

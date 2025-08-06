@@ -302,6 +302,16 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                     return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case nameof(ProjectParamsConfig.RoomFinishingType):
                     return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                case nameof(ProjectParamsConfig.ListOfSchedulesListName):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.ListOfSchedulesSheetName):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.ListOfSchedulesRevNumber):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.ListOfSchedulesNotes):
+                    return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.ListOfSchedulesGroup):
+                    return SpecTypeId.String.Text;
                 default:
                     throw new ArgumentException($"Не найден параметр проекта с идентификатором \"{paramId}\".",
                         nameof(paramId));
