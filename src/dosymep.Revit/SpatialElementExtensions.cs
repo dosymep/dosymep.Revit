@@ -31,7 +31,6 @@ namespace dosymep.Revit {
 
             foreach(IList<BoundarySegment> boundary in boundarySegments) {
                 BoundarySegment[] segments = boundary
-                    .Select(item => item)
                     .ToArray();
 
                 for(int indexLeft = 0; indexLeft < segments.Length; indexLeft++) {
