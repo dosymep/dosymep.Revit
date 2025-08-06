@@ -96,9 +96,9 @@ namespace dosymep.Bim4Everyone.Schedules {
         public ScheduleRule RoomsSummer { get; internal set; } = new ScheduleRule() { ScheduleName = "КВГ_Летние помещения" };
 
         /// <summary>
-        /// ВСП_Ведомость спецификаций
+        /// ВС_Ведомость спецификаций
         /// </summary>
-        public ScheduleRule ListOfSchedules { get; internal set; } = new ScheduleRule() { ScheduleName = "ВСП_Ведомость спецификаций" };
+        public ScheduleRule ListOfSchedules { get; internal set; } = new ScheduleRule() { ScheduleName = "ВС_Ведомость спецификаций" };
 
         #endregion
 

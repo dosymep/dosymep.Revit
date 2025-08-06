@@ -350,51 +350,51 @@ namespace dosymep.Bim4Everyone.ProjectParams {
             };
 
         /// <summary>
-        /// ВСП_Наименование спецификации
+        /// ВС_Наименование спецификации
         /// </summary>
         public ProjectParam ListOfSchedulesListName
             => new ProjectParam(nameof(ListOfSchedulesListName)) {
-                Name = "ВСП_Наименование спецификации",
+                Name = "ВС_Наименование спецификации",
                 UnitType = ProjectParam.GetUnitType(nameof(ListOfSchedulesListName)),
                 StorageType = StorageType.String
             };
 
         /// <summary>
-        /// ВСП_Номер листа
+        /// ВС_Номер листа
         /// </summary>
         public ProjectParam ListOfSchedulesSheetName
             => new ProjectParam(nameof(ListOfSchedulesSheetName)) {
-                Name = "ВСП_Номер листа",
+                Name = "ВС_Номер листа",
                 UnitType = ProjectParam.GetUnitType(nameof(ListOfSchedulesSheetName)),
                 StorageType = StorageType.String
             };
 
         /// <summary>
-        /// ВСП_Номер изменения
+        /// ВС_Номер изменения
         /// </summary>
         public ProjectParam ListOfSchedulesRevNumber
             => new ProjectParam(nameof(ListOfSchedulesRevNumber)) {
-                Name = "ВСП_Номер изменения",
+                Name = "ВС_Номер изменения",
                 UnitType = ProjectParam.GetUnitType(nameof(ListOfSchedulesRevNumber)),
                 StorageType = StorageType.String
             };
 
         /// <summary>
-        /// ВСП_Примечания
+        /// ВС_Примечания
         /// </summary>
         public ProjectParam ListOfSchedulesNotes
             => new ProjectParam(nameof(ListOfSchedulesNotes)) {
-                Name = "ВСП_Примечания",
+                Name = "ВС_Примечания",
                 UnitType = ProjectParam.GetUnitType(nameof(ListOfSchedulesNotes)),
                 StorageType = StorageType.String
             };
 
         /// <summary>
-        /// ВСП_Группировка
+        /// ВС_Группировка
         /// </summary>
         public ProjectParam ListOfSchedulesGroup
             => new ProjectParam(nameof(ListOfSchedulesGroup)) {
-                Name = "ВСП_Группировка",
+                Name = "ВС_Группировка",
                 UnitType = ProjectParam.GetUnitType(nameof(ListOfSchedulesGroup)),
                 StorageType = StorageType.String
             };
