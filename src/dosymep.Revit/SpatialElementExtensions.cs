@@ -30,8 +30,7 @@ namespace dosymep.Revit {
                 spatialElement.GetBoundarySegments(options ?? DefaultBoundaryOptions);
 
             foreach(IList<BoundarySegment> boundary in boundarySegments) {
-                BoundarySegment[] segments = boundary
-                    .ToArray();
+                BoundarySegment[] segments = boundary.ToArray();
 
                 for(int indexLeft = 0; indexLeft < segments.Length; indexLeft++) {
                     Curve leftCurve = segments[indexLeft].GetCurve();
