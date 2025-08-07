@@ -29,43 +29,44 @@ namespace dosymep.Revit {
             IList<IList<BoundarySegment>> boundarySegments =
                 spatialElement.GetBoundarySegments(options ?? DefaultBoundaryOptions);
 
-            BoundarySegment[] segments = boundarySegments
-                .SelectMany(item => item)
-                .ToArray();
+            foreach(IList<BoundarySegment> boundary in boundarySegments) {
+                BoundarySegment[] segments = boundary.ToArray();
 
-            for(int indexLeft = 0; indexLeft < segments.Length; indexLeft++) {
-                Curve leftCurve = segments[indexLeft].GetCurve();
+                for(int indexLeft = 0; indexLeft < segments.Length; indexLeft++) {
+                    Curve leftCurve = segments[indexLeft].GetCurve();
 
-                for(int indexRight = 1; indexRight < segments.Length; indexRight++) {
-                    if(indexLeft - indexRight >= 0) {
-                        // pass duplicates: 1-3 and 3-1
-                        continue;
-                    }
-
-                    // true for connected segments (they overlapped)
-                    // but needs check they can be inside each other 
-                    // others overlapped and cross
-                    bool result = indexRight - indexLeft == 1
-                                  || (indexRight - indexLeft) == (segments.Length - 1);
-
-                    Curve rightCurve = segments[indexRight].GetCurve();
-                    SetComparisonResult intersect = leftCurve.Intersect(rightCurve);
-                    
-                    // SetComparisonResult.Subset
-                    // SetComparisonResult.Superset
-                    // removed because the line should be unbound
-
-                    if(result) {
-                        if(intersect == SetComparisonResult.Equal) {
-                            return true;
+                    for(int indexRight = 1; indexRight < segments.Length; indexRight++) {
+                        if(indexLeft - indexRight >= 0) {
+                            // pass duplicates: 1-3 and 3-1
+                            continue;
                         }
-                    } else {
-                        if(intersect == SetComparisonResult.Overlap) {
-                            return true;
+
+                        // true for connected segments (they overlapped)
+                        // but needs check they can be inside each other 
+                        // others overlapped and cross
+                        bool result = indexRight - indexLeft == 1
+                                      || (indexRight - indexLeft) == (segments.Length - 1);
+
+                        Curve rightCurve = segments[indexRight].GetCurve();
+                        SetComparisonResult intersect = leftCurve.Intersect(rightCurve);
+                        
+                        // SetComparisonResult.Subset
+                        // SetComparisonResult.Superset
+                        // removed because the line should be unbound
+
+                        if(result) {
+                            if(intersect == SetComparisonResult.Equal) {
+                                return true;
+                            }
+                        } else {
+                            if(intersect == SetComparisonResult.Overlap) {
+                                return true;
+                            }
                         }
                     }
                 }
             }
+
 
             return false;
         }
