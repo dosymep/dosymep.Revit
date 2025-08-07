@@ -2450,6 +2450,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.Schedules.SchedulesConfig.Instance
   fullName: dosymep.Bim4Everyone.Schedules.SchedulesConfig.Instance
   nameWithType: SchedulesConfig.Instance
+- uid: dosymep.Bim4Everyone.Schedules.SchedulesConfig.ListOfSchedules
+  name: ListOfSchedules
+  href: api/2021/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html#dosymep_Bim4Everyone_Schedules_SchedulesConfig_ListOfSchedules
+  commentId: P:dosymep.Bim4Everyone.Schedules.SchedulesConfig.ListOfSchedules
+  fullName: dosymep.Bim4Everyone.Schedules.SchedulesConfig.ListOfSchedules
+  nameWithType: SchedulesConfig.ListOfSchedules
+- uid: dosymep.Bim4Everyone.Schedules.SchedulesConfig.ListOfSchedules*
+  name: ListOfSchedules
+  href: api/2021/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html#dosymep_Bim4Everyone_Schedules_SchedulesConfig_ListOfSchedules_
+  commentId: Overload:dosymep.Bim4Everyone.Schedules.SchedulesConfig.ListOfSchedules
+  fullName: dosymep.Bim4Everyone.Schedules.SchedulesConfig.ListOfSchedules
+  nameWithType: SchedulesConfig.ListOfSchedules
 - uid: dosymep.Bim4Everyone.Schedules.SchedulesConfig.Load(System.String)
   name: Load(string)
   href: api/2021/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html#dosymep_Bim4Everyone_Schedules_SchedulesConfig_Load_System_String_

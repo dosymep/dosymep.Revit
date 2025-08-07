@@ -1715,6 +1715,66 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomNumberFix
   fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.IsRoomNumberFix
   nameWithType: ProjectParamsConfig.IsRoomNumberFix
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesGroup
+  name: ListOfSchedulesGroup
+  href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ListOfSchedulesGroup
+  commentId: P:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesGroup
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesGroup
+  nameWithType: ProjectParamsConfig.ListOfSchedulesGroup
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesGroup*
+  name: ListOfSchedulesGroup
+  href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ListOfSchedulesGroup_
+  commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesGroup
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesGroup
+  nameWithType: ProjectParamsConfig.ListOfSchedulesGroup
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesListName
+  name: ListOfSchedulesListName
+  href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ListOfSchedulesListName
+  commentId: P:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesListName
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesListName
+  nameWithType: ProjectParamsConfig.ListOfSchedulesListName
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesListName*
+  name: ListOfSchedulesListName
+  href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ListOfSchedulesListName_
+  commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesListName
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesListName
+  nameWithType: ProjectParamsConfig.ListOfSchedulesListName
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesNotes
+  name: ListOfSchedulesNotes
+  href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ListOfSchedulesNotes
+  commentId: P:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesNotes
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesNotes
+  nameWithType: ProjectParamsConfig.ListOfSchedulesNotes
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesNotes*
+  name: ListOfSchedulesNotes
+  href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ListOfSchedulesNotes_
+  commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesNotes
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesNotes
+  nameWithType: ProjectParamsConfig.ListOfSchedulesNotes
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesRevNumber
+  name: ListOfSchedulesRevNumber
+  href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ListOfSchedulesRevNumber
+  commentId: P:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesRevNumber
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesRevNumber
+  nameWithType: ProjectParamsConfig.ListOfSchedulesRevNumber
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesRevNumber*
+  name: ListOfSchedulesRevNumber
+  href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ListOfSchedulesRevNumber_
+  commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesRevNumber
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesRevNumber
+  nameWithType: ProjectParamsConfig.ListOfSchedulesRevNumber
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesSheetName
+  name: ListOfSchedulesSheetName
+  href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ListOfSchedulesSheetName
+  commentId: P:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesSheetName
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesSheetName
+  nameWithType: ProjectParamsConfig.ListOfSchedulesSheetName
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesSheetName*
+  name: ListOfSchedulesSheetName
+  href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_ListOfSchedulesSheetName_
+  commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesSheetName
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.ListOfSchedulesSheetName
+  nameWithType: ProjectParamsConfig.ListOfSchedulesSheetName
 - uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.Load(System.String)
   name: Load(string)
   href: api/2023/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_Load_System_String_
@@ -2366,6 +2426,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.Schedules.SchedulesConfig.Instance
   fullName: dosymep.Bim4Everyone.Schedules.SchedulesConfig.Instance
   nameWithType: SchedulesConfig.Instance
+- uid: dosymep.Bim4Everyone.Schedules.SchedulesConfig.ListOfSchedules
+  name: ListOfSchedules
+  href: api/2023/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html#dosymep_Bim4Everyone_Schedules_SchedulesConfig_ListOfSchedules
+  commentId: P:dosymep.Bim4Everyone.Schedules.SchedulesConfig.ListOfSchedules
+  fullName: dosymep.Bim4Everyone.Schedules.SchedulesConfig.ListOfSchedules
+  nameWithType: SchedulesConfig.ListOfSchedules
+- uid: dosymep.Bim4Everyone.Schedules.SchedulesConfig.ListOfSchedules*
+  name: ListOfSchedules
+  href: api/2023/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html#dosymep_Bim4Everyone_Schedules_SchedulesConfig_ListOfSchedules_
+  commentId: Overload:dosymep.Bim4Everyone.Schedules.SchedulesConfig.ListOfSchedules
+  fullName: dosymep.Bim4Everyone.Schedules.SchedulesConfig.ListOfSchedules
+  nameWithType: SchedulesConfig.ListOfSchedules
 - uid: dosymep.Bim4Everyone.Schedules.SchedulesConfig.Load(System.String)
   name: Load(string)
   href: api/2023/dosymep.Bim4Everyone.Schedules.SchedulesConfig.html#dosymep_Bim4Everyone_Schedules_SchedulesConfig_Load_System_String_
