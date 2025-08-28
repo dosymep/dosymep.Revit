@@ -1680,6 +1680,107 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 UnitType = SharedParam.GetUnitType(nameof(RoomFireCategory)),
                 StorageType = StorageType.String
             };
+
+        /// <summary>
+        /// ФОП_РАЗМ_Ширина проёма
+        /// </summary>
+        public SharedParam SizeOpeningWidth
+            => new SharedParam(nameof(SizeOpeningWidth), new Guid("b10f1ca0-f1b3-47a8-8f18-fe13196b4d4a")) {
+                Name = "ФОП_РАЗМ_Ширина проёма",
+                UnitType = SharedParam.GetUnitType(nameof(SizeOpeningWidth)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_РАЗМ_Высота проёма
+        /// </summary>
+        public SharedParam SizeOpeningHeight
+            => new SharedParam(nameof(SizeOpeningHeight), new Guid("6c51dbbe-5635-4b2f-aaa3-b3ed0bd4a528")) {
+                Name = "ФОП_РАЗМ_Высота проёма",
+                UnitType = SharedParam.GetUnitType(nameof(SizeOpeningHeight)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_РАЗМ_Глубина проёма
+        /// </summary>
+        public SharedParam SizeOpeningDepth
+            => new SharedParam(nameof(SizeOpeningDepth), new Guid("4c5379ca-b3e3-4a3b-913f-a6596348255a")) {
+                Name = "ФОП_РАЗМ_Глубина проёма",
+                UnitType = SharedParam.GetUnitType(nameof(SizeOpeningDepth)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_РАЗМ_Диаметр
+        /// </summary>
+        public SharedParam SizeDiameter
+            => new SharedParam(nameof(SizeDiameter), new Guid("902bbe92-2ad5-4956-915f-c83a85eb151f")) {
+                Name = "ФОП_РАЗМ_Диаметр",
+                UnitType = SharedParam.GetUnitType(nameof(SizeDiameter)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_РАЗМ_Глубина
+        /// </summary>
+        public SharedParam SizeDepth
+            => new SharedParam(nameof(SizeDepth), new Guid("8132a541-c995-400c-839c-aeaa327e2081")) {
+                Name = "ФОП_РАЗМ_Глубина",
+                UnitType = SharedParam.GetUnitType(nameof(SizeDepth)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// мод_ФОП_Габарит А
+        /// </summary>
+        public SharedParam SizeA
+            => new SharedParam(nameof(SizeA), new Guid("87e4fe4d-f50c-4f80-9b62-93b0dce6bf5d")) {
+                Name = "мод_ФОП_Габарит А",
+                UnitType = SharedParam.GetUnitType(nameof(SizeA)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// мод_ФОП_Габарит Б
+        /// </summary>
+        public SharedParam SizeB
+            => new SharedParam(nameof(SizeB), new Guid("b577c174-8fe9-4e75-94b4-69c59dbcfa7c")) {
+                Name = "мод_ФОП_Габарит Б",
+                UnitType = SharedParam.GetUnitType(nameof(SizeB)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ADSK_Размер_УголПоворота
+        /// </summary>
+        public SharedParam RotationAngle
+            => new SharedParam(nameof(RotationAngle), new Guid("a7397d18-200b-4659-b34c-3d8ae1c54317")) {
+                Name = "ADSK_Размер_УголПоворота",
+                UnitType = SharedParam.GetUnitType(nameof(RotationAngle)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Толщина стенки
+        /// </summary>
+        public SharedParam VISSideThickness
+            => new SharedParam(nameof(VISSideThickness), new Guid("7828fd5b-153b-4778-b2f6-4c04e80e6467")) {
+                Name = "ФОП_ВИС_Толщина стенки",
+                UnitType = SharedParam.GetUnitType(nameof(VISSideThickness)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_Описание
+        /// </summary>
+        public SharedParam Description
+            => new SharedParam(nameof(Description), new Guid("7bc34a91-32d1-4aae-a68b-f000d48e40bd")) {
+                Name = "ФОП_Описание",
+                UnitType = SharedParam.GetUnitType(nameof(Description)),
+                StorageType = StorageType.String
+            };
+
 #endif
 
         /// <inheritdoc />

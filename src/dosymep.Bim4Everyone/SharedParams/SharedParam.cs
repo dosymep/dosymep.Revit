@@ -956,6 +956,26 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.RoomFireCategory):
                     return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.SizeOpeningWidth):
+                    return SpecTypeId.Length;
+                case nameof(SharedParamsConfig.SizeOpeningHeight):
+                    return SpecTypeId.Length;
+                case nameof(SharedParamsConfig.SizeOpeningDepth):
+                    return SpecTypeId.Length;
+                case nameof(SharedParamsConfig.SizeDiameter):
+                    return SpecTypeId.Length;
+                case nameof(SharedParamsConfig.SizeDepth):
+                    return SpecTypeId.Length;
+                case nameof(SharedParamsConfig.SizeA):
+                    return SpecTypeId.ReinforcementLength;
+                case nameof(SharedParamsConfig.SizeB):
+                    return SpecTypeId.ReinforcementLength;
+                case nameof(SharedParamsConfig.RotationAngle):
+                    return SpecTypeId.Angle;
+                case nameof(SharedParamsConfig.VISSideThickness):
+                    return SpecTypeId.Length;
+                case nameof(SharedParamsConfig.Description):
+                    return SpecTypeId.String.Text;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
