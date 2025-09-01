@@ -966,11 +966,11 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.Length;
                 case nameof(SharedParamsConfig.SizeDepth):
                     return SpecTypeId.Length;
-                case nameof(SharedParamsConfig.SizeA):
+                case nameof(SharedParamsConfig.DimensionAModeling):
                     return SpecTypeId.ReinforcementLength;
-                case nameof(SharedParamsConfig.SizeB):
+                case nameof(SharedParamsConfig.DimensionBModeling):
                     return SpecTypeId.ReinforcementLength;
-                case nameof(SharedParamsConfig.RotationAngle):
+                case nameof(SharedParamsConfig.SizeRotationAngle):
                     return SpecTypeId.Angle;
                 case nameof(SharedParamsConfig.VISSideThickness):
                     return SpecTypeId.Length;

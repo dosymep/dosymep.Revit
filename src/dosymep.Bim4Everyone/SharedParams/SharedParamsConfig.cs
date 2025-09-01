@@ -1734,30 +1734,30 @@ namespace dosymep.Bim4Everyone.SharedParams {
         /// <summary>
         /// мод_ФОП_Габарит А
         /// </summary>
-        public SharedParam SizeA
-            => new SharedParam(nameof(SizeA), new Guid("87e4fe4d-f50c-4f80-9b62-93b0dce6bf5d")) {
+        public SharedParam DimensionAModeling
+            => new SharedParam(nameof(DimensionAModeling), new Guid("87e4fe4d-f50c-4f80-9b62-93b0dce6bf5d")) {
                 Name = "мод_ФОП_Габарит А",
-                UnitType = SharedParam.GetUnitType(nameof(SizeA)),
+                UnitType = SharedParam.GetUnitType(nameof(DimensionAModeling)),
                 StorageType = StorageType.Double
             };
 
         /// <summary>
         /// мод_ФОП_Габарит Б
         /// </summary>
-        public SharedParam SizeB
-            => new SharedParam(nameof(SizeB), new Guid("b577c174-8fe9-4e75-94b4-69c59dbcfa7c")) {
+        public SharedParam DimensionBModeling
+            => new SharedParam(nameof(DimensionBModeling), new Guid("b577c174-8fe9-4e75-94b4-69c59dbcfa7c")) {
                 Name = "мод_ФОП_Габарит Б",
-                UnitType = SharedParam.GetUnitType(nameof(SizeB)),
+                UnitType = SharedParam.GetUnitType(nameof(DimensionBModeling)),
                 StorageType = StorageType.Double
             };
 
         /// <summary>
         /// ADSK_Размер_УголПоворота
         /// </summary>
-        public SharedParam RotationAngle
-            => new SharedParam(nameof(RotationAngle), new Guid("a7397d18-200b-4659-b34c-3d8ae1c54317")) {
+        public SharedParam SizeRotationAngle
+            => new SharedParam(nameof(SizeRotationAngle), new Guid("a7397d18-200b-4659-b34c-3d8ae1c54317")) {
                 Name = "ADSK_Размер_УголПоворота",
-                UnitType = SharedParam.GetUnitType(nameof(RotationAngle)),
+                UnitType = SharedParam.GetUnitType(nameof(SizeRotationAngle)),
                 StorageType = StorageType.Double
             };
 
