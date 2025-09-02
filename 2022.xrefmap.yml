@@ -3242,6 +3242,42 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CreateRevitParam
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CreateRevitParam
   nameWithType: SharedParamsConfig.CreateRevitParam
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Description
+  name: Description
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_Description
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Description
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Description
+  nameWithType: SharedParamsConfig.Description
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Description*
+  name: Description
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_Description_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Description
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Description
+  nameWithType: SharedParamsConfig.Description
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.DimensionAModeling
+  name: DimensionAModeling
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_DimensionAModeling
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.DimensionAModeling
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.DimensionAModeling
+  nameWithType: SharedParamsConfig.DimensionAModeling
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.DimensionAModeling*
+  name: DimensionAModeling
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_DimensionAModeling_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.DimensionAModeling
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.DimensionAModeling
+  nameWithType: SharedParamsConfig.DimensionAModeling
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.DimensionBModeling
+  name: DimensionBModeling
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_DimensionBModeling
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.DimensionBModeling
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.DimensionBModeling
+  nameWithType: SharedParamsConfig.DimensionBModeling
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.DimensionBModeling*
+  name: DimensionBModeling
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_DimensionBModeling_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.DimensionBModeling
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.DimensionBModeling
+  nameWithType: SharedParamsConfig.DimensionBModeling
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.EconomicFunction
   name: EconomicFunction
   href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_EconomicFunction
@@ -3704,6 +3740,30 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeArea
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeArea
   nameWithType: SharedParamsConfig.SizeArea
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeDepth
+  name: SizeDepth
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeDepth
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeDepth
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeDepth
+  nameWithType: SharedParamsConfig.SizeDepth
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeDepth*
+  name: SizeDepth
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeDepth_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeDepth
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeDepth
+  nameWithType: SharedParamsConfig.SizeDepth
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeDiameter
+  name: SizeDiameter
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeDiameter
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeDiameter
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeDiameter
+  nameWithType: SharedParamsConfig.SizeDiameter
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeDiameter*
+  name: SizeDiameter
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeDiameter_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeDiameter
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeDiameter
+  nameWithType: SharedParamsConfig.SizeDiameter
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeHeight
   name: SizeHeight
   href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeHeight
@@ -3740,6 +3800,54 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeLengthAdditional
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeLengthAdditional
   nameWithType: SharedParamsConfig.SizeLengthAdditional
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningDepth
+  name: SizeOpeningDepth
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeOpeningDepth
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningDepth
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningDepth
+  nameWithType: SharedParamsConfig.SizeOpeningDepth
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningDepth*
+  name: SizeOpeningDepth
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeOpeningDepth_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningDepth
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningDepth
+  nameWithType: SharedParamsConfig.SizeOpeningDepth
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningHeight
+  name: SizeOpeningHeight
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeOpeningHeight
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningHeight
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningHeight
+  nameWithType: SharedParamsConfig.SizeOpeningHeight
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningHeight*
+  name: SizeOpeningHeight
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeOpeningHeight_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningHeight
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningHeight
+  nameWithType: SharedParamsConfig.SizeOpeningHeight
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningWidth
+  name: SizeOpeningWidth
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeOpeningWidth
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningWidth
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningWidth
+  nameWithType: SharedParamsConfig.SizeOpeningWidth
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningWidth*
+  name: SizeOpeningWidth
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeOpeningWidth_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningWidth
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeOpeningWidth
+  nameWithType: SharedParamsConfig.SizeOpeningWidth
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeRotationAngle
+  name: SizeRotationAngle
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeRotationAngle
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeRotationAngle
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeRotationAngle
+  nameWithType: SharedParamsConfig.SizeRotationAngle
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeRotationAngle*
+  name: SizeRotationAngle
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeRotationAngle_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeRotationAngle
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeRotationAngle
+  nameWithType: SharedParamsConfig.SizeRotationAngle
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeVolume
   name: SizeVolume
   href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeVolume
@@ -4712,6 +4820,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISPressureLoss
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISPressureLoss
   nameWithType: SharedParamsConfig.VISPressureLoss
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSideThickness
+  name: VISSideThickness
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSideThickness
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSideThickness
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSideThickness
+  nameWithType: SharedParamsConfig.VISSideThickness
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSideThickness*
+  name: VISSideThickness
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSideThickness_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSideThickness
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSideThickness
+  nameWithType: SharedParamsConfig.VISSideThickness
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSpecNumbers
   name: VISSpecNumbers
   href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSpecNumbers
