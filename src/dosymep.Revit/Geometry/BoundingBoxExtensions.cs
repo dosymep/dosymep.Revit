@@ -170,10 +170,10 @@ namespace dosymep.Revit.Geometry {
         }
 
         /// <summary>
-        /// Возвращает общий <see cref="BoundingBoxXYZ"/>.
+        /// Возвращает <see cref="BoundingBoxXYZ"/> пересечения между всеми <see cref="BoundingBoxXYZ"/>.
         /// </summary>
         /// <param name="bbs">Коллекция <see cref="BoundingBoxXYZ"/>.</param>
-        /// <returns>Возвращает общий <see cref="BoundingBoxXYZ"/>.</returns>
+        /// <returns>Возвращает <see cref="BoundingBoxXYZ"/> пересечения между всеми <see cref="BoundingBoxXYZ"/>.</returns>
         public static BoundingBoxXYZ CreateIntersectedBoundingBox(this ICollection<BoundingBoxXYZ> bbs) {
             if(bbs == null) {
                 throw new ArgumentNullException(nameof(bbs));
@@ -183,7 +183,16 @@ namespace dosymep.Revit.Geometry {
                 return new BoundingBoxXYZ();
             }
 
-            return new BoundingBoxXYZ() {Min = bbs.GetMaxPoint(), Max = bbs.GetMinPoint(),};
+            return new BoundingBoxXYZ() {
+                Min = new XYZ(
+                    bbs.Max(item => item.Min.X),
+                    bbs.Max(item => item.Min.Y),
+                    bbs.Max(item => item.Min.Z)),
+                Max = new XYZ(
+                    bbs.Min(item => item.Max.X),
+                    bbs.Min(item => item.Max.Y),
+                    bbs.Min(item => item.Max.Z)),
+            };
         }
 
         /// <summary>
