@@ -3095,6 +3095,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksLevel
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksLevel
   nameWithType: SharedParamsConfig.BuildingWorksLevel
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksLevelCurrency
+  name: BuildingWorksLevelCurrency
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksLevelCurrency
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksLevelCurrency
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksLevelCurrency
+  nameWithType: SharedParamsConfig.BuildingWorksLevelCurrency
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksLevelCurrency*
+  name: BuildingWorksLevelCurrency
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksLevelCurrency_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksLevelCurrency
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksLevelCurrency
+  nameWithType: SharedParamsConfig.BuildingWorksLevelCurrency
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksSection
   name: BuildingWorksSection
   href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksSection
@@ -3398,6 +3410,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FixComment
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FixComment
   nameWithType: SharedParamsConfig.FixComment
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FixSolution
+  name: FixSolution
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_FixSolution
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FixSolution
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FixSolution
+  nameWithType: SharedParamsConfig.FixSolution
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FixSolution*
+  name: FixSolution
+  href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_FixSolution_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FixSolution
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FixSolution
+  nameWithType: SharedParamsConfig.FixSolution
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.FloorFinishingOrder
   name: FloorFinishingOrder
   href: api/2022/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_FloorFinishingOrder
