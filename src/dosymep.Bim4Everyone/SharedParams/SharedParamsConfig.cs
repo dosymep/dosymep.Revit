@@ -208,7 +208,6 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 Name = "ФОП_Этаж СМР", UnitType = SharedParam.GetUnitType(nameof(BuildingWorksLevel)), StorageType = StorageType.String
             };
 
-
         /// <summary>
         /// ФОП_ФИКС_Комментарии
         /// </summary>
@@ -1779,6 +1778,26 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 Name = "ФОП_Описание",
                 UnitType = SharedParam.GetUnitType(nameof(Description)),
                 StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_Этаж СМР_ДЕ
+        /// </summary>
+        public SharedParam BuildingWorksLevelCurrency
+            => new SharedParam(nameof(BuildingWorksLevelCurrency), new Guid("3b271f59-7ccd-4ca5-ad45-3242d8a4329f")) {
+                Name = "ФОП_Этаж СМР_ДЕ",
+                UnitType = SharedParam.GetUnitType(nameof(BuildingWorksLevelCurrency)),
+                StorageType = StorageType.Double
+            };
+
+        /// <summary>
+        /// ФОП_Фиксация решения
+        /// </summary>
+        public SharedParam FixSolution
+            => new SharedParam(nameof(FixSolution), new Guid("83f536a8-08cc-42e0-a6f5-4db7c1166cfb")) {
+                Name = "ФОП_Фиксация решения",
+                UnitType = SharedParam.GetUnitType(nameof(FixSolution)),
+                StorageType = StorageType.Integer
             };
 
 #endif

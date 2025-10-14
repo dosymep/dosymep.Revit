@@ -976,6 +976,10 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.Length;
                 case nameof(SharedParamsConfig.Description):
                     return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.BuildingWorksLevelCurrency):
+                    return SpecTypeId.Currency;
+                case nameof(SharedParamsConfig.FixSolution):
+                    return SpecTypeId.Boolean.YesNo;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
