@@ -39,6 +39,30 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
+        /// Проверяет, является ли редактируемым заданный параметр.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Название параметра.</param>
+        /// <returns>Возвращает доступ на редактирование параметра: true - параметр только для чтения, иначе false.</returns>
+        public static bool IsReadOnlyParam(this Element element, string paramName) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
+            }
+
+            bool isExists = TryGetParam(element, paramName, out Parameter param);
+            if(!isExists) {
+                throw new ArgumentException($"Параметра с заданным именем \"{paramName}\" у элемента не существует.",
+                    nameof(paramName));
+            }
+
+            return param.IsReadOnly;
+        }
+
+        /// <summary>
         /// Проверяет на существование значение параметра в элементе.
         /// </summary>
         /// <param name="element">Элемент.</param>
@@ -270,6 +294,31 @@ namespace dosymep.Revit {
             } catch {
                 return false;
             }
+        }
+
+        /// <summary>
+        /// Проверяет, является ли редактируемым заданный общий параметр.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Название общего параметра.</param>
+        /// <returns>Возвращает доступ на редактирование общего параметра: true - параметр только для чтения, иначе false.</returns>
+        public static bool IsReadOnlySharedParam(this Element element, string paramName) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
+            }
+
+            bool isExists = TryGetSharedParam(element, paramName, out Parameter param);
+            if(!isExists) {
+                throw new ArgumentException(
+                    $"Общего параметра с заданным именем \"{paramName}\" у элемента не существует.",
+                    nameof(paramName));
+            }
+
+            return param.IsReadOnly;
         }
 
         /// <summary>
@@ -518,6 +567,31 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
+        /// Проверяет, является ли редактируемым заданный параметр проекта.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="paramName">Название параметра проекта.</param>
+        /// <returns>Возвращает доступ на редактирование параметра проекта: true - параметр только для чтения, иначе false.</returns>
+        public static bool IsReadOnlyProjectParam(this Element element, string paramName) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(string.IsNullOrEmpty(paramName)) {
+                throw new ArgumentException($"'{nameof(paramName)}' cannot be null or empty.", nameof(paramName));
+            }
+
+            bool isExists = TryGetProjectParam(element, paramName, out Parameter param);
+            if(!isExists) {
+                throw new ArgumentException(
+                    $"Параметра проекта с заданным именем \"{paramName}\" у элемента не существует.",
+                    nameof(paramName));
+            }
+
+            return param.IsReadOnly;
+        }
+
+        /// <summary>
         /// Проверяет на существование значения параметра проекта в элементе.
         /// </summary>
         /// <param name="element">Элемент.</param>
@@ -748,6 +822,27 @@ namespace dosymep.Revit {
         }
 
         /// <summary>
+        /// Проверяет, является ли редактируемым заданный встроенный параметр.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="builtInParameter">Встроенный тип параметра.</param>
+        /// <returns>Возвращает доступ на редактирование встроенного параметра: true - параметр только для чтения, иначе false.</returns>
+        public static bool IsReadOnlyParam(this Element element, BuiltInParameter builtInParameter) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            bool isExists = TryGetParam(element, builtInParameter, out Parameter param);
+            if(!isExists) {
+                throw new ArgumentException(
+                    $"Встроенного параметра \"{builtInParameter}\" у элемента не существует.",
+                    nameof(builtInParameter));
+            }
+
+            return param.IsReadOnly;
+        }
+
+        /// <summary>
         /// Проверяет на существование значения параметра в элементе.
         /// </summary>
         /// <param name="element">Элемент.</param>
@@ -945,6 +1040,30 @@ namespace dosymep.Revit {
             } catch {
                 return false;
             }
+        }
+
+        /// <summary>
+        /// Проверяет, является ли редактируемым заданный встроенный параметр.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="forgeTypeId">Встроенный тип параметра.</param>
+        /// <returns>Возвращает доступ на редактирование встроенного параметра: true - параметр только для чтения, иначе false.</returns>
+        public static bool IsReadOnlyParam(this Element element, ForgeTypeId forgeTypeId) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(forgeTypeId == null) {
+                throw new ArgumentNullException(nameof(forgeTypeId));
+            }
+
+            bool isExists = TryGetParam(element, forgeTypeId, out Parameter param);
+            if(!isExists) {
+                throw new ArgumentException($"Параметра с заданным именем \"{forgeTypeId}\" у элемента не существует.",
+                    nameof(forgeTypeId));
+            }
+
+            return param.IsReadOnly;
         }
 
         /// <summary>
