@@ -132,7 +132,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
             Element[] scheduleElements = GetScheduleElements().ToArray();
             foreach(RevitParam filledParam in keyParams.Union(_keyScheduleRule.FilledParams)) {
                 foreach(Element element in scheduleElements) {
-                    if(!element.IsExistsParam(filledParam)) {
+                    if(!element.IsExistsParamValue(filledParam)) {
                         yield return filledParam;
                         break;
                     }
