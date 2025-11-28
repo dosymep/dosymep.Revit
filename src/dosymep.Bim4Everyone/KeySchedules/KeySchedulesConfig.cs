@@ -147,9 +147,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                     nameof(SharedParamsConfig.RoomGroupShortName)
                 },
                 RequiredProjectParams = new List<string>(),
-                FilledSharedParamNames = new List<string>() {
-                    nameof(SharedParamsConfig.RoomGroupShortName)
-                },
+                FilledSharedParamNames = new List<string>() { },
                 FilledProjectParamNames = new List<string>() { }
             };
 
@@ -213,9 +211,7 @@ namespace dosymep.Bim4Everyone.KeySchedules {
                 },
 
                 RequiredProjectParams = new List<string>(),
-                FilledSharedParamNames = new List<string>() {
-                    nameof(SharedParamsConfig.RoomSectionShortName),
-                },
+                FilledSharedParamNames = new List<string>() { },
                 FilledProjectParamNames = new List<string>() { }
             };
 
