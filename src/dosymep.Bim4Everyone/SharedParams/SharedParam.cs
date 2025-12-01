@@ -976,6 +976,10 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.Length;
                 case nameof(SharedParamsConfig.Description):
                     return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISUnmodellingSettings):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.VISSettings):
+                    return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.BuildingWorksLevelCurrency):
                     return SpecTypeId.Currency;
                 case nameof(SharedParamsConfig.FixSolution):
