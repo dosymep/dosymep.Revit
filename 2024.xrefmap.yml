@@ -1096,6 +1096,12 @@ references:
   commentId: F:dosymep.Bim4Everyone.PlatformCommandIds.PlatformSettingsCommandId
   fullName: dosymep.Bim4Everyone.PlatformCommandIds.PlatformSettingsCommandId
   nameWithType: PlatformCommandIds.PlatformSettingsCommandId
+- uid: dosymep.Bim4Everyone.PlatformCommandIds.RevitSetCoordParamsHeadlessId
+  name: RevitSetCoordParamsHeadlessId
+  href: api/2024/dosymep.Bim4Everyone.PlatformCommandIds.html#dosymep_Bim4Everyone_PlatformCommandIds_RevitSetCoordParamsHeadlessId
+  commentId: F:dosymep.Bim4Everyone.PlatformCommandIds.RevitSetCoordParamsHeadlessId
+  fullName: dosymep.Bim4Everyone.PlatformCommandIds.RevitSetCoordParamsHeadlessId
+  nameWithType: PlatformCommandIds.RevitSetCoordParamsHeadlessId
 - uid: dosymep.Bim4Everyone.ProjectConfigs
   name: dosymep.Bim4Everyone.ProjectConfigs
   href: api/2024/dosymep.Bim4Everyone.ProjectConfigs.html
