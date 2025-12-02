@@ -1771,6 +1771,26 @@ namespace dosymep.Bim4Everyone.SharedParams {
             };
 
         /// <summary>
+        /// ФОП_ВИС_Настройки немоделируемых
+        /// </summary>
+        public SharedParam VISUnmodellingSettings
+            { get; } = new SharedParam(nameof(VISUnmodellingSettings), new Guid("a5477409-3b49-422f-97c2-4ad045af928c")) {
+                Name = "ФОП_ВИС_Настройки немоделируемых",
+                UnitType = SharedParam.GetUnitType(nameof(VISUnmodellingSettings)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// ФОП_ВИС_Настройки
+        /// </summary>
+        public SharedParam VISSettings
+            { get; } = new SharedParam(nameof(VISSettings), new Guid("0257e759-131f-4968-9ef1-0d4629d12560")) {
+                Name = "ФОП_ВИС_Настройки",
+                UnitType = SharedParam.GetUnitType(nameof(VISSettings)),
+                StorageType = StorageType.String
+            };
+
+        /// <summary>
         /// ФОП_Описание
         /// </summary>
         public SharedParam Description
