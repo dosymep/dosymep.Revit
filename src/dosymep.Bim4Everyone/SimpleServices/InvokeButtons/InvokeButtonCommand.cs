@@ -17,6 +17,12 @@ namespace dosymep.Bim4Everyone.SimpleServices.InvokeButtons {
             "RevitPlatformSettings.PlatformSettingsCommand",
             $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\pyRevit\Extensions\01.BIM.extension\BIM.tab\bin\RevitPlatformSettings.dll");
 
+        public static readonly InvokeButtonCommand SetCoordParamsHeadlessCommand = new InvokeButtonCommand(
+            PlatformCommandIds.RevitSetCoordParamsHeadlessId,
+            $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\pyRevit\Extensions\01.BIM.extension\BIM.tab\СМР.panel\СМР.pulldown\Заполнить параметры СМР.invokebutton",
+            "RevitSetCoordParams.RevitSetCoordParamsHeadless",
+            $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\pyRevit\Extensions\01.BIM.extension\BIM.tab\bin\RevitSetCoordParams.dll");
+
         public InvokeButtonCommand(Guid commandId,
             string commandPath, string commandTypeName, string assemblyPath)
             : base(commandId, commandPath) {
