@@ -4844,6 +4844,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISPressureLoss
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISPressureLoss
   nameWithType: SharedParamsConfig.VISPressureLoss
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSettings
+  name: VISSettings
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSettings
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSettings
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSettings
+  nameWithType: SharedParamsConfig.VISSettings
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSettings*
+  name: VISSettings
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSettings_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSettings
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSettings
+  nameWithType: SharedParamsConfig.VISSettings
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISSideThickness
   name: VISSideThickness
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISSideThickness
@@ -4964,6 +4976,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISUnit
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISUnit
   nameWithType: SharedParamsConfig.VISUnit
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISUnmodellingSettings
+  name: VISUnmodellingSettings
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISUnmodellingSettings
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISUnmodellingSettings
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISUnmodellingSettings
+  nameWithType: SharedParamsConfig.VISUnmodellingSettings
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISUnmodellingSettings*
+  name: VISUnmodellingSettings
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISUnmodellingSettings_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISUnmodellingSettings
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISUnmodellingSettings
+  nameWithType: SharedParamsConfig.VISUnmodellingSettings
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.WallFinishingOrder
   name: WallFinishingOrder
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_WallFinishingOrder
