@@ -20,5 +20,11 @@ namespace dosymep.Bim4Everyone {
         /// Модуль настроек платформы.
         /// </summary>
         public static readonly Guid PlatformSettingsCommandId = new Guid("5AEAB5FF-80AF-472C-B8B0-947DE2F808F1");
+
+
+        /// <summary>
+        /// Вызов обновления СМР без интерфейса
+        /// </summary>
+        public static readonly Guid RevitSetCoordParamsHeadlessId = new Guid("D036B85D-745F-4BE6-8513-EC7DCCA455BD");
     }
 }
