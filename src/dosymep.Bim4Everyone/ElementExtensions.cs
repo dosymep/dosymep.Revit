@@ -39,6 +39,29 @@ namespace dosymep.Bim4Everyone {
         }
 
         /// <summary>
+        /// Проверяет, является ли редактируемым заданный параметр.
+        /// </summary>
+        /// <param name="element">Элемент.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <returns>Возвращает доступ на редактирование параметра: true - параметр только для чтения, иначе false.</returns>
+        public static bool IsReadOnlyParam(this Element element, RevitParam revitParam) {
+            if(element is null) {
+                throw new ArgumentNullException(nameof(element));
+            }
+
+            if(revitParam == null) {
+                throw new ArgumentNullException(nameof(revitParam));
+            }
+
+            try {
+                return element.GetParam(revitParam).IsReadOnly;
+            } catch {
+                throw new ArgumentException($"Параметра \"{revitParam.Name}\" у элемента не существует.",
+                    nameof(revitParam)); 
+            }
+        }
+
+        /// <summary>
         /// Проверяет на существование значения параметра в элементе.
         /// </summary>
         /// <param name="element">Элемент.</param>
