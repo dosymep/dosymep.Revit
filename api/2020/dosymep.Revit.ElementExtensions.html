@@ -1809,6 +1809,174 @@ Class ElementExtensions
 
 
 
+  <a id="dosymep_Revit_ElementExtensions_IsReadOnlyParam_" data-uid="dosymep.Revit.ElementExtensions.IsReadOnlyParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsReadOnlyParam_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ElementExtensions.IsReadOnlyParam(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter)">
+  IsReadOnlyParam(Element, BuiltInParameter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, является ли редактируемым заданный встроенный параметр.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsReadOnlyParam(this Element element, BuiltInParameter builtInParameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>builtInParameter</code> <span class="xref">BuiltInParameter</span></dt>
+    <dd><p>Встроенный тип параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает доступ на редактирование встроенного параметра: true - параметр только для чтения, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_IsReadOnlyParam_" data-uid="dosymep.Revit.ElementExtensions.IsReadOnlyParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsReadOnlyParam_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.IsReadOnlyParam(Autodesk.Revit.DB.Element,System.String)">
+  IsReadOnlyParam(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, является ли редактируемым заданный параметр.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsReadOnlyParam(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Название параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает доступ на редактирование параметра: true - параметр только для чтения, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_IsReadOnlyProjectParam_" data-uid="dosymep.Revit.ElementExtensions.IsReadOnlyProjectParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsReadOnlyProjectParam_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.IsReadOnlyProjectParam(Autodesk.Revit.DB.Element,System.String)">
+  IsReadOnlyProjectParam(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, является ли редактируемым заданный параметр проекта.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsReadOnlyProjectParam(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Название параметра проекта.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает доступ на редактирование параметра проекта: true - параметр только для чтения, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="dosymep_Revit_ElementExtensions_IsReadOnlySharedParam_" data-uid="dosymep.Revit.ElementExtensions.IsReadOnlySharedParam*"></a>
+
+  <h3 id="dosymep_Revit_ElementExtensions_IsReadOnlySharedParam_Autodesk_Revit_DB_Element_System_String_" data-uid="dosymep.Revit.ElementExtensions.IsReadOnlySharedParam(Autodesk.Revit.DB.Element,System.String)">
+  IsReadOnlySharedParam(Element, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Проверяет, является ли редактируемым заданный общий параметр.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsReadOnlySharedParam(this Element element, string paramName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>element</code> <span class="xref">Element</span></dt>
+    <dd><p>Элемент.</p>
+</dd>
+    <dt><code>paramName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Название общего параметра.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Возвращает доступ на редактирование общего параметра: true - параметр только для чтения, иначе false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="dosymep_Revit_ElementExtensions_RemoveParamValue_" data-uid="dosymep.Revit.ElementExtensions.RemoveParamValue*"></a>
 
   <h3 id="dosymep_Revit_ElementExtensions_RemoveParamValue_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_" data-uid="dosymep.Revit.ElementExtensions.RemoveParamValue(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter)">

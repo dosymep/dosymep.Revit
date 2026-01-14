@@ -559,6 +559,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.ElementExtensions.IsExistsParamValue
   fullName: dosymep.Bim4Everyone.ElementExtensions.IsExistsParamValue
   nameWithType: ElementExtensions.IsExistsParamValue
+- uid: dosymep.Bim4Everyone.ElementExtensions.IsReadOnlyParam(Autodesk.Revit.DB.Element,dosymep.Bim4Everyone.RevitParam)
+  name: IsReadOnlyParam(Element, RevitParam)
+  href: api/2021/dosymep.Bim4Everyone.ElementExtensions.html#dosymep_Bim4Everyone_ElementExtensions_IsReadOnlyParam_Autodesk_Revit_DB_Element_dosymep_Bim4Everyone_RevitParam_
+  commentId: M:dosymep.Bim4Everyone.ElementExtensions.IsReadOnlyParam(Autodesk.Revit.DB.Element,dosymep.Bim4Everyone.RevitParam)
+  fullName: dosymep.Bim4Everyone.ElementExtensions.IsReadOnlyParam(Autodesk.Revit.DB.Element, dosymep.Bim4Everyone.RevitParam)
+  nameWithType: ElementExtensions.IsReadOnlyParam(Element, RevitParam)
+- uid: dosymep.Bim4Everyone.ElementExtensions.IsReadOnlyParam*
+  name: IsReadOnlyParam
+  href: api/2021/dosymep.Bim4Everyone.ElementExtensions.html#dosymep_Bim4Everyone_ElementExtensions_IsReadOnlyParam_
+  commentId: Overload:dosymep.Bim4Everyone.ElementExtensions.IsReadOnlyParam
+  fullName: dosymep.Bim4Everyone.ElementExtensions.IsReadOnlyParam
+  nameWithType: ElementExtensions.IsReadOnlyParam
 - uid: dosymep.Bim4Everyone.ElementExtensions.RemoveParamValue(Autodesk.Revit.DB.Element,dosymep.Bim4Everyone.RevitParam)
   name: RemoveParamValue(Element, RevitParam)
   href: api/2021/dosymep.Bim4Everyone.ElementExtensions.html#dosymep_Bim4Everyone_ElementExtensions_RemoveParamValue_Autodesk_Revit_DB_Element_dosymep_Bim4Everyone_RevitParam_
@@ -6995,6 +7007,57 @@ references:
   commentId: Overload:dosymep.Revit.ElementExtensions.IsExistsSharedParamValue
   fullName: dosymep.Revit.ElementExtensions.IsExistsSharedParamValue
   nameWithType: ElementExtensions.IsExistsSharedParamValue
+- uid: dosymep.Revit.ElementExtensions.IsReadOnlyParam(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter)
+  name: IsReadOnlyParam(Element, BuiltInParameter)
+  href: api/2021/dosymep.Revit.ElementExtensions.html#dosymep_Revit_ElementExtensions_IsReadOnlyParam_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_
+  commentId: M:dosymep.Revit.ElementExtensions.IsReadOnlyParam(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter)
+  fullName: dosymep.Revit.ElementExtensions.IsReadOnlyParam(Autodesk.Revit.DB.Element, Autodesk.Revit.DB.BuiltInParameter)
+  nameWithType: ElementExtensions.IsReadOnlyParam(Element, BuiltInParameter)
+- uid: dosymep.Revit.ElementExtensions.IsReadOnlyParam(Autodesk.Revit.DB.Element,System.String)
+  name: IsReadOnlyParam(Element, string)
+  href: api/2021/dosymep.Revit.ElementExtensions.html#dosymep_Revit_ElementExtensions_IsReadOnlyParam_Autodesk_Revit_DB_Element_System_String_
+  commentId: M:dosymep.Revit.ElementExtensions.IsReadOnlyParam(Autodesk.Revit.DB.Element,System.String)
+  name.vb: IsReadOnlyParam(Element, String)
+  fullName: dosymep.Revit.ElementExtensions.IsReadOnlyParam(Autodesk.Revit.DB.Element, string)
+  fullName.vb: dosymep.Revit.ElementExtensions.IsReadOnlyParam(Autodesk.Revit.DB.Element, String)
+  nameWithType: ElementExtensions.IsReadOnlyParam(Element, string)
+  nameWithType.vb: ElementExtensions.IsReadOnlyParam(Element, String)
+- uid: dosymep.Revit.ElementExtensions.IsReadOnlyParam*
+  name: IsReadOnlyParam
+  href: api/2021/dosymep.Revit.ElementExtensions.html#dosymep_Revit_ElementExtensions_IsReadOnlyParam_
+  commentId: Overload:dosymep.Revit.ElementExtensions.IsReadOnlyParam
+  fullName: dosymep.Revit.ElementExtensions.IsReadOnlyParam
+  nameWithType: ElementExtensions.IsReadOnlyParam
+- uid: dosymep.Revit.ElementExtensions.IsReadOnlyProjectParam(Autodesk.Revit.DB.Element,System.String)
+  name: IsReadOnlyProjectParam(Element, string)
+  href: api/2021/dosymep.Revit.ElementExtensions.html#dosymep_Revit_ElementExtensions_IsReadOnlyProjectParam_Autodesk_Revit_DB_Element_System_String_
+  commentId: M:dosymep.Revit.ElementExtensions.IsReadOnlyProjectParam(Autodesk.Revit.DB.Element,System.String)
+  name.vb: IsReadOnlyProjectParam(Element, String)
+  fullName: dosymep.Revit.ElementExtensions.IsReadOnlyProjectParam(Autodesk.Revit.DB.Element, string)
+  fullName.vb: dosymep.Revit.ElementExtensions.IsReadOnlyProjectParam(Autodesk.Revit.DB.Element, String)
+  nameWithType: ElementExtensions.IsReadOnlyProjectParam(Element, string)
+  nameWithType.vb: ElementExtensions.IsReadOnlyProjectParam(Element, String)
+- uid: dosymep.Revit.ElementExtensions.IsReadOnlyProjectParam*
+  name: IsReadOnlyProjectParam
+  href: api/2021/dosymep.Revit.ElementExtensions.html#dosymep_Revit_ElementExtensions_IsReadOnlyProjectParam_
+  commentId: Overload:dosymep.Revit.ElementExtensions.IsReadOnlyProjectParam
+  fullName: dosymep.Revit.ElementExtensions.IsReadOnlyProjectParam
+  nameWithType: ElementExtensions.IsReadOnlyProjectParam
+- uid: dosymep.Revit.ElementExtensions.IsReadOnlySharedParam(Autodesk.Revit.DB.Element,System.String)
+  name: IsReadOnlySharedParam(Element, string)
+  href: api/2021/dosymep.Revit.ElementExtensions.html#dosymep_Revit_ElementExtensions_IsReadOnlySharedParam_Autodesk_Revit_DB_Element_System_String_
+  commentId: M:dosymep.Revit.ElementExtensions.IsReadOnlySharedParam(Autodesk.Revit.DB.Element,System.String)
+  name.vb: IsReadOnlySharedParam(Element, String)
+  fullName: dosymep.Revit.ElementExtensions.IsReadOnlySharedParam(Autodesk.Revit.DB.Element, string)
+  fullName.vb: dosymep.Revit.ElementExtensions.IsReadOnlySharedParam(Autodesk.Revit.DB.Element, String)
+  nameWithType: ElementExtensions.IsReadOnlySharedParam(Element, string)
+  nameWithType.vb: ElementExtensions.IsReadOnlySharedParam(Element, String)
+- uid: dosymep.Revit.ElementExtensions.IsReadOnlySharedParam*
+  name: IsReadOnlySharedParam
+  href: api/2021/dosymep.Revit.ElementExtensions.html#dosymep_Revit_ElementExtensions_IsReadOnlySharedParam_
+  commentId: Overload:dosymep.Revit.ElementExtensions.IsReadOnlySharedParam
+  fullName: dosymep.Revit.ElementExtensions.IsReadOnlySharedParam
+  nameWithType: ElementExtensions.IsReadOnlySharedParam
 - uid: dosymep.Revit.ElementExtensions.RemoveParamValue(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.BuiltInParameter)
   name: RemoveParamValue(Element, BuiltInParameter)
   href: api/2021/dosymep.Revit.ElementExtensions.html#dosymep_Revit_ElementExtensions_RemoveParamValue_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_BuiltInParameter_
