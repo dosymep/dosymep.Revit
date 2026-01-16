@@ -1819,6 +1819,56 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 UnitType = SharedParam.GetUnitType(nameof(FixSolution)),
                 StorageType = StorageType.Integer
             };
+        
+        /// <summary>
+        /// ФОП_Отметка низа СМР
+        /// </summary>
+        public SharedParam BuildingWorksMarkBottom
+            { get; } = new SharedParam(nameof(BuildingWorksMarkBottom), new Guid("6f4da93e-4334-4599-8cb9-3fff672ef392")) {
+                Name = "ФОП_Отметка низа СМР",
+                UnitType = SharedParam.GetUnitType(nameof(BuildingWorksMarkBottom)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// ФОП_Отметка верха СМР
+        /// </summary>
+        public SharedParam BuildingWorksMarkTop
+            { get; } = new SharedParam(nameof(BuildingWorksMarkTop), new Guid("fcac24d4-b561-47e2-99bf-aa770c27bf9f")) {
+                Name = "ФОП_Отметка верха СМР",
+                UnitType = SharedParam.GetUnitType(nameof(BuildingWorksMarkTop)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// ФОП_Зона СМР
+        /// </summary>
+        public SharedParam BuildingWorksZone
+            { get; } = new SharedParam(nameof(BuildingWorksZone), new Guid("8a36a6ee-96d2-47d9-9d51-0a6cf3c7151b")) {
+                Name = "ФОП_Зона СМР",
+                UnitType = SharedParam.GetUnitType(nameof(BuildingWorksZone)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// ФОП_Описание СМР
+        /// </summary>
+        public SharedParam BuildingWorksDescription
+            { get; } = new SharedParam(nameof(BuildingWorksDescription), new Guid("4db6fea1-a4b0-4cf9-950f-35e74d3e55ed")) {
+                Name = "ФОП_Описание СМР",
+                UnitType = SharedParam.GetUnitType(nameof(BuildingWorksDescription)),
+                StorageType = StorageType.String
+            };
+        
+        /// <summary>
+        /// ФОП_РАЗМ_Объем СМР
+        /// </summary>
+        public SharedParam SizeVolumeBuildingWorks
+            { get; } = new SharedParam(nameof(SizeVolumeBuildingWorks), new Guid("8bc2c6f4-939a-4950-91c1-31e5807828ec")) {
+                Name = "ФОП_РАЗМ_Объем СМР",
+                UnitType = SharedParam.GetUnitType(nameof(SizeVolumeBuildingWorks)),
+                StorageType = StorageType.Double
+            };
 
 #endif
 

@@ -984,6 +984,16 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.Currency;
                 case nameof(SharedParamsConfig.FixSolution):
                     return SpecTypeId.Boolean.YesNo;
+                case nameof(SharedParamsConfig.BuildingWorksMarkBottom):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.BuildingWorksMarkTop):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.BuildingWorksZone):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.BuildingWorksDescription):
+                    return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.SizeVolumeBuildingWorks):
+                    return SpecTypeId.Volume;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
