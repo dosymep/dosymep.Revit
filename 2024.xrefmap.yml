@@ -3101,6 +3101,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksBlock
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksBlock
   nameWithType: SharedParamsConfig.BuildingWorksBlock
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksDescription
+  name: BuildingWorksDescription
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksDescription
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksDescription
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksDescription
+  nameWithType: SharedParamsConfig.BuildingWorksDescription
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksDescription*
+  name: BuildingWorksDescription
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksDescription_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksDescription
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksDescription
+  nameWithType: SharedParamsConfig.BuildingWorksDescription
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksLevel
   name: BuildingWorksLevel
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksLevel
@@ -3125,6 +3137,30 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksLevelCurrency
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksLevelCurrency
   nameWithType: SharedParamsConfig.BuildingWorksLevelCurrency
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksMarkBottom
+  name: BuildingWorksMarkBottom
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksMarkBottom
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksMarkBottom
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksMarkBottom
+  nameWithType: SharedParamsConfig.BuildingWorksMarkBottom
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksMarkBottom*
+  name: BuildingWorksMarkBottom
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksMarkBottom_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksMarkBottom
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksMarkBottom
+  nameWithType: SharedParamsConfig.BuildingWorksMarkBottom
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksMarkTop
+  name: BuildingWorksMarkTop
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksMarkTop
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksMarkTop
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksMarkTop
+  nameWithType: SharedParamsConfig.BuildingWorksMarkTop
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksMarkTop*
+  name: BuildingWorksMarkTop
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksMarkTop_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksMarkTop
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksMarkTop
+  nameWithType: SharedParamsConfig.BuildingWorksMarkTop
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksSection
   name: BuildingWorksSection
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksSection
@@ -3149,6 +3185,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksTyping
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksTyping
   nameWithType: SharedParamsConfig.BuildingWorksTyping
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksZone
+  name: BuildingWorksZone
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksZone
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksZone
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksZone
+  nameWithType: SharedParamsConfig.BuildingWorksZone
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksZone*
+  name: BuildingWorksZone
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_BuildingWorksZone_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksZone
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksZone
+  nameWithType: SharedParamsConfig.BuildingWorksZone
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingOrder
   name: CeilingFinishingOrder
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_CeilingFinishingOrder
@@ -3902,6 +3950,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeVolume
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeVolume
   nameWithType: SharedParamsConfig.SizeVolume
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeVolumeBuildingWorks
+  name: SizeVolumeBuildingWorks
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeVolumeBuildingWorks
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeVolumeBuildingWorks
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeVolumeBuildingWorks
+  nameWithType: SharedParamsConfig.SizeVolumeBuildingWorks
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeVolumeBuildingWorks*
+  name: SizeVolumeBuildingWorks
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeVolumeBuildingWorks_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeVolumeBuildingWorks
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeVolumeBuildingWorks
+  nameWithType: SharedParamsConfig.SizeVolumeBuildingWorks
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.SizeWidth
   name: SizeWidth
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_SizeWidth
