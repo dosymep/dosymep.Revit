@@ -891,6 +891,10 @@ namespace dosymep.Revit {
                     return UnitType.UT_Undefined;
                 case -1002050: // BuiltInParameter.ELEM_TYPE_PARAM
                     return UnitType.UT_Undefined;
+                case -1002002: // BuiltInParameter.ALL_MODEL_FAMILY_NAME, BuiltInParameter.SYMBOL_FAMILY_NAME_PARAM
+                    return UnitType.UT_Undefined;
+                case -1002001: // BuiltInParameter.ALL_MODEL_TYPE_NAME, BuiltInParameter.SYMBOL_NAME_PARAM
+                    return UnitType.UT_Undefined;
                 case -1001954: // BuiltInParameter.FLOOR_PARAM_IS_STRUCTURAL
                     return UnitType.UT_Undefined;
                 case -1001708: // BuiltInParameter.ROOF_BASE_LEVEL_PARAM
@@ -4308,6 +4312,10 @@ namespace dosymep.Revit {
                     return SpecTypeId.Length;
                 case -1002065: // BuiltInParameter.SCHEDULE_BASE_LEVEL_OFFSET_PARAM
                     return SpecTypeId.Length;
+                case -1002002: // BuiltInParameter.ALL_MODEL_FAMILY_NAME, BuiltInParameter.SYMBOL_FAMILY_NAME_PARAM
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
+                case -1002001: // BuiltInParameter.ALL_MODEL_TYPE_NAME, BuiltInParameter.SYMBOL_NAME_PARAM
+                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
                 case -1001953: // BuiltInParameter.HOST_PERIMETER_COMPUTED
                     return SpecTypeId.Length;
                 case -1001951: // BuiltInParameter.FLOOR_HEIGHTABOVELEVEL_PARAM
