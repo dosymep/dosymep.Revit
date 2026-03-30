@@ -994,6 +994,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.SizeVolumeBuildingWorks):
                     return SpecTypeId.Volume;
+                case nameof(SharedParamsConfig.RoomPositionType):
+                    return SpecTypeId.String.Text;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
