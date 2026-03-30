@@ -1870,6 +1870,14 @@ namespace dosymep.Bim4Everyone.SharedParams {
                 StorageType = StorageType.Double
             };
 
+        /// <summary>
+        /// ФОП_Тип расположения
+        /// </summary>
+        public SharedParam RoomPositionType { get; } = new SharedParam(nameof(RoomPositionType), new Guid("82d94d93-1b78-4b5f-a17e-c2477323b1c4")) {
+            Name = "ФОП_Тип расположения",
+            UnitType = SharedParam.GetUnitType(nameof(RoomPositionType)),
+            StorageType = StorageType.String
+        };
 #endif
 
         /// <inheritdoc />
