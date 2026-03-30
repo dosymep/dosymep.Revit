@@ -3782,6 +3782,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomMultilevelGroup
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomMultilevelGroup
   nameWithType: SharedParamsConfig.RoomMultilevelGroup
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomPositionType
+  name: RoomPositionType
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_RoomPositionType
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomPositionType
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomPositionType
+  nameWithType: SharedParamsConfig.RoomPositionType
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomPositionType*
+  name: RoomPositionType
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_RoomPositionType_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomPositionType
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomPositionType
+  nameWithType: SharedParamsConfig.RoomPositionType
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomSectionShortName
   name: RoomSectionShortName
   href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_RoomSectionShortName
