@@ -1878,6 +1878,33 @@ namespace dosymep.Bim4Everyone.SharedParams {
             UnitType = SharedParam.GetUnitType(nameof(RoomPositionType)),
             StorageType = StorageType.String
         };
+
+        /// <summary>
+        /// ФОП_ВИС_Маска краткого наименования
+        /// </summary>
+        public SharedParam VISMaskShortName { get; } = new SharedParam(nameof(VISMaskShortName), new Guid("8bf842a3-1176-415e-a3aa-8a9d3f8be969")) {
+            Name = "ФОП_ВИС_Маска краткого наименования",
+            UnitType = SharedParam.GetUnitType(nameof(VISMaskShortName)),
+            StorageType = StorageType.String
+        };
+
+        /// <summary>
+        /// ФОП_ВИС_Маска наименования
+        /// </summary>
+        public SharedParam VISMaskName { get; } = new SharedParam(nameof(VISMaskName), new Guid("d6a4dcf8-c3a9-44b4-a546-88b73f303977")) {
+            Name = "ФОП_ВИС_Маска наименования",
+            UnitType = SharedParam.GetUnitType(nameof(VISMaskName)),
+            StorageType = StorageType.String
+        };
+
+        /// <summary>
+        /// ФОП_ВИС_Маска марки
+        /// </summary>
+        public SharedParam VISMaskMark { get; } = new SharedParam(nameof(VISMaskMark), new Guid("abadfb74-d60d-4c8b-b663-b6b646a20330")) {
+            Name = "ФОП_ВИС_Маска марки",
+            UnitType = SharedParam.GetUnitType(nameof(VISMaskMark)),
+            StorageType = StorageType.String
+        };
 #endif
 
         /// <inheritdoc />
