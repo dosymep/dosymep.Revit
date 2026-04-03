@@ -4742,6 +4742,42 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMarkNumber
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMarkNumber
   nameWithType: SharedParamsConfig.VISMarkNumber
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskMark
+  name: VISMaskMark
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISMaskMark
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskMark
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskMark
+  nameWithType: SharedParamsConfig.VISMaskMark
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskMark*
+  name: VISMaskMark
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISMaskMark_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskMark
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskMark
+  nameWithType: SharedParamsConfig.VISMaskMark
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskName
+  name: VISMaskName
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISMaskName
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskName
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskName
+  nameWithType: SharedParamsConfig.VISMaskName
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskName*
+  name: VISMaskName
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISMaskName_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskName
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskName
+  nameWithType: SharedParamsConfig.VISMaskName
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskShortName
+  name: VISMaskShortName
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISMaskShortName
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskShortName
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskShortName
+  nameWithType: SharedParamsConfig.VISMaskShortName
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskShortName*
+  name: VISMaskShortName
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISMaskShortName_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskShortName
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMaskShortName
+  nameWithType: SharedParamsConfig.VISMaskShortName
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.VISMass
   name: VISMass
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_VISMass
