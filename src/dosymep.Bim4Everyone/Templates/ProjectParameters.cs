@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
+using Autodesk.Revit.UI;
 
 using dosymep.Bim4Everyone;
 using dosymep.Bim4Everyone.KeySchedules;
@@ -20,6 +21,8 @@ namespace dosymep.Bim4Everyone.Templates {
     /// Класс по копирование параметров проекта.
     /// </summary>
     public class ProjectParameters {
+        private const string ParameterTransferScheduleNamePrefix = "BIM4E_PARAM_TRANSFER_";
+
         private readonly ILoggerService _loggerService;
 
         /// <summary>
@@ -304,7 +307,12 @@ namespace dosymep.Bim4Everyone.Templates {
                 return false;
             }
 
-            ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(source, new[] { viewSchedule.Id }, target, Transform.Identity, new CopyPasteOptions());
+            ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(
+                source,
+                new[] { viewSchedule.Id },
+                target,
+                Transform.Identity,
+                CreateCopyPasteOptions());
             if(removeSchedule) {
                 // Удаляем скопированный вид,
                 // так как он нужен был для переноса параметра
@@ -332,7 +340,12 @@ namespace dosymep.Bim4Everyone.Templates {
                 return false;
             }
 
-            ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(source, viewSchedules.Select(item => item.Id).ToArray(), target, Transform.Identity, new CopyPasteOptions());
+            ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(
+                source,
+                viewSchedules.Select(item => item.Id).ToArray(),
+                target,
+                Transform.Identity,
+                CreateCopyPasteOptions());
             if(removeSchedule) {
                 // Удаляем скопированные виды,
                 // так как они нужны были для переноса параметра
@@ -357,7 +370,10 @@ namespace dosymep.Bim4Everyone.Templates {
         private void RevitParamsCopy(Document target, IEnumerable<RevitParam> revitParams) {
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
+                ICollection<ViewSchedule> transferSchedules = CreateParameterTransferSchedules(source, target, revitParams);
+
                 using(var transaction = target.StartTransaction("Настройка параметров")) {
+                    CopyViewSchedules(source, target, true, transferSchedules);
                     RevitParamsSync(source, target, revitParams);
                     RevitParamsCopy(source, target, revitParams);
 
@@ -366,6 +382,187 @@ namespace dosymep.Bim4Everyone.Templates {
             } finally {
                 source.Close(false);
             }
+        }
+
+        /// <summary>
+        /// Создает трансферные таблицы для отсутствующих в целевом документе параметров.
+        /// </summary>
+        /// <param name="source">Шаблон</param>
+        /// <param name="target">Целевой документ</param>
+        /// <param name="revitParams">Параметры, которые нужно проверить на наличие в целевом документе</param>
+        /// <returns></returns>
+        private ICollection<ViewSchedule> CreateParameterTransferSchedules(
+            Document source,
+            Document target,
+            IEnumerable<RevitParam> revitParams) {
+            RevitParam[] missingParams = revitParams
+                .Where(item => !item.IsExistsParam(target))
+                .ToArray();
+
+            if(missingParams.Length == 0) {
+                return Array.Empty<ViewSchedule>();
+            }
+
+            var transferSchedules = new List<ViewSchedule>();
+            var transferSchedulesByCategoryId = new Dictionary<long, ViewSchedule>();
+
+            using(var transaction = source.StartTransaction("Создание временных спецификаций параметров")) {
+                foreach(RevitParam revitParam in missingParams) {
+                    try {
+                        ParameterElement parameterElement = revitParam.GetRevitParamElement(source);
+                        if(parameterElement == null) {
+                            continue;
+                        }
+
+                        ViewSchedule viewSchedule = CreateParameterTransferSchedule(
+                            source,
+                            transferSchedulesByCategoryId,
+                            revitParam,
+                            parameterElement);
+                        
+                        if(viewSchedule != null
+                           && !transferSchedules.Any(item => item.Id == viewSchedule.Id)) {
+                            transferSchedules.Add(viewSchedule);
+                        }
+
+                        if(viewSchedule == null) {
+                            _loggerService.Warning(
+                                "Не удалось создать временную спецификацию переноса для параметра {@revitParam} в шаблоне.",
+                                revitParam);
+                        }
+                    } catch(Exception ex) {
+                        _loggerService.Warning(
+                            ex,
+                            "Не удалось подготовить временную спецификацию переноса для параметра {@revitParam} в шаблоне.",
+                            revitParam);
+                    }
+                }
+
+                transaction.Commit();
+            }
+
+            return transferSchedules;
+        }
+
+        /// <summary>
+        /// Создает временную спецификацию переноса для параметра в шаблоне или использует одну из ранее созданных.
+        /// </summary>
+        /// <param name="source">Файл шаблона</param>
+        /// <param name="transferSchedulesByCategoryId">Словарь ранее созданных спецификаций</param>
+        /// <param name="revitParam">Параметр</param>
+        /// <param name="parameterElement">Объект параметра из шаблона</param>
+        /// <returns></returns>
+        private ViewSchedule CreateParameterTransferSchedule(
+            Document source,
+            IDictionary<long, ViewSchedule> transferSchedulesByCategoryId,
+            RevitParam revitParam,
+            ParameterElement parameterElement) {
+            foreach(Category category in GetRevitParamCategories(source, revitParam)) {
+                ViewSchedule viewSchedule = GetOrCreateParameterTransferSchedule(
+                    source,
+                    transferSchedulesByCategoryId,
+                    category);
+                if(viewSchedule == null) {
+                    continue;
+                }
+
+                if(TryAddParameterTransferField(viewSchedule, parameterElement)) {
+                    return viewSchedule;
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Создает новую трансферную спецификацию или возвращает ранее созданную для текущей категории.
+        /// </summary>
+        /// <param name="source">Файл шаблона</param>
+        /// <param name="transferSchedulesByCategoryId">Словарь с трансферными спецификацями</param>
+        /// <param name="category">Категория</param>
+        /// <returns></returns>
+        private ViewSchedule GetOrCreateParameterTransferSchedule(
+            Document source,
+            IDictionary<long, ViewSchedule> transferSchedulesByCategoryId,
+            Category category) {
+            long categoryId = category.Id.GetIdValue();
+            if(transferSchedulesByCategoryId.TryGetValue(categoryId, out ViewSchedule viewSchedule)) {
+                return viewSchedule;
+            }
+
+            try {
+                viewSchedule = ViewSchedule.CreateSchedule(source, category.Id);
+                viewSchedule.Name = $"{ParameterTransferScheduleNamePrefix}{Guid.NewGuid():N}";
+                transferSchedulesByCategoryId.Add(categoryId, viewSchedule);
+
+                return viewSchedule;
+            } catch(Exception ex) {
+                transferSchedulesByCategoryId.Add(categoryId, null);
+                _loggerService.Warning(
+                    ex,
+                    "Не удалось создать временную спецификацию переноса для категории {category} в шаблоне.",
+                    category.Name);
+
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Возвращает категории, к которым привязан параметр в файле шаблона.
+        /// </summary>
+        /// <param name="source">Файл шаблона</param>
+        /// <param name="revitParam">Параметр</param>
+        /// <returns></returns>
+        private static IEnumerable<Category> GetRevitParamCategories(Document source, RevitParam revitParam) {
+            (Definition Definition, Binding Binding) paramBinding = revitParam.GetParamBinding(source);
+            if(!(paramBinding.Binding is ElementBinding elementBinding)) {
+                yield break;
+            }
+
+            foreach(Category category in elementBinding.Categories) {
+                if(category != null) {
+                    yield return category;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Пробует добавить в трансферную спецификацию требуемый параметр. Если в ранее созданной таблице уже есть такой параметр, возвращает True и не добавляет.
+        /// </summary>
+        /// <param name="viewSchedule">Таблица</param>
+        /// <param name="parameterElement">Объект параметра из шаблона</param>
+        /// <returns></returns>
+        private static bool TryAddParameterTransferField(ViewSchedule viewSchedule, ParameterElement parameterElement) {
+            if(IsParameterTransferFieldExists(viewSchedule, parameterElement)) {
+                return true;
+            }
+
+            SchedulableField schedulableField = viewSchedule.Definition
+                .GetSchedulableFields()
+                .FirstOrDefault(item => item.ParameterId == parameterElement.Id);
+            if(schedulableField == null) {
+                return false;
+            }
+
+            try {
+                viewSchedule.Definition.AddField(schedulableField);
+                return true;
+            } catch(Exception) {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Для ранее созданной таблицы проверяет существует ли в ней уже требуемый параметр.
+        /// </summary>
+        /// <param name="viewSchedule">Таблица</param>
+        /// <param name="parameterElement">Объект параметра из шаблона</param>
+        /// <returns></returns>
+        private static bool IsParameterTransferFieldExists(ViewSchedule viewSchedule, ParameterElement parameterElement) {
+            ScheduleDefinition definition = viewSchedule.Definition;
+            return definition.GetFieldOrder()
+                .Select(item => definition.GetField(item))
+                .Any(item => item.ParameterId == parameterElement.Id);
         }
 
         private void RevitParamsCopy(Document source, Document target, IEnumerable<RevitParam> revitParams) {
@@ -435,6 +632,31 @@ namespace dosymep.Bim4Everyone.Templates {
             // Удаляем все найденные настройки организации браузера
             // чтобы произвести замену этих элементов
             target.Delete(removingElements);
+        }
+
+        /// <summary>
+        /// Создает настройки копирования элементов.
+        /// </summary>
+        /// <returns>Возвращает настройки копирования элементов.</returns>
+        private static CopyPasteOptions CreateCopyPasteOptions() {
+            var copyPasteOptions = new CopyPasteOptions();
+            copyPasteOptions.SetDuplicateTypeNamesHandler(new UseDestinationDuplicateTypeNamesHandler());
+
+            return copyPasteOptions;
+        }
+
+        /// <summary>
+        /// Обработчик совпадений имен типов при копировании элементов.
+        /// </summary>
+        private class UseDestinationDuplicateTypeNamesHandler : IDuplicateTypeNamesHandler {
+            /// <summary>
+            /// Обрабатывает совпадения имен типов при копировании элементов.
+            /// </summary>
+            /// <param name="args">Аргументы обработчика совпадений имен типов.</param>
+            /// <returns>Возвращает действие для обработки совпадающих типов.</returns>
+            public DuplicateTypeAction OnDuplicateTypeNamesFound(DuplicateTypeNamesHandlerArgs args) {
+                return DuplicateTypeAction.UseDestinationTypes;
+            }
         }
     }
 }
