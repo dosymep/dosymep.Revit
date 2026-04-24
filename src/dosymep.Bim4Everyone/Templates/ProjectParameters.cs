@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
-using Autodesk.Revit.UI;
 
 using dosymep.Bim4Everyone;
 using dosymep.Bim4Everyone.KeySchedules;
