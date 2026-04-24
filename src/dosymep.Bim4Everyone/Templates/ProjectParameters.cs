@@ -365,25 +365,6 @@ namespace dosymep.Bim4Everyone.Templates {
             target.Delete(viewSchedules.Select(item => item.Id).ToArray());
         }
 
-        #endregion
-        
-        private void RevitParamsCopy(Document target, IEnumerable<RevitParam> revitParams) {
-            Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
-            try {
-                ICollection<ViewSchedule> transferSchedules = CreateParameterTransferSchedules(source, target, revitParams);
-
-                using(var transaction = target.StartTransaction("Настройка параметров")) {
-                    CopyViewSchedules(source, target, true, transferSchedules);
-                    RevitParamsSync(source, target, revitParams);
-                    RevitParamsCopy(source, target, revitParams);
-
-                    transaction.Commit();
-                }
-            } finally {
-                source.Close(false);
-            }
-        }
-
         /// <summary>
         /// Создает трансферные таблицы для отсутствующих в целевом документе параметров.
         /// </summary>
@@ -563,6 +544,25 @@ namespace dosymep.Bim4Everyone.Templates {
             return definition.GetFieldOrder()
                 .Select(item => definition.GetField(item))
                 .Any(item => item.ParameterId == parameterElement.Id);
+        }
+
+        #endregion
+        
+        private void RevitParamsCopy(Document target, IEnumerable<RevitParam> revitParams) {
+            Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
+            try {
+                ICollection<ViewSchedule> transferSchedules = CreateParameterTransferSchedules(source, target, revitParams);
+
+                using(var transaction = target.StartTransaction("Настройка параметров")) {
+                    CopyViewSchedules(source, target, true, transferSchedules);
+                    RevitParamsSync(source, target, revitParams);
+                    RevitParamsCopy(source, target, revitParams);
+
+                    transaction.Commit();
+                }
+            } finally {
+                source.Close(false);
+            }
         }
 
         private void RevitParamsCopy(Document source, Document target, IEnumerable<RevitParam> revitParams) {
