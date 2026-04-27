@@ -1905,6 +1905,15 @@ namespace dosymep.Bim4Everyone.SharedParams {
             UnitType = SharedParam.GetUnitType(nameof(VISMaskMark)),
             StorageType = StorageType.String
         };
+
+        /// <summary>
+        /// ФОП_Перепад ЛП
+        /// </summary>
+        public SharedParam RoomFloorDifference { get; } = new SharedParam(nameof(RoomFloorDifference), new Guid("bc273acf-437b-4a7a-afac-604242d80fd5")) {
+            Name = "ФОП_Перепад ЛП",
+            UnitType = SharedParam.GetUnitType(nameof(RoomFloorDifference)),
+            StorageType = StorageType.Double
+        };
 #endif
 
         /// <inheritdoc />

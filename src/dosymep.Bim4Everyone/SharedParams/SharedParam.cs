@@ -1002,6 +1002,8 @@ namespace dosymep.Bim4Everyone.SharedParams {
                     return SpecTypeId.String.Text;
                 case nameof(SharedParamsConfig.VISMaskMark):
                     return SpecTypeId.String.Text;
+                case nameof(SharedParamsConfig.RoomFloorDifference):
+                    return SpecTypeId.Length;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
