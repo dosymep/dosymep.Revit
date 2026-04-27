@@ -312,6 +312,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                     return SpecTypeId.String.Text;
                 case nameof(ProjectParamsConfig.ListOfSchedulesGroup):
                     return SpecTypeId.String.Text;
+                case nameof(ProjectParamsConfig.RoomNoGlazing):
+                    return SpecTypeId.Boolean.YesNo;
                 default:
                     throw new ArgumentException($"Не найден параметр проекта с идентификатором \"{paramId}\".",
                         nameof(paramId));
