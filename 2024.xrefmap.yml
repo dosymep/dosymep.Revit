@@ -1931,6 +1931,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomName
   fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomName
   nameWithType: ProjectParamsConfig.RoomName
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomNoGlazing
+  name: RoomNoGlazing
+  href: api/2024/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomNoGlazing
+  commentId: P:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomNoGlazing
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomNoGlazing
+  nameWithType: ProjectParamsConfig.RoomNoGlazing
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomNoGlazing*
+  name: RoomNoGlazing
+  href: api/2024/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomNoGlazing_
+  commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomNoGlazing
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomNoGlazing
+  nameWithType: ProjectParamsConfig.RoomNoGlazing
 - uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomSectionName
   name: RoomSectionName
   href: api/2024/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomSectionName
@@ -3758,6 +3770,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFireCategory
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFireCategory
   nameWithType: SharedParamsConfig.RoomFireCategory
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFloorDifference
+  name: RoomFloorDifference
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_RoomFloorDifference
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFloorDifference
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFloorDifference
+  nameWithType: SharedParamsConfig.RoomFloorDifference
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFloorDifference*
+  name: RoomFloorDifference
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_RoomFloorDifference_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFloorDifference
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomFloorDifference
+  nameWithType: SharedParamsConfig.RoomFloorDifference
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.RoomGroupShortName
   name: RoomGroupShortName
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_RoomGroupShortName

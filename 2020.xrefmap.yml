@@ -1931,6 +1931,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomName
   fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomName
   nameWithType: ProjectParamsConfig.RoomName
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomNoGlazing
+  name: RoomNoGlazing
+  href: api/2020/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomNoGlazing
+  commentId: P:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomNoGlazing
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomNoGlazing
+  nameWithType: ProjectParamsConfig.RoomNoGlazing
+- uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomNoGlazing*
+  name: RoomNoGlazing
+  href: api/2020/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomNoGlazing_
+  commentId: Overload:dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomNoGlazing
+  fullName: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomNoGlazing
+  nameWithType: ProjectParamsConfig.RoomNoGlazing
 - uid: dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.RoomSectionName
   name: RoomSectionName
   href: api/2020/dosymep.Bim4Everyone.ProjectParams.ProjectParamsConfig.html#dosymep_Bim4Everyone_ProjectParams_ProjectParamsConfig_RoomSectionName
