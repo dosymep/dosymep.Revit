@@ -375,24 +375,25 @@ namespace dosymep.Bim4Everyone.Templates {
             Document source,
             Document target,
             IEnumerable<RevitParam> revitParams) {
-            var paramsByCategory = new Dictionary<Category, List<ParameterElement>>();
-            foreach(RevitParam revitParam in revitParams.Where(item => !item.IsExistsParam(target))) {
-                Category category = GetRevitParamCategory(source, revitParam);
-                ParameterElement param = revitParam.GetRevitParamElement(source);
-                if(param == null) {
-                    throw new InvalidOperationException(
-                        $"Не удалось найти параметр '{revitParam.Name}' в шаблоне.");
-                }
+            var paramsByCategory = revitParams
+                .Where(revitParam => !revitParam.IsExistsParam(target))
+                .Select(revitParam => {
+                    ParameterElement param = revitParam.GetRevitParamElement(source);
+                    if(param == null) {
+                        throw new InvalidOperationException(
+                            $"Не удалось найти параметр '{revitParam.Name}' в шаблоне.");
+                    }
 
-                if(!paramsByCategory.TryGetValue(category, out List<ParameterElement> paramElements)) {
-                    paramElements = new List<ParameterElement>();
-                    paramsByCategory.Add(category, paramElements);
-                }
+                    return new {
+                        Category = GetRevitParamCategory(source, revitParam),
+                        Param = param
+                    };
+                })
+                .Where(item => item.Param != null)
+                .GroupBy(item => item.Category)
+                .ToArray();
 
-                paramElements.Add(param);
-            }
-
-            if(paramsByCategory.Count == 0) {
+            if(paramsByCategory.Length == 0) {
                 return Array.Empty<ViewSchedule>();
             } 
 
@@ -404,7 +405,7 @@ namespace dosymep.Bim4Everyone.Templates {
                         ViewSchedule viewSchedule = CreateParameterTransferSchedule(
                             source,
                             paramsGroup.Key,
-                            paramsGroup.Value);
+                            paramsGroup.Select(item => item.Param));
                         
                         transferSchedules.Add(viewSchedule);
                     } catch(Exception ex) {
@@ -426,16 +427,16 @@ namespace dosymep.Bim4Everyone.Templates {
         /// </summary>
         /// <param name="source">Файл шаблона</param>
         /// <param name="category">Категория</param>
-        /// <param name="paramElements">Объекты параметров из шаблона</param>
+        /// <param name="paramsElements">Параметры из шаблона</param>
         /// <returns></returns>
         private ViewSchedule CreateParameterTransferSchedule(
             Document source,
             Category category,
-            IEnumerable<ParameterElement> paramElements) {
+            IEnumerable<ParameterElement> paramsElements) {
             ViewSchedule viewSchedule = ViewSchedule.CreateSchedule(source, category.Id);
             viewSchedule.Name = $"{ParameterTransferScheduleNamePrefix}{Guid.NewGuid():N}";
 
-            foreach(ParameterElement param in paramElements) {
+            foreach(ParameterElement param in paramsElements) {
                 SchedulableField schedulableField = viewSchedule.Definition
                     .GetSchedulableFields()
                     .First(item => item.ParameterId == param.Id);
@@ -449,10 +450,10 @@ namespace dosymep.Bim4Everyone.Templates {
         /// Возвращает категорию, к которой привязан параметр в файле шаблона.
         /// </summary>
         /// <param name="source">Файл шаблона</param>
-        /// <param name="revitParam">Параметр</param>
+        /// <param name="param">Параметр</param>
         /// <returns></returns>
-        private static Category GetRevitParamCategory(Document source, RevitParam revitParam) {
-            (Definition Definition, Binding Binding) paramBinding = revitParam.GetParamBinding(source);
+        private static Category GetRevitParamCategory(Document source, RevitParam param) {
+            (Definition Definition, Binding Binding) paramBinding = param.GetParamBinding(source);
             if(!(paramBinding.Binding is ElementBinding elementBinding)) {
                 return null;
             }
