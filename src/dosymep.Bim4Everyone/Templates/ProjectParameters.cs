@@ -375,46 +375,42 @@ namespace dosymep.Bim4Everyone.Templates {
             Document source,
             Document target,
             IEnumerable<RevitParam> revitParams) {
-            RevitParam[] missingParams = revitParams
-                .Where(item => !item.IsExistsParam(target))
-                .ToArray();
+            var paramsByCategory = new Dictionary<Category, List<ParameterElement>>();
+            foreach(RevitParam revitParam in revitParams.Where(item => !item.IsExistsParam(target))) {
+                Category category = GetRevitParamCategory(source, revitParam);
+                ParameterElement parameterElement = revitParam.GetRevitParamElement(source);
+                if(category == null || parameterElement == null) {
+                    continue;
+                }
 
-            if(missingParams.Length == 0) {
-                return Array.Empty<ViewSchedule>();
+                if(!paramsByCategory.TryGetValue(category, out List<ParameterElement> parameterElements)) {
+                    parameterElements = new List<ParameterElement>();
+                    paramsByCategory.Add(category, parameterElements);
+                }
+
+                parameterElements.Add(parameterElement);
             }
 
+            if(paramsByCategory.Count == 0) {
+                return Array.Empty<ViewSchedule>();
+            } 
+
             var transferSchedules = new List<ViewSchedule>();
-            var transferSchedulesByCategoryId = new Dictionary<long, ViewSchedule>();
 
             using(var transaction = source.StartTransaction("Создание временных спецификаций параметров")) {
-                foreach(RevitParam revitParam in missingParams) {
+                foreach(var paramsGroup in paramsByCategory) {
                     try {
-                        ParameterElement parameterElement = revitParam.GetRevitParamElement(source);
-                        if(parameterElement == null) {
-                            continue;
-                        }
-
                         ViewSchedule viewSchedule = CreateParameterTransferSchedule(
                             source,
-                            transferSchedulesByCategoryId,
-                            revitParam,
-                            parameterElement);
+                            paramsGroup.Key,
+                            paramsGroup.Value);
                         
-                        if(viewSchedule != null
-                           && !transferSchedules.Any(item => item.Id == viewSchedule.Id)) {
-                            transferSchedules.Add(viewSchedule);
-                        }
-
-                        if(viewSchedule == null) {
-                            _loggerService.Warning(
-                                "Не удалось создать временную спецификацию переноса для параметра {@revitParam} в шаблоне.",
-                                revitParam);
-                        }
+                        transferSchedules.Add(viewSchedule);
                     } catch(Exception ex) {
                         _loggerService.Warning(
                             ex,
-                            "Не удалось подготовить временную спецификацию переноса для параметра {@revitParam} в шаблоне.",
-                            revitParam);
+                            "Не удалось подготовить временную спецификацию переноса для категории {category} в шаблоне.",
+                            paramsGroup.Key.Name);
                     }
                 }
 
@@ -425,124 +421,44 @@ namespace dosymep.Bim4Everyone.Templates {
         }
 
         /// <summary>
-        /// Создает временную спецификацию переноса для параметра в шаблоне или использует одну из ранее созданных.
+        /// Создает временную спецификацию переноса для параметров в шаблоне.
         /// </summary>
         /// <param name="source">Файл шаблона</param>
-        /// <param name="transferSchedulesByCategoryId">Словарь ранее созданных спецификаций</param>
-        /// <param name="revitParam">Параметр</param>
-        /// <param name="parameterElement">Объект параметра из шаблона</param>
+        /// <param name="category">Категория</param>
+        /// <param name="parameterElements">Объекты параметров из шаблона</param>
         /// <returns></returns>
         private ViewSchedule CreateParameterTransferSchedule(
             Document source,
-            IDictionary<long, ViewSchedule> transferSchedulesByCategoryId,
-            RevitParam revitParam,
-            ParameterElement parameterElement) {
-            foreach(Category category in GetRevitParamCategories(source, revitParam)) {
-                ViewSchedule viewSchedule = GetOrCreateParameterTransferSchedule(
-                    source,
-                    transferSchedulesByCategoryId,
-                    category);
-                if(viewSchedule == null) {
-                    continue;
-                }
+            Category category,
+            IEnumerable<ParameterElement> parameterElements) {
+            ViewSchedule viewSchedule = ViewSchedule.CreateSchedule(source, category.Id);
+            viewSchedule.Name = $"{ParameterTransferScheduleNamePrefix}{Guid.NewGuid():N}";
 
-                if(TryAddParameterTransferField(viewSchedule, parameterElement)) {
-                    return viewSchedule;
-                }
+            foreach(ParameterElement parameterElement in parameterElements) {
+                SchedulableField schedulableField = viewSchedule.Definition
+                    .GetSchedulableFields()
+                    .First(item => item.ParameterId == parameterElement.Id);
+                viewSchedule.Definition.AddField(schedulableField);
             }
 
-            return null;
+            return viewSchedule;
         }
 
         /// <summary>
-        /// Создает новую трансферную спецификацию или возвращает ранее созданную для текущей категории.
-        /// </summary>
-        /// <param name="source">Файл шаблона</param>
-        /// <param name="transferSchedulesByCategoryId">Словарь с трансферными спецификацями</param>
-        /// <param name="category">Категория</param>
-        /// <returns></returns>
-        private ViewSchedule GetOrCreateParameterTransferSchedule(
-            Document source,
-            IDictionary<long, ViewSchedule> transferSchedulesByCategoryId,
-            Category category) {
-            long categoryId = category.Id.GetIdValue();
-            if(transferSchedulesByCategoryId.TryGetValue(categoryId, out ViewSchedule viewSchedule)) {
-                return viewSchedule;
-            }
-
-            try {
-                viewSchedule = ViewSchedule.CreateSchedule(source, category.Id);
-                viewSchedule.Name = $"{ParameterTransferScheduleNamePrefix}{Guid.NewGuid():N}";
-                transferSchedulesByCategoryId.Add(categoryId, viewSchedule);
-
-                return viewSchedule;
-            } catch(Exception ex) {
-                transferSchedulesByCategoryId.Add(categoryId, null);
-                _loggerService.Warning(
-                    ex,
-                    "Не удалось создать временную спецификацию переноса для категории {category} в шаблоне.",
-                    category.Name);
-
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Возвращает категории, к которым привязан параметр в файле шаблона.
+        /// Возвращает категорию, к которой привязан параметр в файле шаблона.
         /// </summary>
         /// <param name="source">Файл шаблона</param>
         /// <param name="revitParam">Параметр</param>
         /// <returns></returns>
-        private static IEnumerable<Category> GetRevitParamCategories(Document source, RevitParam revitParam) {
+        private static Category GetRevitParamCategory(Document source, RevitParam revitParam) {
             (Definition Definition, Binding Binding) paramBinding = revitParam.GetParamBinding(source);
             if(!(paramBinding.Binding is ElementBinding elementBinding)) {
-                yield break;
+                return null;
             }
 
-            foreach(Category category in elementBinding.Categories) {
-                if(category != null) {
-                    yield return category;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Пробует добавить в трансферную спецификацию требуемый параметр. Если в ранее созданной таблице уже есть такой параметр, возвращает True и не добавляет.
-        /// </summary>
-        /// <param name="viewSchedule">Таблица</param>
-        /// <param name="parameterElement">Объект параметра из шаблона</param>
-        /// <returns></returns>
-        private static bool TryAddParameterTransferField(ViewSchedule viewSchedule, ParameterElement parameterElement) {
-            if(IsParameterTransferFieldExists(viewSchedule, parameterElement)) {
-                return true;
-            }
-
-            SchedulableField schedulableField = viewSchedule.Definition
-                .GetSchedulableFields()
-                .FirstOrDefault(item => item.ParameterId == parameterElement.Id);
-            if(schedulableField == null) {
-                return false;
-            }
-
-            try {
-                viewSchedule.Definition.AddField(schedulableField);
-                return true;
-            } catch(Exception) {
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Для ранее созданной таблицы проверяет существует ли в ней уже требуемый параметр.
-        /// </summary>
-        /// <param name="viewSchedule">Таблица</param>
-        /// <param name="parameterElement">Объект параметра из шаблона</param>
-        /// <returns></returns>
-        private static bool IsParameterTransferFieldExists(ViewSchedule viewSchedule, ParameterElement parameterElement) {
-            ScheduleDefinition definition = viewSchedule.Definition;
-            return definition.GetFieldOrder()
-                .Select(item => definition.GetField(item))
-                .Any(item => item.ParameterId == parameterElement.Id);
+            return elementBinding.Categories
+                .OfType<Category>()
+                .FirstOrDefault();
         }
 
         #endregion
