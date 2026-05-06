@@ -378,17 +378,17 @@ namespace dosymep.Bim4Everyone.Templates {
             var paramsByCategory = new Dictionary<Category, List<ParameterElement>>();
             foreach(RevitParam revitParam in revitParams.Where(item => !item.IsExistsParam(target))) {
                 Category category = GetRevitParamCategory(source, revitParam);
-                ParameterElement parameterElement = revitParam.GetRevitParamElement(source);
-                if(category == null || parameterElement == null) {
+                ParameterElement param = revitParam.GetRevitParamElement(source);
+                if(category == null || param == null) {
                     continue;
                 }
 
-                if(!paramsByCategory.TryGetValue(category, out List<ParameterElement> parameterElements)) {
-                    parameterElements = new List<ParameterElement>();
-                    paramsByCategory.Add(category, parameterElements);
+                if(!paramsByCategory.TryGetValue(category, out List<ParameterElement> paramElements)) {
+                    paramElements = new List<ParameterElement>();
+                    paramsByCategory.Add(category, paramElements);
                 }
 
-                parameterElements.Add(parameterElement);
+                paramElements.Add(param);
             }
 
             if(paramsByCategory.Count == 0) {
@@ -425,19 +425,19 @@ namespace dosymep.Bim4Everyone.Templates {
         /// </summary>
         /// <param name="source">Файл шаблона</param>
         /// <param name="category">Категория</param>
-        /// <param name="parameterElements">Объекты параметров из шаблона</param>
+        /// <param name="paramElements">Объекты параметров из шаблона</param>
         /// <returns></returns>
         private ViewSchedule CreateParameterTransferSchedule(
             Document source,
             Category category,
-            IEnumerable<ParameterElement> parameterElements) {
+            IEnumerable<ParameterElement> paramElements) {
             ViewSchedule viewSchedule = ViewSchedule.CreateSchedule(source, category.Id);
             viewSchedule.Name = $"{ParameterTransferScheduleNamePrefix}{Guid.NewGuid():N}";
 
-            foreach(ParameterElement parameterElement in parameterElements) {
+            foreach(ParameterElement param in paramElements) {
                 SchedulableField schedulableField = viewSchedule.Definition
                     .GetSchedulableFields()
-                    .First(item => item.ParameterId == parameterElement.Id);
+                    .First(item => item.ParameterId == param.Id);
                 viewSchedule.Definition.AddField(schedulableField);
             }
 
