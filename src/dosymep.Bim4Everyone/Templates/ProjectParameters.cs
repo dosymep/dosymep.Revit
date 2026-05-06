@@ -379,8 +379,9 @@ namespace dosymep.Bim4Everyone.Templates {
             foreach(RevitParam revitParam in revitParams.Where(item => !item.IsExistsParam(target))) {
                 Category category = GetRevitParamCategory(source, revitParam);
                 ParameterElement param = revitParam.GetRevitParamElement(source);
-                if(category == null || param == null) {
-                    continue;
+                if(param == null) {
+                    throw new InvalidOperationException(
+                        $"Не удалось найти параметр '{revitParam.Name}' в шаблоне.");
                 }
 
                 if(!paramsByCategory.TryGetValue(category, out List<ParameterElement> paramElements)) {
