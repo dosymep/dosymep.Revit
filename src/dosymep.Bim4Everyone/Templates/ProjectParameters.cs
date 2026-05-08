@@ -20,7 +20,7 @@ namespace dosymep.Bim4Everyone.Templates {
     /// Класс по копирование параметров проекта.
     /// </summary>
     public class ProjectParameters {
-        private const string ParameterTransferScheduleNamePrefix = "BIM4E_PARAM_TRANSFER_";
+        private const string ParamTransferScheduleNamePrefix = "BIM4E_PARAM_TRANSFER_";
 
         private readonly ILoggerService _loggerService;
 
@@ -371,7 +371,7 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="target">Целевой документ</param>
         /// <param name="revitParams">Параметры, которые нужно проверить на наличие в целевом документе</param>
         /// <returns></returns>
-        private ICollection<ViewSchedule> CreateParameterTransferSchedules(
+        private ICollection<ViewSchedule> CreateParamTransferSchedules(
             Document source,
             Document target,
             IEnumerable<RevitParam> revitParams) {
@@ -402,7 +402,7 @@ namespace dosymep.Bim4Everyone.Templates {
             using(var transaction = source.StartTransaction("Создание временных спецификаций параметров")) {
                 foreach(var paramsGroup in paramsByCategory) {
                     try {
-                        ViewSchedule viewSchedule = CreateParameterTransferSchedule(
+                        ViewSchedule viewSchedule = CreateParamTransferSchedule(
                             source,
                             paramsGroup.Key,
                             paramsGroup.Select(item => item.Param));
@@ -429,12 +429,12 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="category">Категория</param>
         /// <param name="paramsElements">Параметры из шаблона</param>
         /// <returns></returns>
-        private ViewSchedule CreateParameterTransferSchedule(
+        private ViewSchedule CreateParamTransferSchedule(
             Document source,
             Category category,
             IEnumerable<ParameterElement> paramsElements) {
             ViewSchedule viewSchedule = ViewSchedule.CreateSchedule(source, category.Id);
-            viewSchedule.Name = $"{ParameterTransferScheduleNamePrefix}{Guid.NewGuid():N}";
+            viewSchedule.Name = $"{ParamTransferScheduleNamePrefix}{Guid.NewGuid():N}";
 
             foreach(ParameterElement param in paramsElements) {
                 SchedulableField schedulableField = viewSchedule.Definition
@@ -468,7 +468,7 @@ namespace dosymep.Bim4Everyone.Templates {
         private void RevitParamsCopy(Document target, IEnumerable<RevitParam> revitParams) {
             Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
             try {
-                ICollection<ViewSchedule> transferSchedules = CreateParameterTransferSchedules(source, target, revitParams);
+                ICollection<ViewSchedule> transferSchedules = CreateParamTransferSchedules(source, target, revitParams);
 
                 using(var transaction = target.StartTransaction("Настройка параметров")) {
                     CopyViewSchedules(source, target, true, transferSchedules);
