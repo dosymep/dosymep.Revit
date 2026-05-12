@@ -386,11 +386,12 @@ namespace dosymep.Bim4Everyone.Templates {
 
                     return new {
                         Category = GetRevitParamCategory(source, revitParam),
+                        RevitParam = revitParam,
                         Param = param
                     };
                 })
                 .Where(item => item.Param != null)
-                .GroupBy(item => item.Category)
+                .GroupBy(item => item.Category.Id.GetIdValue())
                 .ToArray();
 
             if(paramsByCategory.Length == 0) {
@@ -400,20 +401,28 @@ namespace dosymep.Bim4Everyone.Templates {
             var transferSchedules = new List<ViewSchedule>();
 
             using(var transaction = source.StartTransaction("Создание временных спецификаций параметров")) {
+                Exception exception = null;
+                string paramName = null;
                 foreach(var paramsGroup in paramsByCategory) {
+                    Category category = paramsGroup.First().Category;
                     try {
                         ViewSchedule viewSchedule = CreateParamTransferSchedule(
                             source,
-                            paramsGroup.Key,
+                            category,
                             paramsGroup.Select(item => item.Param));
                         
                         transferSchedules.Add(viewSchedule);
                     } catch(Exception ex) {
-                        throw new InvalidOperationException(
-                            $"Не удалось подготовить временную спецификацию переноса для категории " +
-                            $"'{paramsGroup.Key.Name}' в шаблоне.",
-                            ex);
+                        exception = exception ?? ex;
+                        paramName = paramName ?? paramsGroup.First().RevitParam.Name;
                     }
+                }
+
+                if(exception != null && transferSchedules.Count == 0) {
+                    throw new InvalidOperationException(
+                        $"Не удалось подготовить временную спецификацию переноса для параметра " +
+                        $"'{paramName}' в шаблоне.",
+                        exception);
                 }
 
                 transaction.Commit();
