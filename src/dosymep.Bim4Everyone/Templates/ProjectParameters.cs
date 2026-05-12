@@ -409,10 +409,10 @@ namespace dosymep.Bim4Everyone.Templates {
                         
                         transferSchedules.Add(viewSchedule);
                     } catch(Exception ex) {
-                        _loggerService.Warning(
-                            ex,
-                            "Не удалось подготовить временную спецификацию переноса для категории {category} в шаблоне.",
-                            paramsGroup.Key.Name);
+                        throw new InvalidOperationException(
+                            $"Не удалось подготовить временную спецификацию переноса для категории " +
+                            $"'{paramsGroup.Key.Name}' в шаблоне.",
+                            ex);
                     }
                 }
 
