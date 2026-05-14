@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 
 using Autodesk.Revit.DB;
 
@@ -417,7 +416,7 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="source">Документ с параметрами.</param>
         /// <param name="revitParams">Параметры.</param>
         /// <returns>Возвращает элементы параметров.</returns>
-        private static ParameterElement[] GetRevitParamElements(Document source, IEnumerable<RevitParam> revitParams) {
+        private ParameterElement[] GetRevitParamElements(Document source, IEnumerable<RevitParam> revitParams) {
             return revitParams
                 .Select(item => item.GetRevitParamElement(source))
                 .Where(item => item != null)
@@ -430,7 +429,7 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="target">Целевой документ.</param>
         /// <param name="revitParams">Параметры, которые нужно разделить.</param>
         /// <returns>Возвращает отсутствующие параметры и параметры без привязки.</returns>
-        private static (
+        private (
             ICollection<RevitParam> MissingParams,
             ICollection<RevitParam> ParamsWithoutBinding) SplitRevitParamsByBinding(
                 Document target,
@@ -460,7 +459,7 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="document">Документ.</param>
         /// <param name="revitParam">Общий параметр.</param>
         /// <returns>Возвращает элемент общего параметра.</returns>
-        private static ParameterElement GetRevitSharedParamElement(Document document, RevitParam revitParam) {
+        private ParameterElement GetRevitSharedParamElement(Document document, RevitParam revitParam) {
             if(!(revitParam is SharedParam sharedParam)) {
                 return null;
             }
@@ -477,7 +476,7 @@ namespace dosymep.Bim4Everyone.Templates {
         /// <param name="source">Файл шаблона.</param>
         /// <param name="target">Целевой документ.</param>
         /// <param name="paramsElements">Параметры из шаблона.</param>
-        private static void CopyParamsByMultiCategorySchedule(
+        private void CopyParamsByMultiCategorySchedule(
             Document source,
             Document target,
             IEnumerable<ParameterElement> paramsElements) {
@@ -509,7 +508,7 @@ namespace dosymep.Bim4Everyone.Templates {
         /// Создает настройки копирования элементов.
         /// </summary>
         /// <returns>Возвращает настройки копирования элементов.</returns>
-        private static CopyPasteOptions CreateCopyPasteOptions() {
+        private CopyPasteOptions CreateCopyPasteOptions() {
             var copyPasteOptions = new CopyPasteOptions();
             copyPasteOptions.SetDuplicateTypeNamesHandler(new UseDestinationDuplicateTypeNamesHandler());
 
