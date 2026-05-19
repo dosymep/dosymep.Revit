@@ -246,16 +246,6 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 StorageType = StorageType.String
             };
 
-        /// <summary>
-        /// КВГ_Без остекления
-        /// </summary>
-        public ProjectParam RoomNoGlazing
-            { get; } = new ProjectParam(nameof(RoomNoGlazing)) {
-                Name = "КВГ_Без остекления",
-                UnitType = ProjectParam.GetUnitType(nameof(RoomNoGlazing)),
-                StorageType = StorageType.Integer
-            };
-
 #if REVIT2020 || REVIT2021
 
         /// <summary>
@@ -407,6 +397,16 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                 Name = "ВС_Группировка",
                 UnitType = ProjectParam.GetUnitType(nameof(ListOfSchedulesGroup)),
                 StorageType = StorageType.String
+            };
+
+        /// <summary>
+        /// КВГ_Без остекления
+        /// </summary>
+        public ProjectParam RoomNoGlazing 
+            { get; } = new ProjectParam(nameof(RoomNoGlazing)) {
+                Name = "КВГ_Без остекления",
+                UnitType = ProjectParam.GetUnitType(nameof(RoomNoGlazing)),
+                StorageType = StorageType.Integer
             };
 #endif
 
