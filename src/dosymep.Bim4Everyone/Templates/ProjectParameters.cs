@@ -443,7 +443,7 @@ namespace dosymep.Bim4Everyone.Templates {
                     continue;
                 }
 
-                if(GetRevitSharedParamElement(target, revitParam) == null) {
+                if(!HasRevitElementParam(target, revitParam)) {
                     regularCopyParams.Add(revitParam);
                     continue;
                 }
@@ -458,21 +458,20 @@ namespace dosymep.Bim4Everyone.Templates {
         }
 
         /// <summary>
-        /// Возвращает элемент общего параметра напрямую из документа. GetRevitParamElement/IsExists не подойдут в нашем случае
-        /// т.к. работают через биндинги(GetSharedParamBinding в DocumentExtensions)
+        /// Проверяет, существует ли элемент параметра в документе.
         /// </summary>
         /// <param name="document">Документ.</param>
-        /// <param name="revitParam">Общий параметр.</param>
-        /// <returns>Возвращает элемент общего параметра.</returns>
-        private ParameterElement GetRevitSharedParamElement(Document document, RevitParam revitParam) {
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <returns>Возвращает true, если элемент параметра существует, иначе false.</returns>
+        private bool HasRevitElementParam(Document document, RevitParam revitParam) {
             if(!(revitParam is SharedParam sharedParam)) {
-                return null;
+                return false;
             }
 
             return new FilteredElementCollector(document)
                 .OfClass(typeof(SharedParameterElement))
                 .OfType<SharedParameterElement>()
-                .FirstOrDefault(item => item.GuidValue.Equals(sharedParam.Guid));
+                .Any(item => item.GuidValue.Equals(sharedParam.Guid));
         }
 
         /// <summary>
