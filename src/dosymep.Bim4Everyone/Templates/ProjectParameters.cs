@@ -459,7 +459,7 @@ namespace dosymep.Bim4Everyone.Templates {
 
         /// <summary>
         /// Возвращает элемент общего параметра напрямую из документа. GetRevitParamElement/IsExists не подойдут в нашем случае
-        /// т.к. работают через биндинги
+        /// т.к. работают через биндинги(GetSharedParamBinding в DocumentExtensions)
         /// </summary>
         /// <param name="document">Документ.</param>
         /// <param name="revitParam">Общий параметр.</param>
