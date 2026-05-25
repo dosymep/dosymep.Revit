@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
 
 using dosymep.Bim4Everyone;
@@ -15,11 +14,15 @@ using dosymep.Bim4Everyone.SimpleServices;
 using dosymep.Revit;
 using dosymep.SimpleServices;
 
+using Application = Autodesk.Revit.ApplicationServices.Application;
+
 namespace dosymep.Bim4Everyone.Templates {
     /// <summary>
     /// Класс по копирование параметров проекта.
     /// </summary>
     public class ProjectParameters {
+        private const string ParamTransferScheduleNamePrefix = "BIM4E_PARAM_TRANSFER_";
+
         private readonly ILoggerService _loggerService;
 
         /// <summary>
@@ -304,7 +307,12 @@ namespace dosymep.Bim4Everyone.Templates {
                 return false;
             }
 
-            ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(source, new[] { viewSchedule.Id }, target, Transform.Identity, new CopyPasteOptions());
+            ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(
+                source,
+                new[] { viewSchedule.Id },
+                target,
+                Transform.Identity,
+                CreateCopyPasteOptions());
             if(removeSchedule) {
                 // Удаляем скопированный вид,
                 // так как он нужен был для переноса параметра
@@ -332,7 +340,12 @@ namespace dosymep.Bim4Everyone.Templates {
                 return false;
             }
 
-            ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(source, viewSchedules.Select(item => item.Id).ToArray(), target, Transform.Identity, new CopyPasteOptions());
+            ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(
+                source,
+                viewSchedules.Select(item => item.Id).ToArray(),
+                target,
+                Transform.Identity,
+                CreateCopyPasteOptions());
             if(removeSchedule) {
                 // Удаляем скопированные виды,
                 // так как они нужны были для переноса параметра
@@ -367,19 +380,156 @@ namespace dosymep.Bim4Everyone.Templates {
                 source.Close(false);
             }
         }
+        
 
-        private void RevitParamsCopy(Document source, Document target, IEnumerable<RevitParam> revitParams) {
-            ElementId[] sourceParamElementIds = revitParams
-                .Where(item => !item.IsExistsParam(target))
-                .Select(item => item.GetRevitParamElement(source))
-                .Where(item => item != null)
-                .Select(item => item.Id)
-                .ToArray();
-
-            if(sourceParamElementIds.Length > 0) {
-                ElementTransformUtils.CopyElements(source, sourceParamElementIds, target,
+        private void RevitParamsCopy(
+            Document source,
+            Document target,
+            IEnumerable<RevitParam> revitParams)
+        {
+            (ICollection<RevitParam> regularCopyParams, ICollection<RevitParam> paramsWithoutBinding)
+                = SplitRevitParamsByBinding(target, revitParams);
+            
+            ParameterElement[] regularCopyParamsElements = GetRevitParamElements(source, regularCopyParams);
+            ParameterElement[] paramsWithoutBindingElements = GetRevitParamElements(source, paramsWithoutBinding);
+            
+            if(regularCopyParamsElements.Length > 0) {
+                ElementTransformUtils.CopyElements(
+                    source,
+                    regularCopyParamsElements.Select(item => item.Id).ToArray(),
+                    target,
                     Transform.Identity,
                     new CopyPasteOptions());
+            }
+            
+            if(paramsWithoutBindingElements.Length > 0) {
+                CopyParamsByMultiCategorySchedule(
+                    source,
+                    target,
+                    paramsWithoutBindingElements);
+            }
+        }
+
+        /// <summary>
+        /// Возвращает элементы параметров из документа.
+        /// </summary>
+        /// <param name="source">Документ с параметрами.</param>
+        /// <param name="revitParams">Параметры.</param>
+        /// <returns>Возвращает элементы параметров.</returns>
+        private ParameterElement[] GetRevitParamElements(Document source, IEnumerable<RevitParam> revitParams) {
+            return revitParams
+                .Select(item => item.GetRevitParamElement(source))
+                .Where(item => item != null)
+                .ToArray();
+        }
+
+        /// <summary>
+        /// Разделяет параметры на параметры для обычного копирования и общие параметры без привязки к категориям.
+        /// </summary>
+        /// <param name="target">Целевой документ.</param>
+        /// <param name="revitParams">Параметры, которые нужно разделить.</param>
+        /// <returns>Возвращает параметры для обычного копирования и параметры без привязки.</returns>
+        private (
+            ICollection<RevitParam> RegularCopyParams,
+            ICollection<RevitParam> ParamsWithoutBinding) SplitRevitParamsByBinding(
+                Document target,
+                IEnumerable<RevitParam> revitParams) {
+            var regularCopyParams = new List<RevitParam>();
+            var paramsWithoutBinding = new List<RevitParam>();
+
+            foreach(RevitParam revitParam in revitParams) {
+                if(!(revitParam is SharedParam)) {
+                    regularCopyParams.Add(revitParam);
+                    continue;
+                }
+
+                if(!HasRevitElementParam(target, revitParam)) {
+                    regularCopyParams.Add(revitParam);
+                    continue;
+                }
+
+                (Definition Definition, Binding Binding) paramBinding = revitParam.GetParamBinding(target);
+                if(paramBinding.Definition == null || paramBinding.Binding == null) {
+                    paramsWithoutBinding.Add(revitParam);
+                }
+            }
+
+            return (regularCopyParams, paramsWithoutBinding);
+        }
+
+        /// <summary>
+        /// Проверяет, существует ли элемент параметра в документе.
+        /// </summary>
+        /// <param name="document">Документ.</param>
+        /// <param name="revitParam">Параметр Revit.</param>
+        /// <returns>Возвращает true, если элемент параметра существует, иначе false.</returns>
+        private bool HasRevitElementParam(Document document, RevitParam revitParam) {
+            if(!(revitParam is SharedParam sharedParam)) {
+                return false;
+            }
+
+            return new FilteredElementCollector(document)
+                .OfClass(typeof(SharedParameterElement))
+                .OfType<SharedParameterElement>()
+                .Any(item => item.GuidValue.Equals(sharedParam.Guid));
+        }
+
+        /// <summary>
+        /// Копирует параметры через временную мультикатегорийную спецификацию.
+        /// </summary>
+        /// <param name="source">Файл шаблона.</param>
+        /// <param name="target">Целевой документ.</param>
+        /// <param name="paramsElements">Параметры из шаблона.</param>
+        private void CopyParamsByMultiCategorySchedule(
+            Document source,
+            Document target,
+            IEnumerable<ParameterElement> paramsElements) {
+            ViewSchedule viewSchedule = null;
+
+            using(var transaction = source.StartTransaction("Создание временной спецификации параметров")) {
+                viewSchedule = ViewSchedule.CreateSchedule(source, ElementId.InvalidElementId);
+                viewSchedule.Name = $"{ParamTransferScheduleNamePrefix}{Guid.NewGuid():N}";
+
+                foreach(ParameterElement param in paramsElements) {
+                    SchedulableField schedulableField = viewSchedule.Definition
+                        .GetSchedulableFields()
+                        .FirstOrDefault(item => item.ParameterId == param.Id);
+                    if(schedulableField == null) {
+                        throw new InvalidOperationException(
+                            $"Не удалось добавить параметр '{param.Name}' во временную спецификацию.");
+                    }
+
+                    viewSchedule.Definition.AddField(schedulableField);
+                }
+
+                transaction.Commit();
+            }
+
+            CopyViewSchedule(source, target, true, viewSchedule);
+        }
+
+        /// <summary>
+        /// Создает настройки копирования элементов.
+        /// </summary>
+        /// <returns>Возвращает настройки копирования элементов.</returns>
+        private static CopyPasteOptions CreateCopyPasteOptions() {
+            var copyPasteOptions = new CopyPasteOptions();
+            copyPasteOptions.SetDuplicateTypeNamesHandler(new UseDestinationDuplicateTypeNamesHandler());
+
+            return copyPasteOptions;
+        }
+
+        /// <summary>
+        /// Обработчик совпадений имен типов при копировании элементов.
+        /// </summary>
+        private class UseDestinationDuplicateTypeNamesHandler : IDuplicateTypeNamesHandler {
+            /// <summary>
+            /// Обрабатывает совпадения имен типов при копировании элементов.
+            /// </summary>
+            /// <param name="args">Аргументы обработчика совпадений имен типов.</param>
+            /// <returns>Возвращает действие для обработки совпадающих типов.</returns>
+            public DuplicateTypeAction OnDuplicateTypeNamesFound(DuplicateTypeNamesHandlerArgs args) {
+                return DuplicateTypeAction.UseDestinationTypes;
             }
         }
 
