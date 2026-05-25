@@ -387,16 +387,16 @@ namespace dosymep.Bim4Everyone.Templates {
             Document target,
             IEnumerable<RevitParam> revitParams)
         {
-            (ICollection<RevitParam> missingParams, ICollection<RevitParam> paramsWithoutBinding)
+            (ICollection<RevitParam> regularCopyParams, ICollection<RevitParam> paramsWithoutBinding)
                 = SplitRevitParamsByBinding(target, revitParams);
             
-            ParameterElement[] missingParamsElements = GetRevitParamElements(source, missingParams);
+            ParameterElement[] regularCopyParamsElements = GetRevitParamElements(source, regularCopyParams);
             ParameterElement[] paramsWithoutBindingElements = GetRevitParamElements(source, paramsWithoutBinding);
             
-            if(missingParamsElements.Length > 0) {
+            if(regularCopyParamsElements.Length > 0) {
                 ElementTransformUtils.CopyElements(
                     source,
-                    missingParamsElements.Select(item => item.Id).ToArray(),
+                    regularCopyParamsElements.Select(item => item.Id).ToArray(),
                     target,
                     Transform.Identity,
                     new CopyPasteOptions());
@@ -424,22 +424,27 @@ namespace dosymep.Bim4Everyone.Templates {
         }
 
         /// <summary>
-        /// Разделяет параметры на отсутствующие в документе и существующие без привязки к категориям.
+        /// Разделяет параметры на параметры для обычного копирования и общие параметры без привязки к категориям.
         /// </summary>
         /// <param name="target">Целевой документ.</param>
         /// <param name="revitParams">Параметры, которые нужно разделить.</param>
-        /// <returns>Возвращает отсутствующие параметры и параметры без привязки.</returns>
+        /// <returns>Возвращает параметры для обычного копирования и параметры без привязки.</returns>
         private (
-            ICollection<RevitParam> MissingParams,
+            ICollection<RevitParam> RegularCopyParams,
             ICollection<RevitParam> ParamsWithoutBinding) SplitRevitParamsByBinding(
                 Document target,
                 IEnumerable<RevitParam> revitParams) {
-            var missingParams = new List<RevitParam>();
+            var regularCopyParams = new List<RevitParam>();
             var paramsWithoutBinding = new List<RevitParam>();
 
             foreach(RevitParam revitParam in revitParams) {
+                if(!(revitParam is SharedParam)) {
+                    regularCopyParams.Add(revitParam);
+                    continue;
+                }
+
                 if(GetRevitSharedParamElement(target, revitParam) == null) {
-                    missingParams.Add(revitParam);
+                    regularCopyParams.Add(revitParam);
                     continue;
                 }
 
@@ -449,7 +454,7 @@ namespace dosymep.Bim4Everyone.Templates {
                 }
             }
 
-            return (missingParams, paramsWithoutBinding);
+            return (regularCopyParams, paramsWithoutBinding);
         }
 
         /// <summary>
@@ -508,7 +513,7 @@ namespace dosymep.Bim4Everyone.Templates {
         /// Создает настройки копирования элементов.
         /// </summary>
         /// <returns>Возвращает настройки копирования элементов.</returns>
-        private CopyPasteOptions CreateCopyPasteOptions() {
+        private static CopyPasteOptions CreateCopyPasteOptions() {
             var copyPasteOptions = new CopyPasteOptions();
             copyPasteOptions.SetDuplicateTypeNamesHandler(new UseDestinationDuplicateTypeNamesHandler());
 
