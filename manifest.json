@@ -981,6 +981,21 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Revit.Comparators.RevitElementComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Revit.Comparators.RevitElementComparer.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Revit.Comparators.RevitElementComparer",
+      "Summary": "<p sourcefile=\"api/2020/dosymep.Revit.Comparators.RevitElementComparer.yml\" sourcestartlinenumber=\"1\">Предоставляет абстрактный базовый класс для сравнения элементов Revit.\nЭтот класс реализует различные интерфейсы сравнения и проверки на равенство,\nчто позволяет задавать пользовательскую логику сравнения объектов\nRevit <xref href=\"Autodesk.Revit.DB.Element\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2020/dosymep.Revit.Comparators.ViewSheetComparer.yml",
       "output": {
         ".html": {
@@ -2533,6 +2548,21 @@
       "IsMRef": true,
       "Title": "dosymep.Revit.Comparators.LogicalStringComparer",
       "Summary": "<p sourcefile=\"api/2021/dosymep.Revit.Comparators.LogicalStringComparer.yml\" sourcestartlinenumber=\"1\">Умное сравнение строк.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Revit.Comparators.RevitElementComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Revit.Comparators.RevitElementComparer.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Revit.Comparators.RevitElementComparer",
+      "Summary": "<p sourcefile=\"api/2021/dosymep.Revit.Comparators.RevitElementComparer.yml\" sourcestartlinenumber=\"1\">Предоставляет абстрактный базовый класс для сравнения элементов Revit.\nЭтот класс реализует различные интерфейсы сравнения и проверки на равенство,\nчто позволяет задавать пользовательскую логику сравнения объектов\nRevit <xref href=\"Autodesk.Revit.DB.Element\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4106,6 +4136,21 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Revit.Comparators.RevitElementComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Revit.Comparators.RevitElementComparer.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Revit.Comparators.RevitElementComparer",
+      "Summary": "<p sourcefile=\"api/2022/dosymep.Revit.Comparators.RevitElementComparer.yml\" sourcestartlinenumber=\"1\">Предоставляет абстрактный базовый класс для сравнения элементов Revit.\nЭтот класс реализует различные интерфейсы сравнения и проверки на равенство,\nчто позволяет задавать пользовательскую логику сравнения объектов\nRevit <xref href=\"Autodesk.Revit.DB.Element\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2022/dosymep.Revit.Comparators.ViewSheetComparer.yml",
       "output": {
         ".html": {
@@ -5676,6 +5721,21 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Revit.Comparators.RevitElementComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Revit.Comparators.RevitElementComparer.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Revit.Comparators.RevitElementComparer",
+      "Summary": "<p sourcefile=\"api/2023/dosymep.Revit.Comparators.RevitElementComparer.yml\" sourcestartlinenumber=\"1\">Предоставляет абстрактный базовый класс для сравнения элементов Revit.\nЭтот класс реализует различные интерфейсы сравнения и проверки на равенство,\nчто позволяет задавать пользовательскую логику сравнения объектов\nRevit <xref href=\"Autodesk.Revit.DB.Element\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2023/dosymep.Revit.Comparators.ViewSheetComparer.yml",
       "output": {
         ".html": {
@@ -7243,6 +7303,21 @@
       "IsMRef": true,
       "Title": "dosymep.Revit.Comparators.LogicalStringComparer",
       "Summary": "<p sourcefile=\"api/2024/dosymep.Revit.Comparators.LogicalStringComparer.yml\" sourcestartlinenumber=\"1\">Умное сравнение строк.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Revit.Comparators.RevitElementComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Revit.Comparators.RevitElementComparer.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Revit.Comparators.RevitElementComparer",
+      "Summary": "<p sourcefile=\"api/2024/dosymep.Revit.Comparators.RevitElementComparer.yml\" sourcestartlinenumber=\"1\">Предоставляет абстрактный базовый класс для сравнения элементов Revit.\nЭтот класс реализует различные интерфейсы сравнения и проверки на равенство,\nчто позволяет задавать пользовательскую логику сравнения объектов\nRevit <xref href=\"Autodesk.Revit.DB.Element\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",

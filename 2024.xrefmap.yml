@@ -7226,6 +7226,177 @@ references:
   commentId: Overload:dosymep.Revit.Comparators.LogicalStringComparer.Compare
   fullName: dosymep.Revit.Comparators.LogicalStringComparer.Compare
   nameWithType: LogicalStringComparer.Compare
+- uid: dosymep.Revit.Comparators.RevitElementComparer
+  name: RevitElementComparer
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html
+  commentId: T:dosymep.Revit.Comparators.RevitElementComparer
+  fullName: dosymep.Revit.Comparators.RevitElementComparer
+  nameWithType: RevitElementComparer
+- uid: dosymep.Revit.Comparators.RevitElementComparer.#ctor
+  name: RevitElementComparer()
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer__ctor
+  commentId: M:dosymep.Revit.Comparators.RevitElementComparer.#ctor
+  name.vb: New()
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.RevitElementComparer()
+  fullName.vb: dosymep.Revit.Comparators.RevitElementComparer.New()
+  nameWithType: RevitElementComparer.RevitElementComparer()
+  nameWithType.vb: RevitElementComparer.New()
+- uid: dosymep.Revit.Comparators.RevitElementComparer.#ctor*
+  name: RevitElementComparer
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer__ctor_
+  commentId: Overload:dosymep.Revit.Comparators.RevitElementComparer.#ctor
+  name.vb: New
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.RevitElementComparer
+  fullName.vb: dosymep.Revit.Comparators.RevitElementComparer.New
+  nameWithType: RevitElementComparer.RevitElementComparer
+  nameWithType.vb: RevitElementComparer.New
+- uid: dosymep.Revit.Comparators.RevitElementComparer.CategoryId
+  name: CategoryId
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_CategoryId
+  commentId: P:dosymep.Revit.Comparators.RevitElementComparer.CategoryId
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.CategoryId
+  nameWithType: RevitElementComparer.CategoryId
+- uid: dosymep.Revit.Comparators.RevitElementComparer.CategoryId*
+  name: CategoryId
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_CategoryId_
+  commentId: Overload:dosymep.Revit.Comparators.RevitElementComparer.CategoryId
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.CategoryId
+  nameWithType: RevitElementComparer.CategoryId
+- uid: dosymep.Revit.Comparators.RevitElementComparer.CategoryName
+  name: CategoryName
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_CategoryName
+  commentId: P:dosymep.Revit.Comparators.RevitElementComparer.CategoryName
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.CategoryName
+  nameWithType: RevitElementComparer.CategoryName
+- uid: dosymep.Revit.Comparators.RevitElementComparer.CategoryName*
+  name: CategoryName
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_CategoryName_
+  commentId: Overload:dosymep.Revit.Comparators.RevitElementComparer.CategoryName
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.CategoryName
+  nameWithType: RevitElementComparer.CategoryName
+- uid: dosymep.Revit.Comparators.RevitElementComparer.Compare(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Element)
+  name: Compare(Element, Element)
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_Compare_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_Element_
+  commentId: M:dosymep.Revit.Comparators.RevitElementComparer.Compare(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Element)
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.Compare(Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Element)
+  nameWithType: RevitElementComparer.Compare(Element, Element)
+- uid: dosymep.Revit.Comparators.RevitElementComparer.Compare(System.Object,System.Object)
+  name: Compare(object, object)
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_Compare_System_Object_System_Object_
+  commentId: M:dosymep.Revit.Comparators.RevitElementComparer.Compare(System.Object,System.Object)
+  name.vb: Compare(Object, Object)
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.Compare(object, object)
+  fullName.vb: dosymep.Revit.Comparators.RevitElementComparer.Compare(Object, Object)
+  nameWithType: RevitElementComparer.Compare(object, object)
+  nameWithType.vb: RevitElementComparer.Compare(Object, Object)
+- uid: dosymep.Revit.Comparators.RevitElementComparer.Compare*
+  name: Compare
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_Compare_
+  commentId: Overload:dosymep.Revit.Comparators.RevitElementComparer.Compare
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.Compare
+  nameWithType: RevitElementComparer.Compare
+- uid: dosymep.Revit.Comparators.RevitElementComparer.ElementId
+  name: ElementId
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_ElementId
+  commentId: P:dosymep.Revit.Comparators.RevitElementComparer.ElementId
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.ElementId
+  nameWithType: RevitElementComparer.ElementId
+- uid: dosymep.Revit.Comparators.RevitElementComparer.ElementId*
+  name: ElementId
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_ElementId_
+  commentId: Overload:dosymep.Revit.Comparators.RevitElementComparer.ElementId
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.ElementId
+  nameWithType: RevitElementComparer.ElementId
+- uid: dosymep.Revit.Comparators.RevitElementComparer.ElementName
+  name: ElementName
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_ElementName
+  commentId: P:dosymep.Revit.Comparators.RevitElementComparer.ElementName
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.ElementName
+  nameWithType: RevitElementComparer.ElementName
+- uid: dosymep.Revit.Comparators.RevitElementComparer.ElementName*
+  name: ElementName
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_ElementName_
+  commentId: Overload:dosymep.Revit.Comparators.RevitElementComparer.ElementName
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.ElementName
+  nameWithType: RevitElementComparer.ElementName
+- uid: dosymep.Revit.Comparators.RevitElementComparer.Equals(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Element)
+  name: Equals(Element, Element)
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_Equals_Autodesk_Revit_DB_Element_Autodesk_Revit_DB_Element_
+  commentId: M:dosymep.Revit.Comparators.RevitElementComparer.Equals(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Element)
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.Equals(Autodesk.Revit.DB.Element, Autodesk.Revit.DB.Element)
+  nameWithType: RevitElementComparer.Equals(Element, Element)
+- uid: dosymep.Revit.Comparators.RevitElementComparer.Equals(System.Object,System.Object)
+  name: Equals(object, object)
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_Equals_System_Object_System_Object_
+  commentId: M:dosymep.Revit.Comparators.RevitElementComparer.Equals(System.Object,System.Object)
+  name.vb: Equals(Object, Object)
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.Equals(object, object)
+  fullName.vb: dosymep.Revit.Comparators.RevitElementComparer.Equals(Object, Object)
+  nameWithType: RevitElementComparer.Equals(object, object)
+  nameWithType.vb: RevitElementComparer.Equals(Object, Object)
+- uid: dosymep.Revit.Comparators.RevitElementComparer.Equals*
+  name: Equals
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_Equals_
+  commentId: Overload:dosymep.Revit.Comparators.RevitElementComparer.Equals
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.Equals
+  nameWithType: RevitElementComparer.Equals
+- uid: dosymep.Revit.Comparators.RevitElementComparer.GetHashCode(Autodesk.Revit.DB.Element)
+  name: GetHashCode(Element)
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_GetHashCode_Autodesk_Revit_DB_Element_
+  commentId: M:dosymep.Revit.Comparators.RevitElementComparer.GetHashCode(Autodesk.Revit.DB.Element)
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.GetHashCode(Autodesk.Revit.DB.Element)
+  nameWithType: RevitElementComparer.GetHashCode(Element)
+- uid: dosymep.Revit.Comparators.RevitElementComparer.GetHashCode(System.Object)
+  name: GetHashCode(object)
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_GetHashCode_System_Object_
+  commentId: M:dosymep.Revit.Comparators.RevitElementComparer.GetHashCode(System.Object)
+  name.vb: GetHashCode(Object)
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.GetHashCode(object)
+  fullName.vb: dosymep.Revit.Comparators.RevitElementComparer.GetHashCode(Object)
+  nameWithType: RevitElementComparer.GetHashCode(object)
+  nameWithType.vb: RevitElementComparer.GetHashCode(Object)
+- uid: dosymep.Revit.Comparators.RevitElementComparer.GetHashCode*
+  name: GetHashCode
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_GetHashCode_
+  commentId: Overload:dosymep.Revit.Comparators.RevitElementComparer.GetHashCode
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.GetHashCode
+  nameWithType: RevitElementComparer.GetHashCode
+- uid: dosymep.Revit.Comparators.RevitElementComparer.GroupId
+  name: GroupId
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_GroupId
+  commentId: P:dosymep.Revit.Comparators.RevitElementComparer.GroupId
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.GroupId
+  nameWithType: RevitElementComparer.GroupId
+- uid: dosymep.Revit.Comparators.RevitElementComparer.GroupId*
+  name: GroupId
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_GroupId_
+  commentId: Overload:dosymep.Revit.Comparators.RevitElementComparer.GroupId
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.GroupId
+  nameWithType: RevitElementComparer.GroupId
+- uid: dosymep.Revit.Comparators.RevitElementComparer.LevelId
+  name: LevelId
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_LevelId
+  commentId: P:dosymep.Revit.Comparators.RevitElementComparer.LevelId
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.LevelId
+  nameWithType: RevitElementComparer.LevelId
+- uid: dosymep.Revit.Comparators.RevitElementComparer.LevelId*
+  name: LevelId
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_LevelId_
+  commentId: Overload:dosymep.Revit.Comparators.RevitElementComparer.LevelId
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.LevelId
+  nameWithType: RevitElementComparer.LevelId
+- uid: dosymep.Revit.Comparators.RevitElementComparer.TypeId
+  name: TypeId
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_TypeId
+  commentId: P:dosymep.Revit.Comparators.RevitElementComparer.TypeId
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.TypeId
+  nameWithType: RevitElementComparer.TypeId
+- uid: dosymep.Revit.Comparators.RevitElementComparer.TypeId*
+  name: TypeId
+  href: api/2024/dosymep.Revit.Comparators.RevitElementComparer.html#dosymep_Revit_Comparators_RevitElementComparer_TypeId_
+  commentId: Overload:dosymep.Revit.Comparators.RevitElementComparer.TypeId
+  fullName: dosymep.Revit.Comparators.RevitElementComparer.TypeId
+  nameWithType: RevitElementComparer.TypeId
 - uid: dosymep.Revit.Comparators.ViewSheetComparer
   name: ViewSheetComparer
   href: api/2024/dosymep.Revit.Comparators.ViewSheetComparer.html
