@@ -2,6 +2,8 @@ using Autodesk.Revit.DB;
 
 namespace dosymep.Revit.Comparators {
     internal sealed class RevitElementLevelIdComparer : RevitElementComparer {
+        public static readonly RevitElementLevelIdComparer Default = new RevitElementLevelIdComparer();
+
         public override int Compare(Element x, Element y) {
             if(x?.LevelId is null && y?.LevelId is null) {
                 return 0;
@@ -35,7 +37,7 @@ namespace dosymep.Revit.Comparators {
         }
 
         public override int GetHashCode(Element obj) {
-            return obj.LevelId.GetHashCode();
+            return obj.LevelId?.GetHashCode() ?? 0;
         }
     }
 }

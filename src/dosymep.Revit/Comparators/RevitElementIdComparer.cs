@@ -2,6 +2,8 @@ using Autodesk.Revit.DB;
 
 namespace dosymep.Revit.Comparators {
     internal sealed class RevitElementIdComparer : RevitElementComparer {
+        public static readonly RevitElementIdComparer Default = new RevitElementIdComparer();
+
         public override int Compare(Element x, Element y) {
             if(x?.Id is null && y?.Id is null) {
                 return 0;

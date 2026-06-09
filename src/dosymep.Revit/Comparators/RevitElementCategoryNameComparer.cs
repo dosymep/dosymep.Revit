@@ -4,13 +4,7 @@ using Autodesk.Revit.DB;
 
 namespace dosymep.Revit.Comparators {
     internal sealed class RevitElementCategoryNameComparer : RevitElementComparer {
-        private readonly StringComparer _stringComparer;
-        private readonly bool _useNamingUtils;
-
-        public RevitElementCategoryNameComparer(bool useNamingUtils, StringComparer stringComparer) {
-            _useNamingUtils = useNamingUtils;
-            _stringComparer = stringComparer;
-        }
+        public static readonly RevitElementCategoryNameComparer Default = new RevitElementCategoryNameComparer();
 
         public override int Compare(Element x, Element y) {
             if(x?.Category?.Name is null && y?.Category?.Name is null) {
@@ -25,9 +19,7 @@ namespace dosymep.Revit.Comparators {
                 return 1;
             }
 
-            return _useNamingUtils
-                ? NamingUtils.CompareNames(x.Category.Name, y.Category.Name)
-                : _stringComparer.Compare(x.Category.Name, y.Category.Name);
+            return NamingUtils.CompareNames(x.Category.Name, y.Category.Name);
         }
 
         public override bool Equals(Element x, Element y) {
@@ -43,11 +35,11 @@ namespace dosymep.Revit.Comparators {
                 return false;
             }
 
-            return _stringComparer.Equals(x.Category.Name, y.Category.Name);
+            return NamingUtils.CompareNames(x.Category.Name, y.Category.Name) == 0;
         }
 
         public override int GetHashCode(Element obj) {
-            return _stringComparer.GetHashCode(obj.Category.Name);
+            return obj.Category?.Name?.GetHashCode() ?? 0;
         }
     }
 }

@@ -21,6 +21,41 @@ namespace dosymep.Revit.Comparators {
         IEqualityComparer,
         IComparer<Element>,
         IEqualityComparer<Element> {
+        /// <summary>
+        /// Возвращает компаратор элемента по Id.
+        /// </summary>
+        public static RevitElementComparer ElementId => RevitElementIdComparer.Default;
+
+        /// <summary>
+        /// Возвращает компаратор элемента по имени.
+        /// </summary>
+        public static RevitElementComparer ElementName => RevitElementNameComparer.Default;
+
+        /// <summary>
+        /// Возвращает компаратор категории идентификатору.
+        /// </summary>
+        public static RevitElementComparer CategoryId => RevitElementCategoryIdComparer.Default;
+        
+        /// <summary>
+        /// Возвращает компаратор категории по имени.
+        /// </summary>
+        public static RevitElementComparer CategoryName => RevitElementCategoryNameComparer.Default;
+        
+        /// <summary>
+        /// Возвращает компаратор элемента по идентификатору группы.
+        /// </summary>
+        public static RevitElementComparer GroupId => RevitElementGroupIdComparer.Default;
+        
+        /// <summary>
+        /// Возвращает компаратор элемента по идентификатору уровня.
+        /// </summary>
+        public static RevitElementComparer LevelId => RevitElementLevelIdComparer.Default;
+        
+        /// <summary>
+        /// Возвращает компаратор элемента по идентификатору типа.
+        /// </summary>
+        public static RevitElementComparer TypeId => RevitElementTypeIdComparer.Default;
+
         /// <inheritdoc />
         public int Compare(object x, object y) {
             return Compare(x as Element, y as Element);
