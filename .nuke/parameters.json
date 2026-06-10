@@ -1,4 +1,4 @@
 {
   "$schema": "./build.schema.json",
-  "Solution": "dosymep.Revit.sln"
+  "Solution": "dosymep.Revit.slnx"
 }
