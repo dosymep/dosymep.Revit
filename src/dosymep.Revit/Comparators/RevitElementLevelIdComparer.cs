@@ -1,43 +1,43 @@
 using Autodesk.Revit.DB;
 
-namespace dosymep.Revit.Comparators {
-    internal sealed class RevitElementLevelIdComparer : RevitElementComparer {
-        public static readonly RevitElementLevelIdComparer Default = new RevitElementLevelIdComparer();
+namespace dosymep.Revit.Comparators;
 
-        public override int Compare(Element x, Element y) {
-            if(x?.LevelId is null && y?.LevelId is null) {
-                return 0;
-            }
+internal sealed class RevitElementLevelIdComparer : RevitElementComparer {
+    public static readonly RevitElementLevelIdComparer Default = new();
 
-            if(x?.LevelId is null) {
-                return -1;
-            }
-
-            if(y?.LevelId is null) {
-                return 1;
-            }
-
-            return x.LevelId.Compare(y.LevelId);
+    public override int Compare(Element x, Element y) {
+        if(x?.LevelId is null && y?.LevelId is null) {
+            return 0;
         }
 
-        public override bool Equals(Element x, Element y) {
-            if(x?.LevelId is null && y?.LevelId is null) {
-                return true;
-            }
-
-            if(x?.LevelId is null) {
-                return false;
-            }
-
-            if(y?.LevelId is null) {
-                return false;
-            }
-
-            return x.LevelId.Equals(y.LevelId);
+        if(x?.LevelId is null) {
+            return -1;
         }
 
-        public override int GetHashCode(Element obj) {
-            return obj.LevelId?.GetHashCode() ?? 0;
+        if(y?.LevelId is null) {
+            return 1;
         }
+
+        return x.LevelId.Compare(y.LevelId);
+    }
+
+    public override bool Equals(Element x, Element y) {
+        if(x?.LevelId is null && y?.LevelId is null) {
+            return true;
+        }
+
+        if(x?.LevelId is null) {
+            return false;
+        }
+
+        if(y?.LevelId is null) {
+            return false;
+        }
+
+        return x.LevelId.Equals(y.LevelId);
+    }
+
+    public override int GetHashCode(Element obj) {
+        return obj.LevelId?.GetHashCode() ?? 0;
     }
 }

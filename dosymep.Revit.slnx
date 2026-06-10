@@ -1,37 +1,37 @@
 <Solution>
-  <Configurations>
-    <BuildType Name="D2020" />
-    <BuildType Name="D2021" />
-    <BuildType Name="D2022" />
-    <BuildType Name="D2023" />
-    <BuildType Name="D2024" />
-    <BuildType Name="Debug" />
-    <BuildType Name="Release" />
-    <Platform Name="x64" />
-  </Configurations>
-  <Folder Name="/Solution Items/">
-    <File Path=".editorconfig" />
-    <File Path="CONTRIBUTING.md" />
-    <File Path="CREDITS.md" />
-    <File Path="LICENSE.md" />
-    <File Path="README.md" />
-    <File Path="src/Directory.Build.props" />
-    <File Path="src/Directory.Build.targets" />
-    <File Path="src/Directory.Packages.props" />
-  </Folder>
-  <Project Path="build/_build.csproj">
-    <BuildType Solution="D2020|*" Project="Debug" />
-    <BuildType Solution="D2021|*" Project="Debug" />
-    <BuildType Solution="D2022|*" Project="Debug" />
-    <BuildType Solution="D2023|*" Project="Debug" />
-    <BuildType Solution="D2024|*" Project="Debug" />
-    <Platform Project="x64" />
-    <Build Project="false" />
-  </Project>
-  <Project Path="src/dosymep.Bim4Everyone/dosymep.Bim4Everyone.csproj">
-    <Platform Project="x64" />
-  </Project>
-  <Project Path="src/dosymep.Revit/dosymep.Revit.csproj">
-    <Platform Project="x64" />
-  </Project>
+    <Configurations>
+        <BuildType Name="D2020"/>
+        <BuildType Name="D2021"/>
+        <BuildType Name="D2022"/>
+        <BuildType Name="D2023"/>
+        <BuildType Name="D2024"/>
+        <BuildType Name="Debug"/>
+        <BuildType Name="Release"/>
+        <Platform Name="x64"/>
+    </Configurations>
+    <Folder Name="/Solution Items/">
+        <File Path=".editorconfig"/>
+        <File Path="CONTRIBUTING.md"/>
+        <File Path="CREDITS.md"/>
+        <File Path="LICENSE.md"/>
+        <File Path="README.md"/>
+        <File Path="src/Directory.Build.props"/>
+        <File Path="src/Directory.Build.targets"/>
+        <File Path="src/Directory.Packages.props"/>
+    </Folder>
+    <Project Path="build/_build.csproj">
+        <BuildType Solution="D2020|*" Project="Debug"/>
+        <BuildType Solution="D2021|*" Project="Debug"/>
+        <BuildType Solution="D2022|*" Project="Debug"/>
+        <BuildType Solution="D2023|*" Project="Debug"/>
+        <BuildType Solution="D2024|*" Project="Debug"/>
+        <Platform Project="x64"/>
+        <Build Project="false"/>
+    </Project>
+    <Project Path="src/dosymep.Bim4Everyone/dosymep.Bim4Everyone.csproj">
+        <Platform Project="x64"/>
+    </Project>
+    <Project Path="src/dosymep.Revit/dosymep.Revit.csproj">
+        <Platform Project="x64"/>
+    </Project>
 </Solution>

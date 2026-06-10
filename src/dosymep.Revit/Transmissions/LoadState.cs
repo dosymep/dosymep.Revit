@@ -1,24 +1,23 @@
 ﻿using System.Xml.Serialization;
 
-namespace dosymep.Revit.Transmissions {
+namespace dosymep.Revit.Transmissions;
+
+/// <summary>
+///     Типы загрузок связанных файлов.
+/// </summary>
+public enum LoadState {
     /// <summary>
-    /// Типы загрузок связанных файлов.
+    ///     Загружено.
     /// </summary>
-    public enum LoadState {
-        /// <summary>
-        /// Загружено.
-        /// </summary>
-        Loaded,
+    Loaded,
 
-        /// <summary>
-        /// Выгружено.
-        /// </summary>
-        Unloaded,
+    /// <summary>
+    ///     Выгружено.
+    /// </summary>
+    Unloaded,
 
-        /// <summary>
-        /// Не найдено.
-        /// </summary>
-        [XmlEnum(Name = "Not Found")]
-        NotFound
-    }
+    /// <summary>
+    ///     Не найдено.
+    /// </summary>
+    [XmlEnum(Name = "Not Found")] NotFound
 }

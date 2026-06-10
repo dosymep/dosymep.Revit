@@ -30,6 +30,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <GlobalPackageReference Include="Polyfill" Version="10.8.1" PrivateAssets="all" />
+        <GlobalPackageReference Include="Polyfill" Version="10.8.1" PrivateAssets="all"/>
     </ItemGroup>
 </Project>
