@@ -42,7 +42,7 @@ class Build : NukeBuild, IHazSolution {
     // ReSharper disable once InconsistentNaming
     [Parameter] readonly AbsolutePath pyRevitOutput;
 
-    [Parameter("Build Revit versions.")] readonly RevitVersion[] RevitVersions = new RevitVersion[0];
+    [Parameter("Build Revit versions.")] readonly RevitVersion[] RevitVersions = [];
 
     IEnumerable<RevitVersion> BuildRevitVersions;
 
@@ -90,7 +90,7 @@ class Build : NukeBuild, IHazSolution {
                 .DisableNoRestore()
                 .SetConfiguration(Configuration)
                 .SetProjectFile(((IHazSolution) this).Solution)
-                .When(settings => IsServerBuild,
+                .When(_ => IsServerBuild,
                     _ => _
                         .EnableContinuousIntegrationBuild())
                 .CombineWith(BuildRevitVersions,

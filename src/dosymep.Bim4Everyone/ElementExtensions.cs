@@ -69,7 +69,7 @@ public static class ElementExtensions {
             throw new ArgumentNullException(nameof(revitParam));
         }
 
-        return element.GetParamValueOrDefault(revitParam) != default;
+        return element.GetParamValueOrDefault(revitParam) != null;
     }
 
     /// <summary>
@@ -104,7 +104,7 @@ public static class ElementExtensions {
     /// <param name="default">Значение по умолчанию.</param>
     /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
     public static object
-        GetParamValueOrDefault(this Element element, RevitParam revitParam, object @default = default) {
+        GetParamValueOrDefault(this Element element, RevitParam revitParam, object @default = null) {
         if(element is null) {
             throw new ArgumentNullException(nameof(element));
         }
@@ -128,7 +128,7 @@ public static class ElementExtensions {
     /// <param name="default">Значение по умолчанию.</param>
     /// <returns>Возвращает значение параметра с единицей измерения либо значение по умолчанию.</returns>
     public static string GetParamValueStringOrDefault(this Element element, RevitParam revitParam,
-        string @default = default) {
+        string @default = null) {
         if(element is null) {
             throw new ArgumentNullException(nameof(element));
         }

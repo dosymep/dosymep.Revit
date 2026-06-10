@@ -22,7 +22,7 @@ public static class NinjectSerializationExtensions {
     /// <returns>Возвращает настроенный контейнер Ninject.</returns>
     /// <exception cref="System.ArgumentNullException">kernel is null.</exception>
     public static IKernel UseJsonSerialization(this IKernel kernel,
-        Action<JsonSerializerSettings> setupAction = default) {
+        Action<JsonSerializerSettings> setupAction = null) {
         if(kernel == null) {
             throw new ArgumentNullException(nameof(kernel));
         }
@@ -45,7 +45,7 @@ public static class NinjectSerializationExtensions {
     /// <returns>Возвращает настроенный контейнер Ninject.</returns>
     /// <exception cref="System.ArgumentNullException">kernel is null.</exception>
     public static IKernel UseConfigSerialization(this IKernel kernel,
-        Action<JsonSerializerSettings> setupAction = default) {
+        Action<JsonSerializerSettings> setupAction = null) {
         if(kernel == null) {
             throw new ArgumentNullException(nameof(kernel));
         }
@@ -61,9 +61,8 @@ public static class NinjectSerializationExtensions {
     }
 
     private static JsonSerializerSettings GetDefaultSettings() {
-        List<JsonConverter> converters = new() {
-            new ElementIdConverter(), new RevitParamConverter(), new StringEnumConverter(new DefaultNamingStrategy())
-        };
+        List<JsonConverter> converters =
+            [new ElementIdConverter(), new RevitParamConverter(), new StringEnumConverter(new DefaultNamingStrategy())];
 
 #if REVIT2021_OR_GREATER
         converters.Add(new ForgeTypeIdConverter());

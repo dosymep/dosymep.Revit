@@ -6,7 +6,7 @@ namespace dosymep.Bim4Everyone.SimpleServices.InvokeButtons;
 ///     Информация о команде платформы.
 /// </summary>
 internal abstract class ButtonCommand {
-    public ButtonCommand(Guid commandId, string commandPath) {
+    protected ButtonCommand(Guid commandId, string commandPath) {
         CommandId = commandId;
         CommandPath = commandPath;
     }

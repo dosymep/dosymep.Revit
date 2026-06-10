@@ -45,19 +45,18 @@ public class TransmissionData {
     /// <param name="revitFileName">Путь до файла Revit.</param>
     /// <returns>Возвращает данные передачи.</returns>
     public static TransmissionData ReadTransmissionData(string revitFileName) {
-        using(RootStorage rootStorage = RootStorage.OpenRead(revitFileName)) {
-            if(rootStorage.TryOpenStream(TransmissionDataFileName, out CfbStream rawBasicInfoData)) {
-                try {
-                    byte[] bytes = new byte[rawBasicInfoData.Length];
-                    int result = rawBasicInfoData.Read(bytes, 0, bytes.Length);
-                    if(result == 0) {
-                        throw new InvalidDataException("Transmission data is empty.");
-                    }
-
-                    return GetXmlTransmissionData(bytes);
-                } finally {
-                    rawBasicInfoData.Close();
+        using RootStorage rootStorage = RootStorage.OpenRead(revitFileName);
+        if(rootStorage.TryOpenStream(TransmissionDataFileName, out CfbStream rawBasicInfoData)) {
+            try {
+                byte[] bytes = new byte[rawBasicInfoData.Length];
+                int result = rawBasicInfoData.Read(bytes, 0, bytes.Length);
+                if(result == 0) {
+                    throw new InvalidDataException("Transmission data is empty.");
                 }
+
+                return GetXmlTransmissionData(bytes);
+            } finally {
+                rawBasicInfoData.Close();
             }
         }
 
@@ -70,20 +69,19 @@ public class TransmissionData {
     /// <param name="revitFileName">Путь до файла Revit.</param>
     /// <param name="transmissionData">Данные передачи Revit модели.</param>
     public static void WriteTransmissionData(string revitFileName, TransmissionData transmissionData) {
-        using(RootStorage rootStorage = RootStorage.Open(revitFileName, FileMode.Open, StorageModeFlags.Transacted)) {
-            if(rootStorage.TryOpenStream(TransmissionDataFileName, out CfbStream rawBasicInfoData)) {
-                try {
-                    string xmlData = Serialize(transmissionData);
+        using RootStorage rootStorage = RootStorage.Open(revitFileName, FileMode.Open, StorageModeFlags.Transacted);
+        if(rootStorage.TryOpenStream(TransmissionDataFileName, out CfbStream rawBasicInfoData)) {
+            try {
+                string xmlData = Serialize(transmissionData);
 
-                    byte[] bytes = GetByteArray(xmlData);
-                    rawBasicInfoData.Write(bytes, 0, bytes.Length);
-                    rawBasicInfoData.Flush();
-                } finally {
-                    rawBasicInfoData.Close();
-                }
-
-                rootStorage.Commit();
+                byte[] bytes = GetByteArray(xmlData);
+                rawBasicInfoData.Write(bytes, 0, bytes.Length);
+                rawBasicInfoData.Flush();
+            } finally {
+                rawBasicInfoData.Close();
             }
+
+            rootStorage.Commit();
         }
     }
 
@@ -102,9 +100,8 @@ public class TransmissionData {
     /// <param name="revitFileName">Путь до файла Revit.</param>
     /// <returns>Возвращает true - если документ модели был передан.</returns>
     public static bool IsTransmittedDocument(string revitFileName) {
-        using(RootStorage rootStorage = RootStorage.OpenRead(revitFileName)) {
-            return rootStorage.ContainsEntry(TransmissionDataFileName);
-        }
+        using RootStorage rootStorage = RootStorage.OpenRead(revitFileName);
+        return rootStorage.ContainsEntry(TransmissionDataFileName);
     }
 
     /// <summary>
@@ -113,16 +110,13 @@ public class TransmissionData {
     /// <param name="bytes">Байтовый массив файла передачи модели.</param>
     /// <returns>Возвращает данные передачи модели.</returns>
     private static TransmissionData GetXmlTransmissionData(byte[] bytes) {
-        using(MemoryStream stream = new(bytes)) {
-            using(BinaryReader reader = new(stream, Encoding.GetEncoding("UTF-16"))) {
-                int length = reader.ReadInt32();
-                string xmlData = new(reader.ReadChars(length));
+        using MemoryStream stream = new(bytes);
+        using BinaryReader reader = new(stream, Encoding.GetEncoding("UTF-16"));
+        int length = reader.ReadInt32();
+        string xmlData = new(reader.ReadChars(length));
 
-                using(StringReader textReader = new(xmlData)) {
-                    return Deserialize<TransmissionData>(textReader);
-                }
-            }
-        }
+        using StringReader textReader = new(xmlData);
+        return Deserialize<TransmissionData>(textReader);
     }
 
     /// <summary>
@@ -131,14 +125,13 @@ public class TransmissionData {
     /// <param name="textTransmissionData">XML данные передачи модели.</param>
     /// <returns>Возвращает сконвертированную строку в байтовый массив данных передачи модели.</returns>
     private static byte[] GetByteArray(string textTransmissionData) {
-        using(MemoryStream stream = new()) {
-            using(BinaryWriter writer = new(stream, Encoding.GetEncoding("UTF-16"))) {
-                writer.Write(textTransmissionData.Length);
-                writer.Write(textTransmissionData.ToArray());
-            }
-
-            return stream.ToArray();
+        using MemoryStream stream = new();
+        using(BinaryWriter writer = new(stream, Encoding.GetEncoding("UTF-16"))) {
+            writer.Write(textTransmissionData.Length);
+            writer.Write(textTransmissionData.ToArray());
         }
+
+        return stream.ToArray();
     }
 
     /// <summary>

@@ -83,13 +83,12 @@ public static partial class DocumentExtensions {
         BoundingBoxXYZ bb = elements.CreateCommonBoundingBox(view, transforms)
             .IncreaseBoundingBox(offset);
 
-        using(Transaction transaction = document.StartTransaction("Установка подрезки.")) {
-            view.SetSectionBox(bb);
-            uiView.ZoomAndCenterRectangle(bb.Min, bb.Max);
-            uiDocument.SetSelectedElements(elements);
+        using Transaction transaction = document.StartTransaction("Установка подрезки.");
+        view.SetSectionBox(bb);
+        uiView.ZoomAndCenterRectangle(bb.Min, bb.Max);
+        uiDocument.SetSelectedElements(elements);
 
-            transaction.Commit();
-        }
+        transaction.Commit();
     }
 
     /// <summary>

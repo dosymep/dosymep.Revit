@@ -101,9 +101,9 @@ public class KeyScheduleTesting {
             var keyParams =
  new[] { SystemParamsConfig.Instance.CreateRevitParam(_testingSchedule.Document, BuiltInParameter.REF_TABLE_ELEM_NAME) };
 #else
-        SystemParam[] keyParams = new[] {
+        SystemParam[] keyParams = [
             SystemParamsConfig.Instance.CreateRevitParam(_testingSchedule.Document, ParameterTypeId.RefTableElemName)
-        };
+        ];
 #endif
 
         return keyParams.Union(_keyScheduleRule.RequiredParams).Where(item => !paramNames.Contains(item.Name));
@@ -120,9 +120,9 @@ public class KeyScheduleTesting {
             var keyParams =
  new[] { SystemParamsConfig.Instance.CreateRevitParam(_testingSchedule.Document, BuiltInParameter.REF_TABLE_ELEM_NAME) };
 #else
-        SystemParam[] keyParams = new[] {
+        SystemParam[] keyParams = [
             SystemParamsConfig.Instance.CreateRevitParam(_testingSchedule.Document, ParameterTypeId.RefTableElemName)
-        };
+        ];
 #endif
 
         Element[] scheduleElements = GetScheduleElements().ToArray();

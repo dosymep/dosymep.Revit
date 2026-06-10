@@ -32,14 +32,14 @@ internal sealed class NullNotification : INotification {
     }
 
     public Task<bool?> ShowAsync() {
-        return Task.FromResult<bool?>(default);
+        return Task.FromResult<bool?>(null);
     }
 
     public Task<bool?> ShowAsync(int millisecond) {
-        return Task.FromResult<bool?>(default);
+        return Task.FromResult<bool?>(null);
     }
 
     public Task<bool?> ShowAsync(TimeSpan interval) {
-        return Task.FromResult<bool?>(default);
+        return Task.FromResult<bool?>(null);
     }
 }

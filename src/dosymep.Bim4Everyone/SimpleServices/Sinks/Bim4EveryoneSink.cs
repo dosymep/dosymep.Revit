@@ -20,10 +20,9 @@ internal class Bim4EveryoneSink : ILogEventSink {
 
     public async void Emit(LogEvent logEvent) {
         try {
-            using(HttpClient client = new()) {
-                string jsonValue = JsonConvert.SerializeObject(CreateLogEventRecord(logEvent));
-                await client.PostAsync(_logUrl, new StringContent(jsonValue, Encoding.UTF8, "application/json"));
-            }
+            using HttpClient client = new();
+            string jsonValue = JsonConvert.SerializeObject(CreateLogEventRecord(logEvent));
+            await client.PostAsync(_logUrl, new StringContent(jsonValue, Encoding.UTF8, "application/json"));
         } catch(Exception ex) {
             SelfLog.WriteLine("Bim4EveryoneSink catch exception{0}{1}", Environment.NewLine, ex);
         }

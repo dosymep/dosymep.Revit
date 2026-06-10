@@ -29,7 +29,7 @@ public class ProjectParameters {
     /// <summary>
     ///     Приложение Revit.
     /// </summary>
-    public Application Application { get; private set; }
+    public Application Application { get; init; }
 
     /// <summary>
     ///     Создает экземпляр класса параметров проекта.
@@ -44,15 +44,15 @@ public class ProjectParameters {
         return new ProjectParameters {Application = application};
     }
 
-    private void RevitParamsCopy(Document target, IEnumerable<RevitParam> revitParams) {
+    private void RevitParamsCopy(Document target, ICollection<RevitParam> revitParams) {
         Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
         try {
-            using(Transaction transaction = target.StartTransaction("Настройка параметров")) {
-                RevitParamsSync(source, target, revitParams);
-                RevitParamsCopy(source, target, revitParams);
+            using Transaction transaction = target.StartTransaction("Настройка параметров");
+            
+            RevitParamsSync(source, target, revitParams);
+            RevitParamsCopy(source, target, revitParams);
 
-                transaction.Commit();
-            }
+            transaction.Commit();
         } finally {
             source.Close(false);
         }
@@ -110,16 +110,12 @@ public class ProjectParameters {
         ICollection<RevitParam> ParamsWithoutBinding) SplitRevitParamsByBinding(
             Document target,
             IEnumerable<RevitParam> revitParams) {
-        List<RevitParam> regularCopyParams = new();
-        List<RevitParam> paramsWithoutBinding = new();
+        List<RevitParam> regularCopyParams = [];
+        List<RevitParam> paramsWithoutBinding = [];
 
         foreach(RevitParam revitParam in revitParams) {
-            if(!(revitParam is SharedParam)) {
-                regularCopyParams.Add(revitParam);
-                continue;
-            }
-
-            if(!HasRevitElementParam(target, revitParam)) {
+            if(revitParam is not SharedParam 
+               || !HasRevitElementParam(target, revitParam)) {
                 regularCopyParams.Add(revitParam);
                 continue;
             }
@@ -139,8 +135,8 @@ public class ProjectParameters {
     /// <param name="document">Документ.</param>
     /// <param name="revitParam">Параметр Revit.</param>
     /// <returns>Возвращает true, если элемент параметра существует, иначе false.</returns>
-    private bool HasRevitElementParam(Document document, RevitParam revitParam) {
-        if(!(revitParam is SharedParam sharedParam)) {
+    private static bool HasRevitElementParam(Document document, RevitParam revitParam) {
+        if(revitParam is not SharedParam sharedParam) {
             return false;
         }
 
@@ -160,7 +156,7 @@ public class ProjectParameters {
         Document source,
         Document target,
         IEnumerable<ParameterElement> paramsElements) {
-        ViewSchedule viewSchedule = null;
+        ViewSchedule viewSchedule;
 
         using(Transaction transaction = source.StartTransaction("Создание временной спецификации параметров")) {
             viewSchedule = ViewSchedule.CreateSchedule(source, ElementId.InvalidElementId);
@@ -315,7 +311,7 @@ public class ProjectParameters {
             throw new ArgumentNullException(nameof(revitParams));
         }
 
-        RevitParamsCopy(target, revitParams);
+        RevitParamsCopy(target, revitParams.ToArray());
     }
 
     #endregion
@@ -339,21 +335,20 @@ public class ProjectParameters {
 
         Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
         try {
-            using(Transaction transaction = new(target)) {
-                transaction.BIMStart("Настройка спецификации");
+            using Transaction transaction = new(target);
+            transaction.BIMStart("Настройка спецификации");
 
-                if(replaceSchedule) {
-                    ViewSchedule removedViewSchedule = GetViewSchedule(target, revitScheduleRule.ScheduleName);
-                    RemoveViewSchedule(target, removedViewSchedule);
-                }
-
-                ViewSchedule viewSchedule = GetViewSchedule(source, revitScheduleRule.ScheduleName);
-                bool result = CopyViewSchedule(source, target, false, viewSchedule);
-
-                transaction.Commit();
-
-                return result;
+            if(replaceSchedule) {
+                ViewSchedule removedViewSchedule = GetViewSchedule(target, revitScheduleRule.ScheduleName);
+                RemoveViewSchedule(target, removedViewSchedule);
             }
+
+            ViewSchedule viewSchedule = GetViewSchedule(source, revitScheduleRule.ScheduleName);
+            bool result = CopyViewSchedule(source, target, false, viewSchedule);
+
+            transaction.Commit();
+
+            return result;
         } finally {
             source.Close(false);
         }
@@ -396,23 +391,28 @@ public class ProjectParameters {
 
         Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
         try {
-            using(Transaction transaction = new(target)) {
-                transaction.BIMStart("Настройка спецификаций");
+            using Transaction transaction = new(target);
+            transaction.BIMStart("Настройка спецификаций");
 
-                if(replaceSchedule) {
-                    IEnumerable<ViewSchedule> removedViewSchedules =
-                        GetViewSchedules(target, revitScheduleRule.Select(item => item.ScheduleName));
-                    RemoveViewSchedules(target, removedViewSchedules);
-                }
-
-                IEnumerable<ViewSchedule> viewSchedules =
-                    GetViewSchedules(source, revitScheduleRule.Select(item => item.ScheduleName));
-                bool result = CopyViewSchedules(source, target, false, viewSchedules);
-
-                transaction.Commit();
-
-                return result;
+            ICollection<string> scheduleNames = revitScheduleRule
+                .Select(item => item.ScheduleName)
+                .ToArray();
+            
+            if(replaceSchedule) {
+                IEnumerable<ViewSchedule> removedViewSchedules =
+                    GetViewSchedules(target, scheduleNames);
+            
+                RemoveViewSchedules(target, removedViewSchedules);
             }
+
+            ICollection<ViewSchedule> viewSchedules =
+                GetViewSchedules(source, scheduleNames).ToArray();
+          
+            bool result = CopyViewSchedules(source, target, false, viewSchedules);
+
+            transaction.Commit();
+
+            return result;
         } finally {
             source.Close(false);
         }
@@ -457,13 +457,12 @@ public class ProjectParameters {
 
         Document source = Application.OpenDocumentFile(ModuleEnvironment.ParametersTemplatePath);
         try {
-            using(Transaction transaction = new(target)) {
-                transaction.BIMStart("Настройка диспетчера видов");
+            using Transaction transaction = new(target);
+            transaction.BIMStart("Настройка диспетчера видов");
 
-                CopyBrowserOrganization(target, source);
+            CopyBrowserOrganization(target, source);
 
-                transaction.Commit();
-            }
+            transaction.Commit();
         } finally {
             source.Close(false);
         }
@@ -528,7 +527,7 @@ public class ProjectParameters {
 
         ICollection<ElementId> copiedElements = ElementTransformUtils.CopyElements(
             source,
-            new[] {viewSchedule.Id},
+            [viewSchedule.Id],
             target,
             Transform.Identity,
             CreateCopyPasteOptions());
@@ -542,7 +541,7 @@ public class ProjectParameters {
     }
 
     private static bool CopyViewSchedules(Document source, Document target, bool removeSchedule,
-        IEnumerable<ViewSchedule> viewSchedules) {
+        ICollection<ViewSchedule> viewSchedules) {
         if(!viewSchedules.Any()) {
             return false;
         }
@@ -555,7 +554,10 @@ public class ProjectParameters {
             .Distinct()
             .ToList();
 
-        viewSchedules = viewSchedules.Where(item => !targetViewSchedules.Contains(item.Name));
+        viewSchedules = viewSchedules
+            .Where(item => !targetViewSchedules.Contains(item.Name))
+            .ToArray();
+        
         if(!viewSchedules.Any()) {
             return false;
         }

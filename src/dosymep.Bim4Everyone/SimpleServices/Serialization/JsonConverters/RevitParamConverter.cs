@@ -17,7 +17,7 @@ internal class RevitParamConverter : JsonConverter<RevitParam> {
         JsonReader reader, Type objectType,
         RevitParam existingValue, bool hasExistingValue, JsonSerializer serializer) {
         if(reader.TokenType != JsonToken.StartObject) {
-            return default;
+            return null;
         }
 
         JObject jObject = JObject.Load(reader);

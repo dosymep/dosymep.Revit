@@ -96,7 +96,7 @@ internal class RevitServerClient : IRevitServerClient {
 
     private async Task<List<RevitContents>> GetRevitContentsInternalAsync(RevitContents parentContents,
         CancellationToken cancellationToken = default) {
-        List<RevitContents> revitContentsList = new();
+        List<RevitContents> revitContentsList = [];
 
         foreach(RevitFolder revitFolder in parentContents.Folders) {
             cancellationToken.ThrowIfCancellationRequested();

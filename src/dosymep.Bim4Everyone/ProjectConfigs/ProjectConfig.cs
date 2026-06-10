@@ -40,7 +40,7 @@ public abstract class ProjectConfig<TProjectSettings> : ProjectConfig
     /// <summary>
     ///     Список настроек проекта
     /// </summary>
-    public List<TProjectSettings> Settings { get; set; } = new();
+    public List<TProjectSettings> Settings { get; set; } = [];
 
     /// <summary>
     ///     Добавить настройки проекта.

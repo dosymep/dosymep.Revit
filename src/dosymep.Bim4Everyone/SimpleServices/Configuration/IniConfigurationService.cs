@@ -22,7 +22,7 @@ internal class IniConfigurationService {
         return Read(section, key)?.Length > 0;
     }
 
-    public int? ReadInt(string section, string key, int? @default = default) {
+    public int? ReadInt(string section, string key, int? @default = null) {
         if(int.TryParse(Read(section, key), out int result)) {
             return result;
         }
@@ -30,7 +30,7 @@ internal class IniConfigurationService {
         return @default;
     }
 
-    public bool? ReadBool(string section, string key, bool? @default = default) {
+    public bool? ReadBool(string section, string key, bool? @default = null) {
         if(bool.TryParse(Read(section, key), out bool result)) {
             return result;
         }
@@ -38,7 +38,7 @@ internal class IniConfigurationService {
         return @default;
     }
 
-    public TEnum? ReadEnum<TEnum>(string section, string key, TEnum? @default = default) where TEnum : struct {
+    public TEnum? ReadEnum<TEnum>(string section, string key, TEnum? @default = null) where TEnum : struct {
         if(Enum.TryParse(Read(section, key), out TEnum result)) {
             return result;
         }
@@ -46,7 +46,7 @@ internal class IniConfigurationService {
         return @default;
     }
 
-    public string Read(string section, string key, string @default = default) {
+    public string Read(string section, string key, string @default = null) {
         StringBuilder retVal = new(255);
         GetPrivateProfileString(section, key, string.Empty, retVal, 255, _iniPath);
         return string.IsNullOrEmpty(retVal.ToString()) ? @default : retVal.ToString();

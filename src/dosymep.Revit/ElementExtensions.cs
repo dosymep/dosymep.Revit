@@ -297,7 +297,7 @@ public static class ElementExtensions {
             throw new ArgumentException("Value cannot be null or empty.", nameof(paramName));
         }
 
-        return element.GetParamValueOrDefault(paramName) != default;
+        return element.GetParamValueOrDefault(paramName) != null;
     }
 
     /// <summary>
@@ -331,7 +331,7 @@ public static class ElementExtensions {
     /// <param name="paramName">Наименование параметра.</param>
     /// <param name="default">Значение по умолчанию.</param>
     /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
-    public static object GetParamValueOrDefault(this Element element, string paramName, object @default = default) {
+    public static object GetParamValueOrDefault(this Element element, string paramName, object @default = null) {
         if(element is null) {
             throw new ArgumentNullException(nameof(element));
         }
@@ -549,7 +549,7 @@ public static class ElementExtensions {
     /// <param name="paramName">Наименование параметра.</param>
     /// <returns>Возвращает true - если значение общего параметра существует, иначе false.</returns>
     public static bool IsExistsSharedParamValue(this Element element, string paramName) {
-        return element.GetSharedParamValueOrDefault(paramName) != default;
+        return element.GetSharedParamValueOrDefault(paramName) != null;
     }
 
     /// <summary>
@@ -584,7 +584,7 @@ public static class ElementExtensions {
     /// <param name="default">Значение по умолчанию.</param>
     /// <returns>Возвращает значение общего параметра либо значение по умолчанию.</returns>
     public static object
-        GetSharedParamValueOrDefault(this Element element, string paramName, object @default = default) {
+        GetSharedParamValueOrDefault(this Element element, string paramName, object @default = null) {
         if(element is null) {
             throw new ArgumentNullException(nameof(element));
         }
@@ -830,7 +830,7 @@ public static class ElementExtensions {
             throw new ArgumentException("Value cannot be null or empty.", nameof(paramName));
         }
 
-        return element.GetProjectParamValueOrDefault(paramName) != default;
+        return element.GetProjectParamValueOrDefault(paramName) != null;
     }
 
     /// <summary>
@@ -865,7 +865,7 @@ public static class ElementExtensions {
     /// <param name="default">Значение по умолчанию.</param>
     /// <returns>Возвращает значение параметра проекта либо значение по умолчанию.</returns>
     public static object GetProjectParamValueOrDefault(this Element element, string paramName,
-        object @default = default) {
+        object @default = null) {
         if(element is null) {
             throw new ArgumentNullException(nameof(element));
         }
@@ -1079,7 +1079,7 @@ public static class ElementExtensions {
             throw new ArgumentNullException(nameof(element));
         }
 
-        return element.GetParamValueOrDefault(builtInParameter) != default;
+        return element.GetParamValueOrDefault(builtInParameter) != null;
     }
 
     /// <summary>
@@ -1111,7 +1111,7 @@ public static class ElementExtensions {
     /// <param name="default">Значение по умолчанию.</param>
     /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
     public static object GetParamValueOrDefault(this Element element, BuiltInParameter builtInParameter,
-        object @default = default) {
+        object @default = null) {
         if(element is null) {
             throw new ArgumentNullException(nameof(element));
         }
@@ -1310,7 +1310,7 @@ public static class ElementExtensions {
             throw new ArgumentNullException(nameof(forgeTypeId));
         }
 
-        return element.GetParamValueOrDefault(forgeTypeId) != default;
+        return element.GetParamValueOrDefault(forgeTypeId) != null;
     }
 
     /// <summary>
@@ -1345,7 +1345,7 @@ public static class ElementExtensions {
     /// <param name="default">Значение по умолчанию.</param>
     /// <returns>Возвращает значение параметра либо значение по умолчанию.</returns>
     public static object GetParamValueOrDefault(this Element element, ForgeTypeId forgeTypeId,
-        object @default = default) {
+        object @default = null) {
         if(element is null) {
             throw new ArgumentNullException(nameof(element));
         }

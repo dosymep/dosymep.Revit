@@ -30,7 +30,7 @@ internal static class Bim4EveryoneSinkExtensions {
     public static object ToObject(this LogEventPropertyValue propertyValue) {
         switch(propertyValue) {
             case ScalarValue scalarValue:
-                return scalarValue.Value is null ? null : scalarValue.Value;
+                return scalarValue.Value;
             case SequenceValue sequenceValue:
                 return sequenceValue.Elements
                     .Select(item => item.ToObject())

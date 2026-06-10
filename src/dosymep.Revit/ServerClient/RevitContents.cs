@@ -15,23 +15,23 @@ public class RevitContents : RevitResponse, IEquatable<RevitContents>, IComparab
     public long DriveSpace { get; set; }
 
     /// <summary>
-    ///     Не занятый объем диска (измеряется в байтах).
+    ///     Незанятый объем диска (измеряется в байтах).
     /// </summary>
     public long DriveFreeSpace { get; set; }
 
     /// <summary>
-    ///     Список моделей находящихся в текущей папке.
+    ///     Список моделей, находящихся в текущей папке.
     /// </summary>
     public List<RevitModel> Models { get; set; }
 
     /// <summary>
-    ///     Список папок находящихся в текущей папке.
+    ///     Список папок, находящихся в текущей папке.
     /// </summary>
     public List<RevitFolder> Folders { get; set; }
 
     /// <inheritdoc />
     public int CompareTo(RevitContents other) {
-        return other == null ? -1 : Path.CompareTo(other.Path);
+        return other == null ? -1 : Path.CompareTo(other.Path, StringComparison.Ordinal);
     }
 
     /// <inheritdoc />

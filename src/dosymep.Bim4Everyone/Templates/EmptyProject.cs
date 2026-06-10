@@ -15,7 +15,7 @@ public class EmptyProject {
     /// <summary>
     ///     Приложение Revit.
     /// </summary>
-    public Application Application { get; private set; }
+    public Application Application { get; init; }
 
     /// <summary>
     ///     Создает экземпляр класса пустого проекта.

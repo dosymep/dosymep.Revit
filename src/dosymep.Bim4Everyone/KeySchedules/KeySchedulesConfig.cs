@@ -137,12 +137,10 @@ public class KeySchedulesConfig : RevitSchedulesConfig {
             ScheduleName = "КВГ_(Ключ.) - Группа помещений",
             KeyRevitParamName = nameof(ProjectParamsConfig.RoomGroupName),
             RequiredSharedParams =
-                new List<string> {
-                    nameof(SharedParamsConfig.ApartmentGroupName), nameof(SharedParamsConfig.RoomGroupShortName)
-                },
-            RequiredProjectParams = new List<string>(),
-            FilledSharedParamNames = new List<string>(),
-            FilledProjectParamNames = new List<string>()
+                [nameof(SharedParamsConfig.ApartmentGroupName), nameof(SharedParamsConfig.RoomGroupShortName)],
+            RequiredProjectParams = [],
+            FilledSharedParamNames = [],
+            FilledProjectParamNames = []
         };
 
     /// <summary>
@@ -152,13 +150,13 @@ public class KeySchedulesConfig : RevitSchedulesConfig {
         = new() {
             ScheduleName = "КВГ_(Ключ.) - Наименование пом.",
             KeyRevitParamName = nameof(ProjectParamsConfig.RoomName),
-            RequiredSharedParams = new List<string> {nameof(SharedParamsConfig.RoomAreaRatio)},
+            RequiredSharedParams = [nameof(SharedParamsConfig.RoomAreaRatio)],
             RequiredProjectParams =
-                new List<string> {nameof(ProjectParamsConfig.IsRoomBalcony), nameof(ProjectParamsConfig.IsRoomLiving)},
-            RequiredSystemParams = new List<ForgeTypeId> {ParameterTypeId.RoomName, ParameterTypeId.RoomDepartment},
-            FilledSharedParamNames = new List<string> {nameof(SharedParamsConfig.RoomAreaRatio)},
-            FilledProjectParamNames = new List<string>(),
-            FilledSystemParams = new List<ForgeTypeId> {ParameterTypeId.RoomName}
+                [nameof(ProjectParamsConfig.IsRoomBalcony), nameof(ProjectParamsConfig.IsRoomLiving)],
+            RequiredSystemParams = [ParameterTypeId.RoomName, ParameterTypeId.RoomDepartment],
+            FilledSharedParamNames = [nameof(SharedParamsConfig.RoomAreaRatio)],
+            FilledProjectParamNames = [],
+            FilledSystemParams = [ParameterTypeId.RoomName]
         };
 
     /// <summary>
@@ -168,10 +166,10 @@ public class KeySchedulesConfig : RevitSchedulesConfig {
         = new() {
             ScheduleName = "КВГ_(Ключ.) - Пожарный отсек",
             KeyRevitParamName = nameof(ProjectParamsConfig.FireCompartmentName),
-            RequiredSharedParams = new List<string> {nameof(SharedParamsConfig.FireCompartmentShortName)},
-            RequiredProjectParams = new List<string>(),
-            FilledSharedParamNames = new List<string>(),
-            FilledProjectParamNames = new List<string>()
+            RequiredSharedParams = [nameof(SharedParamsConfig.FireCompartmentShortName)],
+            RequiredProjectParams = [],
+            FilledSharedParamNames = [],
+            FilledProjectParamNames = []
         };
 
     /// <summary>
@@ -182,12 +180,10 @@ public class KeySchedulesConfig : RevitSchedulesConfig {
             ScheduleName = "КВГ_(Ключ.) - Секция",
             KeyRevitParamName = nameof(ProjectParamsConfig.RoomSectionName),
             RequiredSharedParams =
-                new List<string> {
-                    nameof(SharedParamsConfig.RoomSectionShortName), nameof(SharedParamsConfig.RoomBuildingShortName)
-                },
-            RequiredProjectParams = new List<string>(),
-            FilledSharedParamNames = new List<string>(),
-            FilledProjectParamNames = new List<string>()
+                [nameof(SharedParamsConfig.RoomSectionShortName), nameof(SharedParamsConfig.RoomBuildingShortName)],
+            RequiredProjectParams = [],
+            FilledSharedParamNames = [],
+            FilledProjectParamNames = []
         };
 
     /// <summary>
@@ -197,15 +193,15 @@ public class KeySchedulesConfig : RevitSchedulesConfig {
         = new() {
             ScheduleName = "КВГ_(Ключ.) - Тип группы",
             KeyRevitParamName = nameof(ProjectParamsConfig.RoomTypeGroupName),
-            RequiredSharedParams = new List<string> {
+            RequiredSharedParams = [
                 nameof(SharedParamsConfig.RoomTypeGroupShortName),
                 nameof(SharedParamsConfig.ApartmentAreaSpec),
                 nameof(SharedParamsConfig.ApartmentAreaMinSpec),
                 nameof(SharedParamsConfig.ApartmentAreaMaxSpec)
-            },
-            RequiredProjectParams = new List<string>(),
-            FilledSharedParamNames = new List<string> {nameof(SharedParamsConfig.RoomTypeGroupShortName)},
-            FilledProjectParamNames = new List<string>()
+            ],
+            RequiredProjectParams = [],
+            FilledSharedParamNames = [nameof(SharedParamsConfig.RoomTypeGroupShortName)],
+            FilledProjectParamNames = []
         };
 #endif
 
@@ -219,7 +215,7 @@ public class KeySchedulesConfig : RevitSchedulesConfig {
         = new() {
             ScheduleName = "ОТД_(Ключ.) - Отделка помещений",
             KeyRevitParamName = nameof(ProjectParamsConfig.RoomFinishingType),
-            RequiredSharedParams = new List<string> {
+            RequiredSharedParams = [
                 nameof(SharedParamsConfig.FloorFinishingType1),
                 nameof(SharedParamsConfig.FloorFinishingType2),
                 nameof(SharedParamsConfig.FloorFinishingType3),
@@ -245,10 +241,10 @@ public class KeySchedulesConfig : RevitSchedulesConfig {
                 nameof(SharedParamsConfig.BaseboardFinishingType3),
                 nameof(SharedParamsConfig.BaseboardFinishingType4),
                 nameof(SharedParamsConfig.BaseboardFinishingType5)
-            },
-            RequiredProjectParams = new List<string>(),
-            FilledSharedParamNames = new List<string>(),
-            FilledProjectParamNames = new List<string>()
+            ],
+            RequiredProjectParams = [],
+            FilledSharedParamNames = [],
+            FilledProjectParamNames = []
         };
 #endif
 

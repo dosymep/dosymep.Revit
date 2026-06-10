@@ -49,16 +49,16 @@ public static partial class ParamExtensions {
             StorageType storageType = parameter.StorageType;
             switch(storageType) {
                 case StorageType.Integer:
-                    parameter.Set((int) default);
+                    parameter.Set((int) 0);
                     break;
                 case StorageType.Double:
-                    parameter.Set((double) default);
+                    parameter.Set((double) 0);
                     break;
                 case StorageType.String:
-                    parameter.Set((string) default);
+                    parameter.Set((string) null);
                     break;
                 case StorageType.ElementId:
-                    parameter.Set((ElementId) default);
+                    parameter.Set((ElementId) null);
                     break;
             }
         }

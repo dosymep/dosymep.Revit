@@ -11,9 +11,7 @@ internal class RevitThemeService :
     , IDisposable
 #endif
 {
-#pragma warning disable CS0067 // Событие "RevitThemeService.UIThemeChanged" никогда не используется.
-    public event Action<UIThemes> UIThemeChanged;
-#pragma warning restore CA2200 // Событие "RevitThemeService.UIThemeChanged" никогда не используется.
+    public event Action<UIThemes> UIThemeChanged = ui => { };
 
     public UIThemes HostTheme => GetRevitUITheme();
 

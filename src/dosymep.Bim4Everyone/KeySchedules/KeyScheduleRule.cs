@@ -23,22 +23,22 @@ public class KeyScheduleRule : RevitScheduleRule {
     /// <summary>
     ///     Общие параметры, которые должны быть обязательно заполнены в спецификации.
     /// </summary>
-    public List<string> FilledSharedParamNames { get; set; } = new();
+    public List<string> FilledSharedParamNames { get; set; } = [];
 
     /// <summary>
     ///     Параметры проекта, которые должны быть обязательно заполнены в спецификации.
     /// </summary>
-    public List<string> FilledProjectParamNames { get; set; } = new();
+    public List<string> FilledProjectParamNames { get; set; } = [];
 
     /// <summary>
     ///     Обязательные общие параметры в спецификации.
     /// </summary>
-    public List<string> RequiredSharedParams { get; set; } = new();
+    public List<string> RequiredSharedParams { get; set; } = [];
 
     /// <summary>
     ///     Обязательные параметры проекта в спецификации.
     /// </summary>
-    public List<string> RequiredProjectParams { get; set; } = new();
+    public List<string> RequiredProjectParams { get; set; } = [];
 
 #if REVIT2020 || REVIT2021
         /// <summary>
@@ -56,12 +56,12 @@ public class KeyScheduleRule : RevitScheduleRule {
     /// <summary>
     ///     Обязательные системные параметры проекта в спецификации.
     /// </summary>
-    public List<ForgeTypeId> RequiredSystemParams { get; set; } = new();
+    public List<ForgeTypeId> RequiredSystemParams { get; set; } = [];
 
     /// <summary>
     ///     Системные параметры проекта, которые должны быть обязательно заполнены в спецификации.
     /// </summary>
-    public List<ForgeTypeId> FilledSystemParams { get; set; } = new();
+    public List<ForgeTypeId> FilledSystemParams { get; set; } = [];
 
 #endif
 
@@ -116,9 +116,9 @@ public class KeyScheduleRule : RevitScheduleRule {
             KeyScheduleRule = this,
             KeyRevitParam = keyRevitParam,
             FilledParams =
-                new List<RevitParam>(filledSharedParams.Union(filledProjectParams).Union(filledSystemParams)),
+                [..filledSharedParams.Union(filledProjectParams).Union(filledSystemParams)],
             RequiredParams =
-                new List<RevitParam>(requiredSharedParams.Union(requiredProjectParams).Union(requiredSystemParams))
+                [..requiredSharedParams.Union(requiredProjectParams).Union(requiredSystemParams)]
         };
     }
 }

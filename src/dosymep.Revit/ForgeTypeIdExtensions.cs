@@ -17,7 +17,7 @@ public static class ForgeTypeIdExtensions {
     /// <summary>
     ///     Наименование свойства SpecTypeId Undefined
     /// </summary>
-    public static string UnitTypeUndefinedName { get; } = "UT_Undefined";
+    public static string UnitTypeUndefinedName => "UT_Undefined";
 
     /// <summary>
     ///     Возвращает наименование свойства единицы измерения <see cref="SpecTypeId" />.
@@ -87,7 +87,7 @@ public static class ForgeTypeIdExtensions {
             return EmptyForgeTypeId;
         }
 
-        string typeName = specTypeIdName.Substring(0, index);
+        string typeName = specTypeIdName[..index];
         string propertyName = specTypeIdName.Substring(index + 1, specTypeIdName.Length - index - 1);
 
         return (ForgeTypeId) typeof(SpecTypeId).Assembly

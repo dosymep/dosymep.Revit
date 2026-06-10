@@ -25,8 +25,8 @@ public static class BoundingBoxExtensions {
         Line edge2 = Line.CreateBound(pt2, pt3);
         Line edge3 = Line.CreateBound(pt3, pt0);
 
-        List<Curve> edges = new() {edge0, edge1, edge2, edge3};
-        List<CurveLoop> loopList = new() {CurveLoop.Create(edges)};
+        List<Curve> edges = [edge0, edge1, edge2, edge3];
+        List<CurveLoop> loopList = [CurveLoop.Create(edges)];
 
         double height = bb.Max.Z - bb.Min.Z;
         Solid solid = GeometryCreationUtilities.CreateExtrusionGeometry(loopList, XYZ.BasisZ, height);
@@ -74,7 +74,7 @@ public static class BoundingBoxExtensions {
         XYZ tpt3 = transform.OfPoint(pt3);
 
         XYZ tMax = transform.OfPoint(bb.Max);
-        XYZ[] points = new[] {tpt0, tpt1, tpt2, tpt3};
+        XYZ[] points = [tpt0, tpt1, tpt2, tpt3];
 
         XYZ min = new(points.Min(p => p.X), points.Min(p => p.Y), points.Min(p => p.Z));
         XYZ max = new(points.Max(p => p.X), points.Max(p => p.Y), tMax.Z);

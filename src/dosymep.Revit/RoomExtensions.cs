@@ -14,7 +14,7 @@ public static class RoomExtensions {
     /// <param name="options">Опции получение границ помещения.</param>
     /// <returns>Возвращает true если помещение является избыточным, иначе false.</returns>
     public static bool IsRedundant(this Room room,
-        SpatialElementBoundaryOptions options = default) {
+        SpatialElementBoundaryOptions options = null) {
         return ((SpatialElement) room).IsRedundant(options);
     }
 
@@ -25,7 +25,7 @@ public static class RoomExtensions {
     /// <param name="options">Опции получение границ помещения.</param>
     /// <returns>Возвращает true если помещение является не избыточным, иначе false.</returns>
     public static bool IsNotRedundant(this Room room,
-        SpatialElementBoundaryOptions options = default) {
+        SpatialElementBoundaryOptions options = null) {
         return ((SpatialElement) room).IsNotRedundant(options);
     }
 
@@ -36,7 +36,7 @@ public static class RoomExtensions {
     /// <param name="options">Опции получение границ помещения.</param>
     /// <returns>Возвращает true если помещение является замкнутым, иначе false.</returns>
     public static bool IsEnclosed(this Room room,
-        SpatialElementBoundaryOptions options = default) {
+        SpatialElementBoundaryOptions options = null) {
         return ((SpatialElement) room).IsEnclosed(options);
     }
 
@@ -47,7 +47,7 @@ public static class RoomExtensions {
     /// <param name="options">Опции получение границ помещения.</param>
     /// <returns>Возвращает true если помещение является не замкнутым, иначе false.</returns>
     public static bool IsNotEnclosed(this Room room,
-        SpatialElementBoundaryOptions options = default) {
+        SpatialElementBoundaryOptions options = null) {
         return ((SpatialElement) room).IsNotEnclosed(options);
     }
 }

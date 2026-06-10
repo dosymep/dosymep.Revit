@@ -51,8 +51,7 @@ public static partial class DocumentExtensions {
 
         foreach(ExternalFileReference externalReference in transData.ExternalFileReferences
                     .Where(item =>
-                        item.ExternalFileReferenceType == ExternalFileReferenceType.CADLink ||
-                        item.ExternalFileReferenceType == ExternalFileReferenceType.RevitLink)) {
+                        item.ExternalFileReferenceType is ExternalFileReferenceType.CADLink or ExternalFileReferenceType.RevitLink)) {
             externalReference.DesiredLoadState = LoadState.Unloaded;
             externalReference.LastSavedLoadState = LoadState.Unloaded;
 
@@ -119,8 +118,8 @@ public static partial class DocumentExtensions {
         IEnumerable<Autodesk.Revit.DB.ExternalFileReference> externalReferences = transData
             .GetAllExternalFileReferenceIds()
             .Select(item => transData.GetLastSavedReferenceData(item))
-            .Where(item => item.ExternalFileReferenceType == Autodesk.Revit.DB.ExternalFileReferenceType.CADLink ||
-                           item.ExternalFileReferenceType == Autodesk.Revit.DB.ExternalFileReferenceType.RevitLink);
+            .Where(item => item.ExternalFileReferenceType 
+                is Autodesk.Revit.DB.ExternalFileReferenceType.CADLink or Autodesk.Revit.DB.ExternalFileReferenceType.RevitLink);
 
         foreach(Autodesk.Revit.DB.ExternalFileReference externalReference in externalReferences) {
             transData.SetDesiredReferenceData(externalReference.GetReferencingId(), externalReference.GetPath(),

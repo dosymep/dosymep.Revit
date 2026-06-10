@@ -1,7 +1,7 @@
 ﻿namespace dosymep.Bim4Everyone;
 
 /// <summary>
-///     Класс предоставляющий информацию о разделе.
+///     Класс, предоставляющий информацию о разделе.
 /// </summary>
 public class BimModelPart : IEquatable<BimModelPart> {
     /// <summary>
@@ -82,7 +82,7 @@ public class BimModelPart : IEquatable<BimModelPart> {
     /// </summary>
     public static readonly BimModelPart KVPart =
         new BimModelSubPart {
-            Parent = OVPart, Id = "KV", Name = "КВ", Description = "Кониционирование/Холодноснабжение"
+            Parent = OVPart, Id = "KV", Name = "КВ", Description = "Кондиционирование/Холодноснабжение"
         };
 
     /// <summary>
@@ -134,17 +134,17 @@ public class BimModelPart : IEquatable<BimModelPart> {
     /// <summary>
     ///     Идентификатор раздела.
     /// </summary>
-    public string Id { get; private set; }
+    public string Id { get; init; }
 
     /// <summary>
     ///     Наименование раздела.
     /// </summary>
-    public string Name { get; private set; }
+    public string Name { get; init; }
 
     /// <summary>
     ///     Описание раздела.
     /// </summary>
-    public string Description { get; private set; }
+    public string Description { get; init; }
 
     internal virtual bool IsBimPart(string documentName) {
         return documentName.Contains("_" + Id);
@@ -209,13 +209,13 @@ public class BimModelPart : IEquatable<BimModelPart> {
 }
 
 /// <summary>
-///     Класс предоставляющий информацию о подразделе.
+///     Класс, предоставляющий информацию о подразделе.
 /// </summary>
 internal class BimModelSubPart : BimModelPart {
     /// <summary>
     ///     Родительский раздел.
     /// </summary>
-    public BimModelPart Parent { get; set; }
+    public BimModelPart Parent { get; init; }
 
     internal override bool IsBimPart(string documentName) {
         return documentName.Contains("_" + Parent.Id + "_" + Id) || base.IsBimPart(documentName);

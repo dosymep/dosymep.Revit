@@ -71,7 +71,7 @@ public static class SpatialElementExtensions {
     /// <param name="options">Опции получение границ элемента.</param>
     /// <returns>Возвращает true если элемент является избыточным, иначе false.</returns>
     internal static bool IsRedundant(this SpatialElement spatialElement,
-        SpatialElementBoundaryOptions options = default) {
+        SpatialElementBoundaryOptions options = null) {
         double roomArea = spatialElement.GetParamValueOrDefault<double>(BuiltInParameter.ROOM_AREA);
         return roomArea == 0 && spatialElement.GetBoundarySegments(options ?? DefaultBoundaryOptions).Count > 0;
     }
@@ -83,7 +83,7 @@ public static class SpatialElementExtensions {
     /// <param name="options">Опции получение границ элемента.</param>
     /// <returns>Возвращает true если элемент является не избыточным, иначе false.</returns>
     internal static bool IsNotRedundant(this SpatialElement spatialElement,
-        SpatialElementBoundaryOptions options = default) {
+        SpatialElementBoundaryOptions options = null) {
         return !spatialElement.IsRedundant(options);
     }
 
@@ -94,19 +94,19 @@ public static class SpatialElementExtensions {
     /// <param name="options">Опции получение границ элемента.</param>
     /// <returns>Возвращает true если элемент является замкнутым, иначе false.</returns>
     internal static bool IsEnclosed(this SpatialElement spatialElement,
-        SpatialElementBoundaryOptions options = default) {
+        SpatialElementBoundaryOptions options = null) {
         double roomArea = spatialElement.GetParamValueOrDefault<double>(BuiltInParameter.ROOM_AREA);
         return roomArea > 0 && spatialElement.GetBoundarySegments(options ?? DefaultBoundaryOptions).Count > 0;
     }
 
     /// <summary>
-    ///     Проверяет является элемент не замкнутым.
+    ///     Проверяет являться элемент незамкнутым.
     /// </summary>
     /// <param name="spatialElement">Проверяемый элемент.</param>
     /// <param name="options">Опции получение границ элемента.</param>
-    /// <returns>Возвращает true если элемент является не замкнутым, иначе false.</returns>
+    /// <returns>Возвращает true, если элемент является незамкнутым, иначе false.</returns>
     internal static bool IsNotEnclosed(this SpatialElement spatialElement,
-        SpatialElementBoundaryOptions options = default) {
+        SpatialElementBoundaryOptions options = null) {
         return !spatialElement.IsEnclosed(options);
     }
 }

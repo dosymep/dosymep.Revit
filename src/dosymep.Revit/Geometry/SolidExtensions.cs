@@ -25,7 +25,7 @@ public static class SolidExtensions {
     /// <returns>Возвращает максимально возможные объединения <see cref="Solid" />.</returns>
     public static IList<Solid> CreateUnitedSolids(IList<Solid> solids) {
         Solid union = solids[0];
-        List<Solid> result = new();
+        List<Solid> result = [];
         for(int index = 1; index < solids.Count; index++) {
             Solid solid = solids[index];
             try {
