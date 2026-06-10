@@ -62,7 +62,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "dosymep.Bim4Everyone.BimModelPart",
-      "Summary": "<p sourcefile=\"api/2020/dosymep.Bim4Everyone.BimModelPart.yml\" sourcestartlinenumber=\"1\">Класс предоставляющий информацию о разделе.</p>\n"
+      "Summary": "<p sourcefile=\"api/2020/dosymep.Bim4Everyone.BimModelPart.yml\" sourcestartlinenumber=\"1\">Класс, предоставляющий информацию о разделе.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1632,7 +1632,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "dosymep.Bim4Everyone.BimModelPart",
-      "Summary": "<p sourcefile=\"api/2021/dosymep.Bim4Everyone.BimModelPart.yml\" sourcestartlinenumber=\"1\">Класс предоставляющий информацию о разделе.</p>\n"
+      "Summary": "<p sourcefile=\"api/2021/dosymep.Bim4Everyone.BimModelPart.yml\" sourcestartlinenumber=\"1\">Класс, предоставляющий информацию о разделе.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3217,7 +3217,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "dosymep.Bim4Everyone.BimModelPart",
-      "Summary": "<p sourcefile=\"api/2022/dosymep.Bim4Everyone.BimModelPart.yml\" sourcestartlinenumber=\"1\">Класс предоставляющий информацию о разделе.</p>\n"
+      "Summary": "<p sourcefile=\"api/2022/dosymep.Bim4Everyone.BimModelPart.yml\" sourcestartlinenumber=\"1\">Класс, предоставляющий информацию о разделе.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4802,7 +4802,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "dosymep.Bim4Everyone.BimModelPart",
-      "Summary": "<p sourcefile=\"api/2023/dosymep.Bim4Everyone.BimModelPart.yml\" sourcestartlinenumber=\"1\">Класс предоставляющий информацию о разделе.</p>\n"
+      "Summary": "<p sourcefile=\"api/2023/dosymep.Bim4Everyone.BimModelPart.yml\" sourcestartlinenumber=\"1\">Класс, предоставляющий информацию о разделе.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -6387,7 +6387,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "dosymep.Bim4Everyone.BimModelPart",
-      "Summary": "<p sourcefile=\"api/2024/dosymep.Bim4Everyone.BimModelPart.yml\" sourcestartlinenumber=\"1\">Класс предоставляющий информацию о разделе.</p>\n"
+      "Summary": "<p sourcefile=\"api/2024/dosymep.Bim4Everyone.BimModelPart.yml\" sourcestartlinenumber=\"1\">Класс, предоставляющий информацию о разделе.</p>\n"
     },
     {
       "type": "ManagedReference",
