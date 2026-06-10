@@ -18,13 +18,13 @@ jobs:
   build:
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       
       # Install the .NET Core workload
       - name: Install .NET Core
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 10.0.x
       
       # Add DevExpress source: https://docs.devexpress.com/GeneralInformation/117209/installation/install-devexpress-controls-using-nuget-packages/manage-packages-with-dotnet-cli
       - name: Add DevExpress package source
@@ -41,14 +41,14 @@ jobs:
       
       # Upload docs site: https://github.com/marketplace/actions/upload-a-build-artifact
       - name: Upload docs
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: docs-site
           path: docs/_site
       
       # Upload docs site: https://github.com/marketplace/actions/upload-a-build-artifact
       - name: Upload libraries
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: bin
           path: bin
@@ -59,11 +59,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       
       # Download Artifacts: https://github.com/actions/download-artifact
       - name: Download Artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: docs-site
           path: docs/_site
