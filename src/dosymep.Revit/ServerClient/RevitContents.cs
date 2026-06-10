@@ -31,7 +31,7 @@ public class RevitContents : RevitResponse, IEquatable<RevitContents>, IComparab
 
     /// <inheritdoc />
     public int CompareTo(RevitContents other) {
-        return other == null ? -1 : Path.CompareTo(other.Path, StringComparison.Ordinal);
+        return other == null ? -1 : string.Compare(Path, other.Path, StringComparison.Ordinal);
     }
 
     /// <inheritdoc />

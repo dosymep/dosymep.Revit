@@ -40,49 +40,36 @@ public class TransmissionData {
     public List<ExternalFileReference> ExternalFileReferences { get; set; }
 
     /// <summary>
-    ///     Чтение данных передачи.
+    /// Чтение данных передачи.
     /// </summary>
     /// <param name="revitFileName">Путь до файла Revit.</param>
     /// <returns>Возвращает данные передачи.</returns>
     public static TransmissionData ReadTransmissionData(string revitFileName) {
-        using RootStorage rootStorage = RootStorage.OpenRead(revitFileName);
-        if(rootStorage.TryOpenStream(TransmissionDataFileName, out CfbStream rawBasicInfoData)) {
-            try {
-                byte[] bytes = new byte[rawBasicInfoData.Length];
-                int result = rawBasicInfoData.Read(bytes, 0, bytes.Length);
-                if(result == 0) {
-                    throw new InvalidDataException("Transmission data is empty.");
-                }
-
-                return GetXmlTransmissionData(bytes);
-            } finally {
-                rawBasicInfoData.Close();
-            }
+        using CompoundFile cf = new(revitFileName);
+        
+        if(cf.RootStorage.TryGetStream(TransmissionDataFileName, out CFStream rawBasicInfoData)) {
+            byte[] bytes = rawBasicInfoData.GetData();
+            return GetXmlTransmissionData(bytes);
         }
 
         return null;
     }
 
     /// <summary>
-    ///     Записывает данные передачи Revit.
+    /// Записывает данные передачи Revit.
     /// </summary>
     /// <param name="revitFileName">Путь до файла Revit.</param>
     /// <param name="transmissionData">Данные передачи Revit модели.</param>
     public static void WriteTransmissionData(string revitFileName, TransmissionData transmissionData) {
-        using RootStorage rootStorage = RootStorage.Open(revitFileName, FileMode.Open, StorageModeFlags.Transacted);
-        if(rootStorage.TryOpenStream(TransmissionDataFileName, out CfbStream rawBasicInfoData)) {
-            try {
-                string xmlData = Serialize(transmissionData);
+        using CompoundFile cf = new(revitFileName, CFSUpdateMode.Update, CFSConfiguration.Default);
+        if(cf.RootStorage.TryGetStream(TransmissionDataFileName, out CFStream rawBasicInfoData)) {
+            string xmlData = Serialize(transmissionData);
 
-                byte[] bytes = GetByteArray(xmlData);
-                rawBasicInfoData.Write(bytes, 0, bytes.Length);
-                rawBasicInfoData.Flush();
-            } finally {
-                rawBasicInfoData.Close();
-            }
-
-            rootStorage.Commit();
+            byte[] bytes = GetByteArray(xmlData);
+            rawBasicInfoData.SetData(bytes);
         }
+
+        cf.Commit();
     }
 
     /// <summary>
@@ -95,13 +82,13 @@ public class TransmissionData {
     }
 
     /// <summary>
-    ///     Документ модели является переданным.
+    /// Документ модели является переданным.
     /// </summary>
     /// <param name="revitFileName">Путь до файла Revit.</param>
     /// <returns>Возвращает true - если документ модели был передан.</returns>
     public static bool IsTransmittedDocument(string revitFileName) {
-        using RootStorage rootStorage = RootStorage.OpenRead(revitFileName);
-        return rootStorage.ContainsEntry(TransmissionDataFileName);
+        using CompoundFile cf = new(revitFileName);
+        return cf.RootStorage.TryGetStream(TransmissionDataFileName, out CFStream _);
     }
 
     /// <summary>
