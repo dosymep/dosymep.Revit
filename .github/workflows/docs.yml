@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: windows-2022
+    runs-on: windows-2025
     steps:
       - uses: actions/checkout@v6
       
@@ -77,5 +77,5 @@ jobs:
           force: true
           branch: gh-pages
           folder: docs/_site
-          git-config-name: dosymep
-          git-config-email: dosymep@gmail.com
+          git-config-name: github-actions[bot]
+          git-config-email: github-actions[bot]@users.noreply.github.com
