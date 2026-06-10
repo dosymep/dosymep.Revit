@@ -12,10 +12,10 @@
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Nuke.Common" Version="10.1.0" />
-    <PackageReference Include="Nuke.Components" Version="10.1.0" />
-    <PackageReference Include="dosymep.Nuke.RevitVersions" Version="*" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Nuke.Common" Version="10.1.0"/>
+        <PackageReference Include="Nuke.Components" Version="10.1.0"/>
+        <PackageReference Include="dosymep.Nuke.RevitVersions" Version="*"/>
+    </ItemGroup>
 
 </Project>
