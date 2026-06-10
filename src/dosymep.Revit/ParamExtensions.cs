@@ -207,7 +207,6 @@ public static partial class ParamExtensions {
             }
         }
     }
-}
 #else
     /// <summary>
     ///     Заново объявляет общий параметр в проекте, меняя его группу
