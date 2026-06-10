@@ -1,0 +1,35 @@
+<Project>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <CentralPackageFloatingVersionsEnabled>true</CentralPackageFloatingVersionsEnabled>
+        <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageVersion Include="OpenMcdf" Version="2.4.1"/>
+        <PackageVersion Include="DevExpress.Wpf" Version="21.2.3"/>
+
+        <PackageVersion Include="Ninject" Version="3.3.6"/>
+        <PackageVersion Include="Ninject.Extensions.ChildKernel" Version="3.3.0"/>
+
+        <PackageVersion Include="Serilog" Version="2.10.0"/>
+        <PackageVersion Include="Serilog.Sinks.Console" Version="4.1.0"/>
+        <PackageVersion Include="Serilog.Sinks.File" Version="5.0.0"/>
+
+        <PackageVersion Include="Microsoft.CSharp" Version="4.7.0"/>
+        <PackageVersion Include="System.Data.DataSetExtensions" Version="4.5.0"/>
+
+        <PackageVersion Include="Autodesk.Revit.Sdk.Refs" Version="*"/>
+        <PackageVersion Include="Autodesk.Revit.Sdk.Refs.$(RevitVersion)" Version="*"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageVersion Include="Nuke.Common" Version="10.1.0"/>
+        <PackageVersion Include="Nuke.Components" Version="10.1.0"/>
+        <PackageVersion Include="dosymep.Nuke.RevitVersions" Version="*"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <GlobalPackageReference Include="Polyfill" Version="10.8.1" PrivateAssets="all"/>
+    </ItemGroup>
+</Project>

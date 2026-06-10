@@ -1,52 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace dosymep.Revit.ServerClient;
 
-namespace dosymep.Revit.ServerClient {
+/// <summary>
+///     Типы серверных ролей.
+/// </summary>
+public enum ServerRoles {
     /// <summary>
-    /// Типы серверных ролей.
+    ///     Host.
     /// </summary>
-    public enum ServerRoles {
-        /// <summary>
-        /// Host.
-        /// </summary>
-        Host,
-
-        /// <summary>
-        /// Accelerator.
-        /// </summary>
-        Accelerator,
-
-        /// <summary>
-        /// Администратор.
-        /// </summary>
-        Admin
-    }
+    Host,
 
     /// <summary>
-    /// Информация о Revit сервере.
+    ///     Accelerator.
     /// </summary>
-    public class ServerInformations {
-        /// <summary>
-        /// Максимальная длина имени модели.
-        /// </summary>
-        public int MaximumModelNameLength { get; set; }
+    Accelerator,
 
-        /// <summary>
-        /// Максимальная длина имени папки.
-        /// </summary>
-        public int MaximumFolderPathLength { get; set; }
+    /// <summary>
+    ///     Администратор.
+    /// </summary>
+    Admin
+}
 
-        /// <summary>
-        /// Список имен серверов сети Revit.
-        /// </summary>
-        public List<string> Servers { get; set; }
+/// <summary>
+///     Информация о Revit сервере.
+/// </summary>
+public class ServerInformations {
+    /// <summary>
+    ///     Максимальная длина имени модели.
+    /// </summary>
+    public int MaximumModelNameLength { get; set; }
 
-        /// <summary>
-        /// Список ролей сервера.
-        /// </summary>
-        public List<ServerRoles> ServerRoles { get; set; }
-    }
+    /// <summary>
+    ///     Максимальная длина имени папки.
+    /// </summary>
+    public int MaximumFolderPathLength { get; set; }
+
+    /// <summary>
+    ///     Список имен серверов сети Revit.
+    /// </summary>
+    public List<string> Servers { get; set; }
+
+    /// <summary>
+    ///     Список ролей сервера.
+    /// </summary>
+    public List<ServerRoles> ServerRoles { get; set; }
 }

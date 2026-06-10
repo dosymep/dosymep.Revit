@@ -1,100 +1,94 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Autodesk.Revit.DB;
+﻿using Autodesk.Revit.DB;
 
 using dosymep.Revit;
 
 using pyRevitLabs.Json;
 using pyRevitLabs.Json.Linq;
 
-namespace dosymep.Bim4Everyone.ProjectParams {
+namespace dosymep.Bim4Everyone.ProjectParams;
+
+/// <summary>
+///     Класс параметров проекта Revit.
+/// </summary>
+public class ProjectParam : RevitParam {
     /// <summary>
-    /// Класс параметров проекта Revit.
+    ///     Конструктор класса параметра проекта.
     /// </summary>
-    public class ProjectParam : RevitParam {
-        /// <summary>
-        /// Конструктор класса параметра проекта.
-        /// </summary>
-        /// <param name="id">Идентификатор параметра.</param>
-        [JsonConstructor]
-        internal ProjectParam(string id)
-            : base(id) {
+    /// <param name="id">Идентификатор параметра.</param>
+    [JsonConstructor]
+    internal ProjectParam(string id)
+        : base(id) {
+    }
+
+    /// <inheritdoc />
+    public override bool IsExistsParam(Document document) {
+        if(document is null) {
+            throw new ArgumentNullException(nameof(document));
         }
 
-        /// <inheritdoc/>
-        public override bool IsExistsParam(Document document) {
-            if(document is null) {
-                throw new ArgumentNullException(nameof(document));
-            }
+        return document.IsExistsProjectParam(Name);
+    }
 
-            return document.IsExistsProjectParam(Name);
+    /// <inheritdoc />
+    public override (Definition Definition, Binding Binding) GetParamBinding(Document document) {
+        return document.GetProjectParamBinding(Name);
+    }
+
+    /// <inheritdoc />
+    public override ParameterElement GetRevitParamElement(Document document) {
+        return document.GetProjectParam(Name);
+    }
+
+    /// <summary>
+    ///     Проверяет является ли определение параметра параметром проекта.
+    /// </summary>
+    /// <param name="document">Документ.</param>
+    /// <param name="definition">Определение параметра.</param>
+    /// <returns>Возвращает true - если определение параметра является параметром проекта, иначе false.</returns>
+    public override bool IsRevitParam(Document document, Definition definition) {
+        if(document is null) {
+            throw new ArgumentNullException(nameof(document));
         }
 
-        /// <inheritdoc/>
-        public override (Definition Definition, Binding Binding) GetParamBinding(Document document) {
-            return document.GetProjectParamBinding(Name);
+        return base.IsRevitParam(document, definition) && document.IsProjectParamDefinition(definition);
+    }
+
+    /// <inheritdoc />
+    public override Parameter GetParam(Element element) {
+        if(element is null) {
+            throw new ArgumentNullException(nameof(element));
         }
 
-        /// <inheritdoc/>
-        public override ParameterElement GetRevitParamElement(Document document) {
-            return document.GetProjectParam(Name);
+        Parameter param = element.GetParameters(Name).FirstOrDefault(item => !item.IsShared);
+        if(param is null) {
+            throw new ArgumentException($"Параметр проекта с заданным именем \"{Name}\" не был найден.");
         }
 
-        /// <summary>
-        /// Проверяет является ли определение параметра параметром проекта.
-        /// </summary>
-        /// <param name="document">Документ.</param>
-        /// <param name="definition">Определение параметра.</param>
-        /// <returns>Возвращает true - если определение параметра является параметром проекта, иначе false.</returns>
-        public override bool IsRevitParam(Document document, Definition definition) {
-            if(document is null) {
-                throw new ArgumentNullException(nameof(document));
-            }
-
-            return base.IsRevitParam(document, definition) && document.IsProjectParamDefinition(definition);
+        if(param.StorageType != StorageType) {
+            throw new ArgumentException(
+                $"Переданный Параметр проекта \"{Name}\" не соответствует типу параметра у элемента.");
         }
 
-        /// <inheritdoc/>
-        public override Parameter GetParam(Element element) {
-            if(element is null) {
-                throw new ArgumentNullException(nameof(element));
-            }
+        return param;
+    }
 
-            var param = element.GetParameters(Name).FirstOrDefault(item => !item.IsShared);
-            if(param is null) {
-                throw new ArgumentException($"Параметр проекта с заданным именем \"{Name}\" не был найден.");
-            }
+    #region Serialization
 
-            if(param.StorageType != StorageType) {
-                throw new ArgumentException(
-                    $"Переданный Параметр проекта \"{Name}\" не соответствует типу параметра у элемента.");
-            }
+    /// <summary>
+    ///     Метод чтения параметра из json
+    /// </summary>
+    /// <param name="token">Токен</param>
+    /// <param name="serializer">Сериализатор</param>
+    internal static RevitParam ReadFromJson(JObject token, JsonSerializer serializer) {
+        return ReadFromJson(token, serializer, new ProjectParam(token.Value<string>(nameof(Id))));
+    }
 
-            return param;
-        }
-        
-        #region Serialization
+    /// <inheritdoc />
+    protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) { }
 
-        /// <summary>
-        /// Метод чтения параметра из json
-        /// </summary>
-        /// <param name="token">Токен</param>
-        /// <param name="serializer">Сериализатор</param>
-        internal static RevitParam ReadFromJson(JObject token, JsonSerializer serializer) {
-            return RevitParam.ReadFromJson(token, serializer, new ProjectParam(token.Value<string>(nameof(Id))));
-        }
-
-        /// <inheritdoc />
-        protected override void SaveToJsonImpl(JsonWriter writer, JsonSerializer serializer) { }
-
-        #endregion
+    #endregion
 
 #if REVIT2020
-
         /// <summary>
         /// Возвращает единицу измерения параметра по его идентификатору.
         /// </summary>
@@ -169,9 +163,8 @@ namespace dosymep.Bim4Everyone.ProjectParams {
                         nameof(paramId));
             }
         }
-        
+
 #elif REVIT2021
-        
         /// <summary>
         /// Возвращает единицу измерения параметра по его идентификатору.
         /// </summary>
@@ -249,77 +242,76 @@ namespace dosymep.Bim4Everyone.ProjectParams {
 
 #else
 
-        /// <summary>
-        /// Возвращает единицу измерения параметра по его идентификатору.
-        /// </summary>
-        /// <param name="paramId">Идентификатор параметра.</param>
-        /// <returns>Возвращает единицу измерения параметра по его идентификатору.</returns>
-        internal static ForgeTypeId GetUnitType(string paramId) {
-            switch(paramId) {
-                case nameof(ProjectParamsConfig.ViewGroup):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.ProjectStage):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.ViewNumberOnSheet):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.WithFullSheetNumber):
-                    return SpecTypeId.Boolean.YesNo;
-                case nameof(ProjectParamsConfig.WithSheetNumber):
-                    return SpecTypeId.Boolean.YesNo;
-                case nameof(ProjectParamsConfig.IsRoomBalcony):
-                    return SpecTypeId.Boolean.YesNo;
-                case nameof(ProjectParamsConfig.IsRoomLiving):
-                    return SpecTypeId.Boolean.YesNo;
-                case nameof(ProjectParamsConfig.IsRoomNumberFix):
-                    return SpecTypeId.Boolean.YesNo;
-                case nameof(ProjectParamsConfig.IsRoomLevelFix):
-                    return SpecTypeId.Boolean.YesNo;
-                case nameof(ProjectParamsConfig.NumberingOrder):
-                    return SpecTypeId.Int.Integer;
-                case nameof(ProjectParamsConfig.IsRoomMainLevel):
-                    return SpecTypeId.Boolean.YesNo;
-                case nameof(ProjectParamsConfig.CheckIsNormalGrid):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.CheckCorrectDistanceGrid):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.RelatedRoomName):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.RelatedRoomNumber):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.RelatedRoomID):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.RelatedRoomGroup):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.RoomGroupName):
-                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
-                case nameof(ProjectParamsConfig.FireCompartmentName):
-                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
-                case nameof(ProjectParamsConfig.RoomSectionName):
-                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
-                case nameof(ProjectParamsConfig.RoomTypeGroupName):
-                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
-                case nameof(ProjectParamsConfig.RoomName):
-                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
-                case nameof(ProjectParamsConfig.RoomFinishingType):
-                    return ForgeTypeIdExtensions.EmptyForgeTypeId;
-                case nameof(ProjectParamsConfig.ListOfSchedulesListName):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.ListOfSchedulesSheetName):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.ListOfSchedulesRevNumber):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.ListOfSchedulesNotes):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.ListOfSchedulesGroup):
-                    return SpecTypeId.String.Text;
-                case nameof(ProjectParamsConfig.RoomNoGlazing):
-                    return SpecTypeId.Boolean.YesNo;
-                default:
-                    throw new ArgumentException($"Не найден параметр проекта с идентификатором \"{paramId}\".",
-                        nameof(paramId));
-            }
+    /// <summary>
+    ///     Возвращает единицу измерения параметра по его идентификатору.
+    /// </summary>
+    /// <param name="paramId">Идентификатор параметра.</param>
+    /// <returns>Возвращает единицу измерения параметра по его идентификатору.</returns>
+    internal static ForgeTypeId GetUnitType(string paramId) {
+        switch(paramId) {
+            case nameof(ProjectParamsConfig.ViewGroup):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.ProjectStage):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.ViewNumberOnSheet):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.WithFullSheetNumber):
+                return SpecTypeId.Boolean.YesNo;
+            case nameof(ProjectParamsConfig.WithSheetNumber):
+                return SpecTypeId.Boolean.YesNo;
+            case nameof(ProjectParamsConfig.IsRoomBalcony):
+                return SpecTypeId.Boolean.YesNo;
+            case nameof(ProjectParamsConfig.IsRoomLiving):
+                return SpecTypeId.Boolean.YesNo;
+            case nameof(ProjectParamsConfig.IsRoomNumberFix):
+                return SpecTypeId.Boolean.YesNo;
+            case nameof(ProjectParamsConfig.IsRoomLevelFix):
+                return SpecTypeId.Boolean.YesNo;
+            case nameof(ProjectParamsConfig.NumberingOrder):
+                return SpecTypeId.Int.Integer;
+            case nameof(ProjectParamsConfig.IsRoomMainLevel):
+                return SpecTypeId.Boolean.YesNo;
+            case nameof(ProjectParamsConfig.CheckIsNormalGrid):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.CheckCorrectDistanceGrid):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.RelatedRoomName):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.RelatedRoomNumber):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.RelatedRoomID):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.RelatedRoomGroup):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.RoomGroupName):
+                return ForgeTypeIdExtensions.EmptyForgeTypeId;
+            case nameof(ProjectParamsConfig.FireCompartmentName):
+                return ForgeTypeIdExtensions.EmptyForgeTypeId;
+            case nameof(ProjectParamsConfig.RoomSectionName):
+                return ForgeTypeIdExtensions.EmptyForgeTypeId;
+            case nameof(ProjectParamsConfig.RoomTypeGroupName):
+                return ForgeTypeIdExtensions.EmptyForgeTypeId;
+            case nameof(ProjectParamsConfig.RoomName):
+                return ForgeTypeIdExtensions.EmptyForgeTypeId;
+            case nameof(ProjectParamsConfig.RoomFinishingType):
+                return ForgeTypeIdExtensions.EmptyForgeTypeId;
+            case nameof(ProjectParamsConfig.ListOfSchedulesListName):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.ListOfSchedulesSheetName):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.ListOfSchedulesRevNumber):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.ListOfSchedulesNotes):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.ListOfSchedulesGroup):
+                return SpecTypeId.String.Text;
+            case nameof(ProjectParamsConfig.RoomNoGlazing):
+                return SpecTypeId.Boolean.YesNo;
+            default:
+                throw new ArgumentException($"Не найден параметр проекта с идентификатором \"{paramId}\".",
+                    nameof(paramId));
         }
+    }
 
 #endif
-    }
 }

@@ -1,19 +1,19 @@
 using dosymep.Bim4Everyone.SimpleServices.Configuration;
 
-namespace dosymep.Bim4Everyone.SimpleServices {
-    internal sealed class PlatformSettingsService : IPlatformSettingsService {
-        private readonly IniConfigurationService _configurationService;
+namespace dosymep.Bim4Everyone.SimpleServices;
 
-        public PlatformSettingsService(IniConfigurationService configurationService) {
-            _configurationService = configurationService;
-        }
+internal sealed class PlatformSettingsService : IPlatformSettingsService {
+    private readonly IniConfigurationService _configurationService;
 
-        public LogTrace LogTrace => new LogTrace(_configurationService);
-        public LogTraceJournal LogTraceJournal => new LogTraceJournal(_configurationService);
-
-        public CorpSettings CorpSettings => new CorpSettings(_configurationService);
-        public SocialsSettings SocialsSettings => new SocialsSettings(_configurationService);
-
-        public NotificationSettings NotificationSettings => new NotificationSettings(_configurationService);
+    public PlatformSettingsService(IniConfigurationService configurationService) {
+        _configurationService = configurationService;
     }
+
+    public LogTrace LogTrace => new(_configurationService);
+    public LogTraceJournal LogTraceJournal => new(_configurationService);
+
+    public CorpSettings CorpSettings => new(_configurationService);
+    public SocialsSettings SocialsSettings => new(_configurationService);
+
+    public NotificationSettings NotificationSettings => new(_configurationService);
 }

@@ -2,14 +2,14 @@
 
 using Ninject.Modules;
 
-namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
-    internal class SettingsServicesModule : NinjectModule {
-        public override void Load() {
-            Bind<IPlatformSettingsService>()
-                .To<PlatformSettingsService>();
+namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules;
 
-            Bind<IniConfigurationService>().ToSelf()
-                .WithConstructorArgument("iniPath", ModuleEnvironment.CurrentConfigPath);
-        }
+internal class SettingsServicesModule : NinjectModule {
+    public override void Load() {
+        Bind<IPlatformSettingsService>()
+            .To<PlatformSettingsService>();
+
+        Bind<IniConfigurationService>().ToSelf()
+            .WithConstructorArgument("iniPath", ModuleEnvironment.CurrentConfigPath);
     }
 }

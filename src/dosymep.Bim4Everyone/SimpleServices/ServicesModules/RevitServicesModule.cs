@@ -9,54 +9,54 @@ using dosymep.SimpleServices;
 
 using Ninject.Modules;
 
-namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules {
-    internal class RevitServicesModule : NinjectModule {
-        private readonly UIApplication _uiApplication;
+namespace dosymep.Bim4Everyone.SimpleServices.ServicesModules;
 
-        public RevitServicesModule(UIApplication uiApplication) {
-            _uiApplication = uiApplication;
-        }
+internal class RevitServicesModule : NinjectModule {
+    private readonly UIApplication _uiApplication;
 
-        public override void Load() {
-            Bind<UIApplication>()
-                .ToConstant(_uiApplication)
-                .InTransientScope();
+    public RevitServicesModule(UIApplication uiApplication) {
+        _uiApplication = uiApplication;
+    }
 
-            Bind<Application>()
-                .ToConstant(_uiApplication.Application)
-                .InTransientScope();
+    public override void Load() {
+        Bind<UIApplication>()
+            .ToConstant(_uiApplication)
+            .InTransientScope();
 
-            Bind<ILanguageService>()
-                .To<RevitLanguageService>()
-                .InSingletonScope();
+        Bind<Application>()
+            .ToConstant(_uiApplication.Application)
+            .InTransientScope();
 
-            Bind<IPlatformCommandsService>()
-                .To<PlatformCommandsService>();
+        Bind<ILanguageService>()
+            .To<RevitLanguageService>()
+            .InSingletonScope();
 
-            Bind<IInvokeButtonFactory>()
-                .To<InvokeButtonFactory>();
+        Bind<IPlatformCommandsService>()
+            .To<PlatformCommandsService>();
 
-            Bind<InvokeButton>().ToSelf();
+        Bind<IInvokeButtonFactory>()
+            .To<InvokeButtonFactory>();
 
-            Bind<IBimModelPartsService>()
-                .To<BimModelPartsService>()
-                .InSingletonScope();
+        Bind<InvokeButton>().ToSelf();
 
-            Bind<IRevitParamFactory>()
-                .To<RevitParamFactory>()
-                .InSingletonScope();
+        Bind<IBimModelPartsService>()
+            .To<BimModelPartsService>()
+            .InSingletonScope();
 
-            Bind<ISystemParamsService>()
-                .ToConstant(SystemParamsConfig.Instance)
-                .InSingletonScope();
+        Bind<IRevitParamFactory>()
+            .To<RevitParamFactory>()
+            .InSingletonScope();
 
-            Bind<ISharedParamsService>()
-                .ToConstant(SharedParamsConfig.Instance)
-                .InSingletonScope();
+        Bind<ISystemParamsService>()
+            .ToConstant(SystemParamsConfig.Instance)
+            .InSingletonScope();
 
-            Bind<IProjectParamsService>()
-                .ToConstant(ProjectParamsConfig.Instance)
-                .InSingletonScope();
-        }
+        Bind<ISharedParamsService>()
+            .ToConstant(SharedParamsConfig.Instance)
+            .InSingletonScope();
+
+        Bind<IProjectParamsService>()
+            .ToConstant(ProjectParamsConfig.Instance)
+            .InSingletonScope();
     }
 }
