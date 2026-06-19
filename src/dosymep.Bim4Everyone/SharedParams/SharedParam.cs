@@ -365,6 +365,10 @@ public class SharedParam : RevitParam {
                     return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.ElementMirroring):
                     return UnitType.UT_Currency;
+                case nameof(SharedParamsConfig.CargoArea):
+                    return UnitType.UT_Currency;
+                case nameof(SharedParamsConfig.LandscapingThickness):
+                    return UnitType.UT_Currency;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
@@ -593,6 +597,10 @@ public class SharedParam : RevitParam {
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.ElementMirroring):
                     return SpecTypeId.Currency;
+                case nameof(SharedParamsConfig.CargoArea):
+                    return SpecTypeId.Currency;
+                case nameof(SharedParamsConfig.LandscapingThickness):
+                    return SpecTypeId.Currency;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
@@ -607,6 +615,7 @@ public class SharedParam : RevitParam {
     /// <returns>Возвращает единицу измерения параметра по его идентификатору.</returns>
     internal static ForgeTypeId GetUnitType(string paramId) {
         switch(paramId) {
+            // ReSharper disable once DuplicatedSwitchSectionBodies
             case nameof(SharedParamsConfig.AlbumBlueprints):
                 return SpecTypeId.String.Text;
             case nameof(SharedParamsConfig.StampSheetNumber):
@@ -1001,6 +1010,10 @@ public class SharedParam : RevitParam {
                 return SpecTypeId.String.Text;
             case nameof(SharedParamsConfig.RoomFloorDifference):
                 return SpecTypeId.Length;
+            case nameof(SharedParamsConfig.CargoArea):
+                return SpecTypeId.Currency;
+            case nameof(SharedParamsConfig.LandscapingThickness):
+                return SpecTypeId.Currency;
             default:
                 throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                     nameof(paramId));
