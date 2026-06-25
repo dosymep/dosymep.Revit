@@ -607,7 +607,6 @@ public class SharedParam : RevitParam {
     /// <returns>Возвращает единицу измерения параметра по его идентификатору.</returns>
     internal static ForgeTypeId GetUnitType(string paramId) {
         switch(paramId) {
-            // ReSharper disable once DuplicatedSwitchSectionBodies
             case nameof(SharedParamsConfig.AlbumBlueprints):
                 return SpecTypeId.String.Text;
             case nameof(SharedParamsConfig.StampSheetNumber):
