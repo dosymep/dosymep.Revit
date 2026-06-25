@@ -365,10 +365,6 @@ public class SharedParam : RevitParam {
                     return UnitType.UT_Number;
                 case nameof(SharedParamsConfig.ElementMirroring):
                     return UnitType.UT_Currency;
-                case nameof(SharedParamsConfig.CargoArea):
-                    return UnitType.UT_Currency;
-                case nameof(SharedParamsConfig.LandscapingThickness):
-                    return UnitType.UT_Currency;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                         nameof(paramId));
@@ -596,10 +592,6 @@ public class SharedParam : RevitParam {
                 case nameof(SharedParamsConfig.EconomicFunction):
                     return SpecTypeId.Number;
                 case nameof(SharedParamsConfig.ElementMirroring):
-                    return SpecTypeId.Currency;
-                case nameof(SharedParamsConfig.CargoArea):
-                    return SpecTypeId.Currency;
-                case nameof(SharedParamsConfig.LandscapingThickness):
                     return SpecTypeId.Currency;
                 default:
                     throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
