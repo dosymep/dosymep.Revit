@@ -1001,6 +1001,10 @@ public class SharedParam : RevitParam {
                 return SpecTypeId.String.Text;
             case nameof(SharedParamsConfig.RoomFloorDifference):
                 return SpecTypeId.Length;
+            case nameof(SharedParamsConfig.CargoArea):
+                return SpecTypeId.Currency;
+            case nameof(SharedParamsConfig.LandscapingThickness):
+                return SpecTypeId.Currency;
             default:
                 throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                     nameof(paramId));

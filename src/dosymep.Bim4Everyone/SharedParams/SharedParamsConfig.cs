@@ -2153,5 +2153,26 @@ public class SharedParamsConfig : RevitParamsConfig, ISharedParamsService {
             UnitType = SharedParam.GetUnitType(nameof(RoomFloorDifference)),
             StorageType = StorageType.Double
         };
+    
+    /// <summary>
+    ///     ФОП_Площадь грузовая
+    /// </summary>
+    public SharedParam CargoArea { get; } =
+        new(nameof(CargoArea), new Guid("359591e2-18a4-439d-b1db-37bdbdf063b2")) {
+            Name = "ФОП_Площадь грузовая",
+            UnitType = SharedParam.GetUnitType(nameof(CargoArea)),
+            StorageType = StorageType.Double
+        };
+    
+    /// <summary>
+    ///     ФОП_Толщина БИО
+    /// </summary>
+    public SharedParam LandscapingThickness { get; } =
+        new(nameof(LandscapingThickness), new Guid("78fd5c0b-05a0-4c78-8208-e9f9eca8034a")) {
+            Name = "ФОП_Толщина БИО",
+            UnitType = SharedParam.GetUnitType(nameof(LandscapingThickness)),
+            StorageType = StorageType.Double
+        };
+    
 #endif
 }
