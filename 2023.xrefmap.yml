@@ -3209,6 +3209,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksZone
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.BuildingWorksZone
   nameWithType: SharedParamsConfig.BuildingWorksZone
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CargoArea
+  name: CargoArea
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_CargoArea
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CargoArea
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CargoArea
+  nameWithType: SharedParamsConfig.CargoArea
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CargoArea*
+  name: CargoArea
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_CargoArea_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CargoArea
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CargoArea
+  nameWithType: SharedParamsConfig.CargoArea
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.CeilingFinishingOrder
   name: CeilingFinishingOrder
   href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_CeilingFinishingOrder
@@ -3620,6 +3632,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Instance
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Instance
   nameWithType: SharedParamsConfig.Instance
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.LandscapingThickness
+  name: LandscapingThickness
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_LandscapingThickness
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.LandscapingThickness
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.LandscapingThickness
+  nameWithType: SharedParamsConfig.LandscapingThickness
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.LandscapingThickness*
+  name: LandscapingThickness
+  href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_LandscapingThickness_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.LandscapingThickness
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.LandscapingThickness
+  nameWithType: SharedParamsConfig.LandscapingThickness
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Level
   name: Level
   href: api/2023/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_Level
