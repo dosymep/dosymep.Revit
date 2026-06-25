@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: windows-2025
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       
       # Install the .NET Core workload
       - name: Install .NET Core
@@ -59,7 +59,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       
       # Download Artifacts: https://github.com/actions/download-artifact
       - name: Download Artifacts
