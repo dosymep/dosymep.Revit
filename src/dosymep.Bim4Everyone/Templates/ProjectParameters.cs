@@ -66,7 +66,9 @@ public class ProjectParameters {
         (ICollection<RevitParam> regularCopyParams, ICollection<RevitParam> paramsWithoutBinding)
             = SplitRevitParamsByBinding(target, revitParams);
 
-        ParameterElement[] regularCopyParamsElements = GetRevitParamElements(source, regularCopyParams);
+        ParameterElement[] regularCopyParamsElements = GetRevitParamElements(
+            source,
+            regularCopyParams.Where(item => !item.IsExistsParam(target)));
         ParameterElement[] paramsWithoutBindingElements = GetRevitParamElements(source, paramsWithoutBinding);
 
         if(regularCopyParamsElements.Length > 0) {
