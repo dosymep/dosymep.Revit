@@ -275,7 +275,7 @@ public static class ElementExtensions {
 
         bool isExists = element.TryGetParam(paramName, out Parameter param);
         if(!isExists) {
-            throw new ArgumentException($"Параметра с заданным именем \"{paramName}\" у элемента не существует.",
+            throw new ArgumentException($"Параметра с заданным именем \"{paramName}\" у элемента c Id:{element.Id} не существует.",
                 nameof(paramName));
         }
 
@@ -484,7 +484,7 @@ public static class ElementExtensions {
 
         bool isExists = element.TryGetParam(paramName, out Parameter param);
         if(!isExists) {
-            throw new ArgumentException($"Параметра с заданным именем \"{paramName}\" у элемента не существует.",
+            throw new ArgumentException($"Параметра с заданным именем \"{paramName}\" у элемента c Id:{element.Id} не существует.",
                 nameof(paramName));
         }
 
@@ -535,7 +535,7 @@ public static class ElementExtensions {
         bool isExists = element.TryGetSharedParam(paramName, out Parameter param);
         if(!isExists) {
             throw new ArgumentException(
-                $"Общего параметра с заданным именем \"{paramName}\" у элемента не существует.",
+                $"Общего параметра с заданным именем \"{paramName}\" у элемента c Id:{element.Id} не существует.",
                 nameof(paramName));
         }
 
@@ -737,7 +737,7 @@ public static class ElementExtensions {
 
         bool isExists = element.TryGetSharedParam(paramName, out Parameter param);
         if(!isExists) {
-            throw new ArgumentException($"Общего параметра с заданным именем \"{paramName}\" у элемента не существует.",
+            throw new ArgumentException($"Общего параметра с заданным именем \"{paramName}\" у элемента c Id:{element.Id} не существует.",
                 nameof(paramName));
         }
 
@@ -757,7 +757,7 @@ public static class ElementExtensions {
 
         bool isExists = element.TryGetSharedParam(paramGuid, out Parameter param);
         if(!isExists) {
-            throw new ArgumentException($"Общего параметра с заданным Guid \"{paramGuid}\" у элемента не существует.",
+            throw new ArgumentException($"Общего параметра с заданным Guid \"{paramGuid}\" у элемента c Id:{element.Id} не существует.",
                 nameof(paramGuid));
         }
 
@@ -808,7 +808,7 @@ public static class ElementExtensions {
         bool isExists = element.TryGetProjectParam(paramName, out Parameter param);
         if(!isExists) {
             throw new ArgumentException(
-                $"Параметра проекта с заданным именем \"{paramName}\" у элемента не существует.",
+                $"Параметра проекта с заданным именем \"{paramName}\" у элемента c Id:{element.Id} не существует.",
                 nameof(paramName));
         }
 
@@ -1061,7 +1061,7 @@ public static class ElementExtensions {
         bool isExists = element.TryGetParam(builtInParameter, out Parameter param);
         if(!isExists) {
             throw new ArgumentException(
-                $"Встроенного параметра \"{builtInParameter}\" у элемента не существует.",
+                $"Встроенного параметра \"{builtInParameter}\" у элемента c Id:{element.Id} не существует.",
                 nameof(builtInParameter));
         }
 
@@ -1236,7 +1236,7 @@ public static class ElementExtensions {
 
         bool isExists = element.TryGetParam(builtInParameter, out Parameter param);
         if(!isExists) {
-            throw new ArgumentException($"Параметра с заданным именем \"{builtInParameter}\" у элемента не существует.",
+            throw new ArgumentException($"Параметра с заданным именем \"{builtInParameter}\" у элемента c Id:{element.Id} не существует.",
                 nameof(builtInParameter));
         }
 
@@ -1288,7 +1288,7 @@ public static class ElementExtensions {
 
         bool isExists = element.TryGetParam(forgeTypeId, out Parameter param);
         if(!isExists) {
-            throw new ArgumentException($"Параметра с заданным именем \"{forgeTypeId}\" у элемента не существует.",
+            throw new ArgumentException($"Параметра с заданным именем \"{forgeTypeId}\" у элемента c Id:{element.Id} не существует.",
                 nameof(forgeTypeId));
         }
 
@@ -1459,7 +1459,7 @@ public static class ElementExtensions {
 
         bool isExists = element.TryGetParam(forgeTypeId, out Parameter param);
         if(!isExists) {
-            throw new ArgumentException($"Параметра с заданным именем \"{forgeTypeId}\" у элемента не существует.",
+            throw new ArgumentException($"Параметра с заданным именем \"{forgeTypeId}\" у элемента c Id:{element.Id} не существует.",
                 nameof(forgeTypeId));
         }
 
