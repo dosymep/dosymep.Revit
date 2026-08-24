@@ -3620,6 +3620,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.GetRevitParams
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.GetRevitParams
   nameWithType: SharedParamsConfig.GetRevitParams
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Grouping
+  name: Grouping
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_Grouping
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Grouping
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Grouping
+  nameWithType: SharedParamsConfig.Grouping
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Grouping*
+  name: Grouping
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_Grouping_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Grouping
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Grouping
+  nameWithType: SharedParamsConfig.Grouping
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.Instance
   name: Instance
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_Instance
@@ -3698,6 +3710,54 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MechanicalSystemName
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MechanicalSystemName
   nameWithType: SharedParamsConfig.MechanicalSystemName
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrChapterTitle
+  name: MtrChapterTitle
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_MtrChapterTitle
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrChapterTitle
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrChapterTitle
+  nameWithType: SharedParamsConfig.MtrChapterTitle
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrChapterTitle*
+  name: MtrChapterTitle
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_MtrChapterTitle_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrChapterTitle
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrChapterTitle
+  nameWithType: SharedParamsConfig.MtrChapterTitle
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrCountingType
+  name: MtrCountingType
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_MtrCountingType
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrCountingType
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrCountingType
+  nameWithType: SharedParamsConfig.MtrCountingType
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrCountingType*
+  name: MtrCountingType
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_MtrCountingType_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrCountingType
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrCountingType
+  nameWithType: SharedParamsConfig.MtrCountingType
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrMeasurementUnit
+  name: MtrMeasurementUnit
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_MtrMeasurementUnit
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrMeasurementUnit
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrMeasurementUnit
+  nameWithType: SharedParamsConfig.MtrMeasurementUnit
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrMeasurementUnit*
+  name: MtrMeasurementUnit
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_MtrMeasurementUnit_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrMeasurementUnit
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrMeasurementUnit
+  nameWithType: SharedParamsConfig.MtrMeasurementUnit
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrWorkTitle
+  name: MtrWorkTitle
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_MtrWorkTitle
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrWorkTitle
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrWorkTitle
+  nameWithType: SharedParamsConfig.MtrWorkTitle
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrWorkTitle*
+  name: MtrWorkTitle
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_MtrWorkTitle_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrWorkTitle
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MtrWorkTitle
+  nameWithType: SharedParamsConfig.MtrWorkTitle
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.ParkingSpaceClass
   name: ParkingSpaceClass
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_ParkingSpaceClass
