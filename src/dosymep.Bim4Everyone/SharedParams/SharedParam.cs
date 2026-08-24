@@ -1005,6 +1005,16 @@ public class SharedParam : RevitParam {
                 return SpecTypeId.Currency;
             case nameof(SharedParamsConfig.LandscapingThickness):
                 return SpecTypeId.Currency;
+            case nameof(SharedParamsConfig.MtrChapterTitle):
+                return SpecTypeId.String.Text;            
+            case nameof(SharedParamsConfig.MtrWorkTitle):
+                return SpecTypeId.String.Text;            
+            case nameof(SharedParamsConfig.MtrMeasurementUnit):
+                return SpecTypeId.String.Text;           
+            case nameof(SharedParamsConfig.MtrCountingType):
+                return SpecTypeId.Number;           
+            case nameof(SharedParamsConfig.Grouping):
+                return SpecTypeId.String.Text;
             default:
                 throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
                     nameof(paramId));

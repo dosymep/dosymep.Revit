@@ -2174,5 +2174,55 @@ public class SharedParamsConfig : RevitParamsConfig, ISharedParamsService {
             StorageType = StorageType.Double
         };
     
+    /// <summary>
+    ///     ФОП_МТР_Наименование главы
+    /// </summary>
+    public SharedParam MtrChapterTitle { get; } =
+        new(nameof(MtrChapterTitle), new Guid("a6c9acaf-d66a-4e8d-892d-b079b99d9d66")) {
+            Name = "ФОП_МТР_Наименование главы",
+            UnitType = SharedParam.GetUnitType(nameof(MtrChapterTitle)),
+            StorageType = StorageType.String
+        };    
+    
+    /// <summary>
+    ///     ФОП_МТР_Наименование работы
+    /// </summary>
+    public SharedParam MtrWorkTitle { get; } =
+        new(nameof(MtrWorkTitle), new Guid("ad7a6591-c752-43fc-9011-daaead5d25d8")) {
+            Name = "ФОП_МТР_Наименование работы",
+            UnitType = SharedParam.GetUnitType(nameof(MtrWorkTitle)),
+            StorageType = StorageType.String
+        };
+    
+    /// <summary>
+    ///     ФОП_МТР_Единица измерения
+    /// </summary>
+    public SharedParam MtrMeasurementUnit { get; } =
+        new(nameof(MtrMeasurementUnit), new Guid("8b54830d-889a-42c1-88ea-978be9522baa")) {
+            Name = "ФОП_МТР_Единица измерения",
+            UnitType = SharedParam.GetUnitType(nameof(MtrMeasurementUnit)),
+            StorageType = StorageType.String
+        };
+    
+    /// <summary>
+    ///     ФОП_МТР_Тип подсчета
+    /// </summary>
+    public SharedParam MtrCountingType { get; } =
+        new(nameof(MtrCountingType), new Guid("d2c9457a-77cc-46d3-886e-fa8a3134c0ed")) {
+            Name = "ФОП_МТР_Тип подсчета",
+            UnitType = SharedParam.GetUnitType(nameof(MtrCountingType)),
+            StorageType = StorageType.Integer
+        };
+    
+    /// <summary>
+    ///     ФОП_Группирование
+    /// </summary>
+    public SharedParam Grouping { get; } =
+        new(nameof(Grouping), new Guid("2d6bdf54-7e68-45d7-b88f-e1e818e0a2c3")) {
+            Name = "ФОП_Группирование",
+            UnitType = SharedParam.GetUnitType(nameof(Grouping)),
+            StorageType = StorageType.String
+        };
+    
 #endif
 }
