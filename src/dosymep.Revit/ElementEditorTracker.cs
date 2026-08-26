@@ -3,7 +3,8 @@ using Autodesk.Revit.DB;
 namespace dosymep.Revit;
 
 /// <summary>
-///     Проверяет доступность элементов для редактирования в модели с совместной работой.
+///     Проверяет доступность элементов для редактирования в модели с совместной работой
+///     и накапливает сведения о причинах их недоступности.
 /// </summary>
 public class ElementEditorTracker {
     private const string UnknownOwner = "неизвестный пользователь";
@@ -14,22 +15,24 @@ public class ElementEditorTracker {
     private bool _hasUpdatedInCentralElements;
 
     /// <summary>
-    ///     Создает экземпляр класса для проверки доступности элементов.
+    ///     Создает трекер доступности элементов для указанного документа.
     /// </summary>
     /// <param name="document">Документ, содержащий проверяемые элементы.</param>
-    /// <exception cref="System.ArgumentNullException">
-    ///     Документ равен <see langword="null" />.
-    /// </exception>
     public ElementEditorTracker(Document document) {
         _document = document;
         _isWorkshared = document.IsWorkshared;
     }
 
     /// <summary>
-    ///     Проверяет, занят ли элемент другим пользователем или обновлен ли он в файле хранилища.
+    ///     Проверяет, занят ли элемент другим пользователем или обновлен ли он в файле хранилища,
+    ///     и сохраняет причину недоступности.
     /// </summary>
     /// <param name="element">Проверяемый элемент.</param>
-    /// <returns><see langword="true" />, если элемент недоступен для редактирования.</returns>
+    /// <returns>
+    ///     <see langword="true" />, если элемент занят другим пользователем или обновлен в файле хранилища;
+    ///     иначе <see langword="false" />. Для модели без совместной работы всегда возвращает
+    ///     <see langword="false" />.
+    /// </returns>
     public bool IsUnavailableForEdit(Element element) {
         if(!_isWorkshared) {
             return false;
@@ -63,32 +66,23 @@ public class ElementEditorTracker {
     }
 
     /// <summary>
-    ///     Возвращает отчет о недоступных элементах и очищает накопленные сведения.
+    ///     Возвращает накопленные сведения о причинах недоступности проверенных элементов
+    ///     и очищает внутреннее состояние трекера.
     /// </summary>
-    /// <returns>Текст отчета или пустая строка, если недоступных элементов нет.</returns>
-    public string GetReportText() {
-        if(!_hasUpdatedInCentralElements && _owners.Count == 0) {
-            return string.Empty;
-        }
-
-        List<string> reports = [];
-        if(_hasUpdatedInCentralElements) {
-            reports.Add("Вы владеете элементами, но ваш файл устарел. Выполните синхронизацию.");
-        }
-
-        if(_owners.Count > 0) {
-            string owners = string.Join(", ",
-                _owners.OrderBy(item => item, StringComparer.OrdinalIgnoreCase));
-            reports.Add(
-                "Некоторые элементы не были обработаны, так как заняты пользователем/пользователями: "
-                + owners);
-        }
-
-        string reportText = string.Join(Environment.NewLine, reports);
+    /// <returns>
+    ///     Именованный кортеж, в котором <c>RequiresSynchronization</c> указывает, что хотя бы один элемент
+    ///     обновлен в файле хранилища, а <c>Owners</c> содержит отсортированный список уникальных имен
+    ///     пользователей, занявших элементы. Если такие элементы отсутствуют, список пуст.
+    /// </returns>
+    public (bool RequiresSynchronization, IReadOnlyCollection<string> Owners) GetUnavailabilityInfo() {
+        bool requiresSynchronization = _hasUpdatedInCentralElements;
+        string[] owners = _owners
+            .OrderBy(item => item, StringComparer.OrdinalIgnoreCase)
+            .ToArray();
 
         _hasUpdatedInCentralElements = false;
         _owners.Clear();
 
-        return reportText;
+        return (requiresSynchronization, owners);
     }
 }
