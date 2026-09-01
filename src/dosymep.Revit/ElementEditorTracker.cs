@@ -7,8 +7,6 @@ namespace dosymep.Revit;
 ///     и накапливает сведения о причинах их недоступности.
 /// </summary>
 public class ElementEditorTracker {
-    private const string UnknownOwner = "неизвестный пользователь";
-
     private readonly Document _document;
     private readonly bool _isWorkshared;
     private readonly HashSet<string> _owners = new(StringComparer.OrdinalIgnoreCase);
@@ -24,24 +22,31 @@ public class ElementEditorTracker {
     }
 
     /// <summary>
-    ///     Проверяет, занят ли элемент другим пользователем или обновлен ли он в файле хранилища,
-    ///     и сохраняет причину недоступности.
+    ///     Проверяет, доступен ли элемент для редактирования, и сохраняет причину недоступности.
     /// </summary>
     /// <param name="element">Проверяемый элемент.</param>
     /// <returns>
-    ///     <see langword="true" />, если элемент занят другим пользователем или обновлен в файле хранилища;
+    ///     <see langword="true" />, если элемент доступен для редактирования;
     ///     иначе <see langword="false" />. Для модели без совместной работы всегда возвращает
-    ///     <see langword="false" />.
+    ///     <see langword="true" />.
     /// </returns>
-    public bool IsUnavailableForEdit(Element element) {
+    public bool IsEditAvailable(Element element) {
         if(!_isWorkshared) {
-            return false;
-        }
-
-        if(TryRegisterOwner(element)) {
             return true;
         }
 
+        if(TryRegisterOwner(element)) {
+            return false;
+        }
+
+        if(IsUpdatedInCentral(element)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private bool IsUpdatedInCentral(Element element) {
         ModelUpdatesStatus updateStatus = WorksharingUtils.GetModelUpdatesStatus(_document, element.Id);
         bool isUpdatedInCentral = updateStatus == ModelUpdatesStatus.UpdatedInCentral;
         if(isUpdatedInCentral) {
@@ -58,8 +63,8 @@ public class ElementEditorTracker {
             out string owner);
 
         bool isOwnedByOtherUser = status == CheckoutStatus.OwnedByOtherUser;
-        if(isOwnedByOtherUser) {
-            _owners.Add(string.IsNullOrWhiteSpace(owner) ? UnknownOwner : owner);
+        if(isOwnedByOtherUser && !string.IsNullOrWhiteSpace(owner)) {
+            _owners.Add(owner);
         }
 
         return isOwnedByOtherUser;
