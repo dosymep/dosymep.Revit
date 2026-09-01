@@ -3,6 +3,7 @@ using Autodesk.Revit.UI;
 
 using dosymep.Bim4Everyone.ProjectParams;
 using dosymep.Bim4Everyone.SharedParams;
+using dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker;
 using dosymep.Bim4Everyone.SimpleServices.InvokeButtons;
 using dosymep.Bim4Everyone.SystemParams;
 using dosymep.SimpleServices;
@@ -45,6 +46,10 @@ internal class RevitServicesModule : NinjectModule {
 
         Bind<IRevitParamFactory>()
             .To<RevitParamFactory>()
+            .InSingletonScope();
+
+        Bind<IElementEditorTrackerFactory>()
+            .To<ElementEditorTrackerFactory>()
             .InSingletonScope();
 
         Bind<ISystemParamsService>()
