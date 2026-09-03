@@ -30,6 +30,7 @@ internal class ElementEditorTracker : IElementEditorTracker {
         }
 
         if(IsUpdatedInCentral(element)) {
+            _hasUpdatedInCentralElements = true;
             return false;
         }
 
@@ -43,10 +44,13 @@ internal class ElementEditorTracker : IElementEditorTracker {
             .OrderBy(item => item, StringComparer.OrdinalIgnoreCase)
             .ToArray();
 
+        return (requiresSynchronization, owners);
+    }
+
+    /// <inheritdoc />
+    public void Reset() {
         _hasUpdatedInCentralElements = false;
         _owners.Clear();
-
-        return (requiresSynchronization, owners);
     }
 
     private bool TryRegisterOwner(Element element) {
@@ -65,11 +69,6 @@ internal class ElementEditorTracker : IElementEditorTracker {
 
     private bool IsUpdatedInCentral(Element element) {
         ModelUpdatesStatus updateStatus = WorksharingUtils.GetModelUpdatesStatus(_document, element.Id);
-        bool isUpdatedInCentral = updateStatus == ModelUpdatesStatus.UpdatedInCentral;
-        if(isUpdatedInCentral) {
-            _hasUpdatedInCentralElements = true;
-        }
-
-        return isUpdatedInCentral;
+        return updateStatus == ModelUpdatesStatus.UpdatedInCentral;
     }
 }

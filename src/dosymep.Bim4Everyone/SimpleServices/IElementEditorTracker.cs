@@ -19,8 +19,7 @@ public interface IElementEditorTracker {
     bool IsEditAvailable(Element element);
 
     /// <summary>
-    ///     Возвращает накопленные сведения о причинах недоступности проверенных элементов
-    ///     и очищает внутреннее состояние трекера.
+    ///     Возвращает накопленные сведения о причинах недоступности проверенных элементов.
     /// </summary>
     /// <returns>
     ///     Именованный кортеж, в котором <c>RequiresSynchronization</c> указывает, что хотя бы один элемент
@@ -28,4 +27,9 @@ public interface IElementEditorTracker {
     ///     пользователей, занявших элементы. Если такие элементы отсутствуют, список пуст.
     /// </returns>
     (bool RequiresSynchronization, IReadOnlyCollection<string> Owners) GetUnavailabilityInfo();
+
+    /// <summary>
+    ///     Очищает накопленные сведения о причинах недоступности элементов.
+    /// </summary>
+    void Reset();
 }
