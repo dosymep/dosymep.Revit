@@ -1,3 +1,5 @@
+using Autodesk.Revit.DB;
+
 namespace dosymep.Bim4Everyone.SimpleServices;
 
 /// <summary>
@@ -5,8 +7,9 @@ namespace dosymep.Bim4Everyone.SimpleServices;
 /// </summary>
 public interface IElementEditorTrackerFactory {
     /// <summary>
-    ///     Создает трекер для документа, зарегистрированного в контейнере зависимостей.
+    ///     Создает трекер для указанного документа.
     /// </summary>
+    /// <param name="document">Документ, содержащий проверяемые элементы.</param>
     /// <returns>Новый трекер доступности элементов.</returns>
-    IElementEditorTracker Create();
+    IElementEditorTracker Create(Document document);
 }
