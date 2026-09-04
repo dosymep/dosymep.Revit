@@ -5732,6 +5732,30 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SimpleServices.Configuration.SocialsSettings.PlatformPageUrl
   fullName: dosymep.Bim4Everyone.SimpleServices.Configuration.SocialsSettings.PlatformPageUrl
   nameWithType: SocialsSettings.PlatformPageUrl
+- uid: dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker
+  name: dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.html
+  commentId: N:dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker
+  fullName: dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker
+  nameWithType: dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker
+- uid: dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions
+  name: NinjectElementEditorTrackerExtensions
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.html
+  commentId: T:dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions
+  fullName: dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions
+  nameWithType: NinjectElementEditorTrackerExtensions
+- uid: dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.UseElementEditorTracker(Ninject.IKernel)
+  name: UseElementEditorTracker(IKernel)
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.html#dosymep_Bim4Everyone_SimpleServices_ElementEditorTracker_NinjectElementEditorTrackerExtensions_UseElementEditorTracker_Ninject_IKernel_
+  commentId: M:dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.UseElementEditorTracker(Ninject.IKernel)
+  fullName: dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.UseElementEditorTracker(Ninject.IKernel)
+  nameWithType: NinjectElementEditorTrackerExtensions.UseElementEditorTracker(IKernel)
+- uid: dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.UseElementEditorTracker*
+  name: UseElementEditorTracker
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.html#dosymep_Bim4Everyone_SimpleServices_ElementEditorTracker_NinjectElementEditorTrackerExtensions_UseElementEditorTracker_
+  commentId: Overload:dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.UseElementEditorTracker
+  fullName: dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.UseElementEditorTracker
+  nameWithType: NinjectElementEditorTrackerExtensions.UseElementEditorTracker
 - uid: dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService
   name: IBimModelPartsService
   href: api/2023/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.html
@@ -5810,6 +5834,66 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.InAnyBimModelParts
   fullName: dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.InAnyBimModelParts
   nameWithType: IBimModelPartsService.InAnyBimModelParts
+- uid: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker
+  name: IElementEditorTracker
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.html
+  commentId: T:dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker
+  fullName: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker
+  nameWithType: IElementEditorTracker
+- uid: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.GetUnavailabilityInfo
+  name: GetUnavailabilityInfo()
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.html#dosymep_Bim4Everyone_SimpleServices_IElementEditorTracker_GetUnavailabilityInfo
+  commentId: M:dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.GetUnavailabilityInfo
+  fullName: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.GetUnavailabilityInfo()
+  nameWithType: IElementEditorTracker.GetUnavailabilityInfo()
+- uid: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.GetUnavailabilityInfo*
+  name: GetUnavailabilityInfo
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.html#dosymep_Bim4Everyone_SimpleServices_IElementEditorTracker_GetUnavailabilityInfo_
+  commentId: Overload:dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.GetUnavailabilityInfo
+  fullName: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.GetUnavailabilityInfo
+  nameWithType: IElementEditorTracker.GetUnavailabilityInfo
+- uid: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.IsEditAvailable(Autodesk.Revit.DB.Element)
+  name: IsEditAvailable(Element)
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.html#dosymep_Bim4Everyone_SimpleServices_IElementEditorTracker_IsEditAvailable_Autodesk_Revit_DB_Element_
+  commentId: M:dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.IsEditAvailable(Autodesk.Revit.DB.Element)
+  fullName: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.IsEditAvailable(Autodesk.Revit.DB.Element)
+  nameWithType: IElementEditorTracker.IsEditAvailable(Element)
+- uid: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.IsEditAvailable*
+  name: IsEditAvailable
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.html#dosymep_Bim4Everyone_SimpleServices_IElementEditorTracker_IsEditAvailable_
+  commentId: Overload:dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.IsEditAvailable
+  fullName: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.IsEditAvailable
+  nameWithType: IElementEditorTracker.IsEditAvailable
+- uid: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.Reset
+  name: Reset()
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.html#dosymep_Bim4Everyone_SimpleServices_IElementEditorTracker_Reset
+  commentId: M:dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.Reset
+  fullName: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.Reset()
+  nameWithType: IElementEditorTracker.Reset()
+- uid: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.Reset*
+  name: Reset
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.html#dosymep_Bim4Everyone_SimpleServices_IElementEditorTracker_Reset_
+  commentId: Overload:dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.Reset
+  fullName: dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.Reset
+  nameWithType: IElementEditorTracker.Reset
+- uid: dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory
+  name: IElementEditorTrackerFactory
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.html
+  commentId: T:dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory
+  fullName: dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory
+  nameWithType: IElementEditorTrackerFactory
+- uid: dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.Create(Autodesk.Revit.DB.Document)
+  name: Create(Document)
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.html#dosymep_Bim4Everyone_SimpleServices_IElementEditorTrackerFactory_Create_Autodesk_Revit_DB_Document_
+  commentId: M:dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.Create(Autodesk.Revit.DB.Document)
+  fullName: dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.Create(Autodesk.Revit.DB.Document)
+  nameWithType: IElementEditorTrackerFactory.Create(Document)
+- uid: dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.Create*
+  name: Create
+  href: api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.html#dosymep_Bim4Everyone_SimpleServices_IElementEditorTrackerFactory_Create_
+  commentId: Overload:dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.Create
+  fullName: dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.Create
+  nameWithType: IElementEditorTrackerFactory.Create
 - uid: dosymep.Bim4Everyone.SimpleServices.IParamElementService
   name: IParamElementService
   href: api/2023/dosymep.Bim4Everyone.SimpleServices.IParamElementService.html

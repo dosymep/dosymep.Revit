@@ -606,6 +606,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions",
+      "Summary": "<p sourcefile=\"api/2020/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.yml\" sourcestartlinenumber=\"1\">Расширения для регистрации фабрики трекеров доступности элементов.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
       "output": {
         ".html": {
@@ -618,6 +648,36 @@
       "IsMRef": true,
       "Title": "dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService",
       "Summary": "<p sourcefile=\"api/2020/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml\" sourcestartlinenumber=\"1\">Сервис по получению разделов BIM модели.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker",
+      "Summary": "<p sourcefile=\"api/2020/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.yml\" sourcestartlinenumber=\"1\">Проверяет доступность элементов для редактирования в модели с совместной работой\nи накапливает сведения о причинах их недоступности.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2020/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.html"
+        }
+      },
+      "version": "2020",
+      "group": "2020",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory",
+      "Summary": "<p sourcefile=\"api/2020/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.yml\" sourcestartlinenumber=\"1\">Фабрика трекеров доступности элементов для редактирования.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2176,6 +2236,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions",
+      "Summary": "<p sourcefile=\"api/2021/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.yml\" sourcestartlinenumber=\"1\">Расширения для регистрации фабрики трекеров доступности элементов.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
       "output": {
         ".html": {
@@ -2188,6 +2278,36 @@
       "IsMRef": true,
       "Title": "dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService",
       "Summary": "<p sourcefile=\"api/2021/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml\" sourcestartlinenumber=\"1\">Сервис по получению разделов BIM модели.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker",
+      "Summary": "<p sourcefile=\"api/2021/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.yml\" sourcestartlinenumber=\"1\">Проверяет доступность элементов для редактирования в модели с совместной работой\nи накапливает сведения о причинах их недоступности.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2021/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.html"
+        }
+      },
+      "version": "2021",
+      "group": "2021",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory",
+      "Summary": "<p sourcefile=\"api/2021/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.yml\" sourcestartlinenumber=\"1\">Фабрика трекеров доступности элементов для редактирования.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3761,6 +3881,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions",
+      "Summary": "<p sourcefile=\"api/2022/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.yml\" sourcestartlinenumber=\"1\">Расширения для регистрации фабрики трекеров доступности элементов.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
       "output": {
         ".html": {
@@ -3773,6 +3923,36 @@
       "IsMRef": true,
       "Title": "dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService",
       "Summary": "<p sourcefile=\"api/2022/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml\" sourcestartlinenumber=\"1\">Сервис по получению разделов BIM модели.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker",
+      "Summary": "<p sourcefile=\"api/2022/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.yml\" sourcestartlinenumber=\"1\">Проверяет доступность элементов для редактирования в модели с совместной работой\nи накапливает сведения о причинах их недоступности.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2022/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.html"
+        }
+      },
+      "version": "2022",
+      "group": "2022",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory",
+      "Summary": "<p sourcefile=\"api/2022/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.yml\" sourcestartlinenumber=\"1\">Фабрика трекеров доступности элементов для редактирования.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -5346,6 +5526,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions",
+      "Summary": "<p sourcefile=\"api/2023/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.yml\" sourcestartlinenumber=\"1\">Расширения для регистрации фабрики трекеров доступности элементов.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
       "output": {
         ".html": {
@@ -5358,6 +5568,36 @@
       "IsMRef": true,
       "Title": "dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService",
       "Summary": "<p sourcefile=\"api/2023/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml\" sourcestartlinenumber=\"1\">Сервис по получению разделов BIM модели.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker",
+      "Summary": "<p sourcefile=\"api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.yml\" sourcestartlinenumber=\"1\">Проверяет доступность элементов для редактирования в модели с совместной работой\nи накапливает сведения о причинах их недоступности.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.html"
+        }
+      },
+      "version": "2023",
+      "group": "2023",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory",
+      "Summary": "<p sourcefile=\"api/2023/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.yml\" sourcestartlinenumber=\"1\">Фабрика трекеров доступности элементов для редактирования.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -6931,6 +7171,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions",
+      "Summary": "<p sourcefile=\"api/2024/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.NinjectElementEditorTrackerExtensions.yml\" sourcestartlinenumber=\"1\">Расширения для регистрации фабрики трекеров доступности элементов.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.ElementEditorTracker",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml",
       "output": {
         ".html": {
@@ -6943,6 +7213,36 @@
       "IsMRef": true,
       "Title": "dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService",
       "Summary": "<p sourcefile=\"api/2024/dosymep.Bim4Everyone.SimpleServices.IBimModelPartsService.yml\" sourcestartlinenumber=\"1\">Сервис по получению разделов BIM модели.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker",
+      "Summary": "<p sourcefile=\"api/2024/dosymep.Bim4Everyone.SimpleServices.IElementEditorTracker.yml\" sourcestartlinenumber=\"1\">Проверяет доступность элементов для редактирования в модели с совместной работой\nи накапливает сведения о причинах их недоступности.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/2024/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.html"
+        }
+      },
+      "version": "2024",
+      "group": "2024",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory",
+      "Summary": "<p sourcefile=\"api/2024/dosymep.Bim4Everyone.SimpleServices.IElementEditorTrackerFactory.yml\" sourcestartlinenumber=\"1\">Фабрика трекеров доступности элементов для редактирования.</p>\n"
     },
     {
       "type": "ManagedReference",
