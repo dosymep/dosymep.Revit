@@ -1,4 +1,4 @@
-﻿using Autodesk.Revit.ApplicationServices;
+using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
 
 using dosymep.Revit;
@@ -1014,6 +1014,8 @@ public class SharedParam : RevitParam {
             case nameof(SharedParamsConfig.MtrCountingType):
                 return SpecTypeId.Number;           
             case nameof(SharedParamsConfig.Grouping):
+                return SpecTypeId.String.Text;
+            case nameof(SharedParamsConfig.MainParkingSpaceNumber):
                 return SpecTypeId.String.Text;
             default:
                 throw new ArgumentException($"Не найден общий параметр с идентификатором \"{paramId}\".",
