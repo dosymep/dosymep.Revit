@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 
 using Autodesk.Revit.DB;
 
@@ -2224,5 +2224,15 @@ public class SharedParamsConfig : RevitParamsConfig, ISharedParamsService {
             StorageType = StorageType.String
         };
     
+    /// <summary>
+    ///     ФОП_Номер основного ММ
+    /// </summary>
+    public SharedParam MainParkingSpaceNumber { get; } =
+        new(nameof(MainParkingSpaceNumber), new Guid("42dd20d7-0f2a-46ed-8cec-7a9bd796b086")) {
+            Name = "ФОП_Номер основного ММ",
+            UnitType = SharedParam.GetUnitType(nameof(MainParkingSpaceNumber)),
+            StorageType = StorageType.String
+        };
+
 #endif
 }
