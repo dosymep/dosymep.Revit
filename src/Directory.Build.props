@@ -48,9 +48,6 @@
         <PackageReference Include="Microsoft.CSharp"/>
         <PackageReference Include="System.Data.DataSetExtensions"/>
 
-        <PackageReference Include="Autodesk.Revit.Sdk.Refs"/>
-        <PackageReference Include="Autodesk.Revit.Sdk.Refs.$(RevitVersion)"/>
-
         <PackageReference Include="OpenMcdf">
             <PrivateAssets>all</PrivateAssets>
             <ExcludeAssets>runtime</ExcludeAssets>
