@@ -1,4 +1,15 @@
 <Project>
+    <!-- SDK 2.0 defaults Debug/Release to Revit 2027 before importing this file.
+         Preserve the solution's default; /p:RevitVersion still takes precedence. -->
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release'">
+        <RevitVersion>2024</RevitVersion>
+        <RevitMajorVersion>$([System.String]::Copy('$(RevitVersion)').Split('.')[0])</RevitMajorVersion>
+        <TargetFramework>net48</TargetFramework>
+        <RevitPath>$(ProgramFiles)\Autodesk\Revit $(RevitVersion)</RevitPath>
+        <RevitExePath>$(RevitPath)\Revit.exe</RevitExePath>
+        <RevitAddinsPath>$(ProgramData)\Autodesk\Revit\Addins\$(RevitVersion)</RevitAddinsPath>
+        <RevitAddinsUserPath>$(AppData)\Autodesk\Revit\Addins\$(RevitVersion)</RevitAddinsUserPath>
+    </PropertyGroup>
     <PropertyGroup>
         <Platforms>x64</Platforms>
         <OutputType>Library</OutputType>
@@ -47,9 +58,6 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.CSharp"/>
         <PackageReference Include="System.Data.DataSetExtensions"/>
-
-        <PackageReference Include="Autodesk.Revit.Sdk.Refs"/>
-        <PackageReference Include="Autodesk.Revit.Sdk.Refs.$(RevitVersion)"/>
 
         <PackageReference Include="OpenMcdf">
             <PrivateAssets>all</PrivateAssets>
