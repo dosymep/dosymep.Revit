@@ -1,4 +1,7 @@
 <Project Sdk="Autodesk.Revit.Sdk.Refs/2.0.0">
+    <PropertyGroup>
+        <RevitVersion Condition="'$(RevitVersion)' == ''">2024</RevitVersion> <!-- set default revit version -->
+    </PropertyGroup>
     <ItemGroup>
         <Compile Update="ParamExtensions.ParamTypes.cs">
             <DependentUpon>ParamExtensions.cs</DependentUpon>
