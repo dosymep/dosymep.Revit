@@ -8,12 +8,6 @@ on:
     paths:
       - '_build/**'
       - '.github/workflows/*.yaml'
-  
-  pull_request_target:
-    branches: [ main ]
-    paths-ignore:
-      - '_build/**'
-      - '.github/workflows/*.yaml'
 
 jobs:
   build:
