@@ -9,7 +9,7 @@
 
     <PropertyGroup>
         <!--> OpenMcdf <-->
-        <NoWarn>$(NoWarn);NU1902;NU1903;NU1510</NoWarn>
+        <NoWarn>$(NoWarn);NU1902;NU1903;NU1507;NU1510</NoWarn>
     </PropertyGroup>
 
     <PropertyGroup>
