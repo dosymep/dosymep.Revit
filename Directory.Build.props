@@ -9,27 +9,13 @@
 
     <PropertyGroup>
         <!--> OpenMcdf <-->
-        <NoWarn>NU1902</NoWarn>
+        <NoWarn>$(NoWarn);NU1902;NU1903;NU1507;NU1510</NoWarn>
     </PropertyGroup>
 
     <PropertyGroup>
         <Nullable>disable</Nullable>
         <LangVersion>latest</LangVersion>
         <ImplicitUsings>enable</ImplicitUsings>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration.StartsWith(`D`))'">
-        <Optimization>false</Optimization>
-        <DebugSymbols>true</DebugSymbols>
-        <OutputPath>bin\x64\Debug\$(RevitVersion)</OutputPath>
-        <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration.StartsWith(`R`))'">
-        <Optimize>true</Optimize>
-        <DebugSymbols>false</DebugSymbols>
-        <OutputPath>bin\x64\Release\$(RevitVersion)</OutputPath>
-        <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
     </PropertyGroup>
 
     <PropertyGroup Condition="$(RevitVersion) != ''">
@@ -44,13 +30,10 @@
         <RepositoryType>Git</RepositoryType>
     </PropertyGroup>
 
-    <ItemGroup>
+    <ItemGroup Condition="$(RevitVersion) != ''">
         <PackageReference Include="Microsoft.CSharp"/>
         <PackageReference Include="System.Data.DataSetExtensions"/>
-
-        <PackageReference Include="Autodesk.Revit.Sdk.Refs"/>
-        <PackageReference Include="Autodesk.Revit.Sdk.Refs.$(RevitVersion)"/>
-
+        
         <PackageReference Include="OpenMcdf">
             <PrivateAssets>all</PrivateAssets>
             <ExcludeAssets>runtime</ExcludeAssets>
