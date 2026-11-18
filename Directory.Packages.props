@@ -21,12 +21,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageVersion Include="Nuke.Common" Version="10.1.0"/>
-        <PackageVersion Include="Nuke.Components" Version="10.1.0"/>
-        <PackageVersion Include="dosymep.Nuke.RevitVersions" Version="*"/>
-    </ItemGroup>
-
-    <ItemGroup>
         <GlobalPackageReference Include="Polyfill" Version="11.4.5" PrivateAssets="all"/>
     </ItemGroup>
 </Project>

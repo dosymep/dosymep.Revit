@@ -19,15 +19,6 @@
         <File Path="LICENSE.md" />
         <File Path="README.md" />
     </Folder>
-    <Project Path="build/_build.csproj">
-        <BuildType Solution="D2020|*" Project="Debug" />
-        <BuildType Solution="D2021|*" Project="Debug" />
-        <BuildType Solution="D2022|*" Project="Debug" />
-        <BuildType Solution="D2023|*" Project="Debug" />
-        <BuildType Solution="D2024|*" Project="Debug" />
-        <Platform Project="x64" />
-        <Build Project="false" />
-    </Project>
     <Project Path="src/dosymep.Bim4Everyone/dosymep.Bim4Everyone.csproj">
         <Platform Project="x64" />
     </Project>
