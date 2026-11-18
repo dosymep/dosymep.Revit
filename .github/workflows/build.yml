@@ -1,31 +1,23 @@
 name: build
 
 on:
-  workflow_dispatch:
-  
   pull_request:
-    branches: [ main ]
-    paths:
-      - '_build/**'
-      - '.github/workflows/*.yaml'
-  
-  pull_request_target:
-    branches: [ main ]
-    paths-ignore:
-      - '_build/**'
-      - '.github/workflows/*.yaml'
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: windows-2025
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       
       # Install the .NET Core workload
       - name: Install .NET Core
         uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: 10.0.x
+          global-json-file: global.json
       
       # Add DevExpress source: https://docs.devexpress.com/GeneralInformation/117209/installation/install-devexpress-controls-using-nuget-packages/manage-packages-with-dotnet-cli
       - name: Add DevExpress package source

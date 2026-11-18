@@ -1,7 +1,6 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Autodesk.Revit.Sdk.Refs/2.0.0">
     <PropertyGroup>
         <UseWPF>true</UseWPF>
-        <TargetFramework>net48</TargetFramework> <!-- set default target framework -->
         <RevitVersion Condition="'$(RevitVersion)' == ''">2024</RevitVersion> <!-- set default revit version -->
     </PropertyGroup>
 
