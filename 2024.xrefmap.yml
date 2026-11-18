@@ -3698,6 +3698,18 @@ references:
   commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.LoadInstance
   fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.LoadInstance
   nameWithType: SharedParamsConfig.LoadInstance
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MainParkingSpaceNumber
+  name: MainParkingSpaceNumber
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_MainParkingSpaceNumber
+  commentId: P:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MainParkingSpaceNumber
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MainParkingSpaceNumber
+  nameWithType: SharedParamsConfig.MainParkingSpaceNumber
+- uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MainParkingSpaceNumber*
+  name: MainParkingSpaceNumber
+  href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_MainParkingSpaceNumber_
+  commentId: Overload:dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MainParkingSpaceNumber
+  fullName: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MainParkingSpaceNumber
+  nameWithType: SharedParamsConfig.MainParkingSpaceNumber
 - uid: dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.MechanicalSystemName
   name: MechanicalSystemName
   href: api/2024/dosymep.Bim4Everyone.SharedParams.SharedParamsConfig.html#dosymep_Bim4Everyone_SharedParams_SharedParamsConfig_MechanicalSystemName
