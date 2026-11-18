@@ -4,7 +4,7 @@
         <OutputType>Exe</OutputType>
         <TargetFramework>net10.0</TargetFramework>
         <RootNamespace></RootNamespace>
-        <NoWarn>CS0649;CS0169;NU1901;NU1903</NoWarn>
+        <NoWarn>CS0649;CS0169;NU1901;NU1902;NU1903</NoWarn>
         <NukeRootDirectory>..</NukeRootDirectory>
         <NukeScriptDirectory>..</NukeScriptDirectory>
         <NukeTelemetryVersion>1</NukeTelemetryVersion>
@@ -13,9 +13,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Nuke.Common" Version="10.1.0"/>
-        <PackageReference Include="Nuke.Components" Version="10.1.0"/>
-        <PackageReference Include="dosymep.Nuke.RevitVersions" Version="*"/>
+        <PackageReference Include="Nuke.Common"/>
+        <PackageReference Include="Nuke.Components" />
+        <PackageReference Include="dosymep.Nuke.RevitVersions" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="..\src\">
+        <Link>Directory.Build\src</Link>
+      </Folder>
     </ItemGroup>
 
 </Project>
