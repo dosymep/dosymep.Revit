@@ -1,7 +1,6 @@
 ﻿using Build.Modules;
 using Build.Modules.Dependencies;
 using Build.Options;
-using Build.Pipelines;
 using Build.Versioning;
 
 using Microsoft.Extensions.DependencyInjection;
@@ -9,9 +8,7 @@ using Microsoft.Extensions.Options;
 
 using ModularPipelines;
 
-string[] hostArgs = PipelineSelector.Extract(args, out string targetModule);
-
-PipelineBuilder builder = Pipeline.CreateBuilder(hostArgs);
+PipelineBuilder builder = Pipeline.CreateBuilder(args);
 
 builder.Services.AddOptions<BuildOptions>()
     .Configure(options => {
@@ -30,12 +27,6 @@ builder.Services.AddOptions<BuildOptions>()
 builder.Services.AddSingleton(static services => {
     BuildOptions options = services.GetRequiredService<IOptions<BuildOptions>>().Value;
     return new BuildVersionFactory(options.SolutionRoot);
-});
-
-builder.ConfigureOptions(options => options with {
-    RunOnlyModules = options.RunOnlyModules is {Count: > 0}
-        ? options.RunOnlyModules
-        : [targetModule]
 });
 
 builder
