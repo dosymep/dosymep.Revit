@@ -33,6 +33,7 @@ jobs:
       - name: Run libs build
         run: dotnet run --project build -- --module PackageModule --module BuildDocsModule
         env:
+          CONFIGURATION: Release
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       # Upload docs site: https://github.com/marketplace/actions/upload-a-build-artifact
