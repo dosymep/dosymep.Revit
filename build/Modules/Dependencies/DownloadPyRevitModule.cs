@@ -16,7 +16,8 @@ public sealed class DownloadPyRevitModule : Module {
     }
 
     protected override void Configure(ModuleConfigurationBuilder module) {
-        module.WithSkipWhen(_ => !File.Exists(_options.PyRevitPath), "pyRevit is installed.");
+        string pyRevitPath = _options.PyRevitPath;
+        module.WithSkipWhen(_ => Directory.Exists(pyRevitPath), "pyRevit is installed.");
     }
 
     protected override async Task ExecuteAsync(IModuleContext context, CancellationToken cancellationToken) {

@@ -16,7 +16,8 @@ public sealed class DownloadB4EModule : Module {
     }
 
     protected override void Configure(ModuleConfigurationBuilder module) {
-        module.WithSkipWhen(_ => !File.Exists(_options.Bim4EveryonePath), "b4e is installed.");
+        string bim4EveryonePath = _options.Bim4EveryonePath;
+        module.WithSkipWhen(_ => Directory.Exists(bim4EveryonePath), "b4e is installed.");
     }
 
     protected override async Task ExecuteAsync(IModuleContext context, CancellationToken cancellationToken) {
