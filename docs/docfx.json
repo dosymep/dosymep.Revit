@@ -53,12 +53,12 @@
     {
       "_appName" : "dosymep.Revit",
       "_appTitle" : "dosymep.Revit",
-      "_appFooter" : "Copyright &copy; 2023 dosymep",
+      "_appFooter" : "Copyright &copy; 2026 dosymep",
       "_enableSearch": true,
       "_disableContribution": true
     },
     "sitemap": {
-      "baseUrl": "https://dosymep.github.io/dosymep.Revit",
+      "baseUrl": "https://dosymep.net/dosymep.Revit/",
       "priority": 0.8,
       "changefreq": "monthly",
       "fileOptions": {
