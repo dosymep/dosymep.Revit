@@ -29,7 +29,7 @@ public sealed class BuildOptions {
     
     public string PyRevitPath => Path.Combine(AppData, "pyRevit-Master");
     public string Bim4EveryonePath => Path.Combine(AppData, @"pyRevit\Extensions\BIM4Everyone.lib");
-    public string Bim4EveryoneLibsPath => Path.Combine(AppData, Bim4EveryonePath, @"dosymep_libs\libs");
+    public string Bim4EveryoneLibsPath => Path.Combine(Bim4EveryonePath, @"dosymep_libs\libs");
 
     public string AppData => Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
     
@@ -38,7 +38,7 @@ public sealed class BuildOptions {
     }
 
     public string GetDeployDirectory(string revitVersion) {
-        return Path.Combine(AppData, Bim4EveryoneLibsPath, revitVersion);
+        return Path.Combine(Bim4EveryoneLibsPath, revitVersion);
     }
 
     public string GetArchivePath(string revitVersion) {
