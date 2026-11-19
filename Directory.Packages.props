@@ -19,6 +19,14 @@
         <PackageVersion Include="Microsoft.CSharp" Version="4.7.0"/>
         <PackageVersion Include="System.Data.DataSetExtensions" Version="4.5.0"/>
     </ItemGroup>
+    
+    <ItemGroup>
+        <PackageVersion Include="ModularPipelines" Version="4.0.0" />
+        <PackageVersion Include="ModularPipelines.DotNet" Version="4.0.0" />
+        <PackageVersion Include="ModularPipelines.Git" Version="4.0.0" />
+        <PackageVersion Include="ModularPipelines.GitHub" Version="4.0.0" />
+        <PackageVersion Include="Microsoft.Extensions.Options" Version="11.0.0" />
+    </ItemGroup>
 
     <ItemGroup>
         <GlobalPackageReference Include="Polyfill" Version="11.4.5" PrivateAssets="all"/>

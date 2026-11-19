@@ -398,3 +398,4 @@ FodyWeavers.xsd
 **/.idea/**/modules.xml
 
 .idea
+.modularpipelines

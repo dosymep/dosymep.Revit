@@ -23,9 +23,9 @@ jobs:
       - name: Add DevExpress package source
         run: dotnet nuget add source https://nuget.devexpress.com/api -n DXFeed -u DevExpress -p ${{ secrets.DEVEXPRESS_FEED_URL }}
       
-      # Build docs
-      - name: Run './build.cmd '
-        run: ./build.cmd compile
+      # Build
+      - name: Run build
+        run: dotnet run --project build -- --module PackageModule
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
@@ -33,5 +33,5 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-artifact@v7
         with:
-          name: bin
-          path: bin
+          name: artifacts
+          path: artifacts

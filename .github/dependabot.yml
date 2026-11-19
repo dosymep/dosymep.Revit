@@ -13,15 +13,15 @@ updates:
           - "*"
     target-branch: "main"
   
-  # NuGet packages
-#  - package-ecosystem: "nuget"
-#    directory: "/"
-#    schedule:
-#      interval: "weekly"
-#      day: "wednesday"
-#    open-pull-requests-limit: 25
-#    groups:
-#      dotnet:
-#        patterns:
-#          - "*"
-#    target-branch: "main"
+   # NuGet packages
+  - package-ecosystem: "nuget"
+    directory: "/build"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+    open-pull-requests-limit: 25
+    groups:
+      dotnet:
+        patterns:
+          - "*"
+    target-branch: "main"
