@@ -29,10 +29,6 @@ public sealed class DeployModule : Module {
         }
 
         FolderPath destination = context.Files.GetFolder(_options.GetDeployDirectory(revitVersion));
-        if(destination.Exists) {
-            await destination.DeleteAsync(cancellationToken);
-        }
-
         await source.CopyToAsync(destination.Path, cancellationToken);
     }
 }
