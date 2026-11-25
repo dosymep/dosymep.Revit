@@ -3,17 +3,17 @@
   "sitemap": {
     "fileOptions": {
       "**/articles/**": {
-        "baseUrl": "https://dosymep.github.io/dosymep.Revit/",
+        "baseUrl": "https://dosymep.net/dosymep.Revit/",
         "changefreq": "monthly",
         "priority": 0.8
       },
       "**/api/**": {
-        "baseUrl": "https://dosymep.github.io/dosymep.Revit/",
+        "baseUrl": "https://dosymep.net/dosymep.Revit/",
         "changefreq": "monthly",
         "priority": 0.3
       }
     },
-    "baseUrl": "https://dosymep.github.io/dosymep.Revit/",
+    "baseUrl": "https://dosymep.net/dosymep.Revit/",
     "changefreq": "monthly",
     "priority": 0.8
   },
