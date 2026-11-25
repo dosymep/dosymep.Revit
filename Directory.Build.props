@@ -18,9 +18,9 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
-    <PropertyGroup Condition="$(RevitVersion) != ''">
-        <Version>$(RevitVersion).2.4</Version>
-        <FileVersion>$(RevitVersion).2.4</FileVersion>
+    <PropertyGroup>
+        <Version>2.0.0</Version>
+        <FileVersion>2.0.0</FileVersion>
         <Company>dosymep</Company>
         <Authors>dosymep</Authors>
         <PackageTags>dosymep, revit</PackageTags>
@@ -33,7 +33,7 @@
     <ItemGroup Condition="$(RevitVersion) != ''">
         <PackageReference Include="Microsoft.CSharp"/>
         <PackageReference Include="System.Data.DataSetExtensions"/>
-        
+
         <PackageReference Include="OpenMcdf">
             <PrivateAssets>all</PrivateAssets>
             <ExcludeAssets>runtime</ExcludeAssets>

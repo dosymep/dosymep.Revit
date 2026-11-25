@@ -3,15 +3,18 @@ name: build
 on:
   pull_request:
   workflow_dispatch:
+  
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: windows-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v7
       
       # Install the .NET Core workload
       - name: Install .NET Core
@@ -22,16 +25,57 @@ jobs:
       # Add DevExpress source: https://docs.devexpress.com/GeneralInformation/117209/installation/install-devexpress-controls-using-nuget-packages/manage-packages-with-dotnet-cli
       - name: Add DevExpress package source
         run: dotnet nuget add source https://nuget.devexpress.com/api -n DXFeed -u DevExpress -p ${{ secrets.DEVEXPRESS_FEED_URL }}
+
+      - name: Install docfx
+        run: dotnet tool install -g docfx
       
-      # Build docs
-      - name: Run './build.cmd '
-        run: ./build.cmd compile
+      # Build libs
+      - name: Run libs build
+        run: dotnet run --project build -- --module PackageModule --module BuildDocsModule
         env:
+          CONFIGURATION: Release
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       # Upload docs site: https://github.com/marketplace/actions/upload-a-build-artifact
-      - name: Upload Artifacts
+      - name: Upload docs
         uses: actions/upload-artifact@v7
         with:
-          name: bin
-          path: bin
+          name: docs-site
+          path: docs/_site
+      
+      # Upload docs site: https://github.com/marketplace/actions/upload-a-build-artifact
+      - name: Upload libraries
+        uses: actions/upload-artifact@v7
+        with:
+          name: artifacts
+          path: artifacts
+  
+  deploy:
+    if: github.ref_name == github.event.repository.default_branch
+    needs: [ build ]
+    concurrency:
+      group: docs-deploy
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      
+      # Download Artifacts: https://github.com/actions/download-artifact
+      - name: Download Artifacts
+        uses: actions/download-artifact@v8
+        with:
+          name: docs-site
+          path: docs/_site
+      
+      # Publish docs: https://github.com/JamesIves/github-pages-deploy-action
+      - name: Publish to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          clean: true
+          force: true
+          branch: gh-pages
+          folder: docs/_site
+          git-config-name: github-actions[bot]
+          git-config-email: github-actions[bot]@users.noreply.github.com
